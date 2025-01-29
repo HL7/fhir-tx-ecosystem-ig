@@ -1,0 +1,10 @@
+﻿{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "severity" : "error",
+    "code" : "processing",
+    "details" : {
+      "text" : "Invalid displayLanguage: '-'"
+    }
+  }]
+}

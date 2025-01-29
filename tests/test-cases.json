@@ -598,6 +598,14 @@
         "response" : "display/validation-wrong-de-en-response-parameters.json"
       },
       {
+        "name" : "validation-wrong-de-en-bad",
+        "description" : "Same request, but with an invalid displayName parameter",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "display/validation-wrong-de-en-bad-request-parameters.json",
+        "response" : "display/validation-wrong-de-en-bad-response-outcome.json"
+      },
+      {
         "name" : "validation-wrong-de-ende-N",
         "description" : "to be provided",
         "operation" : "validate-code",
