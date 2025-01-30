@@ -27,7 +27,7 @@
     "definition" : "My first code",
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-      "valueInteger" : "6"
+      "valueInteger" : 6
     }],
     "designation" : [{
       "language" : "de",
@@ -43,7 +43,7 @@
     "definition" : "My second code",
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-      "valueInteger" : "5"
+      "valueInteger" : 5
     }]
   },
   {
@@ -58,7 +58,7 @@
       "valueString" : "<span style=\"color: maroon\">This is a dumb way to do things</span>"
     },{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-      "valueInteger" : "4"
+      "valueInteger" : 4
     }]
   },
   {
@@ -67,7 +67,7 @@
     "definition" : "My fourth code",
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-      "valueInteger" : "3"
+      "valueInteger" : 3
     }]
   },
   {
@@ -76,7 +76,7 @@
     "definition" : "My fifth code",
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-      "valueInteger" : "2"
+      "valueInteger" : 2
     }]
   },
   {
@@ -85,7 +85,7 @@
     "definition" : "My sixth code",
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-      "valueInteger" : "1"
+      "valueInteger" : 1
     }]
   }
   ]
