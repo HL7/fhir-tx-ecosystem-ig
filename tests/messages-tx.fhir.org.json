@@ -138,5 +138,8 @@
   },
   "validation/simple-codeableconcept-bad-valueSet-response-outcome.json" : {
     "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-allX' could not be found"
+  },
+  "valueset-version/expand-indirect-expand-zero-pinned-wrong-response-outcome.json" : {
+    "1" : "Unable to find included value set 'http://hl7.org/fhir/test/ValueSet/vs-version' version '3.0.0'"
   }
 }

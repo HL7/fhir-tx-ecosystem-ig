@@ -11,6 +11,6 @@
     }
   },{
     "name" : "valueset-version",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0"
+    "valueCanonical" : "http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0"
   }]
 }

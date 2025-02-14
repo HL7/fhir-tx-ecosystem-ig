@@ -3,9 +3,13 @@
   "issue" : [{
     "$optional-properties$" : ["diagnostics"],
     "severity" : "error",
-    "code" : "unknown",
+    "code" : "not-found",
     "details" : {
-      "text" : "Unable to find included value set 'http://hl7.org/fhir/test/ValueSet/vs-version' version '3.0.0'"
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "$external:1:3.0.0$"
     },
     "diagnostics" : "$external:2$"
   }]
