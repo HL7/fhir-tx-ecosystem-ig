@@ -16,9 +16,12 @@
     }]
   },
   "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "total" : 6,
+    "offset" : 0,
     "parameter" : [{
       "name" : "includeDesignations",
       "valueBoolean" : true

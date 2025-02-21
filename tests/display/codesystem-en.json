@@ -1,7 +1,7 @@
 {
   "resourceType" : "CodeSystem",
   "language" : "en",
-  "id" : "lang-none",
+  "id" : "lang-en",
   "url" : "http://hl7.org/fhir/test/CodeSystem/lang-en",
   "name" : "TestCodeSystemEnglish",
   "title" : "TestCodeSystemEnglish",
