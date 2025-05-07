@@ -14,9 +14,9 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
       "filter" : [{
-        "property" : "code",
+        "property" : "prop",
         "op" : "regex",
-        "value" : "[^ \\t\\r\\n\\f]{5}"
+        "value" : "o[a-z]*"
       }]
     }]
   },
