@@ -1,5 +1,7 @@
 {
+  "$optional-properties$" : ["id"],
   "resourceType" : "CodeSystem",
+  "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/CodeSystem/exclude",
   "name" : "ExcludeTestSystem",
   "status" : "active",

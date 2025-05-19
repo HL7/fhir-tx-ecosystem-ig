@@ -56,6 +56,11 @@
     "valueString" : "$external:3:http://hl7.org/fhir/test/CodeSystem/simple$"
   },
   {
+    "$optional$" : true,
+    "name" : "version",
+    "valueUri" : "0.1.0"
+  },
+  {
     "name" : "result",
     "valueBoolean" : false
   },{
