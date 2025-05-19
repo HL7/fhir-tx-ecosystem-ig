@@ -78,6 +78,11 @@
     "valueBoolean" : false
   },
   {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simpleXX"
+  },
+  {
     "name" : "x-unknown-system",
     "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/simpleXX|1.0.4234"
   }]

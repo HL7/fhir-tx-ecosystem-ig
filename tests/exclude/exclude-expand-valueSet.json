@@ -1,5 +1,7 @@
 {
+  "$optional-properties$" : ["id"],
   "resourceType" : "ValueSet",
+  "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/exclude",
   "version" : "6.0.0",
   "name" : "ExcludeTest",
@@ -10,6 +12,7 @@
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "total" : 3,
+    "offset" : 0,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/exclude"
