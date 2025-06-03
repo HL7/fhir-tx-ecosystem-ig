@@ -1,5 +1,7 @@
 {
+  "$optional-properties$" : ["id"],
   "resourceType": "ValueSet",
+  "id" : "simple-exclude",
   "url": "http://hl7.org/fhir/test/ValueSet/exclude",
   "version": "6.0.0",
   "name": "ExcludeTest",

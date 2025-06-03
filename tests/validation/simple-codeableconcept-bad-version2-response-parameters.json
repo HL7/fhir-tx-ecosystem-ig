@@ -1,6 +1,12 @@
 ﻿{
   "resourceType" : "Parameters",
-  "parameter" : [{
+  "parameter" : [
+    {
+      "$optional$" : true,
+      "name" : "code",
+      "valueCode" : "code1"
+    },
+    {
     "name" : "codeableConcept",
     "valueCodeableConcept" : {
       "coding" : [{
@@ -76,6 +82,11 @@
   {
     "name" : "result",
     "valueBoolean" : false
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simpleXX"
   },
   {
     "name" : "x-unknown-system",
