@@ -79,5 +79,10 @@
   {
     "name" : "result",
     "valueBoolean" : false
-  }]
+  },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueString" : "0.1.0"
+    }]
 }
