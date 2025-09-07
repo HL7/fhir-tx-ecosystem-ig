@@ -1,6 +1,12 @@
 ﻿{
   "resourceType" : "Parameters",
-  "parameter" : [{
+  "parameter" : [
+    {
+      "$optional$" : true,
+      "name" : "code",
+      "valueCode" : "code1"
+    },
+    {
     "name" : "codeableConcept",
     "valueCodeableConcept" : {
       "coding" : [{
