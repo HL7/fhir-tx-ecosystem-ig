@@ -710,13 +710,6 @@
         "response" : "extensions/expand-echo-all-valueset.json"
       },
       {
-        "name" : "extensions-echo-all-alt",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "extensions/expand-echo-all-alt-parameters.json",
-        "response" : "extensions/expand-echo-all-alt-valueset.json"
-      },
-      {
         "name" : "extensions-echo-enumerated",
         "description" : "to be provided",
         "operation" : "expand",
