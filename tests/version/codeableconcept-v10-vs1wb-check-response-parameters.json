@@ -1,0 +1,70 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/version",
+        "version" : "1.0.0",
+        "code" : "code1"
+      }]
+    }
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "VALUESET_VALUE_MISMATCH"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "vs-invalid"
+          }],
+          "text" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1' in the ValueSet include is different to the one in the value ('1.0.0')"
+        },
+        "location" : ["CodeableConcept.coding[0].version"],
+        "expression" : ["CodeableConcept.coding[0].version"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
+        }],
+        "severity" : "error",
+        "code" : "not-found",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-found"
+          }],
+          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the code cannot be validated. Valid versions: 1.0.0,1.2.0"
+        },
+        "location" : ["CodeableConcept.coding[0].system"],
+        "expression" : ["CodeableConcept.coding[0].system"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the code cannot be validated. Valid versions: 1.0.0,1.2.0; The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1' in the ValueSet include is different to the one in the value ('1.0.0')"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "$optional$" : true,
+    "name" : "version",
+    "valueString" : "1.0.0"
+  },
+  {
+    "name" : "x-caused-by-unknown-system",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/version|1"
+  }]
+}

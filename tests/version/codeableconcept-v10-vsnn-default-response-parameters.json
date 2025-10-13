@@ -1,0 +1,60 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code1"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/version",
+        "version" : "1.0.0",
+        "code" : "code1"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 1 (1.2)"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "VALUESET_VALUE_MISMATCH"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "vs-invalid"
+          }],
+          "text" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' in the ValueSet include is different to the one in the value ('1.0.0')"
+        },
+        "location" : ["CodeableConcept.coding[0].version"],
+        "expression" : ["CodeableConcept.coding[0].version"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' in the ValueSet include is different to the one in the value ('1.0.0')"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.2.0"
+  }]
+}
