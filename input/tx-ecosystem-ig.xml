@@ -57,6 +57,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <name value="service-requirements.html"/>
+        <title value="Requirements for Server Operators"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <name value="languages.html"/>
         <title value="How Language works"/>
         <generation value="markdown"/>

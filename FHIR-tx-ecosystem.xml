@@ -2,6 +2,7 @@
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/" defaultVersion="1.8.0" defaultWorkgroup="fhir-i" gitUrl="https://github.com/HL7/davinci-deqm" url="http://hl7.org/fhir/uv/tx-ecosystem">
 <version code="current" url="https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/"/>
 <version code="1.8.0" url="http://hl7.org/fhir/uv/tx-ecosystem/1.8.0"/>
+<version code="1.8.0" url="http://hl7.org/fhir/uv/tx-ecosystem/1.8.0"/>
 <version code="1.7.9" url="http://hl7.org/fhir/uv/tx-ecosystem/1.7.9"/>
 <version code="1.7.8" url="http://hl7.org/fhir/uv/tx-ecosystem/1.7.8"/>
 <version code="1.7.7" url="http://hl7.org/fhir/uv/tx-ecosystem/1.7.7"/>
@@ -43,7 +44,7 @@
 <artifact deprecated="true" id="CodeSystem/CDSSelectionBehavior" key="CodeSystem-CDSSelectionBehavior" name="CDSSelectionBehavior Codes"/>
 <artifact deprecated="true" id="ValueSet/CDSSelectionBehavior" key="ValueSet-CDSSelectionBehavior" name="CDSSelectionBehavior Codes ValueSet"/>
 <artifact deprecated="true" id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
-<artifact id="FeatureDefinition/CodeSystemAsParameter" key="FeatureDefinition-CodeSystemAsParameter" name="CodeSystemAsParameter"/>
+<artifact id="Binary/FeatureDefinition-CodeSystemAsParameter" key="Binary-FeatureDefinition-CodeSystemAsParameter" name="CodeSystemAsParameter"/>
 <artifact deprecated="true" id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact deprecated="true" id="CodeSystem/r4-equivalence" key="CodeSystem-r4-equivalence" name="ConceptMapEquivalence"/>
 <artifact deprecated="true" id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
@@ -208,7 +209,7 @@
 <artifact deprecated="true" id="Task/task03" key="Task-task03" name="Task03"/>
 <artifact deprecated="true" id="StructureDefinition/elementdefinition-binding-style" key="StructureDefinition-elementdefinition-binding-style" name="Terminology Binding Style Extension"/>
 <artifact deprecated="true" id="CodeSystem/tx-issue-type" key="CodeSystem-tx-issue-type" name="Terminology Issue Type"/>
-<artifact id="FeatureDefinition/TestCaseVersion" key="FeatureDefinition-TestCaseVersion" name="TestCaseVersion"/>
+<artifact id="Binary/FeatureDefinition-TestCasesVersion" key="Binary-FeatureDefinition-TestCasesVersion" name="TestCaseVersion"/>
 <artifact deprecated="true" id="StructureDefinition/type-specifier" key="StructureDefinition-type-specifier" name="Type Specifier Extension"/>
 <artifact deprecated="true" id="StructureDefinition/valueset-expansion-parameter" key="StructureDefinition-valueset-expansion-parameter" name="ValueSet Expansion Parameter"/>
 <artifact deprecated="true" id="CodeSystem/binding-style" key="CodeSystem-binding-style" name="Vocab Binding Style Codes"/>
@@ -243,6 +244,7 @@
 <page deprecated="true" key="page-factories" name="Page Factories"/>
 <page deprecated="true" key="profiles" name="Profiles and Extensions"/>
 <page key="r4" name="R4 and Test Cases"/>
+<page key="service-requirements" name="Requirements for Server Operators"/>
 <page key="requirements" name="Requirements for Servers"/>
 <page deprecated="true" key="summary-reporting" name="Summary Reporting"/>
 <page key="toc" name="Table of Contents"/>

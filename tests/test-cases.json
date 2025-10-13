@@ -1623,6 +1623,427 @@
         "request": "version/coding-vnn-vsbb-request-parameters.json",
         "response": "version/coding-vnn-vsbb-force-response-parameters.json"
       },
+
+
+      {
+        "name": "codeableconcept-vnn-vsnn",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-vnn-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsnn-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1w",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-v10-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1w-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1wb",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-v10-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1wb-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs10",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-v10-vs10-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs10-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs20",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-v10-vs20-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs20-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsbb",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). No version parameters",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/codeableconcept-v10-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsbb-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsbb",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). No version parameters",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/codeableconcept-v10-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsbb-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsnn",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-v10-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsnn-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vs10",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-vbb-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vs10-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vsnn",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-vbb-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vsnn-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1w",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-vnn-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1w-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1wb",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-vnn-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1wb-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs10",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. No version parameters",
+        "operation": "validate-code",
+        "request": "version/codeableconcept-vnn-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs10-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsbb",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). No version parameters ",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/codeableconcept-vnn-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsbb-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsnn-default",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vnn-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1w-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-v10-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1w-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1wb-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-v10-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1wb-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs10-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-v10-vs10-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs20-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-v10-vs20-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs20-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsbb-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-v10-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsbb-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsnn-default",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-v10-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vs10-default",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vbb-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vsnn-default",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vbb-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1w-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vnn-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1w-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1wb-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vnn-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1wb-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs10-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vnn-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsbb-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/codeableconcept-vnn-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsbb-default-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsnn-check",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vnn-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1w-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-v10-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1w-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1wb-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-v10-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1wb-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs10-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: check is1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-v10-vs10-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs20-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-v10-vs20-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs20-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsbb-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-v10-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsbb-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsnn-check",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-v10-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vs10-check",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vbb-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vsnn-check",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vbb-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1w-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vnn-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1w-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1wb-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vnn-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1wb-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs10-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vnn-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsbb-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/codeableconcept-vnn-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsbb-check-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsnn-force",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vnn-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1w-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-v10-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1w-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs1wb-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-v10-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs1wb-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs10-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-v10-vs10-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vs20-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-v10-vs20-request-parameters.json",
+        "response": "version/codeableconcept-v10-vs20-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsbb-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-v10-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsbb-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-v10-vsnn-force",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-v10-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-v10-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vs10-force",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vbb-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vbb-vsnn-force",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vbb-vsnn-request-parameters.json",
+        "response": "version/codeableconcept-vbb-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1w-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vnn-vs1w-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1w-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs1wb-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vnn-vs1wb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs1wb-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vs10-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vnn-vs10-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "codeableconcept-vnn-vsbb-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/codeableconcept-vnn-vsbb-request-parameters.json",
+        "response": "version/codeableconcept-vnn-vsbb-force-response-parameters.json"
+      },
       {
         "name": "code-vnn-vsnn",
         "description": "code. No CodeSystem version.  No ValueSet version pinning. No version parameters",

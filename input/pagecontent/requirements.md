@@ -1,4 +1,3 @@
-
 ### Requirements
 
 This document describes the requirements for all servers that are part of the [HL7 terminology ecosystem](ecosystem.html).
@@ -6,6 +5,27 @@ Note that systems do not need to conform to these requirements to be described a
 but they do not need to conform to these requirements to be part of the ecosystem.
 
 All systems need to conform to the following requirements:
+
+### General Requirements 
+
+
+### Capabilities 
+
+* The server SHALL return a CapabilitiesStatement from /metadata
+
+
+### Terminology Capabilities 
+
+
+### Expand 
+
+
+### Code system validation 
+
+
+### Value set validation 
+
+
 
 #### Metadata
 
