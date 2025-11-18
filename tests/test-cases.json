@@ -2837,7 +2837,8 @@
     "name" : "errors",
     "mode" : "general",
     "description" : "Testing Various Error Conditions",
-    "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json"],
+    "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json", 
+       "errors/cs1.json", "errors/cs2.json", "errors/valueset-combination.json"],
     "tests" : [
       {
         "name" : "unknown-system1",
@@ -2872,13 +2873,18 @@
         "http-code" : "4xx",
         "request" : "errors/errors-broken-filter-expand-request.json",
         "response" : "errors/errors-broken-filter-expand-response.json"
-      } ,{
-        "name" : "broken-filter2-expand",
-        "description" : "Make sure that filters without value cause an error (extension only)",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "errors/errors-broken-filter2-expand-request.json",
-        "response" : "errors/errors-broken-filter2-expand-response.json"
+      },{
+        "name" : "combination-ok",
+        "description" : "A value set that contains two identical codes - validates ok",
+        "operation" : "validate-code",
+        "request" : "errors/errors-combination-ok-request.json",
+        "response" : "errors/errors-combination-ok-response.json"
+      },{
+        "name" : "combination-bad",
+        "description" : "A value set that contains two identical codes - error if inferSystem is true",
+        "operation" : "validate-code",
+        "request" : "errors/errors-combination-bad-request.json",
+        "response" : "errors/errors-combination-bad-response.json"
       }  
     ]
   },{

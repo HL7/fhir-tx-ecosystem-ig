@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/combination"
+  },{
+    "name" : "code",
+    "valueCode" : "code1"
+  },{
+    "name" : "inferSystem",
+    "valueUri" : true
+  }]
+}
