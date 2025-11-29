@@ -15,23 +15,6 @@
       "issue" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "VALUESET_VALUE_MISMATCH_DEFAULT"
-        }],
-        "severity" : "error",
-        "code" : "invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "vs-invalid"
-          }],
-          "text" : "The code system 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0' for the versionless include in the ValueSet include is different to the one in the value ('1.0.0')"
-        },
-        "location" : ["Coding.version"],
-        "expression" : ["Coding.version"]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
         }],
         "severity" : "error",
@@ -45,12 +28,29 @@
         },
         "location" : ["Coding.system"],
         "expression" : ["Coding.system"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "VALUESET_VALUE_MISMATCH_DEFAULT"
+        }],
+        "severity" : "warning",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "vs-invalid"
+          }],
+          "text" : "The code system 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0' for the versionless include in the ValueSet include is different to the one in the value ('1.0.0')"
+        },
+        "location" : ["Coding.version"],
+        "expression" : ["Coding.version"]
       }]
     }
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '1.0.0' could not be found, so the code cannot be validated. Valid versions: 0.1.0; The code system 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0' for the versionless include in the ValueSet include is different to the one in the value ('1.0.0')"
+    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '1.0.0' could not be found, so the code cannot be validated. Valid versions: 0.1.0"
   },
   {
     "name" : "result",

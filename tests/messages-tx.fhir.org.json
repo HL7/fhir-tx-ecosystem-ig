@@ -17,7 +17,7 @@
   "validation/simple-codeableconcept-bad-code-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "2" : "Unknown code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
-    "3" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+    "3" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
   },
   "validation/simple-code-bad-system-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
@@ -67,7 +67,7 @@
   "validation/simple-codeableconcept-bad-system-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "2" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' could not be found, so the code cannot be validated",
-    "3" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' could not be found, so the code cannot be validated; No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; The provided code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+    "3" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' could not be found, so the code cannot be validated; No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
    },
   "validation/simple-codeableconcept-bad-version1-response-parameters.json" : {
     "1" : "The code system http://hl7.org/fhir/test/CodeSystem/simple version 1.0.0 could not be found. Valid versions: 0.1.0",
@@ -107,7 +107,7 @@
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/version-all-1|1.1.0'",
     "2" : "Unknown code 'xxxx' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
     "3" : "Wrong Display Name 'xxxxx' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')",
-    "4" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/version-all-1|1.1.0'; Unknown code 'xxxx' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'; Wrong Display Name 'xxxxx' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')"
+    "4" : "Unknown code 'xxxx' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'; Wrong Display Name 'xxxxx' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')"
   }, 
   "validation/simple-coding-bad-version1-response-parameters.json" : {
     "1" : "The code system http://hl7.org/fhir/test/CodeSystem/simple version 1.0.0 could not be found. Valid versions: 0.1.0",
@@ -117,7 +117,7 @@
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "2" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/version|1.0.0#code1 ('xxxxx')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
-    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; The provided code 'http://hl7.org/fhir/test/CodeSystem/version|1.0.0#code1 ('xxxxx')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
   },
   "big/validation-big-circle-response-outcome.json" : {
     "1" : "Found a circularity pointing to http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0 processing ValueSet with pathway [http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0, http://hl7.org/fhir/test/ValueSet/big-circle-2|5.0.0]",

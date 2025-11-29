@@ -71,7 +71,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' version '1.0.4234' could not be found, so the code cannot be validated. No versions of this code system are known; No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; The provided code 'http://hl7.org/fhir/test/CodeSystem/simpleXX|1.0.4234#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' version '1.0.4234' could not be found, so the code cannot be validated. No versions of this code system are known; No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
   },
   {
     "name" : "result",
