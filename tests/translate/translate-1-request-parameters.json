@@ -1,7 +1,7 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "system",
+    "name" : "sourceSystem",
     "valueUri" : "http://hl7.org/fhir/test/CodeSystem/source"
   },{
     "name" : "sourceCode",

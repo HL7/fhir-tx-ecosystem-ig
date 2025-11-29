@@ -54,7 +54,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/dual-filter'; The provided code 'http://hl7.org/fhir/test/CodeSystem/dual-filter#AA' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/dual-filter'"
+    "valueString" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/dual-filter'"
   },
   {
     "name" : "result",

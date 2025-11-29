@@ -49,7 +49,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Code '36274733' is not in the value set; No valid coding was found for the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'; The provided code 'https://fhir-terminology.ohdsi.org#36274733' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
+    "valueString" : "Code '36274733' is not in the value set; No valid coding was found for the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
   },
   {
     "name" : "result",
