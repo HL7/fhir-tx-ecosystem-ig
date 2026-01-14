@@ -34,7 +34,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0,1.2.0"
+          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0"
         },
         "location" : ["CodeableConcept.coding[0].system"],
         "expression" : ["CodeableConcept.coding[0].system"]
@@ -60,7 +60,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0,1.2.0"
+    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0"
   },
   {
     "name" : "result",
