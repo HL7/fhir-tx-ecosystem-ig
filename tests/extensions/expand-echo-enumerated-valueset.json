@@ -131,7 +131,7 @@
       "designation" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-          "valueCode" : "deprecated"
+          "valueCode" : "withdrawn"
         }],
         "language" : "de",
         "value" : "2nd Code"
