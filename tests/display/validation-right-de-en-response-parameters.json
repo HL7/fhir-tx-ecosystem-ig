@@ -14,23 +14,26 @@
       "resourceType" : "OperationOutcome",
       "issue" : [{
         "extension" : [{
-          "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "NO_VALID_DISPLAY_FOUND_LANG_NONE"
+          "valueString" : "NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK"
         }],
         "severity" : "information",
         "code" : "invalid",
         "details" : {
           "coding" : [{
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "display-comment"
+            "code" : "invalid-display"
           }],
-          "text" : "'Code1' is the default display; the code system http://hl7.org/fhir/test/CodeSystem/lang-en has no Display Names for the language de"
+          "text" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/lang-en#code1 for language(s) 'de'. The display is 'Code1' which is the default language display"
         },
         "location" : ["Coding.display"],
         "expression" : ["Coding.display"]
       }]
     }
+  },
+  {
+    "name" : "message",
+    "valueString" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/lang-en#code1 for language(s) 'de'. The display is 'Code1' which is the default language display"
   },
   {
     "name" : "result",
