@@ -34,8 +34,8 @@
         "language" : "en",
         "use" : {
           "system" : "http://snomed.info/sct",
-          "code" : "900000000000546006",
-          "display" : "Inactive value"
+          "code" : "900000000000003001",
+          "display" : "Fully specified name"
         },
         "value" : "Appendicitis"
       },
@@ -61,8 +61,8 @@
         "language" : "en",
         "use" : {
           "system" : "http://snomed.info/sct",
-          "code" : "900000000000546006",
-          "display" : "Inactive value"
+          "code" : "900000000000013009",
+          "display" : "Synonym (core metadata concept)"
         },
         "value" : "Opisthorchis, NOS"
       },
@@ -70,8 +70,8 @@
         "language" : "en",
         "use" : {
           "system" : "http://snomed.info/sct",
-          "code" : "900000000000546006",
-          "display" : "Inactive value"
+          "code" : "900000000000003001",
+          "display" : "Fully specified name"
         },
         "value" : "Opisthorchis (organism)"
       },
@@ -79,8 +79,8 @@
         "language" : "en",
         "use" : {
           "system" : "http://snomed.info/sct",
-          "code" : "900000000000546006",
-          "display" : "Inactive value"
+          "code" : "900000000000013009",
+          "display" : "Synonym (core metadata concept)"
         },
         "value" : "Genus: Opisthorchis"
       },

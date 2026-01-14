@@ -23,7 +23,10 @@
     "timestamp" : "$instant$",
     "total" : 2,
     "offset" : 0,
-    "parameter" : [
+    "parameter" : [{
+      "name" : "default-valueset-version",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/vs-version|1.0.0"
+    },
     {
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/vs-version|0.1.0"
