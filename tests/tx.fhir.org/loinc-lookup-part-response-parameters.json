@@ -17,9 +17,8 @@
     {
       "name" : "use",
       "valueCoding" : {
-        "system" : "http://loinc.org",
-        "code" : "PartDisplayName",
-        "display" : "PartDisplayName"
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
       }
     },
     {

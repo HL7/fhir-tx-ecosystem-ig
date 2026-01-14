@@ -15,41 +15,15 @@
       "valueCode" : "en"
     },
     {
-      "name" : "value",
-      "valueString" : "Sodium, Blood"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
+      }
     },
     {
       "name" : "value",
-      "valueString" : "Sodium SerPl-msCnc"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "value",
-      "valueString" : "Chemistry; Level; Na; Na+; Pl; Plasma; Plsm; Point in time; QNT; Quan; Quant; Quantitative; Random; SerP; SerPl; SerPlas; Serum; Serum or plasma; SR"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "value",
-      "valueString" : "钠:质量或物质的量浓度:时间点:血清/血浆:定量型"
+      "valueString" : "Sodium [Mass or Moles/volume] in Serum or Plasma"
     }]
   },
   {
@@ -79,7 +53,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Measurement"
+      "valueCode" : "Lab Test"
     }]
   },
   {
@@ -123,7 +97,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "D"
+      "valueString" : "D"
     }]
   },
   {
@@ -207,7 +181,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Lab Test"
+      "valueString" : "LOINC"
     }]
   },
   {

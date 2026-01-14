@@ -1,0 +1,10 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "text" : "Unable to find code '500000801' in https://fhir-terminology.ohdsi.org version 20240716"
+    }
+  }]
+}
