@@ -1,0 +1,54 @@
+﻿{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "code1x"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/fragment",
+        "code" : "code1x"
+      }]
+    }
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "UNKNOWN_CODE_IN_FRAGMENT"
+        }],
+        "severity" : "warning",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "Unknown Code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/fragment' version '0.1.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment"
+        },
+        "location" : ["CodeableConcept.coding[0].code"],
+        "expression" : ["CodeableConcept.coding[0].code"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/fragment"
+  },
+  {
+    "$optional$" : true,
+    "name" : "version",
+    "valueString" : "0.1.0"
+  }]
+}

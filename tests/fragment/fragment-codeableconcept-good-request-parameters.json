@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/fragment"
+  },{
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/fragment",
+        "code" : "code1"
+      }]
+    }
+  }]
+}
