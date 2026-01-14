@@ -26,9 +26,7 @@
             "code" : "version-error"
           }],
           "text" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
-        },
-        "location" : ["version"],
-        "expression" : ["version"]
+        }
       }]
     }
   },

@@ -16,7 +16,7 @@
       }],
       "text" : "The system http://hl7.org/fhir/test/CodeSystem/simple filter with property = concept, op = is-a has no value"
     },
-    "location" : ["ValueSet[http://hl7.org/fhir/test/ValueSet/broken-filter|5.0.0].compose.include[0].filter[0].value"],
-    "expression" : ["ValueSet[http://hl7.org/fhir/test/ValueSet/broken-filter|5.0.0].compose.include[0].filter[0].value"]
+    "location" : ["ValueSet.compose.include[0].filter[0].value"],
+    "expression" : ["ValueSet.compose.include[0].filter[0].value"]
   }]
 }
