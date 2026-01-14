@@ -16,6 +16,11 @@
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://loinc.org|2.81"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
