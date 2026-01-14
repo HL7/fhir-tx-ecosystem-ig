@@ -10,8 +10,8 @@
       }
     },
     {
-      "name" : "equivalence",
-      "valueCode" : "Equivalent"
+      "name" : "relationship",
+      "valueCode" : "equivalent"
     }]
   },
   {

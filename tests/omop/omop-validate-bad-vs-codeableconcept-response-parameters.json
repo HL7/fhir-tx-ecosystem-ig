@@ -10,6 +10,11 @@
     }
   },
   {
+    "$optional$" : true,
+    "name" : "display",
+    "valueString" : "Furosemide Injection [Lasix]"
+  },
+  {
     "name" : "issues",
     "resource" : {
       "resourceType" : "OperationOutcome",

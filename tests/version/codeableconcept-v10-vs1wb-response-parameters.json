@@ -11,6 +11,10 @@
     }
   },
   {
+    "name" : "display",
+    "valueString" : "Display 1 (1.0)"
+  },
+  {
     "name" : "issues",
     "resource" : {
       "resourceType" : "OperationOutcome",
@@ -43,7 +47,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the code cannot be validated. Valid versions: 1.0.0,1.2.0"
+          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0"
         },
         "location" : ["CodeableConcept.coding[0].system"],
         "expression" : ["CodeableConcept.coding[0].system"]
@@ -52,14 +56,13 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the code cannot be validated. Valid versions: 1.0.0,1.2.0; The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1' in the ValueSet include is different to the one in the value ('1.0.0')"
+    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0; The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1' in the ValueSet include is different to the one in the value ('1.0.0')"
   },
   {
     "name" : "result",
     "valueBoolean" : false
   },
   {
-    "$optional$" : true,
     "name" : "version",
     "valueString" : "1.0.0"
   },

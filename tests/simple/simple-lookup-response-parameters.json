@@ -8,6 +8,9 @@
   {
     "name" : "code",
     "valueCode" : "code2a"
+  },{
+    "name" : "definition",
+    "valueString" : "My first second level code"
   },
   {
     "name" : "designation",
@@ -84,17 +87,6 @@
     {
       "name" : "value",
       "valueCode" : "code2aII"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "definition"
-    },
-    {
-      "name" : "value",
-      "valueString" : "My first second level code"
     }]
   },
   {

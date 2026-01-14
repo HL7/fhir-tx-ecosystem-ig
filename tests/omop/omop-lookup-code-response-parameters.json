@@ -15,30 +15,15 @@
       "valueCode" : "en"
     },
     {
-      "name" : "value",
-      "valueString" : "Denies alcohol use (finding)"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "es"
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
+      }
     },
     {
       "name" : "value",
-      "valueString" : "niega consumo de alcohol"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "es"
-    },
-    {
-      "name" : "value",
-      "valueString" : "niega consumo de alcohol (hallazgo)"
+      "valueString" : "Denies alcohol use"
     }]
   },
   {
@@ -68,7 +53,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Observation"
+      "valueCode" : "Clinical Finding"
     }]
   },
   {
@@ -215,7 +200,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Clinical Finding"
+      "valueString" : "SNOMED"
     }]
   },
   {

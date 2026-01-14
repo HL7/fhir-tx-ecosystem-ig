@@ -1,7 +1,7 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "system",
+    "name" : "url",
     "valueUri" : "https://fhir-terminology.ohdsi.org"
   },{
     "name" : "code",

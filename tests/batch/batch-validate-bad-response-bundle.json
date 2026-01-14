@@ -24,7 +24,7 @@
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "Display_Name_for__should_be_one_of__instead_of"
             }],
-            "severity" : "warning",
+            "severity" : "error",
             "code" : "invalid",
             "details" : {
               "coding" : [{
@@ -44,7 +44,7 @@
       },
       {
         "name" : "result",
-        "valueBoolean" : true
+        "valueBoolean" : false
       },
       {
         "name" : "system",

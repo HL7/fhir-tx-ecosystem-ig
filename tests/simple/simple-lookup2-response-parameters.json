@@ -3,11 +3,15 @@
   "parameter" : [{
     "$optional$" : true,
     "name" : "abstract",
-    "valueBoolean" : false
+    "valueBoolean" : true
   },
   {
     "name" : "code",
     "valueCode" : "code2"
+  },
+  {
+    "name" : "definition",
+    "valueString" : "My second code, with children"
   },
   {
     "name" : "designation",
@@ -53,18 +57,6 @@
     "valueString" : "SimpleTestCodeSystem"
   },
   {
-    "$optional$" : true,
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "abstract"
-    },
-    {
-      "name" : "value",
-      "valueBoolean" : true
-    }]
-  },
-  {
     "name" : "property",
     "part" : [{
       "name" : "code",
@@ -94,17 +86,6 @@
     {
       "name" : "value",
       "valueCode" : "code2b"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "definition"
-    },
-    {
-      "name" : "value",
-      "valueString" : "My second code, with children"
     }]
   },
   {

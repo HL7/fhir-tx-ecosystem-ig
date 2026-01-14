@@ -42,14 +42,14 @@
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/test/CodeSystem/version",
-      "code" : "code1",
       "version" : "1.0.0",
+      "code" : "code1",
       "display" : "Display 1 (1.0)"
     },
     {
       "system" : "http://hl7.org/fhir/test/CodeSystem/version",
-      "code" : "code2",
       "version" : "1.2.0",
+      "code" : "code2",
       "display" : "Display 2 (1.2)"
     }]
   }

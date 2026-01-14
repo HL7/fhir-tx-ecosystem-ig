@@ -2,6 +2,11 @@
   "resourceType" : "OperationOutcome",
   "issue" : [{
     "$optional-properties$" : ["diagnostics"],
+    "extension" : [{
+      "$optional$" : true,
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "VALUESET_TOO_COSTLY"
+    }],
     "severity" : "error",
     "code" : "too-costly",
     "details" : {

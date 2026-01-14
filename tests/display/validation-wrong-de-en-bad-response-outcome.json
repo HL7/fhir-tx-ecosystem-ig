@@ -1,6 +1,11 @@
 ﻿{
   "resourceType" : "OperationOutcome",
   "issue" : [{
+    "extension" : [{
+      "$optional$" : true,
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "INVALID_DISPLAY_NAME"
+    }],
     "severity" : "error",
     "code" : "processing",
     "details" : {

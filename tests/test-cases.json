@@ -3961,56 +3961,56 @@
       {
         "name" : "omop-basic-validation-code-good",
         "description" : "Just validate a randomly chosen real OMOP code provided as system and code",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-good-code-request-parameters.json",
         "response" : "omop/omop-validate-good-code-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-coding-good",
         "description" : "Just validate a randomly chosen real OMOP code provided as coding",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-good-coding-request-parameters.json",
         "response" : "omop/omop-validate-good-coding-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-codeableconcept-good",
         "description" : "Just validate a randomly chosen real OMOP code provided as codeableConcept",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-good-codeableconcept-request-parameters.json",
         "response" : "omop/omop-validate-good-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-bad",
         "description" : "Just validate a randomly chosen fake OMOP code that is not valid provided as system and code",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-code-request-parameters.json",
         "response" : "omop/omop-validate-bad-code-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-coding-bad",
         "description" : "Just validate a randomly chosen fake OMOP code that is not valid provided as coding",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-coding-request-parameters.json",
         "response" : "omop/omop-validate-bad-coding-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-codeableconcept-bad",
         "description" : "Just validate a randomly chosen fake OMOP code that is not valid provided as CodeableConcept",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-codeableconcept-request-parameters.json",
         "response" : "omop/omop-validate-bad-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-bad-display",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as system, code and display",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-display-code-request-parameters.json",
         "response" : "omop/omop-validate-bad-display-code-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-coding-bad-display",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as coding",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-display-coding-request-parameters.json",
         "response" : "omop/omop-validate-bad-display-coding-response-parameters.json"
       },
@@ -4024,21 +4024,21 @@
       {
         "name" : "omop-basic-validation-code-bad-version",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as system, code and display",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-version-code-request-parameters.json",
         "response" : "omop/omop-validate-bad-version-code-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-coding-bad-version",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as coding",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-version-coding-request-parameters.json",
         "response" : "omop/omop-validate-bad-version-coding-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-codeableconcept-bad-display",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as CodeableConcept",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-version-codeableconcept-request-parameters.json",
         "response" : "omop/omop-validate-bad-version-codeableconcept-response-parameters.json"
       },
@@ -4095,8 +4095,9 @@
         "name" : "omop-lookup-code2",
         "description" : "lookup a non-standard OMOP Code",
         "operation" : "lookup",
+        "http-code" : "4xx",
         "request" : "omop/omop-lookup-code2-request-parameters.json",
-        "response" : "omop/omop-lookup-code2-response-parameters.json"
+        "response" : "omop/omop-lookup-code2-response-outcome.json"
       },
       {
         "name" : "omop-lookup-code3",

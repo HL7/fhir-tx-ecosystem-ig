@@ -1,7 +1,11 @@
 ﻿{
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
+    "$optional-properties$" : ["diagnostics", "extension"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "VALUESET_CIRCULAR_REFERENCE"
+    }],
     "severity" : "error",
     "code" : "processing",
     "details" : {
