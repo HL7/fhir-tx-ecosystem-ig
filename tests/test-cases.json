@@ -2753,6 +2753,56 @@
       }
     ]
   },{
+    "name" : "fragment",
+    "mode" : "general",
+    "description" : "Testing handling a code system fragment",
+    "setup" : ["fragment/codesystem-fragment.json", "fragment/valueset-fragment.json"],
+    "tests" : [
+
+      {
+        "name" : "validation-fragment-code-good",
+        "description" : "if a code is a in a fragment, then it's all ok",
+        "operation" : "validate-code",
+        "request" : "fragment/fragment-code-good-request-parameters.json",
+        "response" :  "fragment/fragment-code-good-response-parameters.json"
+      },
+      {
+        "name" : "validation-fragment-coding-good",
+        "description" : "if a code is a in a fragment, then it's all ok",
+        "operation" : "validate-code",
+        "request" : "fragment/fragment-coding-good-request-parameters.json",
+        "response" :  "fragment/fragment-coding-good-response-parameters.json"
+      },
+      {
+        "name" : "validation-fragment-codeableconcept-good",
+        "description" : "if a code is a in a fragment, then it's all ok",
+        "operation" : "validate-code",
+        "request" : "fragment/fragment-codeableconcept-good-request-parameters.json",
+        "response" : "fragment/fragment-codeableconcept-good-response-parameters.json"
+      },
+      {
+        "name" : "validation-fragment-code-bad-code",
+        "description" : "if a code is not in the fragment, we can't call it invalid (code variant)",
+        "operation" : "validate-code",
+        "request" : "fragment/fragment-code-bad-code-request-parameters.json",
+        "response" :  "fragment/fragment-code-bad-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-fragment-coding-bad-code",
+        "description" : "if a code is not in the fragment, we can't call it invalid (coding variant)",
+        "operation" : "validate-code",
+        "request" : "fragment/fragment-coding-bad-code-request-parameters.json",
+        "response" :  "fragment/fragment-coding-bad-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-fragment-codeableconcept-bad-code",
+        "description" : "if a code is not in the fragment, we can't call it invalid (CodeableConcept variant)",
+        "operation" : "validate-code",
+        "request" : "fragment/fragment-codeableconcept-bad-code-request-parameters.json",
+        "response" : "fragment/fragment-codeableconcept-bad-code-response-parameters.json"
+      }      
+    ]
+  },{
     "name" : "big",
     "mode" : "general",
     "description" : "Testing handling a big code system",

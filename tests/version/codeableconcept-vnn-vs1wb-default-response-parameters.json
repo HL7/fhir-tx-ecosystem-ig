@@ -10,6 +10,7 @@
     }
   },
   {
+    "$optional$" : true,
     "name" : "display",
     "valueString" : "Display 1 (1.0)"
   },
@@ -45,6 +46,7 @@
     "valueBoolean" : false
   },
   {
+    "$optional$" : true,
     "name" : "version",
     "valueString" : "1.0.0"
   },
