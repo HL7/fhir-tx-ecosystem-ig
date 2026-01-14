@@ -32,6 +32,11 @@
       "valueBoolean" : false
     },
     {
+      "$optional$" : true,
+      "name" : "includeDefinition",
+      "valueBoolean" : true
+    },
+    {
       "name" : "includeDesignations",
       "valueBoolean" : true
     },
