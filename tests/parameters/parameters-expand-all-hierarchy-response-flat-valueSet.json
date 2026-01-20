@@ -23,6 +23,7 @@
     "total" : 7,
     "offset" : 0,
     "parameter" : [{
+      "$optional$" : true,
       "name" : "excludeNested",
       "valueBoolean" : false
     },
