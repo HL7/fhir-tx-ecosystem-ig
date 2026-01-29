@@ -5,6 +5,7 @@
     "valueBoolean" : false
   },
   {
+    "$optional$" : true,
     "name" : "code",
     "valueCode" : "LA4489-6"
   },
@@ -2840,6 +2841,7 @@
     }]
   },
   {
+    "$optional$" : true,
     "name" : "system",
     "valueUri" : "http://loinc.org"
   },

@@ -6,6 +6,7 @@
     "valueBoolean" : true
   },
   {
+    "$optional$" : true,
     "name" : "code",
     "valueCode" : "code2"
   },
@@ -133,6 +134,7 @@
     }]
   },
   {
+    "$optional$" : true,
     "name" : "system",
     "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
   },

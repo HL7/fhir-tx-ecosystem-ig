@@ -5,6 +5,7 @@
     "valueBoolean" : false
   },
   {
+    "$optional$" : true,
     "name" : "code",
     "valueCode" : "LP111373-9"
   },
@@ -167,6 +168,21 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
+      "valueCode" : "RELATEDNAMES2"
+    },
+    {
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "value",
+      "valueString" : "HL7 cytogenetics panels"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
       "valueCode" : "STATUS"
     },
     {
@@ -175,6 +191,7 @@
     }]
   },
   {
+    "$optional$" : true,
     "name" : "system",
     "valueUri" : "http://loinc.org"
   },

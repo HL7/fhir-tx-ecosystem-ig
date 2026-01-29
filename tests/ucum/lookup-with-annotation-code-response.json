@@ -28,7 +28,8 @@
       "valueBoolean" : false
     }]
   },
-  {
+  { 
+    "$optional$" : true,
     "name" : "system",
     "valueUri" : "http://unitsofmeasure.org"
   },

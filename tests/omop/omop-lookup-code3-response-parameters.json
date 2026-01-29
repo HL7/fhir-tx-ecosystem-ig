@@ -5,6 +5,7 @@
     "valueBoolean" : false
   },
   {
+    "$optional$" : true,
     "name" : "code",
     "valueCode" : "3033733"
   },
@@ -185,6 +186,7 @@
     }]
   },
   {
+    "$optional$" : true,
     "name" : "system",
     "valueUri" : "https://fhir-terminology.ohdsi.org"
   },
