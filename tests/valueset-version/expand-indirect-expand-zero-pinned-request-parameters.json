@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/vs-version-b0"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/vs-version-b0"
   },{
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/test/ValueSet/vs-version|1.0.0"

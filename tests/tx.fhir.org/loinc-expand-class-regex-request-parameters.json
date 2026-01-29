@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex"
   },
   {
     "name": "_limit",

@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/version-w-bad"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/version-w-bad"
   },{
     "name" : "excludeNested",
     "valueBoolean" : true

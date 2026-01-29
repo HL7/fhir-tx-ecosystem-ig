@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-copyright"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-copyright"
   },{
     "name" : "excludeNested",
     "valueBoolean" : true

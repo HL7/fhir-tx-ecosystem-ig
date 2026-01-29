@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/version-mixed"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/version-mixed"
   },{
     "name" : "excludeNested",
     "valueBoolean" : true

@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUrl" : "http://hl7.org/fhir/test/ValueSet/extensions-enumerated"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/extensions-enumerated"
   },{
     "name" : "excludeNested",
     "valueBoolean" : false
