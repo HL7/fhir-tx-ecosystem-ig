@@ -4067,7 +4067,7 @@
       {
         "name" : "omop-basic-validation-codeableconcept-bad-display",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as CodeableConcept",
-        "operation" : "validate-code",
+        "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-display-codeableconcept-request-parameters.json",
         "response" : "omop/omop-validate-bad-display-codeableconcept-response-parameters.json"
       },
@@ -4086,7 +4086,7 @@
         "response" : "omop/omop-validate-bad-version-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableconcept-bad-display",
+        "name" : "omop-basic-validation-codeableconcept-bad-version",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as CodeableConcept",
         "operation" : "cs-validate-code",
         "request" : "omop/omop-validate-bad-version-codeableconcept-request-parameters.json",
