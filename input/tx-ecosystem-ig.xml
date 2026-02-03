@@ -38,7 +38,7 @@
   <dependsOn>
     <uri value="http://hl7.org/fhir/uv/application-feature/ImplementationGuide/hl7.fhir.uv.application-feature"/>
     <packageId value="hl7.fhir.uv.application-feature"/>
-    <version value="current"/>
+    <version value="1.0.0-ballot"/>
   </dependsOn>
 
   <definition>
