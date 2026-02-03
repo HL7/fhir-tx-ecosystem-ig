@@ -47,25 +47,6 @@
     }]
   },
   {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en-US"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://loinc.org",
-        "code" : "DisplayName",
-        "display" : "DisplayName"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "HL7 cytogenetics panels"
-    }]
-  },
-  {
     "name" : "display",
     "valueString" : "PANEL.HL7.CYTOGEN"
   },
@@ -181,21 +162,6 @@
     {
       "name" : "value",
       "valueCode" : "LP62072-1"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "RELATEDNAMES2"
-    },
-    {
-      "name" : "language",
-      "valueCode" : "en-US"
-    },
-    {
-      "name" : "value",
-      "valueString" : "HL7 cytogenetics panels"
     }]
   },
   {
