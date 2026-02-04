@@ -44,6 +44,7 @@
     "valueString" : "20250101"
   },
   {
+    "$optional$" : true,
     "name" : "x-caused-by-unknown-system",
     "valueCanonical" : "https://fhir-terminology.ohdsi.org|20250101"
   }]

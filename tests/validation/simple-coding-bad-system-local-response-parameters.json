@@ -83,6 +83,7 @@
     "valueUri" : "Location"
   },
   {
+    "$optional$" : true,
     "name" : "x-unknown-system",
     "valueCanonical" : "Location"
   }]

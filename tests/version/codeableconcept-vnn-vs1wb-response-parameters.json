@@ -51,6 +51,7 @@
     "valueString" : "1.2.0"
   },
   {
+    "$optional$" : true,
     "name" : "x-caused-by-unknown-system",
     "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/version|1"
   }]
