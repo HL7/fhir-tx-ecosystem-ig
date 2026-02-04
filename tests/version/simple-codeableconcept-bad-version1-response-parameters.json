@@ -77,6 +77,7 @@
     "valueString" : "0.1.0"
   },
   {
+    "$optional$" : true,
     "name" : "x-caused-by-unknown-system",
     "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/simple|1.0.0"
   }]

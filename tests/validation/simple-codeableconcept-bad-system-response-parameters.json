@@ -81,6 +81,7 @@
     "valueBoolean" : false
   },
   {
+    "$optional$" : true,
     "name" : "x-unknown-system",
     "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/simplex"
   }]
