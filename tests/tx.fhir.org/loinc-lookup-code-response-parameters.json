@@ -300,6 +300,10 @@
       "valueCode" : "CLASSTYPE"
     },
     {
+      "name" : "description",
+      "valueString" : "Laboratory class"
+    },
+    {
       "name" : "value",
       "valueString" : "1"
     }]

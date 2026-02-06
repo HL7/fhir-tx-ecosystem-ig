@@ -1,0 +1,21 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "system",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "80146002"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Appendectomy"
+    },
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/sct-procedures"
+    }
+  ]
+}
