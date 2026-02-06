@@ -3964,7 +3964,7 @@
     "name" : "snomed",
     "mode" : "snomed",
     "description" : "This snomed tests are based on the subset distributed with the tx-ecosystem IG",
-    "setup" : [ "sct/valueset-inactive.json" ],
+    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-diabetes.json", "sct/valueset-procedures.json" ],
     "tests" : [
       {
         "name" : "snomed-inactive-display",
@@ -3974,11 +3974,40 @@
         "response" : "sct/validate-code-inactive-display-response.json"
       },
       {
+        "name" : "snomed-procedure-in-display",
+        "description" : "check that procedure codes are validated properly (is-a heirachy) - in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-procedure-in-request.json",
+        "response" : "sct/validate-code-procedure-in-response.json"
+      },
+      {
+        "name" : "snomed-procedure-out-display",
+        "description" : "check that procedure codes are validated properly (is-a heirachy) - not in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-procedure-out-request.json",
+        "response" : "sct/validate-code-procedure-out-response.json"
+      },
+      {
         "name" : "snomed-expand-inactive",
         "description" : "check that inactive concepts and displays are expanded properly",
         "operation" : "expand",
         "request" : "sct/expand-inactive-request.json",
         "response" : "sct/expand-inactive-response.json"
+      },
+      {
+        "name" : "snomed-expand-diabetes",
+        "description" : "check that diabetes concepts and displays are expanded properly (is-a)",
+        "operation" : "expand",
+        "request" : "sct/expand-diabetes-request.json",
+        "response" : "sct/expand-diabetes-response.json"
+      },
+      {
+        "name" : "snomed-expand-procedures",
+        "description" : "check that procedures concepts and displays are expanded properly - as in - too many",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-procedures-request.json",
+        "response" : "sct/expand-procedures-response.json"
       }
     ]
   },{

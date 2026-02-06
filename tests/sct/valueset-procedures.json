@@ -1,0 +1,19 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sct-procedures",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-procedures",
+  "version" : "5.0.0",
+  "name" : "SCTProceduresValueSet",
+  "title" : "SCT Procedures ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "publisher" : "FHIR Project",
+  "description" : "Taken from the testing subset; contains an active code, an inactive code, and a code with an inactive designation",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "filter": [{"property": "concept", "op": "is-a", "value": "71388002"}]
+    }]
+  }
+}
