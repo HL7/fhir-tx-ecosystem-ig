@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://snomed.info/sct"
+    },
+    {
+      "name": "code",
+      "valueCode": "116101001"
+    },
+    {
+      "name": "version",
+      "valueString": "2017-09"
+    }
+  ]
+}

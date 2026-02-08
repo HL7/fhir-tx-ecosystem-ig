@@ -1,0 +1,27 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "concept": [
+                {
+                  "code": "160245001"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "system-version",
+      "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+    }
+  ]
+}

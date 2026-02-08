@@ -1,0 +1,10 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "severity" : "error",
+    "code" : "too-costly",
+    "details" : {
+      "text" : "The code System \"http://www.ama-assn.org/go/cpt\" has a grammar, and cannot be enumerated directly"
+    }
+  }]
+}

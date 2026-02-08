@@ -4242,6 +4242,124 @@
         "response" : "ucum/lookup-with-annotation-code-response.json"
       }
     ]
+  }, {
+    "name" : "related",
+    "mode" : "tx.fhir.org",
+    "description" : "Tests for candidate new 'related' operation",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
+    "tests" :[
+      {
+        "name" : "related-all",
+        "description" : "Checks that an all value is the same as itself",
+        "operation" : "related",
+        "request" : "related/simple-all-request.json",
+        "response" : "related/simple-all-response.json"
+      }
+    ]
+  }, {
+    "name" : "bugs",
+    "mode" : "tx.fhir.org",
+    "description" : "A series of tests that deal with discovered bugs in FHIRsmith",
+    "setup" : [],
+    "tests" :[
+      {
+        "name" : "country-codes",
+        "operation" : "expand",
+        "request" : "bugs/expand-country-codes-request.json",
+        "response" : "bugs/expand-country-codes-response.json"
+      },
+      {
+        "name" : "cpt",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "bugs/expand-cpt-request.json",
+        "response" : "bugs/expand-cpt-response.json"
+      },
+      {
+        "name" : "sct-ver-ex",
+        "operation" : "expand",
+        "request" : "bugs/expand-sct-ver-request.json",
+        "response" : "bugs/expand-sct-ver-response.json"
+      },
+      {
+        "name" : "undefined",
+        "operation" : "validate-code",
+        "request" : "bugs/validate-undefined-request.json",
+        "response" : "bugs/validate-undefined-response.json"
+      },
+      {
+        "name" : "no-system",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-no-system-request.json",
+        "response" : "bugs/validate-no-system-response.json"
+      },
+      {
+        "name" : "sct-parse",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-parse-request.json",
+        "response" : "bugs/validate-sct-parse-response.json"
+      },
+      {
+        "name" : "lang-case",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-lang-case-request.json",
+        "response" : "bugs/validate-lang-case-response.json"
+      },
+      {
+        "name" : "provenance",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-provenance-request.json",
+        "response" : "bugs/validate-provenance-response.json"
+      },
+      {
+        "name" : "country-code",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-country-code-request.json",
+        "response" : "bugs/validate-country-code-response.json"
+      },
+      {
+        "name" : "sct-isa",
+        "operation" : "validate-code",
+        "request" : "bugs/validate-sct-isa-request.json",
+        "response" : "bugs/validate-sct-isa-response.json"
+      },
+      {
+        "name" : "sct-ver",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-ver-request.json",
+        "response" : "bugs/validate-sct-ver-response.json"
+      },
+      {
+        "name" : "sct-msg",
+        "operation" : "validate-code",
+        "request" : "bugs/validate-sct-msg-request.json",
+        "response" : "bugs/validate-sct-msg-response.json"
+      },
+      {
+        "name" : "sct-display-1",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-display-1-request.json",
+        "response" : "bugs/validate-sct-display-1-response.json"
+      },
+      {
+        "name" : "sct-display-2",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-display-2-request.json",
+        "response" : "bugs/validate-sct-display-2-response.json"
+      },
+      {
+        "name" : "ndc",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-ndc-request.json",
+        "response" : "bugs/validate-ndc-response.json"
+      },
+      {
+        "name" : "x12-bad",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-x12-bad-request.json",
+        "response" : "bugs/validate-x12-bad-response.json"
+      }
+    ]
   },{
     "name" : "icd-11",
     "mode" : "icd-11",
