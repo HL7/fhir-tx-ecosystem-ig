@@ -20,22 +20,22 @@
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "105401000119101",
-      "display" : "Diabetes mellitus due to pancreatic injury (disorder)"
+      "display" : "Diabetes mellitus due to pancreatic injury"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "106281000119103",
-      "display" : "Pre-existing diabetes mellitus in mother complicating childbirth (disorder)"
+      "display" : "Pre-existing diabetes mellitus in childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "10753491000119101",
-      "display" : "Gestational diabetes mellitus in childbirth (disorder)"
+      "display" : "Gestational diabetes mellitus in childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "10754881000119104",
-      "display" : "Diabetes mellitus in mother complicating childbirth (disorder)"
+      "display" : "Diabetes mellitus in mother complicating childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -70,7 +70,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1217068008",
-      "display" : "Fulminant type 1 diabetes mellitus (disorder)"
+      "display" : "Fulminant type 1 diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -80,7 +80,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1255271005",
-      "display" : "Juvenile-onset diabetes mellitus, central and peripheral neurodegeneration syndrome (disorder)"
+      "display" : "Juvenile-onset diabetes mellitus, central and peripheral neurodegeneration syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -115,7 +115,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "164971000119101",
-      "display" : "Type 2 diabetes mellitus controlled by diet (finding)"
+      "display" : "Type 2 diabetes mellitus controlled by diet"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -145,12 +145,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "199229001",
-      "display" : "Pre-existing diabetes mellitus, insulin-dependent"
+      "display" : "Pre-existing type 1 diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "199230006",
-      "display" : "Pre-existing diabetes mellitus, non-insulin-dependent"
+      "display" : "Pre-existing type 2 diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -160,7 +160,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "201000119106",
-      "display" : "Disorder associated with well controlled type 2 diabetes mellitus"
+      "display" : "Disorder due to well controlled type 2 diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -170,7 +170,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "237599002",
-      "display" : "Insulin-treated non-insulin-dependent diabetes mellitus"
+      "display" : "Insulin treated Type II diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -215,7 +215,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "237627000",
-      "display" : "Pregnancy and NIDDM"
+      "display" : "Pregnancy and type 2 diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -240,7 +240,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "276560009",
-      "display" : "Small for gestation neonatal diabetes mellitus"
+      "display" : "Diabetes mellitus in neonate small for gestational age"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -255,7 +255,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "31321000119102",
-      "display" : "Diabetes mellitus type 1 without retinopathy (disorder)"
+      "display" : "Diabetes mellitus type 1 without retinopathy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -270,32 +270,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "405749004",
-      "display" : "Newly diagnosed diabetes (finding)"
+      "display" : "Newly diagnosed diabetes"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "40791000119105",
-      "display" : "Postpartum gestational diabetes mellitus (disorder)"
+      "display" : "Postpartum gestational diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "40801000119106",
-      "display" : "Gestational DM antepartum"
+      "display" : "Gestational diabetes mellitus complicating pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "408540003",
-      "display" : "Diabetes mellitus induced by non-steroid drugs (disorder)"
+      "display" : "Diabetes mellitus induced by non-steroid drugs"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "426875007",
-      "display" : "Latent autoimmune diabetes mellitus in adult (disorder)"
+      "display" : "Latent autoimmune diabetes mellitus in adult (LADA)"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "427089005",
-      "display" : "Diabetes mellitus due to cystic fibrosis (disorder)"
+      "display" : "Diabetes mellitus due to cystic fibrosis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -310,42 +310,42 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "443694000",
-      "display" : "Type II diabetes mellitus uncontrolled (finding)"
+      "display" : "Type II diabetes mellitus uncontrolled"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "444073006",
-      "display" : "Type I diabetes mellitus uncontrolled (finding)"
+      "display" : "Type I diabetes mellitus uncontrolled"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "444074000",
-      "display" : "Type I diabetes mellitus well controlled (finding)"
+      "display" : "Type I diabetes mellitus well controlled"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "444110003",
-      "display" : "Type II diabetes mellitus well controlled (finding)"
+      "display" : "Type II diabetes mellitus well controlled"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "445260006",
-      "display" : "Posttransplant diabetes mellitus (disorder)"
+      "display" : "Posttransplant diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "445353002",
-      "display" : "Brittle type II diabetes mellitus (finding)"
+      "display" : "Brittle type II diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "46635009",
-      "display" : "Insulin dependent diabetes mellitus"
+      "display" : "Diabetes mellitus type I"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "46894009",
-      "display" : "Gestational diabetes mellitus, class A>2<"
+      "display" : "Gestational diabetes mellitus class A2"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -370,7 +370,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "530558861000132104",
-      "display" : "Atypical diabetes mellitus (disorder)"
+      "display" : "Atypical diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -395,17 +395,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609561005",
-      "display" : "Maturity-onset diabetes of the young (disorder)"
+      "display" : "Maturity-onset diabetes of the young"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "609562003",
-      "display" : "Maturity onset diabetes of the young, type 1 (disorder)"
+      "display" : "Maturity onset diabetes of the young, type 1"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "609563008",
-      "display" : "Pre-existing diabetes mellitus in pregnancy (disorder)"
+      "display" : "Pre-existing diabetes mellitus in pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -415,7 +415,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609565001",
-      "display" : "Permanent neonatal diabetes mellitus (disorder)"
+      "display" : "Permanent diabetes mellitus of infancy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -440,7 +440,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609570008",
-      "display" : "MODY3"
+      "display" : "Maturity-onset diabetes of the young, type 3"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -450,22 +450,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609572000",
-      "display" : "Maturity-onset diabetes of the young, type 5 (disorder)"
+      "display" : "Maturity-onset diabetes of the young, type 5"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "609573005",
-      "display" : "MODY6"
+      "display" : "Maturity-onset diabetes of the young, type 6"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "609574004",
-      "display" : "MODY7"
+      "display" : "Maturity-onset diabetes of the young, type 7"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "609575003",
-      "display" : "MODY8"
+      "display" : "Diabetes-pancreatic exocrine dysfunction syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -475,7 +475,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609577006",
-      "display" : "MODY10"
+      "display" : "Maturity-onset diabetes of the young, type 10"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -490,32 +490,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609580007",
-      "display" : "Diabetes mellitus, transient neonatal 2 (disorder)"
+      "display" : "TNDM2"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "609581006",
-      "display" : "Diabetes mellitus, transient neonatal 3 (disorder)"
+      "display" : "Diabetes mellitus, transient neonatal 3"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "703136005",
-      "display" : "Diabetes mellitus in remission (disorder)"
+      "display" : "Diabetes mellitus in remission"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "703137001",
-      "display" : "Type I diabetes mellitus in remission (disorder)"
+      "display" : "Type I diabetes mellitus in remission"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "703138006",
-      "display" : "Type II diabetes mellitus in remission (disorder)"
+      "display" : "Type II diabetes mellitus in remission"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "70694009",
-      "display" : "Diabetes mellitus AND insipidus with optic atrophy AND deafness"
+      "display" : "Marquardt-Loriaux syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -525,32 +525,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "716362006",
-      "display" : "Gingival disease co-occurrent with diabetes mellitus (disorder)"
+      "display" : "Gingival disease co-occurrent with diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "720519003",
-      "display" : "Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome (disorder)"
+      "display" : "Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "721088003",
-      "display" : "Developmental delay, epilepsy, neonatal diabetes syndrome (disorder)"
+      "display" : "Developmental delay, epilepsy, neonatal diabetes syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "722206009",
-      "display" : "Pancreatic hypoplasia, diabetes mellitus, congenital heart disease syndrome (disorder)"
+      "display" : "Pancreatic hypoplasia, diabetes mellitus, congenital heart disease syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "722454003",
-      "display" : "Intellectual disability, craniofacial dysmorphism, hypogonadism, diabetes mellitus syndrome (disorder)"
+      "display" : "Intellectual disability, craniofacial dysmorphism, hypogonadism, diabetes mellitus syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "724067006",
-      "display" : "Permanent neonatal diabetes mellitus with cerebellar agenesis syndrome (disorder)"
+      "display" : "Permanent neonatal diabetes mellitus with cerebellar agenesis syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -565,17 +565,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "734022008",
-      "display" : "Wolfram-like syndrome (disorder)"
+      "display" : "Wolfram-like syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "737212004",
-      "display" : "Diabetes mellitus caused by chemical (disorder)"
+      "display" : "Diabetes mellitus caused by chemical"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "75022004",
-      "display" : "Gestational diabetes mellitus, class A>1<"
+      "display" : "Gestational diabetes mellitus class A1"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -585,7 +585,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "75682002",
-      "display" : "Diabetes mellitus due to insulin receptor antibodies"
+      "display" : "Diabetes mellitus caused by insulin receptor antibodies"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -595,7 +595,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "782755007",
-      "display" : "Primary microcephaly, mild intellectual disability, young-onset diabetes syndrome (disorder)"
+      "display" : "Primary microcephaly, mild intellectual disability, young-onset diabetes syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -605,12 +605,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "783722008",
-      "display" : "Myopathy and diabetes mellitus (disorder)"
+      "display" : "Myopathy and diabetes mellitus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "81531005",
-      "display" : "NIDDM in obese"
+      "display" : "Diabetes mellitus type 2 in obese"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -620,7 +620,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "870528001",
-      "display" : "Newly diagnosed type 1 diabetes mellitus (finding)"
+      "display" : "Newly diagnosed diabetes mellitus type 1"
     },
     {
       "system" : "http://snomed.info/sct",

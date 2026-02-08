@@ -1,0 +1,25 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "expansion": {
+    "$optional-properties$" : ["id","offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "160245001",
+      "display" : "No current problems or disability"
+    }]
+  }
+}

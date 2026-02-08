@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "status" : "active",
+      "compose" : {
+        "include" : [{
+          "system" : "urn:iso:std:iso:3166"
+        }]
+      }
+    }
+  },{
+    "name" : "excludeNested",
+    "valueBoolean" : true
+  }]
+}

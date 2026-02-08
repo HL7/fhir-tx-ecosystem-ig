@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "42463004"
+    "valueCode" : "162673000"
   },
   {
     "name" : "display",
-    "valueString" : "Opisthorchis"
+    "valueString" : "General examination of patient"
   },
   {
     "name" : "issues",
@@ -24,15 +24,15 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#42463004 ('Genus: Opisthorchis')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures|5.0.0'"
+          "text" : "The provided code 'http://snomed.info/sct#162673000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0|4.0.0'"
         },
-        "expression" : ["code"]
+        "expression" : ["Coding.code"]
       }]
     }
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://snomed.info/sct#42463004 ('Genus: Opisthorchis')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures|5.0.0'"
+    "valueString" : "The provided code 'http://snomed.info/sct#162673000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0|4.0.0'"
   },
   {
     "name" : "result",
@@ -44,6 +44,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
+    "valueString" : "http://snomed.info/sct/900000000000207008/version/20240201"
   }]
 }

@@ -1,0 +1,37 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "OBG"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Coding_has_no_system__cannot_validate"
+        }],
+        "severity" : "warning",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-data"
+          }],
+          "text" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+        },
+        "expression" : ["Coding"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  }]
+}
