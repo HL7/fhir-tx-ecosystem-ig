@@ -9,34 +9,8 @@
     "valueString" : "European"
   },
   {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "not-in-vs"
-          }],
-          "text" : "The provided code 'urn:oid:2.16.840.1.113883.6.238#2108-9 ('EUROPEAN')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'"
-        },
-        "expression" : ["Coding.code"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "The provided code 'urn:oid:2.16.840.1.113883.6.238#2108-9 ('EUROPEAN')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'"
-  },
-  {
     "name" : "result",
-    "valueBoolean" : false
+    "valueBoolean" : true
   },
   {
     "name" : "system",
