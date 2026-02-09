@@ -32,7 +32,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Code freetext is not a valid SNOMED CT Term, and neither could it be parsed as an expression (Concept not found (next char = \"f\", in \"freetext\") at character 1)"
+          "text" : "Not a valid expression: Concept not found (next char = \"f\", in \"freetext\") at character 1"
         },
         "expression" : ["code"]
       }]
