@@ -1,27 +1,23 @@
 {
-  "resourceType": "Parameters",
-  "parameter": [
-    {
-      "name": "result",
-      "valueBoolean": true
-    },
-    {
-      "name": "code",
-      "valueCode": "code1"
-    },
-    {
-      "name": "system",
-      "valueUri": "http://hl7.org/fhir/test/CodeSystem/simple"
-    },
-    {
-      "$optional$": true,
-      "name": "display",
-      "valueString": "Display 1"
-    },
-    {
-      "$optional$": true,
-      "name": "version",
-      "valueString": "0.1.0"
-    }
-  ]
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code1"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 1"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0"
+  }]
 }
