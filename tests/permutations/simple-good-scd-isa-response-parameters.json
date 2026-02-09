@@ -1,0 +1,21 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "result",
+      "valueBoolean": false
+    },
+    {
+      "name": "message",
+      "valueString": "(tba)"
+    },
+    {
+      "name": "code",
+      "valueCode": "code1"
+    },
+    {
+      "name": "system",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/simple"
+    }
+  ]
+}
