@@ -1,0 +1,21 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/simple-import"
+    },
+    {
+      "name": "system",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/simple"
+    },
+    {
+      "name": "code",
+      "valueCode": "code1"
+    },
+    {
+      "name": "display",
+      "valueString": "Display 1"
+    }
+  ]
+}

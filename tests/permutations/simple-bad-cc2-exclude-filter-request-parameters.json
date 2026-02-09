@@ -1,0 +1,26 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/simple-exclude-filter"
+    },
+    {
+      "name": "codeableConcept",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/test/CodeSystem/simple",
+            "code": "codeXXX",
+            "display": "Wrong Display"
+          },
+          {
+            "system": "http://hl7.org/fhir/test/CodeSystem/simple",
+            "code": "code3",
+            "display": "Display 3"
+          }
+        ]
+      }
+    }
+  ]
+}
