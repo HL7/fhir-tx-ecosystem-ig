@@ -6,6 +6,10 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "lang-pack"
+  }],
   "url": "http://fhir.de/CodeSystem/loinc-supplement-basis",
   "version": "0.9.13",
   "name": "SupplementLoincDeBasis",
