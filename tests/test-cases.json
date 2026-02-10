@@ -4357,6 +4357,7 @@
       {
         "name" : "cpt",
         "operation" : "expand",
+        "full-set" : true,
         "http-code" : "4xx",
         "request" : "bugs/expand-cpt-request.json",
         "response" : "bugs/expand-cpt-response.json"
@@ -4364,12 +4365,14 @@
       {
         "name" : "sct-ver-ex",
         "operation" : "expand",
+        "full-set" : true,
         "request" : "bugs/expand-sct-ver-request.json",
         "response" : "bugs/expand-sct-ver-response.json"
       },
       {
         "name" : "undefined",
         "operation" : "validate-code",
+        "full-set" : true,
         "request" : "bugs/validate-undefined-request.json",
         "response" : "bugs/validate-undefined-response.json"
       },
@@ -4418,12 +4421,14 @@
       {
         "name" : "sct-isa",
         "operation" : "validate-code",
+        "full-set" : true,
         "request" : "bugs/validate-sct-isa-request.json",
         "response" : "bugs/validate-sct-isa-response.json"
       },
       {
         "name" : "sct-ver",
         "operation" : "cs-validate-code",
+        "full-set" : true,
         "request" : "bugs/validate-sct-ver-request.json",
         "response" : "bugs/validate-sct-ver-response.json"
       },
@@ -4447,6 +4452,7 @@
       },
       {
         "name" : "ndc",
+        "full-set" : true,
         "operation" : "cs-validate-code",
         "request" : "bugs/validate-ndc-request.json",
         "response" : "bugs/validate-ndc-response.json"
