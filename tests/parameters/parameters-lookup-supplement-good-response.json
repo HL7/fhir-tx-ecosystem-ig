@@ -1,0 +1,78 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "code1"
+  },
+  {
+    "name" : "definition",
+    "valueString" : "My first code"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "de"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mein erster Code"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Display 1"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "nl"
+    },
+    {
+      "name" : "value",
+      "valueString" : "ectenoot"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 1"
+  },
+  {
+    "name" : "name",
+    "valueString" : "ExtensionsTestCodeSystem"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/extensions"
+  }]
+}

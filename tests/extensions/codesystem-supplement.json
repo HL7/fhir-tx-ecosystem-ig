@@ -17,6 +17,11 @@
   "caseSensitive" : true,
   "content" : "supplement",
   "supplements" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+  "property" : [{
+    "code" : "prop1",
+    "uri" : "http://hl7.org/fhir/test/CodeSystem/property1",
+    "type" : "string"
+  }],
   "concept" : [{
     "code" : "code1",
     "designation" : [{
@@ -65,6 +70,10 @@
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-label",
       "valueString" : "e."
+    }],
+    "property" : [{
+      "code" : "prop1",
+      "valueString" : "value1"
     }]
   },
   {
