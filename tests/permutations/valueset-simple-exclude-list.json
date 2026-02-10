@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-exclude-list",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-exclude-list",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetExcludeList",
+  "title" : "Simple ValueSet - Exclude List",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    }],
+    "exclude" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "concept" : [{
+        "code" : "code2"
+      },{
+        "code" : "code2a"
+      },{
+        "code" : "code2b"
+      }]
+    }]
+  }
+}

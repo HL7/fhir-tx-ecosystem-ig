@@ -15,11 +15,11 @@
     "total" : 1,
     "offset" : 0,
     "parameter" : [{
-        "$optional$" : true,
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/dual-filter"
     }],
     "property" : [{
+      "$optional$" : true,
       "code" : "status",
       "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],

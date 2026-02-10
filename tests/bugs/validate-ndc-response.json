@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "0777-3105-02"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
+  },
+  {
+    "name" : "inactive",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "INACTIVE_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "The concept '0777-3105-02' has a status of inactive and its use should be reviewed"
+        }
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The concept '0777-3105-02' has a status of inactive and its use should be reviewed"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2021-11-01"
+  }]
+}

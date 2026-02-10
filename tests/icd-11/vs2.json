@@ -1,0 +1,66 @@
+{
+  "resourceType": "ValueSet",
+  "id": "VS.11.2025-01.mms.257068234.pcs.infectiousAgent",
+  "url": "http://id.who.int/icd/release/11/mms/257068234/postcoordinationScale/infectiousAgent",
+  "version": "2025-01",
+  "name": "VS.11.2025-01.mms.257068234.pcs.infectiousAgent",
+  "title": "Postcoordination scale Infectious agent for entity http://id.who.int/icd/release/11/mms/257068234",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-24",
+  "publisher": "World Health Organization",
+  "compose": {
+    "include": [
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "version" : "2025-01",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XN8P1"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XN62R"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XN8KD"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "contains": [
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "code": "XN8P1",
+        "display": "Vibrio cholerae O1, biovar cholerae"
+      },
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "code": "XN62R",
+        "display": "Vibrio cholerae O1, biovar eltor"
+      },
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "code": "XN8KD",
+        "display": "Vibrio cholerae O139"
+      }
+    ]
+  }
+}

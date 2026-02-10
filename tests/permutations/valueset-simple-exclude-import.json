@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-exclude-import",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-exclude-import",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetExcludeImport",
+  "title" : "Simple ValueSet - Exclude by Import",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    }],
+    "exclude" : [{
+      "valueSet" : ["http://hl7.org/fhir/test/ValueSet/simple-isa"]
+    }]
+  }
+}

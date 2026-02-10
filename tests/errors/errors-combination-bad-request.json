@@ -8,6 +8,6 @@
     "valueCode" : "code1"
   },{
     "name" : "inferSystem",
-    "valueUri" : true
+    "valueBoolean" : true
   }]
 }

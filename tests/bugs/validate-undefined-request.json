@@ -1,0 +1,43 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "coding",
+      "valueCoding": {
+        "system": "urn:oid:2.16.840.1.113883.6.238",
+        "code": "2108-9",
+        "display": "EUROPEAN"
+      }
+    },
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/us/core/ValueSet/detailed-race",
+        "version": "6.1.0",
+        "status": "active",
+        "compose": {
+          "include": [
+            {
+              "valueSet": [
+                "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.14914"
+              ]
+            },
+            {
+              "valueSet": [
+                "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103"
+              ]
+            }
+          ],
+          "exclude": [
+            {
+              "valueSet": [
+                "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

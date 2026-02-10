@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "https://codesystem.x12.org/005010/1338"
+    },
+    {
+      "name": "code",
+      "valueCode": "U"
+    },
+    {
+      "name": "display",
+      "valueString": "Urgent"
+    }
+  ]
+}

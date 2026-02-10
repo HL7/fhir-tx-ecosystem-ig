@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "U"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "UNKNOWN_CODESYSTEM"
+        }],
+        "severity" : "error",
+        "code" : "not-found",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-found"
+          }],
+          "text" : "A definition for CodeSystem 'https://codesystem.x12.org/005010/1338' could not be found, so the code cannot be validated"
+        },
+        "expression" : ["system"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "A definition for CodeSystem 'https://codesystem.x12.org/005010/1338' could not be found, so the code cannot be validated"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "https://codesystem.x12.org/005010/1338"
+  },
+  {
+    "name" : "x-caused-by-unknown-system",
+    "valueCanonical" : "https://codesystem.x12.org/005010/1338"
+  }]
+}

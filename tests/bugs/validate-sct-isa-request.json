@@ -1,0 +1,64 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "coding",
+      "valueCoding": {
+        "system": "http://snomed.info/sct",
+        "code": "162673000"
+      }
+    },
+    {
+      "name": "displayLanguage",
+      "valueCode": "en"
+    },
+    {
+      "name": "default-to-latest-version",
+      "valueBoolean": true
+    },
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0",
+        "version": "4.0.0",
+        "status": "active",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "filter": [
+                {
+                  "property": "concept",
+                  "op": "is-a",
+                  "value": "308335008"
+                },
+                {
+                  "property": "concept",
+                  "op": "is-a",
+                  "value": "73211009"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cache-id",
+      "valueId": "52c25bdb-e887-46f1-b9b7-2e96531ba5f8"
+    },
+    {
+      "name": "profile-url",
+      "valueString": "http://hl7.org/fhir/ExpansionProfile/dc8fd4bc-091a-424a-8a3b-6198ef146891"
+    },
+    {
+      "name": "system-version",
+      "valueCanonical": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+    },
+    {
+      "name": "diagnostics",
+      "valueBoolean": true
+    }
+  ]
+}

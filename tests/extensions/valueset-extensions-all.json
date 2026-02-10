@@ -1,6 +1,10 @@
 {
   "resourceType" : "ValueSet",
   "id" : "extensions-all",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/valueset-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement"
+  }],
   "url" : "http://hl7.org/fhir/test/ValueSet/extensions-all",
   "version" : "5.0.0",
   "name" : "ExtensionsValueSetAll",

@@ -125,7 +125,8 @@
     "mode" : "general",
     "description" : "Testing out the various expansion parameters that the IG publisher makes use of",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", 
-       "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-enumerated.json"],
+       "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-enumerated.json",
+       "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-all-ns.json"],
     "tests" :[
       {
         "name" : "parameters-expand-all-hierarchy",
@@ -301,6 +302,63 @@
         "request" : "parameters/parameters-expand-isa-property-request-parameters.json",
         "response" : "parameters/parameters-expand-isa-property-response-valueSet.json",
         "response:flat" : "parameters/parameters-expand-isa-property-response-flat-valueSet.json"
+      },{
+        "name" : "parameters-expand-supplement-none",
+        "description" : "Base line for supplement tests",
+        "operation" : "expand",
+        "request" : "parameters/parameters-expand-supplement-none-request.json",
+        "response" : "parameters/parameters-expand-supplement-none-response.json"
+      },{
+        "name" : "parameters-expand-supplement-good",
+        "description" : "Make sure the useSupplement parameter works",
+        "operation" : "expand",
+        "request" : "parameters/parameters-expand-supplement-good-request.json",
+        "response" : "parameters/parameters-expand-supplement-good-response.json"
+      },{
+        "name" : "parameters-expand-supplement-bad",
+        "description" : "Make sure the useSupplement parameter fails when it's not valid",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "parameters/parameters-expand-supplement-bad-request.json",
+        "response" : "parameters/parameters-expand-supplement-bad-response.json"
+      },{
+        "name" : "parameters-validate-supplement-none",
+        "description" : "Base line for supplement tests - validation",
+        "operation" : "validate-code",
+        "request" : "parameters/parameters-validate-supplement-none-request.json",
+        "response" : "parameters/parameters-validate-supplement-none-response.json"
+      },{
+        "name" : "parameters-validate-supplement-good",
+        "description" : "Make sure the useSupplement parameter works for validation",
+        "operation" : "validate-code",
+        "request" : "parameters/parameters-validate-supplement-good-request.json",
+        "response" : "parameters/parameters-validate-supplement-good-response.json"
+      },{
+        "name" : "parameters-validate-supplement-bad",
+        "description" : "Make sure the useSupplement parameter fails when it's not valid - for validation",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "parameters/parameters-validate-supplement-bad-request.json",
+        "response" : "parameters/parameters-validate-supplement-bad-response.json"
+      },{
+        "name" : "parameters-lookup-supplement-none",
+        "description" : "Base line for supplement tests - validation",
+        "operation" : "lookup",
+        "request" : "parameters/parameters-lookup-supplement-none-request.json",
+        "response" : "parameters/parameters-lookup-supplement-none-response.json"
+      },{
+        "name" : "parameters-lookup-supplement-good",
+        "description" : "Make sure the useSupplement parameter works for lookup",
+        "operation" : "lookup",
+        "request" : "parameters/parameters-lookup-supplement-good-request.json",
+        "response" : "parameters/parameters-lookup-supplement-good-response.json"
+      },{
+        "name" : "parameters-lookup-supplement-bad",
+        "description" : "Make sure the useSupplement parameter fails when it's not valid - for lookup",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "parameters/parameters-lookup-supplement-bad-request.json",
+        "response" : "parameters/parameters-lookup-supplement-bad-response.json"
       }
     ]
   },{
@@ -3033,323 +3091,351 @@
         "name" : "notSelectable-prop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-all-request-parameters.json",
+        "response" : "notSelectable/expand-prop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-noprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-noprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-noprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-noprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-noprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-reprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-unprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-true-request-parameters.json",
+        "response" : "notSelectable/expand-prop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-trueUC",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-trueUC-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-trueUC-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-trueUC-request-parameters.json",
+        "response" : "notSelectable/expand-prop-trueUC-response-valueSet.json"
       },
       {
         "name" : "notSelectable-noprop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-noprop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-noprop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-noprop-true-request-parameters.json",
+        "response" : "notSelectable/expand-noprop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-reprop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-true-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-unprop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-unprop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-unprop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-unprop-true-request-parameters.json",
+        "response" : "notSelectable/expand-unprop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-false-request-parameters.json",
+        "response" : "notSelectable/expand-prop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-noprop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-noprop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-noprop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-noprop-false-request-parameters.json",
+        "response" : "notSelectable/expand-noprop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-reprop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-false-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-unprop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-unprop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-unprop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-unprop-false-request-parameters.json",
+        "response" : "notSelectable/expand-unprop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-in",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-in-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-in-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-in-request-parameters.json",
+        "response" : "notSelectable/expand-prop-in-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-out",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-out-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-out-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-out-request-parameters.json",
+        "response" : "notSelectable/expand-prop-out-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-trueUC-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-trueUC-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-trueUC-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-trueUC-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-trueUC-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-in-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-in-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-in-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-in-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-in-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-out-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-out-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-out-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-out-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-out-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-in-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-in-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-in-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-in-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-in-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-in-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-in-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-in-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-in-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-in-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-out-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-out-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-out-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-out-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-out-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-out-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-out-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-out-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-out-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-out-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-false-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-false-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-false-unknown-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-true-true-param-true",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-true-true-param-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-true-param-true-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-true-true-param-false",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-true-true-param-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-true-param-false-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-false-false-param-true",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-false-false-param-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-false-param-true-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-false-false-param-false",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-false-false-param-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-false-param-false-response-parameters.json"
       }
     ]
   },{
@@ -3964,7 +4050,7 @@
     "name" : "snomed",
     "mode" : "snomed",
     "description" : "This snomed tests are based on the subset distributed with the tx-ecosystem IG",
-    "setup" : [ "sct/valueset-inactive.json" ],
+    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-diabetes.json", "sct/valueset-procedures.json" ],
     "tests" : [
       {
         "name" : "snomed-inactive-display",
@@ -3974,11 +4060,40 @@
         "response" : "sct/validate-code-inactive-display-response.json"
       },
       {
+        "name" : "snomed-procedure-in-display",
+        "description" : "check that procedure codes are validated properly (is-a heirachy) - in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-procedure-in-request.json",
+        "response" : "sct/validate-code-procedure-in-response.json"
+      },
+      {
+        "name" : "snomed-procedure-out-display",
+        "description" : "check that procedure codes are validated properly (is-a heirachy) - not in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-procedure-out-request.json",
+        "response" : "sct/validate-code-procedure-out-response.json"
+      },
+      {
         "name" : "snomed-expand-inactive",
         "description" : "check that inactive concepts and displays are expanded properly",
         "operation" : "expand",
         "request" : "sct/expand-inactive-request.json",
         "response" : "sct/expand-inactive-response.json"
+      },
+      {
+        "name" : "snomed-expand-diabetes",
+        "description" : "check that diabetes concepts and displays are expanded properly (is-a)",
+        "operation" : "expand",
+        "request" : "sct/expand-diabetes-request.json",
+        "response" : "sct/expand-diabetes-response.json"
+      },
+      {
+        "name" : "snomed-expand-procedures",
+        "description" : "check that procedures concepts and displays are expanded properly - as in - too many",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-procedures-request.json",
+        "response" : "sct/expand-procedures-response.json"
       }
     ]
   },{
@@ -4211,6 +4326,486 @@
         "operation" : "lookup",
         "request" : "ucum/lookup-with-annotation-code-request.json",
         "response" : "ucum/lookup-with-annotation-code-response.json"
+      }
+    ]
+  }, {
+    "name" : "related",
+    "mode" : "tx.fhir.org",
+    "description" : "Tests for candidate new 'related' operation",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
+    "tests" :[
+      {
+        "name" : "related-all",
+        "description" : "Checks that an all value is the same as itself",
+        "operation" : "related",
+        "request" : "related/simple-all-request.json",
+        "response" : "related/simple-all-response.json"
+      }
+    ]
+  }, {
+    "name" : "bugs",
+    "mode" : "tx.fhir.org",
+    "description" : "A series of tests that deal with discovered bugs in FHIRsmith. These tests are specific to FHIRsmith - internal QA",
+    "setup" : [],
+    "tests" :[
+      {
+        "name" : "country-codes",
+        "operation" : "expand",
+        "request" : "bugs/expand-country-codes-request.json",
+        "response" : "bugs/expand-country-codes-response.json"
+      },
+      {
+        "name" : "cpt",
+        "operation" : "expand",
+        "full-set" : true,
+        "http-code" : "4xx",
+        "request" : "bugs/expand-cpt-request.json",
+        "response" : "bugs/expand-cpt-response.json"
+      },
+      {
+        "name" : "sct-ver-ex",
+        "operation" : "expand",
+        "full-set" : true,
+        "request" : "bugs/expand-sct-ver-request.json",
+        "response" : "bugs/expand-sct-ver-response.json"
+      },
+      {
+        "name" : "undefined",
+        "operation" : "validate-code",
+        "full-set" : true,
+        "request" : "bugs/validate-undefined-request.json",
+        "response" : "bugs/validate-undefined-response.json"
+      },
+      {
+        "name" : "no-system",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-no-system-request.json",
+        "response" : "bugs/validate-no-system-response.json"
+      },
+      {
+        "name" : "sct-parse",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-parse-request.json",
+        "response" : "bugs/validate-sct-parse-response.json"
+      },
+      {
+        "name" : "sct-parse-pc",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-parse-pc-request.json",
+        "response" : "bugs/validate-sct-parse-pc-response.json"
+      },
+      {
+        "name" : "lang-case",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-lang-case-request.json",
+        "response" : "bugs/validate-lang-case-response.json"
+      },
+      {
+        "name" : "lang-case2",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-lang-case2-request.json",
+        "response" : "bugs/validate-lang-case2-response.json"
+      },
+      {
+        "name" : "provenance",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-provenance-request.json",
+        "response" : "bugs/validate-provenance-response.json"
+      },
+      {
+        "name" : "country-code",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-country-code-request.json",
+        "response" : "bugs/validate-country-code-response.json"
+      },
+      {
+        "name" : "sct-isa",
+        "operation" : "validate-code",
+        "full-set" : true,
+        "request" : "bugs/validate-sct-isa-request.json",
+        "response" : "bugs/validate-sct-isa-response.json"
+      },
+      {
+        "name" : "sct-ver",
+        "operation" : "cs-validate-code",
+        "full-set" : true,
+        "request" : "bugs/validate-sct-ver-request.json",
+        "response" : "bugs/validate-sct-ver-response.json"
+      },
+      {
+        "name" : "sct-msg",
+        "operation" : "validate-code",
+        "request" : "bugs/validate-sct-msg-request.json",
+        "response" : "bugs/validate-sct-msg-response.json"
+      },
+      {
+        "name" : "sct-display-1",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-display-1-request.json",
+        "response" : "bugs/validate-sct-display-1-response.json"
+      },
+      {
+        "name" : "sct-display-2",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-sct-display-2-request.json",
+        "response" : "bugs/validate-sct-display-2-response.json"
+      },
+      {
+        "name" : "ndc",
+        "full-set" : true,
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-ndc-request.json",
+        "response" : "bugs/validate-ndc-response.json"
+      },
+      {
+        "name" : "x12-bad",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-x12-bad-request.json",
+        "response" : "bugs/validate-x12-bad-response.json"
+      }
+    ]
+  },{
+    "name" : "permutations",
+    "mode" : "general",
+    "description" : "A set of permutations generated by Claude with the goal of increasing test coverage.",
+    "setup" : ["simple/codesystem-simple.json",   "permutations/valueset-simple-all.json",  "permutations/valueset-simple-enumerated.json", "permutations/valueset-simple-exclude-filter.json",
+               "permutations/valueset-simple-exclude-import.json", "permutations/valueset-simple-exclude-list.json", "permutations/valueset-simple-import.json", "permutations/valueset-simple-isa.json"],
+    "tests" : [
+      {
+        "name" : "bad-cc1-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-all-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-all-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc1-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-enumerated-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc1-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc1-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc1-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc1-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-import-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc1-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc1-isa-request-parameters.json",
+        "response" : "permutations/simple-bad-cc1-isa-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-all-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-all-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-enumerated-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-import-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-cc2-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-cc2-isa-request-parameters.json",
+        "response" : "permutations/simple-bad-cc2-isa-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-all-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-all-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-enumerated-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-import-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-coding-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-coding-isa-request-parameters.json",
+        "response" : "permutations/simple-bad-coding-isa-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-all-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-all-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-enumerated-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-import-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-import-response-parameters.json"
+      },
+      {
+        "name" : "bad-scd-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-bad-scd-isa-request-parameters.json",
+        "response" : "permutations/simple-bad-scd-isa-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-all-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-all-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-enumerated-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-import-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-import-response-parameters.json"
+      },
+      {
+        "name" : "good-cc1-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc1-isa-request-parameters.json",
+        "response" : "permutations/simple-good-cc1-isa-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-all-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-all-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-enumerated-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-import-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-import-response-parameters.json"
+      },
+      {
+        "name" : "good-cc2-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-cc2-isa-request-parameters.json",
+        "response" : "permutations/simple-good-cc2-isa-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-all-request-parameters.json",
+        "response" : "permutations/simple-good-coding-all-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-enumerated-request-parameters.json",
+        "response" : "permutations/simple-good-coding-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-good-coding-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-good-coding-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-good-coding-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-import-request-parameters.json",
+        "response" : "permutations/simple-good-coding-import-response-parameters.json"
+      },
+      {
+        "name" : "good-coding-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-coding-isa-request-parameters.json",
+        "response" : "permutations/simple-good-coding-isa-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-all-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-all-request-parameters.json",
+        "response" : "permutations/simple-good-scd-all-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-enumerated-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-enumerated-request-parameters.json",
+        "response" : "permutations/simple-good-scd-enumerated-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-exclude-filter-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-exclude-filter-request-parameters.json",
+        "response" : "permutations/simple-good-scd-exclude-filter-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-exclude-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-exclude-import-request-parameters.json",
+        "response" : "permutations/simple-good-scd-exclude-import-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-exclude-list-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-exclude-list-request-parameters.json",
+        "response" : "permutations/simple-good-scd-exclude-list-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-import-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-import-request-parameters.json",
+        "response" : "permutations/simple-good-scd-import-response-parameters.json"
+      },
+      {
+        "name" : "good-scd-isa-request",
+        "operation" : "validate-code",
+        "request" : "permutations/simple-good-scd-isa-request-parameters.json",
+        "response" : "permutations/simple-good-scd-isa-response-parameters.json"
       }
     ]
   },{
