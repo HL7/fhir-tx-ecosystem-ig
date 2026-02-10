@@ -57,5 +57,10 @@
   {
     "name" : "system",
     "valueUri" : "http://hl7.org/fhir/test/CodeSystem/case-sensitive"
+  },
+  {
+    "$optional$" : true,
+    "name" : "version",
+    "valueString" : "0.1.0"
   }]
 }
