@@ -10,6 +10,10 @@
     "severity" : "error",
     "code" : "$choice:business-rule|not-found$",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
       "text" : "$fragments:supplement|http://hl7.org/fhir/test/CodeSystem/supplementX$"
     },
     "diagnostics": "$$"
