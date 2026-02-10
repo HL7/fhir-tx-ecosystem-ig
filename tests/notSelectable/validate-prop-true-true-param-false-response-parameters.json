@@ -1,0 +1,65 @@
+﻿{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "codeNS"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Not Selectable Code"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ABSTRACT_CODE_NOT_ALLOWED"
+        }],
+        "severity" : "error",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is abstract, and not allowed in this context"
+        },
+        "expression" : ["Coding.code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-true|5.0.0'"
+        },
+        "expression" : ["Coding.code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is abstract, and not allowed in this context; The provided code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-true|5.0.0'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/notSelectable-prop"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0"
+  }]
+}
