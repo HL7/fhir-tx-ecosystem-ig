@@ -125,7 +125,8 @@
     "mode" : "general",
     "description" : "Testing out the various expansion parameters that the IG publisher makes use of",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", 
-       "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-enumerated.json"],
+       "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-enumerated.json",
+       "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-all-ns.json"],
     "tests" :[
       {
         "name" : "parameters-expand-all-hierarchy",
@@ -301,6 +302,63 @@
         "request" : "parameters/parameters-expand-isa-property-request-parameters.json",
         "response" : "parameters/parameters-expand-isa-property-response-valueSet.json",
         "response:flat" : "parameters/parameters-expand-isa-property-response-flat-valueSet.json"
+      },{
+        "name" : "parameters-expand-supplement-none",
+        "description" : "Base line for supplement tests",
+        "operation" : "expand",
+        "request" : "parameters/parameters-expand-supplement-none-request.json",
+        "response" : "parameters/parameters-expand-supplement-none-response.json"
+      },{
+        "name" : "parameters-expand-supplement-good",
+        "description" : "Make sure the useSupplement parameter works",
+        "operation" : "expand",
+        "request" : "parameters/parameters-expand-supplement-good-request.json",
+        "response" : "parameters/parameters-expand-supplement-good-response.json"
+      },{
+        "name" : "parameters-expand-supplement-bad",
+        "description" : "Make sure the useSupplement parameter fails when it's not valid",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "parameters/parameters-expand-supplement-bad-request.json",
+        "response" : "parameters/parameters-expand-supplement-bad-response.json"
+      },{
+        "name" : "parameters-validate-supplement-none",
+        "description" : "Base line for supplement tests - validation",
+        "operation" : "validate-code",
+        "request" : "parameters/parameters-validate-supplement-none-request.json",
+        "response" : "parameters/parameters-validate-supplement-none-response.json"
+      },{
+        "name" : "parameters-validate-supplement-good",
+        "description" : "Make sure the useSupplement parameter works for validation",
+        "operation" : "validate-code",
+        "request" : "parameters/parameters-validate-supplement-good-request.json",
+        "response" : "parameters/parameters-validate-supplement-good-response.json"
+      },{
+        "name" : "parameters-validate-supplement-bad",
+        "description" : "Make sure the useSupplement parameter fails when it's not valid - for validation",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "parameters/parameters-validate-supplement-bad-request.json",
+        "response" : "parameters/parameters-validate-supplement-bad-response.json"
+      },{
+        "name" : "parameters-lookup-supplement-none",
+        "description" : "Base line for supplement tests - validation",
+        "operation" : "lookup",
+        "request" : "parameters/parameters-lookup-supplement-none-request.json",
+        "response" : "parameters/parameters-lookup-supplement-none-response.json"
+      },{
+        "name" : "parameters-lookup-supplement-good",
+        "description" : "Make sure the useSupplement parameter works for lookup",
+        "operation" : "lookup",
+        "request" : "parameters/parameters-lookup-supplement-good-request.json",
+        "response" : "parameters/parameters-lookup-supplement-good-response.json"
+      },{
+        "name" : "parameters-lookup-supplement-bad",
+        "description" : "Make sure the useSupplement parameter fails when it's not valid - for lookup",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "parameters/parameters-lookup-supplement-bad-request.json",
+        "response" : "parameters/parameters-lookup-supplement-bad-response.json"
       }
     ]
   },{
@@ -3033,323 +3091,351 @@
         "name" : "notSelectable-prop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-all-request-parameters.json",
+        "response" : "notSelectable/expand-prop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-noprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-noprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-noprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-noprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-noprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-reprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-unprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-true-request-parameters.json",
+        "response" : "notSelectable/expand-prop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-trueUC",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-trueUC-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-trueUC-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-trueUC-request-parameters.json",
+        "response" : "notSelectable/expand-prop-trueUC-response-valueSet.json"
       },
       {
         "name" : "notSelectable-noprop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-noprop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-noprop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-noprop-true-request-parameters.json",
+        "response" : "notSelectable/expand-noprop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-reprop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-true-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-unprop-true",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-unprop-true-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-unprop-true-response-valueSet.json"
+        "request" : "notSelectable/expand-unprop-true-request-parameters.json",
+        "response" : "notSelectable/expand-unprop-true-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-false-request-parameters.json",
+        "response" : "notSelectable/expand-prop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-noprop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-noprop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-noprop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-noprop-false-request-parameters.json",
+        "response" : "notSelectable/expand-noprop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-reprop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-reprop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-reprop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-reprop-false-request-parameters.json",
+        "response" : "notSelectable/expand-reprop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-unprop-false",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-unprop-false-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-unprop-false-response-valueSet.json"
+        "request" : "notSelectable/expand-unprop-false-request-parameters.json",
+        "response" : "notSelectable/expand-unprop-false-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-in",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-in-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-in-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-in-request-parameters.json",
+        "response" : "notSelectable/expand-prop-in-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-out",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-notSelectable-prop-out-request-parameters.json",
-        "response" : "notSelectable/expand-notSelectable-prop-out-response-valueSet.json"
+        "request" : "notSelectable/expand-prop-out-request-parameters.json",
+        "response" : "notSelectable/expand-prop-out-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-trueUC-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-trueUC-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-trueUC-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-trueUC-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-trueUC-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-in-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-in-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-in-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-in-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-in-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-out-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-out-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-out-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-out-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-out-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-true-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-true-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-true-true-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-true-true-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-true-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-in-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-in-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-in-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-in-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-in-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-in-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-in-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-in-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-in-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-in-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-out-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-out-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-out-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-out-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-out-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-out-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-out-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-out-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-out-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-out-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-true-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-true-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-true-false-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-true-false-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-true-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-prop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-false-true",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-false-true-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-false-true-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-false-true-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-false-true-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-prop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-false-false",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-false-false-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-false-false-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-false-false-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-false-false-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-true-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-true-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-true-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-true-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-prop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-prop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-prop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-prop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-noprop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-noprop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-noprop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-noprop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-noprop-false-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-reprop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-reprop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-reprop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-reprop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-reprop-false-unknown-response-parameters.json"
       },
       {
         "name" : "notSelectable-unprop-false-unknown",
         "description" : "to be provided",
         "operation" : "validate-code",
-        "request" : "notSelectable/validate-notSelectable-unprop-false-unknown-request-parameters.json",
-        "response" : "notSelectable/validate-notSelectable-unprop-false-unknown-response-parameters.json"
+        "request" : "notSelectable/validate-unprop-false-unknown-request-parameters.json",
+        "response" : "notSelectable/validate-unprop-false-unknown-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-true-true-param-true",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-true-true-param-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-true-param-true-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-true-true-param-false",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-true-true-param-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-true-true-param-false-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-false-false-param-true",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-false-false-param-true-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-false-param-true-response-parameters.json"
+      },
+      {
+        "name" : "notSelectable-prop-false-false-param-false",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "notSelectable/validate-prop-false-false-param-false-request-parameters.json",
+        "response" : "notSelectable/validate-prop-false-false-param-false-response-parameters.json"
       }
     ]
   },{
@@ -4310,6 +4396,12 @@
         "operation" : "cs-validate-code",
         "request" : "bugs/validate-lang-case-request.json",
         "response" : "bugs/validate-lang-case-response.json"
+      },
+      {
+        "name" : "lang-case2",
+        "operation" : "cs-validate-code",
+        "request" : "bugs/validate-lang-case2-request.json",
+        "response" : "bugs/validate-lang-case2-response.json"
       },
       {
         "name" : "provenance",
