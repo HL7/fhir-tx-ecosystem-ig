@@ -2,6 +2,7 @@
   "resourceType" : "OperationOutcome",
   "issue" : [{
     "extension" : [{
+      "$optional$" : "!tx.fhir.org",
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "UNKNOWN_CODESYSTEM_VERSION_EXP"
     }],
