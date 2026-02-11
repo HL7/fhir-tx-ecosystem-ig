@@ -16,7 +16,7 @@ execute the tests is to use the [standard Java FHIR Validator](https://github.co
 Run with the parameters:
 
 ````
--txTests -tx {server} -version? {version} -externals {file} -output {folder} -mode? {flat}?
+txTests -tx {server} -version? {version} -externals {file} -output {folder} -mode? {flat}?
 ````
 
 Notes:
