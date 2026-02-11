@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ucum-canonical",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "filter": [
+          {
+            "property": "canonical",
+            "op": "=",
+            "value": "g"
+          }
+        ]
+      }
+    ]
+  }
+}

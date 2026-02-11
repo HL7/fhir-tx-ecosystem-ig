@@ -1,0 +1,69 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "kgXX"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'http://unitsofmeasure.org#kgXX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ucum-all'"
+        },
+        "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Unknown_Code_in_Version"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "Unknown code 'kgXX' in the CodeSystem 'http://unitsofmeasure.org' version '2.2'"
+        },
+        "expression" : ["code"]
+      },
+      {
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "Error processing unit 'kgXX': The unit 'kgXX' is unknown at character 1"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The provided code 'http://unitsofmeasure.org#kgXX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ucum-all'; Unknown code 'kgXX' in the CodeSystem 'http://unitsofmeasure.org' version '2.2'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://unitsofmeasure.org"
+  }]
+}

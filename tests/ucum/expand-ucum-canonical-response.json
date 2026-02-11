@@ -1,0 +1,361 @@
+ {
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ucum-canonical",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id","offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueString" : "The code System \"http://unitsofmeasure.org has a grammar and so has infinite members. This extension is based on http://hl7.org/fhir/ValueSet/ucum-common"
+    }],
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://unitsofmeasure.org|2.2"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[car_m]",
+      "display" : "[car_m]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[dr_ap]",
+      "display" : "[dr_ap]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[dr_av]",
+      "display" : "[dr_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[gr]",
+      "display" : "[gr]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_ap]",
+      "display" : "[lb_ap]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_av]",
+      "display" : "[lb_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_tr]",
+      "display" : "[lb_tr]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lcwt_av]",
+      "display" : "[lcwt_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lton_av]",
+      "display" : "[lton_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[m_e]",
+      "display" : "[m_e]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[m_p]",
+      "display" : "[m_p]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[oz_ap]",
+      "display" : "[oz_ap]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[oz_av]",
+      "display" : "[oz_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[oz_tr]",
+      "display" : "[oz_tr]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[pwt_tr]",
+      "display" : "[pwt_tr]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[sc_ap]",
+      "display" : "[sc_ap]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[scwt_av]",
+      "display" : "[scwt_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[ston_av]",
+      "display" : "[ston_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[stone_av]",
+      "display" : "[stone_av]"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ag/{cell}",
+      "display" : "ag/{cell}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cg",
+      "display" : "cg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "dg",
+      "display" : "dg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "fg",
+      "display" : "fg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g",
+      "display" : "g"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/mmol",
+      "display" : "g/mmol"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/mmol{creat}",
+      "display" : "g/mmol{creat}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/mol",
+      "display" : "g/mol"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/mol{creat}",
+      "display" : "g/mol{creat}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/{TotalWeight}",
+      "display" : "g/{TotalWeight}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/{specimen}",
+      "display" : "g/{specimen}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/{total_output}",
+      "display" : "g/{total_output}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g/{total_weight}",
+      "display" : "g/{total_weight}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g{Hb}",
+      "display" : "g{Hb}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g{creat}",
+      "display" : "g{creat}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g{total_nit}",
+      "display" : "g{total_nit}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g{total_prot}",
+      "display" : "g{total_prot}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g{wet_tissue}",
+      "display" : "g{wet_tissue}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg",
+      "display" : "kg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg/mol",
+      "display" : "kg/mol"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg{wet'tis}",
+      "display" : "kg{wet'tis}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg",
+      "display" : "mg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/mmol",
+      "display" : "mg/mmol"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/mmol{Cre}",
+      "display" : "mg/mmol{Cre}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/mmol{creat}",
+      "display" : "mg/mmol{creat}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{Specimen}",
+      "display" : "mg/{Specimen}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{Tot'Volume}",
+      "display" : "mg/{Tot'Volume}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{TotalVolume}",
+      "display" : "mg/{TotalVolume}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{Volume}",
+      "display" : "mg/{Volume}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{collection}",
+      "display" : "mg/{collection}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{specimen}",
+      "display" : "mg/{specimen}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{total_output}",
+      "display" : "mg/{total_output}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/{total_volume}",
+      "display" : "mg/{total_volume}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg{creat}",
+      "display" : "mg{creat}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ng",
+      "display" : "ng"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ng/10*6",
+      "display" : "ng/10*6"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ng/10*6{RBCs}",
+      "display" : "ng/10*6{RBCs}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "pg",
+      "display" : "pg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "pg/{RBC}",
+      "display" : "pg/{RBC}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "pg/{cell}",
+      "display" : "pg/{cell}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "t",
+      "display" : "t"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "u",
+      "display" : "u"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ug",
+      "display" : "ug"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ug/mmol",
+      "display" : "ug/mmol"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ug/mmol{creat}",
+      "display" : "ug/mmol{creat}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ug/{Specimen}",
+      "display" : "ug/{Specimen}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ug/{TotalVolume}",
+      "display" : "ug/{TotalVolume}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ug/{specimen}",
+      "display" : "ug/{specimen}"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "{Ehrlich'U}/100.g",
+      "display" : "{Ehrlich'U}/100.g"
+    }]
+  }
+}
