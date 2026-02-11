@@ -24,6 +24,15 @@
   {
     "code" : "data-exchange",
     "display" : "Data Exchange",
-    "definition" : "A data exchange report that contains data-of-interest for the measure (i.e. data that is needed to calculate the measure)"
+    "concept" : [{
+      "code" : "data-exchange1",
+      "display" : "Data Exchange1"
+    },{
+      "code" : "data-exchange2",
+      "display" : "Data Exchange2"
+    },{
+      "code" : "data-exchange3",
+      "display" : "Data Exchange3"
+    }]
   }]
 }
