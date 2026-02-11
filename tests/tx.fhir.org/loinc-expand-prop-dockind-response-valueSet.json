@@ -13,7 +13,6 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 3641,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",
