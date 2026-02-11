@@ -61,6 +61,17 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
+      "valueCode" : "abstract"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
       "valueCode" : "child"
     },
     {

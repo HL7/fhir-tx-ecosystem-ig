@@ -9,7 +9,8 @@
     "$optional$" : true,
     "name" : "code",
     "valueCode" : "code2a"
-  },{
+  },
+  {
     "name" : "definition",
     "valueString" : "My first second level code"
   },
@@ -56,6 +57,17 @@
   {
     "name" : "name",
     "valueString" : "SimpleTestCodeSystem"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "abstract"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
   },
   {
     "name" : "property",
