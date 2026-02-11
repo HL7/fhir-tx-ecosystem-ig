@@ -9,10 +9,6 @@
     "valueInteger": 10000
   },
   {
-    "name": "_incomplete",
-    "valueBoolean": true
-  },
-  {
     "name": "count",
     "valueInteger": 100
   },
@@ -23,9 +19,5 @@
   {
     "name": "excludeNested",
     "valueBoolean": false
-  },
-  {
-    "name": "incomplete-ok",
-    "valueBoolean": true
   }]
 }
