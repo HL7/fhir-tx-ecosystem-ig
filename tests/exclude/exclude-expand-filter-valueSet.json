@@ -1,6 +1,6 @@
 {
   "resourceType" : "ValueSet",
-  "url" : "http://hl7.org/fhir/test/ValueSet/exclude",
+  "url" : "http://hl7.org/fhir/test/ValueSet/exclude-filter",
   "version" : "6.0.0",
   "name" : "ExcludeTest",
   "status" : "draft",
@@ -9,7 +9,7 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 6,
+    "total" : 3,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/exclude"
@@ -28,21 +28,6 @@
       "system" : "http://hl7.org/fhir/test/CodeSystem/exclude",
       "code" : "data-exchange3",
       "display" : "Data Exchange3"
-    },
-    {
-      "system" : "http://hl7.org/fhir/test/CodeSystem/exclude",
-      "code" : "individual",
-      "display" : "Individual"
-    },
-    {
-      "system" : "http://hl7.org/fhir/test/CodeSystem/exclude",
-      "code" : "subject-list",
-      "display" : "Subject List"
-    },
-    {
-      "system" : "http://hl7.org/fhir/test/CodeSystem/exclude",
-      "code" : "summary",
-      "display" : "Summary"
     }]
   }
 }

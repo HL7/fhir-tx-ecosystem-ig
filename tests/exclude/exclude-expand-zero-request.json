@@ -1,0 +1,37 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/exclude",
+        "version": "6.0.0",
+        "name": "ExcludeTest",
+        "status": "draft",
+        "compose": {
+          "include": [
+            {
+              "system": "http://hl7.org/fhir/test/CodeSystem/exclude",
+              "concept": [
+                {
+                  "code": "data-exchange"
+                }
+              ]
+            }
+          ],
+          "exclude": [
+            {
+              "system": "http://hl7.org/fhir/test/CodeSystem/exclude",
+              "concept": [
+                {
+                  "code": "data-exchange"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
