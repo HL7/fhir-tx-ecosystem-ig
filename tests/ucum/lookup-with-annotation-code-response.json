@@ -46,7 +46,7 @@
   },
   {
     "name" : "display",
-    "valueString" : "(milligram) / (deciliter) * 1"
+    "valueString" : "mg/dL{milligram per deciliter}"
   },
   {
     "name" : "name",
