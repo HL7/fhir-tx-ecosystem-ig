@@ -4498,6 +4498,7 @@
       {
         "name" : "sct-msg",
         "operation" : "validate-code",
+        "full-set" : true,
         "request" : "bugs/validate-sct-msg-request.json",
         "response" : "bugs/validate-sct-msg-response.json"
       },
