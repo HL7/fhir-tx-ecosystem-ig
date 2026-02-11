@@ -15,7 +15,7 @@
       "issue" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "MSG_EXPERIMENTAL"
+          "valueString" : "$choice:MSG_EXPERIMENTAL|MSG_DRAFT$"
         }],
         "severity" : "information",
         "code" : "business-rule",
@@ -24,7 +24,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "status-check"
           }],
-          "text" : "Reference to experimental CodeSystem http://hl7.org/fhir/event-status|5.0.0"
+          "text" : "$fragments:http://hl7.org/fhir/event-status$"
         }
       }]
     }
@@ -39,6 +39,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "5.0.0"
+    "valueString" : "$version$"
   }]
 }
