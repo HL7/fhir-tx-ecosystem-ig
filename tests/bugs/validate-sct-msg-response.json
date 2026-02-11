@@ -26,7 +26,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|5.0.0'"
+          "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|$version$'"
         }
       },
       {
@@ -41,7 +41,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "this-code-not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#385049006 ('Capsule')' was not found in the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|5.0.0'"
+          "text" : "The provided code 'http://snomed.info/sct#385049006 ('Capsule')' was not found in the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|$version$'"
         },
         "expression" : ["CodeableConcept.coding[0].code"]
       }]
@@ -49,7 +49,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "No valid coding was found for the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|5.0.0'"
+    "valueString" : "No valid coding was found for the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|$version$'"
   },
   {
     "name" : "result",
