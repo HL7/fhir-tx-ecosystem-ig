@@ -118,6 +118,13 @@
         "operation" : "lookup",
         "request" : "simple/simple-lookup2-request-parameters.json",
         "response" : "simple/simple-lookup2-response-parameters.json"
+      },
+      {
+        "name" : "simple-expand-all-count",
+        "description" : "Expansion containing all the code system, but only a count",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-all-count-request-parameters.json",
+        "response" : "simple/simple-expand-all-count-response-valueSet.json"
       }
     ]
   },{
@@ -3619,7 +3626,7 @@
     "name" : "exclude",
     "mode" : "general",
     "description" : "Tests for proper functioning of exclude",
-    "setup" : [ "exclude/codesystem-exclude.json", "exclude/valueset-exclude.json"],
+    "setup" : [ "exclude/codesystem-exclude.json", "exclude/valueset-exclude.json", "exclude/valueset-exclude-filter.json"],
     "tests" : [
       {
         "name" : "exclude-1",
@@ -3627,6 +3634,20 @@
         "operation" : "expand",
         "request" : "exclude/exclude-expand-parameters.json",
         "response" : "exclude/exclude-expand-valueSet.json"
+      },
+      {
+        "name" : "exclude-2",
+        "description" : "Test a simple exclude combined with a filter",
+        "operation" : "expand",
+        "request" : "exclude/exclude-expand-filter-parameters.json",
+        "response" : "exclude/exclude-expand-filter-valueSet.json"
+      },
+      {
+        "name" : "exclude-zero",
+        "description" : "include and exclude the same code",
+        "operation" : "expand",
+        "request" : "exclude/exclude-expand-zero-request.json",
+        "response" : "exclude/exclude-expand-zero-response.json"
       }
     ]
   },{
