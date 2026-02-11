@@ -12,19 +12,11 @@
     "valueInteger": 10000
   },
   {
-    "name": "_incomplete",
-    "valueBoolean": true
-  },
-  {
     "name": "count",
     "valueInteger": 50
   },
   {
     "name": "offset",
     "valueInteger": 0
-  },
-  {
-    "name": "incomplete-ok",
-    "valueBoolean": true
   }]
 }

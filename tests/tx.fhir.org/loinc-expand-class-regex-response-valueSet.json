@@ -24,10 +24,6 @@
       "valueBoolean" : false
     },
     {
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
       "name" : "offset",
       "valueInteger" : 0
     },
