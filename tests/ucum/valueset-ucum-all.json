@@ -1,0 +1,12 @@
+{
+  "resourceType": "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ucum-all",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org"
+      }
+    ]
+  }
+}

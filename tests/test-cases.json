@@ -4309,9 +4309,9 @@
     ]
   },{
     "name" : "UCUM",
-    "mode" : "ucum",
+    "mode" : "tx.fhir.org",
     "description" : "UCUM Test Cases",
-    "setup" : [],
+    "setup" : ["ucum/valueset-ucum-all.json", "ucum/valueset-ucum-canonical.json"],
     "tests" : [
       {
         "name" : "lookup",
@@ -4326,6 +4326,48 @@
         "operation" : "lookup",
         "request" : "ucum/lookup-with-annotation-code-request.json",
         "response" : "ucum/lookup-with-annotation-code-response.json"
+      },
+      {
+        "name" : "expand-ucum-all",
+        "description" : "Tests the $expand operation for all codes (this is a special case)",
+        "operation" : "expand",
+        "request" : "ucum/expand-ucum-all-request.json",
+        "response" : "ucum/expand-ucum-all-response.json"
+      },
+      {
+        "name" : "expand-ucum-canonical",
+        "description" : "Tests the $expand operation for all codes (this is a special case)",
+        "operation" : "expand",
+        "request" : "ucum/expand-ucum-canonical-request.json",
+        "response" : "ucum/expand-ucum-canonical-response.json"
+      },
+      {
+        "name" : "validate-ucum-canonical-good",
+        "description" : "Tests the $validate-code operation for a valid UCUM code",
+        "operation" : "validate-code",
+        "request" : "ucum/validate-ucum-canonical-good-request.json",
+        "response" : "ucum/validate-ucum-canonical-good-response.json"
+      },
+      {
+        "name" : "validate-ucum-canonical-bad",
+        "description" : "Tests the $validate-code operation for an valid UCUM code not in the canonicl value set",
+        "operation" : "validate-code",
+        "request" : "ucum/validate-ucum-canonical-bad-request.json",
+        "response" : "ucum/validate-ucum-canonical-bad-response.json"
+      },
+      {
+        "name" : "validate-all-canonical-good",
+        "description" : "Tests the $validate-code operation for a valid UCUM code",
+        "operation" : "validate-code",
+        "request" : "ucum/validate-ucum-all-good-request.json",
+        "response" : "ucum/validate-ucum-all-good-response.json"
+      },
+      {
+        "name" : "validate-ucum-all-bad",
+        "description" : "Tests the $validate-code operation for an invalid UCUM code",
+        "operation" : "validate-code",
+        "request" : "ucum/validate-ucum-all-bad-request.json",
+        "response" : "ucum/validate-ucum-all-bad-response.json"
       }
     ]
   }, {

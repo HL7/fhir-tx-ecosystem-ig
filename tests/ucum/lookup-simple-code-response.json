@@ -9,7 +9,60 @@
     "valueCode" : "mg/dL"
   },
   {
-    "$optional$" : true,
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "mg/dL"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "(milligram) / (deciliter)"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "milligram per deciliter"
+    }]
+  },
+  {
     "name" : "display",
     "valueString" : "milligram per deciliter"
   },
