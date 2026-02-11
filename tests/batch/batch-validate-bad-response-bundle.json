@@ -108,6 +108,7 @@
           {
             "$optional-properties$" : ["location" ],
             "extension" : [{
+              "$optional$" : true,
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "Display_Name_for__should_be_one_of__instead_of"
             }],

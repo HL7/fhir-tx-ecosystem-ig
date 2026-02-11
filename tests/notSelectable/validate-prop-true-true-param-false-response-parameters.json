@@ -14,6 +14,7 @@
       "resourceType" : "OperationOutcome",
       "issue" : [{
         "extension" : [{
+          "$optional$": true,
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "ABSTRACT_CODE_NOT_ALLOWED"
         }],
@@ -30,6 +31,7 @@
       },
       {
         "extension" : [{
+          "$optional$" : true,
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
         }],
