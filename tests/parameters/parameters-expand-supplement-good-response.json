@@ -28,9 +28,6 @@
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
     }],
     "property" : [{
-      "code" : "prop1"
-    },
-    {
       "code" : "weight",
       "uri" : "http://hl7.org/fhir/concept-properties#itemWeight"
     },
