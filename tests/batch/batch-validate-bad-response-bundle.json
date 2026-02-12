@@ -64,7 +64,7 @@
         "severity" : "error",
         "code" : "$choice:invalid|not-found$",
         "details" : {
-          "text" : "Unable to find code to validate (looked for coding | codeableConcept | code in parameters =codingX:Coding)"
+          "text" : "Unable to find code to validate (looked for coding | codeableConcept | code+system | code+inferSystem in parameters"
         }
       }]
     }
