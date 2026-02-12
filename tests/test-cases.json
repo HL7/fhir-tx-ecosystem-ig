@@ -4349,11 +4349,20 @@
         "response" : "ucum/lookup-with-annotation-code-response.json"
       },
       {
-        "name" : "expand-ucum-all",
-        "description" : "Tests the $expand operation for all codes (this is a special case)",
+        "name" : "expand-ucum-all-4",
+        "description" : "Tests the $expand operation for all codes (this is a special case). The special value set changed between R4 and R5",
+        "operation" : "expand",
+        "version" : "4.0",
+        "request" : "ucum/expand-ucum-all-request.json",
+        "response" : "ucum/expand-ucum-all-4-response.json"
+      },
+      {
+        "name" : "expand-ucum-all-5",
+        "description" : "Tests the $expand operation for all codes (this is a special case). The special value set changed between R4 and R5",
+        "version" : "5.0",
         "operation" : "expand",
         "request" : "ucum/expand-ucum-all-request.json",
-        "response" : "ucum/expand-ucum-all-response.json"
+        "response" : "ucum/expand-ucum-all-5-response.json"
       },
       {
         "name" : "expand-ucum-canonical",
@@ -4496,11 +4505,18 @@
         "response" : "bugs/validate-sct-ver-response.json"
       },
       {
-        "name" : "sct-msg",
+        "name" : "sct-msg-4",
         "operation" : "validate-code",
-        "full-set" : true,
+        "version" : "4.0",
         "request" : "bugs/validate-sct-msg-request.json",
-        "response" : "bugs/validate-sct-msg-response.json"
+        "response" : "bugs/validate-sct-msg-4-response.json"
+      },
+      {
+        "name" : "sct-msg-5",
+        "operation" : "validate-code",
+        "version" : "5.0",
+        "request" : "bugs/validate-sct-msg-request.json",
+        "response" : "bugs/validate-sct-msg-5-response.json"
       },
       {
         "name" : "sct-display-1",
