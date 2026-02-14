@@ -6,7 +6,7 @@
       "valueString" : "VALUESET_SUPPLEMENT_MISSING"
     }],
     "severity" : "error",
-    "code" : "not-found",
+    "code" : "$choice:business-rule|not-found$",
     "details" : {
       "coding" : [{
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

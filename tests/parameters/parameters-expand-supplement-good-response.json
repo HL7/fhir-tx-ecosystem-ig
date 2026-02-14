@@ -42,6 +42,10 @@
     {
       "code" : "status",
       "uri" : "http://hl7.org/fhir/concept-properties#status"
+    },
+    {
+      "code" : "prop1",
+      "uri" : "http://hl7.org/fhir/test/CodeSystem/property1"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",

@@ -9,6 +9,10 @@
     "severity" : "error",
     "code" : "processing",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "vs-invalid"
+      }],
       "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/big-circle-1$"
     },
     "diagnostics" : "$external:2$"

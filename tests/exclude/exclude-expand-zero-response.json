@@ -1,6 +1,6 @@
 {
   "resourceType" : "ValueSet",
-  "url" : "http://hl7.org/fhir/test/ValueSet/exclude",
+  "url" : "http://hl7.org/fhir/test/ValueSet/exclude-zero",
   "version" : "6.0.0",
   "name" : "ExcludeTest",
   "status" : "draft",
