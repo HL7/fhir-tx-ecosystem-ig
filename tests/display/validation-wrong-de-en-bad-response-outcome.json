@@ -9,6 +9,10 @@
     "severity" : "error",
     "code" : "processing",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
       "text" : "Invalid displayLanguage: '-'"
     }
   }]

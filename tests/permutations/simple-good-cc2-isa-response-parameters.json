@@ -75,9 +75,5 @@
   {
     "name" : "result",
     "valueBoolean" : false
-  },
-  {
-    "name" : "version",
-    "valueString" : "0.1.0"
   }]
 }

@@ -3626,7 +3626,7 @@
     "name" : "exclude",
     "mode" : "general",
     "description" : "Tests for proper functioning of exclude",
-    "setup" : [ "exclude/codesystem-exclude.json", "exclude/valueset-exclude.json", "exclude/valueset-exclude-filter.json"],
+    "setup" : [ "exclude/codesystem-exclude.json", "exclude/valueset-exclude.json", "exclude/valueset-exclude-zero.json", "exclude/valueset-exclude-filter.json"],
     "tests" : [
       {
         "name" : "exclude-1",
