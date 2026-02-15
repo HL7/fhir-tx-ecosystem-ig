@@ -4071,7 +4071,8 @@
     "name" : "snomed",
     "mode" : "snomed",
     "description" : "This snomed tests are based on the subset distributed with the tx-ecosystem IG",
-    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-diabetes.json", "sct/valueset-procedures.json" ],
+    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-diabetes.json", "sct/valueset-procedures.json", 
+    "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
     "tests" : [
       {
         "name" : "snomed-inactive-display",
@@ -4115,6 +4116,90 @@
         "http-code" : "4xx",
         "request" : "sct/expand-procedures-request.json",
         "response" : "sct/expand-procedures-response.json"
+      },
+      {
+        "name" : "lookup",
+        "description" : "Tests the $lookup operation for a simple SCT concept",
+        "operation" : "lookup",
+        "request" : "sct/lookup-procedure-request.json",
+        "response" : "sct/lookup-procedure-response.json"
+      },
+      {
+        "name" : "lookup-pc",
+        "description" : "Tests the $lookup operation for a complex SCT expression",
+        "operation" : "lookup",
+        "request" : "sct/lookup-procedure-pc-request.json",
+        "response" : "sct/lookup-procedure-pc-response.json"
+      },
+      {
+        "name" : "validate-code-pc-good",
+        "description" : "Tests the $validate-code operation for a complex SCT expression",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-procedure-pc-good-request.json",
+        "response" : "sct/validate-code-procedure-pc-good-response.json"
+      },
+      {
+        "name" : "validate-code-pc-bad1",
+        "description" : "Tests the $validate-code operation for a complex SCT expression with a wrong qualifier code",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-procedure-pc-bad1-request.json",
+        "response" : "sct/validate-code-procedure-pc-bad1-response.json"
+      },
+      {
+        "name" : "validate-code-pc-bad2",
+        "description" : "Tests the $validate-code operation for a complex SCT expression with a wrong qualifier code - the codes are valid but they are reversed",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-procedure-pc-bad2-request.json",
+        "response" : "sct/validate-code-procedure-pc-bad2-response.json"
+      },
+      {
+        "name" : "validate-code-pc-none",
+        "description" : "Checks that a valid expression is not allowed when expressions are not allowed",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-pc-none-request.json",
+        "response" : "sct/validate-code-pc-none-response.json"
+      },
+      {
+        "name" : "validate-code-pc-list",
+        "description" : "Checks that a valid expression is allowed when expressions are listed",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-pc-list-request.json",
+        "response" : "sct/validate-code-pc-list-response.json"
+      },
+      {
+        "name" : "validate-code-pc-list-no-pc",
+        "description" : "Checks that a valid expression is not allowed just because it's primacy code is listed",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-pc-list-bad-request.json",
+        "response" : "sct/validate-code-pc-list-bad-response.json"
+      },
+      {
+        "name" : "validate-code-pc-filter",
+        "description" : "Checks that a valid expression is allowed when expressions are allowed",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-pc-filter-request.json",
+        "response" : "sct/validate-code-pc-filter-response.json"
+      },
+      {
+        "name" : "expand-pc-none",
+        "description" : "Expands no expresssions allowed - check settings",
+        "operation" : "expand",
+        "request" : "sct/expand-pc-none-request.json",
+        "response" : "sct/expand-pc-none-response.json"
+      },
+      {
+        "name" : "expand-pc-list",
+        "description" : "Checks that a valid expression is not allowed just because it's primacy code is listed",
+        "operation" : "expand",
+        "request" : "sct/expand-pc-list-request.json",
+        "response" : "sct/expand-pc-list-response.json"
+      },
+      {
+        "name" : "expand-pc-filter",
+        "description" : "Checks that a valid expression is allowed when expressions are allowed",
+        "operation" : "expand",
+        "request" : "sct/expand-pc-filter-request.json",
+        "response" : "sct/expand-pc-filter-response.json"
       }
     ]
   },{

@@ -1,0 +1,156 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-pc-none",
+  "version" : "5.0.0",
+  "name" : "SCTProceduresValueSet",
+  "title" : "SCT Procedures ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 27,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "112756005",
+      "display" : "Suture of flexor tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1345232000",
+      "display" : "Hand tendon pulley reconstruction with graft"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1348290009",
+      "display" : "Repair of tendon of hand with graft of tendon"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18701002",
+      "display" : "Repair of tendon of hand with graft"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199044008",
+      "display" : "Repair of mallet finger"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "200017006",
+      "display" : "Fowler operation release for mallet finger repair"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "214433003",
+      "display" : "Repair of ruptured tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "243234005",
+      "display" : "Repair of tendon of hand by transfer or transplantation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26731003",
+      "display" : "Repair of tendon of hand by suture"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27106001",
+      "display" : "Reconstruction of tendon pulley of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "367430006",
+      "display" : "Repair of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4084006",
+      "display" : "Repair of tendon of hand with transplant of muscle"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45810006",
+      "display" : "Reattachment of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "47672008",
+      "display" : "Delayed suture of flexor tendons of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54433004",
+      "display" : "Release of extensor tendon of hand by central slip for repair of mallet finger"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5486006",
+      "display" : "Delayed suture of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6487009",
+      "display" : "Hand tendon pulley reconstruction with tendon prosthesis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709291000",
+      "display" : "Repair of flexor tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "712638006",
+      "display" : "Repair of extensor tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713500005",
+      "display" : "Suture of extensor tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76340004",
+      "display" : "Plication of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78096006",
+      "display" : "Suture of tendon of hand to skeletal attachment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87839006",
+      "display" : "Hand tendon pulley reconstruction with local tissues"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89352003",
+      "display" : "Repair of tendon of hand with graft of fascia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90650008",
+      "display" : "Lengthening of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90907001",
+      "display" : "Shortening of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91092007",
+      "display" : "Myotenontoplasty of hand"
+    }]
+  }
+}
