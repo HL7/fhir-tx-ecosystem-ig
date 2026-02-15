@@ -1,0 +1,471 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "367430006:{272741003=24028007}"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "367430006|Repair of tendon of hand|:{272741003|Laterality|=24028007|Right|}"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "367430006|Repair of tendon of hand|:{272741003|Laterality|=24028007|Right|}"
+  },
+  {
+    "name" : "name",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "260686004"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Method"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Surgical action"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "129284003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "260686004"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Method"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Surgical repair - action"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "129342008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "260686004"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Method"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair - action"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "257903006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "272741003"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Laterality"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Right"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "24028007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363704007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "118632007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363704007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Tendon"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "13024002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363704007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Tendon of upper limb"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "245098002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363704007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "85562004"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "405813007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site - Direct (attribute)"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "118632007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "405813007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site - Direct (attribute)"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Tendon of upper limb"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "245098002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of hand with graft (procedure)"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "18701002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of ruptured tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "214433003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of hand by transfer or transplantation"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "243234005"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of hand by suture"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "26731003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Reconstruction of tendon pulley of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "27106001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Reattachment of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "45810006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of flexor tendon of hand (procedure)"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "709291000"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of extensor tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "712638006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Plication of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "76340004"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Lengthening of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "90650008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Shortening of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "90907001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Myotenontoplasty of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "91092007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hand repair"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "119657005"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hand tendon operation"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "274059009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of upper limb"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "281760001"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
+  }]
+}

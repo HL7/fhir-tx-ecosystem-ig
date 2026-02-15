@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "system",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "367430006:{272741003=240280071}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-pc-list",
+  "version" : "5.0.0",
+  "name" : "SCTProceduresValueSet",
+  "title" : "SCT Procedures ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "367430006",
+      "display" : "Repair of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "367430006:{272741003=24028007}",
+      "display" : "367430006|Repair of tendon of hand|:{272741003|Laterality|=24028007|Right|}"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "367430006:{272741003=7771000}",
+      "display" : "367430006|Repair of tendon of hand|:{272741003|Laterality|=7771000|Left|}"
+    }]
+  }
+}

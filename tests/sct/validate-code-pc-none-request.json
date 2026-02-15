@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "system",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "367430006:{272741003=24028007}"
+    },
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/sct-pc-none"
+    }
+  ]
+}
