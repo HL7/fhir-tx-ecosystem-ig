@@ -3,8 +3,8 @@
   "issue" : [{
     "$optional-properties$": ["diagnostics"],
     "extension" : [{
-      "$optional$" : true,
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "VALUESET_SUPPLEMENT_MISSING"
     }],
     "severity" : "error",

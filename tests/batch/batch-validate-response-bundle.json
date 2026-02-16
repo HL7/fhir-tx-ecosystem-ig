@@ -50,7 +50,7 @@
             "$optional-properties$" : ["location" ],
             "extension" : [{
               "$optional$" : "!tx.fhir.org",
-              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "INACTIVE_CONCEPT_FOUND"
             }],
             "severity" : "warning",
@@ -110,7 +110,7 @@
             "$optional-properties$" : ["location" ],
             "extension" : [{
               "$optional$" : "!tx.fhir.org",
-              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
             }],
             "severity" : "error",

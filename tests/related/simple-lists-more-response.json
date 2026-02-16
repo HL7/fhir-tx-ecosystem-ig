@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "The valueSet http://hl7.org/fhir/test/ValueSet/list-1 is a super-set of the valueSet http://hl7.org/fhir/test/ValueSet/list-1"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "superset"
+  }]
+}

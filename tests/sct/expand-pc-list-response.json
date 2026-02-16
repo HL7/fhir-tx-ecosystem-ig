@@ -1,5 +1,7 @@
 {
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
   "resourceType" : "ValueSet",
+  "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-pc-list",
   "version" : "5.0.0",
   "name" : "SCTProceduresValueSet",

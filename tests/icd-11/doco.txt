@@ -1,0 +1,70 @@
+Validator Rules
+- warning heirarchy classified iwth implies versionNeeded
+- check that versionNeeded is enforced
+
+
+Test cases
+
+- validate against code system 
+  - good 
+  - good in other language
+  - bad code
+  - bad version / no version
+  - bad system
+  - bad display 
+  - bad language 
+  - good display in wrong language 
+  - no display with good/bad language 
+  - reject supplement
+  - post-coordination cases - good and bad 
+  - all codes value set 
+- get on code system - check caseSensitive, versionNeeded
+
+- Lookup 
+ - good code
+ - bad code 
+ - post-coordinated
+
+- validate against value set 
+  - known value set good
+  - known value set bad code 
+  - known value set good + bad display
+  - fooling with value sets 
+  - adhoc value set - good + bad 
+  - reject supplement in value set 
+
+- what filters are there going to be?
+  - value set for each filter 
+  - validate code good and bad for each value set
+
+  - kind of notSelectable filter 
+  - is-a concept (+ is-a variants descendent-of etc) + parent / child (exists and equals)
+  - no postCoordinatable terms 
+  - no non-complete terms - all mandatory axes have values 
+  - only base codes 
+  - on postCoordination axes (exists and value)
+  - classKind (and add to look up)
+
+- check version needed is true
+
+
+- expand
+  - known value set + adhoc variants 
+
+  - adhoc value sets as above 
+
+
+
+
+Parameters to test:
+- valueSet
+- valueSetVersion
+- filter
+- offset and count
+- includeDesignations + designation
+- useSupplement
+- displayLanguage
+- property
+- system-version
+- tx-resource
+- manifest 

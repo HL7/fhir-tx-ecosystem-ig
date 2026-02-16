@@ -4489,7 +4489,10 @@
     "name" : "related",
     "mode" : "tx.fhir.org",
     "description" : "Tests for candidate new 'related' operation",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
+    "setup" : ["simple/codesystem-simple.json", "extensions/codesystem-extensions.json", "simple/valueset-all.json", "simple/valueset-active.json",
+     "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", 
+     "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", 
+     "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
     "tests" :[
       {
         "name" : "related-all",
@@ -4497,6 +4500,195 @@
         "operation" : "related",
         "request" : "related/simple-all-request.json",
         "response" : "related/simple-all-response.json"
+      },
+      {
+        "name" : "related-active",
+        "description" : "Checks that an all value is the same as itself, in the presence of the active flag = true",
+        "operation" : "related",
+        "request" : "related/simple-active-request.json",
+        "response" : "related/simple-active-response.json"
+      },
+      {
+        "name" : "related-inactive",
+        "description" : "Checks that an all value is the same as itself, in the presence of the active flag = false",
+        "operation" : "related",
+        "request" : "related/simple-inactive-request.json",
+        "response" : "related/simple-inactive-response.json"
+      },
+      {
+        "name" : "related-enumerated",
+        "description" : "Checks that an all value is the same as itself, in the presence of an enumerated list",
+        "operation" : "related",
+        "request" : "related/simple-enumerated-request.json",
+        "response" : "related/simple-enumerated-response.json"
+      },
+      {
+        "name" : "related-is-a",
+        "description" : "Checks that an all value is the same as itself, in the presence of an is-a filter",
+        "operation" : "related",
+        "request" : "related/simple-is-a-request.json",
+        "response" : "related/simple-is-a-response.json"
+      },
+      {
+        "name" : "related-regex-1",
+        "description" : "Checks that an all value is the same as itself, in the presence of an regex filter",
+        "operation" : "related",
+        "request" : "related/simple-regex-1-request.json",
+        "response" : "related/simple-regex-1-response.json"
+      },
+      {
+        "name" : "related-regex-2",
+        "description" : "Checks that an all value is the same as itself, in the presence of a property regex filter",
+        "operation" : "related",
+        "request" : "related/simple-regex-2-request.json",
+        "response" : "related/simple-regex-2-response.json"
+      },
+      {
+        "name" : "related-lists",
+        "description" : "Checks that two enumerated value sets are the same (concept order is different)",
+        "operation" : "related",
+        "request" : "related/simple-lists-request.json",
+        "response" : "related/simple-lists-response.json"
+      },
+      {
+        "name" : "related-lists-more",
+        "description" : "Checks that two enumerated value sets are related such that the other contains this",
+        "operation" : "related",
+        "request" : "related/simple-lists-more-request.json",
+        "response" : "related/simple-lists-more-response.json"
+      },
+      {
+        "name" : "related-lists-less",
+        "description" : "Checks that two enumerated value sets are related such that this contains the other",
+        "operation" : "related",
+        "request" : "related/simple-lists-less-request.json",
+        "response" : "related/simple-lists-less-response.json"
+      },
+      {
+        "name" : "related-lists-over",
+        "description" : "Checks that two enumerated value sets are overlapping",
+        "operation" : "related",
+        "request" : "related/simple-lists-over-request.json",
+        "response" : "related/simple-lists-over-response.json"
+      },
+      {
+        "name" : "related-lists-disj",
+        "description" : "Checks that two enumerated value sets are the disjoint",
+        "operation" : "related",
+        "request" : "related/simple-lists-disj-request.json",
+        "response" : "related/simple-lists-disj-response.json"
+      },
+      {
+        "name" : "related-systems",
+        "description" : "Checks that two valuesets that import the same entire code systems are identical",
+        "operation" : "related",
+        "request" : "related/simple-systems-request.json",
+        "response" : "related/simple-systems-response.json"
+      },
+      {
+        "name" : "related-systems",
+        "description" : "Checks that two valuesets that import the same entire code systems are identical",
+        "operation" : "related",
+        "request" : "related/simple-systems-request.json",
+        "response" : "related/simple-systems-response.json"
+      },
+      {
+        "name" : "related-systems-less",
+        "description" : "Checks that two valuesets that import the same entire code systems are identical",
+        "operation" : "related",
+        "request" : "related/simple-systems-less-request.json",
+        "response" : "related/simple-systems-less-response.json"
+      },
+      {
+        "name" : "related-systems-more",
+        "description" : "Checks that two valuesets that import the same entire code systems are identical",
+        "operation" : "related",
+        "request" : "related/simple-systems-more-request.json",
+        "response" : "related/simple-systems-more-response.json"
+      },
+      {
+        "name" : "related-system-disj",
+        "description" : "Checks that two valuesets that import the same entire code systems are identical",
+        "operation" : "related",
+        "request" : "related/simple-systems-disj-request.json",
+        "response" : "related/simple-systems-disj-response.json"
+      },
+      {
+        "name" : "related-system-over",
+        "description" : "Checks that two valuesets that import the same entire code systems are identical",
+        "operation" : "related",
+        "request" : "related/simple-systems-over-request.json",
+        "response" : "related/simple-systems-over-response.json"
+      },
+      {
+        "name" : "related-filters-1",
+        "description" : "Checks that two valuesets that haev the same filters in different orders (as filters)",
+        "operation" : "related",
+        "request" : "related/simple-filters-1-request.json",
+        "response" : "related/simple-filters-1-response.json"
+      },
+      {
+        "name" : "related-filters-2",
+        "description" : "Checks that two valuesets that haev the same filters in different orders (as includes)",
+        "operation" : "related",
+        "request" : "related/simple-filters-2-request.json",
+        "response" : "related/simple-filters-2-response.json"
+      },
+      {
+        "name" : "related-filters-3",
+        "description" : "Checks that two valuesets that haev the same filters in different orders (as includes from the same system)",
+        "operation" : "related",
+        "request" : "related/simple-filters-3-request.json",
+        "response" : "related/simple-filters-3-response.json"
+      },
+      {
+        "name" : "related-mixed-1",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-mixed-request.json",
+        "response" : "related/simple-mixed-response.json"
+      },
+      {
+        "name" : "related-mixed-1-less",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-mixed-less-request.json",
+        "response" : "related/simple-mixed-less-response.json"
+      },
+      {
+        "name" : "related-mixed-1-more",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-mixed-more-request.json",
+        "response" : "related/simple-mixed-more-response.json"
+      },
+      {
+        "name" : "related-mixed-1-disj",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-mixed-disj-request.json",
+        "response" : "related/simple-mixed-disj-response.json"
+      },
+      {
+        "name" : "related-mixed-1-over",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-mixed-over-request.json",
+        "response" : "related/simple-mixed-over-response.json"
+      },
+      {
+        "name" : "related-filters-less",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-filters-less-request.json",
+        "response" : "related/simple-filters-less-response.json"
+      },
+      {
+        "name" : "related-filters-more",
+        "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
+        "operation" : "related",
+        "request" : "related/simple-filters-more-request.json",
+        "response" : "related/simple-filters-more-response.json"
       }
     ]
   }, {

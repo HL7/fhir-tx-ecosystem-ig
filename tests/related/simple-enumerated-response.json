@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "The value sets http://hl7.org/fhir/test/ValueSet/simple-enumerated|5.0.0 and http://hl7.org/fhir/test/ValueSet/simple-enumerated|5.0.0 contain the same codes"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "same"
+  }]
+}

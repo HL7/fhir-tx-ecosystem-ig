@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "thisUrl",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/simple-inactive"
+  },{
+    "name" : "otherUrl",
+    "valueCode" : "http://hl7.org/fhir/test/ValueSet/simple-inactive"
+  }]
+}

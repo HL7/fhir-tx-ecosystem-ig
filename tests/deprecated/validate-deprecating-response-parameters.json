@@ -16,7 +16,7 @@
         "$optional-properties$" : ["extension"],
         "extension" : [{
           "$optional$" : "!tx.fhir.org",
-	  "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "MSG_DRAFT"
         }],
         "severity" : "information",

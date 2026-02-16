@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "Both value sets http://hl7.org/fhir/test/ValueSet/list-1 and http://hl7.org/fhir/test/ValueSet/list-2 contain the codes the other doesn't, but there is some overlap"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "overlapping"
+  }]
+}

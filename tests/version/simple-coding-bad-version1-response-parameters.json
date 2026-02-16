@@ -14,6 +14,7 @@
       "resourceType" : "OperationOutcome",
       "issue" : [{
         "extension" : [{
+          "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
         }],
@@ -31,6 +32,7 @@
       },
       {
         "extension" : [{
+          "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "VALUESET_VALUE_MISMATCH_DEFAULT"
         }],

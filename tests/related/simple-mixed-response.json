@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "expansion",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "message",
+    "valueString" : "The value sets http://hl7.org/fhir/test/ValueSet/list-1m and http://hl7.org/fhir/test/ValueSet/list-2m contain the same codes"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "same"
+  }]
+}
