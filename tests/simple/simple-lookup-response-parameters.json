@@ -40,6 +40,7 @@
     },
     {
       "name" : "use",
+	  "$optional$" : true,
       "valueCoding" : {
         "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
         "code" : "preferredForLanguage"

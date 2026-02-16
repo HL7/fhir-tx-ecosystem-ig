@@ -1,7 +1,6 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "$optional$" : true,
     "name" : "abstract",
     "valueBoolean" : true
   },
@@ -39,6 +38,7 @@
     },
     {
       "name" : "use",
+	  "$optional$" : true,
       "valueCoding" : {
         "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
         "code" : "preferredForLanguage"

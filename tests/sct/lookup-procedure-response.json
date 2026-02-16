@@ -1,6 +1,7 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "$optional$" : true,
     "name" : "abstract",
     "valueBoolean" : false
   },
