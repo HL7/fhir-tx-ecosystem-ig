@@ -1,66 +1,66 @@
-﻿{
+{
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "Code1"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "not-in-vs"
-          }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'"
-        },
-        "location" : ["Coding.code"],
-        "expression" : ["Coding.code"]
-      },
-      {
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Unknown_Code_in_Version"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "invalid-code"
-          }],
-          "text" : "Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
-        },
-        "location" : ["Coding.code"],
-        "expression" : ["Coding.code"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'; Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },
-  {
-    "name" : "system",
-    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/case-sensitive"
-  },
-  {
-    "$optional$" : true,
-    "name" : "version",
-    "valueString" : "0.1.0"
-  }]
+      "name" : "code",
+      "valueCode" : "Code1"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+              }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "not-in-vs"
+                }],
+              "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'"
+            },
+            "location" : ["Coding.code"],
+            "expression" : ["Coding.code"]
+          },
+          {
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "Unknown_Code_in_Version"
+              }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-code"
+                }],
+              "text" : "Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
+            },
+            "location" : ["Coding.code"],
+            "expression" : ["Coding.code"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'; Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/case-sensitive"
+    },
+    {
+      "name" : "version",
+      "valueString" : "0.1.0",
+      "$optional$" : "warning:version"
+    }]
 }

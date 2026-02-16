@@ -1,147 +1,149 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "validation",
-    "resource" : {
-      "resourceType" : "Parameters",
-      "parameter" : [{
-        "name" : "code",
-        "valueCode" : "code1"
-      },
-      {
-        "$optional$" : true,
-        "name" : "display",
-        "valueString" : "Display 1"
-      },
-      {
-        "name" : "issues",
-        "resource" : {
-          "resourceType" : "OperationOutcome",
-          "issue" : [{
-            "$optional-properties$" : ["location" ],
-            "extension" : [{
-              "$optional$" : "!tx.fhir.org",
-              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-              "valueString" : "Display_Name_for__should_be_one_of__instead_of"
-            }],
-            "severity" : "error",
-            "code" : "invalid",
-            "details" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-                "code" : "invalid-display"
-              }],
-              "text" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')"
-            },
-            "location" : ["Coding.display"],
-            "expression" : ["Coding.display"]
-          }]
-        }
-      },
-      {
-        "name" : "message",
-        "valueString" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')"
-      },
-      {
-        "name" : "result",
-        "valueBoolean" : false
-      },
-      {
-        "name" : "system",
-        "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
-      },
-      {
-        "name" : "version",
-        "valueString" : "0.1.0"
-      }]
-    }
-  },
-  {
-    "name" : "validation",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "severity" : "error",
-        "code" : "$choice:invalid|not-found$",
-        "details" : {
-          "text" : "Unable to find code to validate (looked for coding | codeableConcept | code+system | code+inferSystem in parameters"
-        }
-      }]
-    }
-  },
-  {
-    "name" : "validation",
-    "resource" : {
-      "resourceType" : "Parameters",
-      "parameter" : [{
-        "name" : "code",
-        "valueCode" : "code3"
-      },
-      {
-        "$optional$" : true,
-        "name" : "display",
-        "valueString" : "Display 3"
-      },
-      {
-        "name" : "issues",
-        "resource" : {
-          "resourceType" : "OperationOutcome",
-          "issue" : [{
-            "$optional-properties$" : ["location" ],
-            "extension" : [{
-              "$optional$" : "!tx.fhir.org",
-              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-              "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
-            }],
-            "severity" : "error",
-            "code" : "code-invalid",
-            "details" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-                "code" : "not-in-vs"
-              }],
-              "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
-            },
-            "location" : ["Coding.code"],
-            "expression" : ["Coding.code"]
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code1"
           },
           {
-            "$optional-properties$" : ["location" ],
-            "extension" : [{
-              "$optional$" : "!tx.fhir.org",
-              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-              "valueString" : "Display_Name_for__should_be_one_of__instead_of"
-            }],
-            "severity" : "warning",
-            "code" : "invalid",
-            "details" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-                "code" : "invalid-display"
-              }],
-              "text" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
-            },
-            "location" : ["Coding.display"],
-            "expression" : ["Coding.display"]
+            "$optional$" : true,
+            "name" : "display",
+            "valueString" : "Display 1"
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+                    }],
+                  "severity" : "error",
+                  "code" : "invalid",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "invalid-display"
+                      }],
+                    "text" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')"
+                  },
+                  "location" : ["Coding.display"],
+                  "expression" : ["Coding.display"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : false
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
           }]
-        }
-      },
-      {
-        "name" : "message",
-        "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'; Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
-      },
-      {
-        "name" : "result",
-        "valueBoolean" : false
-      },
-      {
-        "name" : "system",
-        "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
-      },
-      {
-        "name" : "version",
-        "valueString" : "0.1.0"
-      }]
-    }
-  }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "severity" : "error",
+            "code" : "$choice:invalid|not-found$",
+            "details" : {
+              "text" : "Unable to find code to validate (looked for coding | codeableConcept | code+system | code+inferSystem in parameters"
+            }
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code3"
+          },
+          {
+            "$optional$" : true,
+            "name" : "display",
+            "valueString" : "Display 3"
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+                    }],
+                  "severity" : "error",
+                  "code" : "code-invalid",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "not-in-vs"
+                      }],
+                    "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+                  },
+                  "location" : ["Coding.code"],
+                  "expression" : ["Coding.code"]
+                },
+                {
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+                    }],
+                  "severity" : "warning",
+                  "code" : "invalid",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "invalid-display"
+                      }],
+                    "text" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
+                  },
+                  "location" : ["Coding.display"],
+                  "expression" : ["Coding.display"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'; Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : false
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
+          }]
+      }
+    }]
 }

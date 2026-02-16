@@ -1,53 +1,53 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "code1"
-  },
-  {
-    "$optional$" : true,
-    "name" : "display",
-    "valueString" : "Display 1 (1.2)"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "VALUESET_VERSION_CHECK"
-        }],
-        "severity" : "error",
-        "code" : "exception",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "version-error"
-          }],
-          "text" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
-        },
-        "location" : ["Coding.version"],
-        "expression" : ["Coding.version"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },
-  {
-    "name" : "system",
-    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
-  },
-  {
-    "$optional$" : true,
-    "name" : "version",
-    "valueString" : "1.2.0"
-  }]
+      "name" : "code",
+      "valueCode" : "code1"
+    },
+    {
+      "$optional$" : true,
+      "name" : "display",
+      "valueString" : "Display 1 (1.2)"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "VALUESET_VERSION_CHECK"
+              }],
+            "severity" : "error",
+            "code" : "exception",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "version-error"
+                }],
+              "text" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
+            },
+            "location" : ["Coding.version"],
+            "expression" : ["Coding.version"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
+    },
+    {
+      "name" : "version",
+      "valueString" : "1.2.0",
+      "$optional$" : "warning:version"
+    }]
 }

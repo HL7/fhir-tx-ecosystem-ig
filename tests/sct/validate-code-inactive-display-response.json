@@ -1,48 +1,49 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "42463004"
-  },
-  {
-    "name" : "display",
-    "valueString" : "Opisthorchis"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "$optional-properties$" : ["location" ],
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "INACTIVE_DISPLAY_FOUND"
-        }],
-        "severity" : "warning",
-        "code" : "invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "display-comment"
-          }],
-          "text" : "'Genus: Opisthorchis' is no longer considered a correct display for code '42463004' (status = inactive). The correct display is one of \"Genus Opisthorchis\",\"Genus Opisthorchis (organism)\",Opisthorchis,\"Opisthorchis species\"."
-        },
-        "location" : ["display"],
-        "expression" : ["display"]
-      }]
-    }
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : true
-  },
-  {
-    "name" : "system",
-    "valueUri" : "http://snomed.info/sct"
-  },
-  {
-    "name" : "version",
-    "valueString" : "http://snomed.info/xsct/900000000000207008/version/20250814"
-  }]
+      "name" : "code",
+      "valueCode" : "42463004"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Opisthorchis"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "$optional-properties$" : ["location"],
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "INACTIVE_DISPLAY_FOUND"
+              }],
+            "severity" : "warning",
+            "code" : "invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "display-comment"
+                }],
+              "text" : "'Genus: Opisthorchis' is no longer considered a correct display for code '42463004' (status = inactive). The correct display is one of \"Genus Opisthorchis\",\"Genus Opisthorchis (organism)\",Opisthorchis,\"Opisthorchis species\"."
+            },
+            "location" : ["display"],
+            "expression" : ["display"]
+          }]
+      }
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/xsct/900000000000207008/version/20250814",
+      "$optional$" : "warning:version"
+    }]
 }

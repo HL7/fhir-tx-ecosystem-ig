@@ -1,53 +1,53 @@
-﻿{
+{
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "code1"
-  },
-  {
-    "name" : "display",
-    "valueString" : "Display 1 (1.0)"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "$optional-properties$" : ["location" ],
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Display_Name_WS_for__should_be_one_of__instead_of"
-        }],
-        "severity" : "error",
-        "code" : "invalid",
-        "details" : {
-          
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "invalid-display"
-          }],
-          "text" : "$external:1:Display  1 (1.0)$"
-        },
-        "location" : ["display"],
-        "expression" : ["display"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "$external:2:Display  1 (1.0)$"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },
-  {
-    "name" : "system",
-    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
-  },
-  {
-    "name" : "version",
-    "valueString" : "1.0.0"
-  }]
+      "name" : "code",
+      "valueCode" : "code1"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display 1 (1.0)"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "$optional-properties$" : ["location"],
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "Display_Name_WS_for__should_be_one_of__instead_of"
+              }],
+            "severity" : "error",
+            "code" : "invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-display"
+                }],
+              "text" : "$external:1:Display  1 (1.0)$"
+            },
+            "location" : ["display"],
+            "expression" : ["display"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "$external:2:Display  1 (1.0)$"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
+    },
+    {
+      "name" : "version",
+      "valueString" : "1.0.0",
+      "$optional$" : "warning:version"
+    }]
 }

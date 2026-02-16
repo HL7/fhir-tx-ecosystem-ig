@@ -1,51 +1,52 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "36274733"
-  },
-  {
-    "name" : "display",
-    "valueString" : "Furosemide Injection [Lasix]"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "not-in-vs"
-          }],
-          "text" : "The provided code 'https://fhir-terminology.ohdsi.org#36274733' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
-        },
-        "location" : ["code"],
-        "expression" : ["code"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "Code '36274733' is not in the value set; The provided code 'https://fhir-terminology.ohdsi.org#36274733' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },
-  {
-    "name" : "system",
-    "valueUri" : "https://fhir-terminology.ohdsi.org"
-  },
-  {
-    "name" : "version",
-    "valueString" : "20240716"
-  }]
+      "name" : "code",
+      "valueCode" : "36274733"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Furosemide Injection [Lasix]"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+              }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "not-in-vs"
+                }],
+              "text" : "The provided code 'https://fhir-terminology.ohdsi.org#36274733' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
+            },
+            "location" : ["code"],
+            "expression" : ["code"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "Code '36274733' is not in the value set; The provided code 'https://fhir-terminology.ohdsi.org#36274733' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "https://fhir-terminology.ohdsi.org"
+    },
+    {
+      "name" : "version",
+      "valueString" : "20240716",
+      "$optional$" : "warning:version"
+    }]
 }

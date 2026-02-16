@@ -1,71 +1,70 @@
-﻿{
+{
   "resourceType" : "Parameters",
   "parameter" : [{
-    "$optional$" : true,
-    "name" : "code",
-    "valueCode" : "code1x"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "$optional-properties$" : ["location" ],
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "not-in-vs"
-          }],
-          "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
-        },
-        "location" : ["code"],
-        "expression" : ["code"]
-      },
-      {
-        "$optional-properties$" : ["location" ],
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Unknown_Code_in_Version"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "invalid-code"
-          }],
-          "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple$"
-        },
-        "location" : ["code"],
-        "expression" : ["code"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "$external:3:http://hl7.org/fhir/test/CodeSystem/simple$"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },{
-    "$optional$" : true,
-    "name" : "system",
-    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
-  },
-  {
-    "$optional$" : true,
-    "name" : "version",
-    "valueString" : "0.1.0"
-  }]
+      "$optional$" : true,
+      "name" : "code",
+      "valueCode" : "code1x"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "$optional-properties$" : ["location"],
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+              }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "not-in-vs"
+                }],
+              "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
+            },
+            "location" : ["code"],
+            "expression" : ["code"]
+          },
+          {
+            "$optional-properties$" : ["location"],
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "Unknown_Code_in_Version"
+              }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-code"
+                }],
+              "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple$"
+            },
+            "location" : ["code"],
+            "expression" : ["code"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "$external:3:http://hl7.org/fhir/test/CodeSystem/simple$"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "$optional$" : true,
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    },
+    {
+      "name" : "version",
+      "valueString" : "0.1.0",
+      "$optional$" : "warning:version"
+    }]
 }

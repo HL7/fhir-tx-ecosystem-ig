@@ -1,83 +1,84 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "code1"
-  },
-  {
-    "name" : "codeableConcept",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/test/CodeSystem/version",
-        "version" : "2.4.0",
-        "code" : "code1"
-      }]
-    }
-  },
-  {
-    "name" : "display",
-    "valueString" : "Display 1 (1.0)"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "VALUESET_VALUE_MISMATCH_CHANGED"
-        }],
-        "severity" : "error",
-        "code" : "invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "vs-invalid"
-          }],
-          "text" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.x' resulting from the version '' in the ValueSet include is different to the one in the value ('2.4.0')"
-        },
-        "location" : ["CodeableConcept.coding[0].version"],
-        "expression" : ["CodeableConcept.coding[0].version"]
-      },
-      {
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
-        }],
-        "severity" : "error",
-        "code" : "not-found",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "not-found"
-          }],
-          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0"
-        },
-        "location" : ["CodeableConcept.coding[0].system"],
-        "expression" : ["CodeableConcept.coding[0].system"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0; The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.x' resulting from the version '' in the ValueSet include is different to the one in the value ('2.4.0')"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },
-  {
-    "name" : "system",
-    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
-  },
-  {
-    "name" : "version",
-    "valueString" : "1.0.0"
-  },
-  {
-    "name" : "x-caused-by-unknown-system",
-    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/version|2.4.0"
-  }]
+      "name" : "code",
+      "valueCode" : "code1"
+    },
+    {
+      "name" : "codeableConcept",
+      "valueCodeableConcept" : {
+        "coding" : [{
+            "system" : "http://hl7.org/fhir/test/CodeSystem/version",
+            "version" : "2.4.0",
+            "code" : "code1"
+          }]
+      }
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display 1 (1.0)"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "VALUESET_VALUE_MISMATCH_CHANGED"
+              }],
+            "severity" : "error",
+            "code" : "invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "vs-invalid"
+                }],
+              "text" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.x' resulting from the version '' in the ValueSet include is different to the one in the value ('2.4.0')"
+            },
+            "location" : ["CodeableConcept.coding[0].version"],
+            "expression" : ["CodeableConcept.coding[0].version"]
+          },
+          {
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
+              }],
+            "severity" : "error",
+            "code" : "not-found",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "not-found"
+                }],
+              "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0"
+            },
+            "location" : ["CodeableConcept.coding[0].system"],
+            "expression" : ["CodeableConcept.coding[0].system"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.2.0; The code system 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.x' resulting from the version '' in the ValueSet include is different to the one in the value ('2.4.0')"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
+    },
+    {
+      "name" : "version",
+      "valueString" : "1.0.0",
+      "$optional$" : "warning:version"
+    },
+    {
+      "name" : "x-caused-by-unknown-system",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/version|2.4.0"
+    }]
 }
