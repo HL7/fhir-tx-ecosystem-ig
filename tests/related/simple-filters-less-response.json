@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "The valueSet http://hl7.org/fhir/test/ValueSet/list-1x is a seb-set of the valueSet http://hl7.org/fhir/test/ValueSet/list-2x"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "subset"
+  }]
+}

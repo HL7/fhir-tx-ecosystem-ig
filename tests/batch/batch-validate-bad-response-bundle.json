@@ -20,7 +20,7 @@
           "issue" : [{
             "$optional-properties$" : ["location" ],
             "extension" : [{
-              "$optional$" : true,
+              "$optional$" : "!tx.fhir.org",
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "Display_Name_for__should_be_one_of__instead_of"
             }],
@@ -89,7 +89,7 @@
           "issue" : [{
             "$optional-properties$" : ["location" ],
             "extension" : [{
-              "$optional$" : true,
+              "$optional$" : "!tx.fhir.org",
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
             }],
@@ -108,6 +108,7 @@
           {
             "$optional-properties$" : ["location" ],
             "extension" : [{
+              "$optional$" : "!tx.fhir.org",
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "Display_Name_for__should_be_one_of__instead_of"
             }],

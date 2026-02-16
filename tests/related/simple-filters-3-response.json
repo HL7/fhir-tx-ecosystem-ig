@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "The value sets http://hl7.org/fhir/test/ValueSet/list-1y and http://hl7.org/fhir/test/ValueSet/list-2y contain the same codes"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "same"
+  }]
+}

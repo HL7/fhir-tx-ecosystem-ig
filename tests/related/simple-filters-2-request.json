@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "thisValueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "url" : "http://hl7.org/fhir/test/ValueSet/list-1x",
+      "status" : "active",
+      "compose" : {
+        "include" : [{
+          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "code1"
+          }]
+        },{
+          "system" : "http://hl7.org/fhir/test/CodeSystem/extension",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "code1"
+          }]
+        }]
+      }
+    }
+  },{
+    "name" : "otherValueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "url" : "http://hl7.org/fhir/test/ValueSet/list-2x",
+      "status" : "active",
+      "compose" : {
+        "include" : [{
+          "system" : "http://hl7.org/fhir/test/CodeSystem/extension",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "code1"
+          }]
+        },{
+          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "code1"
+          }]
+        }]
+      }
+    }
+  }]
+}

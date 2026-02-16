@@ -4,7 +4,7 @@
   "url": "http://id.who.int/icd/release/11/2025-01/mms/257068234/postcoordinationScale/infectiousAgent",
   "version": "2025-01",
   "name": "VS.11.2025-01.mms.257068234.pcs.infectiousAgent",
-  "title": "Postcoordination scale Infectious agent for entity http://id.who.int/icd/release/11/2025-01/mms/257068234",
+  "title": "$string$",
   "status": "active",
   "experimental": false,
   "date": "2025-01-24",
@@ -12,7 +12,8 @@
   "compose": {
     "include": [
       {
-        "system": "http://id.who.int/icd/release/11/2025-01/mms",
+        "system": "http://id.who.int/icd/release/11/mms",
+        "version": "2025-01",
         "filter": [
           {
             "property": "concept",

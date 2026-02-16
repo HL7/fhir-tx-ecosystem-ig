@@ -1,3 +1,6 @@
+test case to add 
+- add a warning if the display comes from the value set 
+
 validation to add:
  - a code can't have status = active and inactive = true (task 51249)
  

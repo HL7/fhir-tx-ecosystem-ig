@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "expansion",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "message",
+    "valueString" : "Both value sets http://hl7.org/fhir/test/ValueSet/list-1m and http://hl7.org/fhir/test/ValueSet/list-2m contain the codes the other doesn't, but there is some overlap"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "overlapping"
+  }]
+}

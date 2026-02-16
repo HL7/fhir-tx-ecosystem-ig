@@ -32,16 +32,15 @@
 56459004 |Foot structure (body structure)|
 64572001 |Disease (disorder)|
 6990005 |Fracture of shaft of tibia (disorder)|
-<<128241005 |Inflammatory disease of liver (disorder)|
-<<10200004 |Liver structure (body structure)|
-<<364159005 |Liver observable (observable entity)|
+<<408335007 |Inflammatory disease of liver (disorder)|
+<<90140006 |Structure of intrahepatic biliary tree (body structure)| 
+<<364159005 |Liver observable (observable entity)| 
 <<227014008 |Liver pate (substance)|
-<<249565005 |Liver finding (finding)|
+<<19943007 |Cirrhosis of liver (disorder)| 
 <<406459008 |Product containing halibut liver oil (medicinal product)|
-<<776168003 |Product containing only halibut liver oil (medicinal product)|
-<<776168003 |Product containing only halibut liver oil (medicinal product)|
-<<309399009 |Hospital-based dietitian (occupation)|
-<<421813008 |Class Hepaticopsida (organism)|
-<<441802002 |Imaging of liver (procedure)|
-<<119383005 |Specimen from liver (specimen)|
+<<776168003 |Product containing only halibut liver oil (medicinal product)| 
+<<309399009 |Hospital-based dietitian (occupation)| 
+<<421813008 |Class Hepaticopsida (organism)| 
+<<441802002 |Computed tomography of liver (procedure)| 
+<<241549007 |Specimen from liver (specimen)| 
 129433002 |Inspection|

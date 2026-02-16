@@ -3,8 +3,8 @@
   "issue" : [{
     "$optional-properties$" : ["location" ],
     "extension" : [{
-      "$optional$" :  true,
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "UNABLE_TO_HANDLE_SYSTEM_FILTER_WITH_NO_VALUE"
     }],
     "severity" : "error",

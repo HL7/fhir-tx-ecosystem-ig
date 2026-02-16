@@ -3,7 +3,8 @@
   "issue" : [{
     "$optional-properties$" : ["diagnostics", "extension"],
     "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "VALUESET_CIRCULAR_REFERENCE"
     }],
     "severity" : "error",

@@ -14,6 +14,7 @@
       "resourceType" : "OperationOutcome",
       "issue" : [{
         "extension" : [{
+          "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "$choice:MSG_EXPERIMENTAL|MSG_DRAFT$"
         }],

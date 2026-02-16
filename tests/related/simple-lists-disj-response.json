@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "No shared codes between the value sets http://hl7.org/fhir/test/ValueSet/list-1 and http://hl7.org/fhir/test/ValueSet/list-1"
+  },
+  {
+    "name" : "result",
+    "valueCode" : "disjoint"
+  }]
+}

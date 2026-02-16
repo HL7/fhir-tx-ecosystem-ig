@@ -2,7 +2,8 @@
   "resourceType" : "OperationOutcome",
   "issue" : [{
     "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "Unable_to_resolve_value_Set_"
     }],
     "severity" : "error",
