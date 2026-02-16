@@ -1,45 +1,46 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "completed"
-  },
-  {
-    "name" : "display",
-    "valueString" : "Completed"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "$choice:MSG_EXPERIMENTAL|MSG_DRAFT$"
-        }],
-        "severity" : "information",
-        "code" : "business-rule",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "status-check"
-          }],
-          "text" : "$fragments:http://hl7.org/fhir/event-status$"
-        }
-      }]
-    }
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : true
-  },
-  {
-    "name" : "system",
-    "valueUri" : "http://hl7.org/fhir/event-status"
-  },
-  {
-    "name" : "version",
-    "valueString" : "$version$"
-  }]
+      "name" : "code",
+      "valueCode" : "completed"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Completed"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "$choice:MSG_EXPERIMENTAL|MSG_DRAFT$"
+              }],
+            "severity" : "information",
+            "code" : "business-rule",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "status-check"
+                }],
+              "text" : "$fragments:http://hl7.org/fhir/event-status$"
+            }
+          }]
+      }
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/event-status"
+    },
+    {
+      "name" : "version",
+      "valueString" : "$version$",
+      "$optional$" : "warning:version"
+    }]
 }

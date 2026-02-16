@@ -1,32 +1,33 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "4097430"
-  },
-  {
-    "name" : "codeableConcept",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "4097430"
-      }]
-    }
-  },
-  {
-    "name" : "display",
-    "valueString" : "Sodium measurement"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : true
-  },
-  {
-    "name" : "system",
-    "valueUri" : "https://fhir-terminology.ohdsi.org"
-  },
-  {
-    "name" : "version",
-    "valueString" : "20240716"
-  }]
+      "name" : "code",
+      "valueCode" : "4097430"
+    },
+    {
+      "name" : "codeableConcept",
+      "valueCodeableConcept" : {
+        "coding" : [{
+            "system" : "https://fhir-terminology.ohdsi.org",
+            "code" : "4097430"
+          }]
+      }
+    },
+    {
+      "name" : "display",
+      "valueString" : "Sodium measurement"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "https://fhir-terminology.ohdsi.org"
+    },
+    {
+      "name" : "version",
+      "valueString" : "20240716",
+      "$optional$" : "warning:version"
+    }]
 }

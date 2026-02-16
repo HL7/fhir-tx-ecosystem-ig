@@ -1,61 +1,62 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "4097430"
-  },
-  {
-    "name" : "codeableConcept",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "4097430",
-        "display" : "Not the display"
-      }]
-    }
-  },
-  {
-    "name" : "display",
-    "valueString" : "Sodium measurement"
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Display_Name_for__should_be_one_of__instead_of"
-        }],
-        "severity" : "error",
-        "code" : "invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "invalid-display"
-          }],
-          "text" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is 'Sodium measurement' (en) (for the language(s) '--')"
-        },
-        "location" : ["CodeableConcept.coding[0].display"],
-        "expression" : ["CodeableConcept.coding[0].display"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is 'Sodium measurement' (en) (for the language(s) '--')"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : false
-  },
-  {
-    "name" : "system",
-    "valueUri" : "https://fhir-terminology.ohdsi.org"
-  },
-  {
-    "name" : "version",
-    "valueString" : "20240716"
-  }]
+      "name" : "code",
+      "valueCode" : "4097430"
+    },
+    {
+      "name" : "codeableConcept",
+      "valueCodeableConcept" : {
+        "coding" : [{
+            "system" : "https://fhir-terminology.ohdsi.org",
+            "code" : "4097430",
+            "display" : "Not the display"
+          }]
+      }
+    },
+    {
+      "name" : "display",
+      "valueString" : "Sodium measurement"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+              }],
+            "severity" : "error",
+            "code" : "invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-display"
+                }],
+              "text" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is 'Sodium measurement' (en) (for the language(s) '--')"
+            },
+            "location" : ["CodeableConcept.coding[0].display"],
+            "expression" : ["CodeableConcept.coding[0].display"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is 'Sodium measurement' (en) (for the language(s) '--')"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "https://fhir-terminology.ohdsi.org"
+    },
+    {
+      "name" : "version",
+      "valueString" : "20240716",
+      "$optional$" : "warning:version"
+    }]
 }

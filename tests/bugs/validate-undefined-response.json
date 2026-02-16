@@ -1,23 +1,24 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "name" : "code",
-    "valueCode" : "2108-9"
-  },
-  {
-    "name" : "display",
-    "valueString" : "European"
-  },
-  {
-    "name" : "result",
-    "valueBoolean" : true
-  },
-  {
-    "name" : "system",
-    "valueUri" : "urn:oid:2.16.840.1.113883.6.238"
-  },
-  {
-    "name" : "version",
-    "valueString" : "1.2"
-  }]
+      "name" : "code",
+      "valueCode" : "2108-9"
+    },
+    {
+      "name" : "display",
+      "valueString" : "European"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "urn:oid:2.16.840.1.113883.6.238"
+    },
+    {
+      "name" : "version",
+      "valueString" : "1.2",
+      "$optional$" : "warning:version"
+    }]
 }
