@@ -39,5 +39,10 @@
   {
     "name" : "system",
     "valueUri" : "https://fhir-terminology.ohdsi.org"
+  },
+  {
+    "$optional$" : "warning:version",
+    "name" : "version",
+    "valueString" : "20240716"
   }]
 }

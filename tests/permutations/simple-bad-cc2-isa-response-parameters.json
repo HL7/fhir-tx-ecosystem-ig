@@ -9,7 +9,9 @@
         "display" : "Wrong Display"
       },
       {
+        "$optional-properties$" : ["version"],
         "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+        "version" : "0.1.0",
         "code" : "code3",
         "display" : "Display 3"
       }]

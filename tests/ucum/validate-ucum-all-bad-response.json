@@ -67,5 +67,10 @@
   {
     "name" : "system",
     "valueUri" : "http://unitsofmeasure.org"
+  },
+  {
+    "$optional$" : "warning:version",
+    "name" : "version",
+    "valueString" : "2.2"
   }]
 }
