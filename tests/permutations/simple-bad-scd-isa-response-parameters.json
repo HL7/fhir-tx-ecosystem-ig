@@ -55,5 +55,10 @@
   {
     "name" : "system",
     "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+  },
+  {
+    "$optional$" : "warning:version",
+    "name" : "version",
+    "valueString" : "0.1.0"
   }]
 }

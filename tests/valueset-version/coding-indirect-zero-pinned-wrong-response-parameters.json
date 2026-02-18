@@ -1,6 +1,7 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+      "$optional$" : true,
       "name" : "code",
       "valueCode" : "code2"
     },
@@ -40,12 +41,13 @@
       "valueBoolean" : false
     },
     {
+      "$optional$" : true,
       "name" : "system",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/vs-version"
     },
     {
+      "$optional$" : true,
       "name" : "version",
-      "valueString" : "0.1.0",
-      "$optional$" : "warning:version"
+      "valueString" : "0.1.0"
     }]
 }

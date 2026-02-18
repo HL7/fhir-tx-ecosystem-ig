@@ -1,8 +1,8 @@
 {
   "package-id" : "hl7.fhir.uv.tx-ecosystem",
-  "version" : "1.8.0",
-  "desc" : "Rolling Update - see test history",
-  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.8.0",
+  "version" : "1.9.0",
+  "desc" : "Major update - big overhaul to tests for FHIRsmith development",
+  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.9.0",
   "status" : "informative",
   "sequence" : "Releases",
   "mode" : "milestone",
