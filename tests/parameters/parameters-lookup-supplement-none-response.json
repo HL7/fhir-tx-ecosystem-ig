@@ -34,8 +34,10 @@
 	  "$optional$" : true,
       "name" : "use",
       "valueCoding" : {
+        "$optional-properties$" : ["display"],
         "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-        "code" : "preferredForLanguage"
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
       }
     },
     {
