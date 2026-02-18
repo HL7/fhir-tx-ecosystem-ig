@@ -1,24 +1,59 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-      "name" : "code",
-      "valueCode" : "2108-9"
-    },
-    {
-      "name" : "display",
-      "valueString" : "European"
-    },
-    {
-      "name" : "result",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "system",
-      "valueUri" : "urn:oid:2.16.840.1.113883.6.238"
-    },
-    {
-      "name" : "version",
-      "valueString" : "1.2",
-      "$optional$" : "warning:version"
-    }]
+    "name" : "code",
+    "valueCode" : "2108-9"
+  },
+  {
+    "name" : "display",
+    "valueString" : "European"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "MSG_RETIRED"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "status-check"
+          }],
+          "text" : "Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.14914|20190522"
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "MSG_RETIRED"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "status-check"
+          }],
+          "text" : "Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3|20160213"
+        }
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "urn:oid:2.16.840.1.113883.6.238"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.3"
+  }]
 }

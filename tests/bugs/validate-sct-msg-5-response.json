@@ -4,7 +4,9 @@
     "name" : "codeableConcept",
     "valueCodeableConcept" : {
       "coding" : [{
+        "$optional-properties$" : ["version"],
         "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20250201",
         "code" : "385049006",
         "display" : "Capsule"
       }]

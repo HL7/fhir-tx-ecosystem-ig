@@ -3,40 +3,40 @@
   "parameter" : [{
     "name" : "code",
     "valueCode" : "367430006:{272741003=24028007}"
-    },
-    {
-      "name" : "display",
-      "valueString" : "367430006|Repair of tendon of hand|:{272741003|Laterality|=24028007|Right|}"
-    },
-    {
-      "name" : "issues",
-      "resource" : {
-        "resourceType" : "OperationOutcome",
-        "issue" : [{
-          "severity" : "information",
-          "code" : "informational",
-          "details" : {
-            "coding" : [{
-              "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-              "code" : "process-note"
-            }],
-            "text" : "The expression is grammatically correct and the concepts are correct, but the expression has not been checked against the SNOMED CT concept model (MRCM)"
-          },
-          "expression" : ["code"]
-        }]
-      }
-    },
-    {
-      "name" : "result",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "system",
-      "valueUri" : "http://snomed.info/sct"
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201",
-      "$optional$" : "warning:version"
+  },
+  {
+    "name" : "display",
+    "valueString" : "367430006|Repair of tendon of hand|:{272741003|Laterality|=24028007|Right|}"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "severity" : "information",
+        "code" : "informational",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "process-note"
+          }],
+          "text" : "The expression is grammatically correct and the concepts are valid, but the expression has not been checked against the SNOMED CT concept model (MRCM)"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "$optional$" : "warning:version",
+    "name" : "version",
+    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
   }]
 }
