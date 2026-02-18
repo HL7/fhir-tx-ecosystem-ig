@@ -185,11 +185,20 @@ If the server chooses to make them available elsewhere, it SHALL populate the ex
 * The server SHALL support the [mode/valueSetMode](https://jira.hl7.org/browse/FHIR-41229) parameter
 * The server SHALL support language correctly (same locations/rules for `$expand`)
 * The server SHALL support the [inferSystem](https://jira.hl7.org/browse/FHIR-41431) parameter
-* The server SHALL return an `issues` parameter when there are issues to return 
-* The server SHALL return system, code and display for the code that it considered valid, along with the version, if this is known
-* The server SHOULD return a `x-caused-by-unknown-system` parameter for each code system it did not support
+
+Return parameters:
+* the server SHALL return a result parameter, along with a message summarising the reason why if result = false
+* any errors and warnings SHALL be itemised in an  `issues` parameter with paths to the actual locations so a validator can locate the issue correctly 
+* any issue entries in the OperationOutcome SHALL have a severity, type, expression, details.coding, and details.text. The coding SHALL be taken from the `http://hl7.org/fhir/tools/CodeSystem/tx-issue-type` system, and helps validators process the errors correctly. The diagnostics property may be populated;
+this is ignored by the test cases 
+* the correct value for issue.type and issue.details.coding may be found in the text cases. At least with regard to issue.type, the correct code is sometimes unclear, and more than one type is accepted
+* the server SHALL return the code system and code against which validation was based (`system` and `code` parmaeters)
+* The server SHOULD return the version against which validation was based (there are corner case exceptions, e.g. where there is no version on the code system)
+* the server SHOULD return a display for the code (`display` parameter) but this is not always possible (e.g. some codes do not have displays) or required for some causes of validation failure
+* The server SHALL return a `x-caused-by-unknown-system` parameter for each code system it did not support. This helps validators inform users of missing resources
 * The server SHOULD return a `normalized-code` parameter where appropriate (e.g. case insensitive code systems, code systems with complex grammars)
 * The server SHOULD return an issue with tx issue type ```processing-note``` when it has not fully validated the code e.g. an SCT expression against the MRCM 
+
 
 ##### Inactive Codes 
 
