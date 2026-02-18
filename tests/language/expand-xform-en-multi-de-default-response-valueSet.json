@@ -45,9 +45,11 @@
       "designation" : [{
         "language" : "en",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Display 1"
       }]
@@ -59,9 +61,11 @@
       "designation" : [{
         "language" : "en",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Display 2"
       },
@@ -77,9 +81,11 @@
       "designation" : [{
         "language" : "en",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Display 2a"
       },
@@ -109,9 +115,11 @@
       "designation" : [{
         "language" : "en",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Display 2b"
       }]
@@ -123,9 +131,11 @@
       "designation" : [{
         "language" : "en",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Display 3"
       }]
