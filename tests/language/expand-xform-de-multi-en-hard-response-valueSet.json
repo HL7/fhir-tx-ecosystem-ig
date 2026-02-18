@@ -45,9 +45,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 1"
       }]
@@ -59,9 +61,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2"
       },
@@ -81,9 +85,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2a"
       },
@@ -98,9 +104,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2aI"
       },
@@ -115,9 +123,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2aII"
       }]
@@ -129,9 +139,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2b"
       }]
@@ -143,9 +155,11 @@
       "designation" : [{
         "language" : "de",
         "use" : {
-	  "$optional$" : true,
+          "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 3"
       }]

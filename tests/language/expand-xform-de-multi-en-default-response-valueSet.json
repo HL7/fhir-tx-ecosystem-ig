@@ -46,8 +46,10 @@
         "language" : "de",
         "use" : {
 	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 1"
       }]
@@ -60,8 +62,10 @@
         "language" : "de",
         "use" : {
 	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2"
       },
@@ -82,8 +86,10 @@
         "language" : "de",
         "use" : {
 	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2a"
       },
@@ -114,8 +120,10 @@
         "language" : "de",
         "use" : {
 	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 2b"
       }]
@@ -128,8 +136,10 @@
         "language" : "de",
         "use" : {
 	        "$optional$" : true,
+          "$optional-properties$" : ["display"],
           "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-          "code" : "preferredForLanguage"
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
         },
         "value" : "Anzeige 3"
       }]
