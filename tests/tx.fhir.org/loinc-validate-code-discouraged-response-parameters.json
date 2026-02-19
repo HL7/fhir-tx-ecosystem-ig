@@ -44,7 +44,7 @@
     },
     {
       "name" : "status",
-      "valueString" : "DISCOURAGED"
+      "valueCode" : "DISCOURAGED"
     },
     {
       "name" : "system",
