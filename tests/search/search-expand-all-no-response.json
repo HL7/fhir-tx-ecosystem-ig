@@ -12,6 +12,10 @@
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
       "name" : "filter",
       "valueString" : "xxx"
     },

@@ -13,6 +13,10 @@
     "timestamp" : "$instant$",
     "total" : 1,
     "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
       "name" : "filter",
       "valueString" : "data"
     },

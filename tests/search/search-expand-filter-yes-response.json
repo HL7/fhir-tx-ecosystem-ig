@@ -13,6 +13,10 @@
     "timestamp" : "$instant$",
     "total" : 4,
     "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
       "name" : "filter",
       "valueString" : "data"
     },
@@ -23,22 +27,22 @@
     "contains" : [{
       "system" : "http://hl7.org/fhir/test/CodeSystem/search",
       "code" : "data-exchange",
-      "display" : "Data Exchange",
-      "contains" : [{
-        "system" : "http://hl7.org/fhir/test/CodeSystem/search",
-        "code" : "data-exchange1",
-        "display" : "Data Exchange1"
-      },
-      {
-        "system" : "http://hl7.org/fhir/test/CodeSystem/search",
-        "code" : "data-exchange2",
-        "display" : "Data Exchange2"
-      },
-      {
-        "system" : "http://hl7.org/fhir/test/CodeSystem/search",
-        "code" : "data-exchange3",
-        "display" : "Data Exchange3"
-      }]
+      "display" : "Data Exchange"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange1",
+      "display" : "Data Exchange1"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange2",
+      "display" : "Data Exchange2"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange3",
+      "display" : "Data Exchange3"
     }]
   }
 }

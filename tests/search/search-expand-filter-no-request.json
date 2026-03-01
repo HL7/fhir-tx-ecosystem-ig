@@ -8,6 +8,9 @@
     {
       "name": "filter",
       "valueUri": "xxx"
+    },{
+      "name" : "excludeNested",
+      "valueBoolean" : true
     }
   ]
 }
