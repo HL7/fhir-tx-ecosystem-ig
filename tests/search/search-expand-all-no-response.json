@@ -7,10 +7,11 @@
   "name" : "SearchAllTest",
   "status" : "draft",
   "expansion" : {
-    "$optional-properties$" : ["id", "offset"],
+    "$optional-properties$" : ["id", "offset", "total"],
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
+    "total": 0,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
