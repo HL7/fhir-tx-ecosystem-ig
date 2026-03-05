@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: Concept 24028007 is not valid in this context (must be a 410662002)"
+          "text" : "Not a valid expression: Concept 24028007 is not valid in this context (must be a descendent of one of 410662002,106237007)"
         },
         "expression" : ["code"]
       }]
