@@ -6,7 +6,7 @@
   },{
     "name" : "coding",
     "valueCoding" : {
-      "system" : "Location",
+      "system" : "Location1",
       "code" : "code1"
     }
   }]
