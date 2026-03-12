@@ -1,0 +1,32 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "overload-exclude-versioned",
+  "url" : "http://hl7.org/fhir/test/ValueSet/overload-exclude-versioned",
+  "version" : "5.0.0",
+  "name" : "OverloadValueSetExcludeVersioned",
+  "title" : "Overload ValueSet Exclude Versioned",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-expansion-parameter",
+      "extension" : [{
+        "url" : "name",
+        "valueCode" : "versionsMatch"
+      },{
+        "url" : "value",
+        "valueString" : "false"
+      }]
+    }],
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
+      "version" : "2.0.0"
+    }],
+    "exclude" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
+      "version" : "1.0.0"
+    }]
+  }
+}

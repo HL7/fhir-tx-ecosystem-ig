@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "overload-mixed",
+  "url" : "http://hl7.org/fhir/test/ValueSet/overload-mixed",
+  "version" : "5.0.0",
+  "name" : "OverloadValueSetMixed",
+  "title" : "Overload ValueSet Mixed Versioned and Unversioned",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
+      "version" : "1.0.0"
+    },{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload"
+    }]
+  }
+}

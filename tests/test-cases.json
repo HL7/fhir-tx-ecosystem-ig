@@ -2818,6 +2818,221 @@
       }
     ]
   },{
+    "name" : "overload",
+    "mode" : "general",
+    "description" : "A set of tests that test out handling of value sets that cross versions of the same code system",
+    "setup" : ["overload/codesystem-overload-1.json", "overload/codesystem-overload-2.json",
+        "overload/valueset-overload-all.json", "overload/valueset-overload-all-versioned.json", "overload/valueset-overload-all-merged.json", 
+        "overload/valueset-overload-exclude.json", "overload/valueset-overload-exclude-versioned.json", "overload/valueset-overload-exclude-merged.json", 
+        "overload/valueset-overload-enum-good.json", "overload/valueset-overload-enum-bad.json", "overload/valueset-overload-exclude-enum.json",
+        "overload/valueset-overload-mixed.json"
+      ],
+    "tests" : [
+      {
+        "name" : "expand-all",
+        "description" : "Expanding two versions of the same code system",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-all-request.json",
+        "response" :  "overload/overload-expand-all-response.json"
+      },
+      {
+        "name" : "expand-all-versioned",
+        "description" : "Expanding two versions of the same code system, versioned",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-all-versioned-request.json",
+        "response" :  "overload/overload-expand-all-versioned-response.json"
+      },
+      {
+        "name" : "expand-all-merged",
+        "description" : "Expanding two versions of the same code system, merging versions",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-all-merged-request.json",
+        "response" :  "overload/overload-expand-all-merged-response.json"
+      },
+      {
+        "name" : "expand-enum-good",
+        "description" : "Expanding two versions of the same code system, codes selected from each version",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-enum-good-request.json",
+        "response" :  "overload/overload-expand-enum-good-response.json"
+      },
+      {
+        "name" : "expand-enum-bad",
+        "description" : "Expanding two versions of the same code system, codes selected from both versions - but you can't do this",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-enum-bad-request.json",
+        "response" :  "overload/overload-expand-enum-bad-response.json"
+      },
+      {
+        "name" : "expand-exclude",
+        "description" : "Excluding one version of the code system from the other (cheap diff analysis)",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-exclude-request.json",
+        "response" :  "overload/overload-expand-exclude-response.json"
+      },
+      {
+        "name" : "expand-exclude-versioned",
+        "description" : "Excluding one version of the code system from the other (cheap diff analysis), versioned",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-exclude-versioned-request.json",
+        "response" :  "overload/overload-expand-exclude-versioned-response.json"
+      },
+      {
+        "name" : "expand-exclude-merged",
+        "description" : "Excluding one version of the code system from the other (cheap diff analysis), merging versions",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-exclude-merged-request.json",
+        "response" :  "overload/overload-expand-exclude-merged-response.json"
+      },
+      {
+        "name" : "validate-all-good",
+        "description" : "Is code in value set - in both versions",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good-request.json",
+        "response" :  "overload/validate-good-response.json"
+      },
+      {
+        "name" : "validate-all-good2",
+        "description" : "Is code in value set - in both versions, but display from the second",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good2-request.json",
+        "response" :  "overload/validate-good2-response.json"
+      },
+      {
+        "name" : "validate-all-good3",
+        "description" : "Is code in value set - in one version",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good3-request.json",
+        "response" :  "overload/validate-good3-response.json"
+      },
+      {
+        "name" : "validate-all-good4",
+        "description" : "Is code in value set - in one versions",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good4-request.json",
+        "response" :  "overload/validate-good4-response.json"
+      },
+      {
+        "name" : "validate-all-bad2",
+        "description" : "Is code in value set - in one versions",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad2-request.json",
+        "response" :  "overload/validate-bad2-response.json"
+      },
+      {
+        "name" : "validate-all-bad2v",
+        "description" : "code from one version, display from the other",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad2v-request.json",
+        "response" :  "overload/validate-bad2v-response.json"
+      },
+      {
+        "name" : "expand-all-sysver",
+        "description" : "Tests whether a system-version parameter forcing v1 overrides the value set's explicit dual-version includes. It should not, since it's just a default",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-all-sysver-request.json",
+        "response" :  "overload/overload-expand-all-sysver-response.json"
+      },
+      {
+        "name" : "expand-exclude-enum",
+        "description" : "Expands a value set that includes all of both versions but excludes only code2 from v1 by enumeration, testing version-scoped exclusion of individual codes.",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-exclude-enum-request.json",
+        "response" :  "overload/overload-expand-exclude-enum-response.json"
+      },
+      {
+        "name" : "expand-mixed",
+        "description" : " Expands a value set with one versioned include (v1) and one unversioned include, testing how the server resolves the unversioned reference.",
+        "operation" : "expand",
+        "request" : "overload/overload-expand-mixed-request.json",
+        "response" :  "overload/overload-expand-mixed-response.json"
+      },
+      {
+        "name" : "validate-bad-enum-code1",
+        "description" : "Validates that code1 is rejected by the enum-good value set, since it's not in the enumerated list.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad-enum-code1-request.json",
+        "response" :  "overload/validate-bad-enum-code1-response.json"
+      },
+      {
+        "name" : "validate-bad-exclude-code1",
+        "description" : "Validates that code1 is rejected by the exclude value set, since it exists in both versions and the v1 overlap is excluded.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad-exclude-code1-request.json",
+        "response" :  "overload/validate-bad-exclude-code1-response.json"
+      },
+      {
+        "name" : "validate-bad-unknown",
+        "description" : "Validates that a completely nonexistent code (code99) fails against the value set.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad-unknown-request.json",
+        "response" :  "overload/validate-bad-unknown-response.json"
+      },
+      {
+        "name" : "validate-v1code2-wrongdisplay",
+        "description" : " Validates that code1 with version pinned to 1.0.0 succeeds, confirming version-pinning works for a code present in both versions",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad-v1code2-wrongdisplay-request.json",
+        "response" :  "overload/validate-bad-v1code2-wrongdisplay-response.json"
+      },
+      {
+        "name" : "validate-bad-v1code4",
+        "description" : "Validates that code4 with version explicitly pinned to 1.0.0 fails, since code4 only exists in v2.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad-v1code4-request.json",
+        "response" :  "overload/validate-bad-v1code4-response.json"
+      },
+      {
+        "name" : "validate-bad-v2code3",
+        "description" : "Validates that code3 with version explicitly pinned to 2.0.0 fails, since code3 only exists in v1.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-bad-v2code3-request.json",
+        "response" :  "overload/validate-bad-v2code3-response.json"
+      },
+      {
+        "name" : "validate-good-code2-v1display",
+        "description" : "Tests the ambiguous case of code2 with display \"Display 2\" and no version pin, where the display matches v1 but not v2",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good-code2-v1display-request.json",
+        "response" :  "overload/validate-good-code2-v1display-response.json"
+      },
+      {
+        "name" : "validate-good-enum-code3",
+        "description" : "Validates code3 against the enum-good value set, which explicitly enumerates it from v1",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good-enum-code3-request.json",
+        "response" :  "overload/validate-good-enum-code3-response.json"
+      },
+      {
+        "name" : "validate-good-exclude-code4",
+        "description" : "Validates that code4 is accepted by the exclude value set, where it's the only code surviving the v1 exclusion.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good-exclude-code4-request.json",
+        "response" :  "overload/validate-good-exclude-code4-response.json"
+      },
+      {
+        "name" : "validate-good-v1code1",
+        "description" : "Validates that code1 with version pinned to 1.0.0 succeeds, confirming version-pinning works for a code present in both versions.",
+        "operation" : "validate-code",
+        "request" : "overload/validate-good-v1code1-request.json",
+        "response" :  "overload/validate-good-v1code1-response.json"
+      },
+      {
+        "name" : "validate-good-v1code2-display",
+        "description" : "Validates that code2 with version=1.0.0 and display \"Display 2\" succeeds, since that's the correct display for v1.",
+        "operation" : "validate-code",                              
+        "request" : "overload/validate-good-v1code2-display-request.json",
+        "response" :  "overload/validate-good-v1code2-display-response.json"
+      },
+      {
+        "name" : "validate-good2a",
+        "description" : "Validates that a codeableConcept with both versions in it works fine.",
+        "operation" : "validate-code",                              
+        "request" : "overload/validate-good2a-request.json",
+        "response" :  "overload/validate-good2a-response.json"
+      }
+    ]
+  },{
     "name" : "fragment",
     "mode" : "general",
     "description" : "Testing handling a code system fragment",

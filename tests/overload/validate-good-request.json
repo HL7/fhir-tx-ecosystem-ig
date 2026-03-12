@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "url",
-    "valueUri" : "http://hl7.org/fhir/test/ValueSet/simple-all"
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/overload-all"
   },{
     "name" : "coding",
     "valueCoding" : {
-      "system" : "Location1",
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
       "code" : "code1"
     }
   }]

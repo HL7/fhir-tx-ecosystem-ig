@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code2"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 2"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "Wrong Display Name 'Display #2' for http://hl7.org/fhir/test/CodeSystem/overload#code2. Valid display is 'Display 2' (en) (for the language(s) '--')"
+        },
+        "expression" : ["Coding.display"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Wrong Display Name 'Display #2' for http://hl7.org/fhir/test/CodeSystem/overload#code2. Valid display is 'Display 2' (en) (for the language(s) '--')"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/overload"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.0.0"
+  }]
+}
