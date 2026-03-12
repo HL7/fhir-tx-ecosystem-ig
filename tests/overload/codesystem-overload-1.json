@@ -1,0 +1,31 @@
+{
+  "resourceType" : "CodeSystem",
+  "language" : "en",
+  "id" : "simple",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/overload",
+  "version" : "1.0.0",
+  "name" : "SimpleTestCodeSystem",
+  "title" : "Simple Test Code System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "concept" : [{
+    "code" : "code1",
+    "display" : "Display 1",
+    "definition" : "My first code"
+  },
+  {
+    "code" : "code2",
+    "display" : "Display 2",
+    "definition" : "My second code"
+  },
+  {
+    "code" : "code3",
+    "display" : "Display 3",
+    "definition" : "My Third Code"
+  }]
+}

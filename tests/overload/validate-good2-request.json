@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/overload-all"
+  },{
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
+      "code" : "code2",
+      "display" : "Display #2"
+    }
+  }]
+}

@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "overload-exclude-merged",
+  "url" : "http://hl7.org/fhir/test/ValueSet/overload-exclude-merged",
+  "version" : "5.0.0",
+  "name" : "OverloadValueSetExcludeMerged",
+  "title" : "Overload ValueSet Exclude Merged",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
+      "version" : "2.0.0"
+    }],
+    "exclude" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
+      "version" : "1.0.0"
+    }]
+  }
+}
