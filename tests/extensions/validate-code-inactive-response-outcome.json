@@ -43,7 +43,7 @@
   },
   {
     "name" : "status",
-    "valueString" : "deprecated"
+    "valueCode" : "deprecated"
   },
   {
     "name" : "system",
