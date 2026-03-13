@@ -39,24 +39,6 @@
             "expression" : ["Coding.code"]
           },
           {
-            "extension" : [{
-                "$optional$" : "!tx.fhir.org",
-                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-                "valueString" : "INACTIVE_CONCEPT_FOUND"
-              }],
-            "severity" : "warning",
-            "code" : "business-rule",
-            "details" : {
-              "coding" : [{
-                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-                  "code" : "code-comment"
-                }],
-              "text" : "The concept 'codeRetired' has a status of inactive and its use should be reviewed"
-            },
-            "location" : ["Coding"],
-            "expression" : ["Coding"]
-          },
-          {
             "$optional-properties$" : ["location"],
             "extension" : [{
                 "$optional$" : "!tx.fhir.org",
@@ -74,6 +56,24 @@
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]
+          },
+          {
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "INACTIVE_CONCEPT_FOUND"
+              }],
+            "severity" : "warning",
+            "code" : "business-rule",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "code-comment"
+                }],
+              "text" : "The concept 'codeRetired' has a status of inactive and its use should be reviewed"
+            },
+            "location" : ["Coding"],
+            "expression" : ["Coding"]
           },
           {
             "$optional-properties$" : ["location"],
