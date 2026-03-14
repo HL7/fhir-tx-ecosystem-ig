@@ -3884,6 +3884,20 @@
         "operation" : "expand",
         "request" : "exclude/include-expand-combo-request.json",
         "response" : "exclude/include-expand-combo-response.json"
+      },
+      {
+        "name" : "exclude-gender",
+        "description" : "See https://github.com/HealthIntersections/FHIRsmith/issues/156",
+        "operation" : "expand",
+        "request" : "exclude/exclude-gender-request.json",
+        "response" : "exclude/exclude-gender-response.json"
+      },
+      {
+        "name" : "exclude-gender2",
+        "description" : "See https://github.com/HealthIntersections/FHIRsmith/issues/156",
+        "operation" : "expand",
+        "request" : "exclude/exclude-gender2-request.json",
+        "response" : "exclude/exclude-gender2-response.json"
       }
     ]
   },{

@@ -11,6 +11,10 @@
     "timestamp" : "$instant$",
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed-reason",
       "valueString" : "The code System \"http://unitsofmeasure.org has a grammar and so has infinite members. This extension is based on http://hl7.org/fhir/ValueSet/ucum-common"
     }],
     "parameter" : [{

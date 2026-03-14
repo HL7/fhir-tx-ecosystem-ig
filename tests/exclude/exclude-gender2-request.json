@@ -1,0 +1,24 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {"name":"count","valueInteger":1},
+    {"name":"offset","valueInteger":0},
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "status": "active",
+        "compose": {
+          "include": [
+            { "valueSet": ["http://hl7.org/fhir/ValueSet/administrative-gender"] },
+            { "system": "http://hl7.org/fhir/publication-status" }
+          ],
+          "exclude": [
+            { "system": "http://hl7.org/fhir/administrative-gender", "concept": [{"code":"other"},{"code":"unknown"}] },
+            { "system": "http://hl7.org/fhir/publication-status", "concept": [{"code":"unknown"}] }
+          ]
+        }
+      }
+    }
+  ]
+}
