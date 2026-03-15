@@ -7,6 +7,7 @@
       "name": "valueSet",
       "resource": {
         "resourceType": "ValueSet",
+        "url" : "http://hl7.org/fhir/test/ValueSet/exclude-gender",
         "status": "active",
         "compose": {
           "include": [
