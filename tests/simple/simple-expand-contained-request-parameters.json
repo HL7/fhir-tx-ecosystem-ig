@@ -1,0 +1,45 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "count",
+      "valueInteger": 2000
+    },
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "relevant-findings",
+        "status": "active",
+        "compose": {
+          "include": [
+            {
+              "valueSet": [
+                "#vs1",
+                "http://hl7.org/fhir/test/ValueSet/simple-filter-isa"
+              ]
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "url": "http://example.org/fhir/ValueSet/relevant-codes",
+            "status": "active",
+            "compose": {
+              "include": [
+                {
+                  "system": "http://hl7.org/fhir/test/CodeSystem/simple",
+                  "concept": [
+                    { "code": "code2" }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

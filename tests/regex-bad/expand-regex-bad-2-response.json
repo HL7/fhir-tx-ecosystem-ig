@@ -1,0 +1,30 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad-2",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterRegexBad",
+  "title" : "Simple ValueSet Filter by Regex (Bad)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/regex-bad-2|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/regex-bad-2",
+      "code" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "display" : "Bad Code 1"
+    }]
+  }
+}

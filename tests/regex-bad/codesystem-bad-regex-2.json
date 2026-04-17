@@ -1,0 +1,48 @@
+{
+  "resourceType" : "CodeSystem",
+  "language" : "en",
+  "id" : "regex-bad-2",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/regex-bad-2",
+  "version" : "0.1.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.40.50.10.1"
+  }],
+  "name" : "BadRegexTestCodeSystem",
+  "title" : "BadRegex Test Code System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "property" : [{
+    "code" : "prop",
+    "uri" : "http://hl7.org/fhir/test/CodeSystem/properties#prop",
+    "type" : "code"
+  },{
+    "code" : "status",
+    "uri" : "http://hl7.org/fhir/concept-properties#status",
+    "type" : "code"
+  },{
+    "code" : "notSelectable",
+    "uri" : "http://hl7.org/fhir/concept-properties#notSelectable",
+    "type" : "boolean"
+  }],
+  "concept" : [{
+    "code" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "display" : "Bad Code 1",
+    "definition" : "Stupid Code to blow up regex"
+  },
+  {
+    "code" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!",
+    "display" : "Bad Code 2",
+    "definition" : "Stupid Code to blow up regex"
+  },
+  {
+    "code" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$",
+    "display" : "Bad Code 3",
+    "definition" : "Stupid Code to blow up regex"
+  }]
+}

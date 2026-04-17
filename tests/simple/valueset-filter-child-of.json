@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-filter-child-of",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-child-of",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterChildOf",
+  "title" : "Simple ValueSet Filter by child-of (R4 support test)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "child-of",
+        "value" : "code2"
+      }]
+    }]
+  }
+}

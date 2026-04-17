@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad-2"
+  },{
+    "name" : "excludeNested",
+    "valueBoolean" : true
+  }]
+}

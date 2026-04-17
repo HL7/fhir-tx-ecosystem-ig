@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-filter-regex-bad-2",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad-2",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterRegexBad",
+  "title" : "Simple ValueSet Filter by Regex (Bad)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/regex-bad-2",
+      "filter" : [{
+        "property" : "code",
+        "op" : "regex",
+        "value" : "((a+)+)+"
+      }]
+    }]
+  }
+}
