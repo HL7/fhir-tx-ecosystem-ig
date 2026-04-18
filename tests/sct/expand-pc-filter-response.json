@@ -4,8 +4,8 @@
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-pc-filter",
   "version" : "5.0.0",
-  "name" : "SCTProceduresValueSet",
-  "title" : "SCT Procedures ValueSet",
+  "name" : "SCTLiverDiseaseValueSet",
+  "title" : "SCT Liver Diseases ValueSet",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-09-05",
@@ -18,145 +18,805 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 27,
+    "total" : 159,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "112756005",
-      "display" : "Suture of flexor tendon of hand"
+      "code" : "10295004",
+      "display" : "Chronic viral hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1345232000",
-      "display" : "Hand tendon pulley reconstruction with graft"
+      "code" : "10759111000119102",
+      "display" : "Viral hepatitis in childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1348290009",
-      "display" : "Repair of tendon of hand with graft of tendon"
+      "code" : "10759151000119101",
+      "display" : "Viral hepatitis in pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "18701002",
-      "display" : "Repair of tendon of hand with graft"
+      "code" : "1087101000119109",
+      "display" : "Herpes simplex hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "199044008",
-      "display" : "Repair of mallet finger"
+      "code" : "1092801000119102",
+      "display" : "Hepatic ascites co-occurrent with chronic active hepatitis due to toxic liver disease"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "200017006",
-      "display" : "Fowler operation release for mallet finger repair"
+      "code" : "1116000",
+      "display" : "Chronic aggressive type B viral hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "214433003",
-      "display" : "Repair of ruptured tendon of hand"
+      "code" : "111879004",
+      "display" : "Viral hepatitis A without hepatic coma"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "243234005",
-      "display" : "Repair of tendon of hand by transfer or transplantation"
+      "code" : "111891008",
+      "display" : "Viral hepatitis B without hepatic coma"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "26731003",
-      "display" : "Repair of tendon of hand by suture"
+      "code" : "111892001",
+      "display" : "Infectious neonatal hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "27106001",
-      "display" : "Reconstruction of tendon pulley of hand"
+      "code" : "111896003",
+      "display" : "Viral hepatitis without hepatic coma"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "367430006",
-      "display" : "Repair of tendon of hand"
+      "code" : "1163464002",
+      "display" : "Infection of liver caused by Schistosoma japonicum"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "4084006",
-      "display" : "Repair of tendon of hand with transplant of muscle"
+      "code" : "1197150002",
+      "display" : "Recurrent hepatitis C virus induced liver disease in liver transplant recipient"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "45810006",
-      "display" : "Reattachment of tendon of hand"
+      "code" : "1197704005",
+      "display" : "Autoantibody negative autoimmune hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "47672008",
-      "display" : "Delayed suture of flexor tendons of hand"
+      "code" : "1197729004",
+      "display" : "Intrahepatic cholangitis due to intrahepatic cholelithiasis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "54433004",
-      "display" : "Release of extensor tendon of hand by central slip for repair of mallet finger"
+      "code" : "1222580004",
+      "display" : "Hepatitis caused by toxoplasmosis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "5486006",
-      "display" : "Delayed suture of tendon of hand"
+      "code" : "1230291009",
+      "display" : "Primary biliary cholangitis and/or primary sclerosing cholangitis and autoimmune hepatitis overlap syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "6487009",
-      "display" : "Hand tendon pulley reconstruction with tendon prosthesis"
+      "code" : "1230342001",
+      "display" : "Hepatitis B reinfection following transplantation of liver"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "709291000",
-      "display" : "Repair of flexor tendon of hand"
+      "code" : "1234778004",
+      "display" : "Steatohepatitis caused by ethanol"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "712638006",
-      "display" : "Repair of extensor tendon of hand"
+      "code" : "123603008",
+      "display" : "Acute focal hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "713500005",
-      "display" : "Suture of extensor tendon of hand"
+      "code" : "123606000",
+      "display" : "Cholangiolitic cirrhosis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "76340004",
-      "display" : "Plication of tendon of hand"
+      "code" : "128241005",
+      "display" : "Inflammatory disorder of liver"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "78096006",
-      "display" : "Suture of tendon of hand to skeletal attachment"
+      "code" : "128302006",
+      "display" : "Chronic type C viral hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "87839006",
-      "display" : "Hand tendon pulley reconstruction with local tissues"
+      "code" : "13265006",
+      "display" : "Acute fulminating type B viral hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "89352003",
-      "display" : "Repair of tendon of hand with graft of fascia"
+      "code" : "16098491000119109",
+      "display" : "Chronic autoimmune hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "90650008",
-      "display" : "Lengthening of tendon of hand"
+      "code" : "16623921000119105",
+      "display" : "Viral hepatitis C in mother during pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "90907001",
-      "display" : "Shortening of tendon of hand"
+      "code" : "16859701000119109",
+      "display" : "Chronic hepatitis B during pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "91092007",
-      "display" : "Myotenontoplasty of hand"
+      "code" : "17349007",
+      "display" : "Portal triaditis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17681007",
+      "display" : "Hepatitis due to acquired disseminated toxoplasmosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186273003",
+      "display" : "Tuberculosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186395002",
+      "display" : "Hepatic actinomycosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186639003",
+      "display" : "Chronic viral hepatitis B without delta-agent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186698009",
+      "display" : "Cytomegalovirus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18917003",
+      "display" : "Acute fulminating type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190944000",
+      "display" : "Alpha-1-antitrypsin hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19682006",
+      "display" : "Lupus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197271008",
+      "display" : "Acute hepatitis - non-infective"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197284004",
+      "display" : "Chronic active hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197286002",
+      "display" : "Recurrent hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197339003",
+      "display" : "Coxsackie virus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197342009",
+      "display" : "Hepatitis in yellow fever"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197344005",
+      "display" : "Hepatitis with adenovirus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197347003",
+      "display" : "Hepatitis in late syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197348008",
+      "display" : "Hepatitis in secondary syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197352008",
+      "display" : "Toxic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197367007",
+      "display" : "Hepatic granulomas in berylliosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197368002",
+      "display" : "Hepatic granulomas in sarcoidosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199203001",
+      "display" : "Viral hepatitis complicating pregnancy, childbirth and the puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "206372007",
+      "display" : "Congenital viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235858002",
+      "display" : "Nonspecific reactive hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235862008",
+      "display" : "Hepatitis due to infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235863003",
+      "display" : "Gonococcal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235864009",
+      "display" : "Acute hepatitis B with hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235865005",
+      "display" : "Hepatitis D superinfection of hepatitis B carrier"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235866006",
+      "display" : "Acute hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235867002",
+      "display" : "Acute hepatitis E"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235869004",
+      "display" : "Chronic viral hepatitis B with hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235873001",
+      "display" : "Halothane hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235874007",
+      "display" : "Enflurane hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235875008",
+      "display" : "Alcoholic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235876009",
+      "display" : "Drug-induced hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235877000",
+      "display" : "Ischemic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235889003",
+      "display" : "Drug-induced chronic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240789006",
+      "display" : "Hepatosplenic schistosomiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240791003",
+      "display" : "Hepatic schistosomal granuloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25102003",
+      "display" : "Acute type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276551001",
+      "display" : "Perinatal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276553003",
+      "display" : "Idiopathic hepatitis in infancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276554009",
+      "display" : "Parenteral nutrition-related hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28766006",
+      "display" : "Posttransfusion viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302919001",
+      "display" : "EBV - Epstein-Barr virus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307757001",
+      "display" : "Chronic alcoholic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31712002",
+      "display" : "Primary biliary cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "318191000009109",
+      "display" : "Bacterial hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "347891000119103",
+      "display" : "Chronic hepatitis C with stage 3 fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35571009",
+      "display" : "Cholangiolitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36155008",
+      "display" : "Hepatitis in coxsackie viral disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370489002",
+      "display" : "Cholangiohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370490006",
+      "display" : "Acute cholangiohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370492003",
+      "display" : "Copper storage associated hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370889009",
+      "display" : "Lymphocytic portal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3738000",
+      "display" : "Viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37871000",
+      "display" : "Acute hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38662009",
+      "display" : "Chronic persistent type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397575003",
+      "display" : "Viral hepatitis, type G"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40468003",
+      "display" : "Viral hepatitis, type A"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408335007",
+      "display" : "Autoimmune hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "409554001",
+      "display" : "Q fever hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41271000119108",
+      "display" : "Viral arthritis co-occurrent with hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41889008",
+      "display" : "Chronic persistent hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "424758008",
+      "display" : "Viral hepatitis A without hepatic coma, without hepatitis delta"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426364002",
+      "display" : "Allergic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "427044009",
+      "display" : "Fulminant hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43634002",
+      "display" : "Relapsing type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442134007",
+      "display" : "Hepatitis B associated with Human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442191002",
+      "display" : "Steatohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442374005",
+      "display" : "Hepatitis B and hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442685003",
+      "display" : "NASH - Nonalcoholic steatohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446698005",
+      "display" : "Reactivation of hepatitis B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45042004",
+      "display" : "Acute fulminating viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450880008",
+      "display" : "Chronic hepatitis E"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48036004",
+      "display" : "Pyogenic hepatic abscess"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4846001",
+      "display" : "Anicteric viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4896000",
+      "display" : "Acute toxic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50167007",
+      "display" : "Chronic active type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50711007",
+      "display" : "Viral hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53425008",
+      "display" : "Anicteric type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53476006",
+      "display" : "Radiation hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57339008",
+      "display" : "Chronic lobular hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57412004",
+      "display" : "Acute viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58282009",
+      "display" : "Relapsing viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60037002",
+      "display" : "Chronic persistent viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61977001",
+      "display" : "Chronic type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66071002",
+      "display" : "Type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66870002",
+      "display" : "Chronic active viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69800000",
+      "display" : "Neonatal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "702969000",
+      "display" : "Reactivation of hepatitis C viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703866000",
+      "display" : "Chronic hepatitis C with stage 2 fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "707341005",
+      "display" : "Viral hepatitis type D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708198006",
+      "display" : "Chronic active hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7111000119109",
+      "display" : "Hepatitis E virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713966008",
+      "display" : "Occult chronic type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "714253009",
+      "display" : "Hepatic granuloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "715401008",
+      "display" : "Primary biliary cirrhosis co-occurrent with systemic scleroderma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717329009",
+      "display" : "Inflammatory pseudotumor of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721588008",
+      "display" : "Hepatitis caused by sexually transmissible virus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721711009",
+      "display" : "Autoimmune hepatitis type 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721712002",
+      "display" : "Autoimmune hepatitis type 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721713007",
+      "display" : "Autoimmune hepatitis type 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722864002",
+      "display" : "Acute hepatic failure caused by hepatitis virus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722865001",
+      "display" : "Subacute hepatic failure caused by hepatitis virus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723108006",
+      "display" : "Idiopathic granulomatous hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72445008",
+      "display" : "Subacute noninfective hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735451005",
+      "display" : "Chronic viral hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "767809001",
+      "display" : "Chronic hepatitis C caused by hepatitis C virus genotype 6"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "767810006",
+      "display" : "Chronic hepatitis C caused by hepatitis C virus genotype 5"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76783007",
+      "display" : "Chronic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76795007",
+      "display" : "Acute type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768006009",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768125005",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768126006",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 4"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768127002",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768288001",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 1b"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768289009",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 1a"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773113008",
+      "display" : "Acute hepatitis caused by infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "774204006",
+      "display" : "Growth retardation, mild developmental delay, chronic hepatitis syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79031007",
+      "display" : "Anicteric type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80770009",
+      "display" : "Secondary syphilis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83072009",
+      "display" : "Malarial hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838377003",
+      "display" : "Chronic hepatitis C co-occurrent with human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838380002",
+      "display" : "Chronic hepatitis B with hepatitis C and hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83864008",
+      "display" : "Drug-induced cholestatic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860856002",
+      "display" : "Schistosoma haematobium hepatosplenic schistosomiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860861000",
+      "display" : "Hepatosplenic schistosomiasis caused by Schistosoma mansoni"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86514004",
+      "display" : "Granulomatous hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89231008",
+      "display" : "Mumps hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89789003",
+      "display" : "Chronic aggressive viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95556007",
+      "display" : "Cholestatic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95897009",
+      "display" : "Amebic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9843006",
+      "display" : "Chronic lymphocytic cholangitis-cholangiohepatitis"
     }]
   }
 }

@@ -3,5 +3,8 @@
   "parameter" : [{
     "name" : "url",
     "valueUri" : "http://hl7.org/fhir/test/ValueSet/sct-pc-none"
+  },{
+    "name" : "count",
+    "valueInteger" : 200
   }]
 }

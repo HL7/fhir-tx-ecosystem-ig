@@ -3,18 +3,23 @@
   "id" : "sct-procedures",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-pc-list-no-pc",
   "version" : "5.0.0",
-  "name" : "SCTProceduresValueSet",
-  "title" : "SCT Procedures ValueSet",
+  "name" : "SCTInactiveCodesValueSet",
+  "title" : "SCT Inactive Codes ValueSet",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-09-05",
   "publisher" : "FHIR Project",
-  "description" : "Taken from the testing subset; contains an active code, an inactive code, and a code with an inactive designation",
+  "description" : "Taken from the testing subset; contains an active code (128241005), an inactive code (307530000), and a code with an inactive designation (304374005)",
   "compose": {
     "include": [{
       "system": "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/900000000000207008/version/20250814",
       "concept": [{
-        "code" : "367430006"
+        "code" : "128241005"
+      },{
+        "code" : "307530000"
+      },{
+        "code" : "304374005"
       }]
     }]
   }

@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "system",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "41271000119108"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Viral arthritis co-occurrent with hepatitis"
+    },
+    {
+      "name" : "valueSet",
+      "resource" : {
+        "resourceType" : "ValueSet",
+        "id" : "sct-inactive",
+        "url" : "http://hl7.org/fhir/test/ValueSet/sct-isa-1",
+        "version" : "5.0.0",
+        "name" : "SCTDiabetesValueSet",
+        "title" : "SCT Diabetes ValueSet",
+        "status" : "active",
+        "experimental" : false,
+        "date" : "2025-09-05",
+        "publisher" : "FHIR Project",
+        "description" : "All Inflammatory diseases of the liver",
+        "compose": {
+          "include": [{
+            "system": "http://snomed.info/sct",
+            "version" : "http://snomed.info/xsct/900000000000207008/version/20250814",
+            "filter": [{"property": "concept", "op": "is-a", "value": "128241005"}]
+          }]
+        }
+      }
+    }
+  ]
+}

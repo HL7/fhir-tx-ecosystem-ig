@@ -10,7 +10,6 @@
       "resourceType" : "OperationOutcome",
       "issue" : [{
         "extension" : [{
-          "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "Unknown_Code_in_Version"
         }],
@@ -21,7 +20,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)"
+          "text" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/900000000000207008/version/20250814' (International Edition)"
         },
         "expression" : ["code"]
       },
@@ -33,7 +32,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: Concept 24028007 is not valid in this context (must be a descendent of one of 410662002,106237007)"
+          "text" : "Not a valid expression: Concept 367430006 not found"
         },
         "expression" : ["code"]
       }]
@@ -41,7 +40,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)"
+    "valueString" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/900000000000207008/version/20250814' (International Edition)"
   },
   {
     "name" : "result",
@@ -52,8 +51,7 @@
     "valueUri" : "http://snomed.info/sct"
   },
   {
-    "$optional$" : "warning:version",
     "name" : "version",
-    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
+    "valueString" : "http://snomed.info/xsct/900000000000207008/version/20250814"
   }]
 }

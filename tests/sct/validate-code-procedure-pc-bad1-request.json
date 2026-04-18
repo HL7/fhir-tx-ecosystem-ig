@@ -6,6 +6,10 @@
       "valueUri" : "http://snomed.info/sct"
     },
     {
+      "name" : "version",
+      "valueString" : "http://snomed.info/xsct/900000000000207008/version/20250814"
+    },
+    {
       "name" : "code",
       "valueCode" : "367430006:{272741003=240280071}"
     }

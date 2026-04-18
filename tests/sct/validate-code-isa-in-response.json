@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "197271008:{363698007=10200004}"
+    "valueCode" : "41271000119108"
   },
   {
     "name" : "display",
-    "valueString" : "197271008|Acute hepatitis - non-infective|:{363698007|Finding site|=10200004|Liver|}"
+    "valueString" : "Viral arthritis co-occurrent with hepatitis"
   },
   {
     "name" : "result",

@@ -3,18 +3,19 @@
   "id" : "sct-procedures",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-pc-filter",
   "version" : "5.0.0",
-  "name" : "SCTProceduresValueSet",
-  "title" : "SCT Procedures ValueSet",
+  "name" : "SCTLiverDiseaseValueSet",
+  "title" : "SCT Liver Diseases ValueSet",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-09-05",
   "publisher" : "FHIR Project",
-  "description" : "Taken from the testing subset; contains an active code, an inactive code, and a code with an inactive designation",
+  "description" : "Taken from the testing subset; all codes that are Inflammatory diseases of the liver",
   "compose": {
     "include": [{
       "system": "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/900000000000207008/version/20250814",
       "filter": [
-        {"property": "concept", "op": "is-a", "value": "367430006"},
+        {"property": "concept", "op": "is-a", "value": "128241005"},
         {"property": "expressions", "op": "=", "value": "true"}
       ]
     }]
