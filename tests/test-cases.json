@@ -4577,6 +4577,55 @@
         "response" : "sct/expand-ecl-descOrSelf-response.json"
       },
       {
+        "name" : "snomed-expand-ecl-descendents",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-descendents-request.json",
+        "response" : "sct/expand-ecl-descendents-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ancestors",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-ancestors-request.json",
+        "response" : "sct/expand-ecl-ancestors-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ancOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor-or-self)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-ancOrSelf-request.json",
+        "response" : "sct/expand-ecl-ancOrSelf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-childrenOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent-or-self)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-childrenOrSelf-request.json",
+        "response" : "sct/expand-ecl-childrenOrSelf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-children",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-children-request.json",
+        "response" : "sct/expand-ecl-children-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-parents",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-parents-request.json",
+        "response" : "sct/expand-ecl-parents-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-parentsOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor-or-self)",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-parentsOrSelf-request.json",
+        "response" : "sct/expand-ecl-parentsOrSelf-response.json"
+      },
+      {
         "name" : "snomed-expand-too-big",
         "description" : "return too many codes at once - fails",
         "operation" : "expand",

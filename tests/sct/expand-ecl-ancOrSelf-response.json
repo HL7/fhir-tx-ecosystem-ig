@@ -1,0 +1,110 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-descOrSelf",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 17,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113343008",
+      "display" : "Body organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123037004",
+      "display" : "Body structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "138875005",
+      "display" : "SNOMED CT Concept"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22943007",
+      "display" : "Trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303270005",
+      "display" : "Liver and biliary structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362937008",
+      "display" : "Structure of viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420473002",
+      "display" : "Structure of subregion of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442083009",
+      "display" : "Anatomical or acquired body structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49596003",
+      "display" : "Digestive organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52530000",
+      "display" : "Topographic region"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699602007",
+      "display" : "Structure of viscus of abdomen proper"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818981001",
+      "display" : "Cross-sectional abdomen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818983003",
+      "display" : "Abdomen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86762007",
+      "display" : "Digestive system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91689009",
+      "display" : "Organ system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91723000",
+      "display" : "Anatomical structure"
+    }]
+  }
+}
