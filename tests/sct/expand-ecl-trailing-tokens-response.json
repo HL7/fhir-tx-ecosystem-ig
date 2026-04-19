@@ -1,0 +1,18 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "INVALID_ECL"
+    }],
+    "severity" : "error",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "vs-invalid"
+      }],
+      "text" : "Invalid ECL expression: '<< 10200004 <<': (Parser error at token 2: Unexpected tokens after end of expression. Current token: DESCENDANT_OR_SELF_OF(<<))"
+    }
+  }]
+}

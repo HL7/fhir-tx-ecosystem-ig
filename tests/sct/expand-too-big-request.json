@@ -22,5 +22,8 @@
         }]
       }
     }
+  },{
+    "name" : "limit",
+    "valueInteger" : 1000
   }]
 }

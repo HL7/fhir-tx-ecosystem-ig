@@ -1,0 +1,556 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-dotted",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< 64572001 . 363698007" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 105,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113254000",
+      "display" : "Interstitial tissue of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113257007",
+      "display" : "Cardiovascular system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113262008",
+      "display" : "Thoracic aorta"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113305005",
+      "display" : "Cerebellum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113331007",
+      "display" : "Endocrine system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113343008",
+      "display" : "Body organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116003000",
+      "display" : "Immune system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116006008",
+      "display" : "Pleural sac"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197039003",
+      "display" : "Structure of lymphatic vessel of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1204330001",
+      "display" : "Structure of wall of intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "122489005",
+      "display" : "Urinary system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "122972007",
+      "display" : "Vein of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12611008",
+      "display" : "Tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12738006",
+      "display" : "Brain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127879008",
+      "display" : "Hepatic parenchyma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127954009",
+      "display" : "Skeletal muscle"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1303491005",
+      "display" : "Subcapsular hepatic space"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340143004",
+      "display" : "Structure of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14016003",
+      "display" : "Bone marrow"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15120006",
+      "display" : "Intralobular bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15776009",
+      "display" : "Pancreas"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15878004",
+      "display" : "Hepatic lobule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181268008",
+      "display" : "Entire liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181279003",
+      "display" : "Entire spleen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20982000",
+      "display" : "Capillary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21483005",
+      "display" : "Central nervous system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21793004",
+      "display" : "Connective tissue"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22943007",
+      "display" : "Trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244384009",
+      "display" : "Entire right ventricle"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245378000",
+      "display" : "Lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25087005",
+      "display" : "Nervous system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2748008",
+      "display" : "Spinal cord"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28273000",
+      "display" : "Bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303410000",
+      "display" : "Vascular structure of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30396005",
+      "display" : "Hepatic parenchymal cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3058005",
+      "display" : "Peripheral nervous system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30737000",
+      "display" : "Medulla of kidney"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32610002",
+      "display" : "Basal ganglia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32764006",
+      "display" : "Portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34154005",
+      "display" : "Intrahepatic part of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34707002",
+      "display" : "Biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360557007",
+      "display" : "Intrahepatic venous structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362937008",
+      "display" : "Structure of viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "368380004",
+      "display" : "Structure of flexor tendon of finger"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37424004",
+      "display" : "Hepatic acinus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38199008",
+      "display" : "Tooth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3860006",
+      "display" : "Transplanted liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "389080008",
+      "display" : "White matter structure of brain and spinal cord"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39057004",
+      "display" : "Pulmonic valve"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39352004",
+      "display" : "Joint"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39607008",
+      "display" : "Lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39937001",
+      "display" : "Skin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41898006",
+      "display" : "Erythrocyte"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48477009",
+      "display" : "Lip"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48521005",
+      "display" : "Right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48781005",
+      "display" : "Hepatic capsule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51185008",
+      "display" : "Thorax"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52687003",
+      "display" : "Shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54115001",
+      "display" : "Myelinated nerve fiber"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5665001",
+      "display" : "Retina"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56732008",
+      "display" : "Hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58471003",
+      "display" : "Renal tubule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58501004",
+      "display" : "Cerebellar vermis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "589001",
+      "display" : "Interventricular septum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59652004",
+      "display" : "Atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62834003",
+      "display" : "Upper gastrointestinal tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64033007",
+      "display" : "Kidney"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66019005",
+      "display" : "Extremity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66754008",
+      "display" : "Appendix"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67540009",
+      "display" : "Cone of retina"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67734004",
+      "display" : "Upper trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68221002",
+      "display" : "Peripheral lobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69039008",
+      "display" : "Gallbladder fossa of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69842003",
+      "display" : "Left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72410000",
+      "display" : "Mediastinum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72914001",
+      "display" : "Palate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73829009",
+      "display" : "Right atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74052002",
+      "display" : "Centrilobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74281007",
+      "display" : "Myocardium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76726002",
+      "display" : "Portal triad"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773190007",
+      "display" : "Joint structure of multiple body sites"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78076003",
+      "display" : "Crystalline lens"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78220002",
+      "display" : "Umbilicus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "785818007",
+      "display" : "Structure of joint region"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78696007",
+      "display" : "Endocrine pancreas"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78961009",
+      "display" : "Spleen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79984008",
+      "display" : "Skeletal muscular system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80891009",
+      "display" : "Heart"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81040000",
+      "display" : "Pulmonary artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818987002",
+      "display" : "Abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82471001",
+      "display" : "Left atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83488001",
+      "display" : "Interlobular bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83670000",
+      "display" : "Peritoneal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83678007",
+      "display" : "Cerebrum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85756007",
+      "display" : "Body tissue"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86763002",
+      "display" : "Portal venous system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870716007",
+      "display" : "Structure of periportal tract region"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870717003",
+      "display" : "Entire periportal tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87746007",
+      "display" : "Bile canaliculus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89545001",
+      "display" : "Face"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8993003",
+      "display" : "Hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90140006",
+      "display" : "Intrahepatic biliary tract structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90219004",
+      "display" : "Coronary sinus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91689009",
+      "display" : "Organ system"
+    }]
+  }
+}

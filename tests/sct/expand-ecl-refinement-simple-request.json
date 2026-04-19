@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-simple",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2025-09-05",
+        "publisher": "FHIR Project",
+        "description": "Refinement: Disease with finding-site in the Liver subtree. Currently unsupported; expect a clear error.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 64572001 : 363698007 = << 10200004"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

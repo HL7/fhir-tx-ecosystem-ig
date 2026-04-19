@@ -5,7 +5,7 @@
     "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-status"
   },
   {
-    "name": "_limit",
+    "name": "limit",
     "valueInteger": 10000
   },
   {

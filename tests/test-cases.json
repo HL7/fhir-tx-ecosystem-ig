@@ -3125,7 +3125,6 @@
       {
         "explanation" : "This test is testing that a server can (a) defend itself against a request that is too big and (b) returns the correct response when it does. The test is built in terms of 1000 codes, but the actual limit doesn't matter as long as it's... big enough (loose definition). With regard to Ontoserver, it has an internal limit far above 1000 codes. That's fine, but we really want to know that if it's actual limit is exceeded, it'll return the correct response. So we add this artificial header to tell Ontoserver to treat 1000 as an internal limit. This way we know that if a real value set exceeds the internal cost limit, however that's determined, the response will be correctly understood",
         "header" : {
-          "mode" : "ontoserver",
           "name" : "X-TOO-COSTLY-THRESHOLD",
           "value" : "1000"
         },
@@ -4626,6 +4625,202 @@
         "response" : "sct/expand-ecl-parentsOrSelf-response.json"
       },
       {
+        "name" : "snomed-expand-ecl-wildcard",
+        "description" : "All active concepts in the subset (wildcard).",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-wildcard-request.json",
+        "response" : "sct/expand-ecl-wildcard-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-memberOf-refset",
+        "description" : "Members of the REPLACED-BY association reference set.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-memberOf-refset-request.json",
+        "response" : "sct/expand-ecl-memberOf-refset-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-memberOf-nonRefset",
+        "description" : "Negative case: ^ applied to a concept that is not a reference set should error.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-memberOf-nonRefset-request.json",
+        "response" : "sct/expand-ecl-memberOf-nonRefset-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-or",
+        "description" : "Union of Cellulitis subtree and Liver-structure subtree.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-or-request.json",
+        "response" : "sct/expand-ecl-or-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-and",
+        "description" : "Intersection: Cellulitis subtree AND Disease subtree; should equal << 128045006.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-and-request.json",
+        "response" : "sct/expand-ecl-and-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-minus",
+        "description" : "Exclusion: Disease subtree minus Cellulitis subtree.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-minus-request.json",
+        "response" : "sct/expand-ecl-minus-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-minus-empty",
+        "description" : "Degenerate exclusion: set minus itself, expects empty.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-minus-empty-request.json",
+        "response" : "sct/expand-ecl-minus-empty-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-wildcard-minus",
+        "description" : "All active concepts minus the Liver-structure subtree.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-wildcard-minus-request.json",
+        "response" : "sct/expand-ecl-wildcard-minus-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-parens-precedence",
+        "description" : "Parenthesised compound; confirms ( ) grouping is honoured.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-parens-precedence-request.json",
+        "response" : "sct/expand-ecl-parens-precedence-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-left-associative",
+        "description" : "Same expression without parens; ECL 2.x is strictly left-to-right, so result should differ from parens-precedence.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-left-associative-request.json",
+        "response" : "sct/expand-ecl-left-associative-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-term-match",
+        "description" : "Concept reference with matching term; should be accepted.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-term-match-request.json",
+        "response" : "sct/expand-ecl-term-match-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-term-mismatch",
+        "description" : "Concept reference with incorrect term; should error with a term-mismatch message.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-term-mismatch-request.json",
+        "response" : "sct/expand-ecl-term-mismatch-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-term-with-operator",
+        "description" : "Hierarchy operator plus concept plus term; should expand to same set as << 10200004.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-term-with-operator-request.json",
+        "response" : "sct/expand-ecl-term-with-operator-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-unknown-concept",
+        "description" : "Unknown (non-existent) concept ID; expects an unknown-concept error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-ecl-unknown-concept-request.json",
+        "response" : "sct/expand-ecl-unknown-concept-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-invalid-sctid",
+        "description" : "Non-numeric focus concept; expects a lexer/parser error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-ecl-invalid-sctid-request.json",
+        "response" : "sct/expand-ecl-invalid-sctid-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-missing-focus",
+        "description" : "Operator with nothing after it; expects a parser error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-ecl-missing-focus-request.json",
+        "response" : "sct/expand-ecl-missing-focus-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-trailing-tokens",
+        "description" : "Extra tokens after a complete expression; expects a parser error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-ecl-trailing-tokens-request.json",
+        "response" : "sct/expand-ecl-trailing-tokens-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-nested-parens",
+        "description" : "Deeply nested parentheses; should expand to the same set as << 10200004.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-nested-parens-request.json",
+        "response" : "sct/expand-ecl-nested-parens-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-simple",
+        "description" : "Refinement: Disease with finding-site in the Liver subtree. Currently unsupported; expect a clear error.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-simple-request.json",
+        "response" : "sct/expand-ecl-refinement-simple-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-morphology",
+        "description" : "Refinement: Disease with associated-morphology = Closed fracture. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-morphology-request.json",
+        "response" : "sct/expand-ecl-refinement-morphology-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-wildcard",
+        "description" : "Refinement with wildcard value. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-wildcard-request.json",
+        "response" : "sct/expand-ecl-refinement-wildcard-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-group",
+        "description" : "Refinement with an attribute group. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-group-request.json",
+        "response" : "sct/expand-ecl-refinement-group-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality",
+        "description" : "Refinement with cardinality. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-cardinality-request.json",
+        "response" : "sct/expand-ecl-refinement-cardinality-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-dotted",
+        "description" : "Dotted expression: finding-site values across Disease descendants. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-dotted-request.json",
+        "response" : "sct/expand-ecl-dotted-response.json"
+      },
+
+      {
         "name" : "snomed-expand-too-big",
         "description" : "return too many codes at once - fails",
         "operation" : "expand",
@@ -5755,7 +5950,7 @@
   },{
     "mode" : "general",
     "name" : "regex-bad",
-    "description" : "Bad Regex - denial of service attack",
+    "description" : "Bad Regex - checking defences against denial of service attack. These are unusual because servers have the option to succeed, or to refuse the request",
     "setup" : ["regex-bad/codesystem-bad-regex.json", "regex-bad/valueset-regex-bad.json",
                "regex-bad/codesystem-bad-regex-2.json", "regex-bad/valueset-regex-bad-2.json"],
     "tests" : [
@@ -5778,6 +5973,7 @@
         "description" : "Check expand is safe from catastrophic regex",
         "operation" : "expand",
         "request": "regex-bad/expand-regex-bad-2-request.json",
+        "response2" : "regex-bad/expand-regex-bad-2-error.json",
         "response" : "regex-bad/expand-regex-bad-2-response.json"
       },
       {
@@ -5785,6 +5981,7 @@
         "description" : "Check validate is safe from catastrophic regex",
         "operation" : "validate-code",
         "request": "regex-bad/validate-regex-bad-2-request.json",
+        "response2" : "regex-bad/validate-regex-bad-2-error.json",
         "response" : "regex-bad/validate-regex-bad-2-response.json"
       }
     ]

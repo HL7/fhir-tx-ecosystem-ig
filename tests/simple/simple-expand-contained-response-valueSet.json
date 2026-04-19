@@ -2,6 +2,20 @@
   "$optional-properties$" : ["id", "date", "publisher", "compose", "contained"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
+  "contained" : [{
+    "resourceType" : "ValueSet",
+    "id" : "vs1",
+    "url" : "http://example.org/fhir/ValueSet/relevant-codes",
+    "status" : "active",
+    "compose" : {
+      "include" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+        "concept" : [{
+          "code" : "code2"
+        }]
+      }]
+    }
+  }],
   "status" : "active",
   "compose" : {
     "include" : [{

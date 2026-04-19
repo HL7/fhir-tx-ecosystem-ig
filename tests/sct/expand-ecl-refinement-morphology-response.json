@@ -1,0 +1,41 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-morphology",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< 64572001 : 116676008 = 20946005" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "28012007",
+      "display" : "Closed fracture of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447139008",
+      "display" : "Closed fracture of tibia"
+    }]
+  }
+}

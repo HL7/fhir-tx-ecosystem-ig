@@ -1,0 +1,4021 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-minus",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-05",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+      "filter": [{ "property": "constraint", "op": "=", "value": "<< 64572001 MINUS << 128045006" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 798,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1003514000",
+      "display" : "Agenesis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1010616001",
+      "display" : "Liver cirrhosis due to classical cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10295004",
+      "display" : "Chronic viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103611000119102",
+      "display" : "Cirrhosis of liver due to hepatitis B"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1052210007",
+      "display" : "Phlebosclerosis of intrahepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "105635000",
+      "display" : "Retrovirus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1059007",
+      "display" : "Opisthorchiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10690671000119109",
+      "display" : "Stage 3 hepatic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10750161000119106",
+      "display" : "Cholestasis of pregnancy complicating childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10753141000119100",
+      "display" : "Postpartum cholestasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10759111000119102",
+      "display" : "Viral hepatitis in childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10759151000119101",
+      "display" : "Viral hepatitis in pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "107811000119106",
+      "display" : "Secondary small cell carcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "107831000119101",
+      "display" : "Secondary squamous cell carcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10807061000119103",
+      "display" : "Liver disorder in childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1085021000119106",
+      "display" : "Hepatic ascites due to chronic alcoholic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1087101000119109",
+      "display" : "Herpes simplex hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1092801000119102",
+      "display" : "Hepatic ascites co-occurrent with chronic active hepatitis due to toxic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109559009",
+      "display" : "Riedel's lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109819003",
+      "display" : "Obstructive biliary cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109820009",
+      "display" : "Nodular hyperplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109841003",
+      "display" : "Hepatocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109842005",
+      "display" : "Intrahepatic bile duct carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109843000",
+      "display" : "Hepatoblastoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "109844006",
+      "display" : "Angiosarcoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111000119104",
+      "display" : "Nonischemic congestive cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111331000",
+      "display" : "Congenital dilatation of lobar intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111369005",
+      "display" : "Parenchymatous degeneration of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111371005",
+      "display" : "Subcapsular hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111386004",
+      "display" : "Homozygous porphyria cutanea tarda"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1116000",
+      "display" : "Chronic aggressive type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11164009",
+      "display" : "Autosomal dominant hereditary disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11179002",
+      "display" : "Glycogen storage disease, type IV"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111879004",
+      "display" : "Viral hepatitis A without hepatic coma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111891008",
+      "display" : "Viral hepatitis B without hepatic coma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111892001",
+      "display" : "Infectious neonatal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111896003",
+      "display" : "Viral hepatitis without hepatic coma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111941005",
+      "display" : "Familial disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11350001",
+      "display" : "Diffuse hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11380006",
+      "display" : "Mucopolysaccharidosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1144892000",
+      "display" : "Congenital paucity of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1145027009",
+      "display" : "Acquired paucity of interlobular bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1148573000",
+      "display" : "Postoperative hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1153383006",
+      "display" : "Lymphoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1155841005",
+      "display" : "Progressive familial intrahepatic cholestasis type 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1155910005",
+      "display" : "Acquired porphyria cutanea tarda"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1155913007",
+      "display" : "Byler syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1156419009",
+      "display" : "Hepatocellular adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116224001",
+      "display" : "Complication of procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1162565008",
+      "display" : "Intrahepatic bile duct stone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1162976004",
+      "display" : "X-linked recessive hereditary disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1163463008",
+      "display" : "Fungal infection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1163464002",
+      "display" : "Infection of liver caused by Schistosoma japonicum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11687002",
+      "display" : "Gestational diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1172732001",
+      "display" : "Submassive hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1177030007",
+      "display" : "Opisthorchis felineus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186629001",
+      "display" : "Primary fibrolamellar hepatocellular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186630006",
+      "display" : "Primary liver cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186631005",
+      "display" : "Primary hepatocholangiocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186713004",
+      "display" : "Growth delay, intellectual disability, hepatopathy syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186854003",
+      "display" : "Benign intrahepatic cholestasis type 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186864007",
+      "display" : "Liver disease due to peroxisomal disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1186865008",
+      "display" : "Progressive familial intrahepatic cholestasis type 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1187643003",
+      "display" : "Autosomal recessive spinocerebellar ataxia type 21"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118946009",
+      "display" : "Disorder of thorax"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196834001",
+      "display" : "Intraductal papillary neoplasia with high grade intraepithelial neoplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196846002",
+      "display" : "Primary cystadenocarcinoma of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196847006",
+      "display" : "Lymphangioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196854000",
+      "display" : "Primary carcinosarcoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196858002",
+      "display" : "Cholangioma of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196881000",
+      "display" : "Primary embryonal carcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1196904007",
+      "display" : "Angiomyolipoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197150002",
+      "display" : "Recurrent hepatitis C virus induced liver disease in liver transplant recipient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197204009",
+      "display" : "Adult hepatocellular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197284006",
+      "display" : "Mucinous cystic neoplasm with high-grade intraepithelial neoplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197342001",
+      "display" : "Primary teratocarcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197704005",
+      "display" : "Autoantibody negative autoimmune hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197720000",
+      "display" : "Acute passive congestion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197729004",
+      "display" : "Intrahepatic cholangitis due to intrahepatic cholelithiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197736003",
+      "display" : "Chronic hepatic failure due to portosystemic shunt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197739005",
+      "display" : "Hepatic fibrosis due to non-alcoholic fatty liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1208349005",
+      "display" : "Pediatric hepatocellular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1208726006",
+      "display" : "Fever-associated acute infantile liver failure syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1217009002",
+      "display" : "Primary lymphedema"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12224501000119108",
+      "display" : "Infection of liver transplant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1222580004",
+      "display" : "Hepatitis caused by toxoplasmosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230002004",
+      "display" : "Hepatic adenomatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230291009",
+      "display" : "Primary biliary cholangitis and/or primary sclerosing cholangitis and autoimmune hepatitis overlap syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230310007",
+      "display" : "FTH1-associated iron overload"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230342001",
+      "display" : "Hepatitis B reinfection following transplantation of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1231824009",
+      "display" : "NAFLD - nonalcoholic fatty liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234778004",
+      "display" : "Steatohepatitis caused by ethanol"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234821002",
+      "display" : "PIHL - primary intrahepatic lithiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234822009",
+      "display" : "IAD - idiopathic adult ductopenia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234823004",
+      "display" : "Idiopathic peliosis hepatis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123603008",
+      "display" : "Acute focal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123604002",
+      "display" : "Toxic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123605001",
+      "display" : "Nutritional cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123606000",
+      "display" : "Cholangiolitic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123607009",
+      "display" : "Septal fibrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12368000",
+      "display" : "Secondary biliary cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1236941006",
+      "display" : "Metastatic carcinoma of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123716002",
+      "display" : "Latent cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123717006",
+      "display" : "Advanced cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1237346001",
+      "display" : "Caroli syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1240370001",
+      "display" : "Metastatic squamous cell carcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1251486007",
+      "display" : "Secondary carcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1259313008",
+      "display" : "Primary intrahepatic bile duct carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1259826000",
+      "display" : "Primary epithelioid hemangioendothelioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1260050006",
+      "display" : "Cholangiocarcinoma of intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1260140008",
+      "display" : "Congenital cataract, severe neonatal hepatopathy, global developmental delay syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1264304005",
+      "display" : "Acute necrosis of liver following molar pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1264435003",
+      "display" : "Acute necrosis of liver following ectopic pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1268390002",
+      "display" : "Secondary undifferentiated carcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1268391003",
+      "display" : "Primary undifferentiated carcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1268502003",
+      "display" : "Primary embryonal sarcoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "126851005",
+      "display" : "Neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "126852003",
+      "display" : "Neoplasm of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1268541001",
+      "display" : "Primary squamous cell carcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1268711001",
+      "display" : "Primary hepatoblastoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128121009",
+      "display" : "Disorder of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128241005",
+      "display" : "Inflammatory disorder of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128302006",
+      "display" : "Chronic type C viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1285574007",
+      "display" : "HRS-AKI - hepatorenal syndrome-acute kidney injury"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1290074000",
+      "display" : "Well-differentiated neuroendocrine tumor of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1290081007",
+      "display" : "Neuroendocrine neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1293125002",
+      "display" : "Infantile hemangioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1295517006",
+      "display" : "PFIC4 - progressive familial intrahepatic cholestasis type 4"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129609000",
+      "display" : "Spinocerebellar ataxia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1299153008",
+      "display" : "Digenic haemochromatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13265006",
+      "display" : "Acute fulminating type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1351914008",
+      "display" : "Haemangioblastoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13630003",
+      "display" : "Congenital absence of lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13644009",
+      "display" : "Hypercholesterolemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1365891008",
+      "display" : "PSVD - porto sinusoidal vascular disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1366635006",
+      "display" : "Polycystic liver disease-3 due to heterozygous mutation of ALG8 gene"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1370994002",
+      "display" : "Upper gastrointestinal haemorrhage due to cirrhosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13891000",
+      "display" : "Major laceration of liver without open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13923006",
+      "display" : "Centrilobular hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14914931000119107",
+      "display" : "Metastatic Merkel cell carcinoma to liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15151004",
+      "display" : "Injury of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15230009",
+      "display" : "Liver disorder in pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1539003",
+      "display" : "Acquired trigger finger"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15978003",
+      "display" : "Glycogen storage disease, muscular form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15999000",
+      "display" : "Mixed micro and macronodular cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16070004",
+      "display" : "Syphilitic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16098491000119109",
+      "display" : "Chronic autoimmune hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16623921000119105",
+      "display" : "Viral hepatitis C in mother during pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16763008",
+      "display" : "Hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16859701000119109",
+      "display" : "Chronic hepatitis B during pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17349007",
+      "display" : "Portal triaditis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1761006",
+      "display" : "Biliary cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17681007",
+      "display" : "Hepatitis due to acquired disseminated toxoplasmosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17890003",
+      "display" : "Hepatic infarction"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1821000146108",
+      "display" : "Hereditary metabolic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186273003",
+      "display" : "Tuberculosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186395002",
+      "display" : "Hepatic actinomycosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186639003",
+      "display" : "Chronic viral hepatitis B without delta-agent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "186698009",
+      "display" : "Cytomegalovirus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187062006",
+      "display" : "Histoplasmosis liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187068005",
+      "display" : "Blastomycosis liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187093007",
+      "display" : "Hepatic cryptococcosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18735004",
+      "display" : "Congenital omphalocele"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187769009",
+      "display" : "Primary carcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187773007",
+      "display" : "Malignant neoplasm of interlobular bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187776004",
+      "display" : "Malignant neoplasm of intrahepatic canaliculi"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "187777008",
+      "display" : "Malignant neoplasm of intrahepatic gall duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18917003",
+      "display" : "Acute fulminating type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18931000119103",
+      "display" : "Acquired disseminated toxoplasmosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1899006",
+      "display" : "Autosomal hereditary disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190823004",
+      "display" : "Westphal-Strumpell syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190905008",
+      "display" : "Cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190915002",
+      "display" : "Coproporphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190944000",
+      "display" : "Alpha-1-antitrypsin hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190997006",
+      "display" : "Severe combined immunodeficiency with low T- and B-cell numbers"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "191296000",
+      "display" : "Deficiency of coagulation factor due to liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "192008",
+      "display" : "Congenital syphilitic hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "192781003",
+      "display" : "Leucodystrophy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19682006",
+      "display" : "Lupus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197268000",
+      "display" : "Acute and subacute liver necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197269008",
+      "display" : "Acute necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197270009",
+      "display" : "Acute liver failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197271008",
+      "display" : "Acute hepatitis - non-infective"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197274000",
+      "display" : "Subacute hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197275004",
+      "display" : "Subacute hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197284004",
+      "display" : "Chronic active hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197286002",
+      "display" : "Recurrent hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197291001",
+      "display" : "Unilobular portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197293003",
+      "display" : "Diffuse nodular cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197294009",
+      "display" : "Fatty portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197296006",
+      "display" : "Capsular portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197299004",
+      "display" : "Pigmentary portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197300007",
+      "display" : "Pipestem portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197301006",
+      "display" : "Toxic portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197303009",
+      "display" : "Bacterial portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197305002",
+      "display" : "Syphilitic portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197310003",
+      "display" : "Biliary cirrhosis of children"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197316009",
+      "display" : "Portal fibrosis without cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197321007",
+      "display" : "Steatosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197324004",
+      "display" : "Liver abscess and sequelae of chronic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197326002",
+      "display" : "Liver abscess due to portal pyaemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197327006",
+      "display" : "Liver abscess due to cholangitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197328001",
+      "display" : "Liver abscess via hepatic artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197329009",
+      "display" : "Liver abscess via umbilicus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197330004",
+      "display" : "Liver abscess due to direct extension"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197339003",
+      "display" : "Coxsackie virus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197342009",
+      "display" : "Hepatitis in yellow fever"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197344005",
+      "display" : "Hepatitis with adenovirus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197347003",
+      "display" : "Hepatitis in late syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197348008",
+      "display" : "Hepatitis in secondary syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197352008",
+      "display" : "Toxic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197354009",
+      "display" : "Toxic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197364000",
+      "display" : "Central hemorrhagic necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197367007",
+      "display" : "Hepatic granulomas in berylliosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197368002",
+      "display" : "Hepatic granulomas in sarcoidosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197441003",
+      "display" : "Primary sclerosing cholangitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "198609003",
+      "display" : "Complication of pregnancy, childbirth and/or puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199203001",
+      "display" : "Viral hepatitis complicating pregnancy, childbirth and the puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199223000",
+      "display" : "Diabetes mellitus during pregnancy, childbirth and the puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19943007",
+      "display" : "Cirrhosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20402005",
+      "display" : "Moderate laceration of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "204788008",
+      "display" : "Congenital atrophy of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "204795004",
+      "display" : "Congenital floating liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "204799005",
+      "display" : "Liver hyperplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "204958008",
+      "display" : "Nephronophthisis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20529002",
+      "display" : "Secondary dilated cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2053831000122108",
+      "display" : "Acute on chronic liver failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "206242003",
+      "display" : "Liver subcapsular hematoma due to birth trauma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "206245001",
+      "display" : "Liver rupture due to birth trauma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "206372007",
+      "display" : "Congenital viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20790006",
+      "display" : "Echinococcus granulosus infection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20919000",
+      "display" : "Congenital liver grooves"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20957000",
+      "display" : "Disorder of carbohydrate metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "210175000",
+      "display" : "Liver moderate laceration with open wound into cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "213148006",
+      "display" : "Transplant rejection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "213153001",
+      "display" : "Liver transplant failure and rejection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21580006",
+      "display" : "Hematoma AND contusion of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21861000",
+      "display" : "Micronodular cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "224958001",
+      "display" : "Global developmental delay"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22508003",
+      "display" : "Hepatic failure due to a procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22540004",
+      "display" : "Multisystemic disseminated toxoplasmosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22846003",
+      "display" : "Hepatorenal syndrome following delivery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "230690007",
+      "display" : "CVA - Cerebrovascular accident"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235601000112100",
+      "display" : "MetALD - metabolic dysfunction and alcohol associated liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235856003",
+      "display" : "Hepatopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235858002",
+      "display" : "Nonspecific reactive hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235859005",
+      "display" : "Liver disorder due to infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235862008",
+      "display" : "Hepatitis due to infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235863003",
+      "display" : "Gonococcal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235864009",
+      "display" : "Acute hepatitis B with hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235865005",
+      "display" : "Hepatitis D superinfection of hepatitis B carrier"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235866006",
+      "display" : "Acute hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235867002",
+      "display" : "Acute hepatitis E"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235869004",
+      "display" : "Chronic viral hepatitis B with hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235873001",
+      "display" : "Halothane hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235874007",
+      "display" : "Enflurane hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235875008",
+      "display" : "Alcoholic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235876009",
+      "display" : "Drug-induced hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235877000",
+      "display" : "Ischemic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235878005",
+      "display" : "Vascular disorder of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235880004",
+      "display" : "Alcoholic fibrosis and sclerosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235881000",
+      "display" : "Alcoholic hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235884008",
+      "display" : "Fulminant hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235885009",
+      "display" : "Subfulminant hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235886005",
+      "display" : "Chronic hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235887001",
+      "display" : "Rupture of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235888006",
+      "display" : "Intrahepatic cholestasis of pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235889003",
+      "display" : "Drug-induced chronic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235890007",
+      "display" : "Autoimmune liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235895002",
+      "display" : "Laennec's cirrhosis, non-alcoholic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235896001",
+      "display" : "Infectious cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235897005",
+      "display" : "Hypoxia-associated cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235898000",
+      "display" : "Pericellular fibrosis of congenital syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235899008",
+      "display" : "Hepatic sclerosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235901004",
+      "display" : "Hepatic fibrosis with hepatic sclerosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235903001",
+      "display" : "Metabolic and genetic disorder affecting the liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235906009",
+      "display" : "Hyperbilirubinaemia - conjugated - type III"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235908005",
+      "display" : "Glycogen phosphorylase kinase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235909002",
+      "display" : "Alpha-1-antichymotrypsin deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235910007",
+      "display" : "Liver transplant disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235911006",
+      "display" : "Liver transplant rejection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235912004",
+      "display" : "Liver transplant failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235915002",
+      "display" : "Synthetic defect of bile acids"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235925007",
+      "display" : "Cyst of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236004002",
+      "display" : "Hepatic ascites"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237836003",
+      "display" : "Small stature"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237964009",
+      "display" : "Glycogen synthase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237986005",
+      "display" : "Disorder of mitochondrial respiratory chain complexes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237995002",
+      "display" : "Depletion of mitochondrial DNA"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238032002",
+      "display" : "Disorder of cholesterol catabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238033007",
+      "display" : "3-Beta-hydroxy-delta-5-C27-steroid dehydrogenase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238035000",
+      "display" : "Delta-4-3-oxosteroid-5-beta-reductase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238045003",
+      "display" : "Disorder of glycoprotein metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238056003",
+      "display" : "Homozygous hereditary coproporphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238057007",
+      "display" : "Homozygous variegate porphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238059005",
+      "display" : "Disorder of peroxisomal function"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238060000",
+      "display" : "General loss of peroxisomal function"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "238066006",
+      "display" : "Loss of single peroxisomal function"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "239987006",
+      "display" : "Triggering of digit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240096000",
+      "display" : "Mitochondrial cytopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240557004",
+      "display" : "Secondary syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240729009",
+      "display" : "Coccidiomycosis liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240789006",
+      "display" : "Hepatosplenic schistosomiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240790002",
+      "display" : "Schistosomal hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240791003",
+      "display" : "Hepatic schistosomal granuloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240792005",
+      "display" : "Symmer's pipe-stem fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "243978007",
+      "display" : "Liver damage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24907000",
+      "display" : "Disease caused by Lentivirus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25102003",
+      "display" : "Acute type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253018005",
+      "display" : "Fibrolamellar hepatocellular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253333008",
+      "display" : "Abnormal connection of hepatic vein to atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253511007",
+      "display" : "Congenital abnormality of ventricles and ventricular septum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253807009",
+      "display" : "Intrahepatic biliary atresia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253810002",
+      "display" : "Liver hamartoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253811003",
+      "display" : "Abnormal liver lobulation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253812005",
+      "display" : "Trilobular liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253813000",
+      "display" : "Ectopic liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253814006",
+      "display" : "Focal nodular hypoplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "254601002",
+      "display" : "Sarcoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25554004",
+      "display" : "Major laceration of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26103000",
+      "display" : "Echinococcosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262795007",
+      "display" : "Capsular tear of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262796008",
+      "display" : "Liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262797004",
+      "display" : "Subcapsular liver haematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262798009",
+      "display" : "Central liver haematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262799001",
+      "display" : "Contusion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262801003",
+      "display" : "Delayed rupture of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262802005",
+      "display" : "Laceration of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262803000",
+      "display" : "Transection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26485002",
+      "display" : "Sawdust liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "266468003",
+      "display" : "Cirrhosis - non-alcoholic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "266469006",
+      "display" : "Multilobular portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "266470007",
+      "display" : "Cardiac portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "266471006",
+      "display" : "Juvenile portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "267431006",
+      "display" : "Disorder of lipid metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "267874003",
+      "display" : "Scleroderma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269295009",
+      "display" : "Transplanted organ failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26975007",
+      "display" : "Compensatory lobar hyperplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271440004",
+      "display" : "Cirrhosis secondary to cholestasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27156006",
+      "display" : "Posthepatitic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271700006",
+      "display" : "Chorea"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27235001",
+      "display" : "Echinococcus multilocularis infection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "274902006",
+      "display" : "Mixed hepatocellular and bile duct carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276262000",
+      "display" : "Uroporphyrinogen decarboxylase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276551001",
+      "display" : "Perinatal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276552008",
+      "display" : "Perinatal hepatocellular damage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276553003",
+      "display" : "Idiopathic hepatitis in infancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276554009",
+      "display" : "Parenteral nutrition-related hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276723008",
+      "display" : "Intrahepatic biliary hypoplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "278527001",
+      "display" : "Focal nodular hyperplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27916005",
+      "display" : "Abscess of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28012007",
+      "display" : "Closed fracture of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "282429000",
+      "display" : "Avulsion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28259009",
+      "display" : "Crigler-Najjar syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "283979000",
+      "display" : "Crush injury of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28698006",
+      "display" : "Torsion of liver lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28724005",
+      "display" : "Cholestasis-edema syndrome, Norwegian type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28766006",
+      "display" : "Posttransfusion viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29291001",
+      "display" : "Glycogen storage disease, type VI"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "297252005",
+      "display" : "Glycogen phosphorylase kinase deficiency, autosomal recessive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "297253000",
+      "display" : "Cardiac glycogen phosphorylase kinase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "297254006",
+      "display" : "Hepatic and muscle glycogen phosphorylase kinase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "297255007",
+      "display" : "Hepatic glycogen phosphorylase kinase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "297288000",
+      "display" : "Liver calculus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "298285004",
+      "display" : "Limited cutaneous systemic sclerosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "300331000",
+      "display" : "Lesion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30102006",
+      "display" : "Glucose-6-phosphate transport defect"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30188007",
+      "display" : "alpha-1-Proteinase inhibitor deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302285008",
+      "display" : "Space occupying lesion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302919001",
+      "display" : "EBV - Epstein-Barr virus hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307133008",
+      "display" : "Cystic dilation of intrahepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307757001",
+      "display" : "Chronic alcoholic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31005002",
+      "display" : "Hepatorenal syndrome due to a procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31155007",
+      "display" : "Benign recurrent intrahepatic cholestasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314963000",
+      "display" : "Local recurrence of malignant tumour of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31712002",
+      "display" : "Primary biliary cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31742004",
+      "display" : "Arteriohepatic dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31801000146106",
+      "display" : "Pre-existing maternal disease complicating pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "318191000009109",
+      "display" : "Bacterial hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31871009",
+      "display" : "Infection AND/OR inflammatory reaction due to internal prosthetic device, implant AND/OR graft"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32194006",
+      "display" : "Anomalous pulmonary venous drainage to hepatic veins"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32612005",
+      "display" : "Disorder of purine metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "328383001",
+      "display" : "Chronic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32891000",
+      "display" : "Rotor syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32895009",
+      "display" : "Hereditary disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33144001",
+      "display" : "Parasitic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33167004",
+      "display" : "Complication of transplanted liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34014006",
+      "display" : "Viral disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34286007",
+      "display" : "Empyema with hepatopleural fistula"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34420000",
+      "display" : "Storage disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34528009",
+      "display" : "Familial hypertriglyceridemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34736002",
+      "display" : "Chronic passive congestion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34742003",
+      "display" : "Portal hypertension"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "347891000119103",
+      "display" : "Chronic hepatitis C with stage 3 fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34798003",
+      "display" : "Injury of liver without open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34801009",
+      "display" : "Ectopic pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35571009",
+      "display" : "Cholangiolitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35742006",
+      "display" : "Congenital syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36155008",
+      "display" : "Hepatitis in coxsackie viral disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362965005",
+      "display" : "Disorder of body system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363038008",
+      "display" : "Congenital bacterial disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363681007",
+      "display" : "Pregnancy with abortive outcome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36444000",
+      "display" : "Disorder of the urea cycle metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3650004",
+      "display" : "Congenital absence of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36631002",
+      "display" : "Hepatomphalocele"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36760000",
+      "display" : "Hepatosplenomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370489002",
+      "display" : "Cholangiohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370490006",
+      "display" : "Acute cholangiohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370492003",
+      "display" : "Copper storage associated hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370889009",
+      "display" : "Lymphocytic portal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371067004",
+      "display" : "Hepatopulmonary syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371090009",
+      "display" : "Cholestasis of parenteral nutrition"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371139006",
+      "display" : "Early cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3738000",
+      "display" : "Viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37688005",
+      "display" : "Clonorchiasis with biliary cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37871000",
+      "display" : "Acute hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38306002",
+      "display" : "Stellate laceration of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38662009",
+      "display" : "Chronic persistent type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38739001",
+      "display" : "Hepatic vein thrombosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "389086002",
+      "display" : "Hypoxia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "389087006",
+      "display" : "Hypoxaemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39400004",
+      "display" : "Injury of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396460000",
+      "display" : "Hepatocellular dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396461001",
+      "display" : "Hepatic duct dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397575003",
+      "display" : "Viral hepatitis, type G"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399187006",
+      "display" : "Hemochromatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399314004",
+      "display" : "Systemic mycosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40028009",
+      "display" : "Congenital hyperplasia of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40210001",
+      "display" : "Floating liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "402479002",
+      "display" : "Sporadic porphyria cutanea tarda"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40444006",
+      "display" : "Spontaneous abortion with acute necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40468003",
+      "display" : "Viral hepatitis, type A"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405542005",
+      "display" : "Drug-induced hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405559000",
+      "display" : "Spontaneous subcapsular liver haematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "407000",
+      "display" : "Congenital hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40733004",
+      "display" : "Infectious disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408335007",
+      "display" : "Autoimmune hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408646000",
+      "display" : "Adenocarcinoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40912001",
+      "display" : "Acute red atrophy of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "409554001",
+      "display" : "Q fever hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41116009",
+      "display" : "Spirochetal infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41271000119108",
+      "display" : "Viral arthritis co-occurrent with hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41309000",
+      "display" : "Alcoholic liver damage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413438002",
+      "display" : "Acute hepatic failure due to drugs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414022008",
+      "display" : "Blood disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414025005",
+      "display" : "Disorder of fetus or newborn"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41527003",
+      "display" : "Glycogen storage disease type VIII"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "417044008",
+      "display" : "Hydatidiform mole, benign"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "417163006",
+      "display" : "Injury"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "417357006",
+      "display" : "Sickling disorder due to hemoglobin S"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "417437921000119101",
+      "display" : "Metastatic NUT (nuclear protein in testis) associated carcinoma to liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41799005",
+      "display" : "Hereditary retinal dystrophy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "418470004",
+      "display" : "Porphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41889008",
+      "display" : "Chronic persistent hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419616000",
+      "display" : "Hepatocellular liver damage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41969006",
+      "display" : "Idiopathic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419728003",
+      "display" : "Portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420054005",
+      "display" : "Alcoholic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420721002",
+      "display" : "Acquired immunodeficiency syndrome-associated disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421230000",
+      "display" : "Hepatomegaly with AIDS (acquired immunodeficiency syndrome)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42399005",
+      "display" : "Renal failure syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "424263008",
+      "display" : "Adenoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "424758008",
+      "display" : "Viral hepatitis A without hepatic coma, without hepatitis delta"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "425413006",
+      "display" : "Drug-induced hepatic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426364002",
+      "display" : "Allergic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426871003",
+      "display" : "Cell-mediated cytotoxic disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "427022004",
+      "display" : "Liver disease due to cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "427044009",
+      "display" : "Fulminant hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "427399008",
+      "display" : "Drug-induced disorder of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "427744002",
+      "display" : "Haemangioendothelioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "428187007",
+      "display" : "Liver nodule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "429735007",
+      "display" : "Citrin deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "431222008",
+      "display" : "Acute rejection of liver transplant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "431674004",
+      "display" : "Haematoma and contusion of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "432772009",
+      "display" : "Hyperacute rejection of liver transplant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "432777003",
+      "display" : "Accelerated rejection of liver transplant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "432908002",
+      "display" : "Chronic rejection of liver transplant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "433237003",
+      "display" : "Cholestasis in newborn"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43634002",
+      "display" : "Relapsing type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43841005",
+      "display" : "Moderate laceration of liver without open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43904005",
+      "display" : "Macronodular cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44047000",
+      "display" : "Zieve's syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442134007",
+      "display" : "Hepatitis B associated with Human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442191002",
+      "display" : "Steatohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442374005",
+      "display" : "Hepatitis B and hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442685003",
+      "display" : "NASH - Nonalcoholic steatohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444707001",
+      "display" : "Glycogen storage disease type Ia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44553005",
+      "display" : "Dubin-Johnson syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446615009",
+      "display" : "Leakage of bile from gallbladder bed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446698005",
+      "display" : "Reactivation of hepatitis B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447058001",
+      "display" : "Solitary necrotic nodule of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447109003",
+      "display" : "Primary malignant neoplasm of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447139008",
+      "display" : "Closed fracture of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44779003",
+      "display" : "Disorder of amino acid metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447823004",
+      "display" : "Congenital abnormality of hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447917005",
+      "display" : "Liver in central position"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448081001",
+      "display" : "Hepatic vein to coronary sinus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448281007",
+      "display" : "Abnormality of hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448683002",
+      "display" : "Liver in left sided position"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448997008",
+      "display" : "Cystadenoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449014008",
+      "display" : "Hepatic vein to left sided atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449015009",
+      "display" : "Hepatic vein to right sided atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449016005",
+      "display" : "Hepatic vein to left atrium and right atrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449516003",
+      "display" : "Separate hepatic vein and inferior vena cava connections to heart"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449790007",
+      "display" : "Orofacial cleft"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45042004",
+      "display" : "Acute fulminating viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450880008",
+      "display" : "Chronic hepatitis E"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45256007",
+      "display" : "Cruveilhier-Baumgarten syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45744005",
+      "display" : "Disorder of mineral metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48036004",
+      "display" : "Pyogenic hepatic abscess"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48303008",
+      "display" : "Stellate laceration of liver without open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4846001",
+      "display" : "Anicteric viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4896000",
+      "display" : "Acute toxic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49416000",
+      "display" : "Failed attempted abortion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49483002",
+      "display" : "Mediastinal disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49601007",
+      "display" : "Cardiovascular disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50122000",
+      "display" : "Metabolic encephalopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50167007",
+      "display" : "Chronic active type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50325005",
+      "display" : "Alcoholic fatty liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50701000",
+      "display" : "Hepatoptosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50711007",
+      "display" : "Viral hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51292008",
+      "display" : "Hepatorenal syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53104002",
+      "display" : "Peripheral hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53425008",
+      "display" : "Anicteric type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53476006",
+      "display" : "Radiation hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "536002",
+      "display" : "Glissonian cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55056006",
+      "display" : "Hepatic porphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55294001",
+      "display" : "Focal hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55464009",
+      "display" : "Systemic lupus erythematosus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56019007",
+      "display" : "Systemic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56265001",
+      "display" : "Heart disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5655007",
+      "display" : "Inherited disorder of bilirubin metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5667009",
+      "display" : "Hunter's syndrome, mild form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57339008",
+      "display" : "Chronic lobular hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57412004",
+      "display" : "Acute viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57797005",
+      "display" : "Induced abortion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58008004",
+      "display" : "Peliosis hepatis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58275005",
+      "display" : "Variegate porphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58282009",
+      "display" : "Relapsing viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58994008",
+      "display" : "Hepatic coccidiosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59049008",
+      "display" : "Calculus of hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59229005",
+      "display" : "Familial porphyria cutanea tarda"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59919008",
+      "display" : "Failed attempted abortion with complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59927004",
+      "display" : "Hepatic failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60037002",
+      "display" : "Chronic persistent viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60737008",
+      "display" : "Iron overload"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6075009",
+      "display" : "Glycogen storage disease, hepatic form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609454008",
+      "display" : "Induced termination of pregnancy complicated by acute necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609622007",
+      "display" : "Disorder of thoracic segment of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61164006",
+      "display" : "Erythropoietic coproporphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61250001",
+      "display" : "Midzonal hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61598006",
+      "display" : "Glycogenosis with glucoaminophosphaturia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6183001",
+      "display" : "Indian childhood cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61860000",
+      "display" : "Porphyria cutanea tarda"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61977001",
+      "display" : "Chronic type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62216007",
+      "display" : "Familial arthrogryposis-cholestatic hepatorenal syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62484002",
+      "display" : "Hepatic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63246000",
+      "display" : "Cholestanol storage disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64572001",
+      "display" : "Disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64638002",
+      "display" : "Injury of hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64789007",
+      "display" : "Internal injury of abdominal organs without open wound into cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65017003",
+      "display" : "Hereditary peripheral neuropathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65094009",
+      "display" : "Multiple malformation syndrome with facial defects as major feature"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65324009",
+      "display" : "Minor laceration of liver without open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65617004",
+      "display" : "Veno-occlusive disease of the liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65860006",
+      "display" : "Liver regeneration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66071002",
+      "display" : "Type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66091009",
+      "display" : "Congenital disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66789005",
+      "display" : "Hepatocellular jaundice"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66870002",
+      "display" : "Chronic active viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66937008",
+      "display" : "Glycogen storage disease, type III"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67656006",
+      "display" : "Portal pyemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "681751000119106",
+      "display" : "Primary adenocarcinoma of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "682811000119109",
+      "display" : "Benign neuroendocrine neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69800000",
+      "display" : "Neonatal hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698862003",
+      "display" : "Laceration of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6990005",
+      "display" : "Fracture of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699189004",
+      "display" : "North American Indian childhood cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699346009",
+      "display" : "Hereditary neoplastic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699668009",
+      "display" : "Secondary nonischemic congestive cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "700364009",
+      "display" : "Neurodevelopmental disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "700463002",
+      "display" : "Alpha-methylacyl-CoA racemase deficiency disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "702399004",
+      "display" : "Compensated liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "702969000",
+      "display" : "Reactivation of hepatitis C viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703271000",
+      "display" : "Infantile haemangioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703866000",
+      "display" : "Chronic hepatitis C with stage 2 fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70668000",
+      "display" : "Acquired arteriovenous fistula of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "707167006",
+      "display" : "Acute multi-acinar necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "707341005",
+      "display" : "Viral hepatitis type D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70737009",
+      "display" : "Mucopolysaccharidosis, MPS-II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708198006",
+      "display" : "Chronic active hepatitis C"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708248004",
+      "display" : "End stage liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7111000119109",
+      "display" : "Hepatitis E virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71215005",
+      "display" : "Hydrohepatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713181003",
+      "display" : "Chronic alcoholic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713203006",
+      "display" : "Injury to liver during surgery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713370005",
+      "display" : "Acute on chronic alcoholic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713510001",
+      "display" : "Large liver co-occurrent with human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713529007",
+      "display" : "Steatosis of liver caused by retroviral protease inhibitor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713698004",
+      "display" : "Nodular regenerative hyperplasia of liver caused by anti-retroviral drug"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713966008",
+      "display" : "Occult chronic type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "714253009",
+      "display" : "Hepatic granuloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "715140008",
+      "display" : "Nodular regenerative hyperplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "715397000",
+      "display" : "Mesenchymal hamartoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "715401008",
+      "display" : "Primary biliary cirrhosis co-occurrent with systemic scleroderma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "715864007",
+      "display" : "Non-Wilsonian hepatic copper toxicosis of infancy and childhood"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716196007",
+      "display" : "Isolated polycystic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716203000",
+      "display" : "Decompensated cirrhosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716379000",
+      "display" : "Acute fatty liver of pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716648006",
+      "display" : "Embryonal sarcoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716652006",
+      "display" : "Primary hepatic neuroendocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716997004",
+      "display" : "Joubert syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717047007",
+      "display" : "Bile acid coenzyme A ligase deficiency and defective amidation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717053007",
+      "display" : "Renal tubulopathy with encephalopathy and liver failure syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717155003",
+      "display" : "Neonatal intrahepatic cholestasis due to citrin deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717187000",
+      "display" : "Boichis disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717232005",
+      "display" : "Caroli disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71728002",
+      "display" : "Accessory liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717329009",
+      "display" : "Inflammatory pseudotumor of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "718096004",
+      "display" : "Hepatoportal sclerosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "719454003",
+      "display" : "Congenital bile acid synthesis defect type 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "720461006",
+      "display" : "Acute infantile liver failure due to synthesis defect of mitochondrial deoxyribonucleic acid encoded protein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "720636001",
+      "display" : "Cholestasis with pigmentary retinopathy and cleft palate syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72083004",
+      "display" : "Late syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721588008",
+      "display" : "Hepatitis caused by sexually transmissible virus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721710005",
+      "display" : "Fibrosis of liver caused by alcohol"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721711009",
+      "display" : "Autoimmune hepatitis type 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721712002",
+      "display" : "Autoimmune hepatitis type 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721713007",
+      "display" : "Autoimmune hepatitis type 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721715000",
+      "display" : "Ischemia reperfusion injury of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721716004",
+      "display" : "Primary cholangiocarcinoma of intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721847002",
+      "display" : "Joubert syndrome with hepatic defect"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722577000",
+      "display" : "Injury of liver due to birth trauma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722864002",
+      "display" : "Acute hepatic failure caused by hepatitis virus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722865001",
+      "display" : "Subacute hepatic failure caused by hepatitis virus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722866000",
+      "display" : "Non-alcoholic fatty liver disease without non-alcoholic steatohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723108006",
+      "display" : "Idiopathic granulomatous hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723360007",
+      "display" : "Familial hypercholanemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723583009",
+      "display" : "Steroid dehydrogenase deficiency and dental anomaly syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723829000",
+      "display" : "Pulmonary fibrosis, hepatic hyperplasia, bone marrow hypoplasia syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "724000006",
+      "display" : "Retinohepatoendocrinologic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "724361001",
+      "display" : "Hepatic veno-occlusive disease with immunodeficiency syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72445008",
+      "display" : "Subacute noninfective hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "724766009",
+      "display" : "Chorea co-occurrent and due to Wilson disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725026008",
+      "display" : "Hepatic glycogen synthase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725416005",
+      "display" : "Cirrhotic cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725938001",
+      "display" : "Cirrhosis of liver caused by methotrexate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725939009",
+      "display" : "Cirrhosis of liver caused by amiodarone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725940006",
+      "display" : "Cirrhosis of liver caused by methyldopa"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7265005",
+      "display" : "Glycogen storage disease, type I"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72925005",
+      "display" : "Congenital cystic disease of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73146005",
+      "display" : "Hunter's syndrome, severe form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735451005",
+      "display" : "Chronic viral hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735456000",
+      "display" : "Drug-induced liver hypersensitivity disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735677007",
+      "display" : "Neonatal hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735732003",
+      "display" : "Liver disease co-occurrent and due to mitochondrial disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735733008",
+      "display" : "Cirrhosis of liver with primary sclerosing cholangitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "736434005",
+      "display" : "Traumatic rupture of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "737202006",
+      "display" : "Fibropolycystic disease of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "737203001",
+      "display" : "Disorder of liver co-occurrent and due to disorder of urea cycle"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "737204007",
+      "display" : "Disorder of liver due to disorder of mineral metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "737205008",
+      "display" : "Partial nodular transformation of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74162007",
+      "display" : "Progressive intrahepatic cholestasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7425008",
+      "display" : "Hereditary coproporphyria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74400008",
+      "display" : "Appendicitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74669004",
+      "display" : "Cardiac cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75119003",
+      "display" : "Amebic liver abscess"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7538002",
+      "display" : "Drug-induced intrahepatic cholestasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75478009",
+      "display" : "Poisoning"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75934005",
+      "display" : "Metabolic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "762269004",
+      "display" : "Classical cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "762278005",
+      "display" : "Disorder of liver due to disorder of amino acid metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76272004",
+      "display" : "Syphilis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76281005",
+      "display" : "Hepatic congestion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76301009",
+      "display" : "Florid cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "763096004",
+      "display" : "Sickle cell liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "763891005",
+      "display" : "Renal hepatic pancreatic dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "764962002",
+      "display" : "Hepatoencephalopathy due to COXPD1 (combined oxidative phosphorylation defect type 1)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "767809001",
+      "display" : "Chronic hepatitis C caused by hepatitis C virus genotype 6"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "767810006",
+      "display" : "Chronic hepatitis C caused by hepatitis C virus genotype 5"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76783007",
+      "display" : "Chronic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76795007",
+      "display" : "Acute type B viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768006009",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768125005",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768126006",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 4"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768127002",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768288001",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 1b"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "768289009",
+      "display" : "Chronic hepatitis C caused by Hepatitis C virus genotype 1a"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "770684008",
+      "display" : "Squamous cell carcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "770685009",
+      "display" : "Undifferentiated carcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "771149000",
+      "display" : "Hepatic fibrosis, renal cyst, intellectual disability syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "771441005",
+      "display" : "Hyperbiliverdinaemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773113008",
+      "display" : "Acute hepatitis caused by infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773415005",
+      "display" : "Contiguous ABCD1 DXS1357E deletion syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773584001",
+      "display" : "Muscular hypertrophy, hepatomegaly, polyhydramnios syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773649005",
+      "display" : "Transient infantile hypertriglyceridemia and hepatosteatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773726000",
+      "display" : "Hypercholesterolemia due to cholesterol 7alpha-hydroxylase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773737004",
+      "display" : "Meckel syndrome type 7"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "774151000",
+      "display" : "Cerebro-cutaneous syndrome with iron overload"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "774204006",
+      "display" : "Growth retardation, mild developmental delay, chronic hepatitis syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "774207004",
+      "display" : "Acute infantile liver failure with multisystemic involvement syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78171005",
+      "display" : "Traumatic hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78208005",
+      "display" : "Pigment cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "782771007",
+      "display" : "Mitochondrial DNA depletion syndrome hepatocerebrorenal form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "782964007",
+      "display" : "Genetic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783734000",
+      "display" : "Mitochondrial DNA depletion syndrome, hepatocerebral form due to DGUOK deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "784346006",
+      "display" : "Navajo neuropathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78548001",
+      "display" : "Enzymopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787091002",
+      "display" : "Adenocarcinoma of liver and intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "788982002",
+      "display" : "Mesothelioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79031007",
+      "display" : "Anicteric type A viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79552009",
+      "display" : "Congenital duplication of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79607001",
+      "display" : "Congenital hepatic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79720007",
+      "display" : "Chronic nonalcoholic liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79886009",
+      "display" : "Disorder of copper metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80006005",
+      "display" : "Disorder of bilirubin metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80378000",
+      "display" : "Neonatal hepatosplenomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80515008",
+      "display" : "Hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80660001",
+      "display" : "Mauriac's syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80770009",
+      "display" : "Secondary syphilis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8098009",
+      "display" : "Sexually transmitted infectious disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "819953000",
+      "display" : "Glycogen storage disease due to muscle phosphorylase kinase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82353009",
+      "display" : "Congenital infectious disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82354003",
+      "display" : "Multiple system malformation syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82385007",
+      "display" : "Budd-Chiari syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8262006",
+      "display" : "Extrahepatic obstructive biliary disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83072009",
+      "display" : "Malarial hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "831000119103",
+      "display" : "Chronic hepatitis C with stage 4 fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838303003",
+      "display" : "Biliary intraepithelial neoplasia grade 3 of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838305005",
+      "display" : "Benign intrahepatic cholestasis type 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838311008",
+      "display" : "Cavernous hemangioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838377003",
+      "display" : "Chronic hepatitis C co-occurrent with human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "838380002",
+      "display" : "Chronic hepatitis B with hepatitis C and hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83864008",
+      "display" : "Drug-induced cholestatic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "840499006",
+      "display" : "Echinococcus granulosus infection of liver with rupture"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84150000",
+      "display" : "Arteriovenous malformation of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "846606007",
+      "display" : "Graft versus host disease of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85057007",
+      "display" : "Hepatic cyst"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85700008",
+      "display" : "Microhepatia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85870004",
+      "display" : "Minor laceration of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85898001",
+      "display" : "Cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85995004",
+      "display" : "Recessive hereditary disorder (autosomal)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86028001",
+      "display" : "Syphilis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86075001",
+      "display" : "Coagulation factor deficiency syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860831008",
+      "display" : "Epithelioid hemangioendothelioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860856002",
+      "display" : "Schistosoma haematobium hepatosplenic schistosomiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860860004",
+      "display" : "Glycogen storage disease due to liver and muscle glycogen phosphorylase kinase deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860861000",
+      "display" : "Hepatosplenic schistosomiasis caused by Schistosoma mansoni"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86095007",
+      "display" : "Inborn error of metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86299006",
+      "display" : "Tetralogy of Fallot"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "863897005",
+      "display" : "Failed attempted abortion with acute necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "863957008",
+      "display" : "Chronic necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86406008",
+      "display" : "Human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86454000",
+      "display" : "Postnecrotic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86514004",
+      "display" : "Granulomatous hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "866110001",
+      "display" : "Lymphogenic liver abscess"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "866119000",
+      "display" : "Bacterial liver abscess"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "866142007",
+      "display" : "Parasitic infection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870428003",
+      "display" : "FALD - Fontan associated liver disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870517000",
+      "display" : "Periportal fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "871619002",
+      "display" : "Cirrhosis of liver due to and following cardiac procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87248009",
+      "display" : "Hepatic necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87628006",
+      "display" : "Bacterial infectious disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88518009",
+      "display" : "Wilson's disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89166001",
+      "display" : "Congenital anomaly of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89231008",
+      "display" : "Mumps hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8933000",
+      "display" : "Crigler-Najjar syndrome, type I"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89580002",
+      "display" : "Cryptogenic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "897152007",
+      "display" : "Abnormal liver morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89789003",
+      "display" : "Chronic aggressive viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89835009",
+      "display" : "Atrophy of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90281006",
+      "display" : "Infection by Opisthorchis viverrini"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90753004",
+      "display" : "Hepatic schistosomiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91162000",
+      "display" : "Necrosis of liver of pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "92154006",
+      "display" : "Benign neoplasm of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "92186001",
+      "display" : "Benign neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "92618006",
+      "display" : "Carcinoma in situ of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "92644006",
+      "display" : "Carcinoma in situ of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "92864004",
+      "display" : "Congenital abnormal fusion of liver lobes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "92924002",
+      "display" : "Congenital abnormal shape of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9326001",
+      "display" : "Conjugated hyperbilirubinemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "93332007",
+      "display" : "Congenital malposition of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "93369005",
+      "display" : "Congenital microhepatia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "93469006",
+      "display" : "Hemangioma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "93870000",
+      "display" : "Malignant neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "94349006",
+      "display" : "Secondary malignant neoplasm of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "94381002",
+      "display" : "Secondary malignant neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "94880005",
+      "display" : "Neoplasm of uncertain behavior of intrahepatic bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "94910002",
+      "display" : "Neoplasm of uncertain behavior of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95214007",
+      "display" : "Primary malignant neoplasm of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95297004",
+      "display" : "Supernumerary liver lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9551004",
+      "display" : "Hepatic amyloidosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95555006",
+      "display" : "Neonatal hepatocellular damage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95556007",
+      "display" : "Cholestatic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95557003",
+      "display" : "Red blood cell sequestration in liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "95897009",
+      "display" : "Amebic hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9843006",
+      "display" : "Chronic lymphocytic cholangitis-cholangiohepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9953008",
+      "display" : "Acute alcoholic liver disease"
+    }]
+  }
+}
