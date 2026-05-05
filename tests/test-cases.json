@@ -19,7 +19,7 @@
         "response" : "capterms.json"
       }
     ]
-  }, {
+  },{
     "name" : "simple-cases",
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
