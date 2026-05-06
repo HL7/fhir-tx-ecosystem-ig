@@ -1,6 +1,6 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "version-all",
+  "id" : "version-version-w-bad",
   "url" : "http://hl7.org/fhir/test/ValueSet/version-w-bad",
   "version" : "1.0.0",
   "name" : "VersionedValueSetAll",
