@@ -5,13 +5,13 @@
       "name": "valueSet",
       "resource": {
         "resourceType": "ValueSet",
-        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-left-associative",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-mixed-operators-rejected",
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
         "date": "2025-09-05",
         "publisher": "FHIR Project",
-        "description": "Same expression without parens; ECL 2.x is strictly left-to-right, so result should differ from parens-precedence.",
+        "description": "Mixed AND and OR operators without parentheses. The SNOMED ECL grammar (compoundExpressionConstraint, ECL v2.2 and v2.3 ABNF) defines a compound expression as exactly one operator type, and the v2.3 spec text requires brackets to disambiguate when binary operators are mixed. Conformant servers must reject this input as invalid ECL.",
         "compose": {
           "include": [
             {
