@@ -30,7 +30,8 @@
                   "code" : "code-comment"
                 }],
               "text" : "The concept '52495-9' has a status of DISCOURAGED and its use should be reviewed"
-            }
+            },
+            "expression" : ["code"]
           }]
       }
     },
