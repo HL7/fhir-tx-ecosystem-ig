@@ -1,0 +1,39 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://example.org/vs/nci-test",
+        "status": "active",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tx-resource",
+      "resource": {
+        "resourceType": "CodeSystem",
+        "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "name": "NCIt",
+        "status": "active",
+        "caseSensitive": true,
+        "content": "fragment",
+        "concept": [
+          {
+            "code": "C15432"
+          },
+          {
+            "code": "C18000"
+          }
+        ]
+      }
+    }
+  ]
+}

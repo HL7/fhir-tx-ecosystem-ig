@@ -12,6 +12,10 @@
       }
     },
     {
+      "name" : "originMap",
+      "valueCanonical" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20250201"
+    },
+    {
       "$optional$" : "version:4",
       "name" : "relationship",
       "valueCode" : "equivalent"

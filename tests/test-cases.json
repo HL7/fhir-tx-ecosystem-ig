@@ -2843,6 +2843,13 @@
         "profile": "version/parameters-check-version.json",
         "request" : "version/vs-expand-v2-request-parameters.json",
         "response" : "version/vs-expand-v2-check-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-versionless",
+        "description" : "check expand without any version",
+        "operation" : "expand",
+        "request" : "version/vs-expand-versionless-request.json",
+        "response" : "version/vs-expand-versionless-response.json"
       }
     ]
   },{
