@@ -4651,6 +4651,7 @@
         "name" : "snomed-expand-ecl-memberOf-nonRefset",
         "description" : "Negative case: ^ applied to a concept that is not a reference set should error.",
         "operation" : "expand",
+        "http-code" : "4xx",
         "request" : "sct/expand-ecl-memberOf-nonRefset-request.json",
         "response" : "sct/expand-ecl-memberOf-nonRefset-response.json"
       },
