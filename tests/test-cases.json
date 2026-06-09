@@ -4659,7 +4659,6 @@
         "name" : "snomed-expand-ecl-memberOf-nonRefset",
         "description" : "Negative case: ^ applied to a concept that is not a reference set should error.",
         "operation" : "expand",
-        "http-code" : "4xx",
         "request" : "sct/expand-ecl-memberOf-nonRefset-request.json",
         "response" : "sct/expand-ecl-memberOf-nonRefset-response.json"
       },
@@ -4831,10 +4830,26 @@
 
       {
         "name" : "snomed-expand-ecl-refinement-cardinality",
-        "description" : "Refinement with cardinality. Currently unsupported.",
+        "description" : "Ungrouped [1..1] cardinality: exactly 1 Finding site in liver across all role groups — excludes concepts with 2+ groups each containing a liver Finding site (573).",
         "operation" : "expand",
         "request" : "sct/expand-ecl-refinement-cardinality-request.json",
         "response" : "sct/expand-ecl-refinement-cardinality-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-grouped",
+        "description" : "Grouped [1..1] cardinality: exactly 1 role group containing exactly 1 Finding site in liver — same result as ungrouped for typical SNOMED models (573).",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-cardinality-grouped-request.json",
+        "response" : "sct/expand-ecl-refinement-cardinality-grouped-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-rolegroup",
+        "description" : "Role group cardinality without outer count: at least one role group containing exactly 1 Finding site in liver — more permissive, includes concepts with multiple groups each having 1 liver Finding site (653).",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-cardinality-rolegroup-request.json",
+        "response" : "sct/expand-ecl-refinement-cardinality-rolegroup-response.json"
       },
 
       {

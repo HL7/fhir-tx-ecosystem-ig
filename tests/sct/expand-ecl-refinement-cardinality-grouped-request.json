@@ -5,13 +5,13 @@
       "name": "valueSet",
       "resource": {
         "resourceType": "ValueSet",
-        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-cardinality",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-cardinality-grouped",
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
         "date": "2025-09-05",
         "publisher": "FHIR Project",
-        "description": "Ungrouped cardinality: exactly 1 Finding site in liver counted across all role groups. Concepts with 2+ role groups each containing a liver Finding site are excluded (573).",
+        "description": "Cardinality with explicit role group: exactly 1 role group containing exactly 1 Finding site in liver. Produces same result as ungrouped [1..1] cardinality (573).",
         "compose": {
           "include": [
             {
@@ -21,7 +21,7 @@
                 {
                   "property": "constraint",
                   "op": "=",
-                  "value": "< 64572001 : [1..1] 363698007 = << 10200004"
+                  "value": "< 64572001 : [1..1] { [1..1] 363698007 = << 10200004 }"
                 }
               ]
             }
