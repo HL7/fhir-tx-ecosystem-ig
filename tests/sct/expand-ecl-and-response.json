@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-and",

@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-descOrSelf",
@@ -24,17 +24,17 @@
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "10200004",
-      "display" : "Liver"
+      "display" : "Liver structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "303270005",
-      "display" : "Liver and biliary structure"
+      "display" : "Liver and/or biliary structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "699602007",
-      "display" : "Structure of viscus of abdomen proper"
+      "display" : "Structure of organ within abdomen proper cavity"
     }]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-descOrSelf",
@@ -16,7 +16,7 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 17,
+    "total" : 20,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
@@ -24,12 +24,12 @@
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "10200004",
-      "display" : "Liver"
+      "display" : "Liver structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113343008",
-      "display" : "Body organ"
+      "display" : "Body organ structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -44,12 +44,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "22943007",
-      "display" : "Trunk"
+      "display" : "Trunk structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281501002",
+      "display" : "Intra-abdominal digestive structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "303270005",
-      "display" : "Liver and biliary structure"
+      "display" : "Liver and/or biliary structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -69,17 +74,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "49596003",
-      "display" : "Digestive organ"
+      "display" : "Digestive organ structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "52530000",
-      "display" : "Topographic region"
+      "display" : "Body region structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "699602007",
-      "display" : "Structure of viscus of abdomen proper"
+      "display" : "Structure of organ within abdomen proper cavity"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -93,13 +98,23 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "818988007",
+      "display" : "Intra-abdominal proper structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818993005",
+      "display" : "Organ within abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "86762007",
-      "display" : "Digestive system"
+      "display" : "Structure of digestive system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "91689009",
-      "display" : "Organ system"
+      "display" : "Body system structure"
     },
     {
       "system" : "http://snomed.info/sct",

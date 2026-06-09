@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-inactive",
@@ -39,16 +39,16 @@
           "code" : "900000000000003001",
           "display" : "Fully specified name"
         },
-        "value" : "Appendicitis"
+        "value" : "Appendicitis (disorder)"
       },
       {
         "language" : "en",
         "use" : {
           "system" : "http://snomed.info/sct",
-          "code" : "900000000000003001",
-          "display" : "Fully specified name"
+          "code" : "900000000000013009",
+          "display" : "Synonym"
         },
-        "value" : "Appendicitis (disorder)"
+        "value" : "Appendicitis"
       }],
       "property" : [{
         "code" : "status",
@@ -63,33 +63,6 @@
         "language" : "en",
         "use" : {
           "system" : "http://snomed.info/sct",
-          "code" : "900000000000013009",
-          "display" : "Synonym (core metadata concept)"
-        },
-        "value" : "Opisthorchis, NOS"
-      },
-      {
-        "language" : "en",
-        "use" : {
-          "system" : "http://snomed.info/sct",
-          "code" : "900000000000003001",
-          "display" : "Fully specified name"
-        },
-        "value" : "Opisthorchis (organism)"
-      },
-      {
-        "language" : "en",
-        "use" : {
-          "system" : "http://snomed.info/sct",
-          "code" : "900000000000013009",
-          "display" : "Synonym (core metadata concept)"
-        },
-        "value" : "Genus: Opisthorchis"
-      },
-      {
-        "language" : "en",
-        "use" : {
-          "system" : "http://snomed.info/sct",
           "code" : "900000000000003001",
           "display" : "Fully specified name"
         },
@@ -100,18 +73,9 @@
         "use" : {
           "system" : "http://snomed.info/sct",
           "code" : "900000000000013009",
-          "display" : "Synonym (core metadata concept)"
+          "display" : "Synonym"
         },
-        "value" : "Genus Opisthorchis"
-      },
-      {
-        "language" : "en",
-        "use" : {
-          "system" : "http://snomed.info/sct",
-          "code" : "900000000000013009",
-          "display" : "Synonym (core metadata concept)"
-        },
-        "value" : "Opisthorchis species"
+        "value" : "Opisthorchis"
       }]
     },
     {
@@ -126,6 +90,15 @@
           "display" : "Fully specified name"
         },
         "value" : "Opisthorchis viverrini (organism)"
+      },
+      {
+        "language" : "en",
+        "use" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "900000000000013009",
+          "display" : "Synonym"
+        },
+        "value" : "Opisthorchis viverrini"
       }]
     }]
   }
