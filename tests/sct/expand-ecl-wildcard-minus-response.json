@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus}",
@@ -7,24 +7,38 @@
   "status" : "active",
   "experimental" : false,
   "date" : "2025-09-05",
-  "compose": {
-    "include": [{
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
-      "filter": [{ "property": "constraint", "op": "=", "value": "* MINUS << 10200004" }]
-    }]
+  "compose" : {
+    "include" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/xsct/900000000000207008/version/20250814",
+        "filter" : [
+          {
+            "property" : "constraint",
+            "op" : "=",
+            "value" : "* MINUS << 10200004"
+          }
+        ]
+      }
+    ]
   },
   "expansion" : {
     "$optional-properties$" : ["id", "offset"],
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
-      "valueBoolean" : true
-    }],
-    "id": "$id$",
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+        "valueBoolean" : true
+      }
+    ],
+    "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 1859,
+    "total" : 1896,
     "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 3000
+    },
+    {
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
     }],
@@ -51,7 +65,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "102627005",
-      "display" : "Liver tender"
+      "display" : "Tenderness of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -96,7 +110,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "105635000",
-      "display" : "Retrovirus infection"
+      "display" : "Disease caused by Retroviridae"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -120,13 +134,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "106237007",
-      "display" : "Linkage concept"
+      "code" : "106233006",
+      "display" : "Topographical modifier"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "106605004",
       "display" : "Coccidia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "106709001",
+      "display" : "Family Opisthorchiidae"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -146,12 +165,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "10759111000119102",
-      "display" : "Viral hepatitis in childbirth"
+      "display" : "Viral hepatitis in mother complicating childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "10759151000119101",
-      "display" : "Viral hepatitis in pregnancy"
+      "display" : "Viral hepatitis in mother complicating pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -176,27 +195,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "107811000119106",
-      "display" : "Secondary small cell carcinoma of liver"
+      "display" : "Metastatic small cell neuroendocrine carcinoma to liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "107831000119101",
-      "display" : "Secondary squamous cell carcinoma of liver"
+      "display" : "Metastatic squamous cell carcinoma to liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "107963000",
-      "display" : "Liver excision"
+      "display" : "Excision of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "10807061000119103",
-      "display" : "Liver disorder in childbirth"
+      "display" : "Liver disorder in mother complicating childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "108369006",
-      "display" : "Tumor"
+      "display" : "Neoplasm"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -206,7 +225,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1087101000119109",
-      "display" : "Herpes simplex hepatitis"
+      "display" : "Hepatitis caused by human herpes simplex virus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -236,7 +255,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "109841003",
-      "display" : "Hepatocarcinoma"
+      "display" : "Liver cell carcinoma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -246,12 +265,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "109843000",
-      "display" : "Hepatoblastoma of liver"
+      "display" : "Hepatoblastoma"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "109844006",
       "display" : "Angiosarcoma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "110540008",
+      "display" : "Muscle structure of hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -351,32 +375,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "113254000",
-      "display" : "Interstitial tissue of lung"
+      "display" : "Structure of interstitial tissue of lung"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113257007",
-      "display" : "Cardiovascular system"
+      "display" : "Structure of cardiovascular system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113262008",
-      "display" : "Thoracic aorta"
+      "display" : "Thoracic aorta structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113305005",
-      "display" : "Cerebellum"
+      "display" : "Cerebellar structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113331007",
-      "display" : "Endocrine system"
+      "display" : "Structure of endocrine system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113343008",
-      "display" : "Body organ"
+      "display" : "Body organ structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -436,7 +460,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1145027009",
-      "display" : "Acquired paucity of interlobular bile ducts"
+      "display" : "Acquired paucity of intrahepatic bile ducts"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -446,7 +470,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1148573000",
-      "display" : "Postoperative hepatic failure"
+      "display" : "Hepatic failure following surgical procedure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -471,7 +495,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1155913007",
-      "display" : "Byler syndrome"
+      "display" : "Progressive familial intrahepatic cholestasis type 1"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -491,7 +515,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1156676003",
-      "display" : "Foetal and/or neonatal period"
+      "display" : "Fetal and/or neonatal period"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -501,12 +525,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1156684004",
-      "display" : "Perinatal period of foetus and/or neonate"
+      "display" : "Perinatal period of fetus and/or neonate"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1156712004",
-      "display" : "Percutaneous needle aspiration of liver using computed tomography guidance"
+      "display" : "CT guided percutaneous needle aspiration of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -516,12 +540,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1156870007",
-      "display" : "Liver absent"
+      "display" : "Absence of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "116003000",
-      "display" : "Immune system"
+      "display" : "Structure of immune system"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -531,7 +555,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "116006008",
-      "display" : "Pleural sac"
+      "display" : "Pleural sac structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -541,12 +565,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1162565008",
-      "display" : "Intrahepatic bile duct stone"
+      "display" : "Calculus of intrahepatic bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1162767002",
-      "display" : "Squamous carcinoma"
+      "display" : "Squamous cell carcinoma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -566,17 +590,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1163464002",
-      "display" : "Infection of liver caused by Schistosoma japonicum"
+      "display" : "Hepatosplenic schistosomiasis caused by Schistosoma japonicum"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "116676008",
       "display" : "Associated morphology"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "116680003",
-      "display" : "Is a"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -636,7 +655,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "118565006",
-      "display" : "VOL"
+      "display" : "Volume"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118632007",
+      "display" : "Structure of tendon within hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -651,12 +675,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1186631005",
-      "display" : "Primary hepatocholangiocarcinoma"
+      "display" : "Primary combined hepatocellular carcinoma and cholangiocarcinoma"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "118664000",
-      "display" : "Procedure on organ system"
+      "display" : "Procedure on body system"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -731,7 +755,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1187138006",
-      "display" : "Non-invasive carcinoma"
+      "display" : "Carcinoma in situ"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -751,17 +775,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1187396000",
-      "display" : "Malignant mesenchymal tumour"
+      "display" : "Sarcoma"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1187425009",
-      "display" : "Malignant epithelial tumour"
+      "display" : "Carcinoma"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1187643003",
-      "display" : "Autosomal recessive spinocerebellar ataxia type 21"
+      "display" : "Acute infantile liver failure, cerebellar ataxia, peripheral sensory motor neuropathy syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -806,7 +830,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1193602001",
-      "display" : "Diaphysis of lower limb bone"
+      "display" : "Structure of shaft of lower limb bone"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -817,6 +841,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "11953005",
       "display" : "Renal function"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119657005",
+      "display" : "Hand repair"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -841,7 +870,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1196858002",
-      "display" : "Cholangioma of intrahepatic bile duct"
+      "display" : "Bile duct adenoma of intrahepatic bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -856,7 +885,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1197150002",
-      "display" : "Recurrent hepatitis C virus induced liver disease in liver transplant recipient"
+      "display" : "Recurrent hepatitis C virus induced liver disease following liver transplant"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -896,7 +925,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1197739005",
-      "display" : "Hepatic fibrosis due to non-alcoholic fatty liver disease"
+      "display" : "Fibrosis of liver due to metabolic dysfunction-associated steatotic liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -907,6 +936,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "1204474000",
       "display" : "Barium sulfate 600 mg/mL oral suspension"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "120577001",
+      "display" : "Hand part"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -926,12 +960,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1217420009",
-      "display" : "Biopsy of lesion of liver using endoscopic ultrasonography guidance"
+      "display" : "Endoscopic ultrasonography guided biopsy of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1217421008",
-      "display" : "Biopsy of lesion of liver using laparoscopic ultrasound guidance"
+      "display" : "Laparoscopic ultrasonography guided biopsy of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -946,12 +980,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1222580004",
-      "display" : "Hepatitis caused by toxoplasmosis"
+      "display" : "Hepatitis caused by Toxoplasma gondii"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "122456005",
-      "display" : "Laser"
+      "display" : "Laser device"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -961,22 +995,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "122489005",
-      "display" : "Urinary system"
+      "display" : "Urinary system structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "122865005",
-      "display" : "Gastrointestinal tract"
+      "display" : "Gastrointestinal tract structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "122972007",
-      "display" : "Vein of lung"
+      "display" : "Structure of vein of pulmonary circulation"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1230002004",
-      "display" : "Hepatic adenomatosis"
+      "display" : "Liver adenomatosis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -991,12 +1025,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1230310007",
-      "display" : "FTH1-associated iron overload"
+      "display" : "FTH1-related iron overload"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1230342001",
-      "display" : "Hepatitis B reinfection following transplantation of liver"
+      "display" : "Hepatitis B reinfection following liver transplantation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230368008",
+      "display" : "Structure of tendon within wrist and/or hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1011,22 +1050,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1231824009",
-      "display" : "NAFLD - nonalcoholic fatty liver disease"
+      "display" : "Metabolic dysfunction-associated steatotic liver disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1234778004",
-      "display" : "Steatohepatitis caused by ethanol"
+      "display" : "Alcoholic steatohepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1234821002",
-      "display" : "PIHL - primary intrahepatic lithiasis"
+      "display" : "Primary intrahepatic lithiasis"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1234822009",
-      "display" : "IAD - idiopathic adult ductopenia"
+      "display" : "Idiopathic ductopenia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1081,7 +1120,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1236941006",
-      "display" : "Metastatic carcinoma of intrahepatic bile duct"
+      "display" : "Metastatic carcinoma to intrahepatic bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1100,18 +1139,23 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "123960005",
+      "display" : "Entire subregion of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "1240370001",
-      "display" : "Metastatic squamous cell carcinoma of liver and intrahepatic biliary tract"
+      "display" : "Metastatic squamous cell carcinoma to liver and intrahepatic biliary tract"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1240414004",
-      "display" : "Malignant neoplasm morphology"
+      "display" : "Malignant neoplasm"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "124080002",
-      "display" : "Increased biliverdin"
+      "display" : "Biliverdin above reference range"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1121,7 +1165,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1251486007",
-      "display" : "Secondary carcinoma of liver"
+      "display" : "Metastatic carcinoma to liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1141,7 +1185,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1255426000",
-      "display" : "Percutaneous drainage of liver using imaging guidance"
+      "display" : "Imaging guided percutaneous drainage of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1196,7 +1240,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "12611008",
-      "display" : "Tibia"
+      "display" : "Bone structure of tibia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1211,7 +1255,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1268390002",
-      "display" : "Secondary undifferentiated carcinoma of liver and intrahepatic biliary tract"
+      "display" : "Metastatic undifferentiated carcinoma to liver and intrahepatic biliary tract"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1251,7 +1295,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "12738006",
-      "display" : "Brain"
+      "display" : "Brain structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1261,12 +1305,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "127952008",
-      "display" : "Peritoneal fold"
+      "display" : "Structure of peritoneal fold"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "127954009",
-      "display" : "Skeletal muscle"
+      "display" : "Skeletal muscle structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1291,12 +1335,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "128241005",
-      "display" : "Inflammatory disorder of liver"
+      "display" : "Inflammatory disease of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "128302006",
-      "display" : "Chronic type C viral hepatitis"
+      "display" : "Chronic hepatitis C"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1306,12 +1350,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1285574007",
-      "display" : "HRS-AKI - hepatorenal syndrome-acute kidney injury"
+      "display" : "Hepatorenal syndrome with acute kidney injury"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "128617001",
-      "display" : "Arteriovenous shunt"
+      "display" : "Arteriovenous fistula"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1331,7 +1375,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1287906003",
-      "display" : "Liver contrast procedure"
+      "display" : "Imaging of liver with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1371,7 +1415,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "129256008",
-      "display" : "Abnormally twisted structure"
+      "display" : "Torsion"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1440,13 +1484,48 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "129336009",
+      "display" : "Implantation - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129349004",
+      "display" : "Surgical lengthening - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129350004",
+      "display" : "Surgical shortening - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129357001",
+      "display" : "Closure - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "129371009",
       "display" : "Fixation - action"
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "129373007",
+      "display" : "Plication - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129377008",
+      "display" : "Reconstruction - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "129382001",
       "display" : "Destruction - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129407005",
+      "display" : "Grafting - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1466,7 +1545,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1295517006",
-      "display" : "PFIC4 - progressive familial intrahepatic cholestasis type 4"
+      "display" : "Progressive familial intrahepatic cholestasis type 4"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1486,7 +1565,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1299153008",
-      "display" : "Digenic haemochromatosis"
+      "display" : "Digenic hemochromatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13024002",
+      "display" : "Tendon structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1496,7 +1580,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1303337008",
-      "display" : "Malposition, left"
+      "display" : "Left malposition"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1536,7 +1620,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1343671008",
-      "display" : "Intraabdominal soft tissue structure"
+      "display" : "Structure of soft tissue within abdominopelvic cavity"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1556,7 +1640,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1351914008",
-      "display" : "Haemangioblastoma of liver"
+      "display" : "Hemangioblastoma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1566,7 +1650,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1356724008",
-      "display" : "Ultrasound guided mechanical liquefaction of lesion of liver"
+      "display" : "Ultrasonography guided mechanical liquefaction of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1576,27 +1660,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1356867005",
-      "display" : "Percutaneous insertion of fiducial marker into liver using ultrasonographic guidance"
+      "display" : "Ultrasonography guided percutaneous insertion of fiducial marker into liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1356872001",
-      "display" : "Percutaneous laser ablation of lesion of liver using ultrasound guidance"
+      "display" : "Ultrasonography guided percutaneous laser ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1357760008",
-      "display" : "Percutaneous microwave ablation of lesion of liver using ultrasonographic guidance"
+      "display" : "Ultrasonography guided percutaneous microwave ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1357763005",
-      "display" : "Percutaneous cryoablation of neoplasm of liver using ultrasonographic guidance"
+      "display" : "Ultrasonography guided percutaneous cryoablation of neoplasm of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1357779006",
-      "display" : "Percutaneous microwave ablation of lesion of liver using computed tomography guidance"
+      "display" : "CT guided percutaneous microwave ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1611,7 +1695,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1365891008",
-      "display" : "PSVD - porto sinusoidal vascular disease"
+      "display" : "Porto sinusoidal vascular disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1626,7 +1710,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1370994002",
-      "display" : "Upper gastrointestinal haemorrhage due to cirrhosis of liver"
+      "display" : "Upper gastrointestinal hemorrhage due to cirrhosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1651,7 +1735,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "14016003",
-      "display" : "Bone marrow"
+      "display" : "Bone marrow structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1661,12 +1745,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "14691008",
-      "display" : "90-Y"
+      "display" : "Yttrium-90"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "14766002",
-      "display" : "Removal by suction"
+      "display" : "Aspiration"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1706,12 +1790,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "15776009",
-      "display" : "Pancreas"
+      "display" : "Pancreatic structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "159033005",
-      "display" : "Dietician"
+      "display" : "Dietitian"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1761,12 +1845,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "162980001",
-      "display" : "CVS not examined"
+      "display" : "Cardiovascular system not examined"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "16431351000119104",
-      "display" : "Fluoroscopic venography of hepatic vein with haemodynamic evaluation with contrast"
+      "display" : "Fluoroscopic venography of hepatic vein with hemodynamic evaluation with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1925,6 +2009,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "18701002",
+      "display" : "Repair of tendon of hand with graft"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "187062006",
       "display" : "Histoplasmosis liver"
     },
@@ -1961,7 +2050,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "187777008",
-      "display" : "Malignant neoplasm of intrahepatic gall duct"
+      "display" : "Malignant neoplasm of intrahepatic bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2021,7 +2110,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "192781003",
-      "display" : "Leucodystrophy"
+      "display" : "Leukodystrophy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2041,7 +2130,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "197270009",
-      "display" : "Acute liver failure"
+      "display" : "Acute hepatic failure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2131,7 +2220,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "197321007",
-      "display" : "Steatosis of liver"
+      "display" : "Steatotic liver disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2141,7 +2230,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "197326002",
-      "display" : "Liver abscess due to portal pyaemia"
+      "display" : "Liver abscess due to portal pyemia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2176,7 +2265,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "197344005",
-      "display" : "Hepatitis with adenovirus"
+      "display" : "Hepatitis caused by adenovirus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2231,7 +2320,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "19921004",
-      "display" : "Compression injury"
+      "display" : "Crushing injury (morphology)"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2351,7 +2440,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "20982000",
-      "display" : "Capillary"
+      "display" : "Structure of capillary blood vessel"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2361,7 +2450,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "213148006",
-      "display" : "Transplant rejection"
+      "display" : "Transplanted organ rejection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2370,8 +2459,13 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "214433003",
+      "display" : "Repair of ruptured tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "21483005",
-      "display" : "Central nervous system"
+      "display" : "Structure of central nervous system"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2381,7 +2475,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "21793004",
-      "display" : "Connective tissue"
+      "display" : "Connective tissue structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2441,7 +2535,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "227015009",
-      "display" : "LF - Low fat liver pate"
+      "display" : "Low fat liver pate"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2451,22 +2545,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "22943007",
-      "display" : "Trunk"
+      "display" : "Trunk structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "230690007",
-      "display" : "CVA - Cerebrovascular accident"
+      "display" : "Cerebrovascular accident"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "233022006",
-      "display" : "Fontan operation with conduit from right atrium to pulmonary artery"
+      "display" : "Construction of conduit - right atrium to pulmonary trunk"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "23416004",
-      "display" : "Ulna"
+      "display" : "Bone structure of ulna"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2476,12 +2570,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "235601000112100",
-      "display" : "MetALD - metabolic dysfunction and alcohol associated liver disease"
+      "display" : "Metabolic dysfunction and alcohol associated liver disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "235856003",
-      "display" : "Hepatopathy"
+      "display" : "Disease of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2591,7 +2685,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "235888006",
-      "display" : "Intrahepatic cholestasis of pregnancy"
+      "display" : "Cholestasis of pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2641,7 +2735,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "235906009",
-      "display" : "Hyperbilirubinaemia - conjugated - type III"
+      "display" : "Hyperbilirubinemia - conjugated - type III"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2651,7 +2745,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "235909002",
-      "display" : "Alpha-1-antichymotrypsin deficiency"
+      "display" : "Antichymotrypsin deficiency-alpha-1"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2691,7 +2785,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "237836003",
-      "display" : "Small stature"
+      "display" : "Short stature disorder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2801,7 +2895,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "241234000",
-      "display" : "Intra-abdominal angiography"
+      "display" : "Angiography of abdominal blood vessel"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2821,7 +2915,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "241348003",
-      "display" : "Tc99m hepatic perfusion index study"
+      "display" : "Radionuclide imaging of liver using technetium (99m-Tc) with hepatic perfusion index"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2841,7 +2935,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "241554003",
-      "display" : "Computed tomography arterioportography with contrast"
+      "display" : "CT arterioportography with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2855,13 +2949,23 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "243234005",
+      "display" : "Repair of tendon of hand by transfer or transplantation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "243672005",
       "display" : "Echinococcus granulosus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "243796009",
-      "display" : "Context-dependent categories"
+      "display" : "Situation with explicit context"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "243928005",
+      "display" : "Entire body region"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2881,12 +2985,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "244384009",
-      "display" : "Entire right ventricle"
+      "display" : "Entire right cardiac ventricle"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "244699002",
       "display" : "Part of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245098002",
+      "display" : "Structure of tendon within upper limb"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2926,7 +3035,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "247348008",
-      "display" : "Sore to touch"
+      "display" : "Tenderness"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2966,7 +3075,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "25087005",
-      "display" : "Nervous system"
+      "display" : "Structure of nervous system"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3101,12 +3210,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "255410009",
-      "display" : "Postpartum"
+      "display" : "Maternal postpartum"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "25554004",
       "display" : "Major laceration of liver with open wound into abdominal cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "256667004",
+      "display" : "Entire tendon"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3116,12 +3230,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "257729003",
-      "display" : "Ablation"
+      "display" : "Ablation - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "257759008",
-      "display" : "FNA - Fine needle aspiration"
+      "display" : "Fine needle aspiration biopsy - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3136,7 +3250,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "257915005",
-      "display" : "Sampling"
+      "display" : "Sampling - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3151,12 +3265,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "258773002",
-      "display" : "cm3"
+      "display" : "mL"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "260222006",
-      "display" : "SPECT"
+      "display" : "Single photon emission computed tomography - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3200,6 +3314,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "261571005",
+      "display" : "Tissue graft - material"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "261922008",
       "display" : "Entire peritoneal fold"
     },
@@ -3221,12 +3340,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "262797004",
-      "display" : "Subcapsular liver haematoma"
+      "display" : "Subcapsular liver hematoma"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "262798009",
-      "display" : "Central liver haematoma"
+      "display" : "Intrahepatic hematoma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3266,7 +3385,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "263680009",
-      "display" : "AI - autoimmune"
+      "display" : "Autoimmune process"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3277,6 +3396,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "26485002",
       "display" : "Sawdust liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "265803009",
+      "display" : "Structure of muscle and/or tendon within hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3305,6 +3429,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "26731003",
+      "display" : "Repair of tendon of hand by suture"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "267431006",
       "display" : "Disorder of lipid metabolism"
     },
@@ -3327,6 +3456,16 @@
       "system" : "http://snomed.info/sct",
       "code" : "26975007",
       "display" : "Compensatory lobar hyperplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27065002",
+      "display" : "Surgical suture"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27106001",
+      "display" : "Reconstruction of tendon pulley of hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3361,7 +3500,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "272379006",
-      "display" : "Events"
+      "display" : "Event"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272625005",
+      "display" : "Entire body organ"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3372,6 +3516,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "272741003",
       "display" : "Laterality"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "274059009",
+      "display" : "Hand tendon operation"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3391,12 +3540,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "2748008",
-      "display" : "Spinal cord"
+      "display" : "Spinal cord structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "274902006",
-      "display" : "Mixed hepatocellular and bile duct carcinoma"
+      "display" : "Combined hepatocellular carcinoma and cholangiocarcinoma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3441,17 +3590,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "276862006",
-      "display" : "Entire soft tissues of abdomen"
+      "display" : "Entire soft tissue of abdomen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "278195005",
+      "display" : "Entire body system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "278292003",
-      "display" : "Ultrasound imaging"
+      "display" : "Ultrasound imaging - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "278312000",
+      "display" : "Reattachment - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "278527001",
       "display" : "Focal nodular hyperplasia of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "278859004",
+      "display" : "Entire digestive system"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3476,7 +3640,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "281157001",
-      "display" : "Systemic vascular structure"
+      "display" : "Systemic blood vessel structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281243005",
+      "display" : "Musculoskeletal structure of upper limb"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3510,8 +3679,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "281501002",
+      "display" : "Intra-abdominal digestive structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "281609006",
       "display" : "Cryoablation - action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281760001",
+      "display" : "Repair of tendon of upper limb"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3531,7 +3710,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "28273000",
-      "display" : "Bile duct"
+      "display" : "Bile duct structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3542,6 +3721,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "284359007",
       "display" : "Entire branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "286553006",
+      "display" : "Plastic operation"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3561,7 +3745,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "28989005",
-      "display" : "Branch of portal vein"
+      "display" : "Structure of branch of portal vein"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3626,7 +3810,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "298285004",
-      "display" : "Limited cutaneous systemic sclerosis"
+      "display" : "Systemic sclerosis with limited cutaneous involvement"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3726,12 +3910,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "30188007",
-      "display" : "alpha-1-Proteinase inhibitor deficiency"
+      "display" : "Alpha-1-antitrypsin deficiency"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "30213001",
       "display" : "Lymphatic edema"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302199004",
+      "display" : "Examination - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3750,28 +3939,33 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "302539009",
+      "display" : "Entire hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "302545001",
       "display" : "Entire foot"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "302919001",
-      "display" : "EBV - Epstein-Barr virus hepatitis"
+      "display" : "Epstein-Barr virus hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "303071001",
-      "display" : "Family member"
+      "display" : "Person in the family"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "303248007",
-      "display" : "Blood film sample"
+      "display" : "Blood smear specimen"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "303270005",
-      "display" : "Liver and biliary structure"
+      "display" : "Liver and/or biliary structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3781,7 +3975,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "303867000",
-      "display" : "Tc99m-labelled colloid liver study - static"
+      "display" : "Tc99m-labeled colloid liver study - static"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3796,12 +3990,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "3058005",
-      "display" : "Peripheral nervous system"
+      "display" : "Peripheral nervous system structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "307010009",
       "display" : "Extended right hemihepatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307113009",
+      "display" : "Structure of wrist and/or hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3811,7 +4010,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "30737000",
-      "display" : "Medulla of kidney"
+      "display" : "Structure of medulla of kidney"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3831,22 +4030,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "308492005",
-      "display" : "Bruise - lesion"
+      "display" : "Contusion - lesion"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "309203003",
-      "display" : "Liver biopsy sample"
+      "display" : "Liver biopsy specimen"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "309204009",
-      "display" : "Liver direct smear sample"
+      "display" : "Liver direct smear specimen"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "309399009",
-      "display" : "Hospital dietitian"
+      "display" : "Hospital-based dietitian"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3872,11 +4071,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "309417009",
       "display" : "Diabetes dietitian"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "31000003106",
-      "display" : "Test subontology module"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3911,32 +4105,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "312250003",
-      "display" : "Magnetic resonance imaging"
+      "display" : "Magnetic resonance imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "312251004",
-      "display" : "Computed tomography technique"
+      "display" : "Computed tomography imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "312254007",
-      "display" : "Plain X-ray imaging"
+      "display" : "Plain X-ray imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "312275004",
-      "display" : "Fluoroscopic imaging"
+      "display" : "Fluoroscopic imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "312337001",
-      "display" : "Thermography imaging"
+      "display" : "Thermography imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "312421008",
-      "display" : "Radionuclide imaging"
+      "display" : "Radionuclide imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3961,12 +4155,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "314963000",
-      "display" : "Local recurrence of malignant tumour of liver"
+      "display" : "Local recurrence of malignant neoplasm of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "31712002",
-      "display" : "Primary biliary cirrhosis"
+      "display" : "Primary biliary cholangitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4001,7 +4195,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "32610002",
-      "display" : "Basal ganglia"
+      "display" : "Structure of basal nucleus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4011,7 +4205,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "32764006",
-      "display" : "Portal vein"
+      "display" : "Portal vein structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4076,7 +4270,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "34154005",
-      "display" : "Intrahepatic part of portal vein"
+      "display" : "Structure of intrahepatic part of main portal vein"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4111,7 +4305,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "34707002",
-      "display" : "Biliary tract"
+      "display" : "Biliary tract structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4201,7 +4395,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "360156006",
-      "display" : "Screening"
+      "display" : "Screening intent"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4276,7 +4470,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "363678002",
-      "display" : "Positron emission tomographic imaging"
+      "display" : "Positron emission tomographic imaging - action"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4410,6 +4604,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "367430006",
+      "display" : "Repair of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "36760000",
       "display" : "Hepatosplenomegaly"
     },
@@ -4431,7 +4630,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "368380004",
-      "display" : "Structure of flexor tendon of finger"
+      "display" : "Structure of flexor tendon within finger"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4506,7 +4705,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "3711007",
-      "display" : "Great vessel"
+      "display" : "Structure of great blood vessel"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4516,7 +4715,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "371262000",
-      "display" : "Pale colour saturation"
+      "display" : "Pale color saturation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371299000",
+      "display" : "Structure of tendon and/or tendon sheath within upper limb"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4556,7 +4760,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "373379001",
-      "display" : "Tumour invasion finding"
+      "display" : "Tumor invasion finding"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4601,7 +4805,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "38199008",
-      "display" : "Tooth"
+      "display" : "Tooth structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4651,12 +4855,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "38586004",
-      "display" : "Laser beam"
+      "display" : "Laser light"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "386053000",
-      "display" : "Investigations"
+      "display" : "Evaluation procedure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4711,7 +4915,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "389087006",
-      "display" : "Hypoxaemia"
+      "display" : "Hypoxemia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4721,7 +4925,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "39057004",
-      "display" : "Pulmonic valve"
+      "display" : "Pulmonary valve structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4736,7 +4940,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "39352004",
-      "display" : "Joint"
+      "display" : "Joint structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4756,7 +4960,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "395531003",
-      "display" : "Tumour observable"
+      "display" : "Neoplasm observable"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4766,12 +4970,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "396014007",
-      "display" : "Barium sulphate"
+      "display" : "Barium sulfate"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "39607008",
-      "display" : "Lung"
+      "display" : "Lung structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4846,7 +5050,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "39937001",
-      "display" : "Skin"
+      "display" : "Skin structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4861,7 +5065,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "40141000234101",
-      "display" : "LI-RADS - Liver Imaging Reporting and Data System"
+      "display" : "Liver Imaging Reporting and Data System"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4886,7 +5090,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "40444006",
-      "display" : "Spontaneous abortion with acute necrosis of liver"
+      "display" : "Miscarriage with acute necrosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4911,7 +5115,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "405559000",
-      "display" : "Spontaneous subcapsular liver haematoma"
+      "display" : "Spontaneous subcapsular liver hematoma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4946,7 +5150,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "406208005",
-      "display" : "Adaptation behaviour"
+      "display" : "Adaptation behavior"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4971,12 +5175,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "407444007",
-      "display" : "Genus Cytomegalovirus"
+      "display" : "Cytomegalovirus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "407971000119109",
-      "display" : "Percutaneous needle biopsy of liver using computed tomography guidance"
+      "display" : "CT guided percutaneous needle biopsy of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5156,12 +5360,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "414022008",
-      "display" : "Blood disease"
+      "display" : "Disorder of cellular component of blood"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "414025005",
-      "display" : "Disorder of fetus or newborn"
+      "display" : "Fetal and/or neonatal disorder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5216,7 +5420,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "417163006",
-      "display" : "Injury"
+      "display" : "Traumatic or non-traumatic injury"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5226,7 +5430,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "417437921000119101",
-      "display" : "Metastatic NUT (nuclear protein in testis) associated carcinoma to liver"
+      "display" : "Metastatic nuclear protein in testis associated carcinoma to liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5311,7 +5515,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "419442005",
-      "display" : "Ethyl alcohol"
+      "display" : "Ethanol"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5415,6 +5619,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "422871001",
+      "display" : "Structure of flexor tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "423857001",
       "display" : "Structure of half of body lateral to midsagittal plane"
     },
@@ -5476,12 +5685,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "425413006",
-      "display" : "Drug-induced hepatic cirrhosis"
+      "display" : "Drug-induced cirrhosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "425712000",
-      "display" : "Percutaneous transluminal angioplasty of blood vessel of liver"
+      "display" : "Fluoroscopy guided percutaneous transluminal angioplasty of blood vessel of liver with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5526,12 +5735,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "427744002",
-      "display" : "Haemangioendothelioma of liver"
+      "display" : "Hemangioendothelioma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "428187007",
-      "display" : "Liver nodule"
+      "display" : "Nodule of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5541,12 +5750,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "429791001",
-      "display" : "Single photon emission computed tomography (SPECT) of liver and spleen"
+      "display" : "Single photon emission computed tomography of liver and spleen"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "429862006",
-      "display" : "Computed tomography of liver with contrast"
+      "display" : "CT of liver with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5571,7 +5780,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "430983003",
-      "display" : "Brucella abortus, vaccinal strain RB51"
+      "display" : "Brucella abortus strain RB51"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5586,12 +5795,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "431460001",
-      "display" : "Sampling of blood of hepatic vein using fluoroscopic guidance with contrast"
+      "display" : "Fluoroscopy guided sampling of blood of hepatic vein with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "431475009",
-      "display" : "Radiofrequency ablation of lesion of liver using computed tomography (CT) guidance"
+      "display" : "CT guided radiofrequency ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5606,7 +5815,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "431674004",
-      "display" : "Haematoma and contusion of liver"
+      "display" : "Hematoma and contusion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5616,47 +5825,47 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "431839003",
-      "display" : "Magnetic resonance imaging of liver with contrast"
+      "display" : "MRI of liver with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "431948007",
-      "display" : "Single photon emission computed tomography of haemangioma of liver"
+      "display" : "Single photon emission computed tomography of hemangioma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "432040000",
-      "display" : "Percutaneous transluminal cutting balloon angioplasty of hepatic vein using fluoroscopic guidance with contrast"
+      "display" : "Fluoroscopy guided percutaneous transluminal cutting balloon angioplasty of hepatic vein with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "432042008",
-      "display" : "Percutaneous insertion of catheter into hepatic vein using fluoroscopic guidance with contrast"
+      "display" : "Fluoroscopy guided percutaneous insertion of catheter into hepatic vein"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "432047002",
-      "display" : "Measurement of pressure of hepatic vein using fluoroscopic guidance with contrast"
+      "display" : "Fluoroscopy guided measurement of pressure of hepatic vein with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "432226009",
-      "display" : "Ablation of lesion of liver using computed tomography guidance"
+      "display" : "CT guided ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "43239002",
-      "display" : "75-Se"
+      "display" : "Selenium-75"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "432551009",
-      "display" : "Magnetic resonance imaging (MRI) of liver and spleen"
+      "display" : "MRI of liver and spleen"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "432633002",
-      "display" : "Magnetic resonance imaging (MRI) of liver and biliary tract with contrast"
+      "display" : "MRI of liver and biliary tract with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5676,7 +5885,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "432905004",
-      "display" : "Computed tomography of liver and portal vein with contrast"
+      "display" : "CT of liver and portal vein with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5701,12 +5910,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "433866007",
-      "display" : "Laser ablation of lesion of liver using computed tomography (CT) guidance"
+      "display" : "CT guided laser ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "433876005",
-      "display" : "Ethanol ablation of lesion of liver using computed tomography (CT) guidance"
+      "display" : "CT guided ethanol ablation of lesion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5726,7 +5935,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "438305004",
-      "display" : "Computed tomography dual phase study of liver"
+      "display" : "CT dual phase study of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5741,7 +5950,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "438529005",
-      "display" : "Ablation of liver using magnetic resonance imaging guidance"
+      "display" : "MRI guided ablation of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5786,7 +5995,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "44132006",
-      "display" : "Abscess"
+      "display" : "Abscess morphology"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5841,7 +6050,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "442685003",
-      "display" : "NASH - Nonalcoholic steatohepatitis"
+      "display" : "Metabolic dysfunction-associated steatohepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5851,7 +6060,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "442831001",
-      "display" : "Percutaneous needle biopsy of liver using fluoroscopic guidance"
+      "display" : "Fluoroscopy guided percutaneous needle biopsy of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5871,7 +6080,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "443637005",
-      "display" : "Single photon emission computed tomography with computed tomography of haemangioma of liver"
+      "display" : "Single photon emission computed tomography with computed tomography of hemangioma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5991,7 +6200,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "448677000",
-      "display" : "Computed tomography perfusion study of liver"
+      "display" : "CT perfusion study of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6011,17 +6220,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "448997008",
-      "display" : "Cystadenoma of liver"
+      "display" : "Hepatic cystadenoma"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "449014008",
-      "display" : "Hepatic vein to left sided atrium"
+      "display" : "Hepatic vein to left atrium"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "449015009",
-      "display" : "Hepatic vein to right sided atrium"
+      "display" : "Hepatic vein to right atrium"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6031,7 +6240,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "449516003",
-      "display" : "Separate hepatic vein and inferior vena cava connections to heart"
+      "display" : "Separate hepatic venous and inferior caval venous connections to heart"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6082,6 +6291,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "45744005",
       "display" : "Disorder of mineral metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45810006",
+      "display" : "Reattachment of tendon of hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6156,7 +6370,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "47622006",
-      "display" : "Echinococcus"
+      "display" : "Genus Echinococcus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6186,7 +6400,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "48477009",
-      "display" : "Lip"
+      "display" : "Lip structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6206,32 +6420,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "49416000",
-      "display" : "Failed attempted abortion"
+      "display" : "Failed attempted termination of pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "49483002",
-      "display" : "Mediastinal disorder"
+      "display" : "Disorder of mediastinum"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "49596003",
-      "display" : "Digestive organ"
+      "display" : "Digestive organ structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "49601007",
-      "display" : "Cardiovascular disorder"
+      "display" : "Disorder of cardiovascular system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "49622001",
-      "display" : "Transplanted vein"
+      "display" : "Structure of transplanted vein"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "49755003",
-      "display" : "Abnormal tissue appearance"
+      "display" : "Morphologically abnormal structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6256,7 +6470,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "50384007",
-      "display" : "Mumps virus"
+      "display" : "Orthorubulavirus parotitidis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6271,7 +6485,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "50703002",
-      "display" : "Visceral peritoneum"
+      "display" : "Structure of visceral serous membrane of peritoneum"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6286,12 +6500,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "51083003",
-      "display" : "Pigmentation"
+      "display" : "Pigment deposition"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "51185008",
-      "display" : "Thorax"
+      "display" : "Thoracic structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6331,12 +6545,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "52530000",
-      "display" : "Topographic region"
+      "display" : "Body region structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "52687003",
-      "display" : "Shaft of tibia"
+      "display" : "Bone structure of shaft of tibia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6386,12 +6600,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "54115001",
-      "display" : "Myelinated nerve fiber"
+      "display" : "Myelinated nerve fiber structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "54124005",
-      "display" : "Epithelioid hemangioendothelioma, malignant"
+      "display" : "Epithelioid hemangioendothelioma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6476,7 +6690,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "56459004",
-      "display" : "Foot"
+      "display" : "Foot structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6491,7 +6705,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "5665001",
-      "display" : "Retina"
+      "display" : "Retinal structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6501,7 +6715,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "56732008",
-      "display" : "Hepatic duct"
+      "display" : "Structure of hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6531,7 +6745,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "57797005",
-      "display" : "Induced abortion"
+      "display" : "Termination of pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57944009",
+      "display" : "Tendon pulley reconstruction"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6556,17 +6775,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "58471003",
-      "display" : "Renal tubule"
+      "display" : "Renal tubule structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "58501004",
-      "display" : "Cerebellar vermis"
+      "display" : "Cerebellar vermis structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "589001",
-      "display" : "Interventricular septum"
+      "display" : "Interventricular septum structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6596,7 +6815,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "59380008",
-      "display" : "Anterior abdominal wall"
+      "display" : "Anterior abdominal wall structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6611,17 +6830,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "59652004",
-      "display" : "Atrium"
+      "display" : "Atrial structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "59820001",
-      "display" : "Blood vessel"
+      "display" : "Blood vessel structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59863003",
+      "display" : "Tendon and/or tendon sheath structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "59919008",
-      "display" : "Failed attempted abortion with complication"
+      "display" : "Failed attempted termination of pregnancy with complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6686,7 +6910,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "6076005",
-      "display" : "Gastrointestinal subserosa"
+      "display" : "Structure of gastrointestinal subserosa"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6706,7 +6930,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "609169001",
-      "display" : "Percutaneous cryotherapy ablation of tumor of liver using computed tomography guidance"
+      "display" : "Percutaneous cryoablation of neoplasm of liver using computed tomography guidance"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6766,7 +6990,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "62413002",
-      "display" : "Radius"
+      "display" : "Bone structure of radius"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6786,12 +7010,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "62662008",
-      "display" : "Embryonic vein"
+      "display" : "Embryonic venous structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "62834003",
-      "display" : "Upper gastrointestinal tract"
+      "display" : "Upper gastrointestinal tract structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6821,7 +7045,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "64033007",
-      "display" : "Kidney"
+      "display" : "Kidney structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6836,7 +7060,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "64281006",
-      "display" : "Left hepatic duct"
+      "display" : "Structure of left hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6901,7 +7125,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "66019005",
-      "display" : "Extremity"
+      "display" : "Limb structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6936,7 +7160,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "66754008",
-      "display" : "Appendix"
+      "display" : "Appendix structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6951,7 +7175,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "66937008",
-      "display" : "Glycogen storage disease, type III"
+      "display" : "Glycogen storage disease type III"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6971,12 +7195,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "67734004",
-      "display" : "Upper trunk"
+      "display" : "Thoracic segment of trunk"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "67830002",
       "display" : "Teratocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6787005",
+      "display" : "Structure of tendon and/or tendon sheath within hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7026,7 +7255,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "699346009",
-      "display" : "Hereditary neoplastic syndrome"
+      "display" : "Hereditary cancer-predisposing syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7036,7 +7265,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "699602007",
-      "display" : "Structure of viscus of abdomen proper"
+      "display" : "Structure of organ within abdomen proper cavity"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7052,6 +7281,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "699668009",
       "display" : "Secondary nonischemic congestive cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699997005",
+      "display" : "Skeletal muscle and/or tendon structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7091,7 +7325,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "703271000",
-      "display" : "Infantile haemangioma of liver"
+      "display" : "Infantile hemangioma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7116,7 +7350,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "705057003",
-      "display" : "Presence (property)"
+      "display" : "Presence"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7136,7 +7370,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "707341005",
-      "display" : "Viral hepatitis type D"
+      "display" : "Viral hepatitis D"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7175,8 +7409,13 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "709291000",
+      "display" : "Repair of flexor tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "709591001",
-      "display" : "Drainage of liver using fluoroscopic guidance"
+      "display" : "Fluoroscopy guided drainage of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7206,7 +7445,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "7111000119109",
-      "display" : "Hepatitis E virus infection"
+      "display" : "Viral hepatitis E"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7220,8 +7459,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "712638006",
+      "display" : "Repair of extensor tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "71273005",
       "display" : "Partial hepatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "712835007",
+      "display" : "Structure of extensor tendon within hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7246,7 +7495,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "713510001",
-      "display" : "Large liver co-occurrent with human immunodeficiency virus infection"
+      "display" : "Enlargement of liver co-occurrent with human immunodeficiency virus infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7261,12 +7510,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "713540004",
-      "display" : "Substance with antiretroviral mechanism of action"
+      "display" : "Antiretroviral"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "713698004",
-      "display" : "Nodular regenerative hyperplasia of liver caused by anti-retroviral drug"
+      "display" : "Nodular regenerative hyperplasia of liver caused by antiretroviral drug"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7311,12 +7560,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "715401008",
-      "display" : "Primary biliary cirrhosis co-occurrent with systemic scleroderma"
+      "display" : "Reynolds syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "715864007",
-      "display" : "Non-Wilsonian hepatic copper toxicosis of infancy and childhood"
+      "display" : "Idiopathic copper associated cirrhosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7341,7 +7590,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "716518003",
-      "display" : "Fine needle aspiration biopsy of liver using ultrasonographic guidance"
+      "display" : "Ultrasonography guided fine needle aspiration of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7356,7 +7605,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "716756004",
-      "display" : "Percutaneous irreversible electroporation ablation of neoplasm of liver using computed tomography guidance"
+      "display" : "CT guided percutaneous irreversible electroporation ablation of neoplasm of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7366,7 +7615,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "717047007",
-      "display" : "Bile acid coenzyme A ligase deficiency and defective amidation"
+      "display" : "Bile acid CoA ligase deficiency and defective amidation"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7381,7 +7630,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "717187000",
-      "display" : "Boichis disease"
+      "display" : "Boichis syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7486,7 +7735,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "721847002",
-      "display" : "Joubert syndrome with hepatic defect"
+      "display" : "Joubert syndrome with congenital hepatic fibrosis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7506,7 +7755,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "722866000",
-      "display" : "Non-alcoholic fatty liver disease without non-alcoholic steatohepatitis"
+      "display" : "Metabolic dysfunction-associated steatotic liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7561,7 +7810,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "72410000",
-      "display" : "Mediastinum"
+      "display" : "Mediastinal structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7626,12 +7875,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "726550007",
-      "display" : "Percutaneous transluminal venoplasty of hepatic vein using fluoroscopic guidance with contrast"
+      "display" : "Fluoroscopy guided percutaneous transluminal angioplasty of hepatic vein with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "726555002",
-      "display" : "Percutaneous venoplasty of transplanted hepatic vein using fluoroscopic guidance with contrast"
+      "display" : "Fluoroscopy guided percutaneous transluminal angioplasty of transplanted hepatic vein with contrast"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7645,13 +7894,23 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "727429009",
+      "display" : "Entire tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "728137008",
+      "display" : "Entire tendon within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "72904005",
       "display" : "Treponema pallidum"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "72914001",
-      "display" : "Palate"
+      "display" : "Palatal structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7665,13 +7924,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "732049009",
+      "display" : "Entire liver and biliary system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "732937005",
       "display" : "Capsule"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "732943007",
-      "display" : "Has basis of strength substance"
+      "display" : "Has BoSS"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7710,6 +7974,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "734139008",
+      "display" : "Anatomy structure and part association reference set"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "73426008",
       "display" : "Abnormal bile secretion"
     },
@@ -7721,7 +7990,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "735456000",
-      "display" : "Drug-induced liver hypersensitivity disease"
+      "display" : "Hypersensitivity disease of liver caused by drug"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7776,7 +8045,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "73829009",
-      "display" : "Right atrium"
+      "display" : "Right atrial structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7796,7 +8065,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "74281007",
-      "display" : "Myocardium"
+      "display" : "Myocardium structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7846,7 +8115,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "75889009",
-      "display" : "Subacute inflammation"
+      "display" : "Acute and chronic inflammation"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7921,7 +8190,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "763096004",
-      "display" : "Sickle cell liver disease"
+      "display" : "Sickle cell hepatopathy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7932,6 +8201,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "76319000",
       "display" : "Diffuse necrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76340004",
+      "display" : "Plication of tendon of hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7951,7 +8225,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "764962002",
-      "display" : "Hepatoencephalopathy due to COXPD1 (combined oxidative phosphorylation defect type 1)"
+      "display" : "Hepatoencephalopathy due to combined oxidative phosphorylation defect type 1"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7996,7 +8270,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "767023003",
-      "display" : "Period of life beginning after birth and ending before death"
+      "display" : "Period of life between birth and death"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8101,17 +8375,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "771441005",
-      "display" : "Hyperbiliverdinaemia"
+      "display" : "Hyperbiliverdinemia"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "772815008",
-      "display" : "Non-Alcoholic Fatty Liver Disease fibrosis score"
+      "display" : "NAFLD (Non-Alcoholic Fatty Liver Disease) fibrosis score"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "773113008",
-      "display" : "Acute hepatitis caused by infection"
+      "display" : "Acute infectious hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8141,7 +8415,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "773737004",
-      "display" : "Meckel syndrome type 7"
+      "display" : "NPHP3-related Meckel-like syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8156,7 +8430,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "774151000",
-      "display" : "Cerebro-cutaneous syndrome with iron overload"
+      "display" : "Ferro-cerebro-cutaneous syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8171,7 +8445,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "77465005",
-      "display" : "Transplantation"
+      "display" : "Transplantation to recipient"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8181,12 +8455,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "77622001",
-      "display" : "Retrovirus"
+      "display" : "Family Retroviridae"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "77638007",
-      "display" : "Ligament of trunk"
+      "display" : "Structure of ligament of trunk"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8201,7 +8475,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "78000005",
-      "display" : "Right hepatic duct"
+      "display" : "Structure of right hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8211,7 +8485,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "78076003",
-      "display" : "Crystalline lens"
+      "display" : "Lens clear"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8231,7 +8505,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "78220002",
-      "display" : "Umbilicus"
+      "display" : "Umbilical structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8271,7 +8545,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "784346006",
-      "display" : "Navajo neuropathy"
+      "display" : "Navajo neurohepatopathy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8301,7 +8575,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "78696007",
-      "display" : "Endocrine pancreas"
+      "display" : "Endocrine pancreatic structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8316,12 +8590,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "788982002",
-      "display" : "Mesothelioma of liver"
+      "display" : "Mesothelial carcinoma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "78961009",
-      "display" : "Spleen"
+      "display" : "Splenic structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8371,7 +8645,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "79984008",
-      "display" : "Skeletal muscular system"
+      "display" : "Skeletal muscle system structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8386,7 +8660,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "80515008",
-      "display" : "Hepatomegaly"
+      "display" : "Large liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8406,7 +8680,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "80891009",
-      "display" : "Heart"
+      "display" : "Heart structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8416,7 +8690,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "81040000",
-      "display" : "Pulmonary artery"
+      "display" : "Pulmonary artery structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8436,7 +8710,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "816094009",
-      "display" : "Thoracic cross-sectional segment of trunk"
+      "display" : "Cross-sectional thorax"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8446,7 +8720,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "818948002",
-      "display" : "High grade flat intraepithelial neoplasia"
+      "display" : "High grade glandular intraepithelial neoplasia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8462,6 +8736,16 @@
       "system" : "http://snomed.info/sct",
       "code" : "818987002",
       "display" : "Abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818988007",
+      "display" : "Intra-abdominal proper structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818993005",
+      "display" : "Organ within abdominopelvic cavity"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8485,6 +8769,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "822979009",
+      "display" : "Entire organ within abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "82353009",
       "display" : "Congenital infectious disease"
     },
@@ -8501,7 +8790,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "82471001",
-      "display" : "Left atrium"
+      "display" : "Left atrial structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8526,7 +8815,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "831000119103",
-      "display" : "Chronic hepatitis C with stage 4 fibrosis"
+      "display" : "Cirrhosis of liver due to chronic hepatitis C"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8546,7 +8835,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "83670000",
-      "display" : "Peritoneal cavity"
+      "display" : "Peritoneal cavity structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8576,7 +8865,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "838380002",
-      "display" : "Chronic hepatitis B with hepatitis C and hepatitis D"
+      "display" : "Chronic hepatitis B co-occurrent with hepatitis C and hepatitis D"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8586,7 +8875,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "840499006",
-      "display" : "Echinococcus granulosus infection of liver with rupture"
+      "display" : "Rupture of liver due to Echinococcus granulosus infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8611,7 +8900,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "85057007",
-      "display" : "Hepatic cyst"
+      "display" : "Liver cyst"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8622,6 +8911,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "85293002",
       "display" : "Interstitial tissue"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85562004",
+      "display" : "Hand structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8636,7 +8930,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "85756007",
-      "display" : "Body tissue"
+      "display" : "Body tissue structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8661,7 +8955,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "85995004",
-      "display" : "Recessive hereditary disorder (autosomal)"
+      "display" : "Autosomal recessive hereditary disorder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8681,17 +8975,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "860856002",
-      "display" : "Schistosoma haematobium hepatosplenic schistosomiasis"
+      "display" : "Hepatosplenic schistosomiasis caused by Schistosoma haematobium"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "860860004",
-      "display" : "Glycogen storage disease due to liver and muscle glycogen phosphorylase kinase deficiency"
+      "display" : "Glycogen storage disease type IXB"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "860861000",
-      "display" : "Hepatosplenic schistosomiasis caused by Schistosoma mansoni"
+      "display" : "Infection of liver and spleen caused by Schistosoma mansoni"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8711,7 +9005,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "86251006",
-      "display" : "Tumour, uncertain whether benign or malignant"
+      "display" : "Neoplasm of uncertain behavior"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8731,7 +9025,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "863897005",
-      "display" : "Failed attempted abortion with acute necrosis of liver"
+      "display" : "Failed attempted termination of pregnancy complicated by acute necrosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8771,7 +9065,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "866142007",
-      "display" : "Parasitic infection of liver"
+      "display" : "Infection of liver caused by parasite"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8786,12 +9080,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "86762007",
-      "display" : "Digestive system"
+      "display" : "Structure of digestive system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "86763002",
-      "display" : "Portal venous system"
+      "display" : "Portal venous system structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8801,7 +9095,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "870428003",
-      "display" : "FALD - Fontan associated liver disease"
+      "display" : "Fontan-associated liver disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8886,7 +9180,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "89545001",
-      "display" : "Face"
+      "display" : "Face structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8896,7 +9190,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "89679009",
-      "display" : "Mesentery"
+      "display" : "Structure of mesentery of peritoneum"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8906,7 +9200,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "897152007",
-      "display" : "Abnormal liver morphology"
+      "display" : "Structural abnormality of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8920,113 +9214,8 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "900000000000003001",
-      "display" : "Fully specified name"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000006009",
-      "display" : "Defining relationship"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000010007",
-      "display" : "Stated relationship"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000011006",
-      "display" : "Inferred relationship"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000012004",
-      "display" : "SNOMED CT model component"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000013009",
-      "display" : "Synonym"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000017005",
-      "display" : "Case sensitive"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000020002",
-      "display" : "Initial character case insensitive"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000073002",
-      "display" : "Sufficiently defined by necessary conditions definition status"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000074008",
-      "display" : "Not sufficiently defined by necessary conditions definition status"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000207008",
-      "display" : "SNOMED CT core module"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000225001",
-      "display" : "Qualifying relationship"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000227009",
-      "display" : "Additional relationship"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "900000000000441003",
       "display" : "SNOMED CT Model Component"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000444006",
-      "display" : "Definition status"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000446008",
-      "display" : "Description type"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000447004",
-      "display" : "Case significance"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000448009",
-      "display" : "Entire term case insensitive"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000449001",
-      "display" : "Characteristic type"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000450001",
-      "display" : "Modifier"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000451002",
-      "display" : "Some"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000452009",
-      "display" : "Universal restriction modifier"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9055,13 +9244,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "900000000000461009",
+      "display" : "Concept type component"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "900000000000481005",
       "display" : "Concept inactivation value"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "900000000000482003",
-      "display" : "Duplicate component"
+      "display" : "Duplicate"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9081,27 +9275,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "900000000000507009",
-      "display" : "English [International Organization for Standardization 639-1 code en] language reference set"
+      "display" : "English"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "900000000000508004",
-      "display" : "Great Britain English language reference set"
+      "display" : "GB English"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "900000000000509007",
-      "display" : "United States of America English language reference set"
+      "display" : "US English"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "900000000000511003",
-      "display" : "Acceptability"
+      "code" : "900000000000521006",
+      "display" : "Association type"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "900000000000522004",
-      "display" : "Historical association reference set"
+      "display" : "Historical association"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9125,28 +9319,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "900000000000548007",
-      "display" : "Preferred"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000549004",
-      "display" : "Acceptable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "900000000000550004",
-      "display" : "Definition"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "90219004",
-      "display" : "Coronary sinus"
+      "display" : "Coronary sinus structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "90281006",
       "display" : "Infection by Opisthorchis viverrini"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90650008",
+      "display" : "Lengthening of tendon of hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9157,6 +9341,16 @@
       "system" : "http://snomed.info/sct",
       "code" : "90753004",
       "display" : "Hepatic schistosomiasis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90907001",
+      "display" : "Shortening of tendon of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91092007",
+      "display" : "Myotenontoplasty of hand"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9171,7 +9365,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "91689009",
-      "display" : "Organ system"
+      "display" : "Body system structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91717005",
+      "display" : "Organ part"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9181,7 +9380,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "91771000",
-      "display" : "Organ capsule"
+      "display" : "Structure of organ capsule"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9251,12 +9450,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "94349006",
-      "display" : "Secondary malignant neoplasm of intrahepatic bile ducts"
+      "display" : "Metastatic malignant neoplasm to intrahepatic bile ducts"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "94381002",
-      "display" : "Secondary malignant neoplasm of liver"
+      "display" : "Metastatic malignant neoplasm to liver"
     },
     {
       "system" : "http://snomed.info/sct",

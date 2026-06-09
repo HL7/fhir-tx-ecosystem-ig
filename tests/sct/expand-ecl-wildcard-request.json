@@ -30,8 +30,12 @@
       }
     },
     {
-      "name" : "limit",
+      "name" : "count",
       "valueInteger" : 3000
+    },
+    {
+      "name": "allowMaximumSizeExpansion",
+      "valueBoolean": true
     }
   ]
 }
