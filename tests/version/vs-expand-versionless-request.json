@@ -10,29 +10,10 @@
         "compose": {
           "include": [
             {
-              "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+              "system": "http://hl7.org/fhir/test/CodeSystem/noversion"
             }
           ]
         }
-      }
-    },
-    {
-      "name": "tx-resource",
-      "resource": {
-        "resourceType": "CodeSystem",
-        "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "name": "NCIt",
-        "status": "active",
-        "caseSensitive": true,
-        "content": "fragment",
-        "concept": [
-          {
-            "code": "C15432"
-          },
-          {
-            "code": "C18000"
-          }
-        ]
       }
     }
   ]

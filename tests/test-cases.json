@@ -1220,7 +1220,7 @@
     "name" : "version",
     "mode" : "general",
     "description" : "Testing various version issues. There's two versions of a code system, and three value sets that select different versions",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json",
+    "setup" : ["simple/codesystem-simple.json", "simple/codesystem-noversion.json", "simple/valueset-all.json",
         "version/codesystem-version-1.json", "version/codesystem-version-2.json", "version/valueset-all-version-1.json", "version/valueset-all-version-2.json", "version/valueset-all-version.json",
         "version/valueset-version-1.json", "version/valueset-version-2.json", "version/valueset-version-n.json", "version/valueset-version-w.json", "version/valueset-version-w-bad.json", "version/valueset-version-mixed.json"
       ],
