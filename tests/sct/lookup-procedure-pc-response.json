@@ -36,45 +36,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "260686004"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Method"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Surgical action"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "129284003"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "260686004"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Method"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Surgical repair - action"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "129342008"
-    }]
+    "valueString" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
   },
   {
     "name" : "property",
@@ -118,11 +80,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "363704007"
+      "valueCode" : "405813007"
     },
     {
       "name" : "code-display",
-      "valueString" : "Procedure site"
+      "valueString" : "Procedure site - Direct"
     },
     {
       "name" : "description",
@@ -131,101 +93,6 @@
     {
       "name" : "value",
       "valueCode" : "118632007"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "363704007"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Procedure site"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Tendon"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "13024002"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "363704007"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Procedure site"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Tendon of upper limb"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "245098002"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "363704007"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Procedure site"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Hand"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "85562004"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "405813007"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Procedure site - Direct (attribute)"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Tendon of hand"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "118632007"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "405813007"
-    },
-    {
-      "name" : "code-display",
-      "valueString" : "Procedure site - Direct (attribute)"
-    },
-    {
-      "name" : "description",
-      "valueString" : "Tendon of upper limb"
-    },
-    {
-      "name" : "value",
-      "valueCode" : "245098002"
     }]
   },
   {
@@ -236,7 +103,7 @@
     },
     {
       "name" : "description",
-      "valueString" : "Repair of tendon of hand with graft (procedure)"
+      "valueString" : "Repair of tendon of hand with graft"
     },
     {
       "name" : "value",
@@ -326,7 +193,7 @@
     },
     {
       "name" : "description",
-      "valueString" : "Repair of flexor tendon of hand (procedure)"
+      "valueString" : "Repair of flexor tendon of hand"
     },
     {
       "name" : "value",
@@ -497,6 +364,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
+    "valueString" : "http://snomed.info/xsct/900000000000207008/version/20250814"
   }]
 }

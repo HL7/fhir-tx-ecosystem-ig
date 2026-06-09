@@ -6,13 +6,14 @@
   },
   {
     "name" : "display",
-    "valueString" : "197271008|Acute hepatitis - non-infective|:{363698007|Finding site|=10200004|Liver|}"
+    "valueString" : "197271008|Acute hepatitis - non-infective|:{363698007|Finding site|=10200004|Liver structure|}"
   },
   {
     "name" : "issues",
     "resource" : {
       "resourceType" : "OperationOutcome",
       "issue" : [{
+        "$optional-properties$" : ["extension"],
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
@@ -41,9 +42,5 @@
   {
     "name" : "system",
     "valueUri" : "http://snomed.info/sct"
-  },
-  {
-    "name" : "version",
-    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
   }]
 }
