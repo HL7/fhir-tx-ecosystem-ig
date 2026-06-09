@@ -4846,7 +4846,7 @@
 
       {
         "name" : "snomed-expand-ecl-refinement-cardinality-rolegroup",
-        "description" : "Role group cardinality without outer count: at least one role group containing exactly 1 Finding site in liver — more permissive, includes concepts with multiple groups each having 1 liver Finding site (653).",
+        "description" : "Role group cardinality without outer count: at least one role group containing exactly 1 Finding site in liver — more permissive, includes concepts with multiple groups each having 1 liver Finding site (661).",
         "operation" : "expand",
         "request" : "sct/expand-ecl-refinement-cardinality-rolegroup-request.json",
         "response" : "sct/expand-ecl-refinement-cardinality-rolegroup-response.json"

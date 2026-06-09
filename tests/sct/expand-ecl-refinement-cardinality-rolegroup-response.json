@@ -16,7 +16,7 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 653,
+    "total" : 661,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
@@ -380,7 +380,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1197739005",
-      "display" : "Hepatic fibrosis due to non-alcoholic fatty liver disease"
+      "display" : "Fibrosis of liver due to metabolic dysfunction-associated steatotic liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -430,7 +430,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1234778004",
-      "display" : "Steatohepatitis caused by ethanol"
+      "display" : "Alcoholic steatohepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -464,6 +464,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "123606000",
+      "display" : "Cholangiolitic cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "123607009",
       "display" : "Septal fibrosis of liver"
     },
@@ -486,6 +491,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "123717006",
       "display" : "Advanced cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1237346001",
+      "display" : "Caroli syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -625,7 +635,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1370994002",
-      "display" : "Upper gastrointestinal haemorrhage due to cirrhosis of liver"
+      "display" : "Upper gastrointestinal hemorrhage due to cirrhosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -844,6 +854,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "197296006",
+      "display" : "Capsular portal cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "197299004",
       "display" : "Pigmentary portal cirrhosis"
     },
@@ -1055,7 +1070,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "235601000112100",
-      "display" : "MetALD - metabolic dysfunction and alcohol associated liver disease"
+      "display" : "Metabolic dysfunction and alcohol associated liver disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1301,6 +1316,16 @@
       "system" : "http://snomed.info/sct",
       "code" : "240790002",
       "display" : "Schistosomal hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240791003",
+      "display" : "Hepatic schistosomal granuloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240792005",
+      "display" : "Symmer's pipe-stem fibrosis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1600,7 +1625,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "31712002",
-      "display" : "Primary biliary cirrhosis"
+      "display" : "Primary biliary cholangitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1890,7 +1915,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "425413006",
-      "display" : "Drug-induced hepatic cirrhosis"
+      "display" : "Drug-induced cirrhosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1930,7 +1955,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "431674004",
-      "display" : "Haematoma and contusion of liver"
+      "display" : "Hematoma and contusion of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1990,7 +2015,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "442685003",
-      "display" : "NASH - Nonalcoholic steatohepatitis"
+      "display" : "Metabolic dysfunction-associated steatohepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2146,6 +2171,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "53476006",
       "display" : "Radiation hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "536002",
+      "display" : "Glissonian cirrhosis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2324,6 +2354,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "699189004",
+      "display" : "North American Indian childhood cirrhosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "700463002",
       "display" : "Alpha-methylacyl-CoA racemase deficiency disorder"
     },
@@ -2440,12 +2475,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "715401008",
-      "display" : "Primary biliary cirrhosis co-occurrent with systemic scleroderma"
+      "display" : "Reynolds syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "715864007",
-      "display" : "Non-Wilsonian hepatic copper toxicosis of infancy and childhood"
+      "display" : "Idiopathic copper associated cirrhosis of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2980,7 +3015,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "831000119103",
-      "display" : "Chronic hepatitis C with stage 4 fibrosis"
+      "display" : "Cirrhosis of liver due to chronic hepatitis C"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3005,7 +3040,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "838380002",
-      "display" : "Chronic hepatitis B with hepatitis C and hepatitis D"
+      "display" : "Chronic hepatitis B co-occurrent with hepatitis C and hepatitis D"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83864008",
+      "display" : "Drug-induced cholestatic hepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
