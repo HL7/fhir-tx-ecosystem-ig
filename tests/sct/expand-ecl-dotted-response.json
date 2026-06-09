@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-dotted",
   "version" : "5.0.0",
@@ -27,50 +27,51 @@
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
     }],
-    "contains" : [{
+    "contains" : [
+    {
       "system" : "http://snomed.info/sct",
       "code" : "10200004",
-      "display" : "Liver"
+      "display" : "Liver structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113254000",
-      "display" : "Interstitial tissue of lung"
+      "display" : "Structure of interstitial tissue of lung"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113257007",
-      "display" : "Cardiovascular system"
+      "display" : "Structure of cardiovascular system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113262008",
-      "display" : "Thoracic aorta"
+      "display" : "Thoracic aorta structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113305005",
-      "display" : "Cerebellum"
+      "display" : "Cerebellar structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113331007",
-      "display" : "Endocrine system"
+      "display" : "Structure of endocrine system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113343008",
-      "display" : "Body organ"
+      "display" : "Body organ structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "116003000",
-      "display" : "Immune system"
+      "display" : "Structure of immune system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "116006008",
-      "display" : "Pleural sac"
+      "display" : "Pleural sac structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -85,37 +86,37 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "122489005",
-      "display" : "Urinary system"
+      "display" : "Urinary system structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "122972007",
-      "display" : "Vein of lung"
+      "display" : "Structure of vein of pulmonary circulation"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "12611008",
-      "display" : "Tibia"
+      "display" : "Bone structure of tibia"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "12738006",
-      "display" : "Brain"
+      "display" : "Brain structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "127879008",
-      "display" : "Hepatic parenchyma"
+      "display" : "Structure of parenchyma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "127954009",
-      "display" : "Skeletal muscle"
+      "display" : "Skeletal muscle structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1303491005",
-      "display" : "Subcapsular hepatic space"
+      "display" : "Structure of subcapsular space of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -125,22 +126,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "14016003",
-      "display" : "Bone marrow"
+      "display" : "Bone marrow structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "15120006",
-      "display" : "Intralobular bile duct"
+      "display" : "Structure of intralobular bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "15776009",
-      "display" : "Pancreas"
+      "display" : "Pancreatic structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "15878004",
-      "display" : "Hepatic lobule"
+      "display" : "Hepatic lobule structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -155,27 +156,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "20982000",
-      "display" : "Capillary"
+      "display" : "Structure of capillary blood vessel"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "21483005",
-      "display" : "Central nervous system"
+      "display" : "Structure of central nervous system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "21793004",
-      "display" : "Connective tissue"
+      "display" : "Connective tissue structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "22943007",
-      "display" : "Trunk"
+      "display" : "Trunk structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "244384009",
-      "display" : "Entire right ventricle"
+      "display" : "Entire right cardiac ventricle"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -185,17 +186,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "25087005",
-      "display" : "Nervous system"
+      "display" : "Structure of nervous system"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "2748008",
-      "display" : "Spinal cord"
+      "display" : "Spinal cord structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "28273000",
-      "display" : "Bile duct"
+      "display" : "Bile duct structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -210,32 +211,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "3058005",
-      "display" : "Peripheral nervous system"
+      "display" : "Peripheral nervous system structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "30737000",
-      "display" : "Medulla of kidney"
+      "display" : "Structure of medulla of kidney"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "32610002",
-      "display" : "Basal ganglia"
+      "display" : "Structure of basal nucleus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "32764006",
-      "display" : "Portal vein"
+      "display" : "Portal vein structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "34154005",
-      "display" : "Intrahepatic part of portal vein"
+      "display" : "Structure of intrahepatic part of main portal vein"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "34707002",
-      "display" : "Biliary tract"
+      "display" : "Biliary tract structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -250,22 +251,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "368380004",
-      "display" : "Structure of flexor tendon of finger"
+      "display" : "Structure of flexor tendon within finger"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "37424004",
-      "display" : "Hepatic acinus"
+      "display" : "Structure of hepatic acinus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "38199008",
-      "display" : "Tooth"
+      "display" : "Tooth structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "3860006",
-      "display" : "Transplanted liver"
+      "display" : "Structure of transplanted liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -275,22 +276,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "39057004",
-      "display" : "Pulmonic valve"
+      "display" : "Pulmonary valve structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "39352004",
-      "display" : "Joint"
+      "display" : "Joint structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "39607008",
-      "display" : "Lung"
+      "display" : "Lung structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "39937001",
-      "display" : "Skin"
+      "display" : "Skin structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -300,82 +301,82 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "48477009",
-      "display" : "Lip"
+      "display" : "Lip structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "48521005",
-      "display" : "Right lobe of liver"
+      "display" : "Structure of right lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "48781005",
-      "display" : "Hepatic capsule"
+      "display" : "Hepatic capsule structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "51185008",
-      "display" : "Thorax"
+      "display" : "Thoracic structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "52687003",
-      "display" : "Shaft of tibia"
+      "display" : "Bone structure of shaft of tibia"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "54115001",
-      "display" : "Myelinated nerve fiber"
+      "display" : "Myelinated nerve fiber structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "5665001",
-      "display" : "Retina"
+      "display" : "Retinal structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "56732008",
-      "display" : "Hepatic duct"
+      "display" : "Structure of hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "58471003",
-      "display" : "Renal tubule"
+      "display" : "Renal tubule structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "58501004",
-      "display" : "Cerebellar vermis"
+      "display" : "Cerebellar vermis structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "589001",
-      "display" : "Interventricular septum"
+      "display" : "Interventricular septum structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "59652004",
-      "display" : "Atrium"
+      "display" : "Atrial structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "62834003",
-      "display" : "Upper gastrointestinal tract"
+      "display" : "Upper gastrointestinal tract structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "64033007",
-      "display" : "Kidney"
+      "display" : "Kidney structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "66019005",
-      "display" : "Extremity"
+      "display" : "Limb structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "66754008",
-      "display" : "Appendix"
+      "display" : "Appendix structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -385,7 +386,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "67734004",
-      "display" : "Upper trunk"
+      "display" : "Thoracic segment of trunk"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -395,27 +396,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "69039008",
-      "display" : "Gallbladder fossa of liver"
+      "display" : "Structure of gallbladder fossa of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "69842003",
-      "display" : "Left lobe of liver"
+      "display" : "Structure of left lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "72410000",
-      "display" : "Mediastinum"
+      "display" : "Mediastinal structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "72914001",
-      "display" : "Palate"
+      "display" : "Palatal structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "73829009",
-      "display" : "Right atrium"
+      "display" : "Right atrial structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -425,12 +426,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "74281007",
-      "display" : "Myocardium"
+      "display" : "Myocardium structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "76726002",
-      "display" : "Portal triad"
+      "display" : "Portal triad structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -440,12 +441,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "78076003",
-      "display" : "Crystalline lens"
+      "display" : "Lens clear"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "78220002",
-      "display" : "Umbilicus"
+      "display" : "Umbilical structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -455,27 +456,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "78696007",
-      "display" : "Endocrine pancreas"
+      "display" : "Endocrine pancreatic structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "78961009",
-      "display" : "Spleen"
+      "display" : "Splenic structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "79984008",
-      "display" : "Skeletal muscular system"
+      "display" : "Skeletal muscle system structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "80891009",
-      "display" : "Heart"
+      "display" : "Heart structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "81040000",
-      "display" : "Pulmonary artery"
+      "display" : "Pulmonary artery structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -485,17 +486,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "82471001",
-      "display" : "Left atrium"
+      "display" : "Left atrial structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "83488001",
-      "display" : "Interlobular bile duct"
+      "display" : "Structure of interlobular bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "83670000",
-      "display" : "Peritoneal cavity"
+      "display" : "Peritoneal cavity structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -505,12 +506,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "85756007",
-      "display" : "Body tissue"
+      "display" : "Body tissue structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "86763002",
-      "display" : "Portal venous system"
+      "display" : "Portal venous system structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -525,17 +526,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "87746007",
-      "display" : "Bile canaliculus"
+      "display" : "Structure of bile canaliculus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "89545001",
-      "display" : "Face"
+      "display" : "Face structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "8993003",
-      "display" : "Hepatic vein"
+      "display" : "Structure of hepatic vein"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -545,12 +546,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "90219004",
-      "display" : "Coronary sinus"
+      "display" : "Coronary sinus structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "91689009",
-      "display" : "Organ system"
+      "display" : "Body system structure"
     }]
   }
 }
