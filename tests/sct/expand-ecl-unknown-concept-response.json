@@ -3,7 +3,7 @@
   "issue" : [{
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString" : "UNSUPPORTED_ECL"
+      "valueString" : "INVALID_ECL"
     }],
     "severity" : "error",
     "code" : "invalid",
@@ -12,7 +12,8 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "vs-invalid"
       }],
-      "text" : "The ECL expression is not supported: '< 99999999': (The SNOMED CT Concept 99999999 is not known)"
+      "fhir_comments" :"text varies by server — must contain the offending expression: e.g.'Invalid ECL expression: '< 99999999': (Unknown SNOMED Concept Id: 99999999)'",
+      "text" : "$fragments:< 99999999$"
     }
   }]
 }

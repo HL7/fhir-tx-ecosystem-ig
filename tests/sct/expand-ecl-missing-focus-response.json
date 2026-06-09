@@ -12,7 +12,8 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "vs-invalid"
       }],
-      "text" : "Invalid ECL expression: '<<': (Parser error at token 1: Expected concept reference or wildcard. Current token: EOF(null))"
+      "fhir_comments" : "text varies by server — must contain the offending expression: e.g. 'Invalid ECL expression: '<<': (Syntax error at line 1, character 2: no viable alternative at input '<<')'",
+      "text" : "$fragments:<<$"
     }
   }]
 }
