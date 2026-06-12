@@ -1174,6 +1174,48 @@
         "response" : "validation/simple-codeableconcept-bad-language-response-parameters.json"
       },
       {
+        "name" : "validation-simple-code-good-language-none",
+        "description" : "Validate a code where the display is a valid designation in the code system's default language (en), and the requested displayLanguage (de) has no displays for the code. The display is valid, with an informational message",
+        "operation" : "validate-code",
+        "request" : "validation/simple-code-good-language-none-request-parameters.json",
+        "response" : "validation/simple-code-good-language-none-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-code-bad-language-none",
+        "description" : "Validate a code where the display matches no display or designation at all, and the requested displayLanguage (de) has no displays for the code. The display is invalid",
+        "operation" : "validate-code",
+        "request" : "validation/simple-code-bad-language-none-request-parameters.json",
+        "response" : "validation/simple-code-bad-language-none-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-coding-good-language-none",
+        "description" : "Validate a Coding where the display is a valid designation in the code system's default language (en), and the requested displayLanguage (de) has no displays for the code. The display is valid, with an informational message",
+        "operation" : "validate-code",
+        "request" : "validation/simple-coding-good-language-none-request-parameters.json",
+        "response" : "validation/simple-coding-good-language-none-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-coding-bad-language-none",
+        "description" : "Validate a Coding where the display matches no display or designation at all, and the requested displayLanguage (de) has no displays for the code. The display is invalid",
+        "operation" : "validate-code",
+        "request" : "validation/simple-coding-bad-language-none-request-parameters.json",
+        "response" : "validation/simple-coding-bad-language-none-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-codeableconcept-good-language-none",
+        "description" : "Validate a CodeableConcept where the coding display is a valid designation in the code system's default language (en), and the requested displayLanguage (de) has no displays for the code. The display is valid, with an informational message",
+        "operation" : "validate-code",
+        "request" : "validation/simple-codeableconcept-good-language-none-request-parameters.json",
+        "response" : "validation/simple-codeableconcept-good-language-none-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-codeableconcept-bad-language-none",
+        "description" : "Validate a CodeableConcept where the coding display matches no display or designation at all, and the requested displayLanguage (de) has no displays for the code. The display is invalid",
+        "operation" : "validate-code",
+        "request" : "validation/simple-codeableconcept-bad-language-none-request-parameters.json",
+        "response" : "validation/simple-codeableconcept-bad-language-none-response-parameters.json"
+      },
+      {
         "name" : "validation-complex-codeableconcept-full",
         "description" : "to be provided",
         "operation" : "validate-code",

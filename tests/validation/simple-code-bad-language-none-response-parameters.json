@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code2aII"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 2aII"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location" ],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "Wrong Display Name 'XDisplay 2aII' for http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII. There are no valid display names found for language(s) 'de'. Default display is 'Display 2aII'"
+        },
+        "location" : ["display"],
+        "expression" : ["display"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Wrong Display Name 'XDisplay 2aII' for http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII. There are no valid display names found for language(s) 'de'. Default display is 'Display 2aII'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/en-multi"
+  }]
+}

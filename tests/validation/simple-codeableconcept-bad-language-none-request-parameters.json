@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/en-multi"
+  },{
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/en-multi",
+        "display" : "XDisplay 2aII",
+        "code" : "code2aII"
+      }]
+    }
+  },{
+    "name" : "displayLanguage",
+    "valueCode" : "de"
+  }]
+}

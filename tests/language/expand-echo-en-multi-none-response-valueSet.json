@@ -81,7 +81,11 @@
     {
       "system" : "http://hl7.org/fhir/test/CodeSystem/en-multi",
       "code" : "code2aII",
-      "display" : "Display 2aII"
+      "display" : "Display 2aII",
+      "designation" : [{
+        "language" : "en",
+        "value" : "Alternate Display 2aII"
+      }]
     },
     {
       "system" : "http://hl7.org/fhir/test/CodeSystem/en-multi",

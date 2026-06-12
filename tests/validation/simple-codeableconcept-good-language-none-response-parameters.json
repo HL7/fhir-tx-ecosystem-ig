@@ -1,0 +1,58 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code2aII"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/en-multi",
+        "code" : "code2aII",
+        "display" : "Alternate Display 2aII"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 2aII"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location" ],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK"
+        }],
+        "severity" : "information",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII for language(s) 'de'. The display is 'Alternate Display 2aII' which is a valid display for the default language"
+        },
+        "location" : ["CodeableConcept.coding[0].display"],
+        "expression" : ["CodeableConcept.coding[0].display"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII for language(s) 'de'. The display is 'Alternate Display 2aII' which is a valid display for the default language"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/en-multi"
+  }]
+}

@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-display"
           }],
-          "text" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/lang-en#code1 for language(s) 'de'. The display is 'Code1' which is the default language display"
+          "text" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/lang-en#code1 for language(s) 'de'. The display is 'Code1' which is a valid display for the default language"
         },
         "location" : ["Coding.display"],
         "expression" : ["Coding.display"]
@@ -34,7 +34,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/lang-en#code1 for language(s) 'de'. The display is 'Code1' which is the default language display"
+    "valueString" : "There are no valid display names found for the code http://hl7.org/fhir/test/CodeSystem/lang-en#code1 for language(s) 'de'. The display is 'Code1' which is a valid display for the default language"
   },
   {
     "name" : "result",

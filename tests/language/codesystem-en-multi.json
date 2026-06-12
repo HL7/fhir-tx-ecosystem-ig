@@ -132,7 +132,11 @@
               "valueString" : "Mein zweiter Third-Level-Code"
             }]
           }]
-        }
+        },
+        "designation" : [{
+          "language" : "en",
+          "value" : "Alternate Display 2aII"
+        }]
       }]
     },
     {
