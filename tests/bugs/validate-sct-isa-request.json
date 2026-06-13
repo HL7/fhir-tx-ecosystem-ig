@@ -45,10 +45,6 @@
       }
     },
     {
-      "name": "cache-id",
-      "valueId": "52c25bdb-e887-46f1-b9b7-2e96531ba5f8"
-    },
-    {
       "name": "profile-url",
       "valueString": "http://hl7.org/fhir/ExpansionProfile/dc8fd4bc-091a-424a-8a3b-6198ef146891"
     },
