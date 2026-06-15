@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "message",
-    "valueString" : "The valueSet http://hl7.org/fhir/test/ValueSet/compare-sub-1a|1.0.0 is a seb-set of the valueSet http://hl7.org/fhir/test/ValueSet/compare-sub-1b|1.0.0"
+    "valueString" : "The valueSet http://hl7.org/fhir/test/ValueSet/compare-sub-1a|1.0.0 is a sub-set of the valueSet http://hl7.org/fhir/test/ValueSet/compare-sub-1b|1.0.0"
   },
   {
     "name" : "performed-expansion",

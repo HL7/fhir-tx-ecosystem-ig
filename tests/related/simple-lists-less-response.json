@@ -10,7 +10,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The valueSet http://hl7.org/fhir/test/ValueSet/list-1 is a seb-set of the valueSet http://hl7.org/fhir/test/ValueSet/list-1"
+    "valueString" : "The valueSet http://hl7.org/fhir/test/ValueSet/list-1 is a sub-set of the valueSet http://hl7.org/fhir/test/ValueSet/list-1"
   },
   {
     "name" : "performed-expansion",

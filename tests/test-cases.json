@@ -5277,7 +5277,7 @@
       }
     ]
   }, {
-    "name" : "related",
+    "name" : "compare",
     "mode" : "tx.fhir.org",
     "description" : "Tests for candidate new 'related' operation",
     "setup" : ["simple/codesystem-simple.json", "extensions/codesystem-extensions.json", "simple/valueset-all.json", "simple/valueset-active.json",
@@ -5288,196 +5288,196 @@
       {
         "name" : "related-all",
         "description" : "Checks that an all value is the same as itself",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-all-request.json",
         "response" : "related/simple-all-response.json"
       },
       {
         "name" : "related-active",
         "description" : "Checks that an all value is the same as itself, in the presence of the active flag = true",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-active-request.json",
         "response" : "related/simple-active-response.json"
       },
       {
         "name" : "related-inactive",
         "description" : "Checks that an all value is the same as itself, in the presence of the active flag = false",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-inactive-request.json",
         "response" : "related/simple-inactive-response.json"
       },
       {
         "name" : "related-enumerated",
         "description" : "Checks that an all value is the same as itself, in the presence of an enumerated list",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-enumerated-request.json",
         "response" : "related/simple-enumerated-response.json"
       },
       {
         "name" : "related-is-a",
         "description" : "Checks that an all value is the same as itself, in the presence of an is-a filter",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-is-a-request.json",
         "response" : "related/simple-is-a-response.json"
       },
       {
         "name" : "related-regex-1",
         "description" : "Checks that an all value is the same as itself, in the presence of an regex filter",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-regex-1-request.json",
         "response" : "related/simple-regex-1-response.json"
       },
       {
         "name" : "related-regex-2",
         "description" : "Checks that an all value is the same as itself, in the presence of a property regex filter",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-regex-2-request.json",
         "response" : "related/simple-regex-2-response.json"
       },
       {
         "name" : "related-lists",
         "description" : "Checks that two enumerated value sets are the same (concept order is different)",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-lists-request.json",
         "response" : "related/simple-lists-response.json"
       },
       {
         "name" : "related-lists-more",
         "description" : "Checks that two enumerated value sets are related such that the other contains this",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-lists-more-request.json",
         "response" : "related/simple-lists-more-response.json"
       },
       {
         "name" : "related-lists-less",
         "description" : "Checks that two enumerated value sets are related such that this contains the other",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-lists-less-request.json",
         "response" : "related/simple-lists-less-response.json"
       },
       {
         "name" : "related-lists-over",
         "description" : "Checks that two enumerated value sets are overlapping",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-lists-over-request.json",
         "response" : "related/simple-lists-over-response.json"
       },
       {
         "name" : "related-lists-disj",
         "description" : "Checks that two enumerated value sets are the disjoint",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-lists-disj-request.json",
         "response" : "related/simple-lists-disj-response.json"
       },
       {
         "name" : "related-systems",
         "description" : "Checks that two valuesets that import the same entire code systems are identical",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-systems-request.json",
         "response" : "related/simple-systems-response.json"
       },
       {
         "name" : "related-systems",
         "description" : "Checks that two valuesets that import the same entire code systems are identical",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-systems-request.json",
         "response" : "related/simple-systems-response.json"
       },
       {
         "name" : "related-systems-less",
         "description" : "Checks that two valuesets that import the same entire code systems are identical",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-systems-less-request.json",
         "response" : "related/simple-systems-less-response.json"
       },
       {
         "name" : "related-systems-more",
         "description" : "Checks that two valuesets that import the same entire code systems are identical",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-systems-more-request.json",
         "response" : "related/simple-systems-more-response.json"
       },
       {
         "name" : "related-system-disj",
         "description" : "Checks that two valuesets that import the same entire code systems are identical",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-systems-disj-request.json",
         "response" : "related/simple-systems-disj-response.json"
       },
       {
         "name" : "related-system-over",
         "description" : "Checks that two valuesets that import the same entire code systems are identical",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-systems-over-request.json",
         "response" : "related/simple-systems-over-response.json"
       },
       {
         "name" : "related-filters-1",
         "description" : "Checks that two valuesets that haev the same filters in different orders (as filters)",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-filters-1-request.json",
         "response" : "related/simple-filters-1-response.json"
       },
       {
         "name" : "related-filters-2",
         "description" : "Checks that two valuesets that haev the same filters in different orders (as includes)",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-filters-2-request.json",
         "response" : "related/simple-filters-2-response.json"
       },
       {
         "name" : "related-filters-3",
         "description" : "Checks that two valuesets that haev the same filters in different orders (as includes from the same system)",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-filters-3-request.json",
         "response" : "related/simple-filters-3-response.json"
       },
       {
         "name" : "related-mixed-1",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-mixed-request.json",
         "response" : "related/simple-mixed-response.json"
       },
       {
         "name" : "related-mixed-1-less",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-mixed-less-request.json",
         "response" : "related/simple-mixed-less-response.json"
       },
       {
         "name" : "related-mixed-1-more",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-mixed-more-request.json",
         "response" : "related/simple-mixed-more-response.json"
       },
       {
         "name" : "related-mixed-1-disj",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-mixed-disj-request.json",
         "response" : "related/simple-mixed-disj-response.json"
       },
       {
         "name" : "related-mixed-1-over",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-mixed-over-request.json",
         "response" : "related/simple-mixed-over-response.json"
       },
       {
         "name" : "related-filters-less",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-filters-less-request.json",
         "response" : "related/simple-filters-less-response.json"
       },
       {
         "name" : "related-filters-more",
         "description" : "Checks that two valuesets that have the same content with incompatible definitions are considered the same",
-        "operation" : "related",
+        "operation" : "compare",
         "request" : "related/simple-filters-more-request.json",
         "response" : "related/simple-filters-more-response.json"
       }
@@ -6046,231 +6046,231 @@
       {
         "name": "related-eq-identical-def",
         "description": "Equivalent: identical is-a filter definitions",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-eq-identical-def-request-parameters.json",
         "response": "related/compare-eq-identical-def-response-parameters.json"
       },
       {
         "name": "related-eq-enum-reorder",
         "description": "Equivalent: same enumerated codes in different order",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-eq-enum-reorder-request-parameters.json",
         "response": "related/compare-eq-enum-reorder-response-parameters.json"
       },
       {
         "name": "related-eq-multi-include-reorder",
         "description": "Equivalent: multiple includes from same system in different order",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-eq-multi-include-reorder-request-parameters.json",
         "response": "related/compare-eq-multi-include-reorder-response-parameters.json"
       },
       {
         "name": "related-eq-filter-vs-enum",
         "description": "Equivalent: is-a filter vs explicit enumeration of same codes",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-eq-filter-vs-enum-request-parameters.json",
         "response": "related/compare-eq-filter-vs-enum-response-parameters.json"
       },
       {
         "name": "related-eq-import-vs-inline",
         "description": "Equivalent: imported value set vs same definition inline",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-eq-import-vs-inline-request-parameters.json",
         "response": "related/compare-eq-import-vs-inline-response-parameters.json"
       },
       {
         "name": "related-eq-import-reorder",
         "description": "Equivalent: child value sets imported in different order",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-eq-import-reorder-request-parameters.json",
         "response": "related/compare-eq-import-reorder-response-parameters.json"
       },
       {
         "name": "related-expeq-exclude-vs-enum",
         "description": "Equivalent (expansion): all CS1 minus C vs enumeration of same codes",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-expeq-exclude-vs-enum-request-parameters.json",
         "response": "related/compare-expeq-exclude-vs-enum-response-parameters.json"
       },
       {
         "name": "related-expeq-exclude-partial",
         "description": "Equivalent (expansion): is-a root minus {A2,B2} vs enumeration of result",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-expeq-exclude-partial-request-parameters.json",
         "response": "related/compare-expeq-exclude-partial-response-parameters.json"
       },
       {
         "name": "related-sub-branch-vs-root",
         "description": "Subset: is-a A is subset of is-a root",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-sub-branch-vs-root-request-parameters.json",
         "response": "related/compare-sub-branch-vs-root-response-parameters.json"
       },
       {
         "name": "related-sub-enum-vs-filter",
         "description": "Subset: enumerated {A1,A2} is subset of is-a A",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-sub-enum-vs-filter-request-parameters.json",
         "response": "related/compare-sub-enum-vs-filter-response-parameters.json"
       },
       {
         "name": "related-sub-base-vs-import-plus",
         "description": "Subset: base VS is subset of VS that imports it and adds codes",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-sub-base-vs-import-plus-request-parameters.json",
         "response": "related/compare-sub-base-vs-import-plus-response-parameters.json"
       },
       {
         "name": "related-sub-leaf-vs-subtree",
         "description": "Subset: single leaf {A1} is subset of is-a A",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-sub-leaf-vs-subtree-request-parameters.json",
         "response": "related/compare-sub-leaf-vs-subtree-response-parameters.json"
       },
       {
         "name": "related-super-root-vs-branch",
         "description": "Superset: is-a root is superset of is-a A",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-super-root-vs-branch-request-parameters.json",
         "response": "related/compare-super-root-vs-branch-response-parameters.json"
       },
       {
         "name": "related-expsub-exclude-narrower",
         "description": "Subset (expansion): all minus {C,B1,B2} subset of all minus {C}",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-expsub-exclude-narrower-request-parameters.json",
         "response": "related/compare-expsub-exclude-narrower-response-parameters.json"
       },
       {
         "name": "related-disj-diff-systems",
         "description": "Disjoint: value sets from entirely different code systems",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-disj-diff-systems-request-parameters.json",
         "response": "related/compare-disj-diff-systems-response-parameters.json"
       },
       {
         "name": "related-disj-diff-branches",
         "description": "Disjoint: non-overlapping branches (A vs B) in same system",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-disj-diff-branches-request-parameters.json",
         "response": "related/compare-disj-diff-branches-response-parameters.json"
       },
       {
         "name": "related-disj-enum-no-intersection",
         "description": "Disjoint: enumerated codes with no intersection (flat system)",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-disj-enum-no-intersection-request-parameters.json",
         "response": "related/compare-disj-enum-no-intersection-response-parameters.json"
       },
       {
         "name": "related-disj-multi-system",
         "description": "Disjoint: multi-system value sets with no overlap",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-disj-multi-system-request-parameters.json",
         "response": "related/compare-disj-multi-system-response-parameters.json"
       },
       {
         "name": "related-ov-enum-partial",
         "description": "Overlap: partially overlapping enumerations",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ov-enum-partial-request-parameters.json",
         "response": "related/compare-ov-enum-partial-response-parameters.json"
       },
       {
         "name": "related-ov-filter-vs-enum",
         "description": "Overlap: is-a A overlaps with enum {A2, B1}",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ov-filter-vs-enum-request-parameters.json",
         "response": "related/compare-ov-filter-vs-enum-response-parameters.json"
       },
       {
         "name": "related-ov-multi-include-partial",
         "description": "Overlap: multi-include with partial overlap (is-a A+{B1} vs is-a B+{A1})",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ov-multi-include-partial-request-parameters.json",
         "response": "related/compare-ov-multi-include-partial-response-parameters.json"
       },
       {
         "name": "related-ov-import-partial",
         "description": "Overlap: imported value sets creating partial overlap",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ov-import-partial-request-parameters.json",
         "response": "related/compare-ov-import-partial-response-parameters.json"
       },
       {
         "name": "related-ov-cross-system",
         "description": "Overlap: cross-system partial overlap",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ov-cross-system-request-parameters.json",
         "response": "related/compare-ov-cross-system-response-parameters.json"
       },
       {
         "name": "related-ov-exclude-partial",
         "description": "Overlap (expansion): overlap after excludes applied",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ov-exclude-partial-request-parameters.json",
         "response": "related/compare-ov-exclude-partial-response-parameters.json"
       },
       {
         "name": "related-unk-snomed-both-filter",
         "description": "Unknown: two SNOMED is-a filters, can't determine relationship",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-unk-snomed-both-filter-request-parameters.json",
         "response": "related/compare-unk-snomed-both-filter-response-parameters.json"
       },
       {
         "name": "related-unk-snomed-filter-vs-enum",
         "description": "Unknown: SNOMED is-a filter vs enumerated SNOMED code",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-unk-snomed-filter-vs-enum-request-parameters.json",
         "response": "related/compare-unk-snomed-filter-vs-enum-response-parameters.json"
       },
       {
         "name": "related-unk-unknown-system",
         "description": "Unknown: unknown code system, can't expand",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-unk-unknown-system-request-parameters.json",
         "response": "related/compare-unk-unknown-system-response-parameters.json"
       },
       {
         "name": "related-ver-same-def-diff-cs-version",
         "description": "Version: same is-a A definition, CS1 v1 subset of CS1 v2",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ver-same-def-diff-cs-version-request-parameters.json",
         "response": "related/compare-ver-same-def-diff-cs-version-response-parameters.json"
       },
       {
         "name": "related-ver-all-diff-cs-version",
         "description": "Version: all CS1, v1 subset of v2",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ver-all-diff-cs-version-request-parameters.json",
         "response": "related/compare-ver-all-diff-cs-version-response-parameters.json"
       },
       {
         "name": "related-ver-branch-diff-cs-version",
         "description": "Version: is-a B, CS1 v1 subset of CS1 v2",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ver-branch-diff-cs-version-request-parameters.json",
         "response": "related/compare-ver-branch-diff-cs-version-response-parameters.json"
       },
       {
         "name": "related-ver-unversioned-vs-pinned",
         "description": "Version: unversioned is-a A (uses latest=v2) superset of v1-pinned",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ver-unversioned-vs-pinned-request-parameters.json",
         "response": "related/compare-ver-unversioned-vs-pinned-response-parameters.json"
       },
       {
         "name": "related-ver-same-vs-diff-version",
         "description": "Version: same VS URL, v1 subset of v2 (definition changed)",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ver-same-vs-diff-version-request-parameters.json",
         "response": "related/compare-ver-same-vs-diff-version-response-parameters.json"
       },
       {
         "name": "related-ver-import-version-cascade",
         "description": "Version: import of v1-pinned VS subset of import of v2-pinned VS",
-        "operation": "related",
+        "operation": "compare",
         "request": "related/compare-ver-import-version-cascade-request-parameters.json",
         "response": "related/compare-ver-import-version-cascade-response-parameters.json"
       }
