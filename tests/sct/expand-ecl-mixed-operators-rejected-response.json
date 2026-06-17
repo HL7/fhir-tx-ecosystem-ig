@@ -1,0 +1,18 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "INVALID_ECL"
+    }],
+    "severity" : "error",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "vs-invalid"
+      }],
+      "text" : "Invalid ECL expression: '<< 128045006 OR << 10200004 AND << 64572001': (mixed AND/OR operators must be enclosed in parentheses)"
+    }
+  }]
+}

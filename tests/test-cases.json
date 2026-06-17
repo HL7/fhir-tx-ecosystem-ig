@@ -4747,11 +4747,12 @@
       },
 
       {
-        "name" : "snomed-expand-ecl-left-associative",
-        "description" : "Same expression without parens; ECL 2.x is strictly left-to-right, so result should differ from parens-precedence.",
+        "name" : "snomed-expand-ecl-mixed-operators-rejected",
+        "description" : "Mixed AND/OR without parentheses; the SNOMED ECL grammar requires brackets to disambiguate. Conformant servers must reject as invalid.",
         "operation" : "expand",
-        "request" : "sct/expand-ecl-left-associative-request.json",
-        "response" : "sct/expand-ecl-left-associative-response.json"
+        "http-code" : "4xx",
+        "request" : "sct/expand-ecl-mixed-operators-rejected-request.json",
+        "response" : "sct/expand-ecl-mixed-operators-rejected-response.json"
       },
 
       {
