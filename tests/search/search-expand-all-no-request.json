@@ -7,7 +7,7 @@
     }, 
     {
       "name": "filter",
-      "valueUri" : "xxx"
+      "valueString" : "xxx"
     }
   ]
 }
