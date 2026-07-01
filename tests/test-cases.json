@@ -3908,7 +3908,7 @@
     "name" : "tho",
     "mode" : "general",
     "description" : "Misc assorted test cases from tho",
-    "setup" : [ "tho/cs-act-class.json", "tho/vs-act-class.json" ],
+    "setup" : [ "tho/cs-act-class.json", "tho/cs-act-reason.json", "tho/vs-act-class.json" ],
     "tests" : [
       {
         "name" : "act-class",
@@ -3923,6 +3923,13 @@
         "operation" : "expand",
         "request" : "tho/expand-vs-act-class-activeonly-request-parameters.json",
         "response" : "tho/expand-vs-act-class-activeonly-response-valueSet.json"
+      },
+      {
+        "name" : "act-exclusion",
+        "description" : "tests for proper handling of excluded codes",
+        "operation" : "expand",
+        "request" : "tho/expand-vs-act-exclusion-request.json",
+        "response" : "tho/expand-vs-act-exclusion-response.json"
       }
     ]
   },{

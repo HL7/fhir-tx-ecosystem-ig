@@ -2,16 +2,16 @@
   "$optional-properties$" : ["id", "date", "publisher", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
-  "url" : "http://hl7.org/fhir/test/ValueSet/search-enum",
+  "url" : "http://hl7.org/fhir/test/ValueSet/search-filter",
   "version" : "6.0.0",
-  "name" : "SearchEnumTest",
+  "name" : "SearchFilterTest",
   "status" : "draft",
   "expansion" : {
     "$optional-properties$" : ["id", "offset"],
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 1,
+    "total" : 4,
     "parameter" : [{
       "name" : "filter",
       "valueString" : "data"
@@ -24,6 +24,21 @@
       "system" : "http://hl7.org/fhir/test/CodeSystem/search",
       "code" : "data-exchange",
       "display" : "Data Exchange"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange1",
+      "display" : "Data Exchange1"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange2",
+      "display" : "Data Exchange2"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange3",
+      "display" : "Data Exchange3"
     }]
   }
 }
