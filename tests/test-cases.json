@@ -4006,7 +4006,8 @@
         "description" : "Test a simple search",
         "operation" : "expand",
         "request" : "search/search-expand-all-yes-request.json",
-        "response" : "search/search-expand-all-yes-response.json"
+        "response" : "search/search-expand-all-yes-response.json",
+        "response:flat" : "search/search-expand-all-yes-flat-response.json"
       },
       {
         "name" : "search-all-no",
