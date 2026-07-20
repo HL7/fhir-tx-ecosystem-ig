@@ -91,6 +91,11 @@ Servers are required to support code system supplements. Specifically, this mean
 
 * Servers SHALL not ignore supplements, though they MAY choose to return errors rather than process them correctly
 
+Where a server makes [language specific authoritative claims](ecosystem.html#language-specific-claims) in the ecosystem registration (the `languages` property):
+
+* The server SHALL host the content of the claimed code systems (`complete` or `fragment`), not just the supplements - it will receive the whole operation, not just the language-specific part
+* The server SHALL support each claimed language for the code systems claimed under it: `$expand`, `$validate-code`, and `$lookup` SHALL return correct displays and designations in that language (typically via loaded supplements). This is verified by the language routing test cases, not by the coordination server
+
 Servers are required to support the following properties in the CodeSystem resource:
 
 * `CodeSystem.caseSensitive` SHALL be supported: validation SHALL correctly check case. In the case of non-case sensitive code systems, expansions SHOULD just contain the code as defined (in the code system or the value set enumeration), and not all the case variants that could be generated.

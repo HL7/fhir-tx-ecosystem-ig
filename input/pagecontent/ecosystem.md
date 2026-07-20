@@ -72,6 +72,14 @@ This file contains a list of terminology servers.
     "url" : "http://server/page", // human landing page for the server. Optional
     "usage" : [ // if present, a list of string usage tags for the intended use of the server. Missing means any use is appropriate. See below for uses. Optional
     ],
+    "languages" : { 
+      // authoritative claims for particular languages - see Language Specific Claims below. Optional
+      // Property names are BCP-47 language tags; a tag covers all more specific tags (de covers de-AT etc.)
+      // Property values are mask lists with the same syntax and meaning as authoritative, 
+      // applying to requests in that language
+      "de" : ["http://domain/*"],
+      "de-AT" : ["http://domain/other/*"]
+    },
     "authoritative" : [ 
       // a list of CodeSystems the server claims to be authoritative for (see below). Optional
       "http://domain/*", // simple mask, * is a wildcard  
@@ -101,6 +109,7 @@ This file contains a list of terminology servers.
 Notes:
 
 * The formatVersion number is 1. This might be changed in the future if breaking or significant changes are made to the format
+* The ```languages``` property is a later, backwards compatible addition to the format. Readers that do not know it simply do not see the language specific claims, and route language requests to the general authoritative server - which is exactly the pre-language behavior (see Language Specific Claims below)
 * The code for the server should be stable, since it may be used to identify the server in the Coordination API (see below)
 * Most servers will only have one endpoint, that is, they will only support one FHIR version, but some support more than one
 * If the different versions have different authoritative lists, that's really different servers
@@ -134,6 +143,69 @@ has a copy of the Australian edition of SNOMED CT, but the HL7 Australia officia
 for the Australian edition. Servers are not restricted to only serving the content for which they are authoritative.
 
 The authoritative flag is used to help resolve which server to use - see below.
+
+#### Language Specific Claims
+
+Some servers are authoritative for a code system in all languages, while other servers are 
+authoritative for particular languages of the same code system, because they have different 
+supplements loaded. For example, one server is the general authoritative server for LOINC, while a 
+different server hosts LOINC with the German language pack loaded, and is the appropriate server 
+for German-language requests.
+
+The `authoritative` list makes claims that apply irrespective of language. The `languages` property 
+makes claims for particular languages: each property name is a BCP-47 language tag, and its value is 
+a list of masks with the same syntax and meaning as `authoritative`, applying to requests in that 
+language. A single server entry can carry both kinds of claim:
+
+```json5
+"authoritative" : ["http://fhir.de/CodeSystem/*"], // authoritative, irrespective of language
+"languages" : {
+  "de" : ["http://loinc.org*"] // authoritative for German-language requests
+}
+```
+
+This entry means: this server is the authoritative server for the `http://fhir.de/` code systems in 
+any language, and *for German-language requests*, it is also the authoritative server for LOINC.
+
+Note that a language specific claim is full authority over the whole operation for requests in that 
+language - it is not authority over displays that is separable from authority over content. There is 
+no such separation in the API: a `$validate-code` with a German display, or an `$expand` with 
+`displayLanguage: de`, is a single indivisible operation that is answered by a single server. 
+Consequences:
+
+* A server making language specific claims SHALL host the content of the claimed code systems 
+  (`complete` or `fragment`) as well as the relevant supplement(s), so that it can execute the 
+  operations outright. Registering a server that holds only supplements is not supported: routing 
+  part of an operation to a supplement-only server would require cross-server composition (content 
+  from one server + supplement from another via `tx-resource`), and the ecosystem does not 
+  (currently) provide this
+* Language specific claims are invisible to requests that do not specify a language - they never 
+  bleed into general traffic. A request with no language matches only `authoritative` claims, which 
+  preserves the existing (pre-language) behavior exactly
+* The `authoritative` list remains the default destination: it applies to requests in any language 
+  not more specifically claimed by another server, exactly as before
+
+Language specific claims apply to code systems only; there is (at this time) no language dimension 
+to `authoritative-valuesets`.
+
+Whether a server actually honours its language specific claims (returning correct displays and 
+designations in the claimed languages for the claimed code systems) is verified by the ecosystem 
+test cases, not by the coordination server - the coordination server only verifies that the server 
+hosts the code systems themselves.
+
+##### Language Matching
+
+BCP-47 language tags are hierarchical, so a language tag is inherently a mask: a claimed tag matches 
+any request language that is equal to it, or that is more specific than it (matching on `-` 
+boundaries). A claim for `de` matches requests for `de`, `de-AT`, and `de-CH-1996` (but not `dent`); 
+a claim for `de-AT` matches `de-AT` but not plain `de`. 
+
+Where more than one server has a matching language specific claim, the most specific matching tag 
+wins. Servers matched on their `authoritative` claims rank after all language specific matches (when 
+the request specifies a language).
+
+Where the request language is a weighted list per the Accept-Language syntax (e.g. 
+`de-AT, de;q=0.9, en;q=0.1`), this matching is applied per language in descending weight order.
 
 ### The Coordination server
 
@@ -176,6 +248,7 @@ These parameters SHALL be supported by all servers:
 * `fhirVersion`: return only those endpoints that are based on the given FHIR version (RX or M.n.p)
 * `url`: return only those endpoints that support a particular code system (by canonical, so url or url|version).
 * `authoritativeOnly`: return only code systems which the endpoints are authoritative for (true or false; default is false)
+* `language`: filter authoritative claim matching by language (only meaningful in combination with `url`; see Language Specific Claims above)
 
 When the ```Accept``` header is ```application/json```, the return value is a JSON object:
 
@@ -222,7 +295,22 @@ These parameters SHALL be supported by all servers:
 * `valueSet`: return only those endpoints that know a particular ValueSet (by canonical, so url or url/version)
 * One of `url` or `valueSet` must be present
 * `authoritativeOnly`: return only those endpoints that are authoritative (true or false; default is false)
+* `language`: the language of the request being routed. Accept-Language syntax: a single BCP-47 tag, or a 
+  weighted list (e.g. `de-AT, de;q=0.9, en;q=0.1`) for clients that want their fallback policy expressed 
+  in a single call. Optional
 * `usage` - see below
+
+Clients should pass `language` when (and only when) the operation being routed is language-sensitive: 
+an `$expand` where a display language is in play, a `$validate-code` where a display will be checked, 
+a `$lookup` requesting designations. Pure code validation should omit it. The value passed is whatever 
+the client resolved from the displayLanguage sources described in [Languages](languages.html) - 
+resolution and the subsequent operation must use the same language, or the routing is meaningless.
+
+When `language` is present, servers with matching language specific claims are returned first in the 
+`authoritative` list (ordered by the language matching rules above, then by the usual ranking), 
+followed by servers matched on their `authoritative` claims. When `language` is absent - or for 
+value set resolution, where the claims have no language dimension - behavior is exactly as it was 
+before language support was added.
   
 When the ```Accept``` header is ```application/json```, the return value is a JSON object:
 
@@ -235,7 +323,9 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
     "url" : "http://server/endpoint", // actual FHIR endpoint of the server 
     "fhirVersion" : "4.0.1", // FHIR version - semver
     "open" | "password" | "token" | "oauth" | "smart | "cert": true, // as above
-    "access_info" : "description" // provided if the server has some, for error messages
+    "access_info" : "description", // provided if the server has some, for error messages
+    "languages" : ["de"] // if this entry was matched on a language specific claim: the language 
+                         // tag of that claim
   }],
   "candidate" : [{
     // same content as for authoritative, except that content will
@@ -251,6 +341,14 @@ Notes:
 * The resolve operation may return more than one candidate server if more than one server hosts the terminology. Resolving this is up to the client
 * A server listed as authoritative won't also be listed as a candidate
 * Servers are not listed as authoritative unless they actually host the CodeSystem(+version) in the request 
+* An authoritative entry without a `languages` property was matched on the server's `authoritative` 
+  claims rather than a language specific claim. When the request had a language parameter, this tells 
+  the client that routing fell through to the default authoritative server - whether to use it anyway 
+  or treat the language as unavailable is the client's decision (the same strictness decision as the 
+  `de, *;q=0.1` vs `de, *;q=0` distinction described in [Languages](languages.html))
+* Candidate servers are not filtered or ranked by language - the ecosystem has no reliable way to know 
+  what languages a candidate can serve (that information comes from registration claims, and candidates 
+  by definition have none that match)
 
 
 ### Usages
@@ -292,3 +390,16 @@ Hence, in the terminology ecosystem, all SNOMED CT implicit value sets must incl
 This restriction applies to value set references in StructureDefinitions, Questionnaires, ValueSets, and other resources used in IGs, packages, etc. It does not apply to value sets used by import on one of the servers - the ecosystem does not resolve such a value set, and it's up to the server to do so.
 
 Note: this restriction might change in the future e.g. if there's only one SNOMED CT server for all editions, but there's no plan for that at this time. 
+
+### Language and Routing
+
+A similar limitation applies to languages: the router can only act on what is in the resolve call, so 
+the language must be known at routing time. Clients resolve their display language (from the request 
+parameter, value set extension, HTTP header, or ValueSet.language, per [Languages](languages.html)) 
+*before* asking the ecosystem which server to use, and pass that language in the resolve call. 
+
+If the language is not known or not specified at routing time, the client gets default routing (the 
+unqualified authoritative server) and the default language behavior of that server - which is the 
+correct outcome for a request that never specified a language, but means that a language specified 
+only *after* server selection (e.g. decided later in an expansion workflow) will not influence which 
+server was chosen.
