@@ -93,7 +93,7 @@ This file contains a list of terminology servers.
       "http://domain/*|1.*" 
     ],
     "exclusions" : [ 
-      // a list of CodeSystems and ValueSets the server claims to be authoritative for (see below). Optional
+      // a list of CodeSystems and ValueSets to hide from the ecosystem entirely (see Exclusions below). Optional
       "http://domain/*", // simple mask, * is a wildcard
       "http://domain/*|1.0.0",
       "http://domain/*|1.*" 
@@ -146,26 +146,31 @@ The authoritative flag is used to help resolve which server to use - see below.
 
 #### Language Specific Claims
 
-Some servers are authoritative for a code system in all languages, while other servers are 
-authoritative for particular languages of the same code system, because they have different 
-supplements loaded. For example, one server is the general authoritative server for LOINC, while a 
-different server hosts LOINC with the German language pack loaded, and is the appropriate server 
-for German-language requests.
+Claims in the `authoritative` list are not language specific: the server is the appropriate 
+destination for the matched code systems whatever language a request asks for (or none), and it 
+responds with whatever languages it actually has, per the usual fallback rules described in 
+[Languages](languages.html). This is not an assertion that the server can supply displays in every 
+language - it is simply the default destination for the code system.
 
-The `authoritative` list makes claims that apply irrespective of language. The `languages` property 
-makes claims for particular languages: each property name is a BCP-47 language tag, and its value is 
-a list of masks with the same syntax and meaning as `authoritative`, applying to requests in that 
-language. A single server entry can carry both kinds of claim:
+Sometimes, though, a different server is the appropriate destination for particular languages of 
+the same code system, because it has different supplements loaded. For example, one server is the 
+general authoritative server for LOINC, while a different server hosts LOINC with the German 
+language pack loaded, and is the appropriate server for German-language requests.
+
+The `languages` property makes claims for particular languages: each property name is a BCP-47 
+language tag, and its value is a list of masks with the same syntax and meaning as `authoritative`, 
+applying to requests in that language. A single server entry can carry both kinds of claim:
 
 ```json5
-"authoritative" : ["http://fhir.de/CodeSystem/*"], // authoritative, irrespective of language
+"authoritative" : ["http://fhir.de/CodeSystem/*"], // authoritative, whatever language is asked for
 "languages" : {
   "de" : ["http://loinc.org*"] // authoritative for German-language requests
 }
 ```
 
-This entry means: this server is the authoritative server for the `http://fhir.de/` code systems in 
-any language, and *for German-language requests*, it is also the authoritative server for LOINC.
+This entry means: this server is the authoritative server for the `http://fhir.de/` code systems 
+whatever language is asked for, and *for German-language requests*, it is also the authoritative 
+server for LOINC.
 
 Note that a language specific claim is full authority over the whole operation for requests in that 
 language - it is not authority over displays that is separable from authority over content. There is 
@@ -182,8 +187,9 @@ Consequences:
 * Language specific claims are invisible to requests that do not specify a language - they never 
   bleed into general traffic. A request with no language matches only `authoritative` claims, which 
   preserves the existing (pre-language) behavior exactly
-* The `authoritative` list remains the default destination: it applies to requests in any language 
-  not more specifically claimed by another server, exactly as before
+* The `authoritative` list remains the default destination: it applies whatever language is asked 
+  for (or none), except where another server makes a more specific claim for the requested 
+  language - exactly as before
 
 Language specific claims apply to code systems only; there is (at this time) no language dimension 
 to `authoritative-valuesets`.
@@ -206,6 +212,24 @@ the request specifies a language).
 
 Where the request language is a weighted list per the Accept-Language syntax (e.g. 
 `de-AT, de;q=0.9, en;q=0.1`), this matching is applied per language in descending weight order.
+
+#### Exclusions
+
+Servers may hold code systems or value sets that should not be used through the ecosystem at all - 
+for example, a copy of a code system that is incomplete, out of date, or not intended for use 
+beyond the server's own community. The `exclusions` list hides such content: anything matching one 
+of the masks is removed from the server's presence in the ecosystem entirely:
+
+* The coordination server ignores matching code systems and value sets when scanning the server
+* The server is never returned by the Resolution API for a matching code system or value set - 
+  neither as authoritative nor as a candidate - even if one of the server's authoritative claims 
+  (including language specific claims) would otherwise match it
+
+An exclusion is the opposite of an authoritative claim: an authoritative claim says 'prefer this 
+server for this content', an exclusion says 'never use this server for this content' (within this 
+ecosystem). Note that exclusions are about the server's fitness to serve the content, not about the 
+authority to serve it; a server that simply doesn't want to be the *preferred* destination for 
+something should instead write its authoritative masks so that they don't cover it.
 
 ### The Coordination server
 
