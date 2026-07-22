@@ -351,10 +351,12 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
     "languages" : ["de"] // if this entry was matched on a language specific claim: the language 
                          // tag of that claim
   }],
-  "candidate" : [{
+  "candidates" : [{
     // same content as for authoritative, except that content will
     // be reported, *if* provided by the server
-    "content": "not-present" | "example" | "fragment" | "complete" | "supplement"
+    "content": "not-present" | "example" | "fragment" | "complete" | "supplement",
+    "language-support" : "unknown" // present when the request specified a language: the ecosystem
+                                   // does not know whether this server can supply that language (see below)
   }]
 }
 ```
@@ -372,7 +374,15 @@ Notes:
   `de, *;q=0.1` vs `de, *;q=0` distinction described in [Languages](languages.html))
 * Candidate servers are not filtered or ranked by language - the ecosystem has no reliable way to know 
   what languages a candidate can serve (that information comes from registration claims, and candidates 
-  by definition have none that match)
+  by definition have none that match). Instead, when the request specifies a language, candidate 
+  entries are explicitly marked with `language-support: unknown`. A marked candidate hosts the code 
+  system and can execute the operation, but may not be able to supply the requested language: using 
+  one means accepting displays in whatever language it has. That is only a valid choice under the 
+  wildcard reading of the language (`de, *;q=0.1`); clients that require the requested language 
+  (`de, *;q=0`) should not use marked candidates. Note in particular that validating a display 
+  against a server that lacks the requested language produces a false negative, not a degraded 
+  result - a marked candidate is only a safe fallback for operations where wrong-language displays 
+  are acceptable
 
 
 ### Usages

@@ -51,6 +51,10 @@ Consequences for clients using the ecosystem:
   default authoritative server. Whether to use it anyway (accepting displays in whatever language 
   it has - the `de, *;q=0.1` behavior) or to treat the language as unavailable (the `de, *;q=0` 
   behavior) remains the client's decision, exactly as it is for a single server
+* Candidate servers returned for a language-specific resolve are marked `language-support: unknown` - 
+  they host the code system, but the ecosystem does not know whether they can supply the requested 
+  language. They are only usable under the wildcard reading; in particular, do not validate displays 
+  against them
 
 See [Language Specific Claims](ecosystem.html#language-specific-claims) for the registration format, 
 matching rules, and resolution ordering.
