@@ -4021,7 +4021,8 @@
         "description" : "Test a simple search",
         "operation" : "expand",
         "request" : "search/search-expand-filter-yes-request.json",
-        "response" : "search/search-expand-filter-yes-response.json"
+        "response" : "search/search-expand-filter-yes-response.json",
+        "response:flat" : "search/search-expand-filter-yes-flat-response.json"
       },
       {
         "name" : "search-filter-no",
