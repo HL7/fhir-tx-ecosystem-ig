@@ -45,8 +45,11 @@ Consequences for clients using the ecosystem:
   server selection, and pass it as the `language` parameter in the coordination server's resolve call 
 * The language used for routing and the language used in the subsequent operation must be the same
 * Only language-sensitive operations should be routed with a language: `$expand` where a display 
-  language is in play, `$validate-code` where a display will be checked, `$lookup` requesting 
-  designations. Pure code validation (no display involved) should be routed without a language
+  language is in play, `$validate-code` that carries a display language (even when no display is 
+  provided to check, the display in the response comes back in the requested language, and callers 
+  use it - e.g. display lookups when rendering), `$lookup` requesting designations. In practice: 
+  route with the language whenever the request specifies one; requests with no language interest 
+  should not invent one
 * If no server has a language specific claim matching the language, the resolve call returns the 
   default authoritative server. Whether to use it anyway (accepting displays in whatever language 
   it has - the `de, *;q=0.1` behavior) or to treat the language as unavailable (the `de, *;q=0` 

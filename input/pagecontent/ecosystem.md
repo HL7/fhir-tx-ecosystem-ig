@@ -325,10 +325,12 @@ These parameters SHALL be supported by all servers:
 * `usage` - see below
 
 Clients should pass `language` when (and only when) the operation being routed is language-sensitive: 
-an `$expand` where a display language is in play, a `$validate-code` where a display will be checked, 
-a `$lookup` requesting designations. Pure code validation should omit it. The value passed is whatever 
-the client resolved from the displayLanguage sources described in [Languages](languages.html) - 
-resolution and the subsequent operation must use the same language, or the routing is meaningless.
+an `$expand` where a display language is in play, a `$validate-code` that carries a display language 
+(whether or not a display is provided to check - the display in the response comes back in the 
+requested language), a `$lookup` requesting designations. Requests with no language interest should 
+omit it. The value passed is whatever the client resolved from the displayLanguage sources described 
+in [Languages](languages.html) - resolution and the subsequent operation must use the same language, 
+or the routing is meaningless.
 
 When `language` is present, servers with matching language specific claims are returned first in the 
 `authoritative` list (ordered by the language matching rules above, then by the usual ranking), 
