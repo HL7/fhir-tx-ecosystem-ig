@@ -4,7 +4,7 @@
     "severity" : "error",
     "code" : "unknown",
     "details" : {
-      "text" : "Regex filter evaluation timed out"
+      "text" : "The regex filter '((a+)+)+' took too long to evaluate against code 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!'"
     }
   }]
 }
