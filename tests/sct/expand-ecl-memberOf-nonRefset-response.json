@@ -1,18 +1,49 @@
 {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
+  "$optional-properties$": [
+    "id",
+    "date",
+    "publisher",
+    "description",
+    "copyright",
+    "compose"
+  ],
+  "resourceType": "ValueSet",
+  "id": "$id$",
+  "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-nonRefset",
+  "version": "5.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-05",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+        "filter": [
+          {
+            "property": "constraint",
+            "op": "=",
+            "value": "^ 10200004"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "$optional-properties$": ["id", "offset"],
     "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString" : "UNSUPPORTED_ECL"
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
     }],
-    "severity" : "error",
-    "code" : "invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "vs-invalid"
-      }],
-      "text" : "The ECL expression is not supported: '^ 10200004': (The SNOMED CT Concept 10200004 is not a reference set)"
-    }
-  }]
+    "id": "$id$",
+    "identifier": "$uuid$",
+    "timestamp": "$instant$",
+    "total": 0,
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+      }
+    ]
+  }
 }

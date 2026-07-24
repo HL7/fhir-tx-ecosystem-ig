@@ -5,13 +5,13 @@
       "name": "valueSet",
       "resource": {
         "resourceType": "ValueSet",
-        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-ambiguous-precedence",
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
         "date": "2025-09-05",
         "publisher": "FHIR Project",
-        "description": "All active concepts minus the Liver-structure subtree.",
+        "description": "Invalid ECL: mixing AND/OR without explicit grouping is forbidden by the ECL specification. Per ECL 6.4: 'Where a conjunction and disjunction are both used together, it is mandatory to use round brackets to disambiguate the meaning.' Example of invalid syntax from spec: '< 19829001 AND < 301867009 OR ^ 700043003'.",
         "compose": {
           "include": [
             {
@@ -21,21 +21,13 @@
                 {
                   "property": "constraint",
                   "op": "=",
-                  "value": "* MINUS << 10200004"
+                  "value": "<< 128045006 OR << 10200004 AND << 64572001"
                 }
               ]
             }
           ]
         }
       }
-    },
-    {
-      "name" : "count",
-      "valueInteger" : 3000
-    },
-    {
-      "name": "allowMaximumSizeExpansion",
-      "valueBoolean": true
     }
   ]
 }

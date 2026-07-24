@@ -1,7 +1,7 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
-  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-left-associative",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-grouped-or",
   "version" : "5.0.0",
   "status" : "active",
   "experimental" : false,
@@ -10,7 +10,7 @@
     "include": [{
       "system": "http://snomed.info/sct",
       "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
-      "filter": [{ "property": "constraint", "op": "=", "value": "<< 128045006 OR << 10200004 AND << 64572001" }]
+      "filter": [{ "property": "constraint", "op": "=", "value": "(<< 128045006 OR << 10200004) AND << 64572001" }]
     }]
   },
   "expansion" : {

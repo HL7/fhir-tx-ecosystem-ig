@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-descOrSelf",
@@ -24,7 +24,7 @@
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "10200004",
-      "display" : "Liver"
+      "display" : "Liver structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -44,7 +44,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "3860006",
-      "display" : "Transplanted liver"
+      "display" : "Structure of transplanted liver"
     }]
   }
 }

@@ -30,7 +30,7 @@
       }
     },
     {
-      "name" : "limit",
+      "name" : "count",
       "valueInteger" : 3000
     }
   ]

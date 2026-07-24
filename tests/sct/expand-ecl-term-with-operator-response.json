@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-term-with-operator}",
@@ -28,25 +28,26 @@
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
     }],
-    "contains" : [{
+    "contains" : [
+    {
       "system" : "http://snomed.info/sct",
       "code" : "10200004",
-      "display" : "Liver"
+      "display" : "Liver structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "11204002",
-      "display" : "Porta hepatis"
+      "display" : "Structure of porta hepatis"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113286005",
-      "display" : "Inferior margin of liver"
+      "display" : "Structure of inferior margin of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "113287001",
-      "display" : "Appendix fibrosa of liver"
+      "display" : "Structure of appendix fibrosa of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -66,7 +67,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "11978009",
-      "display" : "Falciform ligament"
+      "display" : "Falciform ligament structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -81,22 +82,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "12254005",
-      "display" : "Interlobular veins of liver"
+      "display" : "Structure of interlobular vein of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "127879008",
-      "display" : "Hepatic parenchyma"
+      "display" : "Structure of parenchyma of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1303491005",
-      "display" : "Subcapsular hepatic space"
+      "display" : "Structure of subcapsular space of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1303492003",
-      "display" : "Entire subcapsular hepatic space"
+      "display" : "Entire subcapsular space of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -136,12 +137,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "1340144005",
-      "display" : "Entire intrahepatic biliary tree"
+      "display" : "Entire intrahepatic biliary tract"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "13415004",
-      "display" : "Incisure for round ligament of liver"
+      "display" : "Structure of incisure for round ligament of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -156,32 +157,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "15120006",
-      "display" : "Intralobular bile duct"
+      "display" : "Structure of intralobular bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "15760000",
-      "display" : "Caudate process of caudate lobe of liver"
+      "display" : "Structure of caudate process of caudate lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "15878004",
-      "display" : "Hepatic lobule"
+      "display" : "Hepatic lobule structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "16777006",
-      "display" : "Medial segment of left lobe of liver"
+      "display" : "Structure of medial segment of left lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1684009",
-      "display" : "Ligamentum teres of liver"
+      "display" : "Structure of ligamentum teres of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "17479004",
-      "display" : "Right triangular ligament"
+      "display" : "Structure of right triangular ligament"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -206,22 +207,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "18939001",
-      "display" : "Artery of the caudate lobe of liver"
+      "display" : "Structure of artery of the caudate lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "19264002",
-      "display" : "Area nuda hepatis"
+      "display" : "Structure of area nuda hepatis"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "21807003",
-      "display" : "Left branch of hepatic artery"
+      "display" : "Structure of left branch of hepatic artery"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "22275003",
-      "display" : "Colic impression of liver"
+      "display" : "Structure of colic impression of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -231,7 +232,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "23542001",
-      "display" : "Superior portion of diaphragmatic aspect of liver"
+      "display" : "Structure of superior portion of diaphragmatic aspect of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -276,7 +277,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "26226001",
-      "display" : "Duodenal impression of liver"
+      "display" : "Structure of duodenal impression of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -291,7 +292,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "26641008",
-      "display" : "Medial branch of left hepatic duct"
+      "display" : "Structure of medial branch of left hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -306,7 +307,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "26928007",
-      "display" : "Quadrate lobe of liver"
+      "display" : "Structure of quadrate lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -316,12 +317,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "269447003",
-      "display" : "Right hepatic duct of caudate lobe"
+      "display" : "Structure of right hepatic duct of caudate lobe"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "269522003",
-      "display" : "Left hepatic duct of caudate lobe"
+      "display" : "Structure of left hepatic duct of caudate lobe"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -446,7 +447,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "271942000",
-      "display" : "Intralobular venous sinusoid"
+      "display" : "Structure of hepatic sinusoid"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -776,12 +777,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "28481001",
-      "display" : "Portal tract"
+      "display" : "Portal tract structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "2909002",
-      "display" : "Posterior portion of diaphragmatic aspect of liver"
+      "display" : "Structure of posterior portion of diaphragmatic aspect of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -821,17 +822,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "318001",
-      "display" : "Cardiac impression of liver"
+      "display" : "Structure of cardiac impression of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "33392008",
-      "display" : "Lateral segment artery of liver"
+      "display" : "Structure of lateral segment artery of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "35523009",
-      "display" : "Posterior segment artery of liver"
+      "display" : "Structure of posterior segment artery of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -951,27 +952,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "37424004",
-      "display" : "Hepatic acinus"
+      "display" : "Structure of hepatic acinus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "38034003",
-      "display" : "Hepatorenal ligament"
+      "display" : "Structure of hepatorenal ligament"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "3860006",
-      "display" : "Transplanted liver"
+      "display" : "Structure of transplanted liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "39043001",
-      "display" : "Triangular ligament"
+      "display" : "Structure of triangular ligament"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "39182001",
-      "display" : "Fissure of round ligament of liver"
+      "display" : "Structure of fissure of round ligament of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1001,22 +1002,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "42551006",
-      "display" : "Gastric impression of liver"
+      "display" : "Structure of gastric impression of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "43903004",
-      "display" : "Left triangular ligament"
+      "display" : "Structure of left triangular ligament"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "45306004",
-      "display" : "Diaphragmatic aspect of liver"
+      "display" : "Structure of diaphragmatic aspect of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "48025006",
-      "display" : "Serous capsule of liver"
+      "display" : "Structure of serous capsule of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1026,7 +1027,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "48521005",
-      "display" : "Right lobe of liver"
+      "display" : "Structure of right lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1041,7 +1042,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "48781005",
-      "display" : "Hepatic capsule"
+      "display" : "Hepatic capsule structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1056,27 +1057,27 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "57627008",
-      "display" : "Coronary ligament"
+      "display" : "Structure of coronary ligament"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "57661005",
-      "display" : "Interstitial tissue of liver"
+      "display" : "Structure of interstitial tissue of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "58583003",
-      "display" : "Anterior portion of diaphragmatic aspect of liver"
+      "display" : "Structure of anterior portion of diaphragmatic aspect of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "60039004",
-      "display" : "Papillary process of caudate lobe of liver"
+      "display" : "Structure of papillary process of caudate lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "60152006",
-      "display" : "Hepatic duct of caudate lobe"
+      "display" : "Structure of hepatic duct of caudate lobe"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1086,7 +1087,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "61460008",
-      "display" : "Adrenal impression of liver"
+      "display" : "Structure of adrenal impression of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1096,17 +1097,17 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "62919005",
-      "display" : "Perivascular fibrous capsule of liver"
+      "display" : "Structure of perivascular fibrous capsule of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "63207002",
-      "display" : "Posterior branch of right hepatic duct"
+      "display" : "Structure of posterior branch of right hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "65706005",
-      "display" : "Groove for vena cava of liver"
+      "display" : "Structure of groove for vena cava of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1131,52 +1132,52 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "68932007",
-      "display" : "Right portion of diaphragmatic aspect of liver"
+      "display" : "Structure of right portion of diaphragmatic aspect of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "69039008",
-      "display" : "Gallbladder fossa of liver"
+      "display" : "Structure of gallbladder fossa of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "69421009",
-      "display" : "Right branch of hepatic artery"
+      "display" : "Structure of right branch of hepatic artery"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "69735007",
-      "display" : "Anterior segment artery of liver"
+      "display" : "Structure of anterior segment artery of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "69842003",
-      "display" : "Left lobe of liver"
+      "display" : "Structure of left lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "70253006",
-      "display" : "Left branch of portal vein"
+      "display" : "Structure of left main branch of portal vein"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "70286005",
-      "display" : "Omental tubercle of liver"
+      "display" : "Structure of omental tubercle of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "71133005",
-      "display" : "Caudate lobe of liver"
+      "display" : "Structure of caudate lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "71148004",
-      "display" : "Anterior branch of right hepatic duct"
+      "display" : "Structure of anterior branch of right hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "72231004",
-      "display" : "Lateral branch of left hepatic duct"
+      "display" : "Structure of lateral branch of left hepatic duct"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1451,7 +1452,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "73931004",
-      "display" : "Right branch of portal vein"
+      "display" : "Structure of right main branch of portal vein"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1461,32 +1462,32 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "75358002",
-      "display" : "Central vein of liver"
+      "display" : "Structure of central vein of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "76202000",
-      "display" : "Sublobular vein of liver"
+      "display" : "Structure of sublobular vein of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "76726002",
-      "display" : "Portal triad"
+      "display" : "Portal triad structure"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "76919008",
-      "display" : "Anterior segment of right lobe of liver"
+      "display" : "Structure of anterior segment of right lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "790007",
-      "display" : "Visceral aspect of liver"
+      "display" : "Structure of visceral aspect of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "80303005",
-      "display" : "Lateral segment of left lobe of liver"
+      "display" : "Structure of lateral segment of left lobe of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1496,22 +1497,22 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "81151002",
-      "display" : "Groove of ligamentum venosum of liver"
+      "display" : "Structure of groove of ligamentum venosum of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "8292002",
-      "display" : "Interlobular arteries of liver"
+      "display" : "Structure of interlobular artery of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "83488001",
-      "display" : "Interlobular bile duct"
+      "display" : "Structure of interlobular bile duct"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "84318003",
-      "display" : "Renal impression of liver"
+      "display" : "Structure of renal impression of liver"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1526,7 +1527,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "871688003",
-      "display" : "Couinaud hepatic segment IVa"
+      "display" : "Structure of Couinaud hepatic segment IVa"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1546,12 +1547,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "87746007",
-      "display" : "Bile canaliculus"
+      "display" : "Structure of bile canaliculus"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "88391003",
-      "display" : "Hepatic lacunae"
+      "display" : "Hepatic lacunae structure"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1561,7 +1562,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "8993003",
-      "display" : "Hepatic vein"
+      "display" : "Structure of hepatic vein"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1571,12 +1572,12 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "90752009",
-      "display" : "Middle segment artery of liver"
+      "display" : "Structure of middle segment artery of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "9242006",
-      "display" : "Posterior segment of right lobe of liver"
+      "display" : "Structure of posterior segment of right lobe of liver"
     }]
   }
 }

@@ -11,7 +11,7 @@
         "experimental": false,
         "date": "2025-09-05",
         "publisher": "FHIR Project",
-        "description": "Refinement with cardinality. Currently unsupported.",
+        "description": "Ungrouped cardinality: exactly 1 Finding site in liver counted across all role groups. Concepts with 2+ role groups each containing a liver Finding site are excluded (573).",
         "compose": {
           "include": [
             {

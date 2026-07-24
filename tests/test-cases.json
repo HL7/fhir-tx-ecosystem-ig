@@ -23,7 +23,7 @@
     "name" : "simple-cases",
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", 
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
     "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
     "tests" :[
       {
@@ -145,7 +145,7 @@
     "name" : "parameters",
     "mode" : "general",
     "description" : "Testing out the various expansion parameters that the IG publisher makes use of",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", 
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json",
        "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-enumerated.json",
        "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-all-ns.json"],
     "tests" :[
@@ -388,11 +388,11 @@
     "description" : "Testing returning language by request, getting the right designation",
     "notes" : "see languages.md for an explanation",
     "setup" : [
-      "language/codesystem-de-multi.json", "language/codesystem-de-single.json", 
+      "language/codesystem-de-multi.json", "language/codesystem-de-single.json",
       "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
 
-     "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-de-de-single.json", "language/valueset-de-de-multi.json", 
-     "language/valueset-en-multi.json", "language/valueset-en-en-multi.json",  "language/valueset-en-single.json", "language/valueset-en-en-single.json", 
+     "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-de-de-single.json", "language/valueset-de-de-multi.json",
+     "language/valueset-en-multi.json", "language/valueset-en-en-multi.json",  "language/valueset-en-single.json", "language/valueset-en-en-single.json",
      "language/valueset-en-enlang-single.json", "language/valueset-en-mixed-single.json",
      "language/valueset-en-de-soft-multi.json", "language/valueset-en-de-hard-multi.json"],
     "tests" : [
@@ -2733,7 +2733,7 @@
         "request" : "version/vs-expand-v2-request-parameters.json",
         "response" : "version/vs-expand-v2-force-response-valueSet.json"
       },
-      
+
       {
         "name" : "vs-expand-all-v-default",
         "description" : "version specific expand tests",
@@ -2807,7 +2807,7 @@
         "request" : "version/vs-expand-v2-request-parameters.json",
         "response" : "version/vs-expand-v2-default-response-valueSet.json"
       },
-      
+
       {
         "name" : "vs-expand-all-v-check",
         "description" : "version specific expand tests",
@@ -2899,8 +2899,8 @@
     "mode" : "general",
     "description" : "A set of tests that test out handling of value sets that cross versions of the same code system",
     "setup" : ["overload/codesystem-overload-1.json", "overload/codesystem-overload-2.json",
-        "overload/valueset-overload-all.json", "overload/valueset-overload-all-versioned.json", "overload/valueset-overload-all-merged.json", 
-        "overload/valueset-overload-exclude.json", "overload/valueset-overload-exclude-versioned.json", "overload/valueset-overload-exclude-merged.json", 
+        "overload/valueset-overload-all.json", "overload/valueset-overload-all-versioned.json", "overload/valueset-overload-all-merged.json",
+        "overload/valueset-overload-exclude.json", "overload/valueset-overload-exclude-versioned.json", "overload/valueset-overload-exclude-merged.json",
         "overload/valueset-overload-enum-good.json", "overload/valueset-overload-enum-bad.json", "overload/valueset-overload-exclude-enum.json",
         "overload/valueset-overload-mixed.json"
       ],
@@ -3097,14 +3097,14 @@
       {
         "name" : "validate-good-v1code2-display",
         "description" : "Validates that code2 with version=1.0.0 and display \"Display 2\" succeeds, since that's the correct display for v1.",
-        "operation" : "validate-code",                              
+        "operation" : "validate-code",
         "request" : "overload/validate-good-v1code2-display-request.json",
         "response" :  "overload/validate-good-v1code2-display-response.json"
       },
       {
         "name" : "validate-good2a",
         "description" : "Validates that a codeableConcept with both versions in it works fine.",
-        "operation" : "validate-code",                              
+        "operation" : "validate-code",
         "request" : "overload/validate-good2a-request.json",
         "response" :  "overload/validate-good2a-response.json"
       }
@@ -3163,7 +3163,7 @@
         "operation" : "validate-code",
         "request" : "fragment/fragment-codeableconcept-bad-code-request-parameters.json",
         "response" : "fragment/fragment-codeableconcept-bad-code-response-parameters.json"
-      }      
+      }
     ]
   },{
     "name" : "big",
@@ -3215,7 +3215,7 @@
         "http-code" : "4xx",
         "request" : "big/validation-big-circle-request-parameters.json",
         "response" : "big/validation-big-circle-response-outcome.json"
-      }        
+      }
     ]
   },{
     "name" : "other",
@@ -3243,13 +3243,13 @@
         "operation" : "validate-code",
         "request" : "other/validation-dual-filter-out-request-parameters.json",
         "response" : "other/validation-dual-filter-out-response-parameters.json"
-      }     
+      }
     ]
   },{
     "name" : "errors",
     "mode" : "general",
     "description" : "Testing Various Error Conditions",
-    "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json", 
+    "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json",
        "errors/cs1.json", "errors/cs2.json", "errors/valueset-combination.json"],
     "tests" : [
       {
@@ -3297,13 +3297,13 @@
         "operation" : "validate-code",
         "request" : "errors/errors-combination-bad-request.json",
         "response" : "errors/errors-combination-bad-response.json"
-      }  
+      }
     ]
   },{
     "name" : "deprecated",
     "mode" : "general",
     "description" : "Testing Deprecated+Withdrawn warnings",
-    "setup" : ["deprecated/codesystem-deprecated.json","deprecated/valueset-withdrawn.json","deprecated/valueset-not-withdrawn.json", 
+    "setup" : ["deprecated/codesystem-deprecated.json","deprecated/valueset-withdrawn.json","deprecated/valueset-not-withdrawn.json",
                "deprecated/codesystem-experimental.json","deprecated/valueset-experimental.json",
                "deprecated/codesystem-draft.json","deprecated/valueset-draft.json","deprecated/valueset-deprecating.json"],
     "tests" : [
@@ -3387,8 +3387,8 @@
     "description" : "Testing notSelectable",
     "setup" : [
        "notSelectable/codesystem-notSelectable-prop.json", "notSelectable/valueset-notSelectable-prop-all.json", "notSelectable/valueset-notSelectable-prop-false.json", "notSelectable/valueset-notSelectable-prop-true.json", "notSelectable/valueset-notSelectable-prop-trueUC.json", "notSelectable/valueset-notSelectable-prop-in.json", "notSelectable/valueset-notSelectable-prop-out.json",
-       "notSelectable/codesystem-notSelectable-noprop.json", "notSelectable/valueset-notSelectable-noprop-all.json", "notSelectable/valueset-notSelectable-noprop-false.json", "notSelectable/valueset-notSelectable-noprop-true.json", 
-       "notSelectable/codesystem-notSelectable-reprop.json", "notSelectable/valueset-notSelectable-reprop-all.json", "notSelectable/valueset-notSelectable-reprop-false.json", "notSelectable/valueset-notSelectable-reprop-true.json", 
+       "notSelectable/codesystem-notSelectable-noprop.json", "notSelectable/valueset-notSelectable-noprop-all.json", "notSelectable/valueset-notSelectable-noprop-false.json", "notSelectable/valueset-notSelectable-noprop-true.json",
+       "notSelectable/codesystem-notSelectable-reprop.json", "notSelectable/valueset-notSelectable-reprop-all.json", "notSelectable/valueset-notSelectable-reprop-false.json", "notSelectable/valueset-notSelectable-reprop-true.json",
        "notSelectable/codesystem-notSelectable-unprop.json", "notSelectable/valueset-notSelectable-unprop-all.json", "notSelectable/valueset-notSelectable-unprop-false.json", "notSelectable/valueset-notSelectable-unprop-true.json"],
     "tests" : [
       {
@@ -3754,14 +3754,14 @@
         "operation" : "expand",
         "request" : "inactive/inactive-expand-all-request-parameters.json",
         "response" : "inactive/inactive-expand-all-response-valueSet.json"
-      },     
+      },
       {
         "name" : "inactive-inactive-expand",
         "description" : "to be provided",
         "operation" : "expand",
         "request" : "inactive/inactive-inactive-expand-all-request-parameters.json",
         "response" : "inactive/inactive-inactive-expand-all-response-valueSet.json"
-      },     
+      },
       {
         "name" : "inactive-active-expand",
         "description" : "to be provided",
@@ -4142,9 +4142,9 @@
     "name" : "tx.fhir.org",
     "mode" : "tx.fhir.org",
     "description" : "These are tx.fhir.org specific tests. There's no expectation that other servers will pass these tests, and they are not executed by default. (other servers can, but they depend on other set up not controlled by the tests",
-    "setup" : [ "tx.fhir.org/valueset-all.json", "tx.fhir.org/valueset-enumerated-bad.json", "tx.fhir.org/valueset-enumerated.json", "tx.fhir.org/valueset-filter-prop-component.json", "tx.fhir.org/valueset-filter-prop-method.json", "tx.fhir.org/valueset-filter-prop-component-str.json", 
-      "tx.fhir.org/valueset-filter-prop-order-obs.json", "tx.fhir.org/valueset-concept-is-a.json", "tx.fhir.org/valueset-filter-copyright.json", "tx.fhir.org/valueset-filter-status.json", "tx.fhir.org/valueset-filter-class-regex.json", 
-      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", "tx.fhir.org/valueset-filter-classtype.json", 
+    "setup" : [ "tx.fhir.org/valueset-all.json", "tx.fhir.org/valueset-enumerated-bad.json", "tx.fhir.org/valueset-enumerated.json", "tx.fhir.org/valueset-filter-prop-component.json", "tx.fhir.org/valueset-filter-prop-method.json", "tx.fhir.org/valueset-filter-prop-component-str.json",
+      "tx.fhir.org/valueset-filter-prop-order-obs.json", "tx.fhir.org/valueset-concept-is-a.json", "tx.fhir.org/valueset-filter-copyright.json", "tx.fhir.org/valueset-filter-status.json", "tx.fhir.org/valueset-filter-class-regex.json",
+      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", "tx.fhir.org/valueset-filter-classtype.json",
       "tx.fhir.org/valueset-filter-answers-for1.json", "tx.fhir.org/valueset-filter-answers-for2.json", "tx.fhir.org/valueset-filter-answer-list.json", "tx.fhir.org/valueset-filter-parent.json",
       "tx.fhir.org/codesystem-loinc-supplement.json"],
     "tests" : [
@@ -4683,6 +4683,14 @@
         "response" : "sct/expand-ecl-parentsOrSelf-response.json"
       },
       {
+        "name" : "snomed-expand-count-all",
+        "description" : "Smoke test: total concept count for the loaded SNOMED edition subset must be 2206.",
+        "operation" : "expand",
+        "request" : "sct/expand-count-all-request.json",
+        "response" : "sct/expand-count-all-response.json"
+      },
+
+      {
         "name" : "snomed-expand-ecl-wildcard",
         "description" : "All active concepts in the subset (wildcard).",
         "operation" : "expand",
@@ -4702,7 +4710,6 @@
         "name" : "snomed-expand-ecl-memberOf-nonRefset",
         "description" : "Negative case: ^ applied to a concept that is not a reference set should error.",
         "operation" : "expand",
-        "http-code" : "4xx",
         "request" : "sct/expand-ecl-memberOf-nonRefset-request.json",
         "response" : "sct/expand-ecl-memberOf-nonRefset-response.json"
       },
@@ -4748,19 +4755,28 @@
       },
 
       {
-        "name" : "snomed-expand-ecl-parens-precedence",
-        "description" : "Parenthesised compound; confirms ( ) grouping is honoured.",
+        "name" : "snomed-expand-ecl-grouped-or",
+        "description" : "Grouped OR: (<< A OR << B) AND << C — OR subexpression parenthesised; union of cellulitis and liver-structure subtrees intersected with disease; yields 1 result.",
         "operation" : "expand",
-        "request" : "sct/expand-ecl-parens-precedence-request.json",
-        "response" : "sct/expand-ecl-parens-precedence-response.json"
+        "request" : "sct/expand-ecl-grouped-or-request.json",
+        "response" : "sct/expand-ecl-grouped-or-response.json"
       },
 
       {
-        "name" : "snomed-expand-ecl-left-associative",
-        "description" : "Same expression without parens; ECL 2.x is strictly left-to-right, so result should differ from parens-precedence.",
+        "name" : "snomed-expand-ecl-grouped-and",
+        "description" : "Grouped AND: << A OR (<< B AND << C) — AND subexpression parenthesised; liver-structure unioned with intersection of cellulitis and disease; yields 311 results.",
         "operation" : "expand",
-        "request" : "sct/expand-ecl-left-associative-request.json",
-        "response" : "sct/expand-ecl-left-associative-response.json"
+        "request" : "sct/expand-ecl-grouped-and-request.json",
+        "response" : "sct/expand-ecl-grouped-and-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-ambiguous-precedence",
+        "description" : "Invalid ECL: mixing AND/OR without explicit grouping is forbidden by ECL spec (section 6.4) — must return an error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/expand-ecl-ambiguous-precedence-request.json",
+        "response" : "sct/expand-ecl-ambiguous-precedence-response.json"
       },
 
       {
@@ -4865,10 +4881,26 @@
 
       {
         "name" : "snomed-expand-ecl-refinement-cardinality",
-        "description" : "Refinement with cardinality. Currently unsupported.",
+        "description" : "Ungrouped [1..1] cardinality: exactly 1 Finding site in liver across all role groups — excludes concepts with 2+ groups each containing a liver Finding site (573).",
         "operation" : "expand",
         "request" : "sct/expand-ecl-refinement-cardinality-request.json",
         "response" : "sct/expand-ecl-refinement-cardinality-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-grouped",
+        "description" : "Grouped [1..1] cardinality: exactly 1 role group containing exactly 1 Finding site in liver — same result as ungrouped for typical SNOMED models (573).",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-cardinality-grouped-request.json",
+        "response" : "sct/expand-ecl-refinement-cardinality-grouped-response.json"
+      },
+
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-rolegroup",
+        "description" : "Role group cardinality without outer count: at least one role group containing exactly 1 Finding site in liver — more permissive, includes concepts with multiple groups each having 1 liver Finding site (661).",
+        "operation" : "expand",
+        "request" : "sct/expand-ecl-refinement-cardinality-rolegroup-request.json",
+        "response" : "sct/expand-ecl-refinement-cardinality-rolegroup-response.json"
       },
 
       {
@@ -5290,8 +5322,8 @@
     "mode" : "tx.fhir.org",
     "description" : "Tests for candidate new 'related' operation",
     "setup" : ["simple/codesystem-simple.json", "extensions/codesystem-extensions.json", "simple/valueset-all.json", "simple/valueset-active.json",
-     "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", 
-     "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", 
+     "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json",
+     "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
      "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
     "tests" :[
       {
@@ -6049,7 +6081,7 @@
     "mode" : "tx.fhir.org",
     "description": "Tests for $compare operation - comparing two value sets to determine their relationship (equivalent, subset, superset, overlap, disjoint, unknown)",
     "setup": ["related/codesystem-compare-cs1-v1.json", "related/codesystem-compare-cs1-v2.json", "related/codesystem-compare-cs2.json", "related/codesystem-compare-cs3.json",
-              "related/valueset-compare-eq-6-child1.json", "related/valueset-compare-eq-6-child2.json", "related/valueset-compare-eq-5imp.json", 
+              "related/valueset-compare-eq-6-child1.json", "related/valueset-compare-eq-6-child2.json", "related/valueset-compare-eq-5imp.json",
               "related/valueset-compare-sub-3a.json", "related/valueset-compare-ver-1a.json", "related/valueset-compare-ver-1b.json"],
     "tests": [
       {

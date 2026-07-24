@@ -47,3 +47,7 @@ snowstormx
 Requirements-fromNarrative.json
 
 tests/related/.claude/worktrees/clever-babbage
+test-results
+.idea
+*.jar
+*.zip

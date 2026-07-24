@@ -1,6 +1,7 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
+    "$optional-properties$" : ["extension"],
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "INVALID_ECL"
@@ -8,13 +9,12 @@
     "severity" : "error",
     "code" : "invalid",
     "details" : {
-      "$optional-properties$" : ["text"],
       "coding" : [{
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "vs-invalid"
       }],
-      "fhir_comments" : "text varies by server — must contain the offending expression: e.g. 'Invalid ECL expression: '<< 10200004 <<': (Syntax error at line 1, character 12: unexpected character '<' expecting {<EOF>, '\\u0009', '\\u000A', '\\u000D', ' ', '/'})'",
-      "text" : "$fragments:<< 10200004 <<$"
+      "fhir_comments" : "error text varies by server — must indicate the ambiguous/unsupported ECL expression",
+      "text" : "$fragments:<< 128045006 OR << 10200004 AND << 64572001$"
     }
   }]
 }

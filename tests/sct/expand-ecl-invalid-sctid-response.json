@@ -3,7 +3,7 @@
   "issue" : [{
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString" : "UNSUPPORTED_ECL"
+      "valueString" : "INVALID_ECL"
     }],
     "severity" : "error",
     "code" : "invalid",
@@ -12,7 +12,8 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "vs-invalid"
       }],
-      "text" : "The ECL expression is not supported: '<< abc': (Cannot convert abc to a BigInt)"
+      "fhir_comments" : "text varies by server — must contain the offending expression: e.g. 'Invalid ECL expression: '<< abc': (Syntax error at line 1, character 3: no viable alternative at input '<< abc')'",
+      "text" : "$fragments:<< abc$"
     }
   }]
 }

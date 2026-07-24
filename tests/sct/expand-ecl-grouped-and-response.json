@@ -1,31 +1,34 @@
 {
   "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
   "resourceType" : "ValueSet",
-  "id" : "$id$",
-  "url" : "http://hl7.org/fhir/test/ValueSet/sct-isa-1",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-grouped-and",
   "version" : "5.0.0",
-  "name" : "SCTDiabetesValueSet",
-  "title" : "SCT Diabetes ValueSet",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-09-05",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+      "filter": [{ "property": "constraint", "op": "=", "value": "<< 128045006 OR << 10200004 AND << 64572001" }]
+    }]
+  },
   "expansion" : {
     "$optional-properties$" : ["id", "offset"],
-    "extension" : [
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
-        "valueBoolean" : true
-      }
-    ],
-    "id" : "$id$",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 310,
+    "total" : 311,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
     }],
-    "contains" : [{
+    "contains" : [
+    {
       "system" : "http://snomed.info/sct",
       "code" : "10200004",
       "display" : "Liver structure"
@@ -84,6 +87,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "127879008",
       "display" : "Structure of parenchyma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128045006",
+      "display" : "Cellulitis"
     },
     {
       "system" : "http://snomed.info/sct",

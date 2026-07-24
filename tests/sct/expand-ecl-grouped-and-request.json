@@ -5,13 +5,13 @@
       "name": "valueSet",
       "resource": {
         "resourceType": "ValueSet",
-        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-grouped-and",
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
         "date": "2025-09-05",
         "publisher": "FHIR Project",
-        "description": "All active concepts minus the Liver-structure subtree.",
+        "description": "Grouped AND: << A OR (<< B AND << C) — AND subexpression parenthesised; yields 311 results.",
         "compose": {
           "include": [
             {
@@ -21,21 +21,13 @@
                 {
                   "property": "constraint",
                   "op": "=",
-                  "value": "* MINUS << 10200004"
+                  "value": "<< 10200004 OR (<< 128045006 AND << 64572001)"
                 }
               ]
             }
           ]
         }
       }
-    },
-    {
-      "name" : "count",
-      "valueInteger" : 3000
-    },
-    {
-      "name": "allowMaximumSizeExpansion",
-      "valueBoolean": true
     }
   ]
 }
