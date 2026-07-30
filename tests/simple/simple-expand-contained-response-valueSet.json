@@ -56,6 +56,7 @@
       "code" : "code2",
       "display" : "Display 2",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]

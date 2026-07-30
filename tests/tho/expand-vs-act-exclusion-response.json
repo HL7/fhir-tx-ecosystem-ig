@@ -89,6 +89,7 @@
       "inactive" : true,
       "code" : "BONUS",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -109,6 +110,7 @@
       "code" : "CHD",
       "display" : "Children only",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -219,6 +221,7 @@
       "code" : "DEP",
       "display" : "Dependents only",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -264,6 +267,7 @@
       "code" : "ECH",
       "display" : "Employee and children",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -273,6 +277,7 @@
       "inactive" : true,
       "code" : "EDU",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -298,6 +303,7 @@
       "code" : "EMP",
       "display" : "Employee only",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -333,6 +339,7 @@
       "code" : "ESP",
       "display" : "Employee and spouse",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -353,6 +360,7 @@
       "code" : "FAM",
       "display" : "Family",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -583,6 +591,7 @@
       "code" : "IND",
       "display" : "Individual",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -607,6 +616,7 @@
       "inactive" : true,
       "code" : "INVOICE",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -797,6 +807,7 @@
       "code" : "NOUSRPERM",
       "display" : "no user permission",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -1001,6 +1012,7 @@
       "inactive" : true,
       "code" : "PROA",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -1060,6 +1072,7 @@
       "inactive" : true,
       "code" : "RECOV",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -1109,6 +1122,7 @@
       "inactive" : true,
       "code" : "RETRO",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -1159,6 +1173,7 @@
       "code" : "SPC",
       "display" : "Spouse and children",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -1169,6 +1184,7 @@
       "code" : "SPO",
       "display" : "Spouse only",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
@@ -1233,6 +1249,7 @@
       "inactive" : true,
       "code" : "TRAN",
       "property" : [{
+        "$optional$" : true,
         "code" : "status",
         "valueCode" : "retired"
       }]
