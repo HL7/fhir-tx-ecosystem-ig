@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the refinement restates what the concept's own definition already says, so it adds nothing",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

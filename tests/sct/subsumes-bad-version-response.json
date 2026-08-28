@@ -1,0 +1,20 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "$choice:UNKNOWN_CODESYSTEM_VERSION_EXP|UNKNOWN_CODESYSTEM_VERSION_EXP_NONE$"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "fhir_comments" : "the tail of the message lists the versions the server does have, which is server specific",
+      "text" : "$fragments:http://snomed.info/sct|http://snomed.info/sct/1234567890/version/20250909|could not be found$"
+    }
+  }]
+}

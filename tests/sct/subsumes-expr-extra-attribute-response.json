@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "B says everything A says and more, so A subsumes B",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

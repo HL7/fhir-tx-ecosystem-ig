@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a single attribute in a group and the same attribute ungrouped mean the same thing",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

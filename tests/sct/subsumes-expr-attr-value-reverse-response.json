@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the mirror of subsumes-expr-attr-value",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

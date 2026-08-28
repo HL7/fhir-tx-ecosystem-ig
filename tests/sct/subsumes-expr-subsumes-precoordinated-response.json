@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a post-coordinated expression can subsume a precoordinated concept: every disease of the liver includes cirrhosis of the liver",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "19943007 |Cirrhosis of liver| refined with micronodular regeneration is exactly 21861000 |Micronodular cirrhosis| - the two normal forms hold the same groups, in a different order",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

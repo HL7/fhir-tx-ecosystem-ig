@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "each expression says something the other does not, so neither subsumes the other",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

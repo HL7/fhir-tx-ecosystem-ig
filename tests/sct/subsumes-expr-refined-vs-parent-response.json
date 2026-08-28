@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "A refinement can never break a stated is-a: 40468003 |Viral hepatitis, type A| is a 3738000 |Viral hepatitis| whatever is refined onto it",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

@@ -1,0 +1,23 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["expression", "diagnostics"],
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "fhir_comments" : "servers disagree on which message id a SNOMED unknown code uses - see the SCT variant discussion",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "$choice:Unknown_Code_in_Version|Unknown_Code_in_Version_SCT$"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "fhir_comments" : "text varies by server - the edition name in the trailing bracket is not agreed - but must name the code and the code system",
+      "text" : "$fragments:abc|http://snomed.info/sct$"
+    },
+    "expression" : ["codeA"]
+  }]
+}

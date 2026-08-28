@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the same relation stated the other way round - the answer must be the mirror image",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

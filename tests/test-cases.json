@@ -5027,6 +5027,200 @@
         "http-code" : "4xx",
         "request" : "sct/validate-code-implied-2b-request.json",
         "response" : "sct/validate-code-implied-2b-response.json"
+      },
+      {
+        "name" : "subsumes-simple",
+        "description" : "A code is subsumed by its stated parent",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-simple-request.json",
+        "response" : "sct/subsumes-simple-response.json"
+      },
+      {
+        "name" : "subsumes-parent",
+        "description" : "A code subsumes its stated child",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-parent-request.json",
+        "response" : "sct/subsumes-parent-response.json"
+      },
+      {
+        "name" : "subsumes-equivalent",
+        "description" : "A code is equivalent to itself",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-equivalent-request.json",
+        "response" : "sct/subsumes-equivalent-response.json"
+      },
+      {
+        "name" : "subsumes-transitive",
+        "description" : "Subsumption is transitive - a code subsumes a distant descendant",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-transitive-request.json",
+        "response" : "sct/subsumes-transitive-response.json"
+      },
+      {
+        "name" : "subsumes-siblings",
+        "description" : "Two sibling codes do not subsume each other",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-siblings-request.json",
+        "response" : "sct/subsumes-siblings-response.json"
+      },
+      {
+        "name" : "subsumes-disjoint",
+        "description" : "Two codes in different top level hierarchies do not subsume each other",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-disjoint-request.json",
+        "response" : "sct/subsumes-disjoint-response.json"
+      },
+      {
+        "name" : "subsumes-coding",
+        "description" : "Subsumption using codingA/codingB instead of system + codeA/codeB",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-coding-request.json",
+        "response" : "sct/subsumes-coding-response.json"
+      },
+      {
+        "name" : "subsumes-unknown-code-a",
+        "description" : "codeA is a well formed SNOMED code that is not in this edition",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "sct/subsumes-unknown-code-a-request.json",
+        "response" : "sct/subsumes-unknown-code-a-response.json"
+      },
+      {
+        "name" : "subsumes-unknown-code-b",
+        "description" : "codeB is a well formed SNOMED code that is not in this edition",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "sct/subsumes-unknown-code-b-request.json",
+        "response" : "sct/subsumes-unknown-code-b-response.json"
+      },
+      {
+        "name" : "subsumes-invalid-code",
+        "description" : "codeA is not a valid SNOMED code at all",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "sct/subsumes-invalid-code-request.json",
+        "response" : "sct/subsumes-invalid-code-response.json"
+      },
+      {
+        "name" : "subsumes-bad-version",
+        "description" : "the version names a SNOMED edition the server does not have",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "sct/subsumes-bad-version-request.json",
+        "response" : "sct/subsumes-bad-version-response.json"
+      },
+      {
+        "name" : "subsumes-bad-system",
+        "description" : "the system is not a code system the server knows",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "sct/subsumes-bad-system-request.json",
+        "response" : "sct/subsumes-bad-system-response.json"
+      },
+      {
+        "name" : "subsumes-expr-refined-vs-parent",
+        "description" : "a refined expression is still subsumed by an ancestor of its focus concept",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-refined-vs-parent-request.json",
+        "response" : "sct/subsumes-expr-refined-vs-parent-response.json"
+      },
+      {
+        "name" : "subsumes-expr-parent-vs-refined",
+        "description" : "the mirror of subsumes-expr-refined-vs-parent",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-parent-vs-refined-request.json",
+        "response" : "sct/subsumes-expr-parent-vs-refined-response.json"
+      },
+      {
+        "name" : "subsumes-expr-vs-focus",
+        "description" : "a refined expression is subsumed by its own focus concept",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-vs-focus-request.json",
+        "response" : "sct/subsumes-expr-vs-focus-response.json"
+      },
+      {
+        "name" : "subsumes-expr-attr-value",
+        "description" : "same attribute, and the value in A subsumes the value in B",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-attr-value-request.json",
+        "response" : "sct/subsumes-expr-attr-value-response.json"
+      },
+      {
+        "name" : "subsumes-expr-attr-value-reverse",
+        "description" : "the mirror of subsumes-expr-attr-value",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-attr-value-reverse-request.json",
+        "response" : "sct/subsumes-expr-attr-value-reverse-response.json"
+      },
+      {
+        "name" : "subsumes-expr-attr-unrelated",
+        "description" : "same attribute, unrelated values",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-attr-unrelated-request.json",
+        "response" : "sct/subsumes-expr-attr-unrelated-response.json"
+      },
+      {
+        "name" : "subsumes-expr-extra-attribute",
+        "description" : "B carries every attribute A does, and one more",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-extra-attribute-request.json",
+        "response" : "sct/subsumes-expr-extra-attribute-response.json"
+      },
+      {
+        "name" : "subsumes-expr-different-attributes",
+        "description" : "each expression refines an attribute the other does not",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-different-attributes-request.json",
+        "response" : "sct/subsumes-expr-different-attributes-response.json"
+      },
+      {
+        "name" : "subsumes-expr-normal-form",
+        "description" : "a concept against its own long normal form written out",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-normal-form-request.json",
+        "response" : "sct/subsumes-expr-normal-form-response.json"
+      },
+      {
+        "name" : "subsumes-expr-redundant-refinement",
+        "description" : "a refinement that restates the concept's own definition",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-redundant-refinement-request.json",
+        "response" : "sct/subsumes-expr-redundant-refinement-response.json"
+      },
+      {
+        "name" : "subsumes-expr-grouped-ungrouped",
+        "description" : "one attribute in a group vs the same attribute ungrouped",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-grouped-ungrouped-request.json",
+        "response" : "sct/subsumes-expr-grouped-ungrouped-response.json"
+      },
+      {
+        "name" : "subsumes-expr-with-terms",
+        "description" : "the same expression with and without terms",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-with-terms-request.json",
+        "response" : "sct/subsumes-expr-with-terms-response.json"
+      },
+      {
+        "name" : "subsumes-expr-conjunction",
+        "description" : "a conjunction of a concept with its own ancestor",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-conjunction-request.json",
+        "response" : "sct/subsumes-expr-conjunction-response.json"
+      },
+      {
+        "name" : "subsumes-expr-precoordinated-match",
+        "description" : "an expression that means exactly the same as a precoordinated concept",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-precoordinated-match-request.json",
+        "response" : "sct/subsumes-expr-precoordinated-match-response.json"
+      },
+      {
+        "name" : "subsumes-expr-subsumes-precoordinated",
+        "description" : "a post-coordinated expression subsuming a precoordinated concept",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-expr-subsumes-precoordinated-request.json",
+        "response" : "sct/subsumes-expr-subsumes-precoordinated-response.json"
       }
     ]
   },{

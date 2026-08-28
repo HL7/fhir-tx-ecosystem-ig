@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "same focus and attribute, but liver and lung are unrelated so neither expression subsumes the other",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

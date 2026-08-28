@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "terms and whitespace are not part of the meaning of an expression",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

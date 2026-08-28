@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a conjunction with one of its own ancestors collapses to the more specific concept",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

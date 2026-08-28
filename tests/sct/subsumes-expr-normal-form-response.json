@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "B is the long normal form of A (9551004 |Hepatic amyloidosis|) written out, so the two mean the same thing",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

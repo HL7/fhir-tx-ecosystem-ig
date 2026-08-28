@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "same focus and attribute, and 10200004 |Liver structure| subsumes 181268008 |Entire liver|",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

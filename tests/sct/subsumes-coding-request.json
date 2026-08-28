@@ -1,0 +1,21 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "codingA",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+        "code" : "3738000"
+      }
+    },
+    {
+      "name" : "codingB",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+        "code" : "25102003"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "refining a concept can only narrow it, so the expression is subsumed by its own focus concept",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

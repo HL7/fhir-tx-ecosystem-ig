@@ -1,0 +1,21 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "system",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct/1234567890/version/20250909"
+    },
+    {
+      "name" : "codeA",
+      "valueCode" : "40468003"
+    },
+    {
+      "name" : "codeB",
+      "valueCode" : "3738000"
+    }
+  ]
+}
