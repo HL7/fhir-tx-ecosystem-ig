@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "is-a includes the code named in the filter itself, not only what is under it. Contrast validate-descendent-of-self",
+    "name" : "code",
+    "valueCode" : "_ActClassRecordOrganizer"
+  },
+  {
+    "name" : "display",
+    "valueString" : "record organizer"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+  }]
+}

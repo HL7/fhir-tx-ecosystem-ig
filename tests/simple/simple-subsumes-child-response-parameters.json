@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the mirror of simple-subsumes-parent",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

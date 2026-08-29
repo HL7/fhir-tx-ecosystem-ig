@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a root code does not subsume a code nested under a different root",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

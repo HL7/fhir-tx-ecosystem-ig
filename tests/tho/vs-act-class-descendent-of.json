@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "act-class-descendent-of",
+  "url" : "http://hl7.org/fhir/tests/ValueSet/act-class-descendent-of",
+  "version" : "0.1.0",
+  "name" : "ActClassDescendentOf",
+  "title" : "ActClass descendants of record organizer",
+  "status" : "active",
+  "experimental" : false,
+  "description" : "the same subtree as act-class-isa, minus the code named in the filter - that one difference is the whole of what distinguishes descendent-of from is-a",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "_ActClassRecordOrganizer"
+      }]
+    }]
+  }
+}

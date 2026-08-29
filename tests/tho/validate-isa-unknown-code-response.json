@@ -1,0 +1,57 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code9"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#code9' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
+        },
+        "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Unknown_Code_in_Version"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "Unknown code 'code9' in the CodeSystem 'http://hl7.org/fhir/tests/CodeSystem/act-class'"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#code9' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'; Unknown code 'code9' in the CodeSystem 'http://hl7.org/fhir/tests/CodeSystem/act-class'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+  },{
+    "name" : "codeA",
+    "valueCode" : "_ActClassRecordOrganizer"
+  },{
+    "name" : "codeB",
+    "valueCode" : "COMPOSITION"
+  }]
+}

@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "codingA/codingB instead of system + codeA/codeB, over the same pair of codes as simple-subsumes-parent. Codings make the operation parameters complex, so this reaches the server as a POST where the codeA/codeB form goes out as a GET",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

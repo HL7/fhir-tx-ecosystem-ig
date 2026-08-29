@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "ENTRY reaches _ActContainer only through the second of its two subsumedBy properties. A server that reads the hierarchy from nesting cannot get here: ENTRY is not nested anywhere, and nesting could not give it two parents if it were",
+    "name" : "code",
+    "valueCode" : "ENTRY"
+  },
+  {
+    "name" : "display",
+    "valueString" : "entry"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+  }]
+}

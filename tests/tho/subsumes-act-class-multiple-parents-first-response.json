@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "ENTRY repeats subsumedBy twice, so it has two parents. This is the first of them",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

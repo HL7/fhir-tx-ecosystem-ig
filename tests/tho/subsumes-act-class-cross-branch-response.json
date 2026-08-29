@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "both are under ACT, but neither is on the other's path to it",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

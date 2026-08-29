@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "and this is the second. A nested hierarchy cannot state this at all - a concept appears in exactly one place in the nesting - so a server that only reads nesting will answer not-subsumed here",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

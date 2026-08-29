@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "act-class-isa-second-parent",
+  "url" : "http://hl7.org/fhir/tests/ValueSet/act-class-isa-second-parent",
+  "version" : "0.1.0",
+  "name" : "ActClassIsASecondParent",
+  "title" : "ActClass is-a act container",
+  "status" : "active",
+  "experimental" : false,
+  "description" : "ENTRY and ORGANIZER each state subsumedBy twice, and _ActContainer is their second parent. A server that reads only nesting cannot reach them from here at all",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActContainer"
+      }]
+    }]
+  }
+}

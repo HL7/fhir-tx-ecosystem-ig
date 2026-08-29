@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the mirror of subsumes-act-class-transitive",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "two levels down - subsumption follows the whole nesting, not just direct children",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

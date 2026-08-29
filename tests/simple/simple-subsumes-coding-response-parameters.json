@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "codingA/codingB instead of system + codeA/codeB",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

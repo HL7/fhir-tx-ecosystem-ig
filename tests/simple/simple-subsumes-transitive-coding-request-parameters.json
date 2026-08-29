@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "codingA",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "code" : "code2"
+    }
+  },{
+    "name" : "codingB",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "code" : "code2aI"
+    }
+  }]
+}

@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "code2a is nested inside code2, and hierarchyMeaning is is-a",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

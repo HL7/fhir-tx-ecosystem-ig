@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "two concepts with the same subsumedBy do not subsume each other",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

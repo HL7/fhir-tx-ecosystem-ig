@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a code is equivalent to itself",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

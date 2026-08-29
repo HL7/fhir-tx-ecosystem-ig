@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the mirror of subsumes-act-class-property-parent",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

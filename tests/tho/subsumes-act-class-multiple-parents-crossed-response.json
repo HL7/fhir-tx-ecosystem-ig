@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "two parents of the same concept are not thereby related to each other",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

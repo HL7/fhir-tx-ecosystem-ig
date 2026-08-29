@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/tests/ValueSet/act-class-isa"
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "ACT"
+    }
+  ]
+}

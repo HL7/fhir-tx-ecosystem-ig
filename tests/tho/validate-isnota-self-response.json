@@ -1,0 +1,46 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "is-not-a excludes the code named in the filter as well as its descendants, so it is the exact complement of is-a rather than of descendent-of",
+    "name" : "code",
+    "valueCode" : "_ActClassRecordOrganizer"
+  },
+  {
+    "name" : "display",
+    "valueString" : "record organizer"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#_ActClassRecordOrganizer' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isnota|0.1.0'"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#_ActClassRecordOrganizer' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isnota|0.1.0'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+  }]
+}

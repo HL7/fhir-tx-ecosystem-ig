@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "five property links up: CDALVLONE -> DOCCLIN -> DOC -> COMPOSITION -> _ActClassRecordOrganizer -> ACT. Subsumption follows the whole chain, not just the concept named in the property",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

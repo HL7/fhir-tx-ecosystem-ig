@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "act-class is a flat list of concepts: COMPOSITION is not nested inside _ActClassRecordOrganizer, it names it in a subsumedBy property. The property is declared with uri http://hl7.org/fhir/concept-properties#parent, which is what makes it a hierarchy rather than just an attribute - a server keying off the property code alone will not see this",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}
