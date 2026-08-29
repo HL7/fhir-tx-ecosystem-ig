@@ -7,7 +7,7 @@
     },
     {
       "name": "code",
-      "valueCode": "64572001 |Disease| : 363698007 |Finding site| = 10200004 |Liver structure|"
+      "valueCode": "64572001 |Disease| : { 363698007 |Finding site| = 10200004 |Liver structure| }"
     },
     {
       "name": "system-version",

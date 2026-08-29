@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "64572001 |Disease| : 363698007 |Finding site| = 10200004 |Liver structure|"
+    "valueCode" : "64572001 |Disease| : { 363698007 |Finding site| = 10200004 |Liver structure| }"
   },
   {
     "name" : "display",
-    "valueString" : "64572001|Disease|:363698007|Finding site|=10200004|Liver structure|"
+    "valueString" : "64572001|Disease|:{363698007|Finding site|=10200004|Liver structure|}"
   },
   {
     "name" : "issues",
@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#64572001 |Disease| : 363698007 |Finding site| = 10200004 |Liver structure|' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-refset|5.0.0'"
+          "text" : "The provided code 'http://snomed.info/sct#64572001 |Disease| : { 363698007 |Finding site| = 10200004 |Liver structure| }' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-refset|5.0.0'"
         },
         "expression" : ["code"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://snomed.info/sct#64572001 |Disease| : 363698007 |Finding site| = 10200004 |Liver structure|' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-refset|5.0.0'"
+    "valueString" : "The provided code 'http://snomed.info/sct#64572001 |Disease| : { 363698007 |Finding site| = 10200004 |Liver structure| }' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-refset|5.0.0'"
   },
   {
     "name" : "result",

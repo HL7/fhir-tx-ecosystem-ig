@@ -1,8 +1,11 @@
 {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "fhir_comments" : "same focus and attribute, but liver and lung are unrelated so neither expression subsumes the other",
-    "name" : "outcome",
-    "valueCode" : "not-subsumed"
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "fhir_comments" : "Liver and Lung are unrelated, so no structural relationship is found - but a structural miss is not a proof that none exists, and $subsumes has no outcome code meaning 'unknown'. A server that can classify may answer not-subsumed here instead; a server that cannot must not claim it.",
+    "severity" : "error",
+    "code" : "not-supported",
+    "details" : {
+      "text" : "$fragments:64572001:{363698007=10200004}|64572001:{363698007=39607008}$"
+    }
   }]
 }

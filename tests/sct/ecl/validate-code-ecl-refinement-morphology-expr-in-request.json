@@ -7,7 +7,7 @@
     },
     {
       "name": "code",
-      "valueCode": "64572001 |Disease| : 116676008 |Associated morphology| = 20946005 |Fracture, closed|"
+      "valueCode": "64572001 |Disease| : { 116676008 |Associated morphology| = 20946005 |Fracture, closed| }"
     },
     {
       "name": "system-version",

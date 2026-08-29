@@ -1,8 +1,11 @@
 {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "fhir_comments" : "each expression says something the other does not, so neither subsumes the other",
-    "name" : "outcome",
-    "valueCode" : "not-subsumed"
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "fhir_comments" : "each expression says something the other does not, so structural comparison finds nothing in either direction - which is not the same as establishing that neither subsumes the other",
+    "severity" : "error",
+    "code" : "not-supported",
+    "details" : {
+      "text" : "$fragments:64572001:{116676008=57977008}|64572001:{363698007=10200004}$"
+    }
   }]
 }

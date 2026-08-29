@@ -7,7 +7,7 @@
     },
     {
       "name": "code",
-      "valueCode": "128045006 |Cellulitis| : 363698007 |Finding site| = 85562004 |Hand structure|"
+      "valueCode": "128045006 |Cellulitis| : { 363698007 |Finding site| = 85562004 |Hand structure| }"
     },
     {
       "name": "system-version",

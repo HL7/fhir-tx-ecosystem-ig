@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "4846001 |Anicteric viral hepatitis| is PRIMITIVE, so its definition is necessary but not sufficient and it may not be substituted for the concept. Its inferred 363698007 |Finding site| = 10200004 |Liver structure| is still entailed by it, though, so every instance really is a disease with that finding site and codeA subsumes it. A server that drops a primitive's attributes when normalising will answer not-subsumed here.",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

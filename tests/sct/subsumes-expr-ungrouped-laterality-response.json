@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "272741003 |Laterality| is ungrouped in the MRCM (attributeInGroupCardinality 0..0), so writing it outside a group is correct rather than an error - the grouping rule is read from the concept model, not applied to every refinement",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}
