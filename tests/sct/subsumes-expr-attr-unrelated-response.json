@@ -5,6 +5,10 @@
     "severity" : "error",
     "code" : "not-supported",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "cannot-determine"
+      }],
       "text" : "$fragments:64572001:{363698007=10200004}|64572001:{363698007=39607008}$"
     }
   }]
