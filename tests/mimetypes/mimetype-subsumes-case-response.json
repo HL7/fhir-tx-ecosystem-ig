@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "type, subtype and parameter names are case-insensitive, and so is a charset value",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

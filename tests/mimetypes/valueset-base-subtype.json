@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-base-subtype",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-base-subtype",
+  "version" : "0.1.0",
+  "name" : "MimeTypeBaseSubtype",
+  "status" : "active",
+  "description" : "Mime types with a base of text/plain",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13",
+        "filter" : [
+          {
+            "property" : "base",
+            "op" : "=",
+            "value" : "text/plain"
+          }
+        ]
+      }
+    ]
+  }
+}

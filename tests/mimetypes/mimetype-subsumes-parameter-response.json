@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a parameter narrows the media type: anything that is text/plain; charset=utf-8 is also text/plain",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

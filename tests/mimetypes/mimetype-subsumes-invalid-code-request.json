@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:13"
+  },{
+    "name" : "codeA",
+    "valueCode" : "not a mime type"
+  },{
+    "name" : "codeB",
+    "valueCode" : "text/plain"
+  }]
+}

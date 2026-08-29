@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-registered-narrow",
+  "version" : "0.1.0",
+  "name" : "MimeTypeRegisteredNarrow",
+  "status" : "active",
+  "expansion" : {
+    "fhir_comments" : "the IANA registry is a finite list, so registered=true can be walked - but the expansion is still incomplete, because every registered type also has unboundedly many parameterised forms in the value set. Hence valueset-unclosed",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "urn:ietf:bcp:13"
+    }],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "total" : 1,
+    "contains" : [{
+      "system" : "urn:ietf:bcp:13",
+      "code" : "text/plain",
+      "display" : "text/plain"
+    }]
+  }
+}

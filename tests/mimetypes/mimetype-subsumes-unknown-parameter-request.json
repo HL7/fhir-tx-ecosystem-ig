@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:13"
+  },{
+    "name" : "codeA",
+    "valueCode" : "text/plain"
+  },{
+    "name" : "codeB",
+    "valueCode" : "text/plain; foo=bar"
+  }]
+}

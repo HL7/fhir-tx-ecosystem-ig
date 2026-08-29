@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "same parameter, different values - neither includes the other",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "parameters are stripped before the registry is consulted - looking up the whole code including the parameter would not find it",
+    "name" : "code",
+    "valueCode" : "text/plain; charset=utf-8"
+  },
+  {
+    "name" : "display",
+    "valueString" : "text/plain; charset=utf-8"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:13"
+  }]
+}

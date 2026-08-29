@@ -1,0 +1,17 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["expression", "diagnostics"],
+    "fhir_comments" : "whether adding a parameter narrows the media type depends on that parameter's definition, so a server that does not know 'foo' cannot tell whether text/plain subsumes this or the two are the same thing",
+    "severity" : "error",
+    "code" : "not-supported",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "cannot-determine"
+      }],
+      "fhir_comments" : "wording varies by server; it must name both codes and the parameter it could not judge",
+      "text" : "$fragments:text/plain|foo$"
+    }
+  }]
+}

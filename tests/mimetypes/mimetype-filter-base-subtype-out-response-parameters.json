@@ -1,0 +1,47 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "text/html"
+  },
+  {
+    "name" : "display",
+    "valueString" : "text/html"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "$fragments:text/html|http://hl7.org/fhir/test/ValueSet/mimetype-base-subtype$"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "fhir_comments" : "servers word this differently; it must name the code, and a server that explains why the filter rejected it may say more",
+    "name" : "message",
+    "valueString" : "$fragments:text/html$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:13"
+  }]
+}

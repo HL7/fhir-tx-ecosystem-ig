@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/mimetype-registered"
+  },{
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:13"
+  },{
+    "name" : "code",
+    "valueCode" : "application/x-tx-ecosystem-test; charset=utf-8"
+  }]
+}

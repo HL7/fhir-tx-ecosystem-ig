@@ -1,0 +1,281 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-registered",
+  "version" : "0.1.0",
+  "name" : "MimeTypeRegistered",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "total"],
+    "$count-arrays$" : ["contains"],
+    "fhir_comments" : "the IANA registry is finite so this can be paged through, but which codes land in a given page moves as IANA registers new media types - so only the page size is asserted. The expansion is unclosed because every registered type also has unboundedly many parameterised forms",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "urn:ietf:bcp:13"
+    }],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "contains" : [{
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "$$",
+      "display" : "$$"
+    }]
+  }
+}

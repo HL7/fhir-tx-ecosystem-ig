@@ -1,0 +1,22 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["expression", "diagnostics"],
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "$choice:Unknown_Code_in_Version|Unknown_Code_in$"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "fhir_comments" : "wording varies by server; it must name the code and the code system",
+      "text" : "$fragments:not a mime type|urn:ietf:bcp:13$"
+    },
+    "expression" : ["codeA"]
+  }]
+}

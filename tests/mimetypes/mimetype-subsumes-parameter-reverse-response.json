@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the mirror of mimetype-subsumes-parameter",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

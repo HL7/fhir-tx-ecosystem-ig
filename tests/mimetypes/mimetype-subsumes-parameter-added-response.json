@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "B agrees on charset and adds a parameter, so it is narrower still",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

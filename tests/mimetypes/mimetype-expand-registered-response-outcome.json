@@ -1,0 +1,18 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["diagnostics"],
+    "fhir_comments" : "registered=true is enumerable but there are a couple of thousand of them, so without a count this is too costly. The header on the test makes servers with a higher internal limit take the same path - see big/expand-no-limit",
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "VALUESET_TOO_COSTLY"
+    }],
+    "severity" : "error",
+    "code" : "too-costly",
+    "details" : {
+      "text" : "$external:1$"
+    },
+    "diagnostics" : "$external:2$"
+  }]
+}

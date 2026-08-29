@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-enumerated",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-enumerated",
+  "version" : "0.1.0",
+  "name" : "MimeTypeEnumerated",
+  "status" : "active",
+  "description" : "A few media types, listed explicitly",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13",
+        "concept" : [
+          {
+            "code" : "text/plain"
+          },
+          {
+            "code" : "application/json"
+          },
+          {
+            "code" : "text/plain; charset=utf-8"
+          }
+        ]
+      }
+    ]
+  }
+}

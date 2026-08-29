@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "each carries a parameter the other does not, so neither is narrower than the other",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

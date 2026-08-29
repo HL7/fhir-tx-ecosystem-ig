@@ -1,0 +1,32 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-enumerated",
+  "version" : "0.1.0",
+  "name" : "MimeTypeEnumerated",
+  "status" : "active",
+  "expansion" : {
+    "fhir_comments" : "an enumerated include needs no iteration, so this is the one shape of mime type value set that does expand",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "urn:ietf:bcp:13"
+    }],
+    "contains" : [{
+      "system" : "urn:ietf:bcp:13",
+      "code" : "application/json",
+      "display" : "application/json"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "text/plain",
+      "display" : "text/plain"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "text/plain; charset=utf-8",
+      "display" : "text/plain; charset=utf-8"
+    }]
+  }
+}

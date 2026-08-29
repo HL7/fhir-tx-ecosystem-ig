@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-registered-text",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-registered-text",
+  "version" : "0.1.0",
+  "name" : "MimeTypeRegisteredText",
+  "status" : "active",
+  "description" : "Registered media types of type text. The registered filter comes first because it is the one that can be iterated",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13",
+        "filter" : [
+          {
+            "property" : "registered",
+            "op" : "=",
+            "value" : "true"
+          },
+          {
+            "property" : "base",
+            "op" : "=",
+            "value" : "text"
+          }
+        ]
+      }
+    ]
+  }
+}

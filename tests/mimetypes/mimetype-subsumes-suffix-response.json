@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a structured syntax suffix is not a hierarchy: application/fhir+xml is separately registered, and Accept: application/xml does not match it. This is the arguable one - a case could be made that +xml means every such representation is also XML",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

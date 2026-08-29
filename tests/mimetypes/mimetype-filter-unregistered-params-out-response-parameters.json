@@ -1,0 +1,47 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the parameter must not make a registered type look unregistered",
+    "name" : "code",
+    "valueCode" : "text/plain; charset=utf-8"
+  },
+  {
+    "name" : "display",
+    "valueString" : "text/plain; charset=utf-8"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "$fragments:text/plain; charset=utf-8|http://hl7.org/fhir/test/ValueSet/mimetype-unregistered$"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$fragments:text/plain; charset=utf-8$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:13"
+  }]
+}

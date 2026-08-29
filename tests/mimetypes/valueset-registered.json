@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-registered",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-registered",
+  "version" : "0.1.0",
+  "name" : "MimeTypeRegistered",
+  "status" : "active",
+  "description" : "Media types registered with IANA",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13",
+        "filter" : [
+          {
+            "property" : "registered",
+            "op" : "=",
+            "value" : "true"
+          }
+        ]
+      }
+    ]
+  }
+}

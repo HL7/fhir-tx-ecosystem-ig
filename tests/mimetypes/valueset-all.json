@@ -1,0 +1,16 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-all",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-all",
+  "version" : "0.1.0",
+  "name" : "MimeTypeAll",
+  "status" : "active",
+  "description" : "All media types",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-registered-narrow",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-registered-narrow",
+  "version" : "0.1.0",
+  "name" : "MimeTypeRegisteredNarrow",
+  "status" : "active",
+  "description" : "Registered media types whose base is text/plain. The registered filter comes first because it is the one that can be iterated; base then narrows it to a single code, so this expansion does not drift as IANA registers new types",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13",
+        "filter" : [
+          {
+            "property" : "registered",
+            "op" : "=",
+            "value" : "true"
+          },
+          {
+            "property" : "base",
+            "op" : "=",
+            "value" : "text/plain"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mimetype-unregistered",
+  "url" : "http://hl7.org/fhir/test/ValueSet/mimetype-unregistered",
+  "version" : "0.1.0",
+  "name" : "MimeTypeUnregistered",
+  "status" : "active",
+  "description" : "Media types not registered with IANA",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:13",
+        "filter" : [
+          {
+            "property" : "registered",
+            "op" : "=",
+            "value" : "false"
+          }
+        ]
+      }
+    ]
+  }
+}
