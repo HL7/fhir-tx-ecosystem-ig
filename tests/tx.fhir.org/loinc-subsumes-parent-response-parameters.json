@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "LP385526-1 is a stated parent of 2339-0 in the LOINC multiaxial hierarchy - see the parent property in loinc-lookup-code",
+    "name" : "outcome",
+    "valueCode" : "subsumes"
+  }]
+}

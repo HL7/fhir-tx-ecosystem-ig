@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the mirror of loinc-subsumes-parent",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },{
+    "name" : "codeA",
+    "valueCode" : "99999-9"
+  },{
+    "name" : "codeB",
+    "valueCode" : "2339-0"
+  }]
+}
