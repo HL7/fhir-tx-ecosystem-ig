@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "different languages",
+      "name" : "outcome",
+      "valueCode" : "not-subsumed"
+    }
+  ]
+}

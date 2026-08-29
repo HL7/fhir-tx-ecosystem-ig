@@ -1,0 +1,19 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "fhir_comments" : "a script alone leaves the language open, so there is nothing finite to enumerate. Only a fixed language, a fixed region, or both, can be expanded",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "CODESYSTEM_NOT_ENUMERABLE"
+    }],
+    "severity" : "error",
+    "code" : "not-supported",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-supported"
+      }],
+      "text" : "This filter on urn:ietf:bcp:47 cannot be expanded"
+    }
+  }]
+}

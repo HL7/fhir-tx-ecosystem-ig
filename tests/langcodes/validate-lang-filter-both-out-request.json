@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/langcodes-en-us"
+    },
+    {
+      "name" : "system",
+      "valueUri" : "urn:ietf:bcp:47"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "en-GB"
+    }
+  ]
+}

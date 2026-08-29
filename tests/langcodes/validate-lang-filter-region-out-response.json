@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "en-us"
+    "valueCode" : "en-GB"
   },
   {
     "name" : "display",
-    "valueString" : "English (United States)"
+    "valueString" : "English (United Kingdom)"
   },
   {
     "name" : "issues",
@@ -15,28 +15,28 @@
       "issue" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "CODE_CASE_DIFFERENCE"
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
         }],
-        "severity" : "information",
-        "code" : "business-rule",
+        "severity" : "error",
+        "code" : "code-invalid",
         "details" : {
           "coding" : [{
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "code-rule"
+            "code" : "not-in-vs"
           }],
-          "text" : "The code 'en-us' differs from the correct code 'en-US' by case. Although the code system 'urn:ietf:bcp:47' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
+          "text" : "The provided code 'urn:ietf:bcp:47#en-GB' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us|0.1.0'"
         },
         "expression" : ["code"]
       }]
     }
   },
   {
-    "name" : "normalized-code",
-    "valueCode" : "en-US"
+    "name" : "message",
+    "valueString" : "The language code en-GB does not have a region of 'US'; The provided code 'urn:ietf:bcp:47#en-GB' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us|0.1.0'"
   },
   {
     "name" : "result",
-    "valueBoolean" : true
+    "valueBoolean" : false
   },
   {
     "name" : "system",

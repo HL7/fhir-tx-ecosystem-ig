@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "en-GB"
+  },
+  {
+    "name" : "display",
+    "valueString" : "English (United Kingdom)"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'urn:ietf:bcp:47#en-GB' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/langcodes-en-us|0.1.0'"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The language code en-GB does not have a region of 'US'; The provided code 'urn:ietf:bcp:47#en-GB' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/langcodes-en-us|0.1.0'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "urn:ietf:bcp:47"
+  }]
+}

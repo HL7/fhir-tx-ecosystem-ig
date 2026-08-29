@@ -1,0 +1,22 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "code",
+      "valueCode" : "en-GB",
+      "fhir_comments" : "an English tag is in a language=en filter"
+    },
+    {
+      "name" : "display",
+      "valueString" : "English (United Kingdom)"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "urn:ietf:bcp:47"
+    }
+  ]
+}

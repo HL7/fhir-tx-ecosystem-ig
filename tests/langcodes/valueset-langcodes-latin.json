@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "langcodes-latin",
+  "url" : "http://hl7.org/fhir/test/ValueSet/langcodes-latin",
+  "version" : "0.1.0",
+  "name" : "LangCodesLatin",
+  "status" : "active",
+  "description" : "Any language written in the Latin script - a script alone leaves the language open, so this cannot be expanded",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:47",
+        "filter" : [
+          {
+            "property" : "script",
+            "op" : "=",
+            "value" : "Latn"
+          }
+        ]
+      }
+    ]
+  }
+}

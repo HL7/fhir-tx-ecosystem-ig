@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "en-us"
+    "valueCode" : "EN"
   },
   {
     "name" : "display",
-    "valueString" : "English (United States)"
+    "valueString" : "English"
   },
   {
     "name" : "issues",
@@ -24,7 +24,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-rule"
           }],
-          "text" : "The code 'en-us' differs from the correct code 'en-US' by case. Although the code system 'urn:ietf:bcp:47' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
+          "text" : "The code 'EN' differs from the correct code 'en' by case. Although the code system 'urn:ietf:bcp:47' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
         },
         "expression" : ["code"]
       }]
@@ -32,7 +32,7 @@
   },
   {
     "name" : "normalized-code",
-    "valueCode" : "en-US"
+    "valueCode" : "en"
   },
   {
     "name" : "result",

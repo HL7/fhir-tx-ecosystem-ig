@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "langcodes-english",
+  "url" : "http://hl7.org/fhir/test/ValueSet/langcodes-english",
+  "version" : "0.1.0",
+  "name" : "LangCodesEnglish",
+  "status" : "active",
+  "description" : "Every English language tag: the language is fixed, so the regions vary",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:47",
+        "filter" : [
+          {
+            "property" : "language",
+            "op" : "=",
+            "value" : "en"
+          }
+        ]
+      }
+    ]
+  }
+}

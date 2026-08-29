@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "a tag against itself",
+      "name" : "outcome",
+      "valueCode" : "equivalent"
+    }
+  ]
+}

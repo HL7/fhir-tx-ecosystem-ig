@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "the same pair the other way round",
+      "name" : "outcome",
+      "valueCode" : "subsumed-by"
+    }
+  ]
+}

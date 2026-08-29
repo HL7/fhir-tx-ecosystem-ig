@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "langcodes-us",
+  "url" : "http://hl7.org/fhir/test/ValueSet/langcodes-us",
+  "version" : "0.1.0",
+  "name" : "LangCodesUS",
+  "status" : "active",
+  "description" : "Every language tag for the United States: the region is fixed, so the languages vary",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:47",
+        "filter" : [
+          {
+            "property" : "region",
+            "op" : "=",
+            "value" : "US"
+          }
+        ]
+      }
+    ]
+  }
+}

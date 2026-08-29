@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "different scripts",
+      "name" : "outcome",
+      "valueCode" : "not-subsumed"
+    }
+  ]
+}

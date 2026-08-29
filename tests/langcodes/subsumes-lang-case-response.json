@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "case does not affect subsumption: BCP 47 tags are case-insensitive",
+      "name" : "outcome",
+      "valueCode" : "subsumes"
+    }
+  ]
+}

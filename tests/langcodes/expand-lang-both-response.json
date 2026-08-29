@@ -1,0 +1,60 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/langcodes-en-us",
+  "version" : "0.1.0",
+  "name" : "LangCodesEnUS",
+  "status" : "active",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed-reason",
+      "valueString" : "The code System 'urn:ietf:bcp:47' has a grammar and so has infinite members. This extension is based on http://terminology.hl7.org/ValueSet/Languages"
+      }
+    ],
+    "fhir_comments" : "language AND region fixed leaves the scripts to vary. The first entry is the tag with no script at all",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 275,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 5
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "urn:ietf:bcp:47"
+    }],
+    "contains" : [{
+      "system" : "urn:ietf:bcp:47",
+      "code" : "en-Adlm-US",
+      "display" : "English (Script=Adlam, Region=United States)"
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "code" : "en-Afak-US",
+      "display" : "English (Script=Afaka, Region=United States)"
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "code" : "en-Aghb-US",
+      "display" : "English (Script=Caucasian Albanian, Region=United States)"
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "code" : "en-Ahom-US",
+      "display" : "English (Script=Ahom, Region=United States)"
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "code" : "en-US",
+      "display" : "English (United States)"
+    }]
+  }
+}

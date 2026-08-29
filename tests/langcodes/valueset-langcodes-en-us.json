@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "langcodes-en-us",
+  "url" : "http://hl7.org/fhir/test/ValueSet/langcodes-en-us",
+  "version" : "0.1.0",
+  "name" : "LangCodesEnUS",
+  "status" : "active",
+  "description" : "US English in any script: both language and region are fixed, so the scripts vary",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "urn:ietf:bcp:47",
+        "filter" : [
+          {
+            "property" : "language",
+            "op" : "=",
+            "value" : "en"
+          },
+          {
+            "property" : "region",
+            "op" : "=",
+            "value" : "US"
+          }
+        ]
+      }
+    ]
+  }
+}

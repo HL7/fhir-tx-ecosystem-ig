@@ -1,0 +1,21 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "code",
+      "valueCode" : "i-klingon"
+    },
+    {
+      "name" : "display",
+      "valueString" : "i-klingon"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "urn:ietf:bcp:47"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "system",
+      "valueUri" : "urn:ietf:bcp:47"
+    },
+    {
+      "name" : "codeA",
+      "valueCode" : "zh"
+    },
+    {
+      "name" : "codeB",
+      "valueCode" : "zh-Hans-CN"
+    }
+  ]
+}

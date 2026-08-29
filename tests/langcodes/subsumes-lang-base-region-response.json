@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "a region added to a bare language",
+      "name" : "outcome",
+      "valueCode" : "subsumes"
+    }
+  ]
+}

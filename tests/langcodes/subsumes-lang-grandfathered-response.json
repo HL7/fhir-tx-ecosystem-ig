@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "a grandfathered tag is matched whole and has no components to compare, even though it starts with a real language subtag",
+      "name" : "outcome",
+      "valueCode" : "not-subsumed"
+    }
+  ]
+}

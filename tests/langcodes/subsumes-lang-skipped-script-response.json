@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "the added script sits BETWEEN the two subtags en-US names. RFC 4647 basic filtering is positional and would say not-subsumed; extended filtering, used here, is what keeps subsumption transitive, since en subsumes both",
+      "name" : "outcome",
+      "valueCode" : "subsumes"
+    }
+  ]
+}

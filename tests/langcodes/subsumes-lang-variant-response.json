@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "a variant added",
+      "name" : "outcome",
+      "valueCode" : "subsumes"
+    }
+  ]
+}
