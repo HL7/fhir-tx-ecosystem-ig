@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "a named derived unit and its definition are the same unit",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

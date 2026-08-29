@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://unitsofmeasure.org"
+  },{
+    "name" : "codeA",
+    "valueCode" : "1/min"
+  },{
+    "name" : "codeB",
+    "valueCode" : "min-1"
+  }]
+}

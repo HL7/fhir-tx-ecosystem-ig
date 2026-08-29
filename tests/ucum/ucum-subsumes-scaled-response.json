@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "m and cm share a canonical unit and differ only in magnitude. UCUM has no hierarchy, so a centimetre is not a kind of metre - and it is not the same unit either",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

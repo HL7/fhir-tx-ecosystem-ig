@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "identical canonical units (g.m-3) but different magnitudes - 10 against 1000. Comparing canonical units alone would wrongly make these equivalent; it is the conversion factor that separates them",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

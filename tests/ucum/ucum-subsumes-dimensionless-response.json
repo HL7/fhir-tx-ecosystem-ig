@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "both canonicalise to the empty unit, so only the magnitude tells them apart - 0.01 against 1",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

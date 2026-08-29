@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "an annotation carries no meaning in UCUM, so the annotated unit is the same unit",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

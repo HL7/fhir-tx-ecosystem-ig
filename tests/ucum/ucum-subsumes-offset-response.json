@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "Cel is a special unit whose conversion has an offset, so it does not canonicalise at all. A code the analyser cannot reduce must fall through to not-subsumed rather than failing the operation",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

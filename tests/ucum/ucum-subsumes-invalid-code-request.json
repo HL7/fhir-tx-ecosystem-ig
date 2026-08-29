@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://unitsofmeasure.org"
+  },{
+    "name" : "codeA",
+    "valueCode" : "not-a-unit"
+  },{
+    "name" : "codeB",
+    "valueCode" : "mg/dL"
+  }]
+}

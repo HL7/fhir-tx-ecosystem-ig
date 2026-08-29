@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the same unit written two ways - UCUM has no subsumption, but these are the same code once canonicalised",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

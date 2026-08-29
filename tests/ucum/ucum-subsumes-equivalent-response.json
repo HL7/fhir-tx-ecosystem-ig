@@ -1,0 +1,7 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

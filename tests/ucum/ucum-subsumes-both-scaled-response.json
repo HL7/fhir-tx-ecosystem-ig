@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "same canonical unit again, and neither factor is 1 (0.0254 m against 0.01 m)",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}
