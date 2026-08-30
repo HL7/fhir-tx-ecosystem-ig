@@ -9,6 +9,10 @@
     "valueString" : "SNOMED RT Concept"
   },
   {
+    "name" : "inactive",
+    "valueBoolean" : true
+  },
+  {
     "name" : "issues",
     "resource" : {
       "resourceType" : "OperationOutcome",
@@ -28,12 +32,28 @@
           "text" : "The provided code 'http://snomed.info/sct#100005' was not found in the value set '(unidentified)'"
         },
         "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "INACTIVE_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "The concept '100005' has a status of inactive and its use should be reviewed"
+        },
+        "expression" : ["code"]
       }]
     }
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://snomed.info/sct#100005' was not found in the value set '(unidentified)'"
+    "valueString" : "The concept '100005' has a status of inactive and its use should be reviewed; The provided code 'http://snomed.info/sct#100005' was not found in the value set '(unidentified)'"
   },
   {
     "name" : "result",
