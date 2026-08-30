@@ -10,8 +10,43 @@
     "valueString" : "entry"
   },
   {
+    "fhir_comments" : "ENTRY is retired in THO, so a server that reads the status property reports it as inactive here as well as answering the membership question",
+    "name" : "inactive",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "INACTIVE_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "The concept 'ENTRY' has a status of retired and inactive and its use should be reviewed"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The concept 'ENTRY' has a status of retired and inactive and its use should be reviewed"
+  },
+  {
     "name" : "result",
     "valueBoolean" : true
+  },
+  {
+    "name" : "status",
+    "valueCode" : "retired"
   },
   {
     "name" : "system",

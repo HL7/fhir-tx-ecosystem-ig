@@ -27,7 +27,7 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Unknown_Code_in_Version"
+          "valueString" : "$choice:Unknown_Code_in_Version|Unknown_Code_in$"
         }],
         "severity" : "error",
         "code" : "code-invalid",

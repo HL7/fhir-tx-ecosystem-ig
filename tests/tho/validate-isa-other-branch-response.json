@@ -9,6 +9,11 @@
     "valueString" : "entry"
   },
   {
+    "fhir_comments" : "ENTRY is retired in THO, so a server that reads the status property reports it as inactive here as well as answering the membership question",
+    "name" : "inactive",
+    "valueBoolean" : true
+  },
+  {
     "name" : "issues",
     "resource" : {
       "resourceType" : "OperationOutcome",
@@ -27,16 +32,36 @@
           "text" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ENTRY' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
         },
         "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "INACTIVE_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "The concept 'ENTRY' has a status of retired and inactive and its use should be reviewed"
+        },
+        "expression" : ["code"]
       }]
     }
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ENTRY' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
+    "valueString" : "The concept 'ENTRY' has a status of retired and inactive and its use should be reviewed; The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ENTRY' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
   },
   {
     "name" : "result",
     "valueBoolean" : false
+  },
+  {
+    "name" : "status",
+    "valueCode" : "retired"
   },
   {
     "name" : "system",

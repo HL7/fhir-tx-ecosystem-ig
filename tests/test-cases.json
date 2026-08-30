@@ -1009,7 +1009,7 @@
     "name" : "validation",
     "mode" : "general",
     "description" : "Testing various validation parameter combinations",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-none.json",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-none.json",
         "language/codesystem-de-multi.json", "language/codesystem-de-single.json", "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
         "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-en-multi.json", "language/valueset-en-single.json",
         "language/valueset-en-enlang-multi.json", "language/valueset-en-en-multi.json", "inactive/valueset-all.json", "inactive/codesystem-inactive.json",
@@ -1022,6 +1022,20 @@
         "operation" : "validate-code",
         "request" : "validation/simple-code-good-request-parameters.json",
         "response" :  "validation/simple-code-good-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-child-of-child",
+        "description" : "child-of picks up a direct child - here the hierarchy is stated by nesting",
+        "operation" : "validate-code",
+        "request" : "validation/simple-child-of-child-request-parameters.json",
+        "response" :  "validation/simple-child-of-child-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-child-of-grandchild",
+        "description" : "and it stops there: a grandchild is not a child",
+        "operation" : "validate-code",
+        "request" : "validation/simple-child-of-grandchild-request-parameters.json",
+        "response" :  "validation/simple-child-of-grandchild-response-parameters.json"
       },
       {
         "name" : "validation-simple-code-implied-good",
@@ -4202,7 +4216,7 @@
     "name" : "tho",
     "mode" : "general",
     "description" : "Misc assorted test cases from tho",
-    "setup" : [ "tho/cs-act-class.json", "tho/cs-act-reason.json", "tho/vs-act-class.json", "tho/vs-act-class-isa.json", "tho/vs-act-class-descendent-of.json", "tho/vs-act-class-isnota.json", "tho/vs-act-class-isa-second-parent.json" ],
+    "setup" : [ "tho/cs-act-class.json", "tho/cs-act-reason.json", "tho/vs-act-class.json", "tho/vs-act-class-isa.json", "tho/vs-act-class-descendent-of.json", "tho/vs-act-class-isnota.json", "tho/vs-act-class-isa-second-parent.json", "tho/vs-act-class-child-of.json" ],
     "tests" : [
       {
         "name" : "act-class",
@@ -4386,6 +4400,27 @@
         "operation" : "validate-code",
         "request" : "tho/validate-isnota-other-branch-request.json",
         "response" : "tho/validate-isnota-other-branch-response.json"
+      },
+      {
+        "name" : "validate-child-of-child",
+        "description" : "child-of picks up a direct child, which act-class states in a subsumedBy property rather than by nesting",
+        "operation" : "validate-code",
+        "request" : "tho/validate-child-of-child-request.json",
+        "response" : "tho/validate-child-of-child-response.json"
+      },
+      {
+        "name" : "validate-child-of-self",
+        "description" : "child-of does not include the code named in the filter, unlike is-a",
+        "operation" : "validate-code",
+        "request" : "tho/validate-child-of-self-request.json",
+        "response" : "tho/validate-child-of-self-response.json"
+      },
+      {
+        "name" : "validate-child-of-grandchild",
+        "description" : "and it stops at the direct children, which is what separates it from descendent-of",
+        "operation" : "validate-code",
+        "request" : "tho/validate-child-of-grandchild-request.json",
+        "response" : "tho/validate-child-of-grandchild-response.json"
       },
       {
         "name" : "validate-isa-second-parent",

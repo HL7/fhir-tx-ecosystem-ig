@@ -1,0 +1,51 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "code2aI is nested inside code2a, not inside code2, so child-of does not reach it",
+    "name" : "code",
+    "valueCode" : "code2aI"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 2aI"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code2aI' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-child-of|5.0.0'"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code2aI' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-child-of|5.0.0'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0",
+    "$optional$" : "warning:version"
+  }]
+}

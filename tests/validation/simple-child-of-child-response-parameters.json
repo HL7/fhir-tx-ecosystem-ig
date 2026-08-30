@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "code2a is nested directly inside code2",
+    "name" : "code",
+    "valueCode" : "code2a"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 2a"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0",
+    "$optional$" : "warning:version"
+  }]
+}

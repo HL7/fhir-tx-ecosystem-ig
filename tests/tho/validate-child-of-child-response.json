@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "COMPOSITION names _ActClassRecordOrganizer in a subsumedBy property, so it is a direct child of it. A server that reads the hierarchy from nesting alone cannot see this",
+    "name" : "code",
+    "valueCode" : "COMPOSITION"
+  },
+  {
+    "name" : "display",
+    "valueString" : "composition"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/tests/CodeSystem/act-class"
+  }]
+}
