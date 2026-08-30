@@ -1,13 +1,14 @@
 ### Test cases 
 
-The tests assume that the server can accept code systems on the fly.
+The tests assume that the server can accept code systems on the fly. 
 If servers do not accept code systems on the fly, server authors will have to 
-adapt these tests by rewriting them for their own actual support code systems. 
-Either way, servers that do SHOULD pass all the tests, but the FHIR product director 
+consult the FHIR product director. Either way, servers that do SHOULD pass all the tests, but the FHIR product director 
 will review the test outcomes in order to approve a server. 
 
 The test cases are in version R5, but the tests will run against either an R4 or an R5 server. 
 See [R4 and the Test Cases](r4.html)
+
+Note that the test cases will be migrated to use TestPlan+matchetypes at some stage.
 
 #### Running the tests 
 
@@ -131,6 +132,7 @@ on unless it is turned off with `-mode !general`. The modes in use are:
   `tx-source/readme.md`
 * `omop`: servers that support OMOP
 * `icd-11`: servers that support ICD-11
+* `mimetypes`: servers that support the mime types code system (BCP 13, `urn:ietf:bcp:13`)
 * `tx.fhir.org`: tests that are specific to tx.fhir.org - either its own bugs, or operations 
   that are still being trialled there. No other server is expected to pass these
 * `flat`: servers that return a flat expansion rather than a hierarchical one. This mode 
