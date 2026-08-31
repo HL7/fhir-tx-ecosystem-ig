@@ -1,6 +1,6 @@
 {
   "resourceType" : "ConceptMap",
-  "id" : "full",
+  "id" : "novs",
   "url" : "http://hl7.org/fhir/test/ConceptMap/novs",
   "version" : "0.1.0",
   "name" : "FullConceptMapExampleNoVS",
