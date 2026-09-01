@@ -166,7 +166,29 @@ Currently failing, with the reason
     The CapabilityStatement declares a system-level `versions` operation;
     calling it returns 501 not-supported.
 
-17. The CodeSystem resources declare no filters and no properties.
+17. There is no way to enumerate the code system through FHIR.
+    (not a test yet - see "Still to write")
+    The CodeSystem declares no `valueSet`, so there is no implicit all-codes
+    value set; $expand only accepts WHO-published value set urls, so no client
+    can define one; and $lookup returns `parent`/`child` but the 28 top-level
+    entities (chapters 01-26, V, X) report no parent, so nothing in the FHIR
+    API tells a client what the roots are. A tree walk works - the `child`
+    property matches the native API exactly on every entity sampled - but only
+    if you already know the roots, and it costs ~37,000 $lookup calls.
+    The native ICD-API answers this properly in 29 calls: GET
+    /icd/release/11/{release}/mms lists the 28 children, and each of those
+    with ?include=descendant returns its whole subtree. The 28 descendant sets
+    are disjoint and exclude the roots (MMS is a strict tree), totalling 37,211
+    entity ids for 2026-01, of which 17,752 are chapter X extension codes and
+    5,374 are residual /other and /unspecified nodes. Entities with
+    classKind=category always carry a short code; classKind=block never does.
+    Both the versioned (.../release/11/2026-01/mms/{id}) and unversioned
+    (.../release/11/mms/{id}) URI forms are accepted as `code` by $lookup.
+    The FHIR API should expose the roots - either an all-codes value set named
+    in CodeSystem.valueSet, or a parent-less-concepts filter, or simply letting
+    a client supply its own value set (item 1).
+
+18. The CodeSystem resources declare no filters and no properties.
     (not a test - the harness has no CodeSystem read operation)
     CodeSystem/ICD-11-MMS-2026-01 has no `filter` and no `property` elements,
     yet WHO's own value sets filter on `concept is-a` and $lookup returns some
@@ -223,3 +245,5 @@ Still to write
 * the ~25,000 postcoordination scale value sets: something that samples them
   rather than enumerating them
 * paging over a large expansion, once expansion parameters work at all
+* enumeration: an all-codes value set for each of the three code systems, and
+  an expansion of it with paging - the test that would pin item 17
