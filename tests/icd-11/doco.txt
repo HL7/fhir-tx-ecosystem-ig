@@ -5,7 +5,7 @@ Target: the WHO ICD-API FHIR endpoint. At the time of writing:
   https://icdapi-fhir-testing-byfzd6budwdmbabf.northeurope-01.azurewebsites.net/fhir
   (ICD-API with FHIR Extension v2.6.0, releases 2025-01 and 2026-01)
 
-Run with:  validator_cli txTests -tx <endpoint> -mode '!general' -mode icd-11
+Run with:  validator_cli.jar txTests -tx <endpoint> -mode '!general' -mode icd-11
 
 The tests are loaded from the published hl7.fhir.uv.tx-ecosystem package - the
 ci-build, which is what -test-version defaults to, so nothing else is needed.
