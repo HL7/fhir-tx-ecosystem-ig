@@ -1,0 +1,56 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Other specified mental functions"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "VV0Y"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "id"
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/release/11/mms/1363559646/other"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "parent"
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/release/11/mms/1363559646"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

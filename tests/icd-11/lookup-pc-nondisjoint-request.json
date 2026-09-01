@@ -1,0 +1,29 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    },
+    {
+      "name": "code",
+      "valueCode": "1D01.0Y/1G41/1G40"
+    },
+    {
+      "name": "property",
+      "valueCode": "code"
+    },
+    {
+      "name": "property",
+      "valueCode": "stem"
+    },
+    {
+      "name": "property",
+      "valueCode": "postcoordinationValues"
+    }
+  ]
+}

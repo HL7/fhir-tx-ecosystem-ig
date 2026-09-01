@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
-  "id": "icd11-pcs-code",
-  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-pcs-code",
+  "id": "icd11-pcs-uri",
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-pcs-uri",
   "version": "2026-01",
-  "name": "icd11.pcs.code",
-  "title": "Postcoordination scale infectiousAgent for 1A00, with filter values as short codes (straw poll option 1)",
+  "name": "icd11.pcs.uri",
+  "title": "Postcoordination scale infectiousAgent for 1A00, with filter values as entity URIs (the current WHO form)",
   "status": "active",
   "experimental": false,
   "date": "2026-01-17",
@@ -18,7 +18,7 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "XN8P1"
+            "value": "http://id.who.int/icd/release/11/mms/194483911"
           }
         ]
       },
@@ -29,7 +29,7 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "XN62R"
+            "value": "http://id.who.int/icd/release/11/mms/802386629"
           }
         ]
       },
@@ -40,7 +40,7 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "XN8KD"
+            "value": "http://id.who.int/icd/release/11/mms/21927667"
           }
         ]
       }

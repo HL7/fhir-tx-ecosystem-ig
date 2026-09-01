@@ -1,0 +1,29 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    },
+    {
+      "name": "code",
+      "valueCode": "http://id.who.int/icd/release/11/mms/257068234"
+    },
+    {
+      "name": "property",
+      "valueCode": "id"
+    },
+    {
+      "name": "property",
+      "valueCode": "code"
+    },
+    {
+      "name": "property",
+      "valueCode": "parent"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Other specified bacterial meningitis / Sepsis with septic shock / Sepsis without septic shock"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "1D01.0Y/1G41/1G40"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "1G40"
+            },
+            {
+              "name": "description",
+              "valueString": "Sepsis without septic shock"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/622600769"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/hasManifestation"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "1G41"
+            },
+            {
+              "name": "description",
+              "valueString": "Sepsis with septic shock"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/1683090852"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/hasCausingCondition"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "stem"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "stemLabel"
+            },
+            {
+              "name": "value",
+              "valueString": "Other specified bacterial meningitis"
+            }
+          ]
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "stemUri"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/684930313/other"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "1D01.0Y"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

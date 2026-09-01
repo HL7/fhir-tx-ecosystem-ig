@@ -1,0 +1,112 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Dressing, unspecified [SEVERE performance difficulty (high, extreme,...) 50-95 %]"
+    },
+    {
+      "name": "name",
+      "valueString": "International Classification of Functioning, Disability and Health (ICF)"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "d5409.qp3"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "id"
+        },
+        {
+          "name": "value",
+          "valueCode": "$token$"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "qp3"
+            },
+            {
+              "name": "description",
+              "valueString": "SEVERE performance difficulty (high, extreme,...) 50-95 %"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/icf/992904195"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/performance"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "stem"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "stemLabel"
+            },
+            {
+              "name": "value",
+              "valueString": "Dressing, unspecified"
+            }
+          ]
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "stemUri"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/icf/1860600370/unspecified"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "d5409"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

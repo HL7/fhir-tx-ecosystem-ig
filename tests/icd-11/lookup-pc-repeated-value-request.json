@@ -1,0 +1,25 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    },
+    {
+      "name": "code",
+      "valueCode": "PB20&XM4SL9&XM4SL9&XE729&XE266"
+    },
+    {
+      "name": "property",
+      "valueCode": "code"
+    },
+    {
+      "name": "property",
+      "valueCode": "postcoordinationValues"
+    }
+  ]
+}

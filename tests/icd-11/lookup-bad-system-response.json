@@ -1,0 +1,18 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [
+    {
+      "severity": "error",
+      "code": "not-found",
+      "details": {
+        "text": "$external:1:unknown system$",
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code": "not-found"
+          }
+        ]
+      }
+    }
+  ]
+}

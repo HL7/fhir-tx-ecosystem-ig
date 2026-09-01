@@ -1,0 +1,43 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Bacterial intestinal infections"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "id"
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/release/11/mms/135352227"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "notSelectable"
+        },
+        {
+          "name": "value",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

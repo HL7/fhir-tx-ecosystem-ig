@@ -1,0 +1,30 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Chol\u00e9ra"
+    },
+    {
+      "name": "name",
+      "valueString": "CIM-11 pour les statistiques de mortalit\u00e9 et de morbidit\u00e9"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "1A00"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

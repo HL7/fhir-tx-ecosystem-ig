@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "icd11-bad-code",
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-bad-code",
+  "version": "2026-01",
+  "name": "icd11.bad.code",
+  "title": "ICD-11 MMS: a value set naming a code that does not exist",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-01-17",
+  "publisher": "HL7 International / Terminology Infrastructure",
+  "compose": {
+    "include": [
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "version": "2026-01",
+        "concept": [
+          {
+            "code": "XXXX9",
+            "display": "Not a code"
+          }
+        ]
+      }
+    ]
+  }
+}

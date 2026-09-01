@@ -1,0 +1,36 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "icd11-inline",
+        "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-inline",
+        "version": "2026-01",
+        "name": "icd11.inline",
+        "title": "An inline value set supplied on the request",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-01-17",
+        "publisher": "HL7 International / Terminology Infrastructure",
+        "compose": {
+          "include": [
+            {
+              "system": "http://id.who.int/icd/release/11/mms",
+              "version": "2026-01",
+              "concept": [
+                {
+                  "code": "1A00"
+                },
+                {
+                  "code": "1A01"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "code",
+      "valueCode": "XN8P1"
+    },
+    {
+      "name": "issues",
+      "resource": {
+        "$optional-properties$": [
+          "location"
+        ],
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "severity": "error",
+            "code": "code-invalid",
+            "details": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code": "not-in-vs"
+                }
+              ],
+              "text": "$external:1:XN8P1 not in enumerated$"
+            },
+            "location": [
+              "code"
+            ],
+            "expression": [
+              "code"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "message",
+      "valueString": "$external:2:XN8P1 not in enumerated$"
+    },
+    {
+      "name": "result",
+      "valueBoolean": false
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

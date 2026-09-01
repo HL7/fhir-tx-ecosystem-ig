@@ -1,0 +1,29 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "code",
+      "valueCode": "http://id.who.int/icd/release/11/mms/257068234"
+    },
+    {
+      "name": "display",
+      "valueString": "Cholera"
+    },
+    {
+      "name": "message",
+      "valueString": "$external:1:257068234 found$"
+    },
+    {
+      "name": "result",
+      "valueBoolean": true
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

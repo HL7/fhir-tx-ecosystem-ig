@@ -1,0 +1,43 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Certain infectious or parasitic diseases"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "01"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "id"
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/release/11/mms/1435254666"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

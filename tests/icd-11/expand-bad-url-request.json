@@ -1,0 +1,9 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://id.who.int/icd/release/11/mms/999999999/postcoordinationScale/infectiousAgent"
+    }
+  ]
+}

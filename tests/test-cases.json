@@ -7699,14 +7699,375 @@
   },{
     "name" : "icd-11",
     "mode" : "icd-11",
-    "description" : "ICD-11 Test Cases",
-    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json"],
+    "description" : "ICD-11 Test Cases. See tests/icd-11/doco.txt for what these assert and why several of them are expected to fail against the current ICD-API.",
+    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-bad-code.json"],
     "tests" : [
       {
         "name" : "term-caps",
         "description" : "Check that the minimum expected things are found in the server TerminologyCapabilities for ICD-11 servers",
         "operation" : "term-caps",
         "response" : "icd-11/capterms.json"
+      },
+      {
+        "name" : "lookup-mms-code",
+        "description" : "Look up an MMS stem code by its short code, restricting the returned properties with the property parameter",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-code-request.json",
+        "response" : "icd-11/lookup-mms-code-response.json"
+      },
+      {
+        "name" : "lookup-mms-uri",
+        "description" : "The same concept addressed by its entity URI must give the same answer",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-uri-request.json",
+        "response" : "icd-11/lookup-mms-uri-response.json"
+      },
+      {
+        "name" : "lookup-mms-grouper",
+        "description" : "Look up a chapter (a grouper that does have a short code)",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-grouper-request.json",
+        "response" : "icd-11/lookup-mms-grouper-response.json"
+      },
+      {
+        "name" : "lookup-mms-no-code",
+        "description" : "A concept with an entity id but no short code must be marked not-selectable",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-no-code-request.json",
+        "response" : "icd-11/lookup-mms-no-code-response.json"
+      },
+      {
+        "name" : "lookup-mms-residual",
+        "description" : "Look up a residual category - the id is derived from the parent, the code ends in Y",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-residual-request.json",
+        "response" : "icd-11/lookup-mms-residual-response.json"
+      },
+      {
+        "name" : "lookup-mms-fr",
+        "description" : "Look up with displayLanguage - display and designations come back in French",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-fr-request.json",
+        "response" : "icd-11/lookup-mms-fr-response.json"
+      },
+      {
+        "name" : "lookup-icf-code",
+        "description" : "The same foundation entity in ICF carries a different short code",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-icf-code-request.json",
+        "response" : "icd-11/lookup-icf-code-response.json"
+      },
+      {
+        "name" : "lookup-foundation",
+        "description" : "Look up a Foundation entity - full URI only, there are no short codes",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-foundation-request.json",
+        "response" : "icd-11/lookup-foundation-response.json"
+      },
+      {
+        "name" : "lookup-bad-code",
+        "description" : "An unknown code is an error",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-bad-code-request.json",
+        "response" : "icd-11/lookup-bad-code-response.json"
+      },
+      {
+        "name" : "lookup-bad-system",
+        "description" : "An unknown code system is an error",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-bad-system-request.json",
+        "response" : "icd-11/lookup-bad-system-response.json"
+      },
+      {
+        "name" : "lookup-bad-version",
+        "description" : "An unknown version is an error",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-bad-version-request.json",
+        "response" : "icd-11/lookup-bad-version-response.json"
+      },
+      {
+        "name" : "lookup-foundation-bare",
+        "description" : "A bare numeric id is not a Foundation code (WHO decision - the full URI is required)",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-foundation-bare-request.json",
+        "response" : "icd-11/lookup-foundation-bare-response.json"
+      },
+      {
+        "name" : "lookup-foundation-residual",
+        "description" : "Residual categories exist only in the linearizations, not in the Foundation",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-foundation-residual-request.json",
+        "response" : "icd-11/lookup-foundation-residual-response.json"
+      },
+      {
+        "name" : "lookup-bad-language",
+        "description" : "An unknown display language must be reported, not silently replaced by English",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-bad-language-request.json",
+        "response" : "icd-11/lookup-bad-language-response.json"
+      },
+      {
+        "name" : "lookup-pc-simple",
+        "description" : "Look up a postcoordinated expression in short-code form",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-simple-request.json",
+        "response" : "icd-11/lookup-pc-simple-response.json"
+      },
+      {
+        "name" : "lookup-pc-uri-form",
+        "description" : "The same expression in entity-URI form (spaces around the delimiter) must give the same concept",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-uri-form-request.json",
+        "response" : "icd-11/lookup-pc-uri-form-response.json"
+      },
+      {
+        "name" : "lookup-pc-cluster",
+        "description" : "A cluster expression: two stems joined by /, each with its own & extensions",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-cluster-request.json",
+        "response" : "icd-11/lookup-pc-cluster-response.json"
+      },
+      {
+        "name" : "lookup-pc-repeated-value",
+        "description" : "A value repeated on two different axes must not be silently dropped - the code that comes back must be the code that was asked about",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-repeated-value-request.json",
+        "response" : "icd-11/lookup-pc-repeated-value-response.json"
+      },
+      {
+        "name" : "lookup-pc-nondisjoint",
+        "description" : "Values on two axes drawing from overlapping value sets must each stay on their own axis",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-nondisjoint-request.json",
+        "response" : "icd-11/lookup-pc-nondisjoint-response.json"
+      },
+      {
+        "name" : "lookup-pc-invalid-axis",
+        "description" : "A value that is on no suggested axis of the stem must say so, not just 'not found'",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-pc-invalid-axis-request.json",
+        "response" : "icd-11/lookup-pc-invalid-axis-response.json"
+      },
+      {
+        "name" : "lookup-pc-other",
+        "description" : "'Other' postcoordination: a value outside the stem's declared scales (unresolved - see doco.txt)",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-pc-other-request.json",
+        "response" : "icd-11/lookup-pc-other-response.json"
+      },
+      {
+        "name" : "lookup-icf-pc",
+        "description" : "ICF postcoordination - every property returned must actually carry a value",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-icf-pc-request.json",
+        "response" : "icd-11/lookup-icf-pc-response.json"
+      },
+      {
+        "name" : "lookup-icf-pc-old",
+        "description" : "The pre-2026 ICF postcoordination syntax is no longer valid",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-icf-pc-old-request.json",
+        "response" : "icd-11/lookup-icf-pc-old-response.json"
+      },
+      {
+        "name" : "cs-validate-good",
+        "description" : "Validate a good code with no display",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-good-request.json",
+        "response" : "icd-11/cs-validate-good-response.json"
+      },
+      {
+        "name" : "cs-validate-good-display",
+        "description" : "Validate a good code with the right display",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-good-display-request.json",
+        "response" : "icd-11/cs-validate-good-display-response.json"
+      },
+      {
+        "name" : "cs-validate-bad-display",
+        "description" : "A wrong display must come back with issues and a message, not a bare result=false",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-bad-display-request.json",
+        "response" : "icd-11/cs-validate-bad-display-response.json"
+      },
+      {
+        "name" : "cs-validate-bad-code",
+        "description" : "An unknown code must come back with issues and a message",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-bad-code-request.json",
+        "response" : "icd-11/cs-validate-bad-code-response.json"
+      },
+      {
+        "name" : "cs-validate-case",
+        "description" : "The CodeSystem declares caseSensitive=false, so a lower case code must validate",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-case-request.json",
+        "response" : "icd-11/cs-validate-case-response.json"
+      },
+      {
+        "name" : "cs-validate-lang",
+        "description" : "A correct display in a different language is a warning, not an outright failure",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-lang-request.json",
+        "response" : "icd-11/cs-validate-lang-response.json"
+      },
+      {
+        "name" : "cs-validate-pc",
+        "description" : "Validate a postcoordinated expression",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-pc-request.json",
+        "response" : "icd-11/cs-validate-pc-response.json"
+      },
+      {
+        "name" : "cs-validate-uri",
+        "description" : "Validate a code given in entity-URI form",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-uri-request.json",
+        "response" : "icd-11/cs-validate-uri-response.json"
+      },
+      {
+        "name" : "expand-pcs",
+        "description" : "Expand a WHO postcoordination scale value set",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-request.json",
+        "response" : "icd-11/expand-pcs-response.json"
+      },
+      {
+        "name" : "expand-pcs-count",
+        "description" : "count is declared in TerminologyCapabilities and must be honoured",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-count-request.json",
+        "response" : "icd-11/expand-pcs-count-response.json"
+      },
+      {
+        "name" : "expand-pcs-offset",
+        "description" : "offset is declared in TerminologyCapabilities and must be honoured",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-offset-request.json",
+        "response" : "icd-11/expand-pcs-offset-response.json"
+      },
+      {
+        "name" : "expand-pcs-filter",
+        "description" : "The text filter must be applied",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-filter-request.json",
+        "response" : "icd-11/expand-pcs-filter-response.json"
+      },
+      {
+        "name" : "expand-pcs-fr",
+        "description" : "displayLanguage is declared in TerminologyCapabilities and must be honoured",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-fr-request.json",
+        "response" : "icd-11/expand-pcs-fr-response.json"
+      },
+      {
+        "name" : "expand-pcs-v2025",
+        "description" : "system-version is declared in TerminologyCapabilities and must be honoured",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-v2025-request.json",
+        "response" : "icd-11/expand-pcs-v2025-response.json"
+      },
+      {
+        "name" : "expand-bad-url",
+        "description" : "An unknown value set is an error",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "icd-11/expand-bad-url-request.json",
+        "response" : "icd-11/expand-bad-url-response.json"
+      },
+      {
+        "name" : "expand-inline-vs",
+        "description" : "A value set supplied inline on the request must be expanded",
+        "operation" : "expand",
+        "request" : "icd-11/expand-inline-vs-request.json",
+        "response" : "icd-11/expand-inline-vs-response.json"
+      },
+      {
+        "name" : "expand-adhoc-enum",
+        "description" : "Expand a client-supplied value set enumerating MMS codes",
+        "operation" : "expand",
+        "request" : "icd-11/expand-adhoc-enum-request.json",
+        "response" : "icd-11/expand-adhoc-enum-response.json"
+      },
+      {
+        "name" : "expand-adhoc-enum-uri",
+        "description" : "Expand a client-supplied value set enumerating entity URIs",
+        "operation" : "expand",
+        "request" : "icd-11/expand-adhoc-enum-uri-request.json",
+        "response" : "icd-11/expand-adhoc-enum-uri-response.json"
+      },
+      {
+        "name" : "expand-adhoc-isa",
+        "description" : "Expand a client-supplied is-a filter, filter value as a short code",
+        "operation" : "expand",
+        "request" : "icd-11/expand-adhoc-isa-request.json",
+        "response" : "icd-11/expand-adhoc-isa-response.json"
+      },
+      {
+        "name" : "expand-adhoc-isa-uri",
+        "description" : "Expand the same is-a filter with the filter value as an entity URI - must be identical",
+        "operation" : "expand",
+        "request" : "icd-11/expand-adhoc-isa-uri-request.json",
+        "response" : "icd-11/expand-adhoc-isa-uri-response.json"
+      },
+      {
+        "name" : "expand-adhoc-bad-code",
+        "description" : "A client-supplied value set naming a code that does not exist is an error",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "icd-11/expand-adhoc-bad-code-request.json",
+        "response" : "icd-11/expand-adhoc-bad-code-response.json"
+      },
+      {
+        "name" : "expand-pcs-uri-form",
+        "description" : "The WHO postcoordination scale as a client-supplied value set, filter values as entity URIs",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-uri-form-request.json",
+        "response" : "icd-11/expand-pcs-uri-form-response.json"
+      },
+      {
+        "name" : "expand-pcs-code-form",
+        "description" : "The same value set with filter values as short codes - must expand identically",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-code-form-request.json",
+        "response" : "icd-11/expand-pcs-code-form-response.json"
+      },
+      {
+        "name" : "vs-validate-in",
+        "description" : "A code that is in a WHO postcoordination scale value set",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-in-request.json",
+        "response" : "icd-11/vs-validate-in-response.json"
+      },
+      {
+        "name" : "vs-validate-out",
+        "description" : "A code that is not in the value set must come back with issues and a message",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-out-request.json",
+        "response" : "icd-11/vs-validate-out-response.json"
+      },
+      {
+        "name" : "vs-validate-adhoc",
+        "description" : "A code that is in a client-supplied value set",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-adhoc-request.json",
+        "response" : "icd-11/vs-validate-adhoc-response.json"
+      },
+      {
+        "name" : "vs-validate-adhoc-out",
+        "description" : "A code that is not in a client-supplied value set",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-adhoc-out-request.json",
+        "response" : "icd-11/vs-validate-adhoc-out-response.json"
       }
     ]
   },{

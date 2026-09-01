@@ -1,0 +1,112 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Cholera [Vibrio cholerae O1, biovar cholerae]"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "1A00&XN8P1"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "id"
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/release/11/mms/257068234 & http://id.who.int/icd/release/11/mms/194483911"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "XN8P1"
+            },
+            {
+              "name": "description",
+              "valueString": "Vibrio cholerae O1, biovar cholerae"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/194483911"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/infectiousAgent"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "stem"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "stemLabel"
+            },
+            {
+              "name": "value",
+              "valueString": "Cholera"
+            }
+          ]
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "stemUri"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/257068234"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "1A00"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

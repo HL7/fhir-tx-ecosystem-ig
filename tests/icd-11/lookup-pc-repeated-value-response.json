@@ -1,0 +1,150 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Unintentional exposure to or harmful effects of opioids or related analgesics [Oxycodone] [Oxycodone] [Educational activity] [Home]"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "PB20&XM4SL9&XM4SL9&XE729&XE266"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "XE266"
+            },
+            {
+              "name": "description",
+              "valueString": "Home"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/1670965842"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/placeOfOccurrence"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "XE729"
+            },
+            {
+              "name": "description",
+              "valueString": "Educational activity"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/1428847289"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/activityWhenInjured"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "XM4SL9"
+            },
+            {
+              "name": "description",
+              "valueString": "Oxycodone"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/273680488"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/medication"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "XM4SL9"
+            },
+            {
+              "name": "description",
+              "valueString": "Oxycodone"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/273680488"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/objectOrSubstanceProducingInjury"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}

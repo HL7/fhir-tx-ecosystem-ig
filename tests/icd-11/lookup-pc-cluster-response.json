@@ -1,0 +1,30 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "display",
+      "valueString": "Fracture at other specified part of wrist or hand level [Left] [Compression fracture] / Unintentionally struck, kicked, or bumped by animal [Organised sports and exercise] [Farm]"
+    },
+    {
+      "name": "name",
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "code"
+        },
+        {
+          "name": "value",
+          "valueCode": "NC53.Y&XK8G&XJ778/PA71&XE5UF&XE4TZ"
+        }
+      ]
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    }
+  ]
+}
