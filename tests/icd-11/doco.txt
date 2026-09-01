@@ -5,15 +5,17 @@ Target: the WHO ICD-API FHIR endpoint. At the time of writing:
   https://icdapi-fhir-testing-byfzd6budwdmbabf.northeurope-01.azurewebsites.net/fhir
   (ICD-API with FHIR Extension v2.6.0, releases 2025-01 and 2026-01)
 
-Run with:  validator_cli txTests -version current -tx <endpoint> -mode '!general' -mode icd-11
+Run with:  validator_cli txTests -tx <endpoint> -mode '!general' -mode icd-11
 
-Note that the test manifest itself is read from the published
-hl7.fhir.uv.tx-ecosystem package, not from -input; -input only supplies the
-individual request, response and setup files. Until the IG is republished,
-running these against a checkout means dropping tests/test-cases.json and
-tests/icd-11/ into the cached package by hand.
+The tests are loaded from the published hl7.fhir.uv.tx-ecosystem package - the
+ci-build, which is what -test-version defaults to, so nothing else is needed.
+(The flag is -test-version, not -version; it names a tx-ecosystem package
+version, not a FHIR version, and txTests rejects -version outright.)
 
-Current score against the ICD-API: 0 of 51.
+Current score against the ICD-API: 51 of 53 failed - the 2 passes are the
+metadata suite, which has no mode and so always runs. All 51 icd-11 tests fail,
+18 of them by exception rather than comparison: the client cannot parse the
+expansions at all (see 3 below).
 
 All tests are pinned to release 2026-01.
 
