@@ -1,6 +1,5 @@
 {
   "resourceType": "ValueSet",
-  "id": "$token$",
   "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-pcs-uri",
   "version": "2026-01",
   "name": "$token$",
@@ -8,23 +7,17 @@
   "status": "active",
   "experimental": false,
   "date": "$date$",
-  "publisher": "$string$",
   "expansion": {
-    "identifier": "$uri$",
+    "identifier": "$uuid$",
     "timestamp": "$instant$",
     "total": 3,
     "parameter": [
       {
-        "name": "version",
+        "name": "used-codesystem",
         "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
       }
     ],
     "contains": [
-      {
-        "system": "http://id.who.int/icd/release/11/mms",
-        "code": "XN8P1",
-        "display": "Vibrio cholerae O1, biovar cholerae"
-      },
       {
         "system": "http://id.who.int/icd/release/11/mms",
         "code": "XN62R",
@@ -34,6 +27,11 @@
         "system": "http://id.who.int/icd/release/11/mms",
         "code": "XN8KD",
         "display": "Vibrio cholerae O139"
+      },
+      {
+        "system": "http://id.who.int/icd/release/11/mms",
+        "code": "XN8P1",
+        "display": "Vibrio cholerae O1, biovar cholerae"
       }
     ]
   }

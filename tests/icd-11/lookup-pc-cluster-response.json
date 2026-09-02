@@ -2,8 +2,12 @@
   "resourceType": "Parameters",
   "parameter": [
     {
+      "name": "code",
+      "valueCode": "NC53.Y&XK8G&XJ778/PA71&XE5UF&XE4TZ"
+    },
+    {
       "name": "display",
-      "valueString": "Fracture at other specified part of wrist or hand level [Left] [Compression fracture] / Unintentionally struck, kicked, or bumped by animal [Organised sports and exercise] [Farm]"
+      "valueString": "Fracture at other specified part of wrist or hand level [Left] [Compression fracture] / Unintentionally struck, kicked, or bumped by animal [Organised sports and exercise during leisure time] [Marsupials]"
     },
     {
       "name": "name",
@@ -21,6 +25,10 @@
           "valueCode": "NC53.Y&XK8G&XJ778/PA71&XE5UF&XE4TZ"
         }
       ]
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
     },
     {
       "name": "version",

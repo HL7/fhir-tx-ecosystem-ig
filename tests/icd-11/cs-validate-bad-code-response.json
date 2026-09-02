@@ -23,13 +23,20 @@
                   "code": "invalid-code"
                 }
               ],
-              "text": "$external:1:code XXXX9$"
+              "text": "$external:1:XXXX9$"
             },
             "location": [
               "code"
             ],
             "expression": [
               "code"
+            ],
+            "extension": [
+              {
+                "$optional$": "!tx.fhir.org",
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "Unknown_Code_in_Version"
+              }
             ]
           }
         ]
@@ -37,7 +44,7 @@
     },
     {
       "name": "message",
-      "valueString": "$external:2:code XXXX9$"
+      "valueString": "$external:2:XXXX9$"
     },
     {
       "name": "result",

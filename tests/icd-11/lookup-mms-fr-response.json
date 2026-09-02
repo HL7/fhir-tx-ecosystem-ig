@@ -2,12 +2,16 @@
   "resourceType": "Parameters",
   "parameter": [
     {
+      "name": "code",
+      "valueCode": "1A00"
+    },
+    {
       "name": "display",
       "valueString": "Chol\u00e9ra"
     },
     {
       "name": "name",
-      "valueString": "CIM-11 pour les statistiques de mortalit\u00e9 et de morbidit\u00e9"
+      "valueString": "ICD-11 for Mortality and Morbidity Statistics"
     },
     {
       "name": "property",
@@ -21,6 +25,10 @@
           "valueCode": "1A00"
         }
       ]
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
     },
     {
       "name": "version",

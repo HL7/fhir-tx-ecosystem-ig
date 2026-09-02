@@ -7,31 +7,36 @@
     },
     {
       "name": "display",
-      "valueString": "Chol\u00e9ra"
+      "valueString": "Choléra"
     },
     {
       "name": "issues",
       "resource": {
-        "$optional-properties$": [
-          "location"
-        ],
         "resourceType": "OperationOutcome",
         "issue": [
           {
-            "severity": "warning",
+            "$optional-properties$": [
+              "location"
+            ],
+            "extension": [
+              {
+                "$optional$": "!tx.fhir.org",
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "Display_Name_for__should_be_one_of__instead_of"
+              }
+            ],
+            "severity": "error",
             "code": "invalid",
             "details": {
               "coding": [
                 {
                   "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-                  "code": "display-comment"
+                  "code": "invalid-display"
                 }
               ],
-              "text": "$external:1:display in another language$"
+              "fhir_comments": "wording varies by server; it must name the display that was given and the one that is right for the language that was asked for",
+              "text": "$external:1:Cholera|Choléra$"
             },
-            "location": [
-              "display"
-            ],
             "expression": [
               "display"
             ]
@@ -41,11 +46,11 @@
     },
     {
       "name": "message",
-      "valueString": "$external:2:display in another language$"
+      "valueString": "$external:2:Cholera|Choléra$"
     },
     {
       "name": "result",
-      "valueBoolean": true
+      "valueBoolean": false
     },
     {
       "name": "system",

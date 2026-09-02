@@ -2,6 +2,10 @@
   "resourceType": "Parameters",
   "parameter": [
     {
+      "name": "code",
+      "valueCode": "01"
+    },
+    {
       "name": "display",
       "valueString": "Certain infectious or parasitic diseases"
     },
@@ -34,6 +38,10 @@
           "valueCode": "http://id.who.int/icd/release/11/mms/1435254666"
         }
       ]
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
     },
     {
       "name": "version",

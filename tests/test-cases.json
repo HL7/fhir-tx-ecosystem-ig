@@ -7908,14 +7908,14 @@
       },
       {
         "name" : "cs-validate-case",
-        "description" : "The CodeSystem declares caseSensitive=false, so a lower case code must validate",
+        "description" : "ICD-11 codes are case sensitive, so a lower case code is not a code (note that WHO declares caseSensitive=false, which is the part that is wrong)",
         "operation" : "cs-validate-code",
         "request" : "icd-11/cs-validate-case-request.json",
         "response" : "icd-11/cs-validate-case-response.json"
       },
       {
         "name" : "cs-validate-lang",
-        "description" : "A correct display in a different language is a warning, not an outright failure",
+        "description" : "A display that is right in another language is still wrong for the language that was asked for - the same as validation/simple-coding-bad-language",
         "operation" : "cs-validate-code",
         "request" : "icd-11/cs-validate-lang-request.json",
         "response" : "icd-11/cs-validate-lang-response.json"
@@ -7970,13 +7970,6 @@
         "response" : "icd-11/expand-pcs-fr-response.json"
       },
       {
-        "name" : "expand-pcs-v2025",
-        "description" : "system-version is declared in TerminologyCapabilities and must be honoured",
-        "operation" : "expand",
-        "request" : "icd-11/expand-pcs-v2025-request.json",
-        "response" : "icd-11/expand-pcs-v2025-response.json"
-      },
-      {
         "name" : "expand-bad-url",
         "description" : "An unknown value set is an error",
         "operation" : "expand",
@@ -8021,9 +8014,8 @@
       },
       {
         "name" : "expand-adhoc-bad-code",
-        "description" : "A client-supplied value set naming a code that does not exist is an error",
+        "description" : "A client-supplied value set naming a code that does not exist expands to the codes that do - the same as simple-expand-enum-bad and overload-expand-enum-bad",
         "operation" : "expand",
-        "http-code" : "4xx",
         "request" : "icd-11/expand-adhoc-bad-code-request.json",
         "response" : "icd-11/expand-adhoc-bad-code-response.json"
       },

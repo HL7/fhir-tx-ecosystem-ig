@@ -5,7 +5,7 @@
       "severity": "error",
       "code": "code-invalid",
       "details": {
-        "text": "$external:1:XE729 not on any axis of 1A00$",
+        "text": "$external:1:XE729$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

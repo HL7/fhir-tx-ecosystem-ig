@@ -6,6 +6,10 @@
       "valueCode": "1A00"
     },
     {
+      "name": "display",
+      "valueString": "Cholera"
+    },
+    {
       "name": "issues",
       "resource": {
         "$optional-properties$": [
@@ -23,13 +27,20 @@
                   "code": "not-in-vs"
                 }
               ],
-              "text": "$external:1:1A00 not in pcs vs$"
+              "text": "$external:1:1A00$"
             },
             "location": [
               "code"
             ],
             "expression": [
               "code"
+            ],
+            "extension": [
+              {
+                "$optional$": "!tx.fhir.org",
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "None_of_the_provided_codes_are_in_the_value_set_one"
+              }
             ]
           }
         ]
@@ -37,7 +48,7 @@
     },
     {
       "name": "message",
-      "valueString": "$external:2:1A00 not in pcs vs$"
+      "valueString": "$external:2:1A00$"
     },
     {
       "name": "result",

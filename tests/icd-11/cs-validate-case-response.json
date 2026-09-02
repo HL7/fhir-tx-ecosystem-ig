@@ -6,16 +6,49 @@
       "valueCode": "1a00"
     },
     {
-      "name": "display",
-      "valueString": "Cholera"
+      "name": "issues",
+      "resource": {
+        "$optional-properties$": [
+          "location"
+        ],
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "extension": [
+              {
+                "$optional$": "!tx.fhir.org",
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "Unknown_Code_in_Version"
+              }
+            ],
+            "severity": "error",
+            "code": "code-invalid",
+            "details": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code": "invalid-code"
+                }
+              ],
+              "text": "$external:1:1a00$"
+            },
+            "location": [
+              "code"
+            ],
+            "expression": [
+              "code"
+            ]
+          }
+        ]
+      }
     },
     {
       "name": "message",
-      "valueString": "$external:1:1a00 found$"
+      "valueString": "$external:2:1a00$"
     },
     {
       "name": "result",
-      "valueBoolean": true
+      "valueBoolean": false
     },
     {
       "name": "system",

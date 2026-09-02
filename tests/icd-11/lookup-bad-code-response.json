@@ -5,7 +5,7 @@
       "severity": "error",
       "code": "not-found",
       "details": {
-        "text": "$external:1:code XXXX9 in mms$",
+        "text": "$external:1:XXXX9$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

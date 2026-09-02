@@ -2,6 +2,10 @@
   "resourceType": "Parameters",
   "parameter": [
     {
+      "name": "code",
+      "valueCode": "PB20&XM4SL9&XM4SL9&XE729&XE266"
+    },
+    {
       "name": "display",
       "valueString": "Unintentional exposure to or harmful effects of opioids or related analgesics [Oxycodone] [Oxycodone] [Educational activity] [Home]"
     },
@@ -19,36 +23,6 @@
         {
           "name": "value",
           "valueCode": "PB20&XM4SL9&XM4SL9&XE729&XE266"
-        }
-      ]
-    },
-    {
-      "name": "property",
-      "part": [
-        {
-          "name": "code",
-          "valueCode": "postcoordinationValues"
-        },
-        {
-          "name": "subproperty",
-          "part": [
-            {
-              "name": "code",
-              "valueCode": "XE266"
-            },
-            {
-              "name": "description",
-              "valueString": "Home"
-            },
-            {
-              "name": "value",
-              "valueUri": "http://id.who.int/icd/release/11/mms/1670965842"
-            }
-          ]
-        },
-        {
-          "name": "value",
-          "valueCode": "http://id.who.int/icd/schema/placeOfOccurrence"
         }
       ]
     },
@@ -141,6 +115,40 @@
           "valueCode": "http://id.who.int/icd/schema/objectOrSubstanceProducingInjury"
         }
       ]
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "postcoordinationValues"
+        },
+        {
+          "name": "subproperty",
+          "part": [
+            {
+              "name": "code",
+              "valueCode": "XE266"
+            },
+            {
+              "name": "description",
+              "valueString": "Home"
+            },
+            {
+              "name": "value",
+              "valueUri": "http://id.who.int/icd/release/11/mms/1670965842"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "valueCode": "http://id.who.int/icd/schema/placeOfOccurrence"
+        }
+      ]
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/mms"
     },
     {
       "name": "version",

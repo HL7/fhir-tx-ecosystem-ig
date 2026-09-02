@@ -12,10 +12,19 @@ ci-build, which is what -test-version defaults to, so nothing else is needed.
 (The flag is -test-version, not -version; it names a tx-ecosystem package
 version, not a FHIR version, and txTests rejects -version outright.)
 
-Current score against the ICD-API: 51 of 53 failed - the 2 passes are the
-metadata suite, which has no mode and so always runs. All 51 icd-11 tests fail,
-18 of them by exception rather than comparison: the client cannot parse the
+50 tests. Current score against the ICD-API: all 50 fail, 18 of them by
+exception rather than comparison, because the client cannot parse the
 expansions at all (see 3 below).
+
+A second implementation passes all 50 (FHIRsmith, 2026-09-02, backed by a local
+copy of the classification built from the native API). That matters more than it
+might look. These tests were written to assert correct behaviour rather than
+current behaviour, and a suite of red tests that nothing passes is indistinguishable
+from a suite of wrong tests - there is no evidence the answers it demands can
+actually be given. There is now. Getting there also corrected fourteen of these
+tests, listed under 0 and 0b below: every one was a case where the tests asserted
+something the wider suite had already settled the other way, and only running
+them against a server that gets the rest right could show that.
 
 All tests are pinned to release 2026-01.
 
@@ -37,6 +46,45 @@ questions" at the end) the tests assert only what is already unambiguous.
 Currently failing, with the reason
 ----------------------------------
 
+0. Corrections to these tests, 2026-09-02.
+   Four things the tests asserted that the rest of the suite had already
+   settled the other way, found by running them against a second server:
+   - An unknown code in an enumerated include is skipped, not an error.
+     simple-expand-enum-bad and overload-expand-enum-bad both expand a compose
+     naming a code that does not exist and both expect the good codes and no
+     issue. expand-adhoc-bad-code now expects an empty expansion.
+   - $lookup echoes the `code` output parameter as it was asked, not
+     normalised: lookup-mms-uri asks by entity uri and gets the entity uri
+     back. lookup-pc-uri-form now expects the same. The normalised short form
+     is in the `code` *property*, which is what that property is for.
+   - An expansion can assert neither `id` nor `publisher`. $expand builds a
+     fresh resource and drops the id; it drops publisher too unless
+     includeDefinition was asked for. (Whether publisher belongs to the
+     "definition" is arguable - it is metadata about the value set, not part
+     of what it selects - but that is a question for the ecosystem, not for
+     these tests.) All thirteen expand expectations dropped both.
+   - `expansion.identifier` is a urn:uuid, so it is $uuid$ and not $uri$; the
+     version parameter is named `used-codesystem`; and $date$ requires a full
+     YYYY-MM-DD, so a value set whose only date is the release (2026-01)
+     asserts that literally.
+
+0b. More corrections, 2026-09-02, from the run log.
+   - Expected files have to be stored in the order TxTesterSorters produces, because only
+     the actual response is sorted before the comparison. Twelve of these files were not,
+     and failed on order alone: repeated `property` parameters sort by their code part then
+     their *value* part, which for postcoordinationValues is the axis uri - so the values
+     come back grouped by axis, not in the order they were written. expansion.contains
+     sorts by code. (The provider does not need to sort anything itself; it did briefly,
+     which was dead weight.)
+   - A subtree expansion is hierarchical: expand-adhoc-isa returns XN7N1 with its three
+     children nested inside it, not four flat entries. A server that cannot do that runs
+     the tests in `flat` mode.
+   - expand-adhoc-bad-code still carried http-code 4xx from when it expected an error.
+   - 1A02's display is "Intestinal infections due to Shigella"; "Shigellosis" is an index
+     term, not the title.
+   - An expansion with a count but no offset does not report offset 0, so offset is
+     optional there (the pattern simple-expand-enum-bad already uses).
+
 1. No client-supplied value sets, at all.
    expand-inline-vs, expand-adhoc-*, expand-pcs-uri-form, expand-pcs-code-form,
    vs-validate-adhoc*
@@ -49,13 +97,13 @@ Currently failing, with the reason
    It is the single largest item on this list.
 
 2. Expansion parameters are declared but ignored.
-   expand-pcs-count, expand-pcs-offset, expand-pcs-filter, expand-pcs-fr,
-   expand-pcs-v2025
+   expand-pcs-count, expand-pcs-offset, expand-pcs-filter, expand-pcs-fr
    TerminologyCapabilities declares activeOnly, count, displayLanguage,
    excludeNested, force-system-version, includeDefinition, includeDesignations,
    offset, property, system-version and tx-resource. count, offset, filter,
-   displayLanguage, includeDesignations and system-version all have no effect on
-   the response.
+   displayLanguage and includeDesignations all have no effect on the response.
+   (system-version was in this list too, tested by expand-pcs-v2025, which has
+   since been removed - see "Removed tests".)
 
 3. Expansions cannot be parsed by a conformant FHIR client.
    expand-pcs and every other expand test
@@ -90,18 +138,39 @@ Currently failing, with the reason
 6. caseSensitive is declared false but matching is case sensitive.
    cs-validate-case
    The CodeSystem resource says caseSensitive: false. `1a00` does not validate.
-   Either the matching or the declaration has to change; the declaration is
-   probably the wrong one.
+   Resolved 2026-09-02: ICD-11 is taken to be wholly case sensitive, and the
+   declaration is the part that is wrong. Relaxing a code system from sensitive
+   to insensitive later is safe; tightening it is not, because data coded in the
+   meantime may rely on the looser rule. The test therefore asserts that `1a00`
+   is not a code.
 
 7. A correct display in another language is rejected outright.
    cs-validate-lang
-   code=1A00, display=Cholera, displayLanguage=fr returns result=false with
-   "The display 'Cholera' does not match the preferred term 'Choléra'".
-   'Cholera' is a correct display for 1A00; a language mismatch is a warning.
+   Resolved 2026-09-02, against the test rather than the server. The suite had
+   already settled this, six times over: validation/simple-{code,coding,
+   codeableconcept}-bad-language and the -header, -vs and -vslang variants all
+   send "Anzeige 1" - a real display of code1, in de - while asking for en, and
+   all expect result=false with an error and tx-issue-type invalid-display.
+   1A00 with display=Cholera and displayLanguage=fr is that same shape, so it
+   now expects the same answer. A display that is right in another language is
+   still not the display for the language that was asked for.
+   (What made this look open: checkDisplays() in validate.js has a branch for
+   the softer reading - NO_VALID_DISPLAY_FOUND_LANG_SOME, information,
+   display-comment - which is unreachable, because the inner hasDisplay() call
+   repeats the outer one's arguments instead of narrowing to the requested
+   language. Making it reachable would flip those six tests, so the dead branch
+   is the thing that is wrong, not the six tests. Left as it is; it is a
+   general-suite question, not an ICD-11 one.)
 
 8. An unknown display language is silently ignored.
    lookup-bad-language
    displayLanguage=zz returns English with no warning or error.
+   Resolved 2026-09-02: the test now asserts the same shape as
+   display/validation-wrong-de-en-bad - code=processing, tx-issue-type
+   invalid-display, message id INVALID_DISPLAY_NAME. An unusable
+   displayLanguage is the same failure whatever code system is being looked
+   up, and that expectation was already agreed; the icd-11 one had invented a
+   different shape for no reason.
 
 9. The property parameter on $lookup is ignored.
    lookup-mms-code and the other property-restricted lookups
@@ -114,6 +183,16 @@ Currently failing, with the reason
     has the same problem with its own `code` output parameter, which the
     operation definition types as `code` and the server returns as valueString
     (cs-validate-good, cs-validate-uri).
+
+9b. An unknown code in $lookup is not-found rather than invalid-code.
+    lookup-bad-code, lookup-foundation-bare, lookup-foundation-residual,
+    lookup-icf-pc-old
+    The code system was found; the code in it was not. That is `invalid-code`
+    ("a provided code is not valid in a code system"), which is what the other
+    62 unknown-code expectations across the suite assert; `not-found` is for a
+    code system or value set that could not be resolved at all. FHIRsmith's
+    $lookup was the one place saying not-found, and omop-lookup-code2 was the
+    one expectation written from it. Both fixed 2026-09-02.
 
 10b. Error OperationOutcomes carry only `diagnostics`.
     every 4xx test
@@ -137,6 +216,35 @@ Currently failing, with the reason
     was asked about, with no issue raised. Whatever the right answer is, quietly
     answering about a different concept is not it.
 
+12c. The order postcoordinationValues come back in, decided 2026-09-02.
+    Sorted by the value's own code, not left to right through the expression.
+    The order a coder happened to write two values in says nothing, and a
+    stable order makes two servers' answers to the same question comparable.
+
+12b. The axis binding rule, decided 2026-09-02.
+    Items 12 and 13 both come down to: given a value that is legal on more
+    than one axis of the stem, which axis does it go on? The rule taken here,
+    and now implemented, is:
+      - an axis that is not yet carrying a value is always preferred over one
+        that is. That is what keeps the two XM4SL9 of item 12 apart instead of
+        dropping the second, and what stops item 13's coalescing.
+      - among those, required axes come first, then WHO's own declaration
+        order. 1D01.0Y declares hasManifestation second (optional) and
+        hasCausingCondition fourth (required); 1G40 and 1G41 are both legal on
+        either; and reading 1D01.0Y/1G41/1G40 as causing condition then
+        manifestation is what the ICD Browser does. An axis that must be filled
+        is the one a coder is most likely to have been filling, so it gets
+        first refusal.
+    Also decided: `&` asserts that what follows is a value on an axis of the
+    stem, so a value that is on none of them is an error (item 15). `/` asserts
+    only that what follows is another element of the cluster, so a member that
+    fits an unfilled axis is taken as a value and one that does not simply
+    starts a new stem. That is what lets 1D01.0Y/1G41/1G40 and
+    NC53.Y&XK8G&XJ778/PA71&XE5UF&XE4TZ both mean what a coder means by them.
+    The display renders the syntax (cluster members joined by " / ", values in
+    brackets); the properties report the semantics. For 1D01.0Y/1G41/1G40 those
+    two disagree, and both are right.
+
 13. Values on non-disjoint axes are coalesced onto one axis.
     lookup-pc-nondisjoint
     1D01.0Y/1G41/1G40 - the stem declares hasCausingCondition (required) and
@@ -151,9 +259,13 @@ Currently failing, with the reason
 14. ICF postcoordination returns a property with no value.
     lookup-icf-pc
     d5409.qp3 returns an `id` property whose `value` part has no value[x] at
-    all, which is not valid FHIR. (The test asserts $token$ rather than a
-    specific id, since the right id form for an ICF postcoordinated expression
-    is not settled.)
+    all, which is not valid FHIR. The test asserts only that there is a value,
+    since the right id form for an ICF postcoordinated expression is not
+    settled. It asserted $token$ until 2026-09-02, which was wrong: $token$ is
+    [0-9a-zA-Z_][0-9a-zA-Z_.\-]* and so excludes a uri, while the MMS tests
+    assert the id of an expression is its parts in uri form joined by " & ".
+    It now asserts $string$. ICF's dot is the same operator as MMS's `&`, so
+    the uri form spells it `&` - there is only the one uri form.
 
 15. Errors do not say why.
     lookup-pc-invalid-axis, lookup-pc-other
@@ -230,6 +342,31 @@ Open questions - deliberately not asserted
   or whether a structured form has to travel with it - belongs in the IG.
   See chat.fhir.org #ICD-11 > "validating postcoordinated codes".
 
+
+Removed tests
+-------------
+* expand-pcs-v2025, removed 2026-09-02. It pinned system-version to 2025-01 and
+  expected the 2025-01 expansion. Two things wrong with it.
+  First, what it would have tested is version selection, and there is nothing
+  about version selection that is specific to ICD-11: the version suite already
+  covers it in 36 expand tests across default, force and check, including the
+  4xx cases for pinning to a version the server does not have, and the overload
+  suite covers system-version overriding a value set's own pin. Keeping this
+  one would have meant carrying a second 460 MB release of the classification
+  to re-test machinery that is already tested, and making the whole icd-11
+  suite depend on two databases.
+  Second, it was wrong on its own terms. `system-version` without `force` is a
+  *default* - it supplies a version where the value set does not state one -
+  and the postcoordination scale value sets state theirs on every include,
+  because a scale belongs to the release it was published in. So the server was
+  right to answer 2026-01, and there was no bug to see; the earlier note here
+  saying the pin was "silently ignored" was wrong.
+  The one version question that IS specific to ICD-11 is the versioned entity
+  uri: .../release/11/2026-01/mms/{id} alongside the unversioned form, both of
+  which WHO accepts as a `code`. What a server should do when the version in
+  the uri and the version parameter disagree has no analogue in any other code
+  system. That belongs with the code-form question in "Open questions", and
+  needs the versioned form to be supported first.
 
 Still to write
 --------------

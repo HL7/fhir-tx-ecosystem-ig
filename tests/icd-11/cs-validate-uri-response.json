@@ -10,8 +10,42 @@
       "valueString": "Cholera"
     },
     {
-      "name": "message",
-      "valueString": "$external:1:257068234 found$"
+      "name": "issues",
+      "resource": {
+        "$optional-properties$": [
+          "location"
+        ],
+        "resourceType": "OperationOutcome",
+        "issue": [
+          {
+            "extension": [
+              {
+                "$optional$": "!tx.fhir.org",
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "CODE_CASE_DIFFERENCE"
+              }
+            ],
+            "severity": "information",
+            "code": "business-rule",
+            "details": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code": "code-rule"
+                }
+              ],
+              "text": "$external:1:1A00$"
+            },
+            "expression": [
+              "code"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "normalized-code",
+      "valueCode": "1A00"
     },
     {
       "name": "result",

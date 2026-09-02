@@ -1,6 +1,5 @@
 {
   "resourceType": "ValueSet",
-  "id": "$token$",
   "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-isa",
   "version": "2026-01",
   "name": "$token$",
@@ -8,14 +7,13 @@
   "status": "active",
   "experimental": false,
   "date": "$date$",
-  "publisher": "$string$",
   "expansion": {
-    "identifier": "$uri$",
+    "identifier": "$uuid$",
     "timestamp": "$instant$",
     "total": 4,
     "parameter": [
       {
-        "name": "version",
+        "name": "used-codesystem",
         "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
       }
     ],
@@ -23,22 +21,24 @@
       {
         "system": "http://id.who.int/icd/release/11/mms",
         "code": "XN7N1",
-        "display": "Vibrio cholerae"
-      },
-      {
-        "system": "http://id.who.int/icd/release/11/mms",
-        "code": "XN8P1",
-        "display": "Vibrio cholerae O1, biovar cholerae"
-      },
-      {
-        "system": "http://id.who.int/icd/release/11/mms",
-        "code": "XN62R",
-        "display": "Vibrio cholerae O1, biovar eltor"
-      },
-      {
-        "system": "http://id.who.int/icd/release/11/mms",
-        "code": "XN8KD",
-        "display": "Vibrio cholerae O139"
+        "display": "Vibrio cholerae",
+        "contains": [
+          {
+            "system": "http://id.who.int/icd/release/11/mms",
+            "code": "XN62R",
+            "display": "Vibrio cholerae O1, biovar eltor"
+          },
+          {
+            "system": "http://id.who.int/icd/release/11/mms",
+            "code": "XN8KD",
+            "display": "Vibrio cholerae O139"
+          },
+          {
+            "system": "http://id.who.int/icd/release/11/mms",
+            "code": "XN8P1",
+            "display": "Vibrio cholerae O1, biovar cholerae"
+          }
+        ]
       }
     ]
   }

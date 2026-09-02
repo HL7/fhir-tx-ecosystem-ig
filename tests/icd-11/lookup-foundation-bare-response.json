@@ -5,7 +5,7 @@
       "severity": "error",
       "code": "not-found",
       "details": {
-        "text": "$external:1:bare id in entity$",
+        "text": "$external:1:257068234$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

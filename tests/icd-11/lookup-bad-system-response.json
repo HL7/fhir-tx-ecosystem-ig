@@ -5,7 +5,7 @@
       "severity": "error",
       "code": "not-found",
       "details": {
-        "text": "$external:1:unknown system$",
+        "text": "$external:1:icd/release/11/nope$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

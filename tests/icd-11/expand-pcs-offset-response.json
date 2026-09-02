@@ -1,31 +1,29 @@
 {
   "resourceType": "ValueSet",
-  "id": "$token$",
   "url": "http://id.who.int/icd/release/11/mms/257068234/postcoordinationScale/infectiousAgent",
   "version": "2026-01",
   "name": "$token$",
   "title": "$string$",
   "status": "active",
   "experimental": false,
-  "date": "$date$",
-  "publisher": "World Health Organization",
+  "date": "2026-01",
   "expansion": {
-    "identifier": "$uri$",
+    "identifier": "$uuid$",
     "timestamp": "$instant$",
     "total": 3,
     "offset": 1,
     "parameter": [
       {
-        "name": "version",
-        "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
+        "name": "count",
+        "valueInteger": 2
       },
       {
         "name": "offset",
         "valueInteger": 1
       },
       {
-        "name": "count",
-        "valueInteger": 2
+        "name": "used-codesystem",
+        "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
       }
     ],
     "contains": [

@@ -5,7 +5,7 @@
       "severity": "error",
       "code": "not-found",
       "details": {
-        "text": "$external:1:residual in entity$",
+        "text": "$external:1:1363559646/other$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

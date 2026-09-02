@@ -1,18 +1,21 @@
 {
-  "resourceType": "OperationOutcome",
-  "issue": [
-    {
-      "severity": "error",
-      "code": "code-invalid",
-      "details": {
-        "text": "$external:1:XXXX9 in mms$",
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code": "invalid-code"
-          }
-        ]
+  "resourceType": "ValueSet",
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-bad-code",
+  "version": "2026-01",
+  "name": "icd11.bad.code",
+  "title": "$string$",
+  "status": "active",
+  "experimental": false,
+  "date": "$date$",
+  "expansion": {
+    "identifier": "$uuid$",
+    "timestamp": "$instant$",
+    "total": 0,
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
       }
-    }
-  ]
+    ]
+  }
 }

@@ -5,7 +5,7 @@
       "severity": "error",
       "code": "not-found",
       "details": {
-        "text": "$external:1:old icf syntax$",
+        "text": "$external:1:d5409.3$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",

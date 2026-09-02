@@ -1,39 +1,39 @@
 {
   "resourceType": "ValueSet",
-  "id": "$token$",
   "url": "http://id.who.int/icd/release/11/mms/257068234/postcoordinationScale/infectiousAgent",
   "version": "2026-01",
   "name": "$token$",
   "title": "$string$",
   "status": "active",
   "experimental": false,
-  "date": "$date$",
-  "publisher": "World Health Organization",
+  "date": "2026-01",
   "expansion": {
-    "identifier": "$uri$",
+    "$optional-properties$": [
+      "offset"
+    ],
+    "identifier": "$uuid$",
     "timestamp": "$instant$",
     "total": 3,
-    "offset": 0,
     "parameter": [
-      {
-        "name": "version",
-        "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
-      },
       {
         "name": "count",
         "valueInteger": 2
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
       }
     ],
     "contains": [
       {
         "system": "http://id.who.int/icd/release/11/mms",
-        "code": "XN8P1",
-        "display": "Vibrio cholerae O1, biovar cholerae"
+        "code": "XN62R",
+        "display": "Vibrio cholerae O1, biovar eltor"
       },
       {
         "system": "http://id.who.int/icd/release/11/mms",
-        "code": "XN62R",
-        "display": "Vibrio cholerae O1, biovar eltor"
+        "code": "XN8P1",
+        "display": "Vibrio cholerae O1, biovar cholerae"
       }
     ]
   }

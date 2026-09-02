@@ -10,10 +10,6 @@
       "valueString": "Cholera"
     },
     {
-      "name": "message",
-      "valueString": "$external:1:1A00 found$"
-    },
-    {
       "name": "result",
       "valueBoolean": true
     },

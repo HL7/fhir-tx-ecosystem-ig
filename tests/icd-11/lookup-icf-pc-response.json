@@ -2,6 +2,10 @@
   "resourceType": "Parameters",
   "parameter": [
     {
+      "name": "code",
+      "valueCode": "d5409.qp3"
+    },
+    {
       "name": "display",
       "valueString": "Dressing, unspecified [SEVERE performance difficulty (high, extreme,...) 50-95 %]"
     },
@@ -31,7 +35,7 @@
         },
         {
           "name": "value",
-          "valueCode": "$token$"
+          "valueCode": "$string$"
         }
       ]
     },
@@ -103,6 +107,10 @@
           "valueCode": "d5409"
         }
       ]
+    },
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/icf"
     },
     {
       "name": "version",

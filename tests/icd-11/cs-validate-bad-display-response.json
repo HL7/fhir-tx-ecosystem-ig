@@ -27,13 +27,20 @@
                   "code": "invalid-display"
                 }
               ],
-              "text": "$external:1:display Kolera for 1A00$"
+              "text": "$external:1:Kolera|Cholera$"
             },
             "location": [
               "display"
             ],
             "expression": [
               "display"
+            ],
+            "extension": [
+              {
+                "$optional$": "!tx.fhir.org",
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "Display_Name_for__should_be_one_of__instead_of"
+              }
             ]
           }
         ]
@@ -41,7 +48,7 @@
     },
     {
       "name": "message",
-      "valueString": "$external:2:display Kolera for 1A00$"
+      "valueString": "$external:2:Kolera|Cholera$"
     },
     {
       "name": "result",

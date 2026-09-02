@@ -10,10 +10,6 @@
       "valueString": "Cholera [Vibrio cholerae O1, biovar cholerae]"
     },
     {
-      "name": "message",
-      "valueString": "$external:1:1A00&XN8P1 found$"
-    },
-    {
       "name": "result",
       "valueBoolean": true
     },

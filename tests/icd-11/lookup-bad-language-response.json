@@ -2,16 +2,24 @@
   "resourceType": "OperationOutcome",
   "issue": [
     {
+      "extension": [
+        {
+          "$optional$": "!tx.fhir.org",
+          "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString": "INVALID_DISPLAY_NAME"
+        }
+      ],
       "severity": "error",
-      "code": "invalid",
+      "code": "processing",
       "details": {
-        "text": "$external:1:language zz$",
         "coding": [
           {
             "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code": "invalid-data"
+            "code": "invalid-display"
           }
-        ]
+        ],
+        "fhir_comments": "same shape as display/validation-wrong-de-en-bad - an unusable displayLanguage is reported the same way whatever code system is being looked up",
+        "text": "$external:1:zz$"
       }
     }
   ]
