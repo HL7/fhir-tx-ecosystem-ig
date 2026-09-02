@@ -1,7 +1,6 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
     "fhir_comments" : "registered=true is enumerable but there are a couple of thousand of them, so without a count this is too costly. The header on the test makes servers with a higher internal limit take the same path - see big/expand-no-limit",
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
@@ -11,8 +10,11 @@
     "severity" : "error",
     "code" : "too-costly",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "too-costly"
+      }],
       "text" : "$external:1$"
-    },
-    "diagnostics" : "$external:2$"
+    }
   }]
 }

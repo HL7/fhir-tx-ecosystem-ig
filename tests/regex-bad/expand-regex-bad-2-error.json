@@ -4,6 +4,10 @@
     "severity" : "error",
     "code" : "unknown",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-data"
+      }],
       "text" : "The regex filter '((a+)+)+' took too long to evaluate against code 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!'"
     }
   }]

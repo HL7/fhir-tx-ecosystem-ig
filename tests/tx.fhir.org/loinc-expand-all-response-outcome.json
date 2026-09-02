@@ -9,6 +9,10 @@
     "severity" : "error",
     "code" : "too-costly",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "too-costly"
+      }],
       "text" : "The value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0' expansion has too many codes to produce (>1000)"
     }
   }]

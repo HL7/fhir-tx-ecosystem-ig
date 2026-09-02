@@ -58,7 +58,20 @@ a copy of the test cases are also maintained in /R4 in R4 format  for perusal of
 To use these tests, load the dependencies, execute the operations with the provided 
 parameters, and conpare the outcomes. Some notes about comparisons:
 
-* for the purposes of comparison *for these tests*, array order never matters (nor does property order, of course)
+* array order does not matter *in the sense that* the response is normalised before it is
+  compared: TxTesterSorters sorts Parameters.parameter by name (and repeated `property`
+  parameters by their code part, then their value part), expansion.contains by code
+  recursively, OperationOutcome.issue by severity/code/expression/details.text, and
+  designations by language. Property order never matters either.
+  The catch: only the *actual* response is sorted. The expected file is compared as it is
+  stored, so it has to be written in the order the sorters produce - otherwise a test that
+  is right in every other way fails on order alone, and the message you get points at
+  whichever element happens to be first
+* `OperationOutcome.issue.diagnostics` is stripped from the actual response before it is
+  compared, so a test can never assert it, and a server is free to put whatever internal
+  detail it finds useful there. Everything a client is entitled to see about an issue goes
+  in `details.text`, with the machine readable classification in a `tx-issue-type` coding in
+  `details.coding` - every issue is expected to carry both
 * Some fields are never the same between iterations. These fields contain $<{type}$ or similar and get compared to the regex for the type instead 
 * There is additional $control$ words to allow for additional sophistication in the tests
 

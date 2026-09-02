@@ -1,7 +1,6 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
@@ -15,7 +14,6 @@
         "code" : "not-found"
       }],
       "text" : "$external:1:3.0.0$"
-    },
-    "diagnostics" : "$external:2$"
+    }
   }]
 }

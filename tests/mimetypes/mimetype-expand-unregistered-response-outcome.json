@@ -1,7 +1,6 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
     "fhir_comments" : "registered=false is everything IANA has not registered, which is unbounded - unlike registered=true, this one cannot be walked",
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
@@ -11,6 +10,10 @@
     "severity" : "error",
     "code" : "not-supported",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-supported"
+      }],
       "text" : "The code system 'urn:ietf:bcp:13' cannot be expanded because its codes cannot be iterated or enumerated in any meaningful sense"
     }
   }]

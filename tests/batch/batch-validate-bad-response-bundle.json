@@ -65,6 +65,10 @@
             "severity" : "error",
             "code" : "$choice:invalid|not-found$",
             "details" : {
+              "coding" : [{
+                "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                "code" : "$choice:invalid-data|not-found$"
+              }],
               "text" : "Unable to find code to validate (looked for coding | codeableConcept | code+system | code+inferSystem in parameters"
             }
           }]

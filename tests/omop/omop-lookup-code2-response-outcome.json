@@ -4,6 +4,10 @@
     "severity" : "error",
     "code" : "not-found",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
       "text" : "Unable to find code '500000801' in https://fhir-terminology.ohdsi.org version 20240716"
     }
   }]

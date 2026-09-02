@@ -1,7 +1,7 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["expression", "diagnostics"],
+    "$optional-properties$" : ["expression"],
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
       "fhir_comments" : "servers disagree on which message id a SNOMED unknown code uses - see the SCT variant discussion",

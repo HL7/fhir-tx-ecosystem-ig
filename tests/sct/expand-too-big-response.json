@@ -9,6 +9,10 @@
     "severity" : "error",
     "code" : "too-costly",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "too-costly"
+      }],
       "text" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures' expansion has too many codes to produce (>1000)"
     }
   }]

@@ -1,7 +1,6 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
     "fhir_comments" : "a base covers every parameterisation of the type, so it cannot be enumerated - contrast mimetype-expand-registered-narrow, where base only narrows a filter that can be",
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
@@ -11,6 +10,10 @@
     "severity" : "error",
     "code" : "not-supported",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-supported"
+      }],
       "text" : "The code system 'urn:ietf:bcp:13' cannot be expanded because its codes cannot be iterated or enumerated in any meaningful sense"
     }
   }]

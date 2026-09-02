@@ -9,6 +9,10 @@
     "severity" : "error",
     "code" : "not-supported",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-supported"
+      }],
       "text" : "The code system 'http://varnomen.hgvs.org' cannot be expanded because its codes cannot be iterated or enumerated in any meaningful sense"
     }
   }]

@@ -1,7 +1,6 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
@@ -11,6 +10,10 @@
     "code" : "not-supported",
     "fhir_comments" : "media types have no bounded set of codes, so including the whole code system cannot be expanded - same answer as hgvs-expand-all",
     "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-supported"
+      }],
       "text" : "The code system 'urn:ietf:bcp:13' cannot be expanded because its codes cannot be iterated or enumerated in any meaningful sense"
     }
   }]

@@ -1,7 +1,7 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["expression", "diagnostics"],
+    "$optional-properties$" : ["expression"],
     "fhir_comments" : "two values of an unknown parameter may be mutually exclusive or one may include the other - nothing about 'foo' says which, so neither not-subsumed nor subsumes can be asserted",
     "severity" : "error",
     "code" : "not-supported",

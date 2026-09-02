@@ -1,7 +1,6 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
-    "$optional-properties$" : ["diagnostics"],
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
@@ -15,7 +14,6 @@
         "code" : "vs-invalid"
       }],
       "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/big-circle-1$"
-    },
-    "diagnostics" : "Cyclic reference detected when excluding http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0 via [http://hl7.org/fhir/test/ValueSet/big-circle-2|5.0.0, http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0]"
+    }
   }]
 }
