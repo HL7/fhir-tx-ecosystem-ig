@@ -12,20 +12,55 @@ Note that the test cases will be migrated to use TestPlan+matchetypes at some st
 
 #### Running the tests 
 
-The tests can be run by any runner that processes the tests correctly, but the  easiest way to 
+The tests can be run by any runner that processes the tests correctly, but the easiest way to 
 execute the tests is to use the [standard Java FHIR Validator](https://github.com/hapifhir/org.hl7.fhir.core/releases).
-Run with the parameters:
+You do not download the tests yourself - the runner fetches the published test package for you:
 
 ````
-txTests -tx {server} -version? {version} -externals {file} -output {folder} -mode? {flat}?
+java -jar validator_cli.jar txTests -tx {server} [-test-version {version}] [-output {folder}] 
+    [-externals {file}] [-mode {mode},{mode}] [-suite {suite}] [-filter {text}] [-input {folder}]
 ````
 
-Notes:
-* server is the URL of the server to test for conformance 
-* the version defaults to 'current' - the version of the tests in the ci-build of the this IG
-* externals is a file that allows the server to use it's own messages - they don't have to match the tx.fhir.org messages. Just copy the file `tests/messages-tx.fhir.org.json` for the format.
-* the output folder will default to your temporary directory. It produces output for the failed tests that you can compare with the /tests directory in the package for this IG with a comparison software of your choice (winmerge, beyondCompare, etc)
-* modes - see below. you can pass in multiple modes if necessary, separated by commas 
+The parameters are:
+
+* `-tx`: the URL of the server to test for conformance. This is the only required parameter
+* `-test-version`: which published version of *these test cases* to run - see 
+  [Versions of the test cases](#versions-of-the-test-cases) below. It defaults to `current`
+* `-output`: the folder to write the results to; defaults to your temporary directory. It contains 
+  `test-results.json`, and the actual response for each failed test, which you can compare against 
+  the expected response in the `/tests` directory of this IG's package with a comparison tool of 
+  your choice (winmerge, beyondCompare, etc)
+* `-externals`: a file that allows the server to use its own messages - they don't have to match 
+  the tx.fhir.org messages. Copy `tests/messages-tx.fhir.org.json` for the format
+* `-mode`: see [Modes](#modes) below. Several modes can be passed, separated by commas, or by 
+  repeating the parameter
+* `-suite`: run only the named suite, rather than all of them
+* `-filter`: run only the tests whose name contains this text
+* `-input`: an additional folder of test cases to run as well as the published ones
+
+Note that the FHIR version to test is *not* a parameter: the runner asks the server which version 
+of FHIR it speaks, and runs the R4 or the R5 form of each test accordingly. 
+See [R4 and the Test Cases](r4.html).
+
+#### Versions of the test cases
+
+The test cases change: tests are added, and corrected, as servers and the specification develop. 
+So this IG is released periodically, and each release is a fixed set of test cases that you can 
+test against repeatedly and compare results over time. The releases are listed on the 
+[history page](history.html), and you choose one with `-test-version`:
+
+````
+java -jar validator_cli.jar txTests -tx http://localhost:8080/fhir -test-version 1.9.3 -output ./results
+````
+
+`-test-version` names a version of **this IG** - a version like `1.9.3`. It is not a FHIR version, 
+and passing a FHIR version (`-test-version 4.0.1`) will fail, because there is no such release of 
+the test cases.
+
+If you do not pass `-test-version`, the runner uses `current`: the tests as they stand in the 
+ci-build of the master branch, which changes whenever master changes. That is the right choice 
+when you are working with the FHIR product director on new tests, and the wrong one when you need 
+a stable measure of your server's conformance.
 
 #### Test Suites and Test Cases 
 
@@ -60,7 +95,7 @@ A test may have:
 * `Accept-Language`: the language to ask for
 * `header`: an additional HTTP header to send ( `name`, `value`, and optionally `mode`)
 
-#### Versions 
+#### FHIR Versions 
 
 The test cases are written in R5, and most of them are the same for an R4 server, but 
 some questions have different answers in different versions of FHIR. Where a test only 
