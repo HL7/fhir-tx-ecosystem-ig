@@ -1153,6 +1153,13 @@
         "response" :  "validation/simple-coding-bad-system-response-parameters.json"
       },
       {
+        "name" : "validation-simple-codeableconcept-unknown-system",
+        "description" : "A CodeableConcept with a coding from an unknown code system alongside a coding that is in the value set. The unknown system cannot be checked, but membership is satisfied by the other coding, so the result is true with a warning",
+        "operation" : "validate-code",
+        "request" : "validation/simple-codeableconcept-unknown-system-request-parameters.json",
+        "response" : "validation/simple-codeableconcept-unknown-system-response-parameters.json"
+      },
+      {
         "name" : "validation-simple-coding-bad-system2",
         "description" : "to be provided",
         "operation" : "validate-code",
