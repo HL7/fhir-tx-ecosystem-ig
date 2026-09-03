@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "VSCP-all-properties-enums",
+  "url" : "http://hl7.org/fhir/test/ValueSet/VSCP-all-properties-enums",
+  "version" : "1.0.0",
+  "name" : "VSCPValueSetAllPropertiesEnums",
+  "title" : "VSCP ValueSet All Properties Enums",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/properties"
+    }],
+    "exclude" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/properties",
+      "concept" : [
+         {
+          "code" : "codeProp1-value"
+         },
+         {
+          "code" : "codeProp2-value"
+         }
+      ]
+    }],
+    "property" : [
+      "codeProp1",
+      "codeProp2",
+      "codingProp1",
+      "codingProp2",
+      "stringProp1",
+      "stringProp2",
+      "integerProp1",
+      "integerProp2",
+      "booleanProp1",
+      "booleanProp2",
+      "dateTimeProp1",
+      "dateTimeProp2",
+      "decimalProp1",
+      "decimalProp2"
+    ]
+  }
+}

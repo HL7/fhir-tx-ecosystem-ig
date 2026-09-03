@@ -1,0 +1,234 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "properties",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/properties",
+  "version" : "0.1.0",
+  "name" : "PropertiesTestCodeSystem",
+  "title" : "Properties Test Code System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03",
+  "publisher" : "FHIR Project",
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "property" : [
+  {
+    "code" : "codeProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#codeProp1",
+    "description" : "A property of type 'code' with a URI",
+    "type" : "code"
+  },
+  {
+    "code" : "codeProp2",
+    "description" : "A property of type 'code' without a URI",
+    "type" : "code"
+  },{
+    "code" : "codingProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#codingProp1",
+    "description" : "A property of type 'Coding' with a URI",
+    "type" : "Coding"
+  },
+  {
+    "code" : "codingProp2",
+    "description" : "A property of type 'Coding' without a URI",
+    "type" : "Coding"
+  },{
+    "code" : "stringProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#stringProp1",
+    "description" : "A property of type 'string' with a URI",
+    "type" : "string"
+  },
+  {
+    "code" : "stringProp2",
+    "description" : "A property of type 'string' without a URI",
+    "type" : "string"
+  },{
+    "code" : "integerProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#integerProp1",
+    "description" : "A property of type 'integer' with a URI",
+    "type" : "integer"
+  },
+  {
+    "code" : "integerProp2",
+    "description" : "A property of type 'integer' without a URI",
+    "type" : "integer"
+  },{
+    "code" : "booleanProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#booleanProp1",
+    "description" : "A property of type 'boolean' with a URI",
+    "type" : "boolean"
+  },
+  {
+    "code" : "booleanProp2",
+    "description" : "A property of type 'boolean' without a URI",
+    "type" : "boolean"
+  },{
+    "code" : "dateTimeProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#dateTimeProp1",
+    "description" : "A property of type 'dateTime' with a URI",
+    "type" : "dateTime"
+  },
+  {
+    "code" : "dateTimeProp2",
+    "description" : "A property of type 'dateTime' without a URI",
+    "type" : "dateTime"
+  },{
+    "code" : "decimalProp1",
+    "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#decimalProp1",
+    "description" : "A property of type 'decimal' with a URI",
+    "type" : "decimal"
+  },
+  {
+    "code" : "decimalProp2",
+    "description" : "A property of type 'decimal' without a URI",
+    "type" : "decimal"
+  }],
+  "concept" : [{
+    "code" : "codeProp1-value",
+    "display" : "codeProp1-value display",
+    "definition" : "A property value concept"
+  },
+  {
+    "code" : "codeProp2-value",
+    "display" : "codeProp2-value display",
+    "definition" : "A property value concept"
+  },
+  {
+    "code" : "code1-1",
+    "display" : "Display 1-1",
+    "definition" : "A concept with a property of type 'code' with a URI",
+    "property" : [{
+      "code" : "codeProp1",
+      "valueCode" : "codeProp1-value"
+    }]
+  },
+  {
+    "code" : "code1-2",
+    "display" : "Display 1-2",
+    "definition" : "A concept with a property of type 'code' without a URI",
+    "property" : [{
+      "code" : "codeProp2",
+      "valueCode" : "codeProp2-value"
+    }]
+  },
+  {
+    "code" : "code2-1",
+    "display" : "Display 2-1",
+    "definition" : "A concept with a property of type 'Coding' with a URI",
+    "property" : [{
+      "code" : "codingProp1",
+      "valueCoding" : {
+         "system" : "http://example.com/fhir/CodesSystem/codingProp1-system-value",
+         "version" : "codingProp1-version-value",
+         "code" : "codingProp1-code-value",
+         "display" : "codingProp1-display-value"
+      }
+    }]
+  },
+  {
+    "code" : "code2-2",
+    "display" : "Display 2-2",
+    "definition" : "A concept with a property of type 'Coding' without a URI",
+    "property" : [{
+      "code" : "codingProp2",
+      "valueCoding" : {
+         "system" : "http://example.com/fhir/CodesSystem/codingProp2-system-value",
+         "version" : "codingProp2-version-value",
+         "code" : "codingProp2-code-value",
+         "display" : "codingProp2-display-value"
+      }
+    }]
+  },
+  {
+    "code" : "code3-1",
+    "display" : "Display 3-1",
+    "definition" : "A concept with a property of type 'string' with a URI",
+    "property" : [{
+      "code" : "stringProp1",
+      "valueString" : "stringProp1-value"
+    }]
+  },
+  {
+    "code" : "code3-2",
+    "display" : "Display 3-2",
+    "definition" : "A concept with a property of type 'string' without a URI",
+    "property" : [{
+      "code" : "stringProp2",
+      "valueString" : "stringProp2-value"
+    }]
+  
+  },
+  {
+    "code" : "code4-1",
+    "display" : "Display 4-1",
+    "definition" : "A concept with a property of type 'integer' with a URI",
+    "property" : [{
+      "code" : "integerProp1",
+      "valueInteger" : 41
+    }]
+  },
+  {
+    "code" : "code4-2",
+    "display" : "Display 4-2",
+    "definition" : "A concept with a property of type 'integer' without a URI",
+    "property" : [{
+      "code" : "integerProp2",
+      "valueInteger" : 42
+    }]
+  },
+  {
+    "code" : "code5-1",
+    "display" : "Display 5-1",
+    "definition" : "A concept with a property of type 'boolean' with a URI",
+    "property" : [{
+      "code" : "booleanProp1",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "code5-2",
+    "display" : "Display 5-2",
+    "definition" : "A concept with a property of type 'boolean' without a URI",
+    "property" : [{
+      "code" : "booleanProp2",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "code" : "code6-1",
+    "display" : "Display 6-1",
+    "definition" : "A concept with a property of type 'dateTime' with a URI",
+    "property" : [{
+      "code" : "dateTimeProp1",
+      "valueDateTime" : "2026-08-25"
+    }]
+  },
+  {
+    "code" : "code6-2",
+    "display" : "Display 6-2",
+    "definition" : "A concept with a property of type 'dateTime' without a URI",
+    "property" : [{
+      "code" : "dateTimeProp2",
+      "valueDateTime" : "1999"
+    }]
+  },
+  {
+    "code" : "code7-1",
+    "display" : "Display 7-1",
+    "definition" : "A concept with a property of type 'decimal' with a URI",
+    "property" : [{
+      "code" : "decimalProp1",
+      "valueDecimal" : 7.1
+    }]
+  },
+  {
+    "code" : "code7-2",
+    "display" : "Display 7-2",
+    "definition" : "A concept with a property of type 'decimal' without a URI",
+    "property" : [{
+      "code" : "decimalProp2",
+      "valueDecimal" : 7.2
+    }]
+  }]
+}

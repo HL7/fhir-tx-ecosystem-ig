@@ -1,0 +1,245 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType": "ValueSet",
+    "url": "http://hl7.org/fhir/test/ValueSet/VSCP-all-properties-enums",
+    "version": "1.0.0",
+    "name" : "VSCPValueSetAllPropertiesEnums",
+    "title" : "VSCP ValueSet All Properties Enums",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-09-03",
+    "expansion": {
+        "identifier" : "$uuid$",
+        "timestamp" : "$instant$",
+        "total": 14,
+        "parameter": [
+            {
+                "name": "used-codesystem",
+                "valueUri": "http://hl7.org/fhir/test/CodeSystem/properties|0.1.0"
+            },
+            {
+                "$optional$": true,
+                "name" : "version",
+                "valueUri" : "http://hl7.org/fhir/test/CodeSystem/properties|0.1.0"
+            }
+        ],
+        "property" : [
+            {
+                "code" : "booleanProp2"
+            },
+            {
+                "code" : "codeProp2"
+            },
+            {
+                "code" : "codingProp2"
+            },
+            {
+                "code" : "dateTimeProp2"
+            },
+            {
+                "code" : "decimalProp2"
+            },
+            {
+                "code" : "integerProp2"
+            },
+            {
+                "code" : "stringProp2"
+            },
+            {
+                "code" : "booleanProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#booleanProp1"
+            },
+            {
+                "code" : "codeProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#codeProp1"
+            },
+            {
+                "code" : "codingProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#codingProp1"
+            },
+            {
+                "code" : "dateTimeProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#dateTimeProp1"
+            },
+            {
+                "code" : "decimalProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#decimalProp1"
+            },
+            {
+                "code" : "integerProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#integerProp1"
+            },
+            {
+                "code" : "stringProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#stringProp1"
+            }
+        ],
+        "contains": [
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code1-1",
+                "display": "Display 1-1",
+                "property": [
+                    {
+                        "code": "codeProp1",
+                        "valueCode": "codeProp1-value"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code1-2",
+                "display": "Display 1-2",
+                "property": [
+                    {
+                        "code": "codeProp2",
+                        "valueCode": "codeProp2-value"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code2-1",
+                "display": "Display 2-1",
+                "property": [
+                    {
+                        "code": "codingProp1",
+                        "valueCoding": {
+                            "$optional-properties$" : ["display", "version"],
+                            "system": "http://example.com/fhir/CodesSystem/codingProp1-system-value",
+                            "code": "codingProp1-code-value",
+                            "display": "codingProp1-display-value"
+                        }
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code2-2",
+                "display": "Display 2-2",
+                "property": [
+                    {
+                        "code": "codingProp2",
+                        "valueCoding": {
+                            "$optional-properties$" : ["display", "version"],
+                            "system": "http://example.com/fhir/CodesSystem/codingProp2-system-value",
+                            "code": "codingProp2-code-value",
+                            "$optional$": "display",
+                            "display": "codingProp2-display-value"
+                        }
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code3-1",
+                "display": "Display 3-1",
+                "property": [
+                    {
+                        "code": "stringProp1",
+                        "valueString": "stringProp1-value"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code3-2",
+                "display": "Display 3-2",
+                "property": [
+                    {
+                        "code": "stringProp2",
+                        "valueString": "stringProp2-value"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code4-1",
+                "display": "Display 4-1",
+                "property": [
+                    {
+                        "code": "integerProp1",
+                        "valueInteger": 41
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code4-2",
+                "display": "Display 4-2",
+                "property": [
+                    {
+                        "code": "integerProp2",
+                        "valueInteger": 42
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code5-1",
+                "display": "Display 5-1",
+                "property": [
+                    {
+                        "code": "booleanProp1",
+                        "valueBoolean": true
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code5-2",
+                "display": "Display 5-2",
+                "property": [
+                    {
+                        "code": "booleanProp2",
+                        "valueBoolean": false
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code6-1",
+                "display": "Display 6-1",
+                "property": [
+                    {
+                        "code": "dateTimeProp1",
+                        "valueDateTime": "2026-08-25"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code6-2",
+                "display": "Display 6-2",
+                "property": [
+                    {
+                        "code": "dateTimeProp2",
+                        "valueDateTime": "1999"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code7-1",
+                "display": "Display 7-1",
+                "property": [
+                    {
+                        "code": "decimalProp1",
+                        "valueDecimal": 7.1
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/test/CodeSystem/properties",
+                "code": "code7-2",
+                "display": "Display 7-2",
+                "property": [
+                    {
+                        "code": "decimalProp2",
+                        "valueDecimal": 7.2
+                    }
+                ]
+            }
+        ]
+    }
+}
