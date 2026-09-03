@@ -11,43 +11,69 @@
     "expansion": {
         "identifier" : "$uuid$",
         "timestamp" : "$instant$",
+        "total": 14,
         "parameter": [
             {
                 "name": "used-codesystem",
                 "valueUri": "http://hl7.org/fhir/test/CodeSystem/properties|0.1.0"
+            },
+            {
+                "$optional$": true,
+                "name" : "version",
+                "valueUri" : "http://hl7.org/fhir/test/CodeSystem/properties|0.1.0"
             }
         ],
-        "property": [
+        "property" : [
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#codeProp1",
-                "code": "codeProp1"
+                "code" : "booleanProp2"
             },
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#codingProp1",
-                "code": "codingProp1"
+                "code" : "codeProp2"
             },
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#stringProp1",
-                "code": "stringProp1"
+                "code" : "codingProp2"
             },
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#integerProp1",
-                "code": "integerProp1"
+                "code" : "dateTimeProp2"
             },
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#booleanProp1",
-                "code": "booleanProp1"
+                "code" : "decimalProp2"
             },
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#dateTimeProp1",
-                "code": "dateTimeProp1"
+                "code" : "integerProp2"
             },
             {
-                "uri": "http://example.com/fhir/CodeSystem/VSCP#decimalProp1",
-                "code": "decimalProp1"
+                "code" : "stringProp2"
+            },
+            {
+                "code" : "booleanProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#booleanProp1"
+            },
+            {
+                "code" : "codeProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#codeProp1"
+            },
+            {
+                "code" : "codingProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#codingProp1"
+            },
+            {
+                "code" : "dateTimeProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#dateTimeProp1"
+            },
+            {
+                "code" : "decimalProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#decimalProp1"
+            },
+            {
+                "code" : "integerProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#integerProp1"
+            },
+            {
+                "code" : "stringProp1",
+                "uri" : "http://example.com/fhir/CodeSystem/PropertiesCodeSystem#stringProp1"
             }
         ],
-        "total": 14,
         "contains": [
             {
                 "system": "http://hl7.org/fhir/test/CodeSystem/properties",
@@ -79,8 +105,8 @@
                     {
                         "code": "codingProp1",
                         "valueCoding": {
+                            "$optional-properties$" : ["display", "version"],
                             "system": "http://example.com/fhir/CodesSystem/codingProp1-system-value",
-                            "version": "codingProp1-version-value",
                             "code": "codingProp1-code-value",
                             "display": "codingProp1-display-value"
                         }
@@ -95,9 +121,10 @@
                     {
                         "code": "codingProp2",
                         "valueCoding": {
+                            "$optional-properties$" : ["display", "version"],
                             "system": "http://example.com/fhir/CodesSystem/codingProp2-system-value",
-                            "version": "codingProp2-version-value",
                             "code": "codingProp2-code-value",
+                            "$optional$": "display",
                             "display": "codingProp2-display-value"
                         }
                     }
