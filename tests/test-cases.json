@@ -20,6 +20,27 @@
       }
     ]
   },{
+    "name" : "properties",
+    "mode" : "general",
+    "description" : "Testing the ValueSet.compose.property element",
+    "setup" : ["properties/codesystem-properties.json", "properties/valueset-properties-VSCP-all-properties-wildcard.json", "properties/valueset-properties-VSCP-all-properties-enums.json"],
+    "tests" :[
+      {
+        "name" : "expand-with-valueset.compose.property-all-properties-wildcard",
+        "description" : "Expand a value set defined to request all properties using ValueSet.compose.property with a wildcard character",
+        "operation" : "expand",
+        "request" : "properties/expand-with-VSCP-all-properties-wildcard-request.json",
+        "response" : "properties/expand-with-VSCP-all-properties-wildcard-response.json"
+      },
+      {
+        "name" : "expand-with-valueset.compose.property-all-properties-enums",
+        "description" : "Expand a value set defined to request all properties using ValueSet.compose.property with enumerated properties",
+        "operation" : "expand",
+        "request" : "properties/expand-with-VSCP-all-properties-enums-request.json",
+        "response" : "properties/expand-with-VSCP-all-properties-enums-response.json"
+      }
+    ]
+  },{
     "name" : "simple-cases",
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
