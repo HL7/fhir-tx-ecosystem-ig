@@ -42,6 +42,102 @@ Note that the FHIR version to test is *not* a parameter: the runner asks the ser
 of FHIR it speaks, and runs the R4 or the R5 form of each test accordingly. 
 See [R4 and the Test Cases](r4.html).
 
+#### Test Output
+
+The runner writes a running commentary to the console. It starts with a header that records
+what is actually being run - the source of the tests and their version, the output directory,
+the server URL, whether an externals file is in use, and the modes - and it is worth reading,
+because most surprising results turn out to be a test version or a mode that isn't what you
+thought it was. Then, for each suite, a `Group {name}` line followed by one line per test:
+
+````
+Group expansions
+   -- expand-simple: Pass (0.21sec)
+   -- expand-filter-regex: Fail (0.19sec)
+    Excluded code not found: http://hl7.org/fhir/test#code2
+````
+
+A failing test is followed by an error line with the reason - the first difference the runner
+found between the expected response and the actual one, or, if the test threw rather than
+compared, the exception and its stack trace. At the end, a summary line:
+
+````
+[name] passed all 1631 HL7 terminology service tests (modes general+snomed+icd-11, tests v1.9.4, runner v6.10.4)
+````
+
+or, if there were failures, `failed {n} of {m} ...` followed by a `Failed Tests:` line listing
+them as `{suite}/{test}`, comma separated. The summary names the modes, the version of the test
+cases, and the version of the runner, because a result means nothing without all three.
+
+Note that the name is taken from the CapabilityStatement
+
+The output directory (`-output`, defaulting to your temporary directory) contains:
+
+* `test.log`: everything that went to the console, in the output folder where the rest of the
+  results are, so that a run is still readable after you have closed the terminal
+  (validator 6.10.5 and later)
+* `test-results.json`: the date of the run, and every suite and test with its status and, for
+  failures, the message
+* `report.json`: the same run as a FHIR `TestReport`, with a score and an overall pass/fail
+* `expected/` and `actual/`: for each **failing** test, the expected response and the response
+  the server actually gave, written as a pair of files with the same name so that they can be
+  compared with a comparison tool of your choice (winmerge, beyondCompare, etc). Both sides are
+  scrubbed and sorted the same way before they are written, so the diff shows the difference
+  the runner objected to and not incidental ones. Passing tests write nothing - if a test
+  passes, there is nothing to look at
+* `actual/$versions.json`: the server's response to `$versions`, recorded on connection,
+  whether or not anything failed
+* `conversions/`: only when testing an R4 server. For each operation, the R5 resource and the R4
+  resource that was actually sent or received, as `conversions/{r4|r5}/{suite}/{test}.{mode}.json`,
+  so that a failure caused by the version conversion can be told apart from one caused by the
+  server. See [R4 and the Test Cases](r4.html)
+
+Note that the same test writes to the same file names every time it fails. If you run the tests
+several ways - R4 and R5, with and without server caching - each run overwrites the last one's
+diffs, and a test that fails in only one of them can leave no evidence behind. Use a different
+output directory for each variant, or, in server mode, the `label` parameter described below.
+
+#### Running the tests in a pipeline 
+
+The simplest way to run the tests in a build is the command line above: it exits with 0 if every
+test passed and 1 if any test failed, so a CI step needs no output parsing. Always pass
+`-test-version` in a pipeline. The default is `current`, which is the ci-build of this IG and
+changes whenever its master branch changes - a build that uses it can go red because the tests
+moved, not because your server did. Pin a released version, and change it deliberately. Pass
+`-output` as well, and keep the directory as a build artefact: when the step fails, the `expected/`
+and `actual/` pair for each failing test is the only thing that tells you what went wrong, and it
+is gone with the build container otherwise.
+
+The drawback of the command line is that the whole run is a single result. If you want your own
+test framework to report one result per test - to see which tests are newly failing, to track them
+over time, or just to get a useful failure message next to the test that produced it - use the
+validator's server mode instead. Start the validator once as an HTTP server, and ask it to run
+one test at a time:
+
+````
+java -jar validator_cli.jar server {port} -version 5.0
+
+GET http://localhost:{port}/txTest?server={url}&suite={suite}&test={test}&modes={modes}&folder={folder}&label={label}
+````
+
+Each call runs one test and returns an `OperationOutcome`. If it has no issue with a severity of
+`error`, the test passed; otherwise `details.text` is the failure message - the same message the
+command line would have logged. The test cases and the server's setup resources are loaded once,
+on the first call for a given server, and reused, so the cost of starting a JVM and loading the
+test package is paid once, not once per test. Drive it from whatever test framework you already
+use: enumerate the suites and tests from `test-cases.json` in this IG's package, and make one call
+per test.
+
+Two of the parameters matter more in server mode than they look. `modes` replaces the runner's
+mode set for that call: pass every mode your server supports, exactly as you would on the command
+line, because a test gated on a mode you did not ask for does not run, and a test that did not run
+is reported as neither a pass nor a failure but as an explanation of which mode would have run it.
+Sending no `modes` at all gets a default set that may not match your server. `folder` and `label`
+(validator 6.10.5 and later) control where the output goes: `folder` names the run's folder inside
+the validator's temporary directory - a simple name, not a path, defaulting to the server's host
+name - and `label` names a subfolder of it for that one test. Give each variant of a run its own
+`label` (`r4`, `r5`, `r5-cached`) and the diffs for a test that fails in only one of them survive.
+
 #### Versions of the test cases
 
 The test cases change: tests are added, and corrected, as servers and the specification develop. 
