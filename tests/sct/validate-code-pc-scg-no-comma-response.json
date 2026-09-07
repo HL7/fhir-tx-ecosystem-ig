@@ -1,0 +1,53 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "373873005:1142139005=#2{1142135004=#500}"
+  },
+  {
+    "name" : "display",
+    "valueString" : "373873005|Pharmaceutical / biologic product|:1142139005|Count of base of active ingredient|=#2,{1142135004|Has presentation strength numerator value|=#500}"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "$optional-properties$" : [
+        "location"
+      ],
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "CODE_NOT_IN_NORMAL_FORM"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "The code '373873005:1142139005=#2{1142135004=#500}' is valid, but it is not the normal form for the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909'; the normal form is '373873005:1142139005=#2,{1142135004=#500}'"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "normalized-code",
+    "valueCode" : "373873005:1142139005=#2,{1142135004=#500}"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

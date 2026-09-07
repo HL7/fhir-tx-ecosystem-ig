@@ -5318,6 +5318,20 @@
         "response" : "sct/validate-code-pc-concrete-good-response.json"
       },
       {
+        "name" : "validate-code-pc-scg-no-comma",
+        "description" : "The comma before an attribute group is optional in the compositional grammar, so an attribute set followed directly by a group has to be accepted - it normalises to the form with the comma",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-scg-no-comma-request.json",
+        "response" : "sct/validate-code-pc-scg-no-comma-response.json"
+      },
+      {
+        "name" : "validate-code-pc-scg-comma",
+        "description" : "The same expression written with the optional comma is already the normal form, so it validates with no issues",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-scg-comma-request.json",
+        "response" : "sct/validate-code-pc-scg-comma-response.json"
+      },
+      {
         "name" : "validate-code-pc-mrcm-concrete-range",
         "description" : "The concept model does not allow a concrete value outside the attribute's range - the value must be greater than zero",
         "operation" : "cs-validate-code",

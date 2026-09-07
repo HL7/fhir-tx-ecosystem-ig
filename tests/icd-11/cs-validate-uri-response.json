@@ -22,7 +22,7 @@
               {
                 "$optional$": "!tx.fhir.org",
                 "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-                "valueString": "CODE_CASE_DIFFERENCE"
+                "valueString": "CODE_NOT_IN_NORMAL_FORM"
               }
             ],
             "severity": "information",
