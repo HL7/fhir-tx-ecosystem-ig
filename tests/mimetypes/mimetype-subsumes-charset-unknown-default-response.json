@@ -11,7 +11,7 @@
         "code" : "cannot-determine"
       }],
       "fhir_comments" : "wording varies by server; it must name both codes and identify charset as what it could not judge",
-      "text" : "$fragments:text/html|charset$"
+      "text" : "$fragments:text/csv|charset$"
     }
   }]
 }

@@ -5,9 +5,9 @@
     "valueUri" : "urn:ietf:bcp:13"
   },{
     "name" : "codeA",
-    "valueCode" : "text/html"
+    "valueCode" : "text/csv"
   },{
     "name" : "codeB",
-    "valueCode" : "text/html; charset=utf-8"
+    "valueCode" : "text/csv; charset=utf-8"
   }]
 }
