@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "RFC 6657 section 4 exists to say that the default charset for text/plain is unchanged from RFC 2046 and remains US-ASCII. So the bare form already carries charset=us-ascii and the two codes are the same media type - not one narrower than the other",
+    "name" : "outcome",
+    "valueCode" : "equivalent"
+  }]
+}

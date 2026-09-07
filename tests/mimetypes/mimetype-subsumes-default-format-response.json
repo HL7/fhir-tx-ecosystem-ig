@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "RFC 3676 section 4: if Format is not specified, or if the value is not recognized, a value of Fixed is assumed. Bare text/plain is therefore format=fixed, so format=flowed is a different media type rather than a narrower one",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

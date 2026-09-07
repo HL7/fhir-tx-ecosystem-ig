@@ -6815,6 +6815,35 @@
         "response" : "mimetypes/mimetype-subsumes-parameter-disjoint-response.json"
       },
       {
+        "name" : "mimetype-subsumes-default-explicit",
+        "description" : "a parameter written out at its default value: RFC 6657 section 4 keeps US-ASCII as the default charset for text/plain, so the bare form already carries it and the two codes are the same media type",
+        "operation" : "subsumes",
+        "request" : "mimetypes/mimetype-subsumes-default-explicit-request.json",
+        "response" : "mimetypes/mimetype-subsumes-default-explicit-response.json"
+      },
+      {
+        "name" : "mimetype-subsumes-default-contradicted",
+        "description" : "a parameter away from its default: because bare text/plain means charset=us-ascii, a different charset contradicts it rather than narrowing it. This is where the rule that a parameter narrows does not hold",
+        "operation" : "subsumes",
+        "request" : "mimetypes/mimetype-subsumes-default-contradicted-request.json",
+        "response" : "mimetypes/mimetype-subsumes-default-contradicted-response.json"
+      },
+      {
+        "name" : "mimetype-subsumes-default-format",
+        "description" : "the same for format, which RFC 3676 section 4 defaults to Fixed, so text/plain and text/plain; format=flowed are different media types",
+        "operation" : "subsumes",
+        "request" : "mimetypes/mimetype-subsumes-default-format-request.json",
+        "response" : "mimetypes/mimetype-subsumes-default-format-response.json"
+      },
+      {
+        "name" : "mimetype-subsumes-charset-unknown-default",
+        "description" : "RFC 6657 section 3 leaves a text/* registration that does not say how the charset is determined defaulting to US-ASCII, so for such a type a server cannot tell whether the absence of a charset means any charset or means US-ASCII, and the two give opposite answers",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "mimetypes/mimetype-subsumes-charset-unknown-default-request.json",
+        "response" : "mimetypes/mimetype-subsumes-charset-unknown-default-response.json"
+      },
+      {
         "name" : "mimetype-subsumes-case",
         "description" : "The same media type differing only in case and quoting",
         "operation" : "subsumes",

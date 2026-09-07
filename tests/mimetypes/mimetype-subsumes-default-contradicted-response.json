@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "the counterpart of mimetype-subsumes-default-explicit: because bare text/plain means charset=us-ascii, adding a different charset does not narrow it, it contradicts it. This is the case where the general rule that a parameter narrows does not hold",
+    "name" : "outcome",
+    "valueCode" : "not-subsumed"
+  }]
+}

@@ -1,7 +1,7 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "fhir_comments" : "'foo' is unknown, but both codes carry it with the same value, so it cannot affect the relationship - only charset differs, and that is understood. A server that declines the moment it sees an unfamiliar parameter fails here.",
+    "fhir_comments" : "an unknown parameter carried identically by both codes cannot affect the answer, so it must not stop the server deciding on the charset",
     "name" : "outcome",
     "valueCode" : "subsumes"
   }]

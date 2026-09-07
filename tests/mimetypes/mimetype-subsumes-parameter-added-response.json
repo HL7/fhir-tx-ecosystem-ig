@@ -1,7 +1,7 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "fhir_comments" : "B agrees on charset and adds a parameter, so it is narrower still",
+    "fhir_comments" : "a parameter set and a superset of it. text/vcard carries both kinds of parameter: charset defaults to UTF-8 and is therefore identical on both sides here (RFC 6350 section 3.1), while version has no default (RFC 6350 section 10.1) and so narrows",
     "name" : "outcome",
     "valueCode" : "subsumes"
   }]
