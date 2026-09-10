@@ -96,7 +96,7 @@ The first four tests simply echo the four code systems back with no language rul
 * **language-echo-en-multi-none**: Just return codes from an english based code system that also has other designations (which are also requested)
 * **language-echo-de-multi-none**: Just return codes from a german based code system that also has other designations (which are also requested)
 
-## Specify the language that already exists
+### Specify the language that already exists
 
 Each of the tests below comes as a set of variants, depending on how the language is specified:
 * -param: using the displayLanguage parameter

@@ -85,7 +85,7 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
   [tx-resource parameter](https://jira.hl7.org/browse/FHIR-33944). (e.g. this rule does not apply servers registered with the ecosystem)
 
 
-##### Code system Functionality
+#### Code system Functionality
 
 Servers are required to support code system supplements. Specifically, this means:
 
