@@ -44,6 +44,9 @@
           "name": "lookup",
           "definition": "$url$"
         },{
+          "name": "subsumes",
+          "definition": "$url$"
+        },{
           "name": "validate-code",
           "definition": "$url$"
         }]

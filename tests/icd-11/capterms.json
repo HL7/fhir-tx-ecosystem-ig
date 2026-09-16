@@ -15,17 +15,11 @@
   }],
   "expansion": {
     "parameter": [{
-      "name": "activeOnly"
-    },{
       "name": "count"
     },{
       "name": "displayLanguage"
     },{
-      "name": "excludeNested"
-    },{
       "name": "force-system-version"
-    },{
-      "name": "includeDefinition"
     },{
       "name": "includeDesignations"
     },{
@@ -36,6 +30,8 @@
       "name": "system-version"
     },{
       "name": "tx-resource"
+    },{
+      "name": "valueSetVersion"
     }]
   }
 }
