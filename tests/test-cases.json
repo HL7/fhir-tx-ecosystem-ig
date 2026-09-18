@@ -5290,6 +5290,27 @@
         "response" : "sct/validate-code-pc-mrcm-domain-response.json"
       },
       {
+        "name" : "validate-code-pc-mrcm-domain-finding",
+        "description" : "An attribute with more than one domain in the concept model is valid in any of them - due to on a clinical finding (due to is also valid on an event)",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-domain-finding-request.json",
+        "response" : "sct/validate-code-pc-mrcm-domain-finding-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-domain-event",
+        "description" : "An attribute with more than one domain in the concept model is valid in any of them - due to on an event (due to is also valid on a clinical finding)",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-domain-event-request.json",
+        "response" : "sct/validate-code-pc-mrcm-domain-event-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-domain-multi",
+        "description" : "The concept model does not allow an attribute outside all of its domains - due to on a procedure, when it is only valid on a clinical finding or an event",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-domain-multi-request.json",
+        "response" : "sct/validate-code-pc-mrcm-domain-multi-response.json"
+      },
+      {
         "name" : "validate-code-pc-mrcm-range",
         "description" : "The concept model does not allow a value outside the attribute's range - a body structure as the value of laterality",
         "operation" : "cs-validate-code",
@@ -7770,6 +7791,7 @@
   },{
     "name" : "icd-11",
     "mode" : "icd-11",
+    "todo" : "capabilities and termcaps issues. Check parameters. check definitions, Code system in language, add a test for axis being plain wrong. research sub-properties on /Users/grahame/igs/tx-ecosystem-ig/tests/icd-11/lookup-pc-simple-response.json",
     "description" : "ICD-11 Test Cases. See tests/icd-11/doco.txt for what these assert and why several of them are expected to fail against the current ICD-API.",
     "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-bad-code.json"],
     "tests" : [

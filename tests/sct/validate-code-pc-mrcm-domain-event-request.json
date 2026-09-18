@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueUri" : "http://snomed.info/sct"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "789750003:{42752001=197270009}"
+    }
+  ]
+}

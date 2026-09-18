@@ -1,0 +1,58 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "367430006:{42752001=789750003}"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Unknown_Code_in_Version"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "Unknown code '367430006:{42752001=789750003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (International Edition)"
+        },
+        "expression" : ["code"]
+      },
+      {
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 42752001 |Due to| on 367430006 |Repair of tendon of hand| (the attribute is only valid in the domain 404684003 |Clinical finding (finding)|, or in the domain 272379006 |Events|)"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Unknown code '367430006:{42752001=789750003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (International Edition)"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}
