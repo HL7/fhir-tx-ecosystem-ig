@@ -20,7 +20,12 @@
   {
     "code" : "code-2",
     "display" : "Display 2",
-    "definition" : "My second code"
+    "definition" : "My second code",
+    "concept" : [{
+      "code" : "code-2b",
+      "display" : "Display 2b",
+      "definition" : "My first code"
+    }]
   },
   {
     "code" : "code-3",
