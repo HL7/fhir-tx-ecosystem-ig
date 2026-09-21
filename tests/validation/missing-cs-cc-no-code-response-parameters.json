@@ -1,0 +1,44 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "codeableConcept",
+      "valueCodeableConcept" : {
+        "coding" : [{
+            "system" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          }]
+      }
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "true",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "$$"
+              }],
+            "severity" : "error",
+            "code" : "invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-data"
+                }],
+              "text" : "$external:1:no code$"
+            },
+            "expression" : [
+              "CodeableConcept.coding[0]"
+            ]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "$external:1:no code$"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    }]
+}

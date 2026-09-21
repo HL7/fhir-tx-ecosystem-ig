@@ -1,0 +1,9 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "coding",
+      "valueCoding" : {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/simple"
+      }
+    }]
+}

@@ -1455,6 +1455,138 @@
         "operation" : "validate-code",
         "request" : "validation/validate-contained-bad-request.json",
         "response" : "validation/validate-contained-bad-response.json"
+      },
+      {
+        "name" : "validation-missing-vs-code-no-system",
+        "description" : "A code parameter with no system and no inferSystem: the server cannot tell what code system the code is from, so the request is an error",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "validation/missing-vs-code-no-system-request-parameters.json",
+        "response" : "validation/missing-vs-code-no-system-response-outcome.json"
+      },
+      {
+        "name" : "validation-missing-vs-system-no-code",
+        "description" : "A system parameter but no code at all: there is nothing to validate, so the request is an error",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "validation/missing-vs-system-no-code-request-parameters.json",
+        "response" : "validation/missing-vs-system-no-code-response-outcome.json"
+      },
+      {
+        "name" : "validation-missing-vs-nothing",
+        "description" : "No code, coding or codeableConcept at all: there is nothing to validate, so the request is an error",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "validation/missing-vs-nothing-request-parameters.json",
+        "response" : "validation/missing-vs-nothing-response-outcome.json"
+      },
+      {
+        "name" : "validation-missing-vs-coding-no-code",
+        "description" : "A Coding with a system but no code. The parameter was provided, so this is a validation outcome (result = false), not a request error. Only one issue: the Coding cannot be validated. There is no code to report as not being in the value set",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-coding-no-code-request-parameters.json",
+        "response" : "validation/missing-vs-coding-no-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-coding-display-only",
+        "description" : "A Coding with neither system nor code - only a display. Both problems are reported, and both are errors: there is no code to validate, and no system to validate it against",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-coding-display-only-request-parameters.json",
+        "response" : "validation/missing-vs-coding-display-only-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-cc-no-system",
+        "description" : "A CodeableConcept whose only coding has no system: the coding cannot be validated (error - inferSystem was not asked for), it is not a valid coding for the value set (information), and the CodeableConcept as a whole fails",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-cc-no-system-request-parameters.json",
+        "response" : "validation/missing-vs-cc-no-system-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-cc-no-code",
+        "description" : "A CodeableConcept whose only coding has a system but no code: the coding cannot be validated, and the CodeableConcept as a whole fails",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-cc-no-code-request-parameters.json",
+        "response" : "validation/missing-vs-cc-no-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-cc-text-only",
+        "description" : "A CodeableConcept with text and no codings at all: nothing to validate against the value set, so the CodeableConcept fails with a single error",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-cc-text-only-request-parameters.json",
+        "response" : "validation/missing-vs-cc-text-only-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-cc-mixed",
+        "description" : "A CodeableConcept with a systemless coding alongside a valid one. The valid coding is found, and is reported in the code, system and display parameters, but the systemless coding is an error in its own right, so the CodeableConcept as a whole does not validate",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-cc-mixed-request-parameters.json",
+        "response" : "validation/missing-vs-cc-mixed-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-cs-code-no-url",
+        "description" : "A code parameter with no url: there is no code system to validate the code against, so the request is an error",
+        "operation" : "cs-validate-code",
+        "http-code" : "4xx",
+        "request" : "validation/missing-cs-code-no-url-request-parameters.json",
+        "response" : "validation/missing-cs-code-no-url-response-outcome.json"
+      },
+      {
+        "name" : "validation-missing-cs-url-no-code",
+        "description" : "A url but no code, coding or codeableConcept: there is nothing to validate, so the request is an error",
+        "operation" : "cs-validate-code",
+        "http-code" : "4xx",
+        "request" : "validation/missing-cs-url-no-code-request-parameters.json",
+        "response" : "validation/missing-cs-url-no-code-response-outcome.json"
+      },
+      {
+        "name" : "validation-missing-cs-nothing",
+        "description" : "No parameters at all: the request is an error",
+        "operation" : "cs-validate-code",
+        "http-code" : "4xx",
+        "request" : "validation/missing-cs-nothing-request-parameters.json",
+        "response" : "validation/missing-cs-nothing-response-outcome.json"
+      },
+      {
+        "name" : "validation-missing-cs-coding-no-code",
+        "description" : "A Coding with a system but no code, validated against the code system: the parameter was provided, so this is a validation outcome (result = false), not a request error",
+        "operation" : "cs-validate-code",
+        "request" : "validation/missing-cs-coding-no-code-request-parameters.json",
+        "response" : "validation/missing-cs-coding-no-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-cs-coding-no-system",
+        "description" : "A Coding with a code but no system, and no url either: nothing identifies the code system, and inferSystem is not an option here, so this is an error",
+        "operation" : "cs-validate-code",
+        "request" : "validation/missing-cs-coding-no-system-request-parameters.json",
+        "response" : "validation/missing-cs-coding-no-system-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-cs-cc-no-system",
+        "description" : "A CodeableConcept whose only coding has no system, validated against the code system. The issue is reported against the coding, not the CodeableConcept",
+        "operation" : "cs-validate-code",
+        "request" : "validation/missing-cs-cc-no-system-request-parameters.json",
+        "response" : "validation/missing-cs-cc-no-system-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-cs-cc-no-code",
+        "description" : "A CodeableConcept whose only coding has a system but no code, validated against the code system",
+        "operation" : "cs-validate-code",
+        "request" : "validation/missing-cs-cc-no-code-request-parameters.json",
+        "response" : "validation/missing-cs-cc-no-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-coding-no-system-infer",
+        "description" : "A Coding with no system, but inferSystem = true: the caller has asked the server to work the system out from the value set, so there is nothing to complain about. inferSystem applies to a Coding, not just to the code parameter",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-coding-no-system-infer-request-parameters.json",
+        "response" : "validation/missing-vs-coding-no-system-infer-response-parameters.json"
+      },
+      {
+        "name" : "validation-missing-vs-cc-no-system-infer",
+        "description" : "A CodeableConcept whose only coding has no system, with inferSystem = true: the system is inferred from the value set and the concept validates",
+        "operation" : "validate-code",
+        "request" : "validation/missing-vs-cc-no-system-infer-request-parameters.json",
+        "response" : "validation/missing-vs-cc-no-system-infer-response-parameters.json"
       }
     ]
   },{

@@ -171,14 +171,17 @@ each of which contains a list of tests. A suite may have:
 * `mode` / `modes`: the suite only runs when the runner is in that mode (see below)
 * `version`: the suite only runs against servers of that FHIR version (see below)
 * `disabled`: if true, the suite is not run at all
+* `sequential`: if true, the tests in the suite depend on each other, and must be run in the 
+  order they are listed, one at a time, after all the other suites have finished. The `closure` 
+  suite is like this: each test adds to the closure table the previous tests built
 
 A test may have:
 
 * `name`: the name of the test, unique within the suite
 * `description`: what the test is checking. This is the documentation for the requirement 
   the test enforces, so it should say why the expected response is the correct one
-* `operation`: one of `expand`, `validate-code`, `cs-validate-code`, `lookup`, `translate`, 
-  `compare`, `batch`, `batch-validate`, `metadata`, `term-caps`
+* `operation`: one of `expand`, `validate-code`, `cs-validate-code`, `lookup`, `subsumes`, 
+  `translate`, `compare`, `closure`, `batch`, `batch-validate`, `metadata`, `term-caps`
 * `request`: the file containing the request parameters (not used by `metadata` / `term-caps`)
 * `response`: the file containing the expected response
 * `request:{mode}` / `response:{mode}`: an alternative request or response used when the 
@@ -264,6 +267,8 @@ on unless it is turned off with `-mode !general`. The modes in use are:
 * `omop`: servers that support OMOP
 * `icd-11`: servers that support ICD-11
 * `mimetypes`: servers that support the mime types code system (BCP 13, `urn:ietf:bcp:13`)
+* `closure`: servers that support `$closure`. The closure tests build a closure table on the 
+  server, with a fixed name, and start by resetting it with `reset = true`
 * `tx.fhir.org`: tests that are specific to tx.fhir.org - either its own bugs, or operations 
   that are still being trialled there. No other server is expected to pass these
 * `flat`: servers that return a flat expansion rather than a hierarchical one. This mode 

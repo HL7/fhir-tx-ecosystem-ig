@@ -14,7 +14,7 @@
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "Coding_has_no_system__cannot_validate"
         }],
-        "severity" : "warning",
+        "severity" : "error",
         "code" : "invalid",
         "details" : {
           "coding" : [{

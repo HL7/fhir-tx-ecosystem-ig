@@ -1,5 +1,12 @@
 This page details the changes made to the terminology tests over time, based on the GitHub releases. Note that the GitHub repository that contains these tests also contains many other test cases for other kinds of functionality; this history only lists releases that include changes to the terminology tests.
 
+### 1.9.5 (not yet released)
+
+* `$validate-code` with something missing: eighteen new tests in the `validation` suite cover a request with no code at all (a `code` with no `system` and no `inferSystem`, a `system` with no `code`, and nothing at all — all request errors), and a `Coding` or `CodeableConcept` that is missing its `code` or its `system`, against both a value set and a code system. A `Coding` or `CodeableConcept` that was supplied but has bad content is a validation outcome (`result = false`), not a request error, and a missing code is reported against the coding itself, as an `invalid` issue with a `tx-issue-type` of `invalid-data` (the data supplied was invalid; there is no code for `invalid-code` to be about), with no companion "not in the value set" issue for a code that was never provided
+* A missing `Coding.system` is an **error**, not a warning: a code with no system has no defined meaning, so unless the caller asked for it to be worked out with `inferSystem = true`, the server cannot validate what it was given. `validation-simple-coding-no-system` and the FHIRsmith `no-system` test have been updated to match. This is true of a coding inside a `CodeableConcept` as well, even when another coding in the same `CodeableConcept` is in the value set: the concept carries a coding that cannot be validated, so the concept as a whole does not validate (`validation-missing-vs-cc-mixed`). `inferSystem` applies to a `Coding` and to the codings of a `CodeableConcept`, not only to the `code` parameter, and two tests pin that: with it set, a systemless coding validates cleanly with no issues at all
+
+* `$closure`: a new `closure` suite (mode `closure`) that builds a closure table one concept at a time, checking the entries each addition produces, and then resynchronises. The table is initialised with `reset = true`, which discards anything already held under that name, and the code system it is built over is supplied only in that first request. Suites can now be marked `sequential`, for tests that depend on each other: runners execute them in order, on one thread, after everything else
+
 ### 1.9.3
 
 This release is dominated by a rework of the `$translate` tests, and by settling how servers report inactive concepts.

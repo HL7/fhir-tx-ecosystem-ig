@@ -62,6 +62,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <name value="approved-servers.html"/>
+        <title value="Approved Servers"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <name value="languages.html"/>
         <title value="How Language works"/>
         <generation value="markdown"/>
