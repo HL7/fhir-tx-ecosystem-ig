@@ -15,6 +15,7 @@ by tools including:
 * The [Requirements](requirements.html) for servers that are part of the ecosystem 
 * How [Languages](languages.html) work, and requirements for language handling in the ecosystem
 * Documentation for the [Ecosystem](ecosystem.html) of all the servers
+* The [Approved Servers](approved-servers.html) that have passed the test cases and been approved
 * [Registry of Test Cases](testcases.html) (and [notes about R4/R5](r4.html))
 * [Test Case History](test-history.html) - the changes made to the test cases over time
 
