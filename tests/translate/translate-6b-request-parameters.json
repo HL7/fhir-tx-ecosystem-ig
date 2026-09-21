@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "sourceSystem",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/source"
+  },{
+    "name" : "sourceCode",
+    "valueCode" : "code-6"
+  },{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ConceptMap/full"
+  },{
+    "name": "targetSystem",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/target"
+  }]
+}

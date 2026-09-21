@@ -4193,10 +4193,17 @@
       },
       {
         "name" : "translate-6a",
-        "description" : "Testing other map - default concept map ",
+        "description" : "A code that is not in any map's sourceScope has no applicable map: ConceptMap.sourceScope limits the scope of the map, so the map does not apply at all, and its unmapped does not fire either. code-6 is in CodeSystem/source but not in ValueSet/source, which is the sourceScope of full, othermap and othermap2; novs has no scope but no group for these code systems",
         "operation" : "translate",
-        "request" : "translate/translate-5-request-parameters.json",
-        "response" : "translate/translate-5-response-parameters.json"
+        "request" : "translate/translate-6a-request-parameters.json",
+        "response" : "translate/translate-6a-response-parameters.json"
+      },
+      {
+        "name" : "translate-6b",
+        "description" : "The same, but naming the map explicitly: nominating a map does not put an out of scope code into its scope, so there is still no outcome from it",
+        "operation" : "translate",
+        "request" : "translate/translate-6b-request-parameters.json",
+        "response" : "translate/translate-6b-response-parameters.json"
       },
       {
         "name" : "translate-reverse-r5+",
