@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir">
   <parameter>
-    <name value="uuid"/>
-    <valueUuid value="urn:uuid:3f2aae64-7385-4049-b5cd-0b9ce5dc2769"/>
-  </parameter>
-  <parameter>
     <name value="binding-style"/>
     <valueCode value="CDA"/>
   </parameter>
