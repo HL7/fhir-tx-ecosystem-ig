@@ -36,7 +36,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    "valueString" : "SNOMED CT Test Edition"
   },
   {
     "name" : "property",
