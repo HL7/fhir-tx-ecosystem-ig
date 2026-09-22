@@ -42,7 +42,7 @@ deployments, and one approved server may have many.
 | Server | Responsible organization | Test endpoint | Test cases version | Additional modes |
 | --- | --- | --- | --- | --- |
 | [FHIRsmith](https://github.com/HealthIntersections/FHIRsmith) | [Health Intersections Pty Ltd](http://www.healthintersections.com.au) | `https://tx.fhir.org/r4`, `https://tx.fhir.org/r5` | 1.9.4 | `snomed`, `omop`, `mimetypes`, `icd-11`, `closure` |
-| [Ontoserver](https://ontoserver.csiro.au/site/) | [CSIRO Australian e-Health Research Centre](https://aehrc.csiro.au/) | `https://r4.ontoserver.csiro.au/fhir` | *to be confirmed* | `snomed` |
+| [Ontoserver](https://ontoserver.app/site/) | [CSIRO Australian e-Health Research Centre](https://aehrc.csiro.au/) | `https://r4.ontoserver.csiro.au/fhir`, `https://r5.ontoserver.csiro.au/fhir` | 1.9.0 | `flat` |
 | CATY *(to be confirmed)* | *to be confirmed* | *to be confirmed* | *to be confirmed* | *to be confirmed* |
 
 Entries marked *to be confirmed* are awaiting confirmation from the server provider; see
