@@ -1489,14 +1489,14 @@
       },
       {
         "name" : "validation-missing-vs-coding-display-only",
-        "description" : "A Coding with neither system nor code - only a display. Both problems are reported, and both are errors: there is no code to validate, and no system to validate it against",
+        "description" : "A Coding with neither system nor code - only a display. That is one problem, not two: the server reports a single warning saying that neither a system nor a code was provided, rather than one message about each",
         "operation" : "validate-code",
         "request" : "validation/missing-vs-coding-display-only-request-parameters.json",
         "response" : "validation/missing-vs-coding-display-only-response-parameters.json"
       },
       {
         "name" : "validation-missing-vs-cc-no-system",
-        "description" : "A CodeableConcept whose only coding has no system: the coding cannot be validated (error - inferSystem was not asked for), it is not a valid coding for the value set (information), and the CodeableConcept as a whole fails",
+        "description" : "A CodeableConcept whose only coding has no system: the coding cannot be validated (warning - inferSystem was not asked for), it is not a valid coding for the value set (information), and the CodeableConcept as a whole fails (error)",
         "operation" : "validate-code",
         "request" : "validation/missing-vs-cc-no-system-request-parameters.json",
         "response" : "validation/missing-vs-cc-no-system-response-parameters.json"
@@ -1517,7 +1517,7 @@
       },
       {
         "name" : "validation-missing-vs-cc-mixed",
-        "description" : "A CodeableConcept with a systemless coding alongside a valid one. The valid coding is found, and is reported in the code, system and display parameters, but the systemless coding is an error in its own right, so the CodeableConcept as a whole does not validate",
+        "description" : "A CodeableConcept with a systemless coding alongside a valid one: the valid coding carries the result (true), and the systemless coding is reported as a warning against that coding",
         "operation" : "validate-code",
         "request" : "validation/missing-vs-cc-mixed-request-parameters.json",
         "response" : "validation/missing-vs-cc-mixed-response-parameters.json"
@@ -1555,14 +1555,14 @@
       },
       {
         "name" : "validation-missing-cs-coding-no-system",
-        "description" : "A Coding with a code but no system, and no url either: nothing identifies the code system, and inferSystem is not an option here, so this is an error",
+        "description" : "A Coding with a code but no system, and no url either: nothing identifies the code system, so the code cannot be validated. The issue is a warning - only the caller knows whether a code with no system is acceptable in its context - but the code did not validate, so result is false",
         "operation" : "cs-validate-code",
         "request" : "validation/missing-cs-coding-no-system-request-parameters.json",
         "response" : "validation/missing-cs-coding-no-system-response-parameters.json"
       },
       {
         "name" : "validation-missing-cs-cc-no-system",
-        "description" : "A CodeableConcept whose only coding has no system, validated against the code system. The issue is reported against the coding, not the CodeableConcept",
+        "description" : "A CodeableConcept whose only coding has no system, validated against the code system. The issue is a warning, and is reported against the coding, not the CodeableConcept",
         "operation" : "cs-validate-code",
         "request" : "validation/missing-cs-cc-no-system-request-parameters.json",
         "response" : "validation/missing-cs-cc-no-system-response-parameters.json"
@@ -1576,14 +1576,14 @@
       },
       {
         "name" : "validation-missing-vs-coding-no-system-infer",
-        "description" : "A Coding with no system, but inferSystem = true: the caller has asked the server to work the system out from the value set, so there is nothing to complain about. inferSystem applies to a Coding, not just to the code parameter",
+        "description" : "A Coding with no system and inferSystem = true: inferSystem is defined only for the code parameter, so it does not apply to a Coding - the server ignores it, and reports the systemless coding exactly as it does without it",
         "operation" : "validate-code",
         "request" : "validation/missing-vs-coding-no-system-infer-request-parameters.json",
         "response" : "validation/missing-vs-coding-no-system-infer-response-parameters.json"
       },
       {
         "name" : "validation-missing-vs-cc-no-system-infer",
-        "description" : "A CodeableConcept whose only coding has no system, with inferSystem = true: the system is inferred from the value set and the concept validates",
+        "description" : "A CodeableConcept whose only coding has no system, with inferSystem = true: inferSystem is defined only for the code parameter, so it does not apply to the codings of a CodeableConcept, and the response is the same as without it",
         "operation" : "validate-code",
         "request" : "validation/missing-vs-cc-no-system-infer-request-parameters.json",
         "response" : "validation/missing-vs-cc-no-system-infer-response-parameters.json"

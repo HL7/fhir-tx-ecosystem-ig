@@ -34,7 +34,7 @@
                 "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
                 "valueString" : "$$"
               }],
-            "severity" : "error",
+            "severity" : "warning",
             "code" : "invalid",
             "details" : {
               "coding" : [{

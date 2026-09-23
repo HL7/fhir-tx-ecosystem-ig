@@ -32,25 +32,6 @@
             "extension" : [{
                 "$optional$" : "!tx.fhir.org",
                 "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-                "valueString" : "Coding_has_no_system__cannot_validate"
-              }],
-            "severity" : "error",
-            "code" : "invalid",
-            "details" : {
-              "coding" : [{
-                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-                  "code" : "invalid-data"
-                }],
-              "text" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
-            },
-            "expression" : [
-              "CodeableConcept.coding[0]"
-            ]
-          },
-          {
-            "extension" : [{
-                "$optional$" : "!tx.fhir.org",
-                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
                 "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
               }],
             "severity" : "information",
@@ -64,6 +45,25 @@
             },
             "expression" : [
               "CodeableConcept.coding[0].code"
+            ]
+          },
+          {
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "Coding_has_no_system__cannot_validate"
+              }],
+            "severity" : "warning",
+            "code" : "invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-data"
+                }],
+              "text" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+            },
+            "expression" : [
+              "CodeableConcept.coding[0]"
             ]
           }]
       }

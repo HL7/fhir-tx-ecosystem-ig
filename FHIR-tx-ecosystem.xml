@@ -224,6 +224,7 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="all-examples" name="All Examples"/>
+<page key="approved-servers" name="Approved Servers"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="binary" name="Binary Support"/>
 <page deprecated="true" key="capstatements" name="Capability Statements"/>

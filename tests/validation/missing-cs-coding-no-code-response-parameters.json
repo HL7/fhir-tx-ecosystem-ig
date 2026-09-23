@@ -10,7 +10,7 @@
                 "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
                 "valueString" : "$$"
               }],
-            "severity" : "error",
+            "severity" : "warning",
             "code" : "invalid",
             "details" : {
               "coding" : [{
@@ -32,5 +32,10 @@
     {
       "name" : "result",
       "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "$optional$" : true
     }]
 }
