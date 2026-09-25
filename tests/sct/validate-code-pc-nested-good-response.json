@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "367430006:{405813007=85562004:272741003=24028007}"
+    "valueCode" : "367430006:{405813007=(85562004:272741003=24028007)}"
   },
   {
     "name" : "display",
-    "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=85562004|Hand structure|:272741003|Laterality|=24028007|Right|}"
+    "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}"
   },
   {
     "name" : "result",

@@ -1,0 +1,21 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["expression"],
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "SUBSUMES_SYSTEM_REQUIRED"
+    }],
+    "severity" : "error",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-data"
+      }],
+      "fhir_comments" : "wording varies by server. A missing system is a problem with the request (400, invalid), not a code system that cannot be found",
+      "text" : "$$"
+    }
+  }]
+}

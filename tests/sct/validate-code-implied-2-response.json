@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
       "name" : "code",
-      "valueCode" : "367430006:{405813007=85562004:272741003=24028007}"
+      "valueCode" : "367430006:{405813007=(85562004:272741003=24028007)}"
     },
     {
       "name" : "display",
-      "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=85562004|Hand structure|:272741003|Laterality|=24028007|Right|}"
+      "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}"
     },
     {
       "name" : "issues",
@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-in-vs"
                 }],
-              "text" : "The provided code 'http://snomed.info/sct#367430006:{405813007=85562004:272741003=24028007}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-none|5.0.0'"
+              "text" : "The provided code 'http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-none|5.0.0'"
             },
             "expression" : ["code"]
           }]
@@ -33,7 +33,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "The provided code 'http://snomed.info/sct#367430006:{405813007=85562004:272741003=24028007}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-none|5.0.0'"
+      "valueString" : "The provided code 'http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-none|5.0.0'"
     },
     {
       "name" : "result",

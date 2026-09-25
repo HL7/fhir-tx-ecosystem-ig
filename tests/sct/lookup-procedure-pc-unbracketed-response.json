@@ -1,0 +1,16 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["expression", "extension"],
+    "severity" : "error",
+    "code" : "$choice:code-invalid|not-found$",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "fhir_comments" : "The compositional grammar requires a refined attribute value to be bracketed - 405813007=(85562004:272741003=24028007) - so this is not a valid expression. Wording varies by server, but the message must name the expression",
+      "text" : "$fragments:367430006:{405813007=85562004:272741003=24028007}$"
+    }
+  }]
+}

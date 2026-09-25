@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "codeA",
+    "valueCode" : "code2"
+  },{
+    "name" : "codeB",
+    "valueCode" : "code2a"
+  }]
+}

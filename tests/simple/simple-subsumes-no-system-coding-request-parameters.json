@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "codingA",
+    "valueCoding" : {
+      "code" : "code2"
+    }
+  },{
+    "name" : "codingB",
+    "valueCoding" : {
+      "code" : "code2a"
+    }
+  }]
+}

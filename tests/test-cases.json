@@ -292,6 +292,22 @@
         "http-code" : "4xx",
         "request" : "simple/simple-subsumes-unknown-code-coding-request-parameters.json",
         "response" : "simple/simple-subsumes-unknown-code-coding-response-parameters.json"
+      },
+      {
+        "name" : "simple-subsumes-no-system",
+        "description" : "codeA and codeB with no system parameter - the request is invalid (400)",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "simple/simple-subsumes-no-system-request-parameters.json",
+        "response" : "simple/simple-subsumes-no-system-response-parameters.json"
+      },
+      {
+        "name" : "simple-subsumes-no-system-coding",
+        "description" : "As simple-subsumes-no-system, but with codingA/codingB that have no system",
+        "operation" : "subsumes",
+        "http-code" : "4xx",
+        "request" : "simple/simple-subsumes-no-system-coding-request-parameters.json",
+        "response" : "simple/simple-subsumes-no-system-coding-response-parameters.json"
       }
     ]
   },{
@@ -5387,6 +5403,14 @@
         "response" : "sct/lookup-procedure-pc-response.json"
       },
       {
+        "name" : "lookup-pc-unbracketed",
+        "description" : "An attribute value that is itself refined must be bracketed in the compositional grammar (405813007=(85562004:272741003=24028007)); without the brackets the expression is invalid, and $lookup fails",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "sct/lookup-procedure-pc-unbracketed-request.json",
+        "response" : "sct/lookup-procedure-pc-unbracketed-response.json"
+      },
+      {
         "name" : "validate-code-pc-good",
         "description" : "Tests the $validate-code operation for a complex SCT expression",
         "operation" : "cs-validate-code",
@@ -5413,6 +5437,13 @@
         "operation" : "cs-validate-code",
         "request" : "sct/validate-code-pc-nested-good-request.json",
         "response" : "sct/validate-code-pc-nested-good-response.json"
+      },
+      {
+        "name" : "validate-code-pc-unbracketed",
+        "description" : "As validate-code-pc-nested-good, but without the brackets the compositional grammar requires around a refined attribute value - so it is not a valid expression",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-unbracketed-request.json",
+        "response" : "sct/validate-code-pc-unbracketed-response.json"
       },
       {
         "name" : "validate-code-pc-mrcm-lateralizable",
