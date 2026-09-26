@@ -1,8 +1,8 @@
 {
   "package-id": "hl7.fhir.uv.tx-ecosystem",
-  "version": "1.9.3",
-  "desc": "Fix the SNOMED CT test set edition/version (URL) used in the test cases",
-  "path": "http://hl7.org/fhir/uv/tx-ecosystem/1.9.3",
+  "version": "1.9.5",
+  "desc": "Improved requirements documentation, and approved server registry",
+  "path": "http://hl7.org/fhir/uv/tx-ecosystem/1.9.5",
   "status": "informative",
   "sequence": "Releases",
   "mode": "milestone",
