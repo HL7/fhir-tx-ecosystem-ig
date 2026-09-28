@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: Concept 240280071 not found"
+          "text" : "$fragments:expression|240280071$"
         },
         "expression" : ["code"]
       }]

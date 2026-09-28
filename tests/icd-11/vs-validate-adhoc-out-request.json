@@ -10,7 +10,7 @@
       "valueUri": "http://id.who.int/icd/release/11/mms"
     },
     {
-      "name": "version",
+      "name": "systemVersion",
       "valueString": "2026-01"
     },
     {

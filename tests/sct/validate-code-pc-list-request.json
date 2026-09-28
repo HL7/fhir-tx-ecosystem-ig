@@ -6,7 +6,7 @@
       "valueUri" : "http://snomed.info/sct"
     },
     {
-      "name" : "version",
+      "name" : "systemVersion",
       "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
     },
     {
