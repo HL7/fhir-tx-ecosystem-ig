@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code '367430006:{405813007=85562004:272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (International Edition)"
+          "text" : "Unknown code '367430006:{405813007=85562004:272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
         },
         "expression" : ["code"]
       },
@@ -34,8 +34,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "fhir_comments" : "the parser's explanation - wording varies by server",
-          "text" : "$$"
+          "text" : "$fragments:expression$"
         },
         "expression" : ["code"]
       }]
@@ -43,7 +42,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code '367430006:{405813007=85562004:272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (International Edition)"
+    "valueString" : "Unknown code '367430006:{405813007=85562004:272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
   },
   {
     "name" : "result",

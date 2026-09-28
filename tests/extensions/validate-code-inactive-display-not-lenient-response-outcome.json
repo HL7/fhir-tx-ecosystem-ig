@@ -26,7 +26,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "display-comment"
           }],
-          "text" : "'2nd Code' is no longer considered a correct display for code 'code2' (status = deprecated). The correct display is one of \"Display 2\"."
+          "text" : "'2nd Code' is no longer considered a correct display for code 'code2' (status = withdrawn). The correct display is 'Display 2'"
         },
         "location" : ["display"],
         "expression" : ["display"]

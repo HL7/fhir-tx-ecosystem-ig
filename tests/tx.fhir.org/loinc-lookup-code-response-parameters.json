@@ -305,7 +305,7 @@
     },
     {
       "name" : "source",
-      "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.80"
+      "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
     },
     {
       "name" : "value",
@@ -650,7 +650,7 @@
   },
   {
     "name" : "used-supplement",
-    "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.80"
+    "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
   },
   {
     "name" : "used-supplement",

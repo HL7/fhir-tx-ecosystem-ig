@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "message",
-    "valueString" : "The value sets  http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0 and http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0 contain the same codes"
+    "valueString" : "The value sets http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0 and http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0 contain the same codes"
   },
   {
     "name" : "performed-expansion",

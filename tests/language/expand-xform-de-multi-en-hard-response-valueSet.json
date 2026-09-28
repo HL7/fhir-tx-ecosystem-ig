@@ -24,7 +24,7 @@
     "offset" : 0,
     "parameter" : [{
       "name" : "displayLanguage",
-      "valueCode" : "en, *; q=0"
+      "valueCode" : "en,*;q=0"
     },
     {
       "name" : "excludeNested",

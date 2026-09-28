@@ -5,7 +5,7 @@
     "valueUri" : "http://hl7.org/fhir/test/ValueSet/en-multi"
   },{
     "name" : "displayLanguage",
-    "valueCode" : "de,*; q=0"
+    "valueCode" : "de,*;q=0"
   },{
     "name" : "includeDesignations",
     "valueBoolean" : true

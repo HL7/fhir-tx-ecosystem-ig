@@ -17,7 +17,7 @@
     },
     {
       "name" : "originMap",
-      "valueCanonical" : "https://fhir-terminology.ohdsi.org/ConceptMap/44819102|"
+      "valueCanonical" : "https://fhir-terminology.ohdsi.org/ConceptMap/44819102"
     },
     {
       "$only$" : "version:5",

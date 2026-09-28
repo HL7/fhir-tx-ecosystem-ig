@@ -37,7 +37,7 @@
       "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
       "version" : "2.0.0",
       "code" : "code2",
-      "display" : "Display 2"
+      "display" : "Display #2"
     },
     {
       "system" : "http://hl7.org/fhir/test/CodeSystem/overload",
