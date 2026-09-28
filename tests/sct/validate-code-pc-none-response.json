@@ -26,7 +26,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#197271008:{363698007=10200004}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-none|5.0.0'"
+          "text" : "$fragments:sct-pc-none|197271008:{363698007=10200004}$"
         },
         "expression" : ["code"]
       }]
@@ -34,7 +34,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://snomed.info/sct#197271008:{363698007=10200004}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-none|5.0.0'"
+    "valueString" : "$fragments:sct-pc-none|197271008:{363698007=10200004}$"
   },
   {
     "name" : "result",
@@ -46,6 +46,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "http://snomed.info/sct/900000000000207008/version/20250201"
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
   }]
 }
