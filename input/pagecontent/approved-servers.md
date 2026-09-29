@@ -43,6 +43,7 @@ deployments, and one approved server may have many.
 | --- | --- | --- | --- | --- |
 | [FHIRsmith](https://github.com/HealthIntersections/FHIRsmith) | [Health Intersections Pty Ltd](http://www.healthintersections.com.au) | `https://tx.fhir.org/r4`, `https://tx.fhir.org/r5` | 1.9.4 | `snomed`, `omop`, `mimetypes`, `icd-11`, `closure` |
 | [Ontoserver](https://ontoserver.app/site/) | [CSIRO Australian e-Health Research Centre](https://aehrc.csiro.au/) | `https://r4.ontoserver.csiro.au/fhir`, `https://r5.ontoserver.csiro.au/fhir` | 1.9.0 | `flat` |
+| HealthAll Terminology Server | [HealthAll](https://www.healthall.co.kr) | `https://tx.healthall.co.kr/fhir/r4`, `https://tx.healthall.co.kr/fhir/r5` | 1.9.4 | `snomed` |
 | CATY *(to be confirmed)* | *to be confirmed* | *to be confirmed* | *to be confirmed* | *to be confirmed* |
 
 Entries marked *to be confirmed* are awaiting confirmation from the server provider; see
