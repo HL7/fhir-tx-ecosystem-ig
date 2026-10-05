@@ -1,0 +1,33 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose", "contained"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/exclude-contained",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/administrative-gender|$version$"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "female",
+      "display" : "Female"
+    },
+    {
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "other",
+      "display" : "Other"
+    },
+    {
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "unknown",
+      "display" : "Unknown"
+    }]
+  }
+}

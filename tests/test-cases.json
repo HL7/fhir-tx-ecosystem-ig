@@ -180,6 +180,21 @@
         "response" : "simple/simple-expand-contained-response-valueSet.json"
       },
       {
+        "name" : "simple-expand-contained-nested",
+        "description" : "Expansion where the compose refers to a contained value set, which itself refers to another contained value set (a #id is resolved against the container's contained resources)",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-contained-nested-request-parameters.json",
+        "response" : "simple/simple-expand-contained-nested-response-valueSet.json"
+      },
+      {
+        "name" : "simple-expand-contained-circular",
+        "description" : "Expansion where two contained value sets import each other: a circular reference, which is an error",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "simple/simple-expand-contained-circular-request-parameters.json",
+        "response" : "simple/simple-expand-contained-circular-response-outcome.json"
+      },
+      {
         "name" : "simple-subsumes-parent",
         "description" : "A code subsumes a code nested inside it",
         "operation" : "subsumes",
@@ -1471,6 +1486,13 @@
         "operation" : "validate-code",
         "request" : "validation/validate-contained-bad-request.json",
         "response" : "validation/validate-contained-bad-response.json"
+      },
+      {
+        "name" : "validation-contained-nested",
+        "description" : "Validation where the compose refers to a contained value set, which itself refers to another contained value set",
+        "operation" : "validate-code",
+        "request" : "validation/validate-contained-nested-request.json",
+        "response" : "validation/validate-contained-nested-response.json"
       },
       {
         "name" : "validation-missing-vs-code-no-system",
@@ -4178,6 +4200,20 @@
         "operation" : "validate-code",
         "request" : "inactive/validate-inactive-3b-request-parameters.json",
         "response" : "inactive/validate-inactive-3b-response-parameters.json"
+      },
+      {
+        "name" : "inactive-4-validate",
+        "description" : "CodeableConcept with an active then an inactive coding: the inactive warning must name the inactive coding, not the first one",
+        "operation" : "validate-code",
+        "request" : "inactive/validate-inactive-4-request-parameters.json",
+        "response" : "inactive/validate-inactive-4-response-parameters.json"
+      },
+      {
+        "name" : "inactive-5-validate",
+        "description" : "CodeableConcept with an inactive then an active coding: the later active coding must not suppress the inactive warning",
+        "operation" : "validate-code",
+        "request" : "inactive/validate-inactive-5-request-parameters.json",
+        "response" : "inactive/validate-inactive-5-response-parameters.json"
       }
     ]
   },{
@@ -4667,6 +4703,20 @@
         "operation" : "expand",
         "request" : "exclude/exclude-expand-combo-request.json",
         "response" : "exclude/exclude-expand-combo-response.json"
+      },
+      {
+        "name" : "exclude-valueset",
+        "description" : "exclude a whole value set (an exclude with only a valueSet), referenced by url",
+        "operation" : "expand",
+        "request" : "exclude/exclude-valueset-request.json",
+        "response" : "exclude/exclude-valueset-response.json"
+      },
+      {
+        "name" : "exclude-contained",
+        "description" : "exclude a whole contained value set (an exclude with only a valueSet, referenced as #id)",
+        "operation" : "expand",
+        "request" : "exclude/exclude-contained-request.json",
+        "response" : "exclude/exclude-contained-response.json"
       },
       {
         "name" : "include-combo",

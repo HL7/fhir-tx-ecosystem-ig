@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/inactive-all"
+  },{
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/inactive",
+        "code" : "codeInactive"
+      },
+      {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/inactive",
+        "code" : "codeActive"
+      }]
+    }
+  }]
+}

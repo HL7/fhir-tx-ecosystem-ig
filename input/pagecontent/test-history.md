@@ -1,5 +1,10 @@
 This page details the changes made to the terminology tests over time, based on the GitHub releases. Note that the GitHub repository that contains these tests also contains many other test cases for other kinds of functionality; this history only lists releases that include changes to the terminology tests.
 
+### 1.9.7
+
+* Contained value sets: a `#id` reference is resolved against the `contained` resources of the containing resource, so a contained value set can import another value set contained in the same resource (`simple-expand-contained-nested`, `validation-contained-nested`); contained value sets that import each other are a circular reference (`simple-expand-contained-circular`). The requirements now say explicitly that value sets contained in value sets are the only use of contained resources servers are required to support
+* Excluding a whole value set - an exclude with only a `valueSet` - had no test of its own (`exclude-combo` excludes a value set together with a code system and concepts); `exclude-valueset` excludes one by url, and `exclude-contained` a contained one by `#id`. An excluded value set is reported as a `used-valueset`, as an imported one is
+
 ### 1.9.6
 
 This release mostly corrects expected responses that were wrong, but were not being checked properly.
