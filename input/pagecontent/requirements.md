@@ -270,8 +270,22 @@ It's up to the server how to manage what content they support and implement. Ser
 * Servers SHALL support all the filters defined in the base specification for all code systems
 * Servers SHALL return an error if a ValueSet uses a filter they do not understand 
 * Servers SHALL only return an existing expansion if it is the correct expansion for the definition of the value set
+* A value set that imports itself, directly or through other value sets, is an error. A value set that is imported
+  more than once by different routes (two imported value sets that both import a third) is not
+  *(suites: `big`, `simple-cases`)*
 
 The ecosystem makes no rules - at this time - about the handling of value sets that have an expansion with no definition.
+
+##### Contained resources
+
+* Servers SHALL support value sets that contain value sets, and SHALL resolve a reference of the form `#id` in
+  `compose.include.valueSet` or `compose.exclude.valueSet` to the contained value set with that id. As FHIR requires,
+  a `#id` reference is resolved against the `contained` resources of the containing resource, so a contained value
+  set can import another value set contained in the same resource *(suites: `simple-cases`, `validation`, `exclude`)*
+* That is the only use of contained resources that servers are required to support. Servers are not required to support
+  a contained CodeSystem or ConceptMap (including a value set that includes codes from a contained code system),
+  contained resources in a CodeSystem or ConceptMap, or a contained value set that itself contains resources. Servers
+  MAY reject resources that contain them, but are not required to
 
 #### Supporting ConceptMaps
 
@@ -552,7 +566,8 @@ supports, and SHALL observe the distinctions between them *(suites: `simple-case
 * The server SHALL support validating `code` + `system` (+ `version`) (+ `display`), `Coding`, and
   `CodeableConcept`. A CodeableConcept SHALL be validated as a whole: the result is true if any of its
   codings validates, and the issues report what was wrong with the others
-* The server SHALL support the [mode/valueSetMode](https://jira.hl7.org/browse/FHIR-41229) parameter
+* The server SHALL support `valueset-membership-only`, which restricts the check to whether the code is in
+  the value set (not its display, status, and so on)
 * The server SHALL support language correctly (same locations/rules as `$expand`)
 * The server SHALL support the [inferSystem](https://jira.hl7.org/browse/FHIR-41431) parameter. Where
   `inferSystem` is true and the value set contains the same code in two code systems, the server SHALL
