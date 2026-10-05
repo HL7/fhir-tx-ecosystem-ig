@@ -1,0 +1,69 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "code",
+      "valueCode" : "codeActive"
+    },
+    {
+      "name" : "codeableConcept",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "$optional-properties$" : ["version"],
+          "system" : "http://hl7.org/fhir/test/CodeSystem/inactive",
+          "version" : "0.1.0",
+          "code" : "codeActive"
+        },
+        {
+          "$optional-properties$" : ["version"],
+          "system" : "http://hl7.org/fhir/test/CodeSystem/inactive",
+          "version" : "0.1.0",
+          "code" : "codeInactive"
+        }]
+      }
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display Active"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "INACTIVE_CONCEPT_FOUND"
+              }],
+            "severity" : "warning",
+            "code" : "business-rule",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "code-comment"
+                }],
+              "text" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
+            },
+            "location" : ["CodeableConcept.coding[1]"],
+            "expression" : ["CodeableConcept.coding[1]"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/inactive"
+    },
+    {
+      "name" : "version",
+      "valueString" : "0.1.0",
+      "$optional$" : "warning:version"
+    }]
+}
