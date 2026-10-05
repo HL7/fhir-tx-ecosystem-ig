@@ -291,10 +291,9 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
     "error": "string", // details of error last time server was scanned, or null
     "last-success": int, // number of milliseconds since the server was last seen up
     "systems": int, // number of code systems found on the server
-    "authoritative": [], // list of authoritative CodeSystems as canonical values (url|version)
-    "authoritative-valuesets": [], // list of authoritative ValueSets as canonical values (url|version)
-    "candidate": [], // list of candidate CodeSystems as canonical values (url|version)
-    "candidate-valuesets": [], // list of candidate ValueSets as canonical values (url|version)
+    "authoritative": [], // the CodeSystem masks the server claims authority for (as in the registration)
+    "authoritative-valuesets": [], // the ValueSet masks the server claims authority for (as in the registration)
+    "candidate": [], // when url is given: [url] if the endpoint hosts it without claiming authority
     "open": true // if the server supports non-authenticated use 
     "password" | "token" | "oauth" | "smart" | "cert": true 
        // if the server supports authentication by one or more of those methods
@@ -305,6 +304,8 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
 Notes:
 
 * server-*X* and registry-*X* properties are provided for human trouble-shooting; they are not used anywhere
+* When `url` is given, only endpoints that host that code system are listed, those authoritative for it first
+* Without `url`, there is no candidate list: listing everything each server hosts would make the response very large
 
 #### Resolution
 
@@ -369,6 +370,9 @@ Notes:
 * The resolve operation may return more than one candidate server if more than one server hosts the terminology. Resolving this is up to the client
 * A server listed as authoritative won't also be listed as a candidate
 * Servers are not listed as authoritative unless they actually host the CodeSystem(+version) in the request 
+* A server that hosts any version of a SNOMED CT edition hosts that edition: a request for 
+  `http://snomed.info/sct|http://snomed.info/sct/32506021000036107` matches a server that hosts 
+  `http://snomed.info/sct|http://snomed.info/sct/32506021000036107/version/20250331` 
 * An authoritative entry without a `languages` property was matched on the server's `authoritative` 
   claims rather than a language specific claim. When the request had a language parameter, this tells 
   the client that routing fell through to the default authoritative server - whether to use it anyway 
