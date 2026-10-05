@@ -1,0 +1,37 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/exclude-valueset",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/administrative-gender|$version$"
+    },
+    {
+      "name" : "used-valueset",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/exclude-valueset-male|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "female",
+      "display" : "Female"
+    },
+    {
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "other",
+      "display" : "Other"
+    },
+    {
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "unknown",
+      "display" : "Unknown"
+    }]
+  }
+}
