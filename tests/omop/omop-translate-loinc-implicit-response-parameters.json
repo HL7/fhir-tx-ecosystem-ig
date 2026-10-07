@@ -27,7 +27,7 @@
     {
       "$only$" : "version:4",
       "name" : "source",
-      "valueCanonical" : "https://fhir-terminology.ohdsi.org/ConceptMap/44819102|"
+      "valueCanonical" : "https://fhir-terminology.ohdsi.org/ConceptMap/44819102"
     },
     {
       "name" : "sourceConcept",
