@@ -28,7 +28,6 @@
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/test/CodeSystem/notSelectable-unprop",
-      "abstract" : true,
       "code" : "codeNS",
       "display" : "Not Selectable Code"
     }]
