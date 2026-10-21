@@ -1,6 +1,10 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "name" : "error",
+    "valueString" : "$fragments:code2b|http://hl7.org/fhir/test/CodeSystem/target$"
+  },
+  {
     "name" : "match",
     "part" : [{
       "name" : "concept",
