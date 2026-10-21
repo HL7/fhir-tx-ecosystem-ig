@@ -17,61 +17,6 @@
     {
       "name" : "use",
       "valueCoding" : {
-        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-        "code" : "preferredForLanguage",
-        "display" : "Preferred For Language"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Secondary mood syndrome, with manic symptoms"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "longDefinition"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "A syndrome characterized by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings. The symptoms are not accounted for by delirium or by another mental and behavioural disorder, and are not a psychologically mediated response to a severe medical condition (e.g., depressive symptoms in response to a life-threatening diagnosis). This category should be used in addition to the diagnosis for the presumed underlying disorder or disease when the mood symptoms are sufficiently severe to warrant specific clinical attention."
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "fullySpecifiedName"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
         "system" : "http://id.who.int/icd/schema",
         "code" : "diagnosticCriteria"
       }
@@ -91,12 +36,12 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://id.who.int/icd/schema",
-        "code" : "indexTerm"
+        "code" : "longDefinition"
       }
     },
     {
       "name" : "value",
-      "valueString" : "Secondary mood syndrome, with manic symptoms"
+      "valueString" : "A syndrome characterized by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings. The symptoms are not accounted for by delirium or by another mental and behavioural disorder, and are not a psychologically mediated response to a severe medical condition (e.g., depressive symptoms in response to a life-threatening diagnosis). This category should be used in addition to the diagnosis for the presumed underlying disorder or disease when the mood symptoms are sufficiently severe to warrant specific clinical attention."
     }]
   },
   {
@@ -132,7 +77,43 @@
     },
     {
       "name" : "value",
-      "valueString" : "Organic manic disorder"
+      "valueString" : "mood syndrome due to disorders or diseases not classified under Mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "inclusion"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "mood syndrome due to disorders or diseases not classified under Mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "fullySpecifiedName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms"
     }]
   },
   {
@@ -150,7 +131,25 @@
     },
     {
       "name" : "value",
-      "valueString" : "mood syndrome due to disorders or diseases not classified under Mental and behavioural disorders, with manic symptoms"
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Organic manic disorder"
     }]
   },
   {
@@ -198,13 +197,14 @@
     {
       "name" : "use",
       "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "indexTerm"
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
       }
     },
     {
       "name" : "value",
-      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms"
+      "valueString" : "Secondary mood syndrome, with manic symptoms"
     }]
   },
   {
@@ -217,31 +217,12 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://id.who.int/icd/schema",
-        "code" : "inclusion"
+        "code" : "indexTerm"
       }
     },
     {
       "name" : "value",
-      "valueString" : "mood syndrome due to disorders or diseases not classified under Mental and behavioural disorders, with manic symptoms"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "es"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-        "code" : "preferredForLanguage",
-        "display" : "Preferred For Language"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Síndrome secundario afectivo, con síntomas maníacos"
+      "valueString" : "Secondary mood syndrome, with manic symptoms"
     }]
   },
   {
@@ -295,6 +276,61 @@
     },
     {
       "name" : "value",
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms [No translation available]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "síndrome afectivo debido a trastornos o enfermedades no clasificadas como trastornos mentales y del comportamiento, con síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "inclusion"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "síndrome afectivo debido a trastornos o enfermedades no clasificadas como trastornos mentales y del comportamiento, con síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
       "valueString" : "Síndrome secundario afectivo, con síntomas maníacos"
     }]
   },
@@ -313,7 +349,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "trastorno maníaco orgánico"
+      "valueString" : "Síndrome secundario afectivo, con síntomas maníacos"
     }]
   },
   {
@@ -385,62 +421,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "síndrome afectivo debido a trastornos o enfermedades no clasificadas como trastornos mentales y del comportamiento, con síntomas maníacos"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "es"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "indexTerm"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms [No translation available]"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "es"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "inclusion"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "síndrome afectivo debido a trastornos o enfermedades no clasificadas como trastornos mentales y del comportamiento, con síntomas maníacos"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "fr"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-        "code" : "preferredForLanguage",
-        "display" : "Preferred For Language"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Trouble de l'humeur secondaire, avec symptômes maniaques"
+      "valueString" : "trastorno maníaco orgánico"
     }]
   },
   {
@@ -459,6 +440,60 @@
     {
       "name" : "value",
       "valueString" : "A syndrome characterized by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings. The symptoms are not accounted for by delirium or by another mental and behavioural disorder, and are not a psychologically mediated response to a severe medical condition (e.g., depressive symptoms in response to a life-threatening diagnosis). This category should be used in addition to the diagnosis for the presumed underlying disorder or disease when the mood symptoms are sufficiently severe to warrant specific clinical attention. [No translation available]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trouble de l'humeur dû à des troubles ou à des maladies non classés dans la catégorie Troubles mentaux et du comportement avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "inclusion"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trouble de l'humeur dû à des troubles ou à des maladies non classés dans la catégorie Troubles mentaux et du comportement avec symptômes maniaques"
     }]
   },
   {
@@ -494,43 +529,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "Trouble de l'humeur secondaire, avec symptômes maniaques"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "fr"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "indexTerm"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Trouble maniaque organique"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "fr"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "indexTerm"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Symptômes maniaques"
+      "valueString" : "Trouble de l'humeur dû à une affection non classée dans les troubles mentaux et du comportement, avec symptômes maniaques"
     }]
   },
   {
@@ -578,13 +577,14 @@
     {
       "name" : "use",
       "valueCoding" : {
-        "system" : "http://id.who.int/icd/schema",
-        "code" : "indexTerm"
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
       }
     },
     {
       "name" : "value",
-      "valueString" : "trouble de l'humeur dû à des troubles ou à des maladies non classés dans la catégorie Troubles mentaux et du comportement avec symptômes maniaques"
+      "valueString" : "Trouble de l'humeur secondaire, avec symptômes maniaques"
     }]
   },
   {
@@ -602,7 +602,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "Trouble de l'humeur dû à une affection non classée dans les troubles mentaux et du comportement, avec symptômes maniaques"
+      "valueString" : "Trouble de l'humeur secondaire, avec symptômes maniaques"
     }]
   },
   {
@@ -615,12 +615,12 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://id.who.int/icd/schema",
-        "code" : "inclusion"
+        "code" : "indexTerm"
       }
     },
     {
       "name" : "value",
-      "valueString" : "trouble de l'humeur dû à des troubles ou à des maladies non classés dans la catégorie Troubles mentaux et du comportement avec symptômes maniaques"
+      "valueString" : "Trouble maniaque organique"
     }]
   },
   {

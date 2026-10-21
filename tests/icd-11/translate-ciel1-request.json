@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL",
+      "code" : "644"
+    }
+  },{
+    "name": "targetSystem",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  }]
+}

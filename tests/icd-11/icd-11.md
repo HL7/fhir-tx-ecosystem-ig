@@ -171,11 +171,21 @@ These are the properties a `$lookup` may return:
 | `parent` | code | all | A parent of the entity |
 | `child` | code | all | A child of the entity |
 | `browserUrl` | string | all | The entity's page in the ICD-11 browser |
-| `source` | string | MMS, ICF | The Foundation entity this entity was derived from |
+| `source` | Coding | MMS, ICF | The Foundation entity this entity was derived from (returned by default) - see below |
 | `blockId` | string | MMS, ICF | The block identifier, for a block |
 | `codeRange` | string | MMS, ICF | The range of codes a block covers, e.g. `1A00-1A0Z` |
 | `stem` | Coding | expressions | The root of a postcoordinated expression |
 | `postcoordination` | (subproperties) | MMS, ICF | One per postcoordination axis - see below |
+
+**The Foundation link.** `source` is a Coding in the Foundation (`http://id.who.int/icd/entity`),
+whose code is the Foundation entity uri, with the entity's title as its display. A request for
+the property `source.details` returns `source` with what a `$lookup` of that Foundation entity
+would return, as subproperties: `definition` (string), where it has one, and `parent` (code, a
+Foundation entity uri; repeats, since the Foundation is not a tree); and the entity's designations,
+as `designation` parts with the same language, use and value parts as a `$lookup`'s own
+designations. The operation does not define designations inside a property, but a subproperty
+(a code and a value) cannot carry a designation's language and use. `source.details` is not a
+property of its own, and `*` does not imply it.
 
 **Postcoordination axes.** Each `postcoordination` property describes one axis, and carries its
 content as subproperties:

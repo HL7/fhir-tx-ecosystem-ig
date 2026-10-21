@@ -42,7 +42,11 @@
     },
     {
       "name" : "value",
-      "valueString" : "http://id.who.int/icd/entity/257068234"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/entity",
+        "code" : "http://id.who.int/icd/entity/257068234",
+        "display" : "Cholera"
+      }
     }]
   },
   {

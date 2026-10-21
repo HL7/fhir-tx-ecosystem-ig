@@ -1,0 +1,53 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL",
+        "code" : "1213"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "equivalent"
+    },
+    {
+      "name" : "note",
+      "valueString" : "$fragments:1213|https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL$"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11-reverse"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "equivalent"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11-reverse"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "1A9Z/XN8JY"
+      }
+    },
+    {
+      "name" : "targetComment",
+      "valueString" : "This is reversed for testing purposes; this may not be a good mapping"
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  }]
+}

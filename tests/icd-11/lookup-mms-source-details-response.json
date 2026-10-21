@@ -1,0 +1,247 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "257068234"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Cholera"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classificationCode"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1A00"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "257068234"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "source"
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "en"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "Cholera"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "en"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "inclusion"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "cholera syndrome"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "en"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "fullySpecifiedName"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "Intestinal infection due to Vibrio cholerae"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "es"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "Cólera"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "es"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "fullySpecifiedName"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "Infección intestinal por Vibrio cholerae"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "es"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "inclusion"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "síndrome de cólera"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "fr"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage",
+          "display" : "Preferred For Language"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "Choléra"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "fr"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "fullySpecifiedName"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "Infection intestinale due à Vibrio cholerae"
+      }]
+    },
+    {
+      "name" : "designation",
+      "part" : [{
+        "name" : "language",
+        "valueCode" : "fr"
+      },
+      {
+        "name" : "use",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "inclusion"
+        }
+      },
+      {
+        "name" : "value",
+        "valueString" : "syndrome cholérique"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "definition"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Cholera is a potentially epidemic and life-threatening infection of the intestine, characterised by extreme watery (secretory) diarrhoea often accompanied by vomiting, with rapid depletion of body fluids and salt that may result in hypovolemic shock and acidosis. Cholera outbreaks are caused by toxigenic strains of Vibrio cholerae serogroups O1 and O139. Serogroup O1 has two biovars; classical and eltor. Vibrio cholerae O1, biovar cholerae is classical type. Vibrio cholerae O1, biovar eltor is eltor type."
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "parent"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "http://id.who.int/icd/entity/135352227"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/entity",
+        "code" : "http://id.who.int/icd/entity/257068234",
+        "display" : "Cholera"
+      }
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

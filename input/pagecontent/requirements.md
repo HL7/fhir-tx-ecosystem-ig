@@ -727,6 +727,22 @@ tests are correspondingly more detailed than the text; where they disagree, the 
   `relatedto` ...), and the R5 `relationship` element SHALL NOT be present; in R5 it is the other way
   round
 * `sourceComment` SHALL be returned where the ConceptMap element carries a comment
+* Where the target concept of a match is not in the normal form of its code system (an ICD-11 map
+  written with short codes, say, where the normal form uses entity ids), the server SHALL also return
+  `normalized-concept` in the match: the same concept as a Coding in the code system's normal form -
+  the same normal form `$validate-code` reports in `normalized-code`. `concept` is still the target
+  as the map states it. This applies to any code system
+* The server SHALL check each target concept it returns against its code system. Where the server
+  does not know the target code system, the match SHALL carry a `note` part saying that the code
+  system is not known and the code has not been validated. Where the target code is not valid in its
+  code system, the match is still returned as the map states it, and the response SHALL carry an
+  `error` parameter saying that the target code is not valid - one for each such target. (A code
+  system whose content is a fragment cannot say a code is not in it, so neither applies there)
+* Where the code to translate is not in the normal form of its code system, the server SHALL look
+  for map elements with the code as given and then with its normal form, so an element written in
+  the normal form applies to the code in any form. The map's own codes are not normalised: an
+  element written in some other form matches only that code, and a code given in the normal form
+  does not match it. This applies to any code system
 * The server SHALL support all the relationship types, and map them correctly between R4 and R5
 
 #### No-map and unmapped
@@ -880,9 +896,13 @@ the tests assert specific concepts, displays and counts that only that subontolo
 * `$validate-code` on an expression SHALL check the expression against the machine-readable concept
   model (MRCM) where the server has it, and report a violation as an error: an attribute outside its
   domain, a value outside its range, an attribute used more times than its cardinality allows, an
-  ungrouped attribute written inside a relationship group or vice versa, laterality on a body structure
+  ungrouped attribute written inside a relationship group, laterality on a body structure
   that is not in the lateralizable reference set, and the concrete-value rules (a concrete value where
   a concept is required, or the reverse, and concrete values outside their stated range)
+* An attribute the MRCM marks as grouped but written outside a relationship group (the Close To User
+  Form of the SNOMED postcoordination guide) is not an error: the server SHALL apply the
+  "Adding a Self-grouped Attribute" transformation, so that `40468003:363698007=10200004` is
+  equivalent to `40468003:{363698007=10200004}` for validation, rendering and subsumption
 * An attribute with more than one domain is valid in any of them
 * Where the server cannot fully check an expression, it SHALL say so with a `processing-note` issue
   rather than silently passing it

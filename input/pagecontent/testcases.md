@@ -169,6 +169,8 @@ each of which contains a list of tests. A suite may have:
   that the server needs in order to run the tests in the suite. Servers that cannot accept 
   resources on the fly have to load these some other way
 * `mode` / `modes`: the suite only runs when the runner is in that mode (see below)
+* `feature`: the suite only runs when the server declares all of these features, a comma 
+  separated list (see below)
 * `version`: the suite only runs against servers of that FHIR version (see below)
 * `disabled`: if true, the suite is not run at all
 * `sequential`: if true, the tests in the suite depend on each other, and must be run in the 
@@ -186,7 +188,7 @@ A test may have:
 * `response`: the file containing the expected response
 * `request:{mode}` / `response:{mode}`: an alternative request or response used when the 
   runner is in that mode - e.g. `response:flat` for servers that return a flat expansion
-* `mode` / `modes`, `version`, `disabled`: as for suites
+* `mode` / `modes`, `feature`, `version`, `disabled`: as for suites
 * `http-code`: the expected HTTP status code, where it isn't 200 (e.g. `422`, or `4xx`)
 * `lenient-display`: sets the `lenient-display-validation` parameter on a `validate-code` or 
   `cs-validate-code` request, so that the same request can be tested both ways
@@ -267,8 +269,6 @@ on unless it is turned off with `-mode !general`. The modes in use are:
 * `omop`: servers that support OMOP
 * `icd-11`: servers that support ICD-11
 * `mimetypes`: servers that support the mime types code system (BCP 13, `urn:ietf:bcp:13`)
-* `closure`: servers that support `$closure`. The closure tests build a closure table on the 
-  server, with a fixed name, and start by resetting it with `reset = true`
 * `tx.fhir.org`: tests that are specific to tx.fhir.org - either its own bugs, or operations 
   that are still being trialled there. No other server is expected to pass these
 * `flat`: servers that return a flat expansion rather than a hierarchical one. This mode 
@@ -278,6 +278,29 @@ A mode name can also appear in `$optional$` / `$only$` in an expected response, 
 particular server (or every server but one) is held to a different requirement than the rest 
 - `"$optional$" : "!tx.fhir.org"` is used throughout for content that only tx.fhir.org is 
 required to return.
+
+#### Features
+
+Modes are chosen by whoever runs the tests. Features are not: they come from what the server 
+says about itself in its CapabilityStatement, which the runner reads before it runs anything. A 
+suite or test with a `feature` only runs when the server declares every feature in it - 
+`"feature" : "expand,tx-resource"` needs both. A suite or test that doesn't run because of its 
+features is neither passed nor failed; the runner logs the features it found at the start, and 
+lists them in the TestReport (as `TestReport.parameter.name`). The features are:
+
+* `expand`, `lookup`, `subsumes`, `translate`, `closure`, `related`: the server declares that 
+  operation - anywhere in the CapabilityStatement, at system level or on any resource, either by 
+  name or with the operation's OperationDefinition (`ValueSet-expand`, `ConceptMap-closure`...)
+* `validate`: the server declares `$validate-code`, on CodeSystem or ValueSet (or at system level)
+* `tx-resource`: the server declares the feature 
+  `http://hl7.org/fhir/uv/tx-ecosystem/FeatureDefinition/CodeSystemAsParameter` with the value 
+  `true` (see [Requirements](requirements.html)), so it accepts CodeSystem resources in the 
+  `tx-resource` parameter
+
+The `closure` suite uses this: it runs on servers that declare `$closure`. Its tests build a 
+closure table on the server, with a fixed name, and start by resetting it with `reset = true`. 
+A feature name the runner doesn't know (a typo, say) is never declared, so whatever needs it 
+doesn't run, and the runner warns about it.
 
 #### Registry
 

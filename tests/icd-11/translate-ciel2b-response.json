@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "$string$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  }]
+}

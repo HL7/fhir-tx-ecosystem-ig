@@ -1,0 +1,31 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "cm-ciel-icd11-bad",
+  "url": "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11-bad",
+  "name": "CIELICD11BadMaps",
+  "title": "CIEL to ICD-11 maps with errors (test only)",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-10-21",
+  "description": "Test data only: maps a made-up CIEL code to an ICD-11 MMS expression that is not valid (XA9999 is not an ICD-11 code), to test that $translate reports a target code that is not valid. Kept apart from cm-ciel-icd11, which holds real CIEL to ICD-11 mappings.",
+  "group": [
+    {
+      "source": "https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL",
+      "target": "http://id.who.int/icd/release/11/mms",
+      "element": [
+        {
+          "code": "999999",
+          "display": "Made-up CIEL concept (test only)",
+          "target": [
+            {
+              "code": "2B57.Y/XA9999",
+              "display": "2B57.Y: Kaposi sarcoma of other specified primary sites | XA9999: (not an ICD-11 code)",
+              "relationship": "equivalent",
+              "comment": "Deliberately wrong: XA9999 is not an ICD-11 code"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

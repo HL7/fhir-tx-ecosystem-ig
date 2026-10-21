@@ -1,0 +1,57 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "2B57.Y/XA1WN1"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "equivalent"
+    },
+    {
+      "name" : "normalized-concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "2131977134/other/2124171981",
+        "display" : "Kaposi sarcoma of other specified primary sites / Oral cavity"
+      }
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "equivalent"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL",
+        "code" : "644"
+      }
+    },
+    {
+      "name" : "targetComment",
+      "valueString" : "Extension code XA1WN1 joined with \"/\" (expected \"&\")"
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  }]
+}

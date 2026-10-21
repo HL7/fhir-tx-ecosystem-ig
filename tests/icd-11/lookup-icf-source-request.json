@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://id.who.int/icd/release/11/icf"
+    },
+    {
+      "name": "version",
+      "valueString": "2026-01"
+    },
+    {
+      "name": "code",
+      "valueCode": "1550548595"
+    },
+    {
+      "name": "property",
+      "valueCode": "code"
+    },
+    {
+      "name": "property",
+      "valueCode": "classificationCode"
+    },
+    {
+      "name": "property",
+      "valueCode": "source"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
+    }
+  ]
+}

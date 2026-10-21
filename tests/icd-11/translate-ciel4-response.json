@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "error",
+    "valueString" : "$fragments:2B57.Y/XA9999|http://id.who.int/icd/release/11/mms$"
+  },
+  {
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "2B57.Y/XA9999"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "equivalent"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11-bad"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "equivalent"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11-bad"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL",
+        "code" : "999999"
+      }
+    },
+    {
+      "name" : "targetComment",
+      "valueString" : "Deliberately wrong: XA9999 is not an ICD-11 code"
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  }]
+}

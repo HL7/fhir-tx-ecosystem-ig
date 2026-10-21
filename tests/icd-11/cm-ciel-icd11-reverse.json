@@ -1,0 +1,43 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "cm-ciel-icd11-reverse",
+  "url": "http://hl7.org/fhir/test/ConceptMap/cm-ciel-icd11-reverse",
+  "name": "CIELICD11ClusterMaps",
+  "title": "CIEL to ICD-11 cluster maps",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-10-19",
+  "description": "Maps from CIEL concepts to ICD-11 MMS postcoordinated (cluster) expressions. Source: CIELlab (CIEL HEAD), active concepts only, queried 2026-10-18; ICD-11 titles from OCL source OpenMRS-OCL-Squad/ICD-11-WHO-Mapper, queried 2026-10-18. Contributed by Andy Kanter",
+  "group": [
+    {
+      "source": "http://id.who.int/icd/release/11/mms",
+      "target": "https://openconceptlab.org/PlaceHolder/CodeSystem/CIEL",
+      "element": [
+        {
+          "code": "1A9Z/XN8JY",
+          "display": "1A9Z: Predominantly sexually transmitted infections, unspecified | XN8JY: Human papillomavirus",
+          "target": [
+            {
+              "code": "1213",
+              "display": "Human papillomavirus",
+              "relationship": "equivalent",
+              "comment": "This is reversed for testing purposes; this may not be a good mapping"
+            }
+          ]
+        },
+        {
+          "code": "2131977134/other/2124171981",
+          "display": "2B57.Y: Kaposi sarcoma of other specified primary sites | XA1WN1: Oral cavity",
+          "target": [
+            {
+              "code": "644",
+              "display": "Kaposi sarcoma oral",
+              "relationship": "equivalent",
+              "comment": "This is reversed for testing purposes; this may not be a good mapping"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
