@@ -1621,5 +1621,28 @@
   },
   "loinc/loinc-validate-filter-class-scale-bad-class-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#2339-0' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-scale|5.0.0'"
+  },
+  "deprecated/validate-withdrawn-response-parameters.json" : {
+    "1" : "Reference to deprecated CodeSystem http://hl7.org/fhir/test/CodeSystem/deprecated|0.1.0",
+    "2" : "Reference to withdrawn ValueSet http://hl7.org/fhir/test/ValueSet/withdrawn|5.0.0"
+  },
+  "deprecated/validate-not-withdrawn-response-parameters.json" : {
+    "1" : "Reference to deprecated CodeSystem http://hl7.org/fhir/test/CodeSystem/deprecated|0.1.0",
+    "2" : "Reference to withdrawn ValueSet http://hl7.org/fhir/test/ValueSet/withdrawn|5.0.0"
+  },
+  "deprecated/validate-experimental-response-parameters.json" : {
+    "1" : "Reference to experimental CodeSystem http://hl7.org/fhir/test/CodeSystem/experimental|0.1.0"
+  },
+  "deprecated/validate-draft-response-parameters.json" : {
+    "1" : "Reference to draft CodeSystem http://hl7.org/fhir/test/CodeSystem/draft|0.1.0 from active ValueSet http://hl7.org/fhir/test/ValueSet/draft|5.0.0"
+  },
+  "deprecated/validate-deprecating-response-parameters.json" : {
+    "1" : "Reference to draft CodeSystem http://hl7.org/fhir/test/CodeSystem/draft|0.1.0 from active ValueSet http://hl7.org/fhir/test/ValueSet/deprecating|5.0.0"
+  },
+  "deprecated/validate-deprecating-2-response-parameters.json" : {
+    "1" : "Reference to draft CodeSystem http://hl7.org/fhir/test/CodeSystem/draft|0.1.0 from active ValueSet http://hl7.org/fhir/test/ValueSet/deprecating|5.0.0"
+  },
+  "fragment/fragment-expand-response.json" : {
+    "1" : "This extension is based on a fragment of the code system http://hl7.org/fhir/test/CodeSystem/fragment"
   }
 }

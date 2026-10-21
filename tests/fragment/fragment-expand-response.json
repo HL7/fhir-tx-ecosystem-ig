@@ -18,7 +18,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed-reason",
-      "valueString" : "This extension is based on a fragment of the code system http://hl7.org/fhir/test/CodeSystem/fragment"
+      "valueString" : "$external:1:http://hl7.org/fhir/test/CodeSystem/fragment$"
     }],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
