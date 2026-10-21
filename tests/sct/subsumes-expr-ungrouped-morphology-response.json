@@ -1,21 +1,8 @@
 {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "$optional-properties$" : ["expression"],
-    "extension" : [{
-      "$optional$" : "!tx.fhir.org",
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString" : "$choice:Unknown_Code_in_Version|Unknown_Code_in_Version_SCT$"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "invalid-code"
-      }],
-      "text" : "$fragments:64572001:116676008=57977008$"
-    },
-    "expression" : ["codeA"]
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "fhir_comments" : "116676008 |Associated morphology| is grouped in the MRCM; the ungrouped spelling is transformed to its classifiable (self-grouped) form, and a refinement of Disease is subsumed by Disease",
+    "name" : "outcome",
+    "valueCode" : "subsumed-by"
   }]
 }

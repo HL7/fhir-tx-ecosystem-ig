@@ -1,0 +1,153 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-operator-on-set-ancestors",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "> (39607008 OR 10200004)" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 24,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113343008",
+      "display" : "Body organ structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123037004",
+      "display" : "Body structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "138875005",
+      "display" : "SNOMED CT Concept"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22943007",
+      "display" : "Trunk structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281501002",
+      "display" : "Intra-abdominal digestive structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303270005",
+      "display" : "Liver and/or biliary structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362937008",
+      "display" : "Structure of viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420473002",
+      "display" : "Structure of subregion of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422697005",
+      "display" : "Structure of half of trunk lateral to midsagittal plane"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423857001",
+      "display" : "Structure of half of body lateral to midsagittal plane"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "442083009",
+      "display" : "Anatomical or acquired body structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49596003",
+      "display" : "Digestive organ structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51185008",
+      "display" : "Thoracic structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52530000",
+      "display" : "Body region structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67734004",
+      "display" : "Thoracic segment of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699602007",
+      "display" : "Structure of organ within abdomen proper cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "816094009",
+      "display" : "Cross-sectional thorax"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818981001",
+      "display" : "Cross-sectional abdomen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818983003",
+      "display" : "Abdomen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818988007",
+      "display" : "Intra-abdominal proper structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818993005",
+      "display" : "Organ within abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86762007",
+      "display" : "Structure of digestive system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91689009",
+      "display" : "Body system structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91723000",
+      "display" : "Anatomical structure"
+    }
+    ]
+  }
+}

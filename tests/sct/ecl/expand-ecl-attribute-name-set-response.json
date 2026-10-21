@@ -1,0 +1,48 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-attribute-name-set",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< 64572001 |Disease| : (363698007 |Finding site| OR 116676008 |Associated morphology|) = << 39607008 |Lung structure|" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197367007",
+      "display" : "Hepatic granulomas in berylliosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30188007",
+      "display" : "Alpha-1-antitrypsin deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723829000",
+      "display" : "Pulmonary fibrosis, hepatic hyperplasia, bone marrow hypoplasia syndrome"
+    }
+    ]
+  }
+}

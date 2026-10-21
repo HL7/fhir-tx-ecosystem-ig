@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-description-filter-typeId",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-19",
+        "publisher": "FHIR Project",
+        "description": "Description filter: the term and the typeId apply to the same description. \"body structure\" is the semantic tag, which appears only in the FSN, so no synonym matches.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "<< 10200004 |Liver structure| {{ D typeId = 900000000000013009 |Synonym|, term = \"body structure\" }}"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

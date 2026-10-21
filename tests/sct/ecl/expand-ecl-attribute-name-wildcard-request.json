@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-attribute-name-wildcard",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-19",
+        "publisher": "FHIR Project",
+        "description": "The attribute name is a wildcard: diseases with any attribute whose value is in the Lung subtree.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 64572001 |Disease| : * = << 39607008 |Lung structure|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

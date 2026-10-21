@@ -1,0 +1,143 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-group-or",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< 64572001 |Disease| : { 363698007 |Finding site| = << 39607008 |Lung structure| } OR { 116676008 |Associated morphology| = << 442021009 |Enlargement| }" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 22,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111331000",
+      "display" : "Congenital dilatation of lobar intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1237346001",
+      "display" : "Caroli syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "192008",
+      "display" : "Congenital syphilitic hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197367007",
+      "display" : "Hepatic granulomas in berylliosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240790002",
+      "display" : "Schistosomal hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240791003",
+      "display" : "Hepatic schistosomal granuloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "240792005",
+      "display" : "Symmer's pipe-stem fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30188007",
+      "display" : "Alpha-1-antitrypsin deficiency"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307133008",
+      "display" : "Cystic dilation of intrahepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36760000",
+      "display" : "Hepatosplenomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371067004",
+      "display" : "Hepatopulmonary syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "407000",
+      "display" : "Congenital hepatomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421230000",
+      "display" : "Hepatomegaly with AIDS (acquired immunodeficiency syndrome)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713510001",
+      "display" : "Enlargement of liver co-occurrent with human immunodeficiency virus infection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "717232005",
+      "display" : "Caroli disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723829000",
+      "display" : "Pulmonary fibrosis, hepatic hyperplasia, bone marrow hypoplasia syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725416005",
+      "display" : "Cirrhotic cardiomyopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773584001",
+      "display" : "Muscular hypertrophy, hepatomegaly, polyhydramnios syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80378000",
+      "display" : "Neonatal hepatosplenomegaly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80515008",
+      "display" : "Large liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80660001",
+      "display" : "Mauriac's syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86299006",
+      "display" : "Tetralogy of Fallot"
+    }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-member-filter-misplaced",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-19",
+        "publisher": "FHIR Project",
+        "description": "Invalid ECL: a member filter ({{ M ... }}) may only follow a memberOf (^) expression constraint. Here the bracketed disjunction of six memberOf constraints is not itself a memberOf, so the member filter that follows it is a syntax error. The corrected form moves the ^ outside the brackets: ^ ( A OR B ... ) {{ M effectiveTime >= \"20250101\" }}.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "( ^ 900000000000523009 |Possibly equivalent to refset| OR ^ 900000000000526001 |Replaced by refset| OR ^ 1186924009 |Partially equivalent to refset| OR ^ 900000000000527005 |Same as refset| OR ^ 900000000000530003 |Alternative refset| OR ^ 1186921001 |Possibly replaced by refset| ) {{ M effectiveTime >= \"20250101\" }}"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

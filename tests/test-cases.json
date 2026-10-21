@@ -5856,17 +5856,15 @@
       },
       {
         "name" : "subsumes-expr-grouped-ungrouped",
-        "description" : "the same attribute grouped and ungrouped: the MRCM requires |Finding site| to be grouped, so the ungrouped form is not a valid expression",
+        "description" : "the same attribute grouped and ungrouped: the MRCM marks |Finding site| as grouped, so the ungrouped spelling is Close To User Form and is transformed to the self-grouped classifiable form (SNOMED postcoordination guide) - the two are equivalent",
         "operation" : "subsumes",
-        "http-code" : "4xx",
         "request" : "sct/subsumes-expr-grouped-ungrouped-request.json",
         "response" : "sct/subsumes-expr-grouped-ungrouped-response.json"
       },
       {
         "name" : "subsumes-expr-ungrouped-morphology",
-        "description" : "the grouping rule is not specific to |Finding site|: |Associated morphology| is grouped too",
+        "description" : "the grouping transformation is not specific to |Finding site|: |Associated morphology| is grouped too, so the ungrouped refinement is self-grouped and the expression is subsumed by its focus",
         "operation" : "subsumes",
-        "http-code" : "4xx",
         "request" : "sct/subsumes-expr-ungrouped-morphology-request.json",
         "response" : "sct/subsumes-expr-ungrouped-morphology-response.json"
       },
@@ -6521,6 +6519,247 @@
         "http-code" : "4xx",
         "request" : "sct/ecl/expand-ecl-ambiguous-precedence-request.json",
         "response" : "sct/ecl/expand-ecl-ambiguous-precedence-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-member-filter-misplaced",
+        "description" : "Invalid ECL: a member filter {{ M ... }} may only follow a memberOf (^) constraint. ( ^ A OR ^ B ... ) {{ M effectiveTime >= \"20250101\" }} attaches it to a bracketed disjunction instead — must return a syntax error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-member-filter-misplaced-request.json",
+        "response" : "sct/ecl/expand-ecl-member-filter-misplaced-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-member-filter-date-in",
+        "description" : "Member filter: ^ 900000000000526001 {{ M effectiveTime >= \"20240101\" }} — the one REPLACED BY member in the test edition (307530000, member dated 20240601) is selected; yields 1 result.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-member-filter-date-in-request.json",
+        "response" : "sct/ecl/expand-ecl-member-filter-date-in-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-member-filter-date-out",
+        "description" : "Member filter: ^ 900000000000526001 {{ M effectiveTime >= \"20250101\" }} — the corrected (^ outside the brackets) form of the misplaced test, trimmed to the one refset in the test edition; its member is dated 20240601 so the expansion is empty.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-member-filter-date-out-request.json",
+        "response" : "sct/ecl/expand-ecl-member-filter-date-out-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-operator-on-set",
+        "description" : "Hierarchy operator on a bracketed set: <! (A OR B) is the union of <! A and <! B (5 results). A server that drops the operator would return A and B themselves.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-operator-on-set-request.json",
+        "response" : "sct/ecl/expand-ecl-operator-on-set-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-operator-on-set-ancestors",
+        "description" : "Ancestor operator on a bracketed set: > (A OR B) is the union of > A and > B (24 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-operator-on-set-ancestors-request.json",
+        "response" : "sct/ecl/expand-ecl-operator-on-set-ancestors-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-operator-on-memberOf",
+        "description" : "Hierarchy operator on ^: << ^ refset is the members and their descendants; the one member is inactive and has none (1 result).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-operator-on-memberOf-request.json",
+        "response" : "sct/ecl/expand-ecl-operator-on-memberOf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-top-of-set",
+        "description" : "Top of set: !!> (<< A OR << B) yields A and B (2 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-top-of-set-request.json",
+        "response" : "sct/ecl/expand-ecl-top-of-set-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-top-of-set-children",
+        "description" : "Top of set: !!> (< A) is the direct children of A (4 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-top-of-set-children-request.json",
+        "response" : "sct/ecl/expand-ecl-top-of-set-children-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-bottom-of-set",
+        "description" : "Bottom of set: !!< (<< A) is the leaves below A (1 result).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-bottom-of-set-request.json",
+        "response" : "sct/ecl/expand-ecl-bottom-of-set-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-or",
+        "description" : "Refinement OR: attributes joined by OR (22 results, the union of 3 and 19 disjoint results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-or-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-and",
+        "description" : "Refinement AND: the same as the comma form; nothing has both attributes (0 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-and-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-and-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-group-or",
+        "description" : "Refinement OR between attribute groups (22 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-group-or-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-group-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-or-in-group",
+        "description" : "Refinement OR inside an attribute group (22 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-or-in-group-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-or-in-group-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-attribute-name-expression",
+        "description" : "Attribute name as an expression: << 762705008 = << Lung (3 results, the same as 363698007 = << Lung).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-attribute-name-expression-request.json",
+        "response" : "sct/ecl/expand-ecl-attribute-name-expression-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-attribute-name-set",
+        "description" : "Attribute name as a bracketed set: (A OR B) = value (3 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-attribute-name-set-request.json",
+        "response" : "sct/ecl/expand-ecl-attribute-name-set-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-attribute-name-wildcard",
+        "description" : "Attribute name wildcard: * = << Lung (3 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-attribute-name-wildcard-request.json",
+        "response" : "sct/ecl/expand-ecl-attribute-name-wildcard-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-dotted-expression-attribute",
+        "description" : "Dotted expression with an expression attribute name (4 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-dotted-expression-attribute-request.json",
+        "response" : "sct/ecl/expand-ecl-dotted-expression-attribute-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-comment",
+        "description" : "Comments (/* ... */) are whitespace (3 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-comment-request.json",
+        "response" : "sct/ecl/expand-ecl-comment-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concept-filter-primitive",
+        "description" : "Concept filter definitionStatus = primitive on the children of Disease.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concept-filter-primitive-request.json",
+        "response" : "sct/ecl/expand-ecl-concept-filter-primitive-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concept-filter-defined",
+        "description" : "Concept filter definitionStatus = defined on the children of Disease; with the primitive twin partitions the 25 children.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concept-filter-defined-request.json",
+        "response" : "sct/ecl/expand-ecl-concept-filter-defined-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concept-filter-effectiveTime",
+        "description" : "Concept filter effectiveTime >= \"20200101\" (22 of 310 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concept-filter-effectiveTime-request.json",
+        "response" : "sct/ecl/expand-ecl-concept-filter-effectiveTime-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concept-filter-inactive",
+        "description" : "Concept filter active = false: the inactive concepts (4 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concept-filter-inactive-request.json",
+        "response" : "sct/ecl/expand-ecl-concept-filter-inactive-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-term",
+        "description" : "Description filter term = \"lobe liv\": each search word must start a word of the same active description (27 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-term-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-term-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-term-set",
+        "description" : "Description filter with a term set - any of the terms may match (26 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-term-set-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-term-set-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-term-wild",
+        "description" : "Description filter with a wild: search term matched against the whole description (37 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-term-wild-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-term-wild-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-typeId",
+        "description" : "Description filter typeId = Synonym with a term that only the FSN carries: the filters apply to one description, so nothing matches (0 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-typeId-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-typeId-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-typeId-fsn",
+        "description" : "Description filter typeId = FSN with the semantic tag as the term: every concept matches (310 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-typeId-fsn-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-typeId-fsn-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-language",
+        "description" : "Description filter language = fr on an English-only edition (0 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-language-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-language-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-language-en",
+        "description" : "Description filter language = en: every child of Liver structure has one (4 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-language-en-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-language-en-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-active",
+        "description" : "Description filter active = false: concepts with an inactive description matching the term (3 results, all inactive concepts).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-active-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-active-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-active-default",
+        "description" : "Description filter with no active filter considers active descriptions only, on active and inactive concepts alike (4 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-active-default-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-active-default-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-two-blocks",
+        "description" : "Two {{ D }} blocks AND at the concept level (27 results).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-two-blocks-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-two-blocks-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-memberOf-descriptions",
+        "description" : "^ on a language reference set: its members are descriptions, not concepts. The server reports that the expression cannot be evaluated (UNSUPPORTED_ECL), rather than returning an empty expansion.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-memberOf-descriptions-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-descriptions-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-memberOf-field-selection",
+        "description" : "Reference set field selection ^ [referencedComponentId] on a language reference set: syntactically valid ECL 2.x whose result would be descriptions. Expected to be reported as not supported (UNSUPPORTED_ECL), not as a syntax error. Whether field selection on concept-valued fields (^ [targetComponentId] ...) is in scope is for the committee.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-memberOf-field-selection-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-field-selection-response.json"
       },
       {
         "name" : "snomed-expand-ecl-term-match",
@@ -8020,7 +8259,9 @@
     "mode" : "icd-11",
     "todo" : "capabilities and termcaps issues. Check parameters. check definitions, Code system in language, add a test for axis being plain wrong. research sub-properties on /Users/grahame/igs/tx-ecosystem-ig/tests/icd-11/lookup-pc-simple-response.json",
     "description" : "ICD-11 Test Cases. See tests/icd-11/doco.txt for what these assert and why several of them are expected to fail against the current ICD-API.",
-    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/vs3.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-enumerated-id.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-isa-id.json", "icd-11/valueset-bad-code.json", "icd-11/valueset-icd11-all.json", "icd-11/valueset-mms-all.json", "icd-11/valueset-icf-all.json", "icd-11/valueset-foundation-all.json", "icd-11/valueset-mms-extension.json", "icd-11/valueset-mms-medicaments.json"],
+    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/vs3.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-enumerated-id.json", 
+      "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-isa-id.json", "icd-11/valueset-bad-code.json", "icd-11/valueset-icd11-all.json", "icd-11/valueset-mms-all.json", "icd-11/valueset-icf-all.json", "icd-11/valueset-foundation-all.json", 
+      "icd-11/valueset-mms-extension.json", "icd-11/valueset-mms-medicaments.json", "icd-11/cm-ciel-icd11.json", "icd-11/cm-ciel-icd11-reverse.json", "icd-11/cm-ciel-icd11-bad.json"],
     "tests" : [
       {
         "name" : "term-caps",
@@ -8842,10 +9083,24 @@
       },
       {
         "name" : "lookup-mms-source",
-        "description" : "The link from an MMS entity back to the Foundation entity it came from",
+        "description" : "The link from an MMS entity back to the Foundation entity it came from, as a Coding",
         "operation" : "lookup",
         "request" : "icd-11/lookup-mms-source-request.json",
         "response" : "icd-11/lookup-mms-source-response.json"
+      },
+      {
+        "name" : "lookup-mms-source-details",
+        "description" : "source.details: the Foundation link, carrying what a $lookup of the Foundation entity returns - definition and parent as subproperties, and its designations",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-source-details-request.json",
+        "response" : "icd-11/lookup-mms-source-details-response.json"
+      },
+      {
+        "name" : "lookup-icf-source",
+        "description" : "The link from an ICF entity back to the Foundation entity it came from",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-icf-source-request.json",
+        "response" : "icd-11/lookup-icf-source-response.json"
       },
       {
         "name" : "lookup-mms-es",
@@ -8896,6 +9151,62 @@
         "operation" : "subsumes",
         "request" : "icd-11/subsumes-unrelated-request.json",
         "response" : "icd-11/subsumes-unrelated-response.json"
+      },
+      {
+        "name" : "translate-ciel1",
+        "description" : "Test Translation Map using classificationCode based expressions",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel1-request.json",
+        "response" : "icd-11/translate-ciel1-response.json"
+      },
+      {
+        "name" : "translate-ciel1a",
+        "description" : "Test Translation Map using a different classificationCode based expression",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel1a-request.json",
+        "response" : "icd-11/translate-ciel1a-response.json"
+      },
+      {
+        "name" : "translate-ciel2a",
+        "description" : "Test Translation Map for icd-11 to ciel passing a classificationCode when the map has a classificationCode ",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel2a-request.json",
+        "response" : "icd-11/translate-ciel2a-response.json"
+      },
+      {
+        "name" : "translate-ciel2b",
+        "description" : "Test Translation Map for icd-11 to ciel passing a code when the map has a classificationCode: no match - the map's own codes are not normalised",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel2b-request.json",
+        "response" : "icd-11/translate-ciel2b-response.json"
+      },
+      {
+        "name" : "translate-ciel3a",
+        "description" : "Test Translation Map for icd-11 to ciel passing a code when the map has a code ",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel3a-request.json",
+        "response" : "icd-11/translate-ciel3a-response.json"
+      },
+      {
+        "name" : "translate-ciel3b",
+        "description" : "Test Translation Map for icd-11 to ciel passing a classificationCode when the map has a code: matches through the normal form of the code passed",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel3b-request.json",
+        "response" : "icd-11/translate-ciel3b-response.json"
+      },
+      {
+        "name" : "translate-ciel4",
+        "description" : "Test Translation Map for ciel to icd-11 where the map's target is not a valid ICD-11 expression: the match is returned as the map has it, with an error saying the target code is not valid",
+        "feature" : "translate",
+        "operation" : "translate",
+        "request" : "icd-11/translate-ciel4-request.json",
+        "response" : "icd-11/translate-ciel4-response.json"
       }
     ]
   },{
@@ -9491,7 +9802,7 @@
   },
   {
     "name" : "closure",
-    "mode" : "closure",
+    "feature" : "closure",
     "sequential" : true,
     "description" : "$closure: build a closure table one concept at a time. The tests depend on each other, so the suite runs in order, on one thread, after all the other suites. The table is reset by the first test, and the code system it uses is only sent in that request",
     "tests" : [

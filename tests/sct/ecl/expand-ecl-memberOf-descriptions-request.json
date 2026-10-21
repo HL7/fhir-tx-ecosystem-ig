@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-descriptions",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-20",
+        "publisher": "FHIR Project",
+        "description": "Member-of on a language reference set, whose members are descriptions rather than concepts. There are no concept members to return, so the server reports that it cannot evaluate the expression rather than returning an empty expansion.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "^ 900000000000509007 |US English|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

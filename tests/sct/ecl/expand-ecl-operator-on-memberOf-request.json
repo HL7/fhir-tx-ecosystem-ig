@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-operator-on-memberOf",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-19",
+        "publisher": "FHIR Project",
+        "description": "Hierarchy operator on a member-of: the members of the REPLACED BY association reference set and their descendants. The one member in the test edition is inactive, so it has no descendants.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "<< ^ 900000000000526001 |REPLACED BY association reference set|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

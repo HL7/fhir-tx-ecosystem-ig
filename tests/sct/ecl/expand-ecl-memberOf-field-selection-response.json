@@ -1,0 +1,22 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "$optional-properties$" : ["extension", "location"],
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNSUPPORTED_ECL"
+    }],
+    "severity" : "error",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "vs-invalid"
+      }],
+      "fhir_comments" : "error text varies by server - must indicate that reference set field selection is not supported, or that the selected field is not concept-valued. The expression is syntactically valid, so a syntax error is wrong",
+      "text" : "$fragments:900000000000509007$"
+    },
+    "expression" : ["ValueSet.compose.include[0].filter[0]"]
+  }]
+}

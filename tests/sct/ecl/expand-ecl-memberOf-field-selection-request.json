@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-field-selection",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-20",
+        "publisher": "FHIR Project",
+        "description": "Reference set field selection (ECL 2.x): the referencedComponentId field of a language reference set is a description id. Whether a server must support field selection at all, and what a description-valued result means in an expansion, is open; a server that does not support it must say so (syntactically the expression is valid, so this is not INVALID_ECL).",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "^ [referencedComponentId] 900000000000509007 |US English|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-attribute-name-expression",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-19",
+        "publisher": "FHIR Project",
+        "description": "The attribute name is an expression (any concept model object attribute) rather than a single concept; diseases with any attribute whose value is in the Lung subtree.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 64572001 |Disease| : << 762705008 |Concept model object attribute| = << 39607008 |Lung structure|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

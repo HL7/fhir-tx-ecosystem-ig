@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-member-filter-date-in",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-19",
+        "publisher": "FHIR Project",
+        "description": "Member filter on the REPLACED BY association reference set: members whose refset-member effectiveTime is on or after 20240101. The test edition's one member (307530000 -> 74400008) is dated 20240601, so it is selected.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "^ 900000000000526001 |Replaced by refset| {{ M effectiveTime >= \"20240101\" }}"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

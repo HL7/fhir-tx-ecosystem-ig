@@ -1,0 +1,168 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-description-filter-term",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "<< 10200004 |Liver structure| {{ D term = \"lobe liv\" }}" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 27,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1344872009",
+      "display" : "Liver lobe part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15760000",
+      "display" : "Structure of caudate process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16777006",
+      "display" : "Structure of medial segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18939001",
+      "display" : "Structure of artery of the caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245378000",
+      "display" : "Lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26928007",
+      "display" : "Structure of quadrate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270226005",
+      "display" : "Entire anterior segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270327004",
+      "display" : "Entire posterior segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270429000",
+      "display" : "Entire caudate process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271085007",
+      "display" : "Entire medial segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271187002",
+      "display" : "Entire papillary process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271288003",
+      "display" : "Entire lateral segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272598007",
+      "display" : "Entire artery of the caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279929003",
+      "display" : "Entire quadrate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360981005",
+      "display" : "Segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360982003",
+      "display" : "Segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362182008",
+      "display" : "Entire right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362183003",
+      "display" : "Entire left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362184009",
+      "display" : "Entire caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48521005",
+      "display" : "Structure of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60039004",
+      "display" : "Structure of papillary process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69842003",
+      "display" : "Structure of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71133005",
+      "display" : "Structure of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "728286003",
+      "display" : "Entire lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76919008",
+      "display" : "Structure of anterior segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80303005",
+      "display" : "Structure of lateral segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9242006",
+      "display" : "Structure of posterior segment of right lobe of liver"
+    }
+    ]
+  }
+}
