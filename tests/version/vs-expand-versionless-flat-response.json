@@ -1,0 +1,63 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://example.org/vs/nci-test",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id","offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 7,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/noversion"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "code" : "code1",
+      "display" : "Display 1"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "abstract" : true,
+      "inactive" : true,
+      "code" : "code2",
+      "display" : "Display 2",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "retired"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "code" : "code2a",
+      "display" : "Display 2a"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "code" : "code2aI",
+      "display" : "Display 2aI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "code" : "code2aII",
+      "display" : "Display 2aII"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "code" : "code2b",
+      "display" : "Display 2b"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+      "code" : "code3",
+      "display" : "Display 3"
+    }]
+  }
+}

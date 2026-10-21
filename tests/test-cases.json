@@ -3267,7 +3267,8 @@
         "description" : "check expand without any version",
         "operation" : "expand",
         "request" : "version/vs-expand-versionless-request.json",
-        "response" : "version/vs-expand-versionless-response.json"
+        "response" : "version/vs-expand-versionless-response.json",
+        "response:flat" : "version/vs-expand-versionless-flat-response.json"
       }
     ]
   },{
