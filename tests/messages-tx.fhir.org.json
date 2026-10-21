@@ -1183,6 +1183,9 @@
   "sct/validate-code-procedure-pc-bad1-response.json" : {
     "1" : "Unknown code '367430006:{272741003=240280071}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
   },
+  "sct/translate-edition-toplevel-response.json" : {
+    "1" : "No translation: the only International Edition ancestor of 1000311000003101 |Vaguely unwell about the liver| is the top-level hierarchy concept 404684003 |Clinical finding|"
+  },
   "sct/validate-code-procedure-pc-bad2-response.json" : {
     "1" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
   },

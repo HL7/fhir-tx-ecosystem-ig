@@ -21,7 +21,7 @@
                 {
                   "property": "constraint",
                   "op": "=",
-                  "value": "^ 900000000000526001 |Replaced by refset| {{ M effectiveTime >= \"20250101\" }}"
+                  "value": "^ 900000000000526001 |Replaced by refset| {{ M effectiveTime >= \"20260101\" }}"
                 }
               ]
             }

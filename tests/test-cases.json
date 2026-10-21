@@ -5903,6 +5903,69 @@
         "operation" : "subsumes",
         "request" : "sct/subsumes-expr-subsumes-precoordinated-request.json",
         "response" : "sct/subsumes-expr-subsumes-precoordinated-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-intl",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: an International concept translates to itself",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-intl-request.json",
+        "response" : "sct/translate-edition-intl-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-module",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: the module concept has no inferred IS A in the extract (only an OWL axiom), so it has no International ancestor at all",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-module-request.json",
+        "response" : "sct/translate-edition-module-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-ungrouped",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: fully defined extension concept with one ungrouped attribute: the expression",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-ungrouped-request.json",
+        "response" : "sct/translate-edition-ungrouped-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-grouped",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: fully defined extension concept with role groups: the normal form expression",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-grouped-request.json",
+        "response" : "sct/translate-edition-grouped-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-equivalent",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: fully defined extension concept whose definition is an existing International concept: that concept, not an expression",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-equivalent-request.json",
+        "response" : "sct/translate-edition-equivalent-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-primitive",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: primitive extension concept: the closest International ancestor, and the source is narrower",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-primitive-request.json",
+        "response" : "sct/translate-edition-primitive-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-toplevel",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: primitive extension concept directly under a top-level hierarchy: no useful translation",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-toplevel-request.json",
+        "response" : "sct/translate-edition-toplevel-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-inactive-none",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: inactive extension concept with no historical association: nothing to translate to",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-inactive-none-request.json",
+        "response" : "sct/translate-edition-inactive-none-response.json"
+      },
+      {
+        "name" : "snomed-translate-edition-inactive-replaced",
+        "description" : "Translate from the test edition to the International Edition with no ConceptMap: inactive extension concept REPLACED BY an International concept: that concept",
+        "operation" : "translate",
+        "request" : "sct/translate-edition-inactive-replaced-request.json",
+        "response" : "sct/translate-edition-inactive-replaced-response.json"
       }
     ]
   },{

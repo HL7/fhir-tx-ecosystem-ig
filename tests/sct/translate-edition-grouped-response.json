@@ -1,0 +1,54 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20250801",
+        "code" : "75478009:{116676008=4532008,246075003=227014008,363698007=10200004},{263502005=424124008}",
+        "display" : "75478009|Poisoning|:{116676008|Associated morphology|=4532008|Acute inflammation|,246075003|Causative agent|=227014008|Liver pate|,363698007|Finding site|=10200004|Liver structure|},{263502005|Clinical course|=424124008|Sudden onset AND/OR short duration|}"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "equivalent"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=900000000000207008"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "equivalent"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=900000000000207008"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+        "code" : "1000071000003108"
+      }
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "used-conceptmap",
+    "valueUri" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=900000000000207008"
+  },
+  {
+    "name" : "used-system",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

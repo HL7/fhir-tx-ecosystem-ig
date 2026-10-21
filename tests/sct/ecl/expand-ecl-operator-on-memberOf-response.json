@@ -22,7 +22,7 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 1,
+    "total" : 2,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
@@ -32,6 +32,16 @@
       "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "1000381000003107",
+      "display" : "Hepatic revenge",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
     {
       "system" : "http://snomed.info/sct",
       "inactive" : true,

@@ -1,0 +1,54 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20250801",
+        "code" : "438300009",
+        "display" : "Biopsy of liver using ultrasound guidance"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "equivalent"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=900000000000207008"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "equivalent"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=900000000000207008"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+        "code" : "1000161000003101"
+      }
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "used-conceptmap",
+    "valueUri" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=900000000000207008"
+  },
+  {
+    "name" : "used-system",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

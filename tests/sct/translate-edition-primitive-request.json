@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+      "code" : "1000261000003107"
+    }
+  },{
+    "name" : "targetSystem",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250801"
+  }]
+}
