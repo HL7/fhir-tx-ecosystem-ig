@@ -23,12 +23,17 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 661,
+    "total" : 662,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
     }],
     "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1000071000003108",
+      "display" : "Pate-induced hepatitis"
+    },
     {
       "system" : "http://snomed.info/sct",
       "code" : "1003514000",
