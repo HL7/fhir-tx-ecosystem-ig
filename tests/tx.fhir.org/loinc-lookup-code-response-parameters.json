@@ -245,6 +245,25 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://loinc.org",
+        "code" : "LinguisticVariantDisplayName",
+        "display" : "LinguisticVariantDisplayName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Глюкоза (Кров) [Маса/об'єм]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "uk-UA"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
         "code" : "LONG_COMMON_NAME",
         "display" : "LONG_COMMON_NAME"
       }
@@ -271,25 +290,6 @@
     {
       "name" : "value",
       "valueString" : "Глюкоза Кров-МасКнц"
-    }]
-  },
-  {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "uk-UA"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "system" : "http://loinc.org",
-        "code" : "LinguisticVariantDisplayName",
-        "display" : "LinguisticVariantDisplayName"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "Глюкоза (Кров) [Маса/об'єм]"
     }]
   },
   {

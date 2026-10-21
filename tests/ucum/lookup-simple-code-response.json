@@ -22,7 +22,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "mg/dL"
+      "valueString" : "(milligram) / (deciliter)"
     }]
   },
   {
@@ -43,7 +43,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "(milligram) / (deciliter)"
+      "valueString" : "mg/dL"
     }]
   },
   {
