@@ -3,6 +3,7 @@
   "issue" : [{
     "fhir_comments" : "a script alone leaves the language open, so there is nothing finite to enumerate. Only a fixed language, a fixed region, or both, can be expanded",
     "extension" : [{
+      "$optional$" : "!tx.fhir.org",
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "CODESYSTEM_NOT_ENUMERABLE"
     }],
