@@ -77,11 +77,11 @@ component the code belongs to:
 | `b` Body functions | extent of impairment | | | |
 | `s` Body structures | extent of impairment | nature of the change | localization | |
 | `d` Activities and participation | performance | capacity (without assistance) | capacity with assistance (optional) | performance without assistance (optional) |
-| `e` Environmental factors | *not supported yet - see below* | | | |
+| `e` Environmental factors | barrier (after `.`) or facilitator (after `+`) | | | |
 
 So `s7300.183` is *Structure of upper arm*, with a mild impairment (`1`), the nature not specified
 (`8`), on both sides (`3`); and `d450.12` is *Walking*, with a mild performance problem (`1`) and a
-moderate capacity problem (`2`).
+moderate capacity problem (`2`); and `e310+3` is *Immediate family*, a substantial facilitator.
 
 In the FHIR ecosystem, though, an unqualified code has uses of its own, and the code system
 accepts one as a valid code:
@@ -98,13 +98,19 @@ them - see [Filter Properties](#filter-properties).
 The rules are:
 
 * the qualifiers are positional, and a code may have as many as its component allows (above):
-  one for `b`, up to three for `s`, and up to four for `d` - performance and capacity, then
-  optionally capacity with assistance and performance without assistance. `b1100.21` and
-  `d450.12345` are not valid
+  one for `b`, up to three for `s`, up to four for `d` - performance and capacity, then
+  optionally capacity with assistance and performance without assistance - and one for `e`.
+  `b1100.21`, `d450.12345` and `e310.23` are not valid
+* an environmental factor's qualifier says whether it is a barrier or a facilitator: a barrier
+  is written after a `.` (`e310.2`, a moderate barrier), and a facilitator after a `+`, in place
+  of the `.` (`e310+3`, a substantial facilitator). The same factor can be a barrier for one
+  person and a facilitator for another. Only an environmental factor can be a facilitator:
+  `b1100+2` is not valid
 * a position cannot be skipped. `8` (not specified) is what fills a position that has nothing to
   say: to give a localization without a nature, write `s7300.183`, not `s7300.1 3`
 * each digit must be one of the values of its position's scale (below): `b1100.5` is not valid,
-  since the extent has no 5, and nor is `d450.15`
+  since the extent has no 5, and nor is `d450.15`. A facilitator has no 9: not applicable is
+  `e310.9`, never `e310+9`
 * only a selectable category can be qualified - not a component, chapter or block (`b1.2` and
   `b110-b139.2` are not valid)
 * qualifiers are not required by the code system: `b1100` on its own is a valid code. Some uses
@@ -122,9 +128,10 @@ A qualified code is a code in its own right: `Coding.code` is the whole thing.
 ```
 
 The values of each scale are concepts in the code system, so they can be looked up and their
-definitions read. Each scale has a heading concept (`q1` to `q4`), and its values are
+definitions read. Each scale has a heading concept (`q1` to `q6`), and its values are
 `q1-0`, `q1-1` and so on. These are not codes to use on their own: they have a `kind` property
-that says which scale they belong to (`extent`, `nature`, `localization` or `problem`), where
+that says which scale they belong to (`extent`, `nature`, `localization`, `problem`, `barrier`
+or `facilitator`), where
 every ordinary ICF code has the kind `primary`.
 
 | Scale | Used for |
@@ -133,6 +140,8 @@ every ordinary ICF code has the kind `primary`.
 | `q2` Nature of the change in the respective body structure | position 2 of `s` codes |
 | `q3` Localization | position 3 of `s` codes |
 | `q4` Extent of problem | every position of `d` codes |
+| `q5` Extent of barrier | `e` codes, after `.` |
+| `q6` Extent of facilitator | `e` codes, after `+` |
 
 **Extent of impairment** (`q1`)
 
@@ -188,12 +197,33 @@ every ordinary ICF code has the kind `primary`.
 | 8 | not specified | Used when information is insufficient to grade the severity |
 | 9 | not applicable | Used when it is inappropriate to apply the qualifier |
 
-**Environmental factors.** In ICF, an environmental factor (`e`) has one qualifier, which says
-whether the factor is a barrier or a facilitator, and how much of one: a barrier is written with
-`.` (`e310.2`, a moderate barrier), and a facilitator with `+` in place of the `.` (`e310+3`, a
-substantial facilitator). There are open questions about the facilitator scale, and qualifiers on
-environmental factors are not supported yet: `e310` is a valid code, but `e310.2` and `e310+3` are
-not. Expect this to change.
+**Extent of barrier** (`q5`)
+
+| Value | Meaning | Threshold |
+|---|---|---|
+| 0 | NO barrier | 0-4% |
+| 1 | MILD barrier | 5-24% |
+| 2 | MODERATE barrier | 25-49% |
+| 3 | SEVERE barrier | 50-95% |
+| 4 | COMPLETE barrier | 96-100% |
+| 8 | barrier, not specified | Used when the factor is a barrier, but information is insufficient to grade it |
+| 9 | not applicable | Used when it is inappropriate to apply the qualifier |
+
+**Extent of facilitator** (`q6`)
+
+| Value | Meaning | Threshold |
+|---|---|---|
+| 0 | NO facilitator | 0-4% |
+| 1 | MILD facilitator | 5-24% |
+| 2 | MODERATE facilitator | 25-49% |
+| 3 | SUBSTANTIAL facilitator | 50-95% |
+| 4 | COMPLETE facilitator | 96-100% |
+| 8 | facilitator, not specified | Used when the factor is a facilitator, but information is insufficient to grade it |
+
+There is no `+9`: not applicable is neither a barrier nor a facilitator, and is written `.9`.
+`.0` (no barrier) and `+0` (no facilitator) are both valid: coding both says the factor has no
+effect, which may still be wanted, for statistics for example. A minus sign is not used for
+barriers (`e540-4` is not a valid code).
 
 ## Versions
 
@@ -229,6 +259,9 @@ out - and if every qualifier is `8`, the display is just the category's title:
 | `s7300.888` | Structure of upper arm |
 | `d450.12` | Walking: performance MILD problem, capacity MODERATE problem |
 | `d450.8834` | Walking: capacity with assistance SEVERE problem, performance without assistance COMPLETE problem |
+| `e310.2` | Immediate family: MODERATE barrier |
+| `e310+3` | Immediate family: SUBSTANTIAL facilitator |
+| `e310+8` | Immediate family |
 
 The category's own title is not a valid display for a qualified code (unless every qualifier is
 `8`): `$validate-code` of `s7300.183` with the display `Structure of upper arm` reports the wrong
@@ -245,7 +278,7 @@ These are the properties a `$lookup` may return:
 | `parent` | code | all | The parent of the concept. For a qualified code, its category |
 | `child` | code | all | A child of the concept. A qualified code has none |
 | `notSelectable` | boolean | all | The concept is a heading (component, chapter, block, scale) and cannot be used to code with |
-| `kind` | code | all | `primary` for an ICF code; `extent`, `nature`, `localization` or `problem` for a qualifier value or scale |
+| `kind` | code | all | `primary` for an ICF code; `extent`, `nature`, `localization`, `problem`, `barrier` or `facilitator` for a qualifier value or scale |
 | `extent` | code | qualified `b` and `s` codes | The extent qualifier, as a scale value, e.g. `q1-2` |
 | `nature` | code | qualified `s` codes | The nature qualifier, e.g. `q2-8` |
 | `localization` | code | qualified `s` codes | The localization qualifier, e.g. `q3-3` |
@@ -253,6 +286,8 @@ These are the properties a `$lookup` may return:
 | `capacity` | code | qualified `d` codes | The capacity (without assistance) qualifier |
 | `capacity-with-assistance` | code | qualified `d` codes | The capacity with assistance qualifier |
 | `performance-without-assistance` | code | qualified `d` codes | The performance without assistance qualifier |
+| `barrier` | code | qualified `e` codes, `.` | The barrier qualifier, e.g. `q5-2` |
+| `facilitator` | code | qualified `e` codes, `+` | The facilitator qualifier, e.g. `q6-3` |
 
 A qualified code has its category's properties as well, other than `parent`. A qualifier that is
 `8` is still reported: `s7300.183` has `nature` `q2-8`.
@@ -262,7 +297,7 @@ A qualified code has its category's properties as well, other than `parent`. A q
 | Property | Operators | Values | Description |
 |---|---|---|---|
 | `concept` | `is-a`, `descendent-of`, `is-not-a`, `child-of`, `=`, `in`, `regex` | codes | The hierarchy. A qualified code is in the results when its category is: `is-a b1` includes `b1100.2` |
-| `extent`, `nature`, `localization`, `performance`, `capacity`, `capacity-with-assistance`, `performance-without-assistance` | `exists` | `true`, `false` | Whether the code must have this qualifier (`true`) or must not (`false`). A qualifier of `8` counts as absent: it never satisfies `true`, and always satisfies `false`. A qualifier the code's component does not have is absent, so `extent exists true` excludes every `d` code |
+| `extent`, `nature`, `localization`, `performance`, `capacity`, `capacity-with-assistance`, `performance-without-assistance`, `barrier`, `facilitator` | `exists` | `true`, `false` | Whether the code must have this qualifier (`true`) or must not (`false`). A qualifier of `8` counts as absent: it never satisfies `true`, and always satisfies `false`. A qualifier the code's component does not have is absent, so `extent exists true` excludes every `d` code |
 | `qualified` | `=` | `true`, `false` | Qualified codes only, or none at all. `s7300.888` is qualified, though it says nothing |
 | `kind`, `notSelectable`, ... | `=`, `in`, `not-in`, `regex` | | The code system's other properties |
 

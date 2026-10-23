@@ -1,0 +1,5 @@
+{
+  "resourceType" : "ConceptMap",
+  "$optional-properties$" : ["id", "meta", "text", "url", "identifier", "name", "title", "status", "experimental", "date", "publisher", "contact", "description"],
+  "version" : "0"
+}

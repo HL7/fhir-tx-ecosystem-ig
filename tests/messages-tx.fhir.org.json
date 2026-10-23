@@ -1535,12 +1535,17 @@
     "1" : "Unknown code 'd450.15' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
     "2" : "The ICF code 'd450.15' is not valid: '5' is not a valid value for qualifier 2 (capacity)"
   },
-  "icf/icf-cs-e-barrier-response-parameters.json" : {
-    "1" : "Unknown code 'e310.2' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
-    "2" : "The ICF code 'e310.2' is not valid: qualifiers on environmental factors codes are not supported"
+  "icf/icf-cs-e-facilitator-nine-response-parameters.json" : {
+    "1" : "Unknown code 'e310+9' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'e310+9' is not valid: '9' is not a valid value for qualifier 1 (facilitator)"
   },
-  "icf/icf-cs-facilitator-response-parameters.json" : {
-    "1" : "Unknown code 'e310+3' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'"
+  "icf/icf-cs-e-two-response-parameters.json" : {
+    "1" : "Unknown code 'e310.23' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'e310.23' is not valid: an environmental factors (e) code takes one qualifier digit after the '.' (barrier)"
+  },
+  "icf/icf-cs-b-facilitator-response-parameters.json" : {
+    "1" : "Unknown code 'b1100+2' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'b1100+2' is not valid: only an environmental factor (e) can be a facilitator, written with '+'"
   },
   "icf/icf-vs-enum-other-qualifier-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
@@ -1583,6 +1588,15 @@
   },
   "icf/icf-vs-capacity-plain-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+  },
+  "icf/icf-vs-facilitator-barrier-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#e310.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
+  },
+  "icf/icf-vs-facilitator-eight-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#e310+8' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
+  },
+  "icf/icf-vs-facilitator-plain-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#e310' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
   },
   "icf/icf-vs-noqual-qualified-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.2' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"

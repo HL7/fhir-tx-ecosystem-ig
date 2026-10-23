@@ -5,35 +5,12 @@
     "valueCode" : "e310+3"
   },
   {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Unknown_Code_in_Version"
-        }],
-        "severity" : "error",
-        "code" : "code-invalid",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "invalid-code"
-          }],
-          "text" : "$external:1:e310+3|http://hl7.org/fhir/sid/icf$"
-        },
-        "expression" : ["code"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "$external:1:e310+3|http://hl7.org/fhir/sid/icf$"
+    "name" : "display",
+    "valueString" : "Immediate family: SUBSTANTIAL facilitator"
   },
   {
     "name" : "result",
-    "valueBoolean" : false
+    "valueBoolean" : true
   },
   {
     "name" : "system",

@@ -7,7 +7,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 6,
+    "total" : 7,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/sid/icf|2001a"
@@ -31,6 +31,11 @@
       "system" : "http://hl7.org/fhir/sid/icf",
       "code" : "e310",
       "display" : "Immediate family"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "e310+3",
+      "display" : "Immediate family: SUBSTANTIAL facilitator"
     },
     {
       "system" : "http://hl7.org/fhir/sid/icf",

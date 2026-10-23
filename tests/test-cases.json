@@ -9963,6 +9963,13 @@
         "operation" : "closure",
         "request" : "closure/closure-resync-0-request-parameters.json",
         "response" : "closure/closure-resync-0-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-dispose",
+        "description" : "Inform the server that the closure table is no longer wanted, and can be deleted",
+        "operation" : "closure",
+        "request" : "closure/closure-dispose-request-parameters.json",
+        "response" : "closure/closure-dispose-response-conceptMap.json"
       }
     ]
   },
@@ -9970,7 +9977,7 @@
     "name" : "icf",
     "mode" : "icf",
     "description" : "Tests for ICF (2001a) qualifiers: the .XYZ grammar (extent, nature, localization; 8 = not specified), the displays it generates, enumerated value sets with qualified codes, and value set filters that require or forbid qualifiers",
-    "setup" : [ "icf/valueset-icf-enumerated.json", "icf/valueset-icf-body-functions.json", "icf/valueset-icf-extent-required.json", "icf/valueset-icf-structure-full.json", "icf/valueset-icf-no-localization.json", "icf/valueset-icf-capacity-required.json", "icf/valueset-icf-no-qualifiers.json" ],
+    "setup" : [ "icf/valueset-icf-enumerated.json", "icf/valueset-icf-body-functions.json", "icf/valueset-icf-extent-required.json", "icf/valueset-icf-structure-full.json", "icf/valueset-icf-no-localization.json", "icf/valueset-icf-capacity-required.json", "icf/valueset-icf-facilitators.json", "icf/valueset-icf-no-qualifiers.json" ],
     "tests" : [
       {
         "name" : "icf-cs-plain",
@@ -10170,17 +10177,59 @@
       },
       {
         "name" : "icf-cs-e-barrier",
-        "description" : "Qualifiers on environmental factors are not supported yet",
+        "description" : "An environmental factor that is a barrier",
         "operation" : "cs-validate-code",
         "request" : "icf/icf-cs-e-barrier-request-parameters.json",
         "response" : "icf/icf-cs-e-barrier-response-parameters.json"
       },
       {
         "name" : "icf-cs-facilitator",
-        "description" : "The + facilitator notation is not supported",
+        "description" : "An environmental factor that is a facilitator: + in place of the .",
         "operation" : "cs-validate-code",
         "request" : "icf/icf-cs-facilitator-request-parameters.json",
         "response" : "icf/icf-cs-facilitator-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-e-no-facilitator",
+        "description" : "No facilitator (+0)",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-e-no-facilitator-request-parameters.json",
+        "response" : "icf/icf-cs-e-no-facilitator-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-e-barrier-nine",
+        "description" : "Not applicable is written .9",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-e-barrier-nine-request-parameters.json",
+        "response" : "icf/icf-cs-e-barrier-nine-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-e-facilitator-eight",
+        "description" : "A facilitator, extent not specified: 8 is silent in the display",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-e-facilitator-eight-request-parameters.json",
+        "response" : "icf/icf-cs-e-facilitator-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-e-facilitator-nine",
+        "description" : "A facilitator has no 9 (not applicable is .9)",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-e-facilitator-nine-request-parameters.json",
+        "response" : "icf/icf-cs-e-facilitator-nine-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-e-two",
+        "description" : "An environmental factor takes one qualifier only",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-e-two-request-parameters.json",
+        "response" : "icf/icf-cs-e-two-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-b-facilitator",
+        "description" : "Only an environmental factor can be a facilitator",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-b-facilitator-request-parameters.json",
+        "response" : "icf/icf-cs-b-facilitator-response-parameters.json"
       },
       {
         "name" : "icf-vs-enum-plain",
@@ -10363,6 +10412,34 @@
         "operation" : "validate-code",
         "request" : "icf/icf-vs-capacity-plain-request-parameters.json",
         "response" : "icf/icf-vs-capacity-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-facilitator-good",
+        "description" : "Facilitators: a facilitator",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-facilitator-good-request-parameters.json",
+        "response" : "icf/icf-vs-facilitator-good-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-facilitator-barrier",
+        "description" : "Facilitators: a barrier",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-facilitator-barrier-request-parameters.json",
+        "response" : "icf/icf-vs-facilitator-barrier-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-facilitator-eight",
+        "description" : "Facilitators: 8 does not count",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-facilitator-eight-request-parameters.json",
+        "response" : "icf/icf-vs-facilitator-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-facilitator-plain",
+        "description" : "Facilitators: a plain code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-facilitator-plain-request-parameters.json",
+        "response" : "icf/icf-vs-facilitator-plain-response-parameters.json"
       },
       {
         "name" : "icf-vs-noqual-plain",

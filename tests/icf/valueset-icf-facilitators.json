@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-facilitators",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-facilitators",
+  "version" : "0.1.0",
+  "name" : "ICFFacilitators",
+  "status" : "active",
+  "description" : "Environmental factors that are facilitators (+, 8 does not count)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "e"
+      },
+      {
+        "property" : "facilitator",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}

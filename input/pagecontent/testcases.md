@@ -268,7 +268,7 @@ on unless it is turned off with `-mode !general`. The modes in use are:
   `tx-source/readme.md`
 * `omop`: servers that support OMOP
 * `icd-11`: servers that support ICD-11
-* `icf`: servers that support ICF (`http://hl7.org/fhir/sid/icf`) with its qualifier grammar - a category followed by `.` and the qualifiers its component takes (extent for `b`; extent, nature, localization for `s`; performance, capacity and two optional assistance qualifiers for `d`) - and the qualifier `exists` and `qualified` `=` value set filters. The tests use version `2001a`
+* `icf`: servers that support ICF (`http://hl7.org/fhir/sid/icf`) with its qualifier grammar - a category followed by `.` and the qualifiers its component takes (extent for `b`; extent, nature, localization for `s`; performance, capacity and two optional assistance qualifiers for `d`; a barrier after `.` or a facilitator after `+` for `e`) - and the qualifier `exists` and `qualified` `=` value set filters. The tests use version `2001a`
 * `mimetypes`: servers that support the mime types code system (BCP 13, `urn:ietf:bcp:13`)
 * `tx.fhir.org`: tests that are specific to tx.fhir.org - either its own bugs, or operations 
   that are still being trialled there. No other server is expected to pass these
