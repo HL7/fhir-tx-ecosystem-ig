@@ -4897,7 +4897,7 @@
     "description" : "These are tx.fhir.org specific tests. There's no expectation that other servers will pass these tests, and they are not executed by default. (other servers can, but they depend on other set up not controlled by the tests",
     "setup" : [ "tx.fhir.org/valueset-all.json", "tx.fhir.org/valueset-enumerated-bad.json", "tx.fhir.org/valueset-enumerated.json", "tx.fhir.org/valueset-filter-prop-component.json", "tx.fhir.org/valueset-filter-prop-method.json", "tx.fhir.org/valueset-filter-prop-component-str.json",
       "tx.fhir.org/valueset-filter-prop-order-obs.json", "tx.fhir.org/valueset-concept-is-a.json", "tx.fhir.org/valueset-filter-copyright.json", "tx.fhir.org/valueset-filter-status.json", "tx.fhir.org/valueset-filter-class-regex.json",
-      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", "tx.fhir.org/valueset-filter-classtype.json",
+      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", "tx.fhir.org/valueset-filter-no-method.json", "tx.fhir.org/valueset-filter-classtype.json",
       "tx.fhir.org/valueset-filter-answers-for1.json", "tx.fhir.org/valueset-filter-answers-for2.json", "tx.fhir.org/valueset-filter-answer-list.json", "tx.fhir.org/valueset-filter-parent.json",
       "tx.fhir.org/codesystem-loinc-supplement.json"],
     "tests" : [
@@ -5204,6 +5204,30 @@
         "operation" : "validate-code",
         "request" : "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-request-parameters.json",
         "response" : "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-response-parameters.json"
+      },{
+        "name" : "loinc-expand-filter-no-method",
+        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true",
+        "operation" : "expand",
+        "request" : "tx.fhir.org/loinc-expand-no-method-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-expand-no-method-response-valueSet.json"
+      },{
+        "name" : "loinc-validate-filter-no-method-good",
+        "description" : "a LOINC term with no method is in the no-method value set",
+        "operation" : "validate-code",
+        "request" : "tx.fhir.org/loinc-validate-filter-no-method-good-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-filter-no-method-good-response-parameters.json"
+      },{
+        "name" : "loinc-validate-filter-no-method-method-bad",
+        "description" : "a LOINC term with a method is not in the no-method value set",
+        "operation" : "validate-code",
+        "request" : "tx.fhir.org/loinc-validate-filter-no-method-method-bad-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-filter-no-method-method-bad-response-parameters.json"
+      },{
+        "name" : "loinc-validate-filter-no-method-part-bad",
+        "description" : "a LOINC part has no method, but is excluded by the CLASSTYPE exists filter",
+        "operation" : "validate-code",
+        "request" : "tx.fhir.org/loinc-validate-filter-no-method-part-bad-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-filter-no-method-part-bad-response-parameters.json"
       },{
         "name" : "loinc-validate-filter-classtype-good",
         "description" : "test classtype filter (numerical)",
@@ -9939,6 +9963,434 @@
         "operation" : "closure",
         "request" : "closure/closure-resync-0-request-parameters.json",
         "response" : "closure/closure-resync-0-response-conceptMap.json"
+      }
+    ]
+  },
+  {
+    "name" : "icf",
+    "mode" : "icf",
+    "description" : "Tests for ICF (2001a) qualifiers: the .XYZ grammar (extent, nature, localization; 8 = not specified), the displays it generates, enumerated value sets with qualified codes, and value set filters that require or forbid qualifiers",
+    "setup" : [ "icf/valueset-icf-enumerated.json", "icf/valueset-icf-body-functions.json", "icf/valueset-icf-extent-required.json", "icf/valueset-icf-structure-full.json", "icf/valueset-icf-no-localization.json", "icf/valueset-icf-capacity-required.json", "icf/valueset-icf-no-qualifiers.json" ],
+    "tests" : [
+      {
+        "name" : "icf-cs-plain",
+        "description" : "A plain category",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-plain-request-parameters.json",
+        "response" : "icf/icf-cs-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-extent",
+        "description" : "A body function with an extent qualifier",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-extent-request-parameters.json",
+        "response" : "icf/icf-cs-extent-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-extent-0",
+        "description" : "Extent 0 (no impairment)",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-extent-0-request-parameters.json",
+        "response" : "icf/icf-cs-extent-0-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-extent-4",
+        "description" : "Extent 4 (complete impairment)",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-extent-4-request-parameters.json",
+        "response" : "icf/icf-cs-extent-4-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-extent-9",
+        "description" : "Extent 9 (not applicable) is shown in the display",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-extent-9-request-parameters.json",
+        "response" : "icf/icf-cs-extent-9-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-long-code",
+        "description" : "A qualifier on a 5 character category",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-long-code-request-parameters.json",
+        "response" : "icf/icf-cs-long-code-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-three",
+        "description" : "A body structure with extent, nature and localization",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-three-request-parameters.json",
+        "response" : "icf/icf-cs-three-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-two",
+        "description" : "A body structure with extent and nature",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-two-request-parameters.json",
+        "response" : "icf/icf-cs-two-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-eights",
+        "description" : "All three qualifiers 8 (not specified): the display is just the category",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-eights-request-parameters.json",
+        "response" : "icf/icf-cs-eights-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-eight-first",
+        "description" : "Extent 8 is silent, the nature after it is not",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-eight-first-request-parameters.json",
+        "response" : "icf/icf-cs-eight-first-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-display-good",
+        "description" : "The right display for a qualified code",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-display-good-request-parameters.json",
+        "response" : "icf/icf-cs-display-good-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-display-category",
+        "description" : "The category display is not the display of a qualified code",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-display-category-request-parameters.json",
+        "response" : "icf/icf-cs-display-category-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-display-bad",
+        "description" : "A wrong display for a qualified code",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-display-bad-request-parameters.json",
+        "response" : "icf/icf-cs-display-bad-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-display-eights",
+        "description" : "The category display is right when every qualifier is 8",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-display-eights-request-parameters.json",
+        "response" : "icf/icf-cs-display-eights-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-bad-value",
+        "description" : "5 is not an extent value",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-bad-value-request-parameters.json",
+        "response" : "icf/icf-cs-bad-value-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-too-many",
+        "description" : "No more than three qualifiers",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-too-many-request-parameters.json",
+        "response" : "icf/icf-cs-too-many-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-not-digits",
+        "description" : "Qualifiers are digits",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-not-digits-request-parameters.json",
+        "response" : "icf/icf-cs-not-digits-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-empty",
+        "description" : "A . with no qualifiers after it",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-empty-request-parameters.json",
+        "response" : "icf/icf-cs-empty-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-heading-chapter",
+        "description" : "A chapter cannot be qualified",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-heading-chapter-request-parameters.json",
+        "response" : "icf/icf-cs-heading-chapter-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-heading-block",
+        "description" : "A block cannot be qualified",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-heading-block-request-parameters.json",
+        "response" : "icf/icf-cs-heading-block-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-unknown-category",
+        "description" : "An unknown category with qualifiers is an unknown code",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-unknown-category-request-parameters.json",
+        "response" : "icf/icf-cs-unknown-category-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-b-too-many",
+        "description" : "A body function takes one qualifier only",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-b-too-many-request-parameters.json",
+        "response" : "icf/icf-cs-b-too-many-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-d-performance",
+        "description" : "An activity with a performance qualifier",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-d-performance-request-parameters.json",
+        "response" : "icf/icf-cs-d-performance-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-d-two",
+        "description" : "An activity with performance and capacity",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-d-two-request-parameters.json",
+        "response" : "icf/icf-cs-d-two-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-d-four",
+        "description" : "An activity with all four qualifiers: performance, capacity, capacity with assistance, performance without assistance",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-d-four-request-parameters.json",
+        "response" : "icf/icf-cs-d-four-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-d-eights",
+        "description" : "Performance and capacity not specified (8), with the optional third and fourth qualifiers",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-d-eights-request-parameters.json",
+        "response" : "icf/icf-cs-d-eights-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-d-too-many",
+        "description" : "An activity takes no more than four qualifiers",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-d-too-many-request-parameters.json",
+        "response" : "icf/icf-cs-d-too-many-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-d-bad-capacity",
+        "description" : "5 is not a capacity value",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-d-bad-capacity-request-parameters.json",
+        "response" : "icf/icf-cs-d-bad-capacity-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-e-barrier",
+        "description" : "Qualifiers on environmental factors are not supported yet",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-e-barrier-request-parameters.json",
+        "response" : "icf/icf-cs-e-barrier-response-parameters.json"
+      },
+      {
+        "name" : "icf-cs-facilitator",
+        "description" : "The + facilitator notation is not supported",
+        "operation" : "cs-validate-code",
+        "request" : "icf/icf-cs-facilitator-request-parameters.json",
+        "response" : "icf/icf-cs-facilitator-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-enum-plain",
+        "description" : "A plain code listed in an enumerated value set",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-enum-plain-request-parameters.json",
+        "response" : "icf/icf-vs-enum-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-enum-qualified",
+        "description" : "A qualified code listed in an enumerated value set",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-enum-qualified-request-parameters.json",
+        "response" : "icf/icf-vs-enum-qualified-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-enum-eights",
+        "description" : "A qualified code (all 8) listed in an enumerated value set",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-enum-eights-request-parameters.json",
+        "response" : "icf/icf-vs-enum-eights-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-enum-other-qualifier",
+        "description" : "An enumerated value set has only the qualified codes it lists",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-enum-other-qualifier-request-parameters.json",
+        "response" : "icf/icf-vs-enum-other-qualifier-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-enum-unlisted-eights",
+        "description" : "An unlisted qualified code is not in an enumerated value set, even when it says no more than a listed one",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-enum-unlisted-eights-request-parameters.json",
+        "response" : "icf/icf-vs-enum-unlisted-eights-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-all-plain",
+        "description" : "A plain code in an is-a value set",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-all-plain-request-parameters.json",
+        "response" : "icf/icf-vs-all-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-all-qualified",
+        "description" : "A qualified code is in an is-a value set when its category is",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-all-qualified-request-parameters.json",
+        "response" : "icf/icf-vs-all-qualified-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-all-other-component",
+        "description" : "A qualified code is not in an is-a value set when its category is not",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-all-other-component-request-parameters.json",
+        "response" : "icf/icf-vs-all-other-component-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-extent-req-good",
+        "description" : "Extent required: present",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-extent-req-good-request-parameters.json",
+        "response" : "icf/icf-vs-extent-req-good-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-extent-req-nine",
+        "description" : "Extent required: 9 (not applicable) counts as present",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-extent-req-nine-request-parameters.json",
+        "response" : "icf/icf-vs-extent-req-nine-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-extent-req-plain",
+        "description" : "Extent required: a plain code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-extent-req-plain-request-parameters.json",
+        "response" : "icf/icf-vs-extent-req-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-extent-req-eight",
+        "description" : "Extent required: 8 does not count",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-extent-req-eight-request-parameters.json",
+        "response" : "icf/icf-vs-extent-req-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-extent-req-heading",
+        "description" : "Extent required: a heading cannot have an extent, so is not in the value set",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-extent-req-heading-request-parameters.json",
+        "response" : "icf/icf-vs-extent-req-heading-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-full-good",
+        "description" : "All three required: present",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-full-good-request-parameters.json",
+        "response" : "icf/icf-vs-full-good-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-full-missing",
+        "description" : "All three required: localization missing",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-full-missing-request-parameters.json",
+        "response" : "icf/icf-vs-full-missing-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-full-eight",
+        "description" : "All three required: localization 8 does not count",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-full-eight-request-parameters.json",
+        "response" : "icf/icf-vs-full-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-full-nature-eight",
+        "description" : "All three required: nature 8 does not count",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-full-nature-eight-request-parameters.json",
+        "response" : "icf/icf-vs-full-nature-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-full-plain",
+        "description" : "All three required: a plain code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-full-plain-request-parameters.json",
+        "response" : "icf/icf-vs-full-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noloc-plain",
+        "description" : "No localization: a plain code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noloc-plain-request-parameters.json",
+        "response" : "icf/icf-vs-noloc-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noloc-two",
+        "description" : "No localization: two qualifiers",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noloc-two-request-parameters.json",
+        "response" : "icf/icf-vs-noloc-two-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noloc-eight",
+        "description" : "No localization: localization 8 is allowed",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noloc-eight-request-parameters.json",
+        "response" : "icf/icf-vs-noloc-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noloc-present",
+        "description" : "No localization: localization present",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noloc-present-request-parameters.json",
+        "response" : "icf/icf-vs-noloc-present-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-capacity-good",
+        "description" : "Capacity required: present",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-capacity-good-request-parameters.json",
+        "response" : "icf/icf-vs-capacity-good-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-capacity-performance-only",
+        "description" : "Capacity required: performance only",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-capacity-performance-only-request-parameters.json",
+        "response" : "icf/icf-vs-capacity-performance-only-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-capacity-eight",
+        "description" : "Capacity required: 8 does not count",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-capacity-eight-request-parameters.json",
+        "response" : "icf/icf-vs-capacity-eight-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-capacity-plain",
+        "description" : "Capacity required: a plain code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-capacity-plain-request-parameters.json",
+        "response" : "icf/icf-vs-capacity-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noqual-plain",
+        "description" : "No qualifiers: a plain code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noqual-plain-request-parameters.json",
+        "response" : "icf/icf-vs-noqual-plain-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noqual-qualified",
+        "description" : "No qualifiers: a qualified code",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noqual-qualified-request-parameters.json",
+        "response" : "icf/icf-vs-noqual-qualified-response-parameters.json"
+      },
+      {
+        "name" : "icf-vs-noqual-eights",
+        "description" : "No qualifiers: not even all 8",
+        "operation" : "validate-code",
+        "request" : "icf/icf-vs-noqual-eights-request-parameters.json",
+        "response" : "icf/icf-vs-noqual-eights-response-parameters.json"
+      },
+      {
+        "name" : "icf-expand-enumerated",
+        "description" : "Expanding an enumerated value set with qualified codes gives their composed displays",
+        "operation" : "expand",
+        "request" : "icf/icf-expand-enumerated-request-parameters.json",
+        "response" : "icf/icf-expand-enumerated-response-valueSet.json"
       }
     ]
   }],

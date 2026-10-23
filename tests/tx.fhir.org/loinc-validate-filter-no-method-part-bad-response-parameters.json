@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "code",
+      "valueCode" : "LP14635-4"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Glucose"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [{
+            "extension" : [{
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+              }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "not-in-vs"
+                }],
+              "text" : "$external:1:http://loinc.org#LP14635-4|http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0$"
+            },
+            "location" : ["Coding.code"],
+            "expression" : ["Coding.code"]
+          }]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "$external:1:http://loinc.org#LP14635-4|http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0$"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://loinc.org"
+    },
+    {
+      "name" : "version",
+      "valueString" : "2.82",
+      "$optional$" : "warning:version"
+    }]
+}

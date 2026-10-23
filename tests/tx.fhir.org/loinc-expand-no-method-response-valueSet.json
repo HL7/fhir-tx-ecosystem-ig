@@ -1,0 +1,305 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterNoMethod",
+  "title" : "LOINC ValueSet Filter - LOINC terms with no Method",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-22",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.82"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "100000-9",
+      "display" : "Health informatics pioneer and the father of LOINC"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100001-7",
+      "display" : "Health informatics pioneer and cofounder of LOINC"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100002-5",
+      "display" : "Specimen care is maintained"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100003-3",
+      "display" : "Team communication is maintained throughout care"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100004-1",
+      "display" : "Demonstrates knowledge of the expected psychosocial responses to the procedure"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100005-8",
+      "display" : "Demonstrates knowledge of nutritional management related to the procedure"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100006-6",
+      "display" : "Demonstrates knowledge of medication management"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100007-4",
+      "display" : "Demonstrates knowledge of pain management"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100008-2",
+      "display" : "Demonstrates knowledge of wound management"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100009-0",
+      "display" : "Demonstrates knowledge of the procedure and expected results"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100010-8",
+      "display" : "No injury related to procedure equipment, medical supplies, or instrumentation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100011-6",
+      "display" : "No injury related to an electrical source"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100012-4",
+      "display" : "Participates in decisions affecting the patient's plan of care"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100013-2",
+      "display" : "Participates in the discharge process"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100014-0",
+      "display" : "Psychosocial health is maintained at or improved from baseline"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100015-7",
+      "display" : "No injury related to positioning due to care or procedure"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100016-5",
+      "display" : "No injury related to a laser source"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100034-8",
+      "display" : "Provider of automated external defibrillator use"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100035-5",
+      "display" : "Exam finding location of Chest"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100036-3",
+      "display" : "Exam finding location of Lung"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100037-1",
+      "display" : "Patient contact disposition EMS unit"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100038-9",
+      "display" : "Patient evaluation disposition EMS unit"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100039-7",
+      "display" : "Crew disposition for patient care EMS unit"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100040-5",
+      "display" : "Patient transport disposition EMS unit"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100041-3",
+      "display" : "Aminoglycoside [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100042-1",
+      "display" : "Atovaquone [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100043-9",
+      "display" : "Azithromycin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100044-7",
+      "display" : "Cefcapene [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100045-4",
+      "display" : "Cefozopran [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100046-2",
+      "display" : "Cefquinome [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100047-0",
+      "display" : "Cefteram [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100048-8",
+      "display" : "Clarithromycin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100049-6",
+      "display" : "Eravacycline [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100050-4",
+      "display" : "Erythromycin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100051-2",
+      "display" : "Ethambutol+rifAMPin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100052-0",
+      "display" : "Flomoxef [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100053-8",
+      "display" : "Fluoroquinolone [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100054-6",
+      "display" : "Gamithromycin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100055-3",
+      "display" : "Optochin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100056-1",
+      "display" : "Panipenem [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100057-9",
+      "display" : "Prothionamide [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100058-7",
+      "display" : "Prulifloxacin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100059-5",
+      "display" : "Rifapentine [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100060-3",
+      "display" : "Tildipirosin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100061-1",
+      "display" : "Tosufloxacin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100063-7",
+      "display" : "Primary skin concern"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100065-2",
+      "display" : "Satisfied with treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100067-8",
+      "display" : "Eye Image magnification",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100068-6",
+      "display" : "Right eye Fixation point [Angle]",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100069-4",
+      "display" : "Left eye Fixation point [Angle]",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-no-method",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterNoMethod",
+  "title" : "LOINC ValueSet Filter - LOINC terms with no Method",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-22",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "METHOD_TYP",
+        "op" : "exists",
+        "value" : "false"
+      },{
+        "property" : "CLASSTYPE",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}

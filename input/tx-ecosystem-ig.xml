@@ -86,6 +86,16 @@
         <title value="Test Case History"/>
         <generation value="markdown"/>
       </page>
+      <page>
+        <name value="icd-11.html"/>
+        <title value="Using ICD-11 with HL7 Standards"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="icf.html"/>
+        <title value="Using ICF with HL7 Standards"/>
+        <generation value="markdown"/>
+      </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>

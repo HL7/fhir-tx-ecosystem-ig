@@ -1252,6 +1252,12 @@
   "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#10352-3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-dockind-exists|5.0.0'"
   },
+  "tx.fhir.org/loinc-validate-filter-no-method-method-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#10352-3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0'"
+  },
+  "tx.fhir.org/loinc-validate-filter-no-method-part-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#LP14635-4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0'"
+  },
   "tx.fhir.org/loinc-validate-filter-scale-type-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0'"
   },
@@ -1483,5 +1489,105 @@
   },
   "version/vs-expand-v2-check-response-outcome.json" : {
     "1" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
+  },
+  "icf/icf-cs-display-category-response-parameters.json" : {
+    "1" : "Wrong Display Name 'Structure of upper arm' for http://hl7.org/fhir/sid/icf#s7300.183. Valid display is 'Structure of upper arm: MILD impairment, both sides' (en) (for the language(s) '--')"
+  },
+  "icf/icf-cs-display-bad-response-parameters.json" : {
+    "1" : "Wrong Display Name 'State of consciousness: SEVERE impairment' for http://hl7.org/fhir/sid/icf#b1100.2. Valid display is 'State of consciousness: MODERATE impairment' (en) (for the language(s) '--')"
+  },
+  "icf/icf-cs-bad-value-response-parameters.json" : {
+    "1" : "Unknown code 'b1100.5' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'b1100.5' is not valid: '5' is not a valid value for qualifier 1 (extent)"
+  },
+  "icf/icf-cs-too-many-response-parameters.json" : {
+    "1" : "Unknown code 's7300.1834' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 's7300.1834' is not valid: a body structures (s) code takes 1 to 3 qualifier digits after the '.' (extent, nature, localization)"
+  },
+  "icf/icf-cs-not-digits-response-parameters.json" : {
+    "1" : "Unknown code 's7300.1a' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 's7300.1a' is not valid: a body structures (s) code takes 1 to 3 qualifier digits after the '.' (extent, nature, localization)"
+  },
+  "icf/icf-cs-empty-response-parameters.json" : {
+    "1" : "Unknown code 'b1100.' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'b1100.' is not valid: a body functions (b) code takes one qualifier digit after the '.' (extent)"
+  },
+  "icf/icf-cs-heading-chapter-response-parameters.json" : {
+    "1" : "Unknown code 'b1.2' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'b1.2' is not valid: qualifiers can only follow a selectable ICF category, and 'b1' is not one"
+  },
+  "icf/icf-cs-heading-block-response-parameters.json" : {
+    "1" : "Unknown code 'b110-b139.2' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'b110-b139.2' is not valid: qualifiers can only follow a selectable ICF category, and 'b110-b139' is not one"
+  },
+  "icf/icf-cs-unknown-category-response-parameters.json" : {
+    "1" : "Unknown code 'b9999.2' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'"
+  },
+  "icf/icf-cs-b-too-many-response-parameters.json" : {
+    "1" : "Unknown code 'b1100.21' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'b1100.21' is not valid: a body functions (b) code takes one qualifier digit after the '.' (extent)"
+  },
+  "icf/icf-cs-d-too-many-response-parameters.json" : {
+    "1" : "Unknown code 'd450.12345' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'd450.12345' is not valid: an activities and participation (d) code takes 1 to 4 qualifier digits after the '.' (performance, capacity, capacity-with-assistance, performance-without-assistance)"
+  },
+  "icf/icf-cs-d-bad-capacity-response-parameters.json" : {
+    "1" : "Unknown code 'd450.15' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'd450.15' is not valid: '5' is not a valid value for qualifier 2 (capacity)"
+  },
+  "icf/icf-cs-e-barrier-response-parameters.json" : {
+    "1" : "Unknown code 'e310.2' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'",
+    "2" : "The ICF code 'e310.2' is not valid: qualifiers on environmental factors codes are not supported"
+  },
+  "icf/icf-cs-facilitator-response-parameters.json" : {
+    "1" : "Unknown code 'e310+3' in the CodeSystem 'http://hl7.org/fhir/sid/icf' version '2001a'"
+  },
+  "icf/icf-vs-enum-other-qualifier-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
+  },
+  "icf/icf-vs-enum-unlisted-eights-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.88' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
+  },
+  "icf/icf-vs-all-other-component-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-body-functions|0.1.0'"
+  },
+  "icf/icf-vs-extent-req-plain-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
+  },
+  "icf/icf-vs-extent-req-eight-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.8' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
+  },
+  "icf/icf-vs-extent-req-heading-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
+  },
+  "icf/icf-vs-full-missing-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.12' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+  },
+  "icf/icf-vs-full-eight-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.128' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+  },
+  "icf/icf-vs-full-nature-eight-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.183' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+  },
+  "icf/icf-vs-full-plain-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+  },
+  "icf/icf-vs-noloc-present-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.183' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-localization|0.1.0'"
+  },
+  "icf/icf-vs-capacity-performance-only-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450.1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+  },
+  "icf/icf-vs-capacity-eight-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450.18' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+  },
+  "icf/icf-vs-capacity-plain-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+  },
+  "icf/icf-vs-noqual-qualified-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.2' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
+  },
+  "icf/icf-vs-noqual-eights-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.888' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
   }
 }
