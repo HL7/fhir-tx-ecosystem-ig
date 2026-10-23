@@ -1,3 +1,5 @@
+Note: This page is temporarily here until it migrates to terminology.hl7.org
+
 # Using ICD-11 with FHIR
 
 ICD-11 is published by the World Health Organization as three code systems that share one

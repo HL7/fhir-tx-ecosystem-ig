@@ -1,3 +1,5 @@
+Note: This page is temporarily here until it migrates to terminology.hl7.org
+
 # Using old versions of ICF with FHIR
 
 The International Classification of Functioning, Disability and Health (ICF) is published by the
