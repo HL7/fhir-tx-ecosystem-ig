@@ -1,8 +1,39 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
-  <li><a href="requirements.html">Requirements</a></li>
-  <li><a href="languages.html">Language Support</a></li>
-  <li><a href="ecosystem.html">Ecosystem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Requirements<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="requirements.html">General</a>
+      </li>
+      <li>
+        <a href="languages.html">Language Support</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Ecosystem<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="ecosystem.html">Ecosystem</a></li>
+      <li><a href="approved-servers.html">Approved Servers</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Code System specific Notes<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="icd-11.html">ICD-11</a></li>
+      <li><a href="icf.html">ICF</a></li>
+    </ul>
+  </li>
   <li><a href="testcases.html">Test Cases</a></li>
   <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>      
+
+
+

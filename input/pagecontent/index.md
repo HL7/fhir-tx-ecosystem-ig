@@ -18,6 +18,7 @@ by tools including:
 * The [Approved Servers](approved-servers.html) that have passed the test cases and been approved
 * [Registry of Test Cases](testcases.html) (and [notes about R4/R5](r4.html))
 * [Test Case History](test-history.html) - the changes made to the test cases over time
+* [ICD-11](icd-11.html) and [ICF](icf.html) Implementation notes (draft - will move to terminology.hl7.org in time)
 
 <div style="display: none">
 {% lang-fragment ip-statements.xhtml %}

@@ -915,6 +915,40 @@ the tests assert specific concepts, displays and counts that only that subontolo
 * The server SHALL return the display in the requested language, following the edition's language
   reference sets - see [Languages](languages.html)
 
+##### Post-coordination: agreed scope
+
+**Note:** The SNOMED Computable Languages Group (meeting of 19 October 2026, at the SNOMED International
+business meetings) agreed the support that ecosystem servers are required to provide for post-coordinated
+expressions. The full set is recorded here so that implementers know what is coming; the items marked
+*(not yet tested)* are not yet enforced by the test cases, and will be added to the `snomed` suite as the
+tests are written. Where they bear on the rules above, the rules above already say how the tests check
+them.
+
+A server that supports SNOMED CT SHALL:
+
+* check post-coordinated expressions against the MRCM in `$validate-code` (as described above)
+* return a workable display for an expression when validating it: `$validate-code` on a valid
+  expression SHALL return a `display` that a human can read
+* expand value sets that enumerate post-coordinated expressions explicitly, returning the enumerated
+  expressions in the expansion. Any value set that does not say `expressions = false` admits
+  post-coordinated expressions, and for such a value set the server MAY generate post-coordinated
+  expressions in the expansion, but is never required to: a server that returns only precoordinated
+  concepts (and any expressions the value set enumerates) is conformant
+* generate a normal form for an expression *(not yet tested: which normal form is still to be
+  specified)*
+* `$translate` to and from post-coordinated expressions, catering for the normal form: a map target
+  or source that is written in a different but equivalent form SHALL still be matched *(not yet
+  tested)*
+* correctly convert edition-specific concepts to the International Edition, producing a
+  post-coordinated expression where the International Edition has no equivalent precoordinated
+  concept. Such an expression SHALL use only concepts found in the International Edition *(not yet
+  tested)*
+* in `$subsumes`, correctly determine when one post-coordinated expression is subsumed by another, or
+  by a precoordinated concept, by simple structural rules. The server SHALL NOT wrongly claim that
+  expressions are or are not subsumed, and MAY (and generally SHOULD) answer that subsumption cannot
+  be determined where the structural rules do not settle it. Servers are not expected to base their
+  subsumption reasoning on an OWL classifier (as described above)
+
 #### LOINC
 
 *(mode: `tx.fhir.org` at present; suite: `tx.fhir.org`)*

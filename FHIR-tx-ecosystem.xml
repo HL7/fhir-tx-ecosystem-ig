@@ -258,6 +258,8 @@
 <page deprecated="true" key="terminology" name="Terminology"/>
 <page key="test-history" name="Test Case History"/>
 <page key="testcases" name="Test Case Registry"/>
+<page key="icd-11" name="Using ICD-11 with HL7 Standards"/>
+<page key="icf" name="Using ICF with HL7 Standards"/>
 <page deprecated="true" key="vte1" name="Venous Thromboembolism Prophylaxis (VTE-1)"/>
 <page deprecated="true" key="history" name="history"/>
 </specification>
