@@ -1,0 +1,35 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-structure-full",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-structure-full",
+  "version" : "0.1.0",
+  "name" : "ICFStructureFull",
+  "status" : "active",
+  "description" : "Body structures, which must have all three qualifiers (8 does not count)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "s"
+      },
+      {
+        "property" : "extent",
+        "op" : "exists",
+        "value" : "true"
+      },
+      {
+        "property" : "nature",
+        "op" : "exists",
+        "value" : "true"
+      },
+      {
+        "property" : "localization",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}

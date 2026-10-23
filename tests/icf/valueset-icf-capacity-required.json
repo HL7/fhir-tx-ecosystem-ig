@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-capacity-required",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-capacity-required",
+  "version" : "0.1.0",
+  "name" : "ICFCapacityRequired",
+  "status" : "active",
+  "description" : "Activities and participation, which must have a capacity qualifier (8 does not count)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "d"
+      },
+      {
+        "property" : "capacity",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}

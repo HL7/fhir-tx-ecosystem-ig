@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "b1100.2"
+  },
+  {
+    "name" : "display",
+    "valueString" : "State of consciousness: MODERATE impairment"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "$external:1:State of consciousness: SEVERE impairment|b1100.2$"
+        },
+        "expression" : ["display"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:1:State of consciousness: SEVERE impairment|b1100.2$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/icf"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2001a"
+  }]
+}

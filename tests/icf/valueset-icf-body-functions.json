@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-body-functions",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-body-functions",
+  "version" : "0.1.0",
+  "name" : "ICFBodyFunctions",
+  "status" : "active",
+  "description" : "All body functions, with no rules about qualifiers",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "b"
+      }]
+    }]
+  }
+}

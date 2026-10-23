@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-no-localization",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-no-localization",
+  "version" : "0.1.0",
+  "name" : "ICFNoLocalization",
+  "status" : "active",
+  "description" : "Body structures, which may not have a localization qualifier (8 is allowed, since it says nothing)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "s"
+      },
+      {
+        "property" : "localization",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}

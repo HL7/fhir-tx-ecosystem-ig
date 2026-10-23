@@ -1,0 +1,33 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-enumerated",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-enumerated",
+  "version" : "0.1.0",
+  "name" : "ICFEnumerated",
+  "status" : "active",
+  "description" : "Some ICF codes listed explicitly, plain and qualified",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "concept" : [{
+        "code" : "b1100"
+      },
+      {
+        "code" : "b1100.2"
+      },
+      {
+        "code" : "s7300.183"
+      },
+      {
+        "code" : "s7300.888"
+      },
+      {
+        "code" : "d450.12"
+      },
+      {
+        "code" : "e310"
+      }]
+    }]
+  }
+}

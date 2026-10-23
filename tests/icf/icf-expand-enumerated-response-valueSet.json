@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-enumerated",
+  "version" : "0.1.0",
+  "name" : "ICFEnumerated",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 6,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/icf|2001a"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "b1100",
+      "display" : "State of consciousness"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "b1100.2",
+      "display" : "State of consciousness: MODERATE impairment"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "d450.12",
+      "display" : "Walking: performance MILD problem, capacity MODERATE problem"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "e310",
+      "display" : "Immediate family"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "s7300.183",
+      "display" : "Structure of upper arm: MILD impairment, both sides"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "s7300.888",
+      "display" : "Structure of upper arm"
+    }]
+  }
+}

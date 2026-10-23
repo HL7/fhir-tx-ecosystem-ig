@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "d450.1234"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Walking: performance MILD problem, capacity MODERATE problem, capacity with assistance SEVERE problem, performance without assistance COMPLETE problem"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/icf"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2001a"
+  }]
+}

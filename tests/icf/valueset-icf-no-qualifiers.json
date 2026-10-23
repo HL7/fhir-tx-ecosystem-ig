@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-no-qualifiers",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers",
+  "version" : "0.1.0",
+  "name" : "ICFNoQualifiers",
+  "status" : "active",
+  "description" : "All of ICF, but no qualified codes at all (not even ones that are all 8)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "qualified",
+        "op" : "=",
+        "value" : "false"
+      }]
+    }]
+  }
+}

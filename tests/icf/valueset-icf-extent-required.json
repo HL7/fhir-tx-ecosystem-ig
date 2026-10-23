@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icf-extent-required",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icf-extent-required",
+  "version" : "0.1.0",
+  "name" : "ICFExtentRequired",
+  "status" : "active",
+  "description" : "Body functions, which must have an extent qualifier (8 does not count)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "version" : "2001a",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "b"
+      },
+      {
+        "property" : "extent",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}
