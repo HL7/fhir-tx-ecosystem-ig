@@ -13,7 +13,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 1583,
+    "total" : 2224,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",
@@ -29,7 +29,7 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,
@@ -43,8 +43,308 @@
     "contains" : [{
       "system" : "http://loinc.org",
       "inactive" : true,
+      "code" : "101155-0",
+      "display" : "Alpha hydroxyetizolam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101157-6",
+      "display" : "Flualprazolam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101158-4",
+      "display" : "Flualprazolam [Presence] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101159-2",
+      "display" : "Flubromazolam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101161-8",
+      "display" : "p-Fluorofentanyl/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101162-6",
+      "display" : "p-Fluorofentanyl [Presence] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101164-2",
+      "display" : "Brorphine/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101167-5",
+      "display" : "Metonitazene/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101171-7",
+      "display" : "2-methyl AP-237/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101181-6",
+      "display" : "MDMB-4en-PINACA [Mass/volume] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101182-4",
+      "display" : "MDMB-4en-PINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101183-2",
+      "display" : "MDMB-4en-PINACA [Presence] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101185-7",
+      "display" : "4F-MDMB-BINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101188-1",
+      "display" : "ADB-BUTINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101191-5",
+      "display" : "5F-MDMB-PICA/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101334-1",
+      "display" : "Etizolam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101795-3",
+      "display" : "Tianeptine/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101796-1",
+      "display" : "Psilocin/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101798-7",
+      "display" : "8-Aminoclonazolam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101799-5",
+      "display" : "2-Oxo-3-Hydroxy-Lysergate diethylamide/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101800-1",
+      "display" : "Lysergate diethylamide/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101810-0",
+      "display" : "Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101812-6",
+      "display" : "2,6-dimethylaniline/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "101861-3",
+      "display" : "4F-MDMB-BUTICA/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
       "code" : "102006-4",
       "display" : "von Willebrand factor.platelet binding activity without ristocetin [Units/volume] in Platelet poor plasma by Latex agglutination",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "103589-8",
+      "display" : "Flualprazolam [Presence] in Cord tissue by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "103640-9",
+      "display" : "4-hydroxy Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "104229-0",
+      "display" : "Carfentanil [Mass/volume] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "104230-8",
+      "display" : "MDMB-Fubinaca [Mass/volume] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "104237-3",
+      "display" : "Zopiclone [Mass/volume] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "104692-9",
+      "display" : "oxyMORphone [Presence] in Saliva (oral fluid) by Screen method",
       "property" : [{
         "code" : "status",
         "valueCode" : "DISCOURAGED"
@@ -83,8 +383,138 @@
     {
       "system" : "http://loinc.org",
       "inactive" : true,
+      "code" : "105709-0",
+      "display" : "Protonitazene/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105710-8",
+      "display" : "Isotonitazene/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105711-6",
+      "display" : "Pentylone/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105712-4",
+      "display" : "N,N-Dimethylpentylone/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105713-2",
+      "display" : "Alpha-Pyrrolidinoisohexanophenone/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105718-1",
+      "display" : "Bromazolam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105721-5",
+      "display" : "Flubromazepam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105723-1",
+      "display" : "Desalkylgidazepam/Creatinine [Mass Ratio] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105942-7",
+      "display" : "Tetrahydrocannabinol [Presence] in Saliva (oral fluid) by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105943-5",
+      "display" : "Tetrahydrocannabinol [Mass/volume] in Saliva (oral fluid) by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105951-8",
+      "display" : "Norketamine [Presence] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "105979-9",
+      "display" : "Zolpidem phenyl-4-carboxylate [Presence] in Urine by Confirmatory method",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
       "code" : "10735-9",
       "display" : "Virus identified in Serum by Sequencing",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DISCOURAGED"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "inactive" : true,
+      "code" : "107518-3",
+      "display" : "N-Desethyl Isotonitazene/Creatinine [Mass Ratio] in Urine by Confirmatory method",
       "property" : [{
         "code" : "status",
         "valueCode" : "DISCOURAGED"
@@ -605,436 +1035,6 @@
       "inactive" : true,
       "code" : "12684-7",
       "display" : "Lutropin [Moles/volume] in Serum or Plasma --9th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12685-4",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --2nd specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12686-2",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --3rd specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12687-0",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --4th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12688-8",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --5th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12689-6",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --6th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12690-4",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --7th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12691-2",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --8th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12692-0",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --9th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12693-8",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --10th specimen post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12694-6",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12695-3",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --15 minutes pre XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12696-1",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --pre XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12697-9",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --10 minutes post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12698-7",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --15 minutes post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12699-5",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --20 minutes post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12700-1",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --45 minutes post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12701-9",
-      "display" : "Somatotropin [Moles/volume] in Serum or Plasma --2.5 hours post XXX challenge",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12715-9",
-      "display" : "Homovanillate [Mass/time] in Urine",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12721-7",
-      "display" : "Melatonin [Units/volume] in Serum or Plasma",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12732-4",
-      "display" : "Interleukin 12 [Units/volume] in Serum or Plasma",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12777-9",
-      "display" : "Kappa light chains.free [Units/volume] in Urine",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12778-7",
-      "display" : "Lambda light chains.free [Units/volume] in Urine",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12779-5",
-      "display" : "Nickel [Mass/time] in Urine",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12808-2",
-      "display" : "Uroporphyrin [Mass/time] in Urine",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "12809-0",
-      "display" : "Coproporphyrin [Mass/time] in Urine",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13055-9",
-      "display" : "Heparin [Units/volume] in Platelet poor plasma",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13130-0",
-      "display" : "Motilin [Units/volume] in Serum or Plasma",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13364-5",
-      "display" : "Amino beta guanidinopropionate [Mass/volume] in Plasma",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13365-2",
-      "display" : "Amino beta guanidinopropionate [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13366-0",
-      "display" : "Alpha aminoadipate [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13367-8",
-      "display" : "Beta aminoisobutyrate [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13368-6",
-      "display" : "Beta alanine [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13369-4",
-      "display" : "Carnosine [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13370-2",
-      "display" : "Cystathionine [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13373-6",
-      "display" : "Hydroxylysine [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13380-1",
-      "display" : "Sarcosine [Mass/volume] in Cerebral spinal fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13382-7",
-      "display" : "Amino beta guanidinopropionate [Mass/volume] in Amniotic fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13383-5",
-      "display" : "Alpha aminobutyrate [Mass/volume] in Amniotic fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13384-3",
-      "display" : "Alpha aminoadipate [Mass/volume] in Amniotic fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13385-0",
-      "display" : "Beta aminoisobutyrate [Mass/volume] in Amniotic fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13386-8",
-      "display" : "Anserine [Mass/volume] in Amniotic fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13387-6",
-      "display" : "Arginine [Mass/volume] in Amniotic fluid",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "DISCOURAGED"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "inactive" : true,
-      "code" : "13388-4",
-      "display" : "Asparagine [Mass/volume] in Amniotic fluid",
       "property" : [{
         "code" : "status",
         "valueCode" : "DISCOURAGED"

@@ -4937,6 +4937,20 @@
         "response" : "tx.fhir.org/loinc-lookup-answer-response-parameters.json"
       },
       {
+        "name" : "loinc-lookup-part-mappings",
+        "description" : "A LOINC part's mappings to other code systems (PartRelatedCodeMapping) are Coding properties named for the map - sct, ncbi (PubChem), chebi - with the equivalence as a subproperty. Asked for by name here; they are also returned by default (see loinc-lookup-code and loinc-lookup-answer)",
+        "operation" : "lookup",
+        "request" : "tx.fhir.org/loinc-lookup-part-mappings-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-lookup-part-mappings-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-answer-race",
+        "description" : "An answer's external code from the answer list (ExtCodeSystem https://www.cdc.gov/phin) is reported in the CDC race and ethnicity system, urn:oid:2.16.840.1.113883.6.238, as the property race",
+        "operation" : "lookup",
+        "request" : "tx.fhir.org/loinc-lookup-answer-race-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-lookup-answer-race-response-parameters.json"
+      },
+      {
         "name" : "loinc-validate-code",
         "description" : "to be provided",
         "operation" : "cs-validate-code",
@@ -5403,6 +5417,34 @@
         "http-code" : "4xx",
         "request" : "tx.fhir.org/loinc-subsumes-unknown-code-request-parameters.json",
         "response" : "tx.fhir.org/loinc-subsumes-unknown-code-response-parameters.json"
+      },
+      {
+        "name" : "loinc-translate-part-sct",
+        "description" : "Translate a LOINC part to SNOMED CT by naming the target system: the implicit map http://loinc.org/cm/sct (from PartRelatedCodeMapping) is found",
+        "operation" : "translate",
+        "request" : "tx.fhir.org/loinc-translate-part-sct-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-translate-part-sct-response-parameters.json"
+      },
+      {
+        "name" : "loinc-translate-sct-part",
+        "description" : "Translate a SNOMED CT concept to LOINC by naming the target system: the same map, used the other way. Three parts map to 409822003; the one LOINC says the SNOMED CT concept is narrower than comes back as source-is-narrower-than-target",
+        "operation" : "translate",
+        "request" : "tx.fhir.org/loinc-translate-sct-part-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-translate-sct-part-response-parameters.json"
+      },
+      {
+        "name" : "loinc-translate-part-sct-url",
+        "description" : "Translate a LOINC part to SNOMED CT by naming the map, http://loinc.org/cm/sct. LOINC says the SNOMED CT concept is narrower than the part, so the source is broader than the target",
+        "operation" : "translate",
+        "request" : "tx.fhir.org/loinc-translate-part-sct-url-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-translate-part-sct-url-response-parameters.json"
+      },
+      {
+        "name" : "loinc-translate-code-mdc",
+        "description" : "Translate a LOINC code to ISO/IEEE 11073 MDC with the map from the LOINC/IEEE medical device code mapping table, found by the target system. The MDC codes are narrower than the LOINC code, so the source is broader than the target",
+        "operation" : "translate",
+        "request" : "tx.fhir.org/loinc-translate-code-mdc-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-translate-code-mdc-response-parameters.json"
       }
     ]
   },{
@@ -5990,6 +6032,97 @@
         "operation" : "translate",
         "request" : "sct/translate-edition-inactive-replaced-request.json",
         "response" : "sct/translate-edition-inactive-replaced-response.json"
+      },
+      {
+        "name" : "snomed-lookup-loinc",
+        "description" : "LOINC Extension: $lookup asking for the loinc property returns the LOINC code; effectiveTime, module, parent and child are optional, since they were not asked for",
+        "operation" : "lookup",
+        "request" : "sct/lookup-loinc-request.json",
+        "response" : "sct/lookup-loinc-response.json"
+      },
+      {
+        "name" : "snomed-lookup-loinc-inactive",
+        "description" : "LOINC Extension: an inactive LOINC Extension concept still has its LOINC code",
+        "operation" : "lookup",
+        "request" : "sct/lookup-loinc-inactive-request.json",
+        "response" : "sct/lookup-loinc-inactive-response.json"
+      },
+      {
+        "name" : "snomed-lookup-loinc-none",
+        "description" : "LOINC Extension: a concept with no LOINC code has no loinc property",
+        "operation" : "lookup",
+        "request" : "sct/lookup-loinc-none-request.json",
+        "response" : "sct/lookup-loinc-none-response.json"
+      },
+      {
+        "name" : "snomed-lookup-loinc-default",
+        "description" : "LOINC Extension: with no properties asked for, $lookup includes the LOINC code (mappings are returned by default)",
+        "operation" : "lookup",
+        "request" : "sct/lookup-loinc-default-request.json",
+        "response" : "sct/lookup-loinc-default-response.json"
+      },
+      {
+        "name" : "snomed-expand-loinc",
+        "description" : "LOINC Extension: filter mapped:30051010000102 exists true - every concept with a LOINC code (12, one inactive)",
+        "operation" : "expand",
+        "request" : "sct/expand-loinc-request.json",
+        "response" : "sct/expand-loinc-response.json"
+      },
+      {
+        "name" : "snomed-expand-loinc-isa",
+        "description" : "LOINC Extension: concepts under Renal function that have a LOINC code",
+        "operation" : "expand",
+        "request" : "sct/expand-loinc-isa-request.json",
+        "response" : "sct/expand-loinc-isa-response.json"
+      },
+      {
+        "name" : "snomed-expand-loinc-isa-none",
+        "description" : "LOINC Extension: concepts under Renal function that do not have a LOINC code",
+        "operation" : "expand",
+        "request" : "sct/expand-loinc-isa-none-request.json",
+        "response" : "sct/expand-loinc-isa-none-response.json"
+      },
+      {
+        "name" : "snomed-translate-loinc",
+        "description" : "LOINC Extension: translate a SNOMED CT concept to its LOINC code with the implicit map ?fhir_cm=11010000107",
+        "operation" : "translate",
+        "request" : "sct/translate-loinc-request.json",
+        "response" : "sct/translate-loinc-response.json"
+      },
+      {
+        "name" : "snomed-translate-loinc-none",
+        "description" : "LOINC Extension: a SNOMED CT concept with no LOINC code has no translation",
+        "operation" : "translate",
+        "request" : "sct/translate-loinc-none-request.json",
+        "response" : "sct/translate-loinc-none-response.json"
+      },
+      {
+        "name" : "snomed-translate-loinc-reverse",
+        "description" : "LOINC Extension: translate a LOINC code to its SNOMED CT concept with the implicit map ?fhir_cm=11010000107",
+        "operation" : "translate",
+        "request" : "sct/translate-loinc-reverse-request.json",
+        "response" : "sct/translate-loinc-reverse-response.json"
+      },
+      {
+        "name" : "snomed-translate-loinc-reverse-none",
+        "description" : "LOINC Extension: a LOINC code with no concept in the edition has no translation",
+        "operation" : "translate",
+        "request" : "sct/translate-loinc-reverse-none-request.json",
+        "response" : "sct/translate-loinc-reverse-none-response.json"
+      },
+      {
+        "name" : "snomed-translate-loinc-system",
+        "description" : "LOINC Extension: translate a SNOMED CT concept to LOINC by naming the target system (http://loinc.org) rather than the map: the implicit map ?fhir_cm=11010000107 is found",
+        "operation" : "translate",
+        "request" : "sct/translate-loinc-system-request.json",
+        "response" : "sct/translate-loinc-system-response.json"
+      },
+      {
+        "name" : "snomed-translate-loinc-system-reverse",
+        "description" : "LOINC Extension: translate a LOINC code to SNOMED CT by naming the target system (the edition, as system|version) rather than the map: the implicit map ?fhir_cm=11010000107 is found",
+        "operation" : "translate",
+        "request" : "sct/translate-loinc-system-reverse-request.json",
+        "response" : "sct/translate-loinc-system-reverse-response.json"
       }
     ]
   },{
@@ -6758,7 +6891,7 @@
       },
       {
         "name" : "snomed-expand-ecl-concept-filter-inactive",
-        "description" : "Concept filter active = false: the inactive concepts (4 results).",
+        "description" : "Concept filter active = false: the inactive concepts (7 results).",
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-concept-filter-inactive-request.json",
         "response" : "sct/ecl/expand-ecl-concept-filter-inactive-response.json"

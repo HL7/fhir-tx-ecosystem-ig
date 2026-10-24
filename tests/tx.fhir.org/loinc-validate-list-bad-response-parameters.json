@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-in-vs"
                 }],
-              "text" : "$external:1:http://loinc.org#100746-7|http://loinc.org/vs/LL361-7|2.82$"
+              "text" : "$external:1:http://loinc.org#100746-7|http://loinc.org/vs/LL361-7|2.83$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]
@@ -34,7 +34,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "$external:1:http://loinc.org#100746-7|http://loinc.org/vs/LL361-7|2.82$"
+      "valueString" : "$external:1:http://loinc.org#100746-7|http://loinc.org/vs/LL361-7|2.83$"
     },
     {
       "name" : "result",
@@ -46,7 +46,7 @@
     },
     {
       "name" : "version",
-      "valueString" : "2.82",
+      "valueString" : "2.83",
       "$optional$" : "warning:version"
     }]
 }

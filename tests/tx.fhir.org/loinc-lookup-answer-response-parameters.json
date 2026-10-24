@@ -3130,6 +3130,33 @@
     }]
   },
   {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "sct"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "equivalence"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "equivalent"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260101",
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)"
+      }
+    }]
+  },
+  {
     "$optional$" : true,
     "name" : "system",
     "valueUri" : "http://loinc.org"
@@ -3144,6 +3171,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "2.82"
+    "valueString" : "2.83"
   }]
 }

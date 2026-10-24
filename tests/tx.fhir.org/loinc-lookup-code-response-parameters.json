@@ -207,13 +207,51 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://loinc.org",
+        "code" : "SHORTNAME",
+        "display" : "SHORTNAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "glucose in bloed"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "nl-NL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LinguisticVariantDisplayName",
+        "display" : "LinguisticVariantDisplayName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "glucose in bloed"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "nl-NL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
         "code" : "LONG_COMMON_NAME",
         "display" : "LONG_COMMON_NAME"
       }
     },
     {
       "name" : "value",
-      "valueString" : "Glucose [massa/volume] in bloed"
+      "valueString" : "glucose in bloed (massaconcentratie)"
     }]
   },
   {
@@ -383,6 +421,58 @@
     {
       "name" : "value",
       "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "mdc"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "equivalence"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "narrower"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "urn:iso:std:iso:11073:10101",
+        "code" : "160020",
+        "display" : "MDC_CONC_GLU_GEN"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "mdc"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "equivalence"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "narrower"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "urn:iso:std:iso:11073:10101",
+        "code" : "160364",
+        "display" : "MDC_CONC_GLU_UNDETERMINED_WHOLEBLOOD"
+      }
     }]
   },
   {
@@ -653,6 +743,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "2.82"
+    "valueString" : "2.83"
   }]
 }

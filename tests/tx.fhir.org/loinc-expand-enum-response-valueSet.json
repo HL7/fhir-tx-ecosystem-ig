@@ -20,7 +20,7 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,

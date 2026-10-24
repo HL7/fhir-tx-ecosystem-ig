@@ -1234,8 +1234,8 @@
   },
   "tx.fhir.org/loinc-validate-enum-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'",
-    "2" : "Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.82'",
-    "3" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'; Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.82'"
+    "2" : "Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.83'",
+    "3" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'; Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.83'"
   },
   "tx.fhir.org/loinc-validate-filter-class-regex-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0'"
@@ -1268,10 +1268,10 @@
     "1" : "The concept '10879-5' has a status of DISCOURAGED and its use should be reviewed"
   },
   "tx.fhir.org/loinc-validate-invalid-response-parameters.json" : {
-    "1" : "Unknown code 'XX111373-9' in the CodeSystem 'http://loinc.org' version '2.82'"
+    "1" : "Unknown code 'XX111373-9' in the CodeSystem 'http://loinc.org' version '2.83'"
   },
   "tx.fhir.org/loinc-validate-list-bad-response-parameters.json" : {
-    "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://loinc.org/vs/LL361-7|2.82'"
+    "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://loinc.org/vs/LL361-7|2.83'"
   },
   "tx.fhir.org/snomed-validate-active-bad-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct#100005' was not found in the value set '(unidentified)'",

@@ -13,14 +13,14 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 431,
+    "total" : 438,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,
@@ -178,8 +178,38 @@
     },
     {
       "system" : "http://loinc.org",
+      "code" : "112407-2",
+      "display" : "Bacteria [Presence] in Urine by Light microscopy"
+    },
+    {
+      "system" : "http://loinc.org",
       "code" : "11261-5",
       "display" : "Bacteria identified in Vaginal fluid by Aerobe culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "112851-1",
+      "display" : "Bacteria identified in Surgical wound.shallow by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "112852-9",
+      "display" : "Bacteria identified in Surgical wound.deep by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "112891-7",
+      "display" : "Bacteria identified in Ear by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "113007-9",
+      "display" : "Bacteria identified in Drain by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "113009-5",
+      "display" : "Bacteria identified in Drain by Anaerobe culture"
     },
     {
       "system" : "http://loinc.org",
@@ -857,7 +887,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "41602-4",
-      "display" : "Bacteria [Presence] in Cerebral spinal fluid by Light microscopy"
+      "display" : "Bacteria [Presence] in Cerebrospinal Fluid by Light microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -1275,7 +1305,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "606-4",
-      "display" : "Bacteria identified in Cerebral spinal fluid by Culture"
+      "display" : "Bacteria identified in Cerebrospinal Fluid by Culture"
     },
     {
       "system" : "http://loinc.org",
@@ -1494,7 +1524,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "75518-1",
-      "display" : "Bacteria identified in Cerebral spinal fluid by Latex agglutination"
+      "display" : "Bacteria identified in Cerebrospinal Fluid by Latex agglutination"
     },
     {
       "system" : "http://loinc.org",
@@ -1569,7 +1599,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "87937-9",
-      "display" : "Bacteria identified in Cerebral spinal fluid by Anaerobe culture"
+      "display" : "Bacteria identified in Cerebrospinal Fluid by Anaerobe culture"
     },
     {
       "system" : "http://loinc.org",
@@ -1634,7 +1664,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "88236-5",
-      "display" : "Bacteria identified in Cerebral spinal fluid by Aerobe culture"
+      "display" : "Bacteria identified in Cerebrospinal Fluid by Aerobe culture"
     },
     {
       "system" : "http://loinc.org",
@@ -1779,7 +1809,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "LP373671-9",
-      "display" : "Bacteria | Cerebral spinal fluid | Microbiology"
+      "display" : "Bacteria | Cerebrospinal Fluid  | Microbiology"
     },
     {
       "system" : "http://loinc.org",
@@ -2203,8 +2233,13 @@
     },
     {
       "system" : "http://loinc.org",
-      "code" : "LP450263-1",
-      "display" : "Bacteria | Prostatic fluid | Microbiology"
+      "code" : "LP451203-6",
+      "display" : "Bacteria | Surgical wound.deep | Microbiology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP451204-4",
+      "display" : "Bacteria | Surgical wound.shallow | Microbiology"
     }]
   }
 }

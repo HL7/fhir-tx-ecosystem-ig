@@ -3,7 +3,7 @@
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://loinc.org/vs/LL361-7",
-  "version" : "2.82",
+  "version" : "2.83",
   "name" : "LOINCAnswerListLL361_7",
   "status" : "active",
   "experimental" : false,
@@ -15,7 +15,7 @@
     "total" : 2,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,

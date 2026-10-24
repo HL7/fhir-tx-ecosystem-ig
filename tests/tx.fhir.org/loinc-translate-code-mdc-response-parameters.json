@@ -1,0 +1,91 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display", "version"],
+        "system" : "urn:iso:std:iso:11073:10101",
+        "code" : "160020",
+        "display" : "MDC_CONC_GLU_GEN"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "narrower"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://loinc.org/cm/mdc"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "source-is-broader-than-target"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://loinc.org/cm/mdc"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "2339-0"
+      }
+    }]
+  },
+  {
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display", "version"],
+        "system" : "urn:iso:std:iso:11073:10101",
+        "code" : "160364",
+        "display" : "MDC_CONC_GLU_UNDETERMINED_WHOLEBLOOD"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "narrower"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://loinc.org/cm/mdc"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "source-is-broader-than-target"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://loinc.org/cm/mdc"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "2339-0"
+      }
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "used-conceptmap",
+    "valueUri" : "http://loinc.org/cm/mdc"
+  },
+  {
+    "name" : "used-system",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}

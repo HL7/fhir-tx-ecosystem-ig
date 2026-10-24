@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "http://loinc.org",
+      "code" : "2339-0"
+    }
+  },
+  {
+    "name" : "targetSystem",
+    "valueUri" : "urn:iso:std:iso:11073:10101"
+  }]
+}

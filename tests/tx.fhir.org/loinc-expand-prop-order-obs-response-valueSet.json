@@ -28,7 +28,7 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,
@@ -42,57 +42,57 @@
     "contains" : [{
       "system" : "http://loinc.org",
       "code" : "100018-1",
-      "display" : "Hospice care Note"
+      "display" : "Hospice Care Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100019-9",
-      "display" : "ALK gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "ALK gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100020-7",
-      "display" : "GNA11 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "GNA11 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100021-5",
-      "display" : "GNAQ gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "GNAQ gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100022-3",
-      "display" : "IDH1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "IDH1 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100023-1",
-      "display" : "IDH2 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "IDH2 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100024-9",
-      "display" : "SETBP1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "SETBP1 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100025-6",
-      "display" : "SRSF2 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "SRSF2 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100026-4",
-      "display" : "MET gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "MET gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100027-2",
-      "display" : "SMAD4 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "SMAD4 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100028-0",
-      "display" : "FBXW7 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+      "display" : "FBXW7 gene mutations found [Identifier] in Blood or Tissue by Targeted gene mutation analysis Nominal"
     },
     {
       "system" : "http://loinc.org",

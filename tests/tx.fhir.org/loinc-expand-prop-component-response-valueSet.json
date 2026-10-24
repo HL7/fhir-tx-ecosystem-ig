@@ -20,7 +20,7 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,
@@ -183,7 +183,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "14744-7",
-      "display" : "Glucose [Moles/volume] in Cerebral spinal fluid"
+      "display" : "Glucose [Moles/volume] in Cerebrospinal Fluid"
     },
     {
       "system" : "http://loinc.org",
@@ -292,7 +292,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "2342-4",
-      "display" : "Glucose [Mass/volume] in Cerebral spinal fluid"
+      "display" : "Glucose [Mass/volume] in Cerebrospinal Fluid"
     },
     {
       "system" : "http://loinc.org",

@@ -39,7 +39,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "$external:2:LP111373-9X|http://loinc.org|2.82$"
+          "text" : "$external:2:LP111373-9X|http://loinc.org|2.83$"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -48,7 +48,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "$external:3:http://loinc.org#LP111373-9X|http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0|LP111373-9X|http://loinc.org|2.82$"
+    "valueString" : "$external:3:http://loinc.org#LP111373-9X|http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0|LP111373-9X|http://loinc.org|2.83$"
   },
   {
     "name" : "result",
@@ -61,6 +61,6 @@
   {
     "$optional$" : "warning:version",
     "name" : "version",
-    "valueString" : "2.82"
+    "valueString" : "2.83"
   }]
 }

@@ -28,7 +28,7 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.82"
+      "valueUri" : "http://loinc.org|2.83"
     },
     {
       "$optional$" : true,
@@ -42,7 +42,7 @@
     "contains" : [{
       "system" : "http://loinc.org",
       "code" : "100018-1",
-      "display" : "Hospice care Note"
+      "display" : "Hospice Care Note"
     },
     {
       "system" : "http://loinc.org",
@@ -147,397 +147,397 @@
     {
       "system" : "http://loinc.org",
       "code" : "100438-1",
-      "display" : "Adolescent medicine Outpatient Progress note"
+      "display" : "Adolescent Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100439-9",
-      "display" : "Allergy and Immunology Outpatient Progress note"
+      "display" : "Allergy and Immunology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100440-7",
-      "display" : "Allergy Outpatient Progress note"
+      "display" : "Allergy Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100441-5",
-      "display" : "Attending Outpatient Progress note"
+      "display" : "Attending Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100442-3",
-      "display" : "Audiology Outpatient Progress note"
+      "display" : "Audiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100443-1",
-      "display" : "Bariatric surgery Outpatient Progress note"
+      "display" : "Bariatric Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100444-9",
-      "display" : "Blood banking and transfusion medicine Outpatient Progress note"
+      "display" : "Blood Banking and Transfusion Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100445-6",
-      "display" : "Bone Marrow Transplant Outpatient Progress note"
+      "display" : "Bone Marrow Transplant Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100446-4",
-      "display" : "Breastfeeding Outpatient Progress note"
+      "display" : "Breastfeeding Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100447-2",
-      "display" : "Burn management Outpatient Progress note"
+      "display" : "Burn Management Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100448-0",
-      "display" : "Cardiac surgery Outpatient Progress note"
+      "display" : "Cardiac Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100449-8",
-      "display" : "Cardiopulmonary Outpatient Progress note"
+      "display" : "Cardiopulmonary Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100450-6",
-      "display" : "Child and adolescent psychiatry Outpatient Progress note"
+      "display" : "Child and Adolescent Psychiatry Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100451-4",
-      "display" : "Chiropractic medicine Outpatient Progress note"
+      "display" : "Chiropractic Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100452-2",
-      "display" : "Clinical cardiac electrophysiology Outpatient Progress note"
+      "display" : "Clinical Cardiac Electrophysiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100453-0",
-      "display" : "Clinical genetics Outpatient Progress note"
+      "display" : "Clinical Genetics Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100454-8",
-      "display" : "Clinical neurophysiology Outpatient Progress note"
+      "display" : "Clinical Neurophysiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100455-5",
-      "display" : "Clinical pathology Outpatient Progress note"
+      "display" : "Clinical Pathology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100456-3",
-      "display" : "Colon and rectal surgery Outpatient Progress note"
+      "display" : "Colon and Rectal Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100457-1",
-      "display" : "Consultant Outpatient Progress note"
+      "display" : "Consultant Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100458-9",
-      "display" : "Outpatient COVID-19 Intubation Progress note"
+      "display" : "Outpatient COVID-19 Intubation Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100459-7",
-      "display" : "Outpatient COVID-19 Progress note"
+      "display" : "Outpatient COVID-19 Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100460-5",
-      "display" : "Dermatology Outpatient Progress note"
+      "display" : "Dermatology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100461-3",
-      "display" : "Developmental-behavioral pediatrics Outpatient Progress note"
+      "display" : "Developmental-Behavioral Pediatrics Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100462-1",
-      "display" : "Dialysis and Therapeutic apheresis Outpatient Progress note"
+      "display" : "Dialysis and Therapeutic Apheresis Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100463-9",
-      "display" : "Eating disorders Outpatient Progress note"
+      "display" : "Eating Disorders Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100464-7",
-      "display" : "Endocrinology Outpatient Progress note"
+      "display" : "Endocrinology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100465-4",
-      "display" : "Family medicine Outpatient Progress note"
+      "display" : "Family Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100466-2",
-      "display" : "Gastroenterology Outpatient Progress note"
+      "display" : "Gastroenterology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100467-0",
-      "display" : "Geriatric medicine Outpatient Progress note"
+      "display" : "Geriatric Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100468-8",
-      "display" : "Gynecologic oncology Outpatient Progress note"
+      "display" : "Gynecologic Oncology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100469-6",
-      "display" : "Gynecology Outpatient Progress note"
+      "display" : "Gynecology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100470-4",
-      "display" : "Healthcare navigator Outpatient Progress note"
+      "display" : "Healthcare Navigator Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100471-2",
-      "display" : "Heart failure Outpatient Progress note"
+      "display" : "Heart Failure Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100472-0",
-      "display" : "Heart failure+Transplant cardiology Outpatient Progress note"
+      "display" : "Heart Failure+Transplant Cardiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100473-8",
-      "display" : "Hematology Outpatient Progress note"
+      "display" : "Hematology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100474-6",
-      "display" : "Hematology+Medical oncology Outpatient Progress note"
+      "display" : "Hematology+Medical Oncology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100475-3",
-      "display" : "Hepatology Outpatient Progress note"
+      "display" : "Hepatology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100476-1",
-      "display" : "Immunology Outpatient Progress note"
+      "display" : "Immunology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100477-9",
-      "display" : "Infectious disease Outpatient Progress note"
+      "display" : "Infectious Disease Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100478-7",
-      "display" : "Internal medicine Outpatient Progress note"
+      "display" : "Internal Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100479-5",
-      "display" : "Interventional cardiology Outpatient Progress note"
+      "display" : "Interventional Cardiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100480-3",
-      "display" : "Interventional radiology Outpatient Progress note"
+      "display" : "Interventional Radiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100481-1",
-      "display" : "Outpatient Mechanical circulatory support Progress note"
+      "display" : "Outpatient Mechanical Circulatory Support Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100482-9",
-      "display" : "Medical Aid in Dying Outpatient Progress note"
+      "display" : "Medical Aid in Dying Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100483-7",
-      "display" : "Mental health Outpatient Progress note"
+      "display" : "Mental Health Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100484-5",
-      "display" : "Multi-specialty program Outpatient Progress note"
+      "display" : "Multi-Specialty Program Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100485-2",
-      "display" : "Neonatal perinatal medicine Outpatient Progress note"
+      "display" : "Neonatal Perinatal Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100486-0",
-      "display" : "Nephrology Outpatient Progress note"
+      "display" : "Nephrology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100487-8",
-      "display" : "Neurological surgery Outpatient Progress note"
+      "display" : "Neurological Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100488-6",
-      "display" : "Neurology Outpatient Progress note"
+      "display" : "Neurology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100489-4",
-      "display" : "Neurology with special qualifications in child neurology Outpatient Progress note"
+      "display" : "Neurology with Special Qualifications in Child Neurology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100490-2",
-      "display" : "Nurse practitioner Outpatient Progress note"
+      "display" : "Nurse Practitioner Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100491-0",
-      "display" : "Nurse Outpatient Progress note"
+      "display" : "Nurse Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100492-8",
-      "display" : "Nutrition and dietetics Outpatient Progress note"
+      "display" : "Nutrition and Dietetics Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100493-6",
-      "display" : "Obstetrics and Gynecology Outpatient Progress note"
+      "display" : "Obstetrics and Gynecology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100494-4",
-      "display" : "Obstetrics Outpatient Progress note"
+      "display" : "Obstetrics Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100495-1",
-      "display" : "Occupational therapy Outpatient Progress note"
+      "display" : "Occupational Therapy Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100496-9",
-      "display" : "Oncology Outpatient Progress note"
+      "display" : "Oncology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100497-7",
-      "display" : "Ophthalmology Outpatient Progress note"
+      "display" : "Ophthalmology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100498-5",
-      "display" : "Optometry Outpatient Progress note"
+      "display" : "Optometry Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100499-3",
-      "display" : "Oral and Maxillofacial Surgery Outpatient Progress note"
+      "display" : "Oral and Maxillofacial Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100500-8",
-      "display" : "Orthopaedic surgery Outpatient Progress note"
+      "display" : "Orthopaedic Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100501-6",
-      "display" : "Orthotics prosthetics Outpatient Progress note"
+      "display" : "Orthotics Prosthetics Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100502-4",
-      "display" : "Otolaryngology Outpatient Progress note"
+      "display" : "Otolaryngology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100503-2",
-      "display" : "Pain medicine Outpatient Progress note"
+      "display" : "Pain Medicine Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100504-0",
-      "display" : "Palliative care Outpatient Progress note"
+      "display" : "Palliative Care Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100505-7",
-      "display" : "Pediatric cardiology Outpatient Progress note"
+      "display" : "Pediatric Cardiology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100506-5",
-      "display" : "Pediatric dermatology Outpatient Progress note"
+      "display" : "Pediatric Dermatology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100507-3",
-      "display" : "Pediatric endocrinology Outpatient Progress note"
+      "display" : "Pediatric Endocrinology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100508-1",
-      "display" : "Pediatric gastroenterology Outpatient Progress note"
+      "display" : "Pediatric Gastroenterology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100509-9",
-      "display" : "Pediatric hematology-oncology Outpatient Progress note"
+      "display" : "Pediatric Hematology-Oncology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100510-7",
-      "display" : "Pediatric infectious diseases Outpatient Progress note"
+      "display" : "Pediatric Infectious Diseases Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100511-5",
-      "display" : "Pediatric otolaryngology Outpatient Progress note"
+      "display" : "Pediatric Otolaryngology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100512-3",
-      "display" : "Pediatric pulmonology Outpatient Progress note"
+      "display" : "Pediatric Pulmonology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100513-1",
-      "display" : "Pediatric rheumatology Outpatient Progress note"
+      "display" : "Pediatric Rheumatology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100514-9",
-      "display" : "Pediatric surgery Outpatient Progress note"
+      "display" : "Pediatric Surgery Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100515-6",
-      "display" : "Pediatric transplant hepatology Outpatient Progress note"
+      "display" : "Pediatric Transplant Hepatology Outpatient Progress Note"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100516-4",
-      "display" : "Pediatric urology Outpatient Progress note"
+      "display" : "Pediatric Urology Outpatient Progress Note"
     }]
   }
 }

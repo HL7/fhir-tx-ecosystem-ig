@@ -1,0 +1,112 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "LP14355-9"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Creatinine"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:LOINC|Logical Observation Identifier Names and Codes (LOINC)$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "chebi"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "equivalence"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "equivalent"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "https://www.ebi.ac.uk/chebi",
+        "code" : "CHEBI:16737",
+        "display" : "creatinine"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "ncbi"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "equivalence"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "equivalent"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "http://pubchem.ncbi.nlm.nih.gov",
+        "code" : "588",
+        "display" : "Creatinine"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "sct"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "equivalence"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "narrower"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260101",
+        "code" : "15373003",
+        "display" : "Creatinine (substance)"
+      }
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.83"
+  }]
+}

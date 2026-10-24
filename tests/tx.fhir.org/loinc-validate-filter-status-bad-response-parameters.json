@@ -46,7 +46,7 @@
     },
     {
       "name" : "version",
-      "valueString" : "2.82",
+      "valueString" : "2.83",
       "$optional$" : "warning:version"
     }]
 }

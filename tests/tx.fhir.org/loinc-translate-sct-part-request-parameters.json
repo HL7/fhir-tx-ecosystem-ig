@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "http://snomed.info/sct",
+      "code" : "409822003"
+    }
+  },
+  {
+    "name" : "targetSystem",
+    "valueUri" : "http://loinc.org"
+  }]
+}
