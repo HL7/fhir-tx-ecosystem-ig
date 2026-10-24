@@ -2,6 +2,18 @@
   "title" : "Terminology Tests History",
   "description" : "The change history for the terminology tests is maintained on the [test history](test-history.html) page in this IG. The entries below are the historical ones from before that page existed; this file is retained because the TxTester reads the current version from it.",
   "versions" : [{
+    "version" : "1.9.7",
+    "markdown" : "See the [test history](test-history.html) page. The TxTester reports the first version in this list as the version of the tests it ran, so this entry has to be the release being prepared."
+  },{
+    "version" : "1.9.6",
+    "markdown" : "See the [test history](test-history.html) page."
+  },{
+    "version" : "1.9.5",
+    "markdown" : "See the [test history](test-history.html) page."
+  },{
+    "version" : "1.9.4",
+    "markdown" : "See the [test history](test-history.html) page."
+  },{
     "version" : "1.9.3",
     "markdown" : "The change history has moved to the [test history](test-history.html) page in this IG, which is maintained from 1.9.2 onwards. This file is only still here because the TxTester reads the version from it."
   },{
