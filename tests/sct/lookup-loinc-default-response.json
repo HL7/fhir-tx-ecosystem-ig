@@ -1,0 +1,210 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "254381010000105"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "status",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009",
+        "display" : "Synonym"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Potassium [Moles/Vol]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009",
+        "display" : "Synonym"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Potassium [Moles/volume] in Serum or Plasma"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009",
+        "display" : "Synonym"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Potassium SerPl-sCnc"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009",
+        "display" : "Synonym"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Potassium:SCnc:Pt:Ser/Plas:Qn"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009",
+        "display" : "Synonym"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Substance concentration of potassium electrolyte in serum or plasma at point in time"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000003001",
+        "display" : "Fully specified name"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Substance concentration of potassium electrolyte in serum or plasma at point in time (observable entity)"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Potassium [Moles/volume] in Serum or Plasma"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2025-09-09"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "loinc"
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://loinc.org",
+        "code" : "2823-3",
+        "display" : "Potassium [Moles/volume] in Serum or Plasma"
+      }
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "LOINC Extension module"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "11010000107"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Renal function"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "11953005"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

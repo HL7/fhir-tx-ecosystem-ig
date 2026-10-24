@@ -22,7 +22,7 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 6,
+    "total" : 7,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
@@ -87,6 +87,16 @@
       "inactive" : true,
       "code" : "307530000",
       "display" : "Appendicitis NOS",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "57371010000105",
+      "display" : "Chenodeoxycholylglycine.conjugated [Mass/volume] in Serum",
       "property" : [{
         "code" : "status",
         "valueCode" : "inactive"

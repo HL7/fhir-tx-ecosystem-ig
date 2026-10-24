@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://snomed.info/xsct/31000003106/version/20250909?fhir_cm=11010000107"
+  },
+  {
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "http://loinc.org",
+      "code" : "2823-3"
+    }
+  }]
+}

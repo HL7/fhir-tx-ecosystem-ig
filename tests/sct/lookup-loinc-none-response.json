@@ -1,0 +1,163 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "11953005"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Renal function"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Creatinine [Mass/volume] in Gastric fluid"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "136651010000102"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Potassium [Moles/volume] in Urine"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "179881010000103"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Potassium [Moles/volume] in Blood"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "195421010000109"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Potassium [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "254381010000105"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Potassium [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "510211010000101"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Urea nitrogen [Mass/volume] in Pleural fluid"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "63241010000109"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2009-07-31"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "SNOMED CT core"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "900000000000207008"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Observable entity"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "363787002"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-loinc-isa-none",
+      "version" : "5.0.0",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-10-24",
+      "publisher" : "FHIR Project",
+      "description" : "Concepts under Renal function that do not have a LOINC code",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [
+            {"property" : "concept", "op" : "is-a", "value" : "11953005"},
+            {"property" : "mapped:30051010000102", "op" : "exists", "value" : "false"}
+          ]
+        }]
+      }
+    }
+  }]
+}

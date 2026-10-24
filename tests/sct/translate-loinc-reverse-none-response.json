@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "No translations found"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "used-system",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

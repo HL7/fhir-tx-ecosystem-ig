@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-loinc",
+      "version" : "5.0.0",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-10-24",
+      "publisher" : "FHIR Project",
+      "description" : "Every concept that has a LOINC code (including inactive ones)",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [
+            {"property" : "mapped:30051010000102", "op" : "exists", "value" : "true"}
+          ]
+        }]
+      }
+    }
+  }]
+}

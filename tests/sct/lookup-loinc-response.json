@@ -1,0 +1,83 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "254381010000105"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Potassium [Moles/volume] in Serum or Plasma"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2025-09-09"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "loinc"
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://loinc.org",
+        "code" : "2823-3",
+        "display" : "Potassium [Moles/volume] in Serum or Plasma"
+      }
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "LOINC Extension module"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "11010000107"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Renal function"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "11953005"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}
