@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-dotted-single-concept",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "Dotted expression on a single concept: the value of its Has precise active ingredient attribute.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "329238006 |Halibut liver oil 4000 unit oral capsule| . 762949000 |Has precise active ingredient|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

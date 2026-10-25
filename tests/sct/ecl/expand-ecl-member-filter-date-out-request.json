@@ -9,9 +9,9 @@
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
-        "date": "2026-10-19",
+        "date": "2026-10-25",
         "publisher": "FHIR Project",
-        "description": "Member filter on the REPLACED BY association reference set: members whose refset-member effectiveTime is on or after 20250101. The test edition's one member is dated 20240601, so the expansion is empty. This is the corrected form of the misplaced-member-filter test, restricted to the one refset present in the test edition.",
+        "description": "Member filter on the REPLACED BY association reference set: members whose refset-member effectiveTime is on or after 20250101. This is the corrected form of the misplaced-member-filter test, restricted to the one association reference set present in the test edition.",
         "compose": {
           "include": [
             {
@@ -21,7 +21,7 @@
                 {
                   "property": "constraint",
                   "op": "=",
-                  "value": "^ 900000000000526001 |Replaced by refset| {{ M effectiveTime >= \"20260101\" }}"
+                  "value": "^ 900000000000526001 |REPLACED BY association reference set| {{ M effectiveTime >= \"20250101\" }}"
                 }
               ]
             }

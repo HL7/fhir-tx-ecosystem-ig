@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-group-cardinality-zero-to-one-not-equals",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "Group cardinality [0..1] with != : products with at most one role group holding a precise active ingredient that is not a substance - every product.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 763158003 |Medicinal product| : [0..1] { 762949000 |Has precise active ingredient| != < 105590001 |Substance| }"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

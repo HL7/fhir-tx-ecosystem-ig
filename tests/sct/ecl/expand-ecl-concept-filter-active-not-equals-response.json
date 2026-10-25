@@ -1,0 +1,158 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-concept-filter-active-not-equals",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-25",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "<! 64572001 |Disease| {{ C active != false }}" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 25,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111941005",
+      "display" : "Familial disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116224001",
+      "display" : "Complication of procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1217009002",
+      "display" : "Primary lymphedema"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128045006",
+      "display" : "Cellulitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128121009",
+      "display" : "Disorder of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "198609003",
+      "display" : "Complication of pregnancy, childbirth and/or puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "213148006",
+      "display" : "Transplanted organ rejection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "224958001",
+      "display" : "Global developmental delay"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237836003",
+      "display" : "Short stature disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "267874003",
+      "display" : "Scleroderma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269295009",
+      "display" : "Transplanted organ failure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362965005",
+      "display" : "Disorder of body system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40733004",
+      "display" : "Infectious disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414022008",
+      "display" : "Disorder of cellular component of blood"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414025005",
+      "display" : "Fetal and/or neonatal disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "417163006",
+      "display" : "Traumatic or non-traumatic injury"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41969006",
+      "display" : "Idiopathic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426871003",
+      "display" : "Cell-mediated cytotoxic disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49416000",
+      "display" : "Failed attempted termination of pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56019007",
+      "display" : "Systemic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "700364009",
+      "display" : "Neurodevelopmental disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75478009",
+      "display" : "Poisoning"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75934005",
+      "display" : "Metabolic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "782964007",
+      "display" : "Genetic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86075001",
+      "display" : "Coagulation factor deficiency syndrome"
+    }
+    ]
+  }
+}

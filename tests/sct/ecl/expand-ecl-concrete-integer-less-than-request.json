@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-integer-less-than",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "Concrete integer comparison: products with a concentration strength numerator below 1000.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 763158003 |Medicinal product| : 1142138002 |Has concentration strength numerator value| < #1000"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

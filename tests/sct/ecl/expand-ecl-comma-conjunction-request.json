@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-comma-conjunction",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "A comma is a conjunction in ECL (conjunction = AND / \",\"), at the expression level as well as in refinements: two different concepts ANDed give nothing.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "138875005 |SNOMED CT Concept| , 10200004 |Liver structure|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

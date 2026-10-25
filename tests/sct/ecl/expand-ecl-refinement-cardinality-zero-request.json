@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-cardinality-zero",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "[0..0]: products with no Has active ingredient attribute whose value is a substance - here, those modelled with Has precise active ingredient instead.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 763158003 |Medicinal product| : [0..0] 127489000 |Has active ingredient| = < 105590001 |Substance|"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

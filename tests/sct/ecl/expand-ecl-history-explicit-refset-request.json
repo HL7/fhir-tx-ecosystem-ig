@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-history-explicit-refset",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "History supplement naming the association reference sets to use: the REPLACED BY reference set adds the inactive concept replaced by a concept in the result.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "<< 4896000 |Toxic hepatitis| {{ + HISTORY (900000000000526001 |REPLACED BY association reference set|) }}"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -9,9 +9,9 @@
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
-        "date": "2026-10-19",
+        "date": "2026-10-25",
         "publisher": "FHIR Project",
-        "description": "Hierarchy operator on a member-of: the members of the REPLACED BY association reference set and their descendants. The one member in the test edition is inactive, so it has no descendants.",
+        "description": "Hierarchy operator on a member-of: the members of the REPLACED BY association reference set and their descendants. Both members in the test edition are inactive, so they have no descendants.",
         "compose": {
           "include": [
             {

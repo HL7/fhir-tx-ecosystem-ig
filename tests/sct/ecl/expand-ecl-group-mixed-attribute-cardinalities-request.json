@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-group-mixed-attribute-cardinalities",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "Different attribute cardinalities inside one group: a role group with at most one liver finding site and exactly one morphology.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "<< 64572001 |Disease| : { [0..1] 363698007 |Finding site| = << 10200004 |Liver structure|, [1..1] 116676008 |Associated morphology| = << 49755003 |Morphologically abnormal structure| }"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

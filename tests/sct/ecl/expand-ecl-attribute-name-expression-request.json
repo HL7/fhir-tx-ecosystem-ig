@@ -9,7 +9,7 @@
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
-        "date": "2026-10-19",
+        "date": "2026-10-25",
         "publisher": "FHIR Project",
         "description": "The attribute name is an expression (any concept model object attribute) rather than a single concept; diseases with any attribute whose value is in the Lung subtree.",
         "compose": {

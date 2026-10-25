@@ -1,0 +1,223 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-refinement-reverse-cardinality",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-25",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< 105590001 |Substance| : [0..*] R 127489000 |Has active ingredient| = 776168003 |Halibut liver oil only product|" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 38,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111159009",
+      "display" : "Rose bengal (131-I) sodium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "126081001",
+      "display" : "Halibut liver oil"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1368003",
+      "display" : "Iodine-131"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14399003",
+      "display" : "Iodine radioisotope"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14691008",
+      "display" : "Yttrium-90"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18247009",
+      "display" : "Technetium radioisotope"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "227003005",
+      "display" : "Meat products"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "227014008",
+      "display" : "Liver pate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "227015009",
+      "display" : "Low fat liver pate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23459009",
+      "display" : "Selenium radioisotope"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25818006",
+      "display" : "Colloid sulfur"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "261571005",
+      "display" : "Tissue graft - material"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372528003",
+      "display" : "Protease inhibitor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372821002",
+      "display" : "Amiodarone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373542000",
+      "display" : "Methyldopa"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "385420005",
+      "display" : "Contrast media"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387176008",
+      "display" : "Enflurane"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387351001",
+      "display" : "Halothane"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387381009",
+      "display" : "Methotrexate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "395894004",
+      "display" : "Tauroselcholic acid (75-Se)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396014007",
+      "display" : "Barium sulfate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408742009",
+      "display" : "Rose bengal"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "410942007",
+      "display" : "Drug or medicament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413675001",
+      "display" : "Body tissue material"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419098001",
+      "display" : "Radiographic imaging contrast media"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419442005",
+      "display" : "Ethanol"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43239002",
+      "display" : "Selenium-75"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53527002",
+      "display" : "Alcoholic beverage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5931004",
+      "display" : "Technetium (99m-Tc) sulfur colloid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713540004",
+      "display" : "Antiretroviral"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72454006",
+      "display" : "Technetium-99m"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "764445001",
+      "display" : "Cytologic material"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "766778009",
+      "display" : "Tauroselcholic acid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "767270007",
+      "display" : "Iron and/or iron compound"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85693008",
+      "display" : "Technetium (99m-Tc) aggregated albumin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87612001",
+      "display" : "Blood"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88014003",
+      "display" : "Beryllium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89457008",
+      "display" : "Radioactive isotope"
+    }
+    ]
+  }
+}

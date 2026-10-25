@@ -9,9 +9,9 @@
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
-        "date": "2026-10-19",
+        "date": "2026-10-25",
         "publisher": "FHIR Project",
-        "description": "Member filter on the REPLACED BY association reference set: members whose refset-member effectiveTime is on or after 20240101. The test edition's one member (307530000 -> 74400008) is dated 20240601, so it is selected.",
+        "description": "Member filter on the REPLACED BY association reference set: members whose refset-member effectiveTime is on or after 20240101.",
         "compose": {
           "include": [
             {
@@ -21,7 +21,7 @@
                 {
                   "property": "constraint",
                   "op": "=",
-                  "value": "^ 900000000000526001 |Replaced by refset| {{ M effectiveTime >= \"20240101\" }}"
+                  "value": "^ 900000000000526001 |REPLACED BY association reference set| {{ M effectiveTime >= \"20240101\" }}"
                 }
               ]
             }

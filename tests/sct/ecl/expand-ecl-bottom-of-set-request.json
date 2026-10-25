@@ -9,7 +9,7 @@
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
-        "date": "2026-10-19",
+        "date": "2026-10-25",
         "publisher": "FHIR Project",
         "description": "Bottom of set: the members of the set that have no descendant in the set - the single leaf below Lung.",
         "compose": {

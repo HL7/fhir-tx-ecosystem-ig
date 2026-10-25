@@ -5,12 +5,12 @@
   "version" : "5.0.0",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19",
+  "date" : "2026-10-25",
   "compose": {
     "include": [{
       "system": "http://snomed.info/sct",
       "version": "http://snomed.info/xsct/31000003106/version/20250909",
-      "filter": [{ "property": "constraint", "op": "=", "value": "^ 900000000000526001 |Replaced by refset| {{ M effectiveTime >= \"20260101\" }}" }]
+      "filter": [{ "property": "constraint", "op": "=", "value": "^ 900000000000526001 |REPLACED BY association reference set| {{ M effectiveTime >= \"20250101\" }}" }]
     }]
   },
   "expansion" : {
@@ -22,10 +22,26 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 0,
+    "total" : 1,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
-    }]
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "1000381000003107",
+      "display" : "Hepatic revenge",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    }
+    ]
   }
 }

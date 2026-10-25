@@ -1,0 +1,2238 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-operator-on-memberOf-descendants",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-25",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< ^ 734139008 |Anatomy structure and part association reference set|" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 441,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1000011000003104",
+      "display" : "Right kidney (the one under the liver)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "110540008",
+      "display" : "Muscle structure of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11204002",
+      "display" : "Structure of porta hepatis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113254000",
+      "display" : "Structure of interstitial tissue of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113262008",
+      "display" : "Thoracic aorta structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113286005",
+      "display" : "Structure of inferior margin of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113287001",
+      "display" : "Structure of appendix fibrosa of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113305005",
+      "display" : "Cerebellar structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116005007",
+      "display" : "Entire parenchymatous viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116006008",
+      "display" : "Pleural sac structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118632007",
+      "display" : "Structure of tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119191008",
+      "display" : "Tibia part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119210004",
+      "display" : "Digestive organ part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119216005",
+      "display" : "Liver part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1193602001",
+      "display" : "Structure of shaft of lower limb bone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197039003",
+      "display" : "Structure of lymphatic vessel of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1197040001",
+      "display" : "Entire lymphatic vessel of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11978009",
+      "display" : "Falciform ligament structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1204320005",
+      "display" : "Structure of wall of biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1204330001",
+      "display" : "Structure of wall of intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1204332009",
+      "display" : "Entire wall of intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "120577001",
+      "display" : "Hand part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12254005",
+      "display" : "Structure of interlobular vein of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "122972007",
+      "display" : "Structure of vein of pulmonary circulation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230368008",
+      "display" : "Structure of tendon within wrist and/or hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12611008",
+      "display" : "Bone structure of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12738006",
+      "display" : "Brain structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127879008",
+      "display" : "Structure of parenchyma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127952008",
+      "display" : "Structure of peritoneal fold"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127954009",
+      "display" : "Skeletal muscle structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1303491005",
+      "display" : "Structure of subcapsular space of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1303492003",
+      "display" : "Entire subcapsular space of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340088001",
+      "display" : "Structure of intrahepatic segment of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340089009",
+      "display" : "Structure of intrahepatic segment of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340091001",
+      "display" : "Entire intrahepatic segment of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340092008",
+      "display" : "Entire intrahepatic segment of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340099004",
+      "display" : "Structure of Hjortsjo crook segment of posterior branch of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340100007",
+      "display" : "Entire Hjortsjo crook segment of posterior branch of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340143004",
+      "display" : "Structure of intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1340144005",
+      "display" : "Entire intrahepatic biliary tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13415004",
+      "display" : "Structure of incisure for round ligament of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1344872009",
+      "display" : "Liver lobe part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1366054005",
+      "display" : "Structure of transplanted liver part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14016003",
+      "display" : "Bone marrow structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15120006",
+      "display" : "Structure of intralobular bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15760000",
+      "display" : "Structure of caudate process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15776009",
+      "display" : "Pancreatic structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15878004",
+      "display" : "Hepatic lobule structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16777006",
+      "display" : "Structure of medial segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1684009",
+      "display" : "Structure of ligamentum teres of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17479004",
+      "display" : "Structure of right triangular ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17779003",
+      "display" : "Space of Disse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17864001",
+      "display" : "Subserosal tissue of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181268008",
+      "display" : "Entire liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181279003",
+      "display" : "Entire spleen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18135006",
+      "display" : "Entire right hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18939001",
+      "display" : "Structure of artery of the caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19264002",
+      "display" : "Structure of area nuda hepatis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20982000",
+      "display" : "Structure of capillary blood vessel"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21807003",
+      "display" : "Structure of left branch of hepatic artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22275003",
+      "display" : "Structure of colic impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "227002",
+      "display" : "Canal of Hering"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23416004",
+      "display" : "Bone structure of ulna"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23542001",
+      "display" : "Structure of superior portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244261004",
+      "display" : "Abdominal visceral artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244264007",
+      "display" : "Entire left branch of hepatic artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244265008",
+      "display" : "Entire right branch of hepatic artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244384009",
+      "display" : "Entire right cardiac ventricle"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244410006",
+      "display" : "Intrahepatic portion of umbilical vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244699002",
+      "display" : "Part of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245098002",
+      "display" : "Structure of tendon within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245378000",
+      "display" : "Lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245379008",
+      "display" : "Entire porta hepatis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "261413003",
+      "display" : "Entire gallbladder fossa of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "261922008",
+      "display" : "Entire peritoneal fold"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262018003",
+      "display" : "Structure of ligament of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262209009",
+      "display" : "Entire ligamentum teres of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26226001",
+      "display" : "Structure of duodenal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262307008",
+      "display" : "Structure of ligamentum venosum of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262586001",
+      "display" : "Entire serous capsule of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "264438009",
+      "display" : "Anterior abdominal wall peritoneum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "265803009",
+      "display" : "Structure of muscle and/or tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26641008",
+      "display" : "Structure of medial branch of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269182005",
+      "display" : "Entire lateral branch of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269263008",
+      "display" : "Entire medial branch of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26928007",
+      "display" : "Structure of quadrate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269345005",
+      "display" : "Entire hepatic duct of caudate lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269447003",
+      "display" : "Structure of right hepatic duct of caudate lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269522003",
+      "display" : "Structure of left hepatic duct of caudate lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269625005",
+      "display" : "Entire anterior branch of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269727007",
+      "display" : "Entire posterior branch of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "269922006",
+      "display" : "Entire intralobular bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270023005",
+      "display" : "Entire bile canaliculus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270226005",
+      "display" : "Entire anterior segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270327004",
+      "display" : "Entire posterior segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270429000",
+      "display" : "Entire caudate process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270511007",
+      "display" : "Entire groove for vena cava of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270601007",
+      "display" : "Entire fissure of round ligament of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270703004",
+      "display" : "Entire duodenal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270804002",
+      "display" : "Entire colic impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270896007",
+      "display" : "Entire renal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270989009",
+      "display" : "Entire adrenal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271085007",
+      "display" : "Entire medial segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271187002",
+      "display" : "Entire papillary process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271288003",
+      "display" : "Entire lateral segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271374004",
+      "display" : "Entire groove of ligamentum venosum of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271447001",
+      "display" : "Entire appendix fibrosa of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271517001",
+      "display" : "Entire omental tubercle of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271598005",
+      "display" : "Entire gastric impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271664006",
+      "display" : "Entire incisure for round ligament of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271718009",
+      "display" : "Entire cardiac impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271786003",
+      "display" : "Entire interlobular vein of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271851007",
+      "display" : "Entire sublobular vein of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271942000",
+      "display" : "Structure of hepatic sinusoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272023004",
+      "display" : "Entire central vein of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272124008",
+      "display" : "Entire interstitial tissue of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272214009",
+      "display" : "Entire hepatic acinus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272313000",
+      "display" : "Entire perivascular fibrous capsule of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272409008",
+      "display" : "Entire interlobular artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272508003",
+      "display" : "Entire transplanted liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272598007",
+      "display" : "Entire artery of the caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272625005",
+      "display" : "Entire body organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272627002",
+      "display" : "Entire digestive organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272656002",
+      "display" : "Entire anterior segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272709009",
+      "display" : "Entire posterior segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272795008",
+      "display" : "Entire middle segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272896002",
+      "display" : "Entire lateral segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272998002",
+      "display" : "Structure of right hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "273099000",
+      "display" : "Structure of middle hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "273202007",
+      "display" : "Structure of left hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2748008",
+      "display" : "Spinal cord structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276157007",
+      "display" : "Entire bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277955006",
+      "display" : "Liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277956007",
+      "display" : "Couinaud hepatic segment II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277957003",
+      "display" : "Couinaud hepatic segment III"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277958008",
+      "display" : "Couinaud hepatic segment IV"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277959000",
+      "display" : "Couinaud hepatic segment V"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277960005",
+      "display" : "Couinaud hepatic segment VI"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277961009",
+      "display" : "Couinaud hepatic segment VII"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277962002",
+      "display" : "Couinaud hepatic segment VIII"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "278191001",
+      "display" : "Entire hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279929003",
+      "display" : "Entire quadrate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279930008",
+      "display" : "Couinaud liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279931007",
+      "display" : "Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279932000",
+      "display" : "Healey and Schroy liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279933005",
+      "display" : "Hjortso right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279934004",
+      "display" : "Hjortso left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279935003",
+      "display" : "Anterior right Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279936002",
+      "display" : "Middle right Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279937006",
+      "display" : "Posterior right Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279938001",
+      "display" : "Anterior left Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279939009",
+      "display" : "Posterior left Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279940006",
+      "display" : "Healey and Schroy right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279941005",
+      "display" : "Healey and Schroy left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279942003",
+      "display" : "Healey and Schroy caudate liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279943008",
+      "display" : "Healey and Schroy superior right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279944002",
+      "display" : "Healey and Schroy inferior right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279945001",
+      "display" : "Healey and Schroy superior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279946000",
+      "display" : "Healey and Schroy inferior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279947009",
+      "display" : "Healey and Schroy medial superior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279948004",
+      "display" : "Healey and Schroy lateral superior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279949007",
+      "display" : "Healey and Schroy medial inferior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279950007",
+      "display" : "Healey and Schroy lateral inferior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279951006",
+      "display" : "Healey and Schroy anterior superior right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279952004",
+      "display" : "Healey and Schroy posterior superior right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279954003",
+      "display" : "Healey and Schroy anterior inferior right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279955002",
+      "display" : "Healey and Schroy posterior inferior right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279956001",
+      "display" : "Healey and Schroy right caudate liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279957005",
+      "display" : "Healey and Schroy left caudate liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279958000",
+      "display" : "Surface of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279959008",
+      "display" : "Entire anterior portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279961004",
+      "display" : "Entire right portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279962006",
+      "display" : "Region of diaphragmatic surface of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279963001",
+      "display" : "Border of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279964007",
+      "display" : "Left border of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279965008",
+      "display" : "Entire area nuda hepatis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279966009",
+      "display" : "Peritoneal connection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279967000",
+      "display" : "Entire coronary ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279968005",
+      "display" : "Entire triangular ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279969002",
+      "display" : "Entire right triangular ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279970001",
+      "display" : "Entire left triangular ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "279971002",
+      "display" : "Entire hepatorenal ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281157001",
+      "display" : "Systemic blood vessel structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281243005",
+      "display" : "Musculoskeletal structure of upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281470000",
+      "display" : "Entire artery of abdomen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281473003",
+      "display" : "Entire abdominal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281475005",
+      "display" : "Systemic abdominal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281501002",
+      "display" : "Intra-abdominal digestive structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28273000",
+      "display" : "Bile duct structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "284359007",
+      "display" : "Entire branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "284639000",
+      "display" : "Structure of umbilical portion of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28481001",
+      "display" : "Portal tract structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28989005",
+      "display" : "Structure of branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2909002",
+      "display" : "Structure of posterior portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "297287005",
+      "display" : "Vascular structure of spleen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302525009",
+      "display" : "Entire shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302539009",
+      "display" : "Entire hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302545001",
+      "display" : "Entire foot"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303270005",
+      "display" : "Liver and/or biliary structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303410000",
+      "display" : "Vascular structure of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "304374005",
+      "display" : "Entire left main branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "304375006",
+      "display" : "Entire right main branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "304376007",
+      "display" : "Caudate lobe branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "304377003",
+      "display" : "Quadrate lobe branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307113009",
+      "display" : "Structure of wrist and/or hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30737000",
+      "display" : "Structure of medulla of kidney"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "312582001",
+      "display" : "Vascular structure of abdominal organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314246009",
+      "display" : "Surface feature of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314264002",
+      "display" : "Segmental artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314634000",
+      "display" : "Entire shaft of lower limb bone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "318001",
+      "display" : "Structure of cardiac impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32610002",
+      "display" : "Structure of basal nucleus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32764006",
+      "display" : "Portal vein structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33392008",
+      "display" : "Structure of lateral segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "341281003",
+      "display" : "Entire transplanted vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34154005",
+      "display" : "Structure of intrahepatic part of main portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34707002",
+      "display" : "Biliary tract structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35523009",
+      "display" : "Structure of posterior segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360556003",
+      "display" : "Surface feature of liver related to adjacent organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360557007",
+      "display" : "Intrahepatic venous structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360558002",
+      "display" : "Microscopic liver structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360559005",
+      "display" : "Tributary of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360560000",
+      "display" : "Tributary of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360603008",
+      "display" : "Tributary of inferior vena cava"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360981005",
+      "display" : "Segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360982003",
+      "display" : "Segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360989007",
+      "display" : "Peritoneal ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362182008",
+      "display" : "Entire right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362183003",
+      "display" : "Entire left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362184009",
+      "display" : "Entire caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362185005",
+      "display" : "Entire hepatic capsule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362186006",
+      "display" : "Entire diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362187002",
+      "display" : "Entire superior portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362188007",
+      "display" : "Entire posterior portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362189004",
+      "display" : "Entire visceral aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362190008",
+      "display" : "Entire inferior margin of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362191007",
+      "display" : "Entire portal tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362192000",
+      "display" : "Entire portal triad"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362193005",
+      "display" : "Entire intrahepatic bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362194004",
+      "display" : "Entire hepatic lobule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362195003",
+      "display" : "Entire hepatic lacunae"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362705001",
+      "display" : "Entire falciform ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "362937008",
+      "display" : "Structure of viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363535004",
+      "display" : "Entire parenchyma of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "368380004",
+      "display" : "Structure of flexor tendon within finger"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3711007",
+      "display" : "Structure of great blood vessel"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371299000",
+      "display" : "Structure of tendon and/or tendon sheath within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372166008",
+      "display" : "Bile duct part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37424004",
+      "display" : "Structure of hepatic acinus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38034003",
+      "display" : "Structure of hepatorenal ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38199008",
+      "display" : "Tooth structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3860006",
+      "display" : "Structure of transplanted liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "389080008",
+      "display" : "White matter structure of brain and spinal cord"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39043001",
+      "display" : "Structure of triangular ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39057004",
+      "display" : "Pulmonary valve structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39182001",
+      "display" : "Structure of fissure of round ligament of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39352004",
+      "display" : "Joint structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39607008",
+      "display" : "Lung structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397425002",
+      "display" : "Inferior right hepatic vein structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39937001",
+      "display" : "Skin structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "410745002",
+      "display" : "Non-skeletal ligament structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "410746001",
+      "display" : "Entire ligament, non-skeletal"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419605007",
+      "display" : "Structure of ankle and/or foot"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422646002",
+      "display" : "Structure of medial branch of left portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422871001",
+      "display" : "Structure of flexor tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423522006",
+      "display" : "Entire medial branch of left portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423721001",
+      "display" : "Structure of lateral branch of left portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "425321001",
+      "display" : "Entire lateral branch of left portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42551006",
+      "display" : "Structure of gastric impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43903004",
+      "display" : "Structure of left triangular ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45306004",
+      "display" : "Structure of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48025006",
+      "display" : "Structure of serous capsule of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48100000",
+      "display" : "Esophageal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48521005",
+      "display" : "Structure of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48536008",
+      "display" : "Entire ligament of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48629004",
+      "display" : "Sulcus of umbilical vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48781005",
+      "display" : "Hepatic capsule structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49596003",
+      "display" : "Digestive organ structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49622001",
+      "display" : "Structure of transplanted vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50703002",
+      "display" : "Structure of visceral serous membrane of peritoneum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52687003",
+      "display" : "Bone structure of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54115001",
+      "display" : "Myelinated nerve fiber structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54895000",
+      "display" : "Entire middle hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55188000",
+      "display" : "Entire left hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56459004",
+      "display" : "Foot structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5665001",
+      "display" : "Retinal structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56732008",
+      "display" : "Structure of hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57627008",
+      "display" : "Structure of coronary ligament"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57661005",
+      "display" : "Structure of interstitial tissue of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58471003",
+      "display" : "Renal tubule structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58501004",
+      "display" : "Cerebellar vermis structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58583003",
+      "display" : "Structure of anterior portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "589001",
+      "display" : "Interventricular septum structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59652004",
+      "display" : "Atrial structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59820001",
+      "display" : "Blood vessel structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60039004",
+      "display" : "Structure of papillary process of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60152006",
+      "display" : "Structure of hepatic duct of caudate lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61042004",
+      "display" : "Entire left hepatic duct of caudate lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61460008",
+      "display" : "Structure of adrenal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61660003",
+      "display" : "Entire umbilical portion of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62413002",
+      "display" : "Bone structure of radius"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62662008",
+      "display" : "Embryonic venous structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62919005",
+      "display" : "Structure of perivascular fibrous capsule of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63207002",
+      "display" : "Structure of posterior branch of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64033007",
+      "display" : "Kidney structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64281006",
+      "display" : "Structure of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65706005",
+      "display" : "Structure of groove for vena cava of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65922001",
+      "display" : "Midlobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66008007",
+      "display" : "Entire right hepatic duct of caudate lobe"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66754008",
+      "display" : "Appendix structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67435004",
+      "display" : "Entire hepatic sinusoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67540009",
+      "display" : "Cone of retina"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6787005",
+      "display" : "Structure of tendon and/or tendon sheath within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68221002",
+      "display" : "Peripheral lobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68932007",
+      "display" : "Structure of right portion of diaphragmatic aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69039008",
+      "display" : "Structure of gallbladder fossa of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69421009",
+      "display" : "Structure of right branch of hepatic artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69735007",
+      "display" : "Structure of anterior segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69842003",
+      "display" : "Structure of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699602007",
+      "display" : "Structure of organ within abdomen proper cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699603002",
+      "display" : "Entire viscus of abdomen proper"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699616002",
+      "display" : "Entire subregion of lower limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70253006",
+      "display" : "Structure of left main branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70286005",
+      "display" : "Structure of omental tubercle of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71133005",
+      "display" : "Structure of caudate lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71148004",
+      "display" : "Structure of anterior branch of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "712835007",
+      "display" : "Structure of extensor tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72231004",
+      "display" : "Structure of lateral branch of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726098005",
+      "display" : "Structure of vein of viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726100005",
+      "display" : "Entire vein of viscus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726667009",
+      "display" : "Structure of transplanted hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726668004",
+      "display" : "Entire transplanted hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726781000",
+      "display" : "Entire esophageal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726886004",
+      "display" : "Entire space of Disse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726887008",
+      "display" : "Entire subserosal tissue of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "727058002",
+      "display" : "Entire sulcus of umbilical vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "727177003",
+      "display" : "Entire peripheral lobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "727297001",
+      "display" : "Entire space of Mall"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "727429009",
+      "display" : "Entire tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "727962005",
+      "display" : "Entire intrahepatic portion of umbilical vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "728137008",
+      "display" : "Entire tendon within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "728286003",
+      "display" : "Entire lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "728801001",
+      "display" : "Entire liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729184000",
+      "display" : "Entire anterior right Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729185004",
+      "display" : "Entire anterior left Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729186003",
+      "display" : "Entire surface of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729187007",
+      "display" : "Entire border of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729188002",
+      "display" : "Entire left border of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729189005",
+      "display" : "Entire peritoneal connection of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729733008",
+      "display" : "Entire caudate lobe branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "729734002",
+      "display" : "Entire quadrate lobe branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730048008",
+      "display" : "Entire surface feature of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730056006",
+      "display" : "Entire segmental artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730210009",
+      "display" : "Entire surface feature of liver related to adjacent organ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730211008",
+      "display" : "Entire tributary of left hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730212001",
+      "display" : "Entire tributary of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730807009",
+      "display" : "Entire canal of Hering"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730832006",
+      "display" : "Entire Midlobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730835008",
+      "display" : "Entire centrilobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730944008",
+      "display" : "Entire Couinaud hepatic segment II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730945009",
+      "display" : "Entire Couinaud hepatic segment III"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730946005",
+      "display" : "Entire Couinaud hepatic segment IV"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730947001",
+      "display" : "Entire Couinaud hepatic segment V"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730948006",
+      "display" : "Entire Couinaud hepatic segment VI"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730949003",
+      "display" : "Entire Couinaud hepatic segment VII"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730950003",
+      "display" : "Entire Couinaud hepatic segment VIII"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730960007",
+      "display" : "Entire Couinaud liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730961006",
+      "display" : "Entire Hjortso liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730962004",
+      "display" : "Entire Healey and Schroy liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730963009",
+      "display" : "Entire Hjortso right liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730964003",
+      "display" : "Entire Hjortso left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730965002",
+      "display" : "Entire Healey and Schroy left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730966001",
+      "display" : "Entire Healey and Schroy caudate liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730967005",
+      "display" : "Entire Healey and Schroy superior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730968000",
+      "display" : "Entire Healey and Schroy inferior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730969008",
+      "display" : "Entire Healey and Schroy medial superior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730970009",
+      "display" : "Entire Healey and Schroy lateral superior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730971008",
+      "display" : "Entire Healey and Schroy medial inferior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730972001",
+      "display" : "Entire Healey and Schroy lateral inferior left liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730973006",
+      "display" : "Entire Healey and Schroy right caudate liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "730974000",
+      "display" : "Entire Healey and Schroy left caudate liver segment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "731093007",
+      "display" : "Entire interlobular bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "731762000",
+      "display" : "Entire blood vessel of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732049009",
+      "display" : "Entire liver and biliary system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732124008",
+      "display" : "Entire intrahepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732125009",
+      "display" : "Entire microscopic liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732148004",
+      "display" : "Entire inferior right hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73829009",
+      "display" : "Right atrial structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73931004",
+      "display" : "Structure of right main branch of portal vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74052002",
+      "display" : "Centrilobular region of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74281007",
+      "display" : "Myocardium structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75358002",
+      "display" : "Structure of central vein of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76015000",
+      "display" : "Hepatic artery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76202000",
+      "display" : "Structure of sublobular vein of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76726002",
+      "display" : "Portal triad structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76919008",
+      "display" : "Structure of anterior segment of right lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773190007",
+      "display" : "Joint structure of multiple body sites"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77638007",
+      "display" : "Structure of ligament of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78000005",
+      "display" : "Structure of right hepatic duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78076003",
+      "display" : "Lens clear"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78696007",
+      "display" : "Endocrine pancreatic structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787147004",
+      "display" : "Structure of vein of abdomen proper"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78961009",
+      "display" : "Splenic structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "790007",
+      "display" : "Structure of visceral aspect of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80303005",
+      "display" : "Structure of lateral segment of left lobe of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80391004",
+      "display" : "Entire ligamentum venosum of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80891009",
+      "display" : "Heart structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81040000",
+      "display" : "Pulmonary artery structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81151002",
+      "display" : "Structure of groove of ligamentum venosum of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818993005",
+      "display" : "Organ within abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818999009",
+      "display" : "Abdominal blood vessel"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "822979009",
+      "display" : "Entire organ within abdominopelvic cavity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82471001",
+      "display" : "Left atrial structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8292002",
+      "display" : "Structure of interlobular artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83488001",
+      "display" : "Structure of interlobular bile duct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83670000",
+      "display" : "Peritoneal cavity structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83678007",
+      "display" : "Cerebrum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84318003",
+      "display" : "Structure of renal impression of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "846599004",
+      "display" : "Structure of blood vessel of abdominal cross-sectional segment of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85562004",
+      "display" : "Hand structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "860986005",
+      "display" : "Structure of vein of abdominal cross-sectional segment of trunk"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86763002",
+      "display" : "Portal venous system structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870716007",
+      "display" : "Structure of periportal tract region"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870717003",
+      "display" : "Entire periportal tract"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "871688003",
+      "display" : "Structure of Couinaud hepatic segment IVa"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "871689006",
+      "display" : "Structure of Couinaud hepatic segment IVb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "871690002",
+      "display" : "Entire Couinaud hepatic segment IVa"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "871691003",
+      "display" : "Entire Couinaud hepatic segment IVb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87746007",
+      "display" : "Structure of bile canaliculus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88391003",
+      "display" : "Hepatic lacunae structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89510009",
+      "display" : "Space of Mall"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89679009",
+      "display" : "Structure of mesentery of peritoneum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8993003",
+      "display" : "Structure of hepatic vein"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90140006",
+      "display" : "Intrahepatic biliary tract structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90219004",
+      "display" : "Coronary sinus structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90752009",
+      "display" : "Structure of middle segment artery of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91717005",
+      "display" : "Organ part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91771000",
+      "display" : "Structure of organ capsule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91772007",
+      "display" : "Organ parenchyma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9242006",
+      "display" : "Structure of posterior segment of right lobe of liver"
+    }
+    ]
+  }
+}

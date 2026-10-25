@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-ambiguous-or-in-refinement",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "Invalid ECL: inside a refinement, OR binds between attributes, so 404684003 is read as an attribute name with no comparison - a syntax error, not a disjunction with the refined expression. The bracket must close before the OR for that reading.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "(< 64572001 |Disease| : 363698007 |Finding site| = 10200004 |Liver structure| OR 404684003 |Clinical finding|)"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

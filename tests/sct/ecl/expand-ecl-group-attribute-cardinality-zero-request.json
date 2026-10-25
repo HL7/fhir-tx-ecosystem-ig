@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-ecl-group-attribute-cardinality-zero",
+        "version": "5.0.0",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-25",
+        "publisher": "FHIR Project",
+        "description": "Attribute cardinality [0..0] inside a group with default group cardinality: products with a role group that has no active-ingredient substance. Snow Owl expects this to match nothing; a reading of the specification in which a group without the attribute satisfies [0..0] matches the products whose groups carry other attributes. The expected result here follows the second reading - to be confirmed by the SNOMED Computable Languages Group.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "constraint",
+                  "op": "=",
+                  "value": "< 763158003 |Medicinal product| : { [0..0] 127489000 |Has active ingredient| = < 105590001 |Substance| }"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

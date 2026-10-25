@@ -1,0 +1,58 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-group-cardinality-with-disjunction",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-25",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "< 763158003 |Medicinal product| : [1..1] { 762949000 |Has precise active ingredient| = 126081001 |Halibut liver oil| OR 127489000 |Has active ingredient| = 126081001 |Halibut liver oil| }" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 5,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "329238006",
+      "display" : "Halibut liver oil 4000 unit oral capsule"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "406459008",
+      "display" : "Halibut liver oil-containing product"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "769034009",
+      "display" : "Halibut liver oil-containing product in oral dose form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "776168003",
+      "display" : "Halibut liver oil only product"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "779430005",
+      "display" : "Halibut liver oil only product in oral dose form"
+    }
+    ]
+  }
+}

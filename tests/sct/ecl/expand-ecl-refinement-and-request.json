@@ -9,7 +9,7 @@
         "version": "5.0.0",
         "status": "active",
         "experimental": false,
-        "date": "2026-10-19",
+        "date": "2026-10-25",
         "publisher": "FHIR Project",
         "description": "Conjunction of refinements written with AND rather than a comma: no disease in the test edition has both.",
         "compose": {

@@ -6849,14 +6849,14 @@
       },
       {
         "name" : "snomed-expand-ecl-member-filter-date-in",
-        "description" : "Member filter: ^ 900000000000526001 {{ M effectiveTime >= \"20240101\" }} — the one REPLACED BY member in the test edition (307530000, member dated 20240601) is selected; yields 1 result.",
+        "description" : "Member filter: ^ 900000000000526001 {{ M effectiveTime >= \"20240101\" }} - both REPLACED BY members in the test edition (member rows dated 20240601 and 20250909) are selected; yields 2 results.",
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-member-filter-date-in-request.json",
         "response" : "sct/ecl/expand-ecl-member-filter-date-in-response.json"
       },
       {
         "name" : "snomed-expand-ecl-member-filter-date-out",
-        "description" : "Member filter: ^ 900000000000526001 {{ M effectiveTime >= \"20250101\" }} — the corrected (^ outside the brackets) form of the misplaced test, trimmed to the one refset in the test edition; its member is dated 20240601 so the expansion is empty.",
+        "description" : "Member filter: ^ 900000000000526001 {{ M effectiveTime >= \"20250101\" }} - the corrected (^ outside the brackets) form of the misplaced test, trimmed to the one association reference set in the test edition; only the member row dated 20250909 is selected (1 result).",
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-member-filter-date-out-request.json",
         "response" : "sct/ecl/expand-ecl-member-filter-date-out-response.json"
@@ -6877,7 +6877,7 @@
       },
       {
         "name" : "snomed-expand-ecl-operator-on-memberOf",
-        "description" : "Hierarchy operator on ^: << ^ refset is the members and their descendants; the one member is inactive and has none (1 result).",
+        "description" : "Hierarchy operator on ^: << ^ refset is the members and their descendants; both REPLACED BY members are inactive and have no descendants (2 results).",
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-operator-on-memberOf-request.json",
         "response" : "sct/ecl/expand-ecl-operator-on-memberOf-response.json"
@@ -6989,7 +6989,7 @@
       },
       {
         "name" : "snomed-expand-ecl-concept-filter-inactive",
-        "description" : "Concept filter active = false: the inactive concepts (7 results).",
+        "description" : "Concept filter active = false: the inactive concepts of the test edition (7 results).",
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-concept-filter-inactive-request.json",
         "response" : "sct/ecl/expand-ecl-concept-filter-inactive-response.json"
@@ -7079,6 +7079,543 @@
         "http-code" : "4xx",
         "request" : "sct/ecl/expand-ecl-memberOf-field-selection-request.json",
         "response" : "sct/ecl/expand-ecl-memberOf-field-selection-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-memberOf-any",
+        "description" : "Snow Owl memberOfAny: ^ * is every concept that is a member of any reference set; description-member reference sets contribute nothing.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-any-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-memberOf-nested",
+        "description" : "Snow Owl memberOfNested: ^ (< 900000000000455006) is the union of the members of every reference set below the root.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-nested-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-nested-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-operator-on-memberOf-descendants",
+        "description" : "Snow Owl descendantsOfAllMembersOfReferenceSet: < ^ refset is the union of < each member.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-operator-on-memberOf-descendants-request.json",
+        "response" : "sct/ecl/expand-ecl-operator-on-memberOf-descendants-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-descendant-of-any",
+        "description" : "Snow Owl descendantOfAny: < * is every concept with a parent. count=0, so only the total is compared.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-descendant-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-descendant-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-child-of-any",
+        "description" : "Snow Owl childOfAny: <! * is the same set as < *. count=0, so only the total is compared.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-child-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-child-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-descendant-or-self-of-any",
+        "description" : "Snow Owl descendantOrSelfAny: << * is *. count=0, so only the total is compared.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-descendant-or-self-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-descendant-or-self-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-child-or-self-of-any",
+        "description" : "Snow Owl childOrSelfOfAny: <<! * is *. count=0, so only the total is compared.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-child-or-self-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-child-or-self-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ancestor-or-self-of-any",
+        "description" : "Snow Owl ancestorOrSelfOfAny: >> * is *. count=0, so only the total is compared.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-ancestor-or-self-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-ancestor-or-self-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-top-of-any",
+        "description" : "Snow Owl topOfAny: !!> * is the roots - 138875005 plus the subset's orphaned module, metadata and inactive concepts.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-top-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-top-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-bottom-of-any",
+        "description" : "Snow Owl bottomOfAnyTooCostly: !!< * is every leaf. count=0, so only the total is compared; a server may answer or may decline as too costly, which this test does not allow for.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-bottom-of-any-request.json",
+        "response" : "sct/ecl/expand-ecl-bottom-of-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-self-and-self",
+        "description" : "Snow Owl selfAndSelf: A AND A is {A}.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-self-and-self-request.json",
+        "response" : "sct/ecl/expand-ecl-self-and-self-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-comma-conjunction",
+        "description" : "Snow Owl selfAndOtherWithCommaAsOperator: \"A , B\" is A AND B, and is empty for two different concepts.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-comma-conjunction-request.json",
+        "response" : "sct/ecl/expand-ecl-comma-conjunction-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-and-chain",
+        "description" : "Snow Owl multipleAndOperatorsWithoutBrackets: an AND chain of three without brackets.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-and-chain-request.json",
+        "response" : "sct/ecl/expand-ecl-and-chain-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-or-chain",
+        "description" : "Snow Owl multipleOrOperatorsWithoutBrackets: an OR chain of three without brackets.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-or-chain-request.json",
+        "response" : "sct/ecl/expand-ecl-or-chain-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ambiguous-precedence-and-or",
+        "description" : "Snow Owl binaryOperatorAmbiguityAndOr: AND then OR without brackets is a syntax error (the existing test covers OR then AND).",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-ambiguous-precedence-and-or-request.json",
+        "response" : "sct/ecl/expand-ecl-ambiguous-precedence-and-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ambiguous-or-in-refinement",
+        "description" : "Snow Owl ambiguousOrOperatorInRefinement: an OR after a refinement binds inside it, leaving an attribute without a comparison - a syntax error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-ambiguous-or-in-refinement-request.json",
+        "response" : "sct/ecl/expand-ecl-ambiguous-or-in-refinement-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-or-with-refined-operand",
+        "description" : "Snow Owl ambiguousOrOperatorInConstraint: A OR (< B : attr = value) - the refinement binds to its own operand.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-or-with-refined-operand-request.json",
+        "response" : "sct/ecl/expand-ecl-or-with-refined-operand-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-attribute-and-value-sets",
+        "description" : "Snow Owl refinementAttributeSubExpression: (A OR B) = (X OR Y) in a refinement.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-attribute-and-value-sets-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-attribute-and-value-sets-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-not-equals",
+        "description" : "Snow Owl refinementAttributeNotEquals: A != X matches concepts with at least one A whose value is not X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-not-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-not-equals-any",
+        "description" : "Snow Owl refinementAnyAttributeNotEquals: * : A != X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-not-equals-any-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-not-equals-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-reverse",
+        "description" : "Snow Owl refinementReversedAttributeEquals: R A = X yields the values of A on X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-reverse-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-reverse-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-reverse-any-attribute",
+        "description" : "Snow Owl refinementAnyAttributeName: R * = X yields every substance that is an attribute value of X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-reverse-any-attribute-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-reverse-any-attribute-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-reverse-any-value",
+        "description" : "Snow Owl refinementAnyAttributeValue: R A = * yields every substance that is the value of A somewhere.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-reverse-any-value-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-reverse-any-value-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-reverse-cardinality",
+        "description" : "Snow Owl refinementReversedCardinalityZeroToUnbounded: [0..*] R A = X is satisfied by every concept in the focus set.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-reverse-cardinality-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-reverse-cardinality-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-zero-to-many",
+        "description" : "Snow Owl refinementCardinalityZeroToUnbounded: [0..*] A = X is every concept in the focus set.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-zero-to-many-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-zero-to-many-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-at-least-one",
+        "description" : "Snow Owl refinementCardinalityAtLeastOne: [1..*] A = X equals A = X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-at-least-one-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-at-least-one-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-zero",
+        "description" : "Snow Owl refinementCardinalityZeroToZeroEquals: [0..0] A = X is the concepts with no such attribute.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-zero-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-zero-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-zero-not-equals",
+        "description" : "Snow Owl refinementCardinalityZeroToZeroNotEquals: [0..0] A != X is the concepts whose every A is in X (including those with no A).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-zero-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-zero-not-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-zero-not-equals-single",
+        "description" : "Snow Owl refinementCardinalityZeroToZeroNotEqualsToSingleValue: [0..0] A != x excludes exactly the concepts with an A whose value is not x.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-zero-not-equals-single-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-zero-not-equals-single-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-zero-to-one",
+        "description" : "Snow Owl refinementCardinalityZeroToOne: [0..1] A = X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-zero-to-one-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-zero-to-one-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-one-to-two",
+        "description" : "Snow Owl refinementCardinalityOneOrTwo: [1..2] A = X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-one-to-two-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-one-to-two-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-nested-and-or",
+        "description" : "Snow Owl refinementWithConjunctionAndDisjunction: A = x OR (B = y AND C = y), where the bracketed AND matches nothing.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-nested-and-or-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-nested-and-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-ambiguous-and-or",
+        "description" : "Snow Owl refinementAmbiguityAndOr: AND then OR between refinements without brackets is a syntax error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-refinement-ambiguous-and-or-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-ambiguous-and-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-ambiguous-or-and",
+        "description" : "Snow Owl refinementAmbiguityOrAnd: OR then AND between refinements without brackets is a syntax error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-refinement-ambiguous-or-and-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-ambiguous-or-and-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-dotted-single-concept",
+        "description" : "Snow Owl dotted: X . A on a single concept yields the values of A on X.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-dotted-single-concept-request.json",
+        "response" : "sct/ecl/expand-ecl-dotted-single-concept-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-dotted-complex-left-side",
+        "description" : "Snow Owl dottedWithComplexLeftSide: (A MINUS B) . attr.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-dotted-complex-left-side-request.json",
+        "response" : "sct/ecl/expand-ecl-dotted-complex-left-side-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-two",
+        "description" : "Snow Owl refinementGroupCardinalityTwoToTwo: [2..2] { ... }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-two-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-two-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-zero-to-many",
+        "description" : "Snow Owl refinementGroupCardinalityZeroToUnbounded: [0..*] { ... } is every concept in the focus set.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-zero-to-many-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-zero-to-many-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-zero",
+        "description" : "Snow Owl refinementGroupCardinalityZeroToZero / groupCardinalityZeroToZeroWithDefaultAttributeCardinality: [0..0] { ... }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-zero-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-zero-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-zero-to-one",
+        "description" : "Snow Owl refinementGroupCardinalityZeroToOne / groupCardinalityZeroToOneWithDefaultAttributeCardinality: [0..1] { ... }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-zero-to-one-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-zero-to-one-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-with-conjunction",
+        "description" : "Snow Owl refinementWithGroupConjunction: [1..1] { A = X, B = Y }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-with-conjunction-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-with-conjunction-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-with-disjunction",
+        "description" : "Snow Owl refinementWithGroupDisjunction: [1..1] { A = x OR B = x }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-with-disjunction-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-with-disjunction-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-nested-and-or",
+        "description" : "Snow Owl refinementGroupNestedConjunctionDisjunction: [1..1] { (A = x AND B = x) OR C = x }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-nested-and-or-request.json",
+        "response" : "sct/ecl/expand-ecl-group-nested-and-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-attribute-cardinality-zero",
+        "description" : "Snow Owl defaultGroupCardinalityWithZeroToZeroAttributeCardinality: { [0..0] A = X }. Snow Owl says empty; this test expects the groups-without-the-attribute reading. Needs confirmation.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-attribute-cardinality-zero-request.json",
+        "response" : "sct/ecl/expand-ecl-group-attribute-cardinality-zero-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-attribute-cardinality-zero-not-equals",
+        "description" : "Snow Owl defaultGroupCardinalityWithZeroToZeroAttributeCardinalityNotEquals: { [0..0] A != x }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-attribute-cardinality-zero-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-group-attribute-cardinality-zero-not-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-attribute-cardinality-zero-to-one",
+        "description" : "Snow Owl defaultGroupCardinalityWithZeroToOneAttributeCardinality: { [0..1] A = X }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-attribute-cardinality-zero-to-one-request.json",
+        "response" : "sct/ecl/expand-ecl-group-attribute-cardinality-zero-to-one-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-cardinality-zero-to-one-not-equals",
+        "description" : "Snow Owl groupCardinalityZeroToOneWithDefaultAttributeCardinalityNotEquals: [0..1] { A != X }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-cardinality-zero-to-one-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-group-cardinality-zero-to-one-not-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-and-attribute-cardinality-zero-zero",
+        "description" : "Snow Owl groupCardinalityZeroToZeroWithZeroToZeroAttributeCardinality: [0..0] { [0..0] A = X }. Snow Owl says empty. Needs confirmation.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-zero-request.json",
+        "response" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-zero-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-and-attribute-cardinality-zero-one-zero-zero",
+        "description" : "Snow Owl groupCardinalityZeroToOneWithZeroToZeroAttributeCardinality: [0..1] { [0..0] A = X }. Snow Owl says empty. Needs confirmation.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-one-zero-zero-request.json",
+        "response" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-one-zero-zero-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-and-attribute-cardinality-zero-zero-zero-one",
+        "description" : "Snow Owl groupCardinalityZeroToZeroWithZeroToOneAttributeCardinality: [0..0] { [0..1] A = X } matches nothing.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-zero-zero-one-request.json",
+        "response" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-zero-zero-one-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-and-attribute-cardinality-zero-one-zero-one",
+        "description" : "Snow Owl groupCardinalityZeroToOneWithZeroToOneAttributeCardinality: [0..1] { [0..1] A = X }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-one-zero-one-request.json",
+        "response" : "sct/ecl/expand-ecl-group-and-attribute-cardinality-zero-one-zero-one-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-group-mixed-attribute-cardinalities",
+        "description" : "Snow Owl refinementWithZeroToOneCardinalityInAttributeConjuction: { [0..1] A = X, [1..1] B = Y }.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-group-mixed-attribute-cardinalities-request.json",
+        "response" : "sct/ecl/expand-ecl-group-mixed-attribute-cardinalities-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-equals",
+        "description" : "Snow Owl refinementIntegerEquals: A = #n on an integer-valued attribute.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-equals-large",
+        "description" : "Snow Owl refinementIntegerEquals: A = #n selecting one product.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-equals-large-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-equals-large-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-not-equals",
+        "description" : "Snow Owl refinementIntegerNotEquals: A != #n matches concepts with a value of A other than n (0 results here).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-not-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-less-than",
+        "description" : "Snow Owl refinementIntegerLessThan: A < #n.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-less-than-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-less-than-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-less-than-or-equals",
+        "description" : "Snow Owl refinementIntegerLessThanOrEquals: A <= #n.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-less-than-or-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-less-than-or-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-greater-than",
+        "description" : "Snow Owl refinementIntegerGreaterThan: A > #n.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-greater-than-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-greater-than-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-greater-than-or-equals",
+        "description" : "Snow Owl refinementIntegerGreaterThanEquals: A >= #n.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-greater-than-or-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-greater-than-or-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concrete-integer-negative",
+        "description" : "Snow Owl refinementIntegerEqualsNegative: #-n parses; 0 results in the test edition.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-integer-negative-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-integer-negative-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-concept-filter-active-not-equals",
+        "description" : "Snow Owl concept_active_notequals: {{ C active != false }}.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concept-filter-active-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concept-filter-active-not-equals-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-term-match-and-wild",
+        "description" : "Snow Owl termDisjunction: {{ D term = (match:\"...\" wild:\"...\") }}.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-term-match-and-wild-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-term-match-and-wild-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-wild-case-insensitive",
+        "description" : "Snow Owl termWildCaseInsensitive: wild: matching ignores case.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-wild-case-insensitive-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-wild-case-insensitive-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-description-filter-wild-any",
+        "description" : "Snow Owl termWildAnyCharacterShouldNotCreateQueryClause: wild:\"**\" matches everything.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-wild-any-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-wild-any-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-filters-across-and",
+        "description" : "Snow Owl multiDomainQueryAnd: filters on each side of AND.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-filters-across-and-request.json",
+        "response" : "sct/ecl/expand-ecl-filters-across-and-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-filters-across-or",
+        "description" : "Snow Owl multiDomainQueryOr: filters on each side of OR.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-filters-across-or-request.json",
+        "response" : "sct/ecl/expand-ecl-filters-across-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-filters-across-minus",
+        "description" : "Snow Owl multiDomainQueryExclusion: filters on each side of MINUS.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-filters-across-minus-request.json",
+        "response" : "sct/ecl/expand-ecl-filters-across-minus-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-history-default",
+        "description" : "Snow Owl profile_default: {{ + HISTORY }} adds the inactive concepts associated with the result (here, through REPLACED BY).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-history-default-request.json",
+        "response" : "sct/ecl/expand-ecl-history-default-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-history-max",
+        "description" : "Snow Owl profile_max: {{ + HISTORY-MAX }}.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-history-max-request.json",
+        "response" : "sct/ecl/expand-ecl-history-max-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-history-mod",
+        "description" : "Snow Owl profile_mod: {{ + HISTORY-MOD }} includes REPLACED BY.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-history-mod-request.json",
+        "response" : "sct/ecl/expand-ecl-history-mod-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-history-min",
+        "description" : "Snow Owl profile_min: {{ + HISTORY-MIN }} is SAME AS only; nothing is added in the test edition.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-history-min-request.json",
+        "response" : "sct/ecl/expand-ecl-history-min-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-history-explicit-refset",
+        "description" : "Snow Owl profile_explicit_refsets: {{ + HISTORY (refset) }} with an explicit reference set.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-history-explicit-refset-request.json",
+        "response" : "sct/ecl/expand-ecl-history-explicit-refset-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-history-all-refsets",
+        "description" : "Snow Owl profile_all_association_refsets: {{ + HISTORY (*) }}.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-history-all-refsets-request.json",
+        "response" : "sct/ecl/expand-ecl-history-all-refsets-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-alt-identifier",
+        "description" : "Alternate identifier (ECL 2.1): LOINC#code resolves to the concept carrying that LOINC code in the LOINC Extension.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-alt-identifier-request.json",
+        "response" : "sct/ecl/expand-ecl-alt-identifier-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-alt-identifier-quoted-operator",
+        "description" : "Alternate identifier in quotes with a hierarchy operator: >> \"LOINC#code\".",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-alt-identifier-quoted-operator-request.json",
+        "response" : "sct/ecl/expand-ecl-alt-identifier-quoted-operator-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-alt-identifier-unknown",
+        "description" : "An alternate identifier that no concept carries is an invalid expression, like an unknown concept.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-alt-identifier-unknown-request.json",
+        "response" : "sct/ecl/expand-ecl-alt-identifier-unknown-response.json"
       },
       {
         "name" : "snomed-expand-ecl-term-match",

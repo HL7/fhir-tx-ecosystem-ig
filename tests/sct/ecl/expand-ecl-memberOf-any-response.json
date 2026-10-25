@@ -1,0 +1,697 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-any",
+  "version" : "5.0.0",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-25",
+  "compose": {
+    "include": [{
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter": [{ "property": "constraint", "op": "=", "value": "^ *" }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id": "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 130,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "1000381000003107",
+      "display" : "Hepatic revenge",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1003735000",
+      "display" : "Process acts on"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "110540008",
+      "display" : "Muscle structure of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113254000",
+      "display" : "Structure of interstitial tissue of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113257007",
+      "display" : "Structure of cardiovascular system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113305005",
+      "display" : "Cerebellar structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113343008",
+      "display" : "Body organ structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1142135004",
+      "display" : "Has presentation strength numerator value"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1142136003",
+      "display" : "Has presentation strength denominator value"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1142137007",
+      "display" : "Has concentration strength denominator value"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1142138002",
+      "display" : "Has concentration strength numerator value"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1142139005",
+      "display" : "Count of base of active ingredient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116006008",
+      "display" : "Pleural sac structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116676008",
+      "display" : "Associated morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116688005",
+      "display" : "Procedure approach"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118168003",
+      "display" : "Specimen source morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118169006",
+      "display" : "Specimen source topography"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118171006",
+      "display" : "Specimen procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118632007",
+      "display" : "Structure of tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119191008",
+      "display" : "Tibia part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1193602001",
+      "display" : "Structure of shaft of lower limb bone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "120577001",
+      "display" : "Hand part"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "122972007",
+      "display" : "Structure of vein of pulmonary circulation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1230368008",
+      "display" : "Structure of tendon within wrist and/or hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12611008",
+      "display" : "Bone structure of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12738006",
+      "display" : "Brain structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127489000",
+      "display" : "Has active ingredient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127954009",
+      "display" : "Skeletal muscle structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14016003",
+      "display" : "Bone marrow structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15776009",
+      "display" : "Pancreatic structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21483005",
+      "display" : "Structure of central nervous system"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23416004",
+      "display" : "Bone structure of ulna"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244699002",
+      "display" : "Part of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245098002",
+      "display" : "Structure of tendon within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "246075003",
+      "display" : "Causative agent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "246090004",
+      "display" : "Associated finding"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "246093002",
+      "display" : "Component"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "246454002",
+      "display" : "Occurrence"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "246501002",
+      "display" : "Technique"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "255234002",
+      "display" : "After"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "260507000",
+      "display" : "Access"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "260686004",
+      "display" : "Method"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "263502005",
+      "display" : "Clinical course"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "265803009",
+      "display" : "Structure of muscle and/or tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "272741003",
+      "display" : "Laterality"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2748008",
+      "display" : "Spinal cord structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281243005",
+      "display" : "Musculoskeletal structure of upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28273000",
+      "display" : "Bile duct structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302525009",
+      "display" : "Entire shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302539009",
+      "display" : "Entire hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302545001",
+      "display" : "Entire foot"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307113009",
+      "display" : "Structure of wrist and/or hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30737000",
+      "display" : "Structure of medulla of kidney"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "307530000",
+      "display" : "Appendicitis NOS",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314634000",
+      "display" : "Entire shaft of lower limb bone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32610002",
+      "display" : "Structure of basal nucleus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363589002",
+      "display" : "Associated procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363698007",
+      "display" : "Finding site"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363699004",
+      "display" : "Direct device"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363700003",
+      "display" : "Direct morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363701004",
+      "display" : "Direct substance"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363702006",
+      "display" : "Has focus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363703001",
+      "display" : "Has intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363704007",
+      "display" : "Procedure site"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363713009",
+      "display" : "Has interpretation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363714003",
+      "display" : "Interprets"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "368380004",
+      "display" : "Structure of flexor tendon within finger"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370130000",
+      "display" : "Property"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370132008",
+      "display" : "Scale type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370133003",
+      "display" : "Specimen substance"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370135005",
+      "display" : "Pathological process"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371299000",
+      "display" : "Structure of tendon and/or tendon sheath within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371881003",
+      "display" : "During"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38199008",
+      "display" : "Tooth structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39352004",
+      "display" : "Joint structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39607008",
+      "display" : "Lung structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39937001",
+      "display" : "Skin structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405813007",
+      "display" : "Procedure site - Direct"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405814001",
+      "display" : "Procedure site - Indirect"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405815000",
+      "display" : "Procedure device"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405816004",
+      "display" : "Procedure morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408729009",
+      "display" : "Finding context"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408730004",
+      "display" : "Procedure context"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408731000",
+      "display" : "Temporal context"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408732007",
+      "display" : "Subject relationship context"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "411116001",
+      "display" : "Has manufactured dose form"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "418775008",
+      "display" : "Finding method"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419605007",
+      "display" : "Structure of ankle and/or foot"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422697005",
+      "display" : "Structure of half of trunk lateral to midsagittal plane"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422871001",
+      "display" : "Structure of flexor tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423857001",
+      "display" : "Structure of half of body lateral to midsagittal plane"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "424226004",
+      "display" : "Using device"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "424244007",
+      "display" : "Using energy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "424361007",
+      "display" : "Using substance"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "425391005",
+      "display" : "Using access device"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42752001",
+      "display" : "Due to"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "47429007",
+      "display" : "Associated with"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48477009",
+      "display" : "Lip structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49596003",
+      "display" : "Digestive organ structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52687003",
+      "display" : "Bone structure of shaft of tibia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56459004",
+      "display" : "Foot structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5665001",
+      "display" : "Retinal structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58471003",
+      "display" : "Renal tubule structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59820001",
+      "display" : "Blood vessel structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62413002",
+      "display" : "Bone structure of radius"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64033007",
+      "display" : "Kidney structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66019005",
+      "display" : "Limb structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6787005",
+      "display" : "Structure of tendon and/or tendon sheath within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699616002",
+      "display" : "Entire subregion of lower limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "704319004",
+      "display" : "Inheres in"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "704321009",
+      "display" : "Characterizes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "712835007",
+      "display" : "Structure of extensor tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726633004",
+      "display" : "Temporally related to"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "727429009",
+      "display" : "Entire tendon within hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "728137008",
+      "display" : "Entire tendon within upper limb"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732943007",
+      "display" : "Has BoSS"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732945000",
+      "display" : "Has presentation strength numerator unit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732947008",
+      "display" : "Has presentation strength denominator unit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733722007",
+      "display" : "Has concentration strength denominator unit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733725009",
+      "display" : "Has concentration strength numerator unit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "738774007",
+      "display" : "Is modification of"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "762949000",
+      "display" : "Has precise active ingredient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "762951001",
+      "display" : "Has ingredient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "763032000",
+      "display" : "Has unit of presentation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78076003",
+      "display" : "Lens clear"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78961009",
+      "display" : "Splenic structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80891009",
+      "display" : "Heart structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81040000",
+      "display" : "Pulmonary artery structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85562004",
+      "display" : "Hand structure"
+    }
+    ]
+  }
+}
