@@ -1,10 +1,9 @@
 {
   "package-id": "hl7.fhir.uv.tx-ecosystem",
-  "version": "1.9.6",
-  "desc": "Fix many string comparison issues in the test cases",
-  "path": "http://hl7.org/fhir/uv/tx-ecosystem/1.9.6",
+  "version": "1.10.0",
+  "desc": "Major changes: improved documentation and QA in the IG, and big rework of the test cases",
+  "path": "http://hl7.org/fhir/uv/tx-ecosystem/1.10.0",
   "status": "informative",
   "sequence": "Releases",
-  "mode": "milestone",
-  "allow-current-dependencies": true
+  "mode": "milestone"
 }
