@@ -4,9 +4,10 @@ This page documents the expectations for servers in the terminology ecosystem ar
 Servers in the ecosystem must support the minimum features in this page around validation, whether or
 not the affected code system has more than one language supported or not. 
 
-Servers are also generally required to support CodeSystem supplements for language packs, though this
-may be waived for some code systems with their own alternative translation support and governance on 
-discussion with HL7.
+Servers are also required to support CodeSystem supplements, and global language packs - supplements that
+are used for the code system they supplement whether or not they are referenced - except where a code system's
+governance does not allow them (see
+[Passing CodeSystem resources in requests](requirements.html#passing-codesystem-resources-in-requests)).
 
 #### Client Language Specification
 
@@ -27,7 +28,7 @@ Clients can specify the return displayLanguage in one of four places:
 The first three may contain multiple languages with weights per the Accept-Language specification; which to use is a matter 
 of operational control on the client. ValueSet Language is a single language code as described in BCP-47. 
 
-* Servers SHALL support all four approaches 
+* §Servers SHALL support all four approaches to specifying languages§
 
 From a server point of view, the order of priority for the displayLanguage parameter is 
 `request parameter` > `valueset-extension` > `HTTP Header` > `ValueSet.language`
@@ -41,9 +42,8 @@ language of the request (typically because they have different supplements loade
 
 Consequences for clients using the ecosystem:
 
-* Clients SHALL resolve the display language (from the four sources above, in priority order) *before* 
-  server selection, and pass it as the `language` parameter in the coordination server's resolve call 
-* The language used for routing and the language used in the subsequent operation must be the same
+* §Clients SHALL resolve the display language (from the four sources above, in priority order) *before* server selection§, and pass it as the `language` parameter in the coordination server's resolve call 
+* §The language used for routing and the language used in the subsequent operation SHALL be the same§
 * Only language-sensitive operations should be routed with a language: `$expand` where a display 
   language is in play, `$validate-code` that carries a display language (even when no display is 
   provided to check, the display in the response comes back in the requested language, and callers 

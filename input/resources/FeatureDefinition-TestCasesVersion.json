@@ -1,6 +1,11 @@
 {
   "resourceType" : "FeatureDefinition",
   "id" : "TestCaseVersion",
+  "extension" : [{
+    "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" :"director"
+  }],
+  "contextDefinition" : "This feature is defined at the root of the CapabilityStatement",
   "context" : [
     "http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement"
   ],

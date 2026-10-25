@@ -52,6 +52,7 @@
 <artifact deprecated="true" id="CodeSystem/CDSSelectionBehavior" key="CodeSystem-CDSSelectionBehavior" name="CDSSelectionBehavior Codes"/>
 <artifact deprecated="true" id="ValueSet/CDSSelectionBehavior" key="ValueSet-CDSSelectionBehavior" name="CDSSelectionBehavior Codes ValueSet"/>
 <artifact deprecated="true" id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
+<artifact id="Binary/FeatureDefinition-CodeSystemAsParameter" key="Binary-FeatureDefinition-CodeSystemAsParameter" name="CodeSystemAsParameter"/>
 <artifact deprecated="true" id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact deprecated="true" id="CodeSystem/r4-equivalence" key="CodeSystem-r4-equivalence" name="ConceptMapEquivalence"/>
 <artifact deprecated="true" id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
@@ -216,6 +217,7 @@
 <artifact deprecated="true" id="Task/task03" key="Task-task03" name="Task03"/>
 <artifact deprecated="true" id="StructureDefinition/elementdefinition-binding-style" key="StructureDefinition-elementdefinition-binding-style" name="Terminology Binding Style Extension"/>
 <artifact deprecated="true" id="CodeSystem/tx-issue-type" key="CodeSystem-tx-issue-type" name="Terminology Issue Type"/>
+<artifact id="Binary/FeatureDefinition-TestCasesVersion" key="Binary-FeatureDefinition-TestCasesVersion" name="TestCaseVersion"/>
 <artifact deprecated="true" id="StructureDefinition/type-specifier" key="StructureDefinition-type-specifier" name="Type Specifier Extension"/>
 <artifact deprecated="true" id="StructureDefinition/valueset-expansion-parameter" key="StructureDefinition-valueset-expansion-parameter" name="ValueSet Expansion Parameter"/>
 <artifact deprecated="true" id="CodeSystem/binding-style" key="CodeSystem-binding-style" name="Vocab Binding Style Codes"/>
@@ -237,6 +239,7 @@
 <page deprecated="true" key="downloads" name="Downloads"/>
 <page key="ecosystem" name="Ecosystem Definition"/>
 <page deprecated="true" key="usecases" name="Example Use Cases"/>
+<page key="conformance" name="Formal Conformance Statements"/>
 <page deprecated="true" key="format-extensions" name="Format Extensions"/>
 <page deprecated="true" key="framework" name="Framework"/>
 <page deprecated="true" key="gaps-examples" name="Gaps in Care Example Use Cases"/>
@@ -256,8 +259,9 @@
 <page deprecated="true" key="summary-reporting" name="Summary Reporting"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="terminology" name="Terminology"/>
+<page key="testcases" name="Test Case Documentation"/>
 <page key="test-history" name="Test Case History"/>
-<page key="testcases" name="Test Case Registry"/>
+<page key="test-registry" name="Test Case Registry"/>
 <page key="icd-11" name="Using ICD-11 with HL7 Standards"/>
 <page key="icf" name="Using ICF with HL7 Standards"/>
 <page deprecated="true" key="vte1" name="Venous Thromboembolism Prophylaxis (VTE-1)"/>

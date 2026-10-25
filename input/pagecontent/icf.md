@@ -1,6 +1,6 @@
 Note: This page is temporarily here until it migrates to terminology.hl7.org
 
-# Using old versions of ICF with FHIR
+### Using old versions of ICF with FHIR
 
 The International Classification of Functioning, Disability and Health (ICF) is published by the
 World Health Organization. It classifies health and health-related domains - what a person's body
@@ -13,7 +13,7 @@ releases of ICF - the 2001 classification and its annual updates - which use the
 alphanumeric codes such as `b1100` and `s7300`, and are still widely used. Two of them are
 available as CodeSystems in the `fhir.tx.support` package: `2001a` and `2017a`.
 
-## Summary
+#### Summary
 
 | | ICF (pre ICD-11) |
 |---|---|
@@ -29,7 +29,7 @@ available as CodeSystems in the `fhir.tx.support` package: `2001a` and `2017a`.
 | **Filter Properties** | `concept` is-a etc., the code system's properties, and the qualifier filters - see [Filter Properties](#filter-properties) |
 | **Implicit Value Sets** | None defined |
 
-## License
+#### License
 
 ICF is published by WHO, and the same rules apply to licensing ICF as to licensing ICD. See
 [http://icd.who.int/](http://icd.who.int/) and
@@ -37,7 +37,7 @@ ICF is published by WHO, and the same rules apply to licensing ICF as to licensi
 
 *Note: implementers should check WHO's current terms before using ICF.*
 
-## ICF Codes
+#### ICF Codes
 
 ICF has four components, and the first letter of every code says which one it belongs to:
 
@@ -65,7 +65,7 @@ cannot be used to code with. In `2001a` the components are themselves under a ro
 }
 ```
 
-## Qualifiers
+#### Qualifiers
 
 In ICF itself, a code is not complete until it is qualified: the category says *what* is being
 described, and qualifiers say how much of a problem there is, and of what kind. Qualifiers follow
@@ -225,7 +225,7 @@ There is no `+9`: not applicable is neither a barrier nor a facilitator, and is 
 effect, which may still be wanted, for statistics for example. A minus sign is not used for
 barriers (`e540-4` is not a valid code).
 
-## Versions
+#### Versions
 
 Two releases are available:
 
@@ -239,7 +239,7 @@ scales are the same in both releases.
 ICF in ICD-11 is a different code system, with different codes (`http://id.who.int/icd/release/11/icf`,
 versioned by ICD-11 release), and is not a version of this one.
 
-## Display Terms
+#### Display Terms
 
 The display of a code is the category's title. In `2001a`, translations are available in French
 (`fr`), Spanish (`es`), Russian (`ru`), Chinese (`zh`) and Turkish (`tr`), and `displayLanguage`
@@ -267,7 +267,7 @@ The category's own title is not a valid display for a qualified code (unless eve
 `8`): `$validate-code` of `s7300.183` with the display `Structure of upper arm` reports the wrong
 display.
 
-## Properties
+#### Properties
 
 These are the properties a `$lookup` may return:
 
@@ -292,7 +292,7 @@ These are the properties a `$lookup` may return:
 A qualified code has its category's properties as well, other than `parent`. A qualifier that is
 `8` is still reported: `s7300.183` has `nature` `q2-8`.
 
-## Filter Properties
+#### Filter Properties
 
 | Property | Operators | Values | Description |
 |---|---|---|---|
@@ -359,6 +359,6 @@ generated displays. But they cannot be enumerated: an include that admits qualif
 include without `qualified = false` - expands to the plain codes it contains, and the expansion is
 marked as incomplete (`valueset-unclosed`), since the qualified codes are not in it.
 
-## Implicit Value Sets
+#### Implicit Value Sets
 
 No implicit value sets have been defined for ICF.

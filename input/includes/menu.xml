@@ -5,12 +5,9 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="requirements.html">General</a>
-      </li>
-      <li>
-        <a href="languages.html">Language Support</a>
-      </li>
+      <li><a href="requirements.html">General</a></li>
+      <li><a href="languages.html">Language Support</a></li>
+      <li><a href="conformance.html">Formal Conformance Statements</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -31,8 +28,17 @@
       <li><a href="icf.html">ICF</a></li>
     </ul>
   </li>
-  <li><a href="testcases.html">Test Cases</a></li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Test Cases<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="testcases.html">Documentation</a></li>
+      <li><a href="test-history.html">Version History</a></li>
+      <li><a href="r4.html">Test Cases in R4</a></li>
+      <li><a href="test-registry.html">Registry</a></li>
+    </ul>
+  </li>
 </ul>      
 
 

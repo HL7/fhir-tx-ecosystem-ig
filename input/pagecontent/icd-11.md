@@ -1,6 +1,6 @@
 Note: This page is temporarily here until it migrates to terminology.hl7.org
 
-# Using ICD-11 with FHIR
+### Using ICD-11 with FHIR
 
 ICD-11 is published by the World Health Organization as three code systems that share one
 underlying content model:
@@ -11,7 +11,7 @@ underlying content model:
 * **Foundation** - the WHO Family of International Classifications Foundation: the semantic
   network from which the linearizations are derived
 
-## Summary
+#### Summary
 
 | | MMS | ICF | Foundation |
 |---|---|---|---|
@@ -27,7 +27,7 @@ underlying content model:
 | **Filter Properties** | `concept` is-a / descendent-of - see [Filter Properties](#filter-properties) | As MMS | As MMS |
 | **Implicit Value Sets** | None defined yet - see [Implicit Value Sets](#implicit-value-sets) | | |
 
-## License
+#### License
 
 ICD-11 is licensed by WHO under the Creative Commons Attribution-NoDerivs 3.0 IGO license
 (CC BY-ND 3.0 IGO); see the [ICD-11 license](https://icd.who.int/docs/icd-api/license) and the
@@ -36,7 +36,7 @@ full [ICD-11 Terms of Use and License Agreement](https://icd.who.int/en/docs/ICD
 *Note: the ICD-11 license is subject to further revision at this time. Implementers should check
 the WHO license page for the current terms.*
 
-## ICD-11 Codes
+#### ICD-11 Codes
 
 Every ICD-11 MMS or ICF entity has two identifiers:
 
@@ -100,7 +100,7 @@ classification code, the extension on a code that has no classification code, on
 already given as its classification code, or on a Coding in any other system - the Foundation
 included, which has no classification codes - is an error, and the Coding is not valid.
 
-## Post Coordination Expressions
+#### Post Coordination Expressions
 
 MMS and ICF codes may be postcoordinated: a stem code is refined by further codes. The syntax
 has two separators and no spaces:
@@ -131,14 +131,14 @@ and
 [Adding detail - postcoordination and cluster coding](https://icdcdn.who.int/icd11referenceguide/en/html/index.html#adding-detail-postcoordination-and-cluster-coding-with-multiple-stem-codes-and-extension-codes),
 for WHO's account of postcoordination and cluster coding.
 
-## Versions
+#### Versions
 
 WHO publishes a new release of ICD-11 each year, and each release covers all three code systems.
 The version is the release identifier, in the form `YYYY-MM` - for example `2026-01` - and is
 the same for MMS, ICF and the Foundation in a given release. Entity ids are stable across
 releases; classification codes may change.
 
-## Display Terms
+#### Display Terms
 
 The display for an entity is its title. Where WHO publishes a translation of the classification,
 the title is available in that language, and `displayLanguage` (or the HTTP `Accept-Language`)
@@ -153,14 +153,14 @@ The display of a postcoordinated expression is built from its parts: cluster mem
 ` / `, each qualifier in brackets after the code it qualifies -
 `Cholera [Vibrio cholerae O1, biovar cholerae]`.
 
-## Supplements
+#### Supplements
 
 Only WHO can define a global language pack for ICD-11: a translation of the classification
 belongs to WHO's release, not to a code system supplement. Supplements defined by anyone else must
 not present themselves as global language packs - they are local additions, and should say so,
 so that local usage is clear to whoever receives the data.
 
-## Properties
+#### Properties
 
 These are the properties a `$lookup` may return:
 
@@ -207,7 +207,7 @@ By default only `axis` and `value` are returned. With the `$lookup` parameter
 each carries `required`, `allowMultipleValues` and `valueSet` as well. A plain (not
 postcoordinated) concept therefore lists its axes only when `post-coordination-metadata=true`.
 
-## Filter Properties
+#### Filter Properties
 
 | Property | Operators | Values | Description |
 |---|---|---|---|
@@ -229,7 +229,7 @@ For example, the extension codes for substances:
 }
 ```
 
-## Implicit Value Sets
+#### Implicit Value Sets
 
 No implicit value sets have been defined for ICD-11 yet.
 

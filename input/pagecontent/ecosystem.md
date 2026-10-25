@@ -117,8 +117,8 @@ Notes:
 
 #### Conformance Requirements 
 
-All endpoints listed in the server registration file shall return CapabilityStatement and TerminologyCapabilities
-resources that conform to the requirements described in this IG
+§All endpoints listed in the server registration file SHALL return CapabilityStatement and TerminologyCapabilities
+resources that conform to the requirements described in this IG§.
 
 The HL7 ecosystem requires that all servers fully conform to the requirements laid out in
 this implementation, and that servers pass the set of tests described here in, or an acceptable 
@@ -178,8 +178,8 @@ no such separation in the API: a `$validate-code` with a German display, or an `
 `displayLanguage: de`, is a single indivisible operation that is answered by a single server. 
 Consequences:
 
-* A server making language specific claims SHALL host the content of the claimed code systems 
-  (`complete` or `fragment`) as well as the relevant supplement(s), so that it can execute the 
+* §A server making language specific claims SHALL host the content of the claimed code systems 
+  (`complete` or `fragment`) as well as the relevant supplement(s)§, so that it can execute the 
   operations outright. Registering a server that holds only supplements is not supported: routing 
   part of an operation to a supplement-only server would require cross-server composition (content 
   from one server + supplement from another via `tx-resource`), and the ecosystem does not 
@@ -265,7 +265,7 @@ For the HL7 ecosystem, the ```root``` of this API is at [http://tx.fhir.org/tx-r
 
 ```GET {root}```
 
-These parameters SHALL be supported by all servers:
+§The standard discovery parameters SHALL be supported by all servers§:
 
 * `registry`: return only those endpoints that come from a nominated registry (by the code in the master registration file)
 * `server`: return only those endpoints that have the code given
@@ -313,7 +313,7 @@ A client can also ask which server to use for a particular CodeSystem or ValueSe
 
 ```GET {root}/resolve?fhirVersion={ver}&url={url}```
 
-These parameters SHALL be supported by all servers:
+§The standard resolution parameters SHALL be supported by all servers§:
 
 * `fhirVersion` (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
 * `url`: return only those endpoints that support a particular code system (by canonical, so url or url/version)

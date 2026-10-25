@@ -1,8 +1,7 @@
-### Test cases 
 
 The tests assume that the server can accept code systems on the fly. 
 If servers do not accept code systems on the fly, server authors will have to 
-consult the FHIR product director. Either way, servers that do SHOULD pass all the tests, but the FHIR product director 
+consult the FHIR product director. Either way, servers that do should pass all the tests, but the FHIR product director 
 will review the test outcomes in order to approve a server. 
 
 The test cases are in version R5, but the tests will run against either an R4 or an R5 server. 
@@ -10,7 +9,7 @@ See [R4 and the Test Cases](r4.html)
 
 Note that the test cases will be migrated to use TestPlan+matchetypes at some stage.
 
-#### Running the tests 
+### Running the tests 
 
 The tests can be run by any runner that processes the tests correctly, but the easiest way to 
 execute the tests is to use the [standard Java FHIR Validator](https://github.com/hapifhir/org.hl7.fhir.core/releases).
@@ -19,6 +18,7 @@ You do not download the tests yourself - the runner fetches the published test p
 ````
 java -jar validator_cli.jar txTests -tx {server} [-test-version {version}] [-output {folder}] 
     [-externals {file}] [-mode {mode},{mode}] [-suite {suite}] [-filter {text}] [-input {folder}]
+    [-tester {name}]
 ````
 
 The parameters are:
@@ -37,12 +37,14 @@ The parameters are:
 * `-suite`: run only the named suite, rather than all of them
 * `-filter`: run only the tests whose name contains this text
 * `-input`: an additional folder of test cases to run as well as the published ones
+* `-tester`: who is running the tests, for `TestReport.tester` in `report.json` (default 
+  `HL7 Ecosystem Test Runner`); the modes are added after it
 
 Note that the FHIR version to test is *not* a parameter: the runner asks the server which version 
 of FHIR it speaks, and runs the R4 or the R5 form of each test accordingly. 
 See [R4 and the Test Cases](r4.html).
 
-#### Test Output
+### Test Output
 
 The runner writes a running commentary to the console. It starts with a header that records
 what is actually being run - the source of the tests and their version, the output directory,
@@ -95,9 +97,10 @@ The output directory (`-output`, defaulting to your temporary directory) contain
 Note that the same test writes to the same file names every time it fails. If you run the tests
 several ways - R4 and R5, with and without server caching - each run overwrites the last one's
 diffs, and a test that fails in only one of them can leave no evidence behind. Use a different
-output directory for each variant, or, in server mode, the `label` parameter described below.
+output directory for each variant, or, in server mode, a separate run or the `label` parameter
+described below.
 
-#### Running the tests in a pipeline 
+### Running the tests in a pipeline 
 
 The simplest way to run the tests in a build is the command line above: it exits with 0 if every
 test passed and 1 if any test failed, so a CI step needs no output parsing. Always pass
@@ -108,42 +111,90 @@ moved, not because your server did. Pin a released version, and change it delibe
 and `actual/` pair for each failing test is the only thing that tells you what went wrong, and it
 is gone with the build container otherwise.
 
-The drawback of the command line is that the whole run is a single result. If you want your own
-test framework to report one result per test - to see which tests are newly failing, to track them
-over time, or just to get a useful failure message next to the test that produced it - use the
-validator's server mode instead. Start the validator once as an HTTP server, and ask it to run
-one test at a time:
+A command line run reports the run as a whole: one exit code, and one `test-results.json` and
+`report.json`. If you run the tests several ways - against your R4 and R5 endpoints, say, or with
+different sets of modes - each run is a separate result, and nothing combines them: give each run
+its own `-output` directory, and compare or combine the reports yourself.
+
+If you want your own test framework to report one result per test - to see which tests are newly
+failing, to track them over time, or just to get a useful failure message next to the test that
+produced it - use the validator's server mode instead. Start the validator once as an HTTP server,
+start a run, ask it to run one test at a time, and end the run (validator 7.0.4 and later):
 
 ````
 java -jar validator_cli.jar server {port} -version 5.0
 
-GET http://localhost:{port}/txTest?server={url}&suite={suite}&test={test}&modes={modes}&folder={folder}&label={label}
+POST http://localhost:{port}/txTest/setup                       (body: see below)
+GET  http://localhost:{port}/txTest?session={id}&suite={suite}&test={test}&modes={modes}&label={label}
+POST http://localhost:{port}/txTest/teardown?session={id}
 ````
 
-Each call runs one test and returns an `OperationOutcome`. If it has no issue with a severity of
-`error`, the test passed; otherwise `details.text` is the failure message - the same message the
-command line would have logged. The test cases and the server's setup resources are loaded once,
-on the first call for a given server, and reused, so the cost of starting a JVM and loading the
-test package is paid once, not once per test. Drive it from whatever test framework you already
-use: enumerate the suites and tests from `test-cases.json` in this IG's package, and make one call
-per test.
+**Setup** takes a JSON object with the things that cannot change during a run, and returns the
+`session` to pass to the other two calls:
 
-Two of the parameters matter more in server mode than they look. `modes` replaces the runner's
-mode set for that call: pass every mode your server supports, exactly as you would on the command
-line, because a test gated on a mode you did not ask for does not run, and a test that did not run
-is reported as neither a pass nor a failure but as an explanation of which mode would have run it.
-Sending no `modes` at all gets a default set that may not match your server. `folder` and `label`
-(validator 6.10.5 and later) control where the output goes: `folder` names the run's folder inside
-the validator's temporary directory - a simple name, not a path, defaulting to the server's host
-name - and `label` names a subfolder of it for that one test. Give each variant of a run its own
-`label` (`r4`, `r5`, `r5-cached`) and the diffs for a test that fails in only one of them survive.
+````
+{
+  "server" : "http://localhost:8080/fhir",
+  "test-version" : "1.9.6",
+  "externals" : { ... },
+  "folder" : "my-server-r4",
+  "tester" : "My Server CI"
+}
+````
 
-#### Versions of the test cases
+* `server`: the server to test. This is the only required property
+* `test-version`: as for `-test-version` on the command line, and with the same default - pin it
+  in a pipeline
+* `externals`: the *content* of an externals file (in the format of 
+  `tests/messages-tx.fhir.org.json`), as a JSON object - not a file name
+* `folder`: names the run's output folder inside the validator's temporary directory - a simple
+  name, not a path, defaulting to the server's host name
+* `tester`: as for `-tester` on the command line
+
+The validator loads the test cases and connects to the server during setup, so the response also
+says what it found: the version of the test cases, the server's FHIR version and software, the
+features it declares, and the output folder. As on the command line, the FHIR version is the
+server's, not a setting: a run against an R4 server runs the R4 form of each test. To test the
+same server's R4 and R5 endpoints, start a run for each.
+
+**Each test** returns an `OperationOutcome`. If it has no issue with a severity of `error`, the 
+test passed; otherwise `details.text` is the failure message - the same message the command line
+would have logged. The test cases and the suite's setup resources are loaded once, and reused, so
+the cost of starting a JVM and loading the test package is paid once, not once per test. Drive it
+from whatever test framework you already use: enumerate the suites and tests from 
+`test-cases.json` in this IG's package (at the version you are testing), and make one call per
+test.
+
+`modes` replaces the runner's mode set for that call: pass every mode your server supports, exactly
+as you would on the command line. Without it, the default is every mode except `tx.fhir.org`,
+which may not match your server. A test that doesn't run - it is disabled, or gated on a mode you
+did not ask for, a feature the server does not declare, or a FHIR version the server is not - comes
+back as an error saying why it didn't run, because asking for it was a mistake; but it is not
+counted as a failure in the run's results. The simplest approach is to leave out the tests that
+won't run when you enumerate them. `label` names a subfolder of the run's folder for that one
+test's output: if you run the same test more than one way in a run - with and without server
+caching, say - give each way its own `label` so that the diffs for a test that fails in only one
+of them survive.
+
+A suite marked `sequential` (`closure`) has tests that depend on each other: in server mode, it is
+up to you to run its tests in the order they are listed, one at a time, after the other suites.
+
+**Teardown** ends the run, and returns the two reports a command line run writes - 
+`test-results` and `report` (the `TestReport`) - as a JSON object, and writes them to the run's
+output folder as `test-results.json` and `report.json`. Tests that didn't run are not counted, and a
+test that was run more than once counts once, with its last result. A run's results only cover
+that run: as on the command line, several runs give several reports.
+
+The older form of the test call, with `server` (and optionally `externals`, naming a file in the 
+test package, and `folder`) in place of `session`, still works: the first call for a server starts
+a run for it with the `current` test cases, and `POST /txTest/teardown?server={url}` ends it.
+
+### Versions of the test cases
 
 The test cases change: tests are added, and corrected, as servers and the specification develop. 
 So this IG is released periodically, and each release is a fixed set of test cases that you can 
 test against repeatedly and compare results over time. The releases are listed on the 
-[history page](history.html), and you choose one with `-test-version`:
+[test history page](test-history.html), and you choose one with `-test-version`:
 
 ````
 java -jar validator_cli.jar txTests -tx http://localhost:8080/fhir -test-version 1.9.3 -output ./results
@@ -158,13 +209,14 @@ ci-build of the master branch, which changes whenever master changes. That is th
 when you are working with the FHIR product director on new tests, and the wrong one when you need 
 a stable measure of your server's conformance.
 
-#### Test Suites and Test Cases 
+### Test Suites and Test Cases 
 
 All the tests are registered in `tests/test-cases.json`, which contains a list of suites, 
 each of which contains a list of tests. A suite may have:
 
 * `name`: the name of the suite (used in the test output, and to run a single suite)
 * `description`: what the suite is for
+* `notes`, `todo`, `mode-note`: notes for the people maintaining the tests. The runner ignores them
 * `setup`: a list of files containing the resources (code systems, value sets, concept maps) 
   that the server needs in order to run the tests in the suite. Servers that cannot accept 
   resources on the fly have to load these some other way
@@ -175,13 +227,16 @@ each of which contains a list of tests. A suite may have:
 * `disabled`: if true, the suite is not run at all
 * `sequential`: if true, the tests in the suite depend on each other, and must be run in the 
   order they are listed, one at a time, after all the other suites have finished. The `closure` 
-  suite is like this: each test adds to the closure table the previous tests built
+  suite is like this: each test adds to the closure table the previous tests built. (In server 
+  mode, running them that way is up to the caller)
 
 A test may have:
 
 * `name`: the name of the test, unique within the suite
 * `description`: what the test is checking. This is the documentation for the requirement 
   the test enforces, so it should say why the expected response is the correct one
+* `explanation`: a longer account of why the test exists, where `description` isn't enough. The
+  runner ignores it
 * `operation`: one of `expand`, `validate-code`, `cs-validate-code`, `lookup`, `subsumes`, 
   `translate`, `compare`, `closure`, `batch`, `batch-validate`, `metadata`, `term-caps`
 * `request`: the file containing the request parameters (not used by `metadata` / `term-caps`)
@@ -196,7 +251,7 @@ A test may have:
 * `Accept-Language`: the language to ask for
 * `header`: an additional HTTP header to send ( `name`, `value`, and optionally `mode`)
 
-#### FHIR Versions 
+### FHIR Versions 
 
 The test cases are written in R5, and most of them are the same for an R4 server, but 
 some questions have different answers in different versions of FHIR. Where a test only 
@@ -209,7 +264,7 @@ makes sense for particular versions, the `version` property says which:
 Where the same test applies to all versions but the *response* differs, the difference is 
 marked in the expected response with `$optional$` or `$only$` (see below).
 
-#### Test Templates 
+### Test Templates 
 
 Expected responses are not compared literally - they are templates. A string in an expected 
 response may be one of:
@@ -236,7 +291,7 @@ An object in an expected response may carry:
 * `$only$`: this object is required in some versions or modes, and prohibited in the rest 
   (see below)
 
-#### $optional$ and $only$ 
+### $optional$ and $only$ 
 
 `$optional$` marks an entry in an array that the server does not have to return. It is either 
 a boolean, or a filter that says when it is optional:
@@ -256,7 +311,7 @@ is required, and when it does not, the entry must **not** be present at all. The
 grammar is the same as `$optional$`'s. So `"$only$" : "version:4"` marks content that an R4 
 server must return and an R5 server must not.
 
-#### Modes 
+### Modes 
 
 Some tests, and some parts of expected responses, only apply to servers with particular 
 characteristics, or to a particular server. These are marked with a mode, and only run 
@@ -280,7 +335,7 @@ particular server (or every server but one) is held to a different requirement t
 - `"$optional$" : "!tx.fhir.org"` is used throughout for content that only tx.fhir.org is 
 required to return.
 
-#### Features
+### Features
 
 Modes are chosen by whoever runs the tests. Features are not: they come from what the server 
 says about itself in its CapabilityStatement, which the runner reads before it runs anything. A 
@@ -302,7 +357,3 @@ The `closure` suite uses this: it runs on servers that declare `$closure`. Its t
 closure table on the server, with a fixed name, and start by resetting it with `reset = true`. 
 A feature name the runner doesn't know (a typo, say) is never declared, so whatever needs it 
 doesn't run, and the runner warns about it.
-
-#### Registry
-
-{% json tests/test-cases.json liquid/test-cases.liquid %}

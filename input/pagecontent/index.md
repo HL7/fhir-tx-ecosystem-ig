@@ -1,27 +1,65 @@
 
 ### Introduction
 
-This IG documents the terminology ecosystem for HL7 tools, along with the required 
-conformance rules and test cases that control entry. The terminology ecosystem is used 
-by tools including:
+This IG defines the HL7 terminology ecosystem: a set of terminology servers that serve different
+code systems on behalf of different code system authorities, and a coordination server that routes
+each terminology request to the server that can answer it. The ecosystem is what HL7's tools use for
+terminology - validators, the IG publisher, code generators, and profile and terminology authoring
+tools.
 
-* Validators
-* Code Generators
-* Profile & Terminology tooling
-* Implementation Guide Authoring Tooling
+The IG has two jobs. It sets out what a server has to do to be part of the ecosystem, with the test
+cases that check it; and, because the tools depend on getting the same answer from every server, it
+pins down how the terminology operations behave wherever the FHIR specification leaves room for
+interpretation - which messages are returned, how inactive codes, versions, languages and
+post-coordinated expressions are handled, and so on. The second job is now the larger one: the
+[requirements](requirements.html) and the test cases are, in effect, a detailed operational
+specification of the FHIR terminology services.
+
+#### Who this is for
+
+* **Server implementers**: the [Requirements for Servers](requirements.html) and
+  [Language support](languages.html), the [Test Case Documentation](testcases.html) - how to run the
+  tests, and how they work - and the [Test Case Registry](test-registry.html)
+* **Server operators**: what it takes to become an [Approved Server](approved-servers.html), and how
+  servers are registered in the [Ecosystem](ecosystem.html)
+* **Tool developers**: the [Ecosystem](ecosystem.html) definition - the registries, and how requests
+  are routed to the right server
+
+#### Status
+
+The current release of the test cases is **1.9.6** (29 September 2026); 1.10.0 is in preparation. The
+[Test Case History](test-history.html) lists what changed in each release. Test against a released
+version: the default, `current`, is the ci-build, and changes whenever the tests do.
+
+| Area | Status |
+| --- | --- |
+| The core operations - `$expand`, `$validate-code`, `$lookup`, `$translate`, `$subsumes` - with versions and languages | Stable. Releases add tests and correct expected responses, but the rules change rarely |
+| SNOMED CT post-coordination | Settling. The scope servers have to support was agreed by the SNOMED Computable Languages Group in October 2026 (see the [requirements](requirements.html)), and the tests are being written to it |
+| `$closure`, and [features](testcases.html#features) | New in 1.10.0 |
+| ICD-11 and ICF | Draft. The [ICD-11](icd-11.html) and [ICF](icf.html) notes will move to terminology.hl7.org in time |
+| The `tx.fhir.org` mode | Tests specific to tx.fhir.org. No other server is expected to pass them |
+
+The test cases will be migrated to TestPlan and matchetypes at some stage. They are written for R5,
+and also run against R4 servers (see [R4 and the Test Cases](r4.html)).
+
+The test cases in the current build, by [mode](testcases.html#modes):
+
+{% json tests/test-cases.json liquid/summary.liquid %}
+
+#### Taking part
+
+A server becomes an [Approved Server](approved-servers.html) by passing the test cases for the
+modes it claims, against a released version, on a public test endpoint, and being approved by the
+FHIR Product Director. Problems with the test cases, or with the requirements, can be raised as
+issues on the [IG's repository](https://github.com/HL7/fhir-tx-ecosystem-ig). Changes to the tests
+are worked through with the authors of the servers, and agreed with the FHIR Product Director.
 
 #### In this IG
 
-* The [Requirements](requirements.html) for servers that are part of the ecosystem 
-* How [Languages](languages.html) work, and requirements for language handling in the ecosystem
-* Documentation for the [Ecosystem](ecosystem.html) of all the servers
-* The [Approved Servers](approved-servers.html) that have passed the test cases and been approved
-* [Registry of Test Cases](testcases.html) (and [notes about R4/R5](r4.html))
-* [Test Case History](test-history.html) - the changes made to the test cases over time
-* [ICD-11](icd-11.html) and [ICF](icf.html) Implementation notes (draft - will move to terminology.hl7.org in time)
+* Requirements: [for Servers](requirements.html), and for [Language support](languages.html)
+* Ecosystem: the [Ecosystem](ecosystem.html) of servers, and the [Approved Servers](approved-servers.html)
+* Test Cases: [Documentation](testcases.html), [Version History](test-history.html),
+  [R4 and the Test Cases](r4.html), and the [Registry](test-registry.html)
+* Code system specific notes: [ICD-11](icd-11.html) and [ICF](icf.html) (draft - these will move to
+  terminology.hl7.org in time)
 
-<div style="display: none">
-{% lang-fragment ip-statements.xhtml %}
-{% lang-fragment dependency-table-short.xhtml %}
-{% lang-fragment globals-table.xhtml %}
-</div>
