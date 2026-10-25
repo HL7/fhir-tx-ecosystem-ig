@@ -31,9 +31,11 @@ A server is **approved** when all three of the following are true:
 Approval is about the **server** - the implementation, and the public endpoint that demonstrates it. It
 is a different thing from being **registered** in the ecosystem, which is about a particular deployment
 being [authoritative](ecosystem.html#authoritative-servers) for particular content, and is recorded in
-the [server registries](ecosystem.html#the-server-registries) rather than here. A server has to be
-approved before a deployment of it is registered, but an approved server may have no registered
-deployments, and one approved server may have many.
+the [server registries](ecosystem.html#the-server-registries) rather than here. In HL7's own ecosystem, a
+server has to be approved before a deployment of it is registered (see
+[the HL7 ecosystem documentation](https://github.com/FHIR/ig-registry/blob/master/tx-registry-doco.md)),
+but an approved server may have no registered deployments, and one approved server may have many. Other
+ecosystems may have different registration policies and processes.
 
 #### Approved servers
 

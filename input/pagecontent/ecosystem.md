@@ -9,19 +9,17 @@ A terminology server ecosystem is defined by two URLs:
 
 There must be at least one coordination server for the ecosystem, though may be more than one. 
 
-HL7 manages one ecosystem:
+Any organization can define an ecosystem by creating its own pair of registration file and 
+coordination server. Individual servers might participate in multiple different ecosystems.
 
-* Master registration file: <https://fhir.github.io/ig-registry/tx-servers.json>
-* Primary coordination server: <http://tx.fhir.org/tx-reg>
+Where an ecosystem's files are, how to register a server in it, and what it requires of a server 
+before it is registered (e.g. that the server passes the [test cases](testcases.html), or is an 
+[approved server](approved-servers.html)) are matters for that ecosystem, and are described in the 
+ecosystem's own documentation, referenced by the `registration` property of its master 
+registration file (see below). 
 
-HL7 requires that all servers registered with the HL7 ecosystem have passed the tests described 
-in this document as a representation of the requirements documented in this IG. 
-
-Other ecosystems may be defined by other organizations by creating their own pair of registration file 
-and server. Individual servers might participate in multiple different ecosystems.
-
-Note that other ecosystems may not make the same requirement about passing these tests; users of the ecosystem 
-will have to consult the documentation to determine the applicable registration policy.
+HL7 manages one ecosystem, the public one used by the FHIR tools; its locations and registration process 
+are documented at <https://github.com/FHIR/ig-registry/blob/master/tx-registry-doco.md>.
 
 ### Registering the Servers 
 
@@ -29,8 +27,7 @@ Registration is a two level process:
 * The master registration file lists one or more server registries
 * The server registries list one or more servers
 
-The files may be static json files (as the HL7 ecosystem practices), or 
-they may be dynamically generated in whatever fashion the manager of the 
+The files may be static json files, or they may be dynamically generated in whatever fashion the manager of the 
 file sees fit. 
 
 #### The master registration file 
@@ -41,7 +38,9 @@ The master registration file has the following content:
 {
   "formatVersion" : "1", // fixed value. Mandatory
   "description" : "some description of this registry set", // purpose etc. Optional
-  "documentation" : "See https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/ecosystem.html", // recommended reference to this page. Optional
+  "documentation" : "See http://hl7.org/fhir/uv/tx-ecosystem/ecosystem.html", // recommended reference to this page. Optional
+  "registration" : "https://somewhere/path", // URL of the ecosystem's own documentation: its locations, policy, and how to register a server. Optional
+  "ecosystem-documentation" : "http://hl7.org/fhir/uv/tx-ecosystem/ecosystem.html", // URL of the documentation for the ecosystem framework - usually this page. Optional
   "registries" : [{ // list of the registries. Must be present, but may be empty
     "code" : "code",  // code that identifies the registry. A persistent identifier. Alphanumerics only, no spaces. Mandatory
     "name" : "Name",  // human readable name. Can change, can contain any characters (including html type control chars). Mandatory
@@ -56,6 +55,7 @@ Notes:
 * The formatVersion number is 1. This might be changed in the future if breaking changes are made to the format
 * Each of the entries in the list of registries points to a json document as documented in the next section
 * The code for the registry should be stable, since it may be used to identify the set of servers in the Coordination API (see below)
+* Coordination servers may display the `registration` and `ecosystem-documentation` links to users (e.g. as 'Register your own server' and 'Documentation')
 
 #### The server registries
 
@@ -113,17 +113,15 @@ Notes:
 * The code for the server should be stable, since it may be used to identify the server in the Coordination API (see below)
 * Most servers will only have one endpoint, that is, they will only support one FHIR version, but some support more than one
 * If the different versions have different authoritative lists, that's really different servers
-* Server endpoints must support FHIR R3 or later. Valid values for version: R3, R4, R4B, R5, R6
+* Server endpoints must support FHIR R4 or later; R3 is not supported. Valid values for version: R4, R4B, R5, R6
 
 #### Conformance Requirements 
 
 §All endpoints listed in the server registration file SHALL return CapabilityStatement and TerminologyCapabilities
 resources that conform to the requirements described in this IG§.
 
-The HL7 ecosystem requires that all servers fully conform to the requirements laid out in
-this implementation, and that servers pass the set of tests described here in, or an acceptable 
-alternative set of tests as agreed with the FHIR Product Director (for servers that only support 
-specific code systems).
+Ecosystems may require more than this before a server is registered - see the documentation for 
+the ecosystem.
 
 Servers may require authentication that restricts their use to an approved subset of users.
 
@@ -245,7 +243,9 @@ CodeSystems and ValueSet each endpoint supports and is authoritative for. The fr
 is a matter for the ecosystem and server administrators, but is generally every few minutes.
 
 The Coordination server will use the ```/metadata``` and ```/metadata?mode=terminology```
-operations, and also iterate the full set of ValueSets on the server using ```/ValueSet?_summary=true```.
+operations, and also iterate the full set of ValueSets on the server using ```/ValueSet?_elements=url,version&_count=1000```,
+following the `next` links. A server that doesn't support `_elements`, or that returns smaller pages, 
+simply returns more content or more pages.
 Note that the coordination server does not search the CodeSystems; instead, the list of 
 supported CodeSystems comes from the TerminologyCapabilities resource.
 
@@ -259,7 +259,7 @@ The monitoring server provides a public API that has two sub-functions:
 * Discovery: list known servers 
 * Resolution: recommend which server to use for a code system
 
-For the HL7 ecosystem, the ```root``` of this API is at [http://tx.fhir.org/tx-reg/](http://tx.fhir.org/tx-reg/)
+The ```root``` of this API is the address of the coordination server, which the ecosystem's own documentation provides.
 
 #### Discovery 
 
@@ -279,7 +279,7 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
 ```json5
 {
   "last-update": "2023-07-24T04:12:07.710Z", // last time the registries were scanned
-  "master-url": "https://fhir.github.io/ig-registry/tx-servers.json", // master registry that was scanned
+  "master-url": "https://example.org/tx-servers.json", // master registry that was scanned
   "results": [{ // list of discovered endpoints
     "server-name": "human readable name",
     "server-code": "human readable name",
@@ -316,8 +316,8 @@ A client can also ask which server to use for a particular CodeSystem or ValueSe
 §The standard resolution parameters SHALL be supported by all servers§:
 
 * `fhirVersion` (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
-* `url`: return only those endpoints that support a particular code system (by canonical, so url or url/version)
-* `valueSet`: return only those endpoints that know a particular ValueSet (by canonical, so url or url/version)
+* `url`: return only those endpoints that support a particular code system (by canonical, so url or url|version)
+* `valueSet`: return only those endpoints that know a particular ValueSet (by canonical, so url or url|version)
 * One of `url` or `valueSet` must be present
 * `authoritativeOnly`: return only those endpoints that are authoritative (true or false; default is false)
 * `language`: the language of the request being routed. Accept-Language syntax: a single BCP-47 tag, or a 
@@ -423,7 +423,7 @@ But it's often more useful to allow late binding of the value set to a specific 
 
 In the same way, `http://snomed.info/sct?fhir_vs=refset/22071000087104` means 'whatever version of whatever edition', as decided by the infrastructure when the reference is used. (this particular example neatly shows the risk of this approach, because 22071000087104 is a Canadian specific reference set, but it would be fine for most SCT content).
 
-Unfortunately, the ecosystem infrastructure doesn't know how to route `http://snomed.info/sct?fhir_vs=refset/22071000087104` to the correct server - at the point the decision is made, the actual SNOMED CT edition isn't known, and can't be known, and the correct server can't be picked. Any evaluation of this value set will be done by tx.fhir.org, not one of the designated SNOMED CT servers (in this case, the Canadian server would be desired).
+Unfortunately, the ecosystem infrastructure doesn't know how to route `http://snomed.info/sct?fhir_vs=refset/22071000087104` to the correct server - at the point the decision is made, the actual SNOMED CT edition isn't known, and can't be known, and the correct server can't be picked. Any evaluation of this value set will be done by the ecosystem's default server (tx.fhir.org, in the HL7 ecosystem), not one of the designated SNOMED CT servers (in this case, the Canadian server would be desired).
 
 Hence, in the terminology ecosystem, all SNOMED CT implicit value sets must include the edition if they're not based on the international edition, and if evaluation by the correct server is desired. 
 
