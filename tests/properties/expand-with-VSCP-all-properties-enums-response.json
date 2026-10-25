@@ -124,7 +124,6 @@
                             "$optional-properties$" : ["display", "version"],
                             "system": "http://example.com/fhir/CodesSystem/codingProp2-system-value",
                             "code": "codingProp2-code-value",
-                            "$optional$": "display",
                             "display": "codingProp2-display-value"
                         }
                     }

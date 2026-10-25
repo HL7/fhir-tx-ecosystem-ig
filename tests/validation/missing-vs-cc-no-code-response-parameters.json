@@ -30,7 +30,7 @@
           },
           {
             "extension" : [{
-                "$optional$" : "true",
+                "$optional$" : "!tx.fhir.org",
                 "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
                 "valueString" : "$$"
               }],

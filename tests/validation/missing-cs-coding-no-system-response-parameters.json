@@ -3,7 +3,7 @@
   "parameter" : [{
       "name" : "code",
       "valueCode" : "code1",
-      "$optional$" : "true"
+      "$optional$" : true
     },
     {
       "name" : "issues",
