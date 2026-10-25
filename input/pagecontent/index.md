@@ -19,6 +19,15 @@ post-coordinated expressions are handled, and so on. The second job is now the l
 [requirements](requirements.html) and the test cases are, in effect, a detailed operational
 specification of the FHIR terminology services.
 
+The test cases in this specification are maintained in association with the terminology authorities that publish 
+the terminologies that are tested, and in many cases, serve to define the behaviour of the terminologies that 
+are tested. In some cases, they are jointly maintained and official:
+
+* The Snomed CT tests are jointly maintained by the [Snomed International Computed Languages](https://conf.spaces.snomed.org/wiki/spaces/SLPG/overview) Project Group and the HL7 community, and are considered the official test cases for ECL in particular
+* The ICD-11 test cases are jointly maintained by [WHO](https://icd.who.int/en/) and the HL7 community, and are authoritative for ICD-11. The WHO FHIR API implementation conforms to these tests, as must other recognized ICD-11 servers
+
+The LOINC and OMOP tests may become official; this is work-in-progress.
+
 #### Who this is for
 
 * **Server implementers**: the [Requirements for Servers](requirements.html) and
