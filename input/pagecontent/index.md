@@ -1,13 +1,17 @@
 
 ### Introduction
 
-This IG defines the HL7 terminology ecosystem: a set of terminology servers that serve different
+This IG defines the HL7 terminology ecosystem framework: a set of terminology servers that serve different
 code systems on behalf of different code system authorities, and a coordination server that routes
-each terminology request to the server that can answer it. The ecosystem is what HL7's tools use for
-terminology - validators, the IG publisher, code generators, and profile and terminology authoring
-tools.
+each terminology request to the server that can answer it.
 
-The IG has two jobs. It sets out what a server has to do to be part of the ecosystem, with the test
+HL7 defines one instance of an ecosystem, the public one which is what HL7's tools use for
+terminology - validators, the IG publisher, code generators, and profile and terminology authoring
+tools. 
+
+Other authorities and networks maybe define their own terminology ecosystems using the same framework. 
+
+This specification has two jobs. It sets out what a server has to do to be part of the ecosystem, with the test
 cases that check it; and, because the tools depend on getting the same answer from every server, it
 pins down how the terminology operations behave wherever the FHIR specification leaves room for
 interpretation - which messages are returned, how inactive codes, versions, languages and
@@ -27,7 +31,7 @@ specification of the FHIR terminology services.
 
 #### Status
 
-The current release of the test cases is **1.9.6** (29 September 2026); 1.10.0 is in preparation. The
+The current release of the test cases is **1.10.0** (25 October 2026). The
 [Test Case History](test-history.html) lists what changed in each release. Test against a released
 version: the default, `current`, is the ci-build, and changes whenever the tests do.
 
@@ -55,11 +59,10 @@ are firstly discussed on [the Terminology Service Test Cases at chat.fhir.org](h
 and then can be raised as issues or PRs on the [IG's repository](https://github.com/HL7/fhir-tx-ecosystem-ig). Changes to the tests
 are worked through with the authors of the servers, and agreed with the FHIR Product Director. 
 
-The IG is maintained by Grahame Grieve, as FHIR Product Director, and Reuben Daniels, as Deputy FHIR
+This specification is maintained by Grahame Grieve, as FHIR Product Director, and Reuben Daniels, as Deputy FHIR
 Product Director. Contributions are made under the [HL7 GOM](https://www.hl7.org/permalink/?GOM), and
 the IG is built with the standard HL7 ci-build for IGs, which checks the generated QA. The license is in the
-[repository](https://github.com/HL7/fhir-tx-ecosystem-ig/blob/main/LICENSE.txt). The content is used by, and built into, the base FHIR tools, which use the ecosystem for
-every version of FHIR (R2 to R5).
+[repository](https://github.com/HL7/fhir-tx-ecosystem-ig/blob/main/LICENSE.txt). The content is used by, and built into, the base FHIR tools, which use the ecosystem for every version of FHIR after R4. 
 
 #### Security
 
