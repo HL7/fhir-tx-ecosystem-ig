@@ -12,7 +12,7 @@
     <valueInteger value="4"/>
   </extension>
   <url value="http://hl7.org/fhir/uv/tx-ecosystem/ImplementationGuide/hl7.fhir.uv.tx-ecosystem"/>
-  <version value="1.9.6"/>
+  <version value="1.10.0"/>
   <name value="FHIRTerminologyEcosystemIG"/>
   <title value="FHIR Terminology Ecosystem IG"/>
   <status value="active"/>
@@ -38,7 +38,7 @@
   <dependsOn>
     <uri value="http://hl7.org/fhir/uv/application-feature/ImplementationGuide/hl7.fhir.uv.application-feature"/>
     <packageId value="hl7.fhir.uv.application-feature"/>
-    <version value="1.0.0-ballot"/>
+    <version value="1.0.0"/>
   </dependsOn>
 
   <definition>
@@ -54,6 +54,11 @@
       <page>
         <name value="requirements.html"/>
         <title value="Requirements for Servers"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="conformance.html"/>
+        <title value="Formal Conformance Statements"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -73,7 +78,12 @@
       </page>
       <page>
         <name value="testcases.html"/>
-        <title value="Test Case Registry"/>
+        <title value="Test Case Documentation"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="test-history.html"/>
+        <title value="Test Case History"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -82,8 +92,8 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <name value="test-history.html"/>
-        <title value="Test Case History"/>
+        <name value="test-registry.html"/>
+        <title value="Test Case Registry"/>
         <generation value="markdown"/>
       </page>
       <page>

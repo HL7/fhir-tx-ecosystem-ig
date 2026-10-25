@@ -1,3 +1,4 @@
+<h3>Modes</h3>
 
 <p>
 Summary of the impact of the modes. The tests in the <code>general</code> mode are run by default;
@@ -31,9 +32,30 @@ the tests in the other modes are only run when the mode is passed to the runner:
   </tr>
 </table>
 
+<h3>Suites</h3>
+
 <p>
-All the test suites and test cases:
+The flags say when a suite runs: its mode (only when that mode is passed to the runner), the features the
+server must declare, the FHIR version, and whether its tests must run in order. Disabled suites are struck out.
 </p>
+
+<table class="grid">
+  <tr>
+   <td><b>Name</b></td>
+   <td><b>Flags</b></td>
+   <td><b>Description</b></td>
+  </tr>
+{% for suite in $this.suites %}
+  <tr {% if suite.disabled %} style="opacity: 0.5; text-decoration: line-through" {% endif %}>
+    <td>{{ suite.name }}</td>
+    <td>{{ suite.mode }}{% if suite.feature %} feature: {{ suite.feature }}{% endif %}{% if suite.version %} version: {{ suite.version }}{% endif %}{% if suite.sequential %} sequential{% endif %}</td>
+    <td>{{ suite.description || markdownify}}</td>
+   </tr>
+{% endfor %}
+</table>
+
+<h3>Tests</h3>
+
 
 <table class="grid">
   <tr>
@@ -45,12 +67,12 @@ All the test suites and test cases:
 {% for suite in $this.suites %}
   <tr {% if suite.disabled %} style="background-color: #eeeeee; opacity: 0.5; text-decoration: line-through" {% else %} style="background-color: #eeeeee" {% endif %}>
     <td colspan="2">{{ suite.name }}</td>
-    <td>{{ suite.mode }}</td>
+    <td>{{ suite.mode }}{% if suite.feature %} feature: {{ suite.feature }}{% endif %}{% if suite.version %} version: {{ suite.version }}{% endif %}{% if suite.sequential %} sequential{% endif %}</td>
     <td>
       {{ suite.description || markdownify}}
       {% if suite.notes %}
       <br/>
-      {{ suite.description}}
+      {{ suite.notes}}
       {% endif %}
     </td>
    </tr>
@@ -59,7 +81,7 @@ All the test suites and test cases:
    <tr {% if suite.disabled or test.disabled %} style="opacity: 0.5; text-decoration: line-through" {% endif %}>
     <td>{{ test.name }}</td>
     <td>${{ test.operation }}</td>
-    <td>{{ test.mode}}</td>
+    <td>{{ test.mode}}{% if test.feature %} feature: {{ test.feature }}{% endif %}{% if test.version %} version: {{ test.version }}{% endif %}</td>
     <td>{{ test.description || markdownify}}</td>
    </tr>
   {% endfor %}

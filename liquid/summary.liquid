@@ -1,0 +1,20 @@
+<table class="grid">
+  <tr>
+   <td><b>Mode</b></td>
+   <td><b>Tests</b></td>
+  </tr>
+  <tr>
+    <td>general</td>
+    <td>{{ $this.suites.where(mode.count() = 0 or mode = 'general').tests.where(mode.count() = 0 or mode = 'general').count() }}</td>
+  </tr>
+{% for m in ($this.suites.mode | $this.suites.tests.mode).distinct().where($this != 'general') %}
+  <tr>
+    <td>{{ m }}</td>
+    <td>{{ $this.suites.where(mode = %m).tests.count() + $this.suites.where(mode.count() = 0 or mode != %m).tests.where(mode = %m).count() }}</td>
+  </tr>
+{% endfor %}
+  <tr>
+    <td><b>Total</b></td>
+    <td><b>{{ $this.suites.tests.count() }}</b> in {{ $this.suites.count() }} suites</td>
+  </tr>
+</table>

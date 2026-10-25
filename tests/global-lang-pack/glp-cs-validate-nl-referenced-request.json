@@ -1,0 +1,25 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-base"
+    },
+    {
+      "name": "code",
+      "valueCode": "c1"
+    },
+    {
+      "name": "display",
+      "valueString": "Code Een"
+    },
+    {
+      "name": "displayLanguage",
+      "valueCode": "nl"
+    },
+    {
+      "name": "useSupplement",
+      "valueCanonical": "http://hl7.org/fhir/test/CodeSystem/glp-base-nl"
+    }
+  ]
+}

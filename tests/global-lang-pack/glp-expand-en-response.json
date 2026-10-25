@@ -1,0 +1,55 @@
+{
+  "$optional-properties$": [
+    "id",
+    "date",
+    "publisher",
+    "compose"
+  ],
+  "resourceType": "ValueSet",
+  "id": "$id$",
+  "url": "http://hl7.org/fhir/test/ValueSet/glp-base-all",
+  "version": "1.0.0",
+  "name": "GlobalLangPackBaseAll",
+  "title": "Global Language Pack Base - All",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-25",
+  "expansion": {
+    "$optional-properties$": [
+      "id",
+      "offset",
+      "total"
+    ],
+    "id": "$id$",
+    "identifier": "$uuid$",
+    "timestamp": "$instant$",
+    "total": 2,
+    "parameter": [
+      {
+        "name": "displayLanguage",
+        "valueCode": "en"
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-base|1.0.0"
+      },
+      {
+        "$optional$": true,
+        "name": "used-supplement",
+        "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-base-de|1.0.0"
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-base",
+        "code": "c1",
+        "display": "Code One"
+      },
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-base",
+        "code": "c2",
+        "display": "Code Two"
+      }
+    ]
+  }
+}

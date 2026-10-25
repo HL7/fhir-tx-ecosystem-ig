@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-base"
+    },
+    {
+      "name": "code",
+      "valueCode": "c1"
+    },
+    {
+      "name": "displayLanguage",
+      "valueCode": "de"
+    }
+  ]
+}

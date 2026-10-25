@@ -1,0 +1,13 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/glp-base-all"
+    },
+    {
+      "name": "displayLanguage",
+      "valueCode": "de"
+    }
+  ]
+}

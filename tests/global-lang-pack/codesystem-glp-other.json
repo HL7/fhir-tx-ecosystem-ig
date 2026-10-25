@@ -1,0 +1,20 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "glp-other",
+  "url": "http://hl7.org/fhir/test/CodeSystem/glp-other",
+  "version": "1.0.0",
+  "name": "GlobalLangPackOther",
+  "title": "Global Language Pack Other",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-25",
+  "language": "en",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "c1",
+      "display": "Other One"
+    }
+  ]
+}

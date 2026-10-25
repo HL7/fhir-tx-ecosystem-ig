@@ -173,6 +173,27 @@
         "response" : "simple/simple-lookup-zxx-response-parameters.json"
       },
       {
+        "name" : "simple-lookup-unknown-property",
+        "description" : "$lookup asking for a property the code system defines (prop) and one the server does not know (x-unknown-property): the server ignores the property it does not know - no error or warning - and returns the one it does",
+        "operation" : "lookup",
+        "request" : "simple/simple-lookup-unknown-property-request-parameters.json",
+        "response" : "simple/simple-lookup-unknown-property-response-parameters.json"
+      },
+      {
+        "name" : "simple-lookup-only-unknown-property",
+        "description" : "$lookup asking only for a property the server does not know: it is ignored, and no properties are returned",
+        "operation" : "lookup",
+        "request" : "simple/simple-lookup-only-unknown-property-request-parameters.json",
+        "response" : "simple/simple-lookup-only-unknown-property-response-parameters.json"
+      },
+      {
+        "name" : "simple-expand-unknown-property",
+        "description" : "$expand asking for a known property and one the server does not know: the unknown property is ignored - it is not declared in expansion.property, and there is no error or warning",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-unknown-property-request-parameters.json",
+        "response" : "simple/simple-expand-unknown-property-response-valueSet.json"
+      },
+      {
         "name" : "simple-expand-all-count",
         "description" : "Expansion containing all the code system, but only a count",
         "operation" : "expand",
@@ -959,6 +980,83 @@
         "operation" : "validate-code",
         "request" : "display/validation-wrong-none-none-request-parameters.json",
         "response" : "display/validation-wrong-none-none-response-parameters.json"
+      }
+    ]
+  },{
+    "name" : "global-lang-pack",
+    "mode" : "general",
+    "description" : "Global language packs: a CodeSystem supplement marked with the codesystem-supplement-type extension, value global-lang-pack, is used for the code system it supplements whether or not it is referenced; any other supplement is only used when it is referenced",
+    "setup" : ["global-lang-pack/codesystem-glp-base.json", "global-lang-pack/codesystem-glp-other.json", "global-lang-pack/codesystem-glp-base-de.json", "global-lang-pack/codesystem-glp-base-nl.json", "global-lang-pack/valueset-glp-base-all.json"],
+    "tests" : [
+      {
+        "name" : "glp-cs-validate-de",
+        "description" : "An unreferenced global language pack is used: the German display it defines for the code is valid when German is asked for",
+        "operation" : "cs-validate-code",
+        "request" : "global-lang-pack/glp-cs-validate-de-request.json",
+        "response" : "global-lang-pack/glp-cs-validate-de-response.json"
+      },
+      {
+        "name" : "glp-validate-de",
+        "description" : "The same in a value set: the global language pack for the code system is used without the value set or the request referring to it",
+        "operation" : "validate-code",
+        "request" : "global-lang-pack/glp-validate-de-request.json",
+        "response" : "global-lang-pack/glp-validate-de-response.json"
+      },
+      {
+        "name" : "glp-validate-nl-unreferenced",
+        "description" : "A supplement that is not a global language pack is not used unless it is referenced, even though it was passed in tx-resource: its Dutch display is not valid",
+        "operation" : "validate-code",
+        "request" : "global-lang-pack/glp-validate-nl-unreferenced-request.json",
+        "response" : "global-lang-pack/glp-validate-nl-unreferenced-response.json"
+      },
+      {
+        "name" : "glp-validate-nl-referenced",
+        "description" : "Once the same supplement is referenced with useSupplement, its Dutch display is valid",
+        "operation" : "validate-code",
+        "request" : "global-lang-pack/glp-validate-nl-referenced-request.json",
+        "response" : "global-lang-pack/glp-validate-nl-referenced-response.json"
+      },
+      {
+        "name" : "glp-cs-validate-nl-unreferenced",
+        "description" : "The same against the code system: a supplement that is not a global language pack is not used unless it is referenced, so its Dutch display is not valid",
+        "operation" : "cs-validate-code",
+        "request" : "global-lang-pack/glp-cs-validate-nl-unreferenced-request.json",
+        "response" : "global-lang-pack/glp-cs-validate-nl-unreferenced-response.json"
+      },
+      {
+        "name" : "glp-cs-validate-nl-referenced",
+        "description" : "Once referenced with useSupplement, a supplement passed in tx-resource is used by CodeSystem $validate-code too",
+        "operation" : "cs-validate-code",
+        "request" : "global-lang-pack/glp-cs-validate-nl-referenced-request.json",
+        "response" : "global-lang-pack/glp-cs-validate-nl-referenced-response.json"
+      },
+      {
+        "name" : "glp-lookup-de",
+        "description" : "$lookup in German: the display and the German designation come from the unreferenced global language pack, which is reported as a used-supplement",
+        "operation" : "lookup",
+        "request" : "global-lang-pack/glp-lookup-de-request.json",
+        "response" : "global-lang-pack/glp-lookup-de-response.json"
+      },
+      {
+        "name" : "glp-lookup-other",
+        "description" : "A global language pack only applies to the code system it supplements: another code system with the same code gets no German display or designation",
+        "operation" : "lookup",
+        "request" : "global-lang-pack/glp-lookup-other-request.json",
+        "response" : "global-lang-pack/glp-lookup-other-response.json"
+      },
+      {
+        "name" : "glp-expand-de",
+        "description" : "$expand in German: the displays come from the unreferenced global language pack, which is reported as a used-supplement",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-expand-de-request.json",
+        "response" : "global-lang-pack/glp-expand-de-response.json"
+      },
+      {
+        "name" : "glp-expand-en",
+        "description" : "$expand in English: the German global language pack has nothing to contribute, and the displays are the code system's own (reporting the pack as used is optional)",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-expand-en-request.json",
+        "response" : "global-lang-pack/glp-expand-en-response.json"
       }
     ]
   },{

@@ -1,0 +1,24 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "glp-base",
+  "url": "http://hl7.org/fhir/test/CodeSystem/glp-base",
+  "version": "1.0.0",
+  "name": "GlobalLangPackBase",
+  "title": "Global Language Pack Base",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-25",
+  "language": "en",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "c1",
+      "display": "Code One"
+    },
+    {
+      "code": "c2",
+      "display": "Code Two"
+    }
+  ]
+}

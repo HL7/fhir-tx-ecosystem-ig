@@ -1603,5 +1603,14 @@
   },
   "icf/icf-vs-noqual-eights-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.888' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
+  },
+  "global-lang-pack/glp-validate-nl-unreferenced-response.json" : {
+    "1" : "Wrong Display Name 'Code Een' for http://hl7.org/fhir/test/CodeSystem/glp-base#c1. There are no valid display names found for language(s) 'nl'. Default display is 'Code One'"
+  },
+  "global-lang-pack/glp-cs-validate-nl-unreferenced-response.json" : {
+    "1" : "Wrong Display Name 'Code Een' for http://hl7.org/fhir/test/CodeSystem/glp-base#c1. There are no valid display names found for language(s) 'nl'. Default display is 'Code One'"
+  },
+  "global-lang-pack/glp-lookup-other-response.json" : {
+    "1" : "There is no display in the language 'de' for the code 'c1' in http://hl7.org/fhir/test/CodeSystem/glp-other|1.0.0, so the display is in the default language 'en'"
   }
 }

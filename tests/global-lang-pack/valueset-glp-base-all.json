@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "id": "glp-base-all",
+  "url": "http://hl7.org/fhir/test/ValueSet/glp-base-all",
+  "version": "1.0.0",
+  "name": "GlobalLangPackBaseAll",
+  "title": "Global Language Pack Base - All",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-25",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-base"
+      }
+    ]
+  }
+}

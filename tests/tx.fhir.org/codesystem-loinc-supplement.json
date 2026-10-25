@@ -8,7 +8,7 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
-    "valueCode" : "lang-pack"
+    "valueCode" : "global-lang-pack"
   }],
   "url": "http://fhir.de/CodeSystem/loinc-supplement-basis",
   "version": "0.9.13",

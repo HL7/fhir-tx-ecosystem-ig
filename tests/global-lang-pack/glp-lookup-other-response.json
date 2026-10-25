@@ -1,0 +1,72 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "$optional$": true,
+      "name": "abstract",
+      "valueBoolean": false
+    },
+    {
+      "name": "code",
+      "valueCode": "c1"
+    },
+    {
+      "name": "designation",
+      "part": [
+        {
+          "name": "language",
+          "valueCode": "en"
+        },
+        {
+          "$optional$": true,
+          "name": "use",
+          "valueCoding": {
+            "$optional-properties$": [
+              "display"
+            ],
+            "system": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+            "code": "preferredForLanguage",
+            "display": "Preferred For Language"
+          }
+        },
+        {
+          "name": "value",
+          "valueString": "Other One"
+        }
+      ]
+    },
+    {
+      "name": "display",
+      "valueString": "Other One"
+    },
+    {
+      "name": "name",
+      "valueString": "$choice:GlobalLangPackOther|Global Language Pack Other$"
+    },
+    {
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "inactive"
+        },
+        {
+          "name": "value",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "name": "system",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-other"
+    },
+    {
+      "name": "version",
+      "valueString": "1.0.0"
+    },
+    {
+      "name": "warning",
+      "valueString": "$external:1:de$"
+    }
+  ]
+}

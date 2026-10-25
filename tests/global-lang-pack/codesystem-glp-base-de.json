@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "glp-base-de",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+      "valueCode": "global-lang-pack"
+    }
+  ],
+  "url": "http://hl7.org/fhir/test/CodeSystem/glp-base-de",
+  "version": "1.0.0",
+  "name": "GlobalLangPackBaseDe",
+  "title": "Global Language Pack Base - German",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-25",
+  "content": "supplement",
+  "supplements": "http://hl7.org/fhir/test/CodeSystem/glp-base|1.0.0",
+  "concept": [
+    {
+      "code": "c1",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Code Eins"
+        }
+      ]
+    },
+    {
+      "code": "c2",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Code Zwei"
+        }
+      ]
+    }
+  ]
+}
