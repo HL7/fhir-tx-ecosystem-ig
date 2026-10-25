@@ -50,9 +50,26 @@ The test cases in the current build, by [mode](testcases.html#modes):
 
 A server becomes an [Approved Server](approved-servers.html) by passing the test cases for the
 modes it claims, against a released version, on a public test endpoint, and being approved by the
-FHIR Product Director. Problems with the test cases, or with the requirements, can be raised as
-issues on the [IG's repository](https://github.com/HL7/fhir-tx-ecosystem-ig). Changes to the tests
-are worked through with the authors of the servers, and agreed with the FHIR Product Director.
+FHIR Product Director. Problems with the test cases, or with the requirements, 
+are firstly discussed on [the Terminology Service Test Cases at chat.fhir.org](https://chat.fhir.org/#narrow/channel/437028-Terminology-Service-Test-Cases),
+and then can be raised as issues or PRs on the [IG's repository](https://github.com/HL7/fhir-tx-ecosystem-ig). Changes to the tests
+are worked through with the authors of the servers, and agreed with the FHIR Product Director. 
+
+The IG is maintained by Grahame Grieve, as FHIR Product Director, and Reuben Daniels, as Deputy FHIR
+Product Director. Contributions are made under the [HL7 GOM](https://www.hl7.org/permalink/?GOM), and
+the IG is built with the standard HL7 ci-build for IGs, which checks the generated QA. The license is in the
+[repository](https://github.com/HL7/fhir-tx-ecosystem-ig/blob/main/LICENSE.txt). The content is used by, and built into, the base FHIR tools, which use the ecosystem for
+every version of FHIR (R2 to R5).
+
+#### Security
+
+This IG contains no active content. If you think there is a security issue in the terminology ecosystem
+as it is documented here, report it privately using GitHub's
+[security reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability)
+on the [IG's repository](https://github.com/HL7/fhir-tx-ecosystem-ig), or email the
+[FHIR Product Director](mailto:fhir-director@hl7.org). A security issue with one of the servers in the
+ecosystem should be reported to that server's operators.
+
 
 #### In this IG
 
