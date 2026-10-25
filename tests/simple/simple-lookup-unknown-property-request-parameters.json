@@ -1,0 +1,21 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/simple"
+    },
+    {
+      "name": "code",
+      "valueCode": "code1"
+    },
+    {
+      "name": "property",
+      "valueCode": "prop"
+    },
+    {
+      "name": "property",
+      "valueCode": "x-unknown-property"
+    }
+  ]
+}
