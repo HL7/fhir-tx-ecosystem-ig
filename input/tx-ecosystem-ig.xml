@@ -52,6 +52,16 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <name value="ecosystem-server.html"/>
+        <title value="Coordinating Server"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="ecosystem-api.html"/>
+        <title value="Ecosystem Client API"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <name value="requirements.html"/>
         <title value="Requirements for Servers"/>
         <generation value="markdown"/>

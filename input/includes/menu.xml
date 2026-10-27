@@ -16,6 +16,8 @@
     </a>
     <ul class="dropdown-menu">
       <li><a href="ecosystem.html">Ecosystem</a></li>
+      <li><a href="ecosystem-server.html">Coordination Server</a></li>
+      <li><a href="ecosystem-api.html">Client API</a></li>
       <li><a href="approved-servers.html">Approved Servers</a></li>
     </ul>
   </li>
@@ -39,6 +41,7 @@
       <li><a href="test-registry.html">Registry</a></li>
     </ul>
   </li>
+  <li><a href="artifacts.html">Artifacts</a></li>
 </ul>      
 
 

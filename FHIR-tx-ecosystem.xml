@@ -176,6 +176,7 @@
 <artifact deprecated="true" id="Bundle/multiple-indv-mrp-task-report" key="Bundle-multiple-indv-mrp-task-report" name="Multiple Indv Mrp Task Report"/>
 <artifact deprecated="true" id="Bundle/multiple-summ-report" key="Bundle-multiple-summ-report" name="Multiple Summ Report"/>
 <artifact deprecated="true" id="StructureDefinition/xml-namespace" key="StructureDefinition-xml-namespace" name="Namespace"/>
+<artifact id="Requirements/fromNarrative" key="Requirements-fromNarrative" name="Narrative Conformance Statements"/>
 <artifact deprecated="true" id="StructureDefinition/no-binding" key="StructureDefinition-no-binding" name="No Binding Extension"/>
 <artifact deprecated="true" id="StructureDefinition/obligation-profile" key="StructureDefinition-obligation-profile" name="Obligation Profile Flag"/>
 <artifact deprecated="true" id="Observation/observation01" key="Observation-observation01" name="Observation01"/>
@@ -236,8 +237,10 @@
 <page deprecated="true" key="capstatements" name="Capability Statements"/>
 <page deprecated="true" key="change-notes" name="Change Notes"/>
 <page deprecated="true" key="col" name="Colorectal Cancer Screening (COL)"/>
+<page key="ecosystem-server" name="Coordinating Server"/>
 <page deprecated="true" key="datax" name="Data Exchange"/>
 <page deprecated="true" key="downloads" name="Downloads"/>
+<page key="ecosystem-api" name="Ecosystem Client API"/>
 <page key="ecosystem" name="Ecosystem Definition"/>
 <page deprecated="true" key="usecases" name="Example Use Cases"/>
 <page key="conformance" name="Formal Conformance Statements"/>

@@ -1,16 +1,16 @@
 This page documents the HL7 terminology ecosystem framework, where a set of servers
 that serve different code systems on behalf of different code system authorities, and
-there is a central coordinating server that routes terminology operations to the 
+there is a central Coordination Server that routes terminology operations to the 
 correct server. 
 
 A terminology server ecosystem is defined by two URLs:
 * the URL of the master registry that registers the servers in the ecosystem
-* the URL of the coordination server that handles value set and code system resolution for the ecosystem 
+* the URL of the Coordination Server that handles value set and code system resolution for the ecosystem 
 
-There must be at least one coordination server for the ecosystem, though may be more than one. 
+There must be at least one Coordination Server for the ecosystem, though may be more than one. 
 
 Any organization can define an ecosystem by creating its own pair of registration file and 
-coordination server. Individual servers might participate in multiple different ecosystems.
+Coordination Server. Individual servers might participate in multiple different ecosystems.
 
 Where an ecosystem's files are, how to register a server in it, and what it requires of a server 
 before it is registered (e.g. that the server passes the [test cases](testcases.html), or is an 
@@ -229,182 +229,10 @@ ecosystem). Note that exclusions are about the server's fitness to serve the con
 authority to serve it; a server that simply doesn't want to be the *preferred* destination for 
 something should instead write its authoritative masks so that they don't cover it.
 
-### The Coordination server
+### Further Details:
 
-The Coordination server keeps a current set of information about the servers in its
-ecosystem, and users of the ecosystem ask the Coordination server which terminology server should be
-used for a particular operation. 
-
-#### Scanning the Ecosystem
-
-The Coordination server scans the servers referenced from the master registration 
-file on a regular basis, and maintains a live list of the servers, their configuration, and what 
-CodeSystems and ValueSet each endpoint supports and is authoritative for. The frequency of scanning 
-is a matter for the ecosystem and server administrators, but is generally every few minutes.
-
-The Coordination server will use the ```/metadata``` and ```/metadata?mode=terminology```
-operations, and also iterate the full set of ValueSets on the server using ```/ValueSet?_elements=url,version&_count=1000```,
-following the `next` links. A server that doesn't support `_elements`, or that returns smaller pages, 
-simply returns more content or more pages.
-Note that the coordination server does not search the CodeSystems; instead, the list of 
-supported CodeSystems comes from the TerminologyCapabilities resource.
-
-If the server requires authentication for these operations, the Coordination server
-must be given access to these operations. 
-
-#### The Coordination server API
-
-The monitoring server provides a public API that has two sub-functions: 
-
-* Discovery: list known servers 
-* Resolution: recommend which server to use for a code system
-
-The ```root``` of this API is the address of the coordination server, which the ecosystem's own documentation provides.
-
-#### Discovery 
-
-```GET {root}```
-
-§The standard discovery parameters SHALL be supported by all servers§:
-
-* `registry`: return only those endpoints that come from a nominated registry (by the code in the master registration file)
-* `server`: return only those endpoints that have the code given
-* `fhirVersion`: return only those endpoints that are based on the given FHIR version (RX or M.n.p)
-* `url`: return only those endpoints that support a particular code system (by canonical, so url or url|version).
-* `authoritativeOnly`: return only code systems which the endpoints are authoritative for (true or false; default is false)
-* `language`: filter authoritative claim matching by language (only meaningful in combination with `url`; see Language Specific Claims above)
-
-When the ```Accept``` header is ```application/json```, the return value is a JSON object:
-
-```json5
-{
-  "last-update": "2023-07-24T04:12:07.710Z", // last time the registries were scanned
-  "master-url": "https://example.org/tx-servers.json", // master registry that was scanned
-  "results": [{ // list of discovered endpoints
-    "server-name": "human readable name",
-    "server-code": "human readable name",
-    "registry-name": "HL7 Terminology Services",
-    "registry-code": "persistent code for the registry",
-    "registry-url": "http://somewhere",
-    "url": "http://server/endpoint", // actual endpoint for the server
-    "fhirVersion": "4.0.1", // FHIR version - semver
-    "error": "string", // details of error last time server was scanned, or null
-    "last-success": int, // number of milliseconds since the server was last seen up
-    "systems": int, // number of code systems found on the server
-    "authoritative": [], // the CodeSystem masks the server claims authority for (as in the registration)
-    "authoritative-valuesets": [], // the ValueSet masks the server claims authority for (as in the registration)
-    "candidate": [], // when url is given: [url] if the endpoint hosts it without claiming authority
-    "open": true // if the server supports non-authenticated use 
-    "password" | "token" | "oauth" | "smart" | "cert": true 
-       // if the server supports authentication by one or more of those methods
-  }]
-}
-```
-
-Notes:
-
-* server-*X* and registry-*X* properties are provided for human trouble-shooting; they are not used anywhere
-* When `url` is given, only endpoints that host that code system are listed, those authoritative for it first
-* Without `url`, there is no candidate list: listing everything each server hosts would make the response very large
-
-#### Resolution
-
-A client can also ask which server to use for a particular CodeSystem or ValueSet. 
-
-```GET {root}/resolve?fhirVersion={ver}&url={url}```
-
-§The standard resolution parameters SHALL be supported by all servers§:
-
-* `fhirVersion` (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
-* `url`: return only those endpoints that support a particular code system (by canonical, so url or url|version)
-* `valueSet`: return only those endpoints that know a particular ValueSet (by canonical, so url or url|version)
-* One of `url` or `valueSet` must be present
-* `authoritativeOnly`: return only those endpoints that are authoritative (true or false; default is false)
-* `language`: the language of the request being routed. Accept-Language syntax: a single BCP-47 tag, or a 
-  weighted list (e.g. `de-AT, de;q=0.9, en;q=0.1`) for clients that want their fallback policy expressed 
-  in a single call. Optional
-* `usage` - see below
-
-Clients should pass `language` when (and only when) the operation being routed is language-sensitive: 
-an `$expand` where a display language is in play, a `$validate-code` that carries a display language 
-(whether or not a display is provided to check - the display in the response comes back in the 
-requested language), a `$lookup` requesting designations. Requests with no language interest should 
-omit it. The value passed is whatever the client resolved from the displayLanguage sources described 
-in [Languages](languages.html) - resolution and the subsequent operation must use the same language, 
-or the routing is meaningless.
-
-When `language` is present, servers with matching language specific claims are returned first in the 
-`authoritative` list (ordered by the language matching rules above, then by the usual ranking), 
-followed by servers matched on their `authoritative` claims. When `language` is absent - or for 
-value set resolution, where the claims have no language dimension - behavior is exactly as it was 
-before language support was added.
-  
-When the ```Accept``` header is ```application/json```, the return value is a JSON object:
-
-```json5
-{
-  "formatVersion" : version,
-  "registry-url" : url,
-  "authoritative" : [{
-    "server-name" : "Human name for server",
-    "url" : "http://server/endpoint", // actual FHIR endpoint of the server 
-    "fhirVersion" : "4.0.1", // FHIR version - semver
-    "open" | "password" | "token" | "oauth" | "smart | "cert": true, // as above
-    "access_info" : "description", // provided if the server has some, for error messages
-    "languages" : ["de"] // if this entry was matched on a language specific claim: the language 
-                         // tag of that claim
-  }],
-  "candidates" : [{
-    // same content as for authoritative, except that content will
-    // be reported, *if* provided by the server
-    "content": "not-present" | "example" | "fragment" | "complete" | "supplement",
-    "language-support" : "unknown" // present when the request specified a language: the ecosystem
-                                   // does not know whether this server can supply that language (see below)
-  }]
-}
-```
-
-Notes:
-
-* The resolve operation may return more that one server that is labelled as authoritative if the ecosystem is defined that way. Resolving this is up to the client
-* The resolve operation may return more than one candidate server if more than one server hosts the terminology. Resolving this is up to the client
-* A server listed as authoritative won't also be listed as a candidate
-* Servers are not listed as authoritative unless they actually host the CodeSystem(+version) in the request 
-* A server that hosts any version of a SNOMED CT edition hosts that edition: a request for 
-  `http://snomed.info/sct|http://snomed.info/sct/32506021000036107` matches a server that hosts 
-  `http://snomed.info/sct|http://snomed.info/sct/32506021000036107/version/20250331` 
-* An authoritative entry without a `languages` property was matched on the server's `authoritative` 
-  claims rather than a language specific claim. When the request had a language parameter, this tells 
-  the client that routing fell through to the default authoritative server - whether to use it anyway 
-  or treat the language as unavailable is the client's decision (the same strictness decision as the 
-  `de, *;q=0.1` vs `de, *;q=0` distinction described in [Languages](languages.html))
-* Candidate servers are not filtered or ranked by language - the ecosystem has no reliable way to know 
-  what languages a candidate can serve (that information comes from registration claims, and candidates 
-  by definition have none that match). Instead, when the request specifies a language, candidate 
-  entries are explicitly marked with `language-support: unknown`. A marked candidate hosts the code 
-  system and can execute the operation, but may not be able to supply the requested language: using 
-  one means accepting displays in whatever language it has. That is only a valid choice under the 
-  wildcard reading of the language (`de, *;q=0.1`); clients that require the requested language 
-  (`de, *;q=0`) should not use marked candidates. Note in particular that validating a display 
-  against a server that lacks the requested language produces a false negative, not a degraded 
-  result - a marked candidate is only a safe fallback for operations where wrong-language displays 
-  are acceptable
-
-
-### Usages
-
-If a server is marked as having a restricted use, the server will only be returned in the resolve call above if the client provides a use token that matches one of the tokens in the server's usage property (if it has any).
-
-A client can provide a usage token with the parameter 'usage': ```GET {root}/resolve?fhirVersion={ver}&url={url}&usage=publication```
-
-It's up to the client to provide a usage token that accurately represents its usage. 
-
-The open source HAPI core Java tools that support the ecosystem populate usage with one of three values:
-* ```publication``` - the tool is publishing an IG, or building the core FHIR Specification
-* ```validation``` - the tool is validating the content of a resource (this may be in production or from the command line, or validator.fhir.org)
-* ```code-generation``` - the tool is generating some kind of code
-
-The primary purpose of the usage flag is so that an administrator can deny access to server for purposes of validation. This *might* be appropriate if the ecosystem is not a production grade system (e.g. tx.fhir.org) but there is concern that some users won't restrict themselves from using it operationally (which is not supported by tx.fhir.org) for budget reasons.
+* [Coordination Server](ecosystem-server.md)
+* [Client API](ecosystem-api.md)
 
 ### SNOMED CT Implicit ValueSets 
 
