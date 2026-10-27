@@ -1,0 +1,21 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/glp-own-all"
+    },
+    {
+      "name": "coding",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-own",
+        "code": "c2",
+        "display": "Code Zwei"
+      }
+    },
+    {
+      "name": "displayLanguage",
+      "valueCode": "de"
+    }
+  ]
+}

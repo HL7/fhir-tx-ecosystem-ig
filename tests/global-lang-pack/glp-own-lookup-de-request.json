@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-own"
+    },
+    {
+      "name": "code",
+      "valueCode": "c2"
+    },
+    {
+      "name": "displayLanguage",
+      "valueCode": "de"
+    }
+  ]
+}
