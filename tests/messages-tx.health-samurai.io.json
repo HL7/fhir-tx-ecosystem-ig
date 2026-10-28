@@ -936,5 +936,35 @@
   },
   "version/vs-expand-v2-check-response-outcome.json" : {
     "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "deprecated/validate-withdrawn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/deprecated|0.1.0' is deprecated",
+    "2" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/withdrawn|5.0.0' is withdrawn"
+  },
+  "deprecated/validate-not-withdrawn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/deprecated|0.1.0' is deprecated",
+    "2" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/withdrawn|5.0.0' is withdrawn"
+  },
+  "deprecated/validate-experimental-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/experimental|0.1.0' is experimental"
+  },
+  "deprecated/validate-draft-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/draft|0.1.0' is draft"
+  },
+  "deprecated/validate-deprecating-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/draft|0.1.0' is draft"
+  },
+  "deprecated/validate-deprecating-2-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/draft|0.1.0' is draft"
+  },
+  "fragment/fragment-expand-response.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/fragment|0.1.0' is a fragment"
+  },
+  "validation/missing-vs-coding-display-only-response-parameters.json" : {
+    "1" : "Coding has no system and no code",
+    "2" : "Coding has no system and no code"
+  },
+  "big/expand-no-limit-outcome.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/big|5.0.0' expansion 'count' '1001' > '1000'"
   }
 }
