@@ -3,6 +3,7 @@
   "issue" : [{
     "fhir_comments" : "a fixed region leaves every language to vary - finite, but far past any sensible expansion limit, so it answers too-costly like any other oversized expansion",
     "extension" : [{
+      "$optional$" : "!tx.fhir.org",
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString" : "VALUESET_TOO_COSTLY"
     }],
