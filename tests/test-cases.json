@@ -4864,7 +4864,8 @@
         "description" : "See https://github.com/HealthIntersections/FHIRsmith/issues/156",
         "operation" : "expand",
         "request" : "exclude/exclude-gender2-request.json",
-        "response" : "exclude/exclude-gender2-response.json"
+        "response" : "exclude/exclude-gender2-response.json",
+        "response:tx.fhir.org" : "exclude/exclude-gender2-response-precise.json"
       }
     ]
   },{
