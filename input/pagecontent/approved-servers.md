@@ -46,6 +46,7 @@ ecosystems may have different registration policies and processes.
 | [FHIRsmith](https://github.com/HealthIntersections/FHIRsmith) | [Health Intersections Pty Ltd](http://www.healthintersections.com.au) | `https://tx.fhir.org/r4`, `https://tx.fhir.org/r5` | 1.10.0 | `snomed`, `omop`, `mimetypes`, `icd-11`, `closure`, `icf`, `tx.fhir.org` |
 | [Ontoserver](https://ontoserver.app/site/) | [CSIRO Australian e-Health Research Centre](https://aehrc.csiro.au/) | `https://r4.ontoserver.csiro.au/fhir`, `https://r5.ontoserver.csiro.au/fhir` | 1.9.0 | `flat` |
 | [HELEX Terminology Aggregator](https://docs.helex.org/) | [HELEX Solutions](https://helex-solutions.com/) | `https://teagle.sandbox.helex.org/fhir/r4`, `https://teagle.sandbox.helex.org/fhir/r5` | 1.10.0 | `icd-11`, `icf`, `mimetypes`, `omop`, `snomed`, `closure` |
+| [HELEX Terminology Server](https://docs.helex.org/) | [HELEX Solutions](https://helex-solutions.com/) | `https://tedy.sandbox.helex.org/fhir/r4`, `https://tedy.sandbox.helex.org/fhir/r5` | 1.10.0 | `icd-11`, `icf`, `mimetypes`, `omop`, `snomed`, `closure` |
 | HealthAll Terminology Server | [HealthAll](https://www.healthall.co.kr) | `https://tx.healthall.co.kr/fhir/r4`, `https://tx.healthall.co.kr/fhir/r5` | 1.9.4 | `snomed` |
 | CATY *(to be confirmed)* | *to be confirmed* | *to be confirmed* | *to be confirmed* | *to be confirmed* |
 
