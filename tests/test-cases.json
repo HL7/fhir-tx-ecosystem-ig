@@ -5146,11 +5146,12 @@
       "loinc/valueset-filter-prop-order-obs.json", "loinc/valueset-concept-is-a.json", "loinc/valueset-filter-copyright.json", "loinc/valueset-filter-status.json", "loinc/valueset-filter-class-regex.json",
       "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json",
       "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
-      "loinc/codesystem-loinc-supplement.json"],
+      "loinc/codesystem-loinc-supplement.json",
+      "loinc/valueset-filter-scale-type-part.json", "loinc/valueset-filter-class-scale.json", "loinc/valueset-filter-class-part-scale.json", "loinc/valueset-filter-method.json"],
     "tests" : [
       {
         "name" : "loinc-lookup-code",
-        "description" : "to be provided",
+        "description" : "$lookup of a LOINC term. The six axes are code properties whose value is the Part code; CLASS is a string property whose value is the class name (CHEM). A server may also give the Part code for the class as partCode (an informal extension to the property part)",
         "operation" : "lookup",
         "request" : "loinc/loinc-lookup-code-request-parameters.json",
         "response" : "loinc/loinc-lookup-code-response-parameters.json"
@@ -5312,14 +5313,21 @@
       },
       {
         "name" : "loinc-expand-prop-method",
-        "description" : "to be provided",
+        "description" : "Deliberately the wrong axis: METHOD_TYP filtered by LP14635-4, which is a COMPONENT Part (Glucose), not a method, so nothing matches and the expansion is empty. loinc-expand-prop-method-part filters by a method Part",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-method-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-method-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-prop-method-part",
+        "description" : "METHOD_TYP filtered by the Part code for a method (LP6527-8 Spirometry)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-method-part-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-method-part-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-prop-component-str",
-        "description" : "to be provided",
+        "description" : "COMPONENT filtered by the component name (Glucose), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. Same codes as loinc-expand-prop-component, which filters by the Part code",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-component-str-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-component-str-response-valueSet.json"
@@ -5347,10 +5355,17 @@
       },
       {
         "name" : "loinc-expand-scale-type",
-        "description" : "to be provided",
+        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-scale-type-request-parameters.json",
         "response" : "loinc/loinc-expand-scale-type-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-scale-type-part",
+        "description" : "SCALE_TYP filtered by the Part code for the scale (LP32888-7 Doc), the correct value for the LOINC axes. Same codes as loinc-expand-scale-type",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-scale-type-part-request-parameters.json",
+        "response" : "loinc/loinc-expand-scale-type-part-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-enum-good",
@@ -5410,17 +5425,73 @@
       },
       {
         "name" : "loinc-validate-filter-scale-type-good",
-        "description" : "to be provided",
+        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test",
         "operation" : "validate-code",
         "request" : "loinc/loinc-validate-filter-scale-type-good-request-parameters.json",
         "response" : "loinc/loinc-validate-filter-scale-type-good-response-parameters.json"
       },
       {
         "name" : "loinc-validate-filter-scale-type-bad",
-        "description" : "to be provided",
+        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test",
         "operation" : "validate-code",
         "request" : "loinc/loinc-validate-filter-scale-type-bad-request-parameters.json",
         "response" : "loinc/loinc-validate-filter-scale-type-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-scale-type-part-good",
+        "description" : "SCALE_TYP filtered by the Part code (LP32888-7 Doc): a document is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-scale-type-part-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-scale-type-part-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-scale-type-part-bad",
+        "description" : "SCALE_TYP filtered by the Part code (LP32888-7 Doc): a quantitative term is not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-scale-type-part-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-scale-type-part-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-class-scale",
+        "description" : "CLASS = PULM (the class name, which is the correct value: CLASS is a string property) together with SCALE_TYP = LP7753-9 (the Part code for Qn, the correct value for an axis). This is how the MII lung function value set mii-vs-lufu-lnc-observable is written",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-scale-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-scale-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-class-part-scale",
+        "description" : "CLASS = LP7840-4 (the Part code for the class PULM) together with SCALE_TYP = LP7753-9. The class name is the correct value for CLASS, which is a string property (see loinc-expand-class-scale), but filtering CLASS by the Part code is so widespread in existing value sets (e.g. the MII lung function value set mii-vs-lufu-lnc-observable) that all servers are required to support it. Same codes as loinc-expand-class-scale",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-part-scale-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-part-scale-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-class-scale-good",
+        "description" : "A pulmonary quantitative term is in the CLASS = PULM, SCALE_TYP = LP7753-9 value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-class-scale-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-class-scale-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-class-scale-bad-scale",
+        "description" : "A pulmonary term that is not quantitative is not in the CLASS = PULM, SCALE_TYP = LP7753-9 value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-class-scale-bad-scale-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-class-scale-bad-scale-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-class-scale-bad-class",
+        "description" : "A quantitative term that is not pulmonary is not in the CLASS = PULM, SCALE_TYP = LP7753-9 value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-class-scale-bad-class-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-class-scale-bad-class-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-class-part-scale-good",
+        "description" : "A pulmonary quantitative term is in the CLASS = LP7840-4, SCALE_TYP = LP7753-9 value set. Filtering CLASS by the Part code is not correct (CLASS is a string property), but it is so widespread in existing value sets that all servers are required to support it",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-class-part-scale-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-class-part-scale-good-response-parameters.json"
       },
       {
         "name" : "loinc-expand-list-request-parameters",

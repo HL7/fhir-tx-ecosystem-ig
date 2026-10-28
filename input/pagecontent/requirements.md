@@ -902,6 +902,22 @@ written against LOINC 2.83, and every request names that version - `version` in 
 `METHOD_TYP`, `ORDER_OBS`, `SCALE_TYP`, `CLASS`), `STATUS`, the parent/child hierarchy, answer lists,
 parts, and the `answers-for` and `list` filters.
 
+Property values and property filters (this clarifies the [UTG LOINC page](https://terminology.hl7.org/LOINC.html), 
+which lists the filter value for every property as `[string value]`):
+
+* The value of a property filter is always a string, but what it means depends on the type of the property: 
+  for a `code` (or `Coding`) property it is the code, and for a `string` property it is the string
+* §The six LOINC axes - `COMPONENT`, `PROPERTY`, `TIME_ASPCT`, `SYSTEM`, `SCALE_TYP` and `METHOD_TYP` - SHALL be 
+  `code` properties whose value is the LOINC Part code (e.g. `SCALE_TYP` = `LP7753-9`, not `Qn`), in `$lookup` and 
+  in property filters§
+* §Servers SHALL also accept the Part name as the filter value for an axis (e.g. `SCALE_TYP` = `Qn`)§. This is not 
+  the correct value, but it is so widespread in existing value sets that all servers are required to support it
+* §`CLASS` SHALL be a `string` property whose value is the class name (e.g. `PULM`), in `$lookup` and in property 
+  filters§. A server MAY also return the Part code for the class in `$lookup`, as a `partCode` part of the property 
+  (an informal extension)
+* §Servers SHALL also accept the Part code for the class as the value of a `CLASS` filter (e.g. `CLASS` = 
+  `LP7840-4`)§, for the same reason
+
 #### UCUM
 
 *(mode: `tx.fhir.org` at present; suite: `UCUM`)*

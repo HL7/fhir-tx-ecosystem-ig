@@ -1259,7 +1259,7 @@
     "1" : "The provided code 'http://loinc.org#LP14635-4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0'"
   },
   "loinc/loinc-validate-filter-scale-type-bad-response-parameters.json" : {
-    "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0'"
+    "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-scale-type|5.0.0'"
   },
   "loinc/loinc-validate-filter-status-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-status|5.0.0'"
@@ -1612,5 +1612,14 @@
   },
   "global-lang-pack/glp-lookup-other-response.json" : {
     "1" : "There is no display in the language 'de' for the code 'c1' in http://hl7.org/fhir/test/CodeSystem/glp-other|1.0.0, so the display is in the default language 'en'"
+  },
+  "loinc/loinc-validate-filter-scale-type-part-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-scale-type-part|5.0.0'"
+  },
+  "loinc/loinc-validate-filter-class-scale-bad-scale-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#104045-0' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-scale|5.0.0'"
+  },
+  "loinc/loinc-validate-filter-class-scale-bad-class-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#2339-0' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-scale|5.0.0'"
   }
 }

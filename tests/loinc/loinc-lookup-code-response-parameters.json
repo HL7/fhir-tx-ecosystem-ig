@@ -360,8 +360,13 @@
       "valueCode" : "CLASS"
     },
     {
-      "name" : "value",
+      "$optional$" : true,
+      "name" : "partCode",
       "valueCode" : "LP7786-9"
+    },
+    {
+      "name" : "value",
+      "valueString" : "CHEM"
     }]
   },
   {

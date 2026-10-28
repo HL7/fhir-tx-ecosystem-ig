@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-class-scale"
+  },
+  {
+    "name": "_limit",
+    "valueInteger": 10000
+  },
+  {
+    "name": "count",
+    "valueInteger": 100
+  },
+  {
+    "name": "offset",
+    "valueInteger": 0
+  },
+  {
+    "name": "excludeNested",
+    "valueBoolean": false
+  },
+  {
+    "name" : "system-version",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}

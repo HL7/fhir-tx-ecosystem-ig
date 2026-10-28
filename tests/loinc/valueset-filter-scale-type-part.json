@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-scale-type-part",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-scale-type-part",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterScaleTypePart",
+  "title" : "LOINC ValueSet Filter by ScaleType (Part code)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=", 
+        "value" : "LP32888-7"
+      }]
+    }]
+  }
+}

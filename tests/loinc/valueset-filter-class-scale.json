@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-class-scale",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-class-scale",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterClassScale",
+  "title" : "LOINC ValueSet Filter by Class and ScaleType",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "PULM"
+      },{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7753-9"
+      }]
+    }]
+  }
+}

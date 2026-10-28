@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-in-vs"
                 }],
-              "text" : "$external:1:http://loinc.org#100746-7|http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0$"
+              "text" : "$external:1:http://loinc.org#100746-7|http://hl7.org/fhir/test/ValueSet/loinc-filter-scale-type|5.0.0$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]
@@ -34,7 +34,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "$external:1:http://loinc.org#100746-7|http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0$"
+      "valueString" : "$external:1:http://loinc.org#100746-7|http://hl7.org/fhir/test/ValueSet/loinc-filter-scale-type|5.0.0$"
     },
     {
       "name" : "result",

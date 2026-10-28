@@ -1,0 +1,115 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-method",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterMethod",
+  "title" : "LOINC ValueSet Filter by Method",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 16,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "100759-0",
+      "display" : "Inspiratory reserve [Volume] Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18759-1",
+      "display" : "Spirometry study"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19841-6",
+      "display" : "Respiratory rate by Spirometry --at maximum voluntary ventilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19852-3",
+      "display" : "Inspiratory capacity by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19853-1",
+      "display" : "Inspiratory capacity bs/Inspiratory capacity pre-operative by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19855-6",
+      "display" : "Inspiratory capacity measured/predicted by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19866-3",
+      "display" : "Vital capacity [Volume] Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19868-9",
+      "display" : "Forced vital capacity [Volume] Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19874-7",
+      "display" : "Forced vital capacity [Volume] Respiratory system by Spirometry --post bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19876-2",
+      "display" : "Forced vital capacity [Volume] Respiratory system by Spirometry --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "81459-0",
+      "display" : "Spirometry panel"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "82615-6",
+      "display" : "Vital capacity [Volume] Respiratory system by Spirometry --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "82616-4",
+      "display" : "Vital capacity [Volume] Respiratory system by Spirometry --post bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "98088-8",
+      "display" : "Vital capacity/predicted VC Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "98089-6",
+      "display" : "Inspiratory capacity by Spirometry --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "98090-4",
+      "display" : "Inspiratory capacity by Spirometry --post bronchodilation"
+    }]
+  }
+}

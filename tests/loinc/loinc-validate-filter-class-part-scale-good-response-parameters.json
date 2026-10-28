@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "100759-0"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Inspiratory reserve [Volume] Respiratory system by Spirometry"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.83",
+    "$optional$" : "warning:version"
+  }]
+}

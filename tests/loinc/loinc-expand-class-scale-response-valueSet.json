@@ -1,0 +1,548 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-class-scale",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterClassScale",
+  "title" : "LOINC ValueSet Filter by Class and ScaleType",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 825,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 100
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "100758-2",
+      "display" : "Estimated lung age by based on clinical data"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100759-0",
+      "display" : "Inspiratory reserve [Volume] Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "101864-7",
+      "display" : "Oxygen/Total gas setting ECMO device"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "103749-8",
+      "display" : "Oxygen consumption (VO2) --peak"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "104092-2",
+      "display" : "Alive and without mechanical ventilation [Score] 4 weeks by - Reported"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "104093-0",
+      "display" : "Alive and without mechanical ventilation [Score] 2 minutes by - Reported"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "104094-8",
+      "display" : "Alive and without mechanical ventilation [Score] 3 weeks by - Reported"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "111524-5",
+      "display" : "Cough peak flow Respiratory system airway"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19828-3",
+      "display" : "Breaths maximum setting Ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19829-1",
+      "display" : "Breaths maximum setting Ventilator alarm"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19830-9",
+      "display" : "Breaths maximum setting Apnea monitor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19831-7",
+      "display" : "Breath rate minimum setting Ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19832-5",
+      "display" : "Breath rate minimum setting Ventilator alarm"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19833-3",
+      "display" : "Breath rate minimum setting Apnea monitor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19834-1",
+      "display" : "Breath rate setting Ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19835-8",
+      "display" : "Breath rate setting Ventilator synchronized intermittent mandatory"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19836-6",
+      "display" : "Breath rate setting Intermittent mandatory ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19837-4",
+      "display" : "Breath rate setting Neonatal ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19838-2",
+      "display" : "Sigh rate setting Ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19839-0",
+      "display" : "Breath rate spontaneous --on ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19840-8",
+      "display" : "Breath rate spontaneous and mechanical --on ventilator"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19841-6",
+      "display" : "Respiratory rate by Spirometry --at maximum voluntary ventilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19842-4",
+      "display" : "Respiratory rate --at maximum voluntary ventilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19843-2",
+      "display" : "Functional residual capacity"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19844-0",
+      "display" : "Functional residual capacity by Helium rebreathing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19845-7",
+      "display" : "Functional residual capacity by Helium single breath"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19846-5",
+      "display" : "Functional residual capacity by Plethysmograph body box"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19847-3",
+      "display" : "Functional residual capacity Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19848-1",
+      "display" : "Inspiratory capacity"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19849-9",
+      "display" : "Inspiratory capacity by Helium rebreathing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19850-7",
+      "display" : "Inspiratory capacity by Helium single breath"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19851-5",
+      "display" : "Inspiratory capacity Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19852-3",
+      "display" : "Inspiratory capacity by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19853-1",
+      "display" : "Inspiratory capacity bs/Inspiratory capacity pre-operative by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19854-9",
+      "display" : "Inspiratory capacity bs/Inspiratory capacity pre-operative"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19855-6",
+      "display" : "Inspiratory capacity measured/predicted by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19856-4",
+      "display" : "Inspiratory capacity measured/predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19857-2",
+      "display" : "Total lung capacity by Helium rebreathing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19858-0",
+      "display" : "Total lung capacity by Helium single breath"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19859-8",
+      "display" : "Total lung capacity by Plethysmograph body box"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19860-6",
+      "display" : "Total lung capacity by Chest xray.calculated"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19861-4",
+      "display" : "Total lung capacity Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19862-2",
+      "display" : "Total lung capacity"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19863-0",
+      "display" : "Vital capacity [Volume] Respiratory system by Helium rebreathing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19864-8",
+      "display" : "Vital capacity [Volume] Respiratory system by Helium single breath"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19865-5",
+      "display" : "Vital capacity [Volume] Respiratory system Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19866-3",
+      "display" : "Vital capacity [Volume] Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19867-1",
+      "display" : "Vital capacity [Volume] Respiratory system"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19868-9",
+      "display" : "Forced vital capacity [Volume] Respiratory system by Spirometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19869-7",
+      "display" : "Forced vital capacity [Volume] Respiratory system Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19870-5",
+      "display" : "Forced vital capacity [Volume] Respiratory system"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19871-3",
+      "display" : "FVC pre bronchodilation measured/predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19872-1",
+      "display" : "FVC measured/predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19873-9",
+      "display" : "FVC post bronchodilation measured/predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19874-7",
+      "display" : "Forced vital capacity [Volume] Respiratory system by Spirometry --post bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19875-4",
+      "display" : "Forced vital capacity [Volume] Respiratory system --post bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19876-2",
+      "display" : "Forced vital capacity [Volume] Respiratory system by Spirometry --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19877-0",
+      "display" : "Forced vital capacity [Volume] Respiratory system --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19878-8",
+      "display" : "Carbon dioxide [Partial pressure] (8 hour maximum) in Capillary blood Transcutaneous CO2 monitor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19879-6",
+      "display" : "Carbon dioxide [Partial pressure] (8 hour maximum) in Capillary blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19880-4",
+      "display" : "Carbon dioxide [Partial pressure] (8 hour minimum) in Capillary blood Transcutaneous CO2 monitor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19881-2",
+      "display" : "Carbon dioxide [Partial pressure] (8 hour minimum) in Capillary blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19882-0",
+      "display" : "Carbon dioxide [Partial pressure] in Ventilator airway circuit by Infrared absorption"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19883-8",
+      "display" : "Carbon dioxide [Partial pressure] in Ventilator airway circuit"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19884-6",
+      "display" : "Carbon dioxide [Partial pressure] in Blood Preductal by Transcutaneous CO2 monitor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19885-3",
+      "display" : "Carbon dioxide [Partial pressure] in Blood Preductal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19886-1",
+      "display" : "Carbon dioxide [Partial pressure] in Blood Postductal by Transcutaneous CO2 monitor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19887-9",
+      "display" : "Carbon dioxide [Partial pressure] in Blood Postductal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19888-7",
+      "display" : "Carbon dioxide/Gas.total.at end expiration in Exhaled gas by Infrared absorption"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19889-5",
+      "display" : "Carbon dioxide/Gas.total.at end expiration in Exhaled gas"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19890-3",
+      "display" : "Carbon dioxide [Partial pressure] in Exhaled gas by Calculated --at end expiration"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19891-1",
+      "display" : "Carbon dioxide [Partial pressure] in Exhaled gas --at end expiration"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19892-9",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --during bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19893-7",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --during bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19894-5",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --during chest physiotherapy"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19895-2",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --during chest physiotherapy"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19896-0",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --during XXX treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19897-8",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --during XXX treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19898-6",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --post bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19899-4",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --post bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19900-0",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --post chest physiotherapy"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19901-8",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --post chest physiotherapy"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19902-6",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --post XXX treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19903-4",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --post XXX treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19904-2",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19905-9",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --pre bronchodilation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19906-7",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --pre chest physiotherapy"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19907-5",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --pre chest physiotherapy"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19908-3",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor --pre XXX treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19909-1",
+      "display" : "Carbon dioxide [Partial pressure] in Capillary blood --pre XXX treatment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19910-9",
+      "display" : "Diffusion capacity.carbon monoxide Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19911-7",
+      "display" : "Diffusion capacity.carbon monoxide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19912-5",
+      "display" : "Diffusion capacity.carbon monoxide adjusted for hemoglobin by Helium single breath"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19913-3",
+      "display" : "Diffusion capacity.carbon monoxide adjusted for hemoglobin"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19914-1",
+      "display" : "Diffusion capacity/Alveolar volume by Single breath.carbon monoxide+Helium"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19915-8",
+      "display" : "Diffusion capacity/Alveolar volume Predicted"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19916-6",
+      "display" : "Diffusion capacity/Alveolar volume"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19917-4",
+      "display" : "Diffusion capacity adjusted to body conditions by Single breath.carbon monoxide+Helium"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19918-2",
+      "display" : "Diffusion capacity adjusted to body conditions"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19920-8",
+      "display" : "Expiration setting [Time] Ventilator"
+    }]
+  }
+}
