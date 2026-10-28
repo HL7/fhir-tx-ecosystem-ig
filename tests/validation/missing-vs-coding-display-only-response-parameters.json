@@ -27,7 +27,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "$external:1:cannot be validated$"
+      "valueString" : "$external:1$"
     },
     {
       "name" : "result",
