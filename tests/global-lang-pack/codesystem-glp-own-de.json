@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "glp-own-de",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+      "valueCode": "global-lang-pack"
+    }
+  ],
+  "url": "http://hl7.org/fhir/test/CodeSystem/glp-own-de",
+  "version": "1.0.0",
+  "name": "GlobalLangPackOwnDe",
+  "title": "Global Language Pack Own - German",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-27",
+  "content": "supplement",
+  "supplements": "http://hl7.org/fhir/test/CodeSystem/glp-own|1.0.0",
+  "concept": [
+    {
+      "code": "c1",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Code Eins"
+        }
+      ]
+    },
+    {
+      "code": "c2",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Code Zwei"
+        }
+      ]
+    }
+  ]
+}

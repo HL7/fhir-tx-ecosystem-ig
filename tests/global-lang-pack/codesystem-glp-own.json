@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "glp-own",
+  "url": "http://hl7.org/fhir/test/CodeSystem/glp-own",
+  "version": "1.0.0",
+  "name": "GlobalLangPackOwn",
+  "title": "Global Language Pack - Code System With Its Own German",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-27",
+  "language": "en",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "c1",
+      "display": "Code One"
+    },
+    {
+      "code": "c2",
+      "display": "Code Two",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Code Zwei (CS)"
+        }
+      ]
+    }
+  ]
+}

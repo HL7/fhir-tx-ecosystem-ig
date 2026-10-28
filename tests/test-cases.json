@@ -986,7 +986,7 @@
     "name" : "global-lang-pack",
     "mode" : "general",
     "description" : "Global language packs: a CodeSystem supplement marked with the codesystem-supplement-type extension, value global-lang-pack, is used for the code system it supplements whether or not it is referenced; any other supplement is only used when it is referenced",
-    "setup" : ["global-lang-pack/codesystem-glp-base.json", "global-lang-pack/codesystem-glp-other.json", "global-lang-pack/codesystem-glp-base-de.json", "global-lang-pack/codesystem-glp-base-nl.json", "global-lang-pack/valueset-glp-base-all.json"],
+    "setup" : ["global-lang-pack/codesystem-glp-base.json", "global-lang-pack/codesystem-glp-other.json", "global-lang-pack/codesystem-glp-base-de.json", "global-lang-pack/codesystem-glp-base-nl.json", "global-lang-pack/valueset-glp-base-all.json", "global-lang-pack/codesystem-glp-own.json", "global-lang-pack/codesystem-glp-own-de.json", "global-lang-pack/valueset-glp-own-all.json"],
     "tests" : [
       {
         "name" : "glp-cs-validate-de",
@@ -1057,6 +1057,27 @@
         "operation" : "expand",
         "request" : "global-lang-pack/glp-expand-en-request.json",
         "response" : "global-lang-pack/glp-expand-en-response.json"
+      },
+      {
+        "name" : "glp-own-expand-de",
+        "description" : "Who wins in German when the code system has its own German designation for a code: the code system's own designation is the display for that code, the global language pack provides the display for the other code, and the pack is still reported as a used-supplement",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-own-expand-de-request.json",
+        "response" : "global-lang-pack/glp-own-expand-de-response.json"
+      },
+      {
+        "name" : "glp-own-lookup-de",
+        "description" : "$lookup in German of a code with its own German designation: the display is the code system's own, and the global language pack's German designation is still listed, with its source",
+        "operation" : "lookup",
+        "request" : "global-lang-pack/glp-own-lookup-de-request.json",
+        "response" : "global-lang-pack/glp-own-lookup-de-response.json"
+      },
+      {
+        "name" : "glp-own-validate-pack-display-de",
+        "description" : "The global language pack's German display stays a valid display for a code whose own German designation is preferred: the result is true, and the display returned is the code system's own",
+        "operation" : "validate-code",
+        "request" : "global-lang-pack/glp-own-validate-pack-display-de-request.json",
+        "response" : "global-lang-pack/glp-own-validate-pack-display-de-response.json"
       }
     ]
   },{

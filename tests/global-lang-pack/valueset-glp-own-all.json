@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "id": "glp-own-all",
+  "url": "http://hl7.org/fhir/test/ValueSet/glp-own-all",
+  "version": "1.0.0",
+  "name": "GlobalLangPackOwnAll",
+  "title": "Global Language Pack Own - All",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-27",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-own"
+      }
+    ]
+  }
+}

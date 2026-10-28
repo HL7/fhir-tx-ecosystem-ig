@@ -1,0 +1,54 @@
+{
+  "$optional-properties$": [
+    "id",
+    "date",
+    "publisher",
+    "compose"
+  ],
+  "resourceType": "ValueSet",
+  "id": "$id$",
+  "url": "http://hl7.org/fhir/test/ValueSet/glp-own-all",
+  "version": "1.0.0",
+  "name": "GlobalLangPackOwnAll",
+  "title": "Global Language Pack Own - All",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-27",
+  "expansion": {
+    "$optional-properties$": [
+      "id",
+      "offset",
+      "total"
+    ],
+    "id": "$id$",
+    "identifier": "$uuid$",
+    "timestamp": "$instant$",
+    "total": 2,
+    "parameter": [
+      {
+        "name": "displayLanguage",
+        "valueCode": "de"
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-own|1.0.0"
+      },
+      {
+        "name": "used-supplement",
+        "valueUri": "http://hl7.org/fhir/test/CodeSystem/glp-own-de|1.0.0"
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-own",
+        "code": "c1",
+        "display": "Code Eins"
+      },
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/glp-own",
+        "code": "c2",
+        "display": "Code Zwei (CS)"
+      }
+    ]
+  }
+}
