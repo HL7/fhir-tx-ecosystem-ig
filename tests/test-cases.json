@@ -4993,11 +4993,7 @@
     "name" : "tx.fhir.org",
     "mode" : "tx.fhir.org",
     "description" : "These are tx.fhir.org specific tests. There's no expectation that other servers will pass these tests, and they are not executed by default. (other servers can, but they depend on other set up not controlled by the tests",
-    "setup" : [ "tx.fhir.org/valueset-all.json", "tx.fhir.org/valueset-enumerated-bad.json", "tx.fhir.org/valueset-enumerated.json", "tx.fhir.org/valueset-filter-prop-component.json", "tx.fhir.org/valueset-filter-prop-method.json", "tx.fhir.org/valueset-filter-prop-component-str.json",
-      "tx.fhir.org/valueset-filter-prop-order-obs.json", "tx.fhir.org/valueset-concept-is-a.json", "tx.fhir.org/valueset-filter-copyright.json", "tx.fhir.org/valueset-filter-status.json", "tx.fhir.org/valueset-filter-class-regex.json",
-      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", "tx.fhir.org/valueset-filter-no-method.json", "tx.fhir.org/valueset-filter-classtype.json",
-      "tx.fhir.org/valueset-filter-answers-for1.json", "tx.fhir.org/valueset-filter-answers-for2.json", "tx.fhir.org/valueset-filter-answer-list.json", "tx.fhir.org/valueset-filter-parent.json",
-      "tx.fhir.org/codesystem-loinc-supplement.json"],
+    "setup" : [],
     "tests" : [
       {
         "name" : "snomed-validation-1",
@@ -5007,542 +5003,614 @@
         "response" : "tx.fhir.org/snomed-validation-1-response-parameters.json"
       },
       {
-        "name" : "loinc-lookup-code",
-        "description" : "to be provided",
-        "operation" : "lookup",
-        "request" : "tx.fhir.org/loinc-lookup-code-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-lookup-code-response-parameters.json"
-      },
-      {
-        "name" : "loinc-lookup-part",
-        "description" : "to be provided",
-        "operation" : "lookup",
-        "request" : "tx.fhir.org/loinc-lookup-part-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-lookup-part-response-parameters.json"
-      },
-      {
-        "name" : "loinc-lookup-list",
-        "description" : "to be provided",
-        "operation" : "lookup",
-        "request" : "tx.fhir.org/loinc-lookup-list-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-lookup-list-response-parameters.json"
-      },
-      {
-        "name" : "loinc-lookup-answer",
-        "description" : "to be provided",
-        "operation" : "lookup",
-        "request" : "tx.fhir.org/loinc-lookup-answer-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-lookup-answer-response-parameters.json"
-      },
-      {
-        "name" : "loinc-lookup-part-mappings",
-        "description" : "A LOINC part's mappings to other code systems (PartRelatedCodeMapping) are Coding properties named for the map - sct, ncbi (PubChem), chebi - with the equivalence as a subproperty. Asked for by name here; they are also returned by default (see loinc-lookup-code and loinc-lookup-answer)",
-        "operation" : "lookup",
-        "request" : "tx.fhir.org/loinc-lookup-part-mappings-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-lookup-part-mappings-response-parameters.json"
-      },
-      {
-        "name" : "loinc-lookup-answer-race",
-        "description" : "An answer's external code from the answer list (ExtCodeSystem https://www.cdc.gov/phin) is reported in the CDC race and ethnicity system, urn:oid:2.16.840.1.113883.6.238, as the property race",
-        "operation" : "lookup",
-        "request" : "tx.fhir.org/loinc-lookup-answer-race-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-lookup-answer-race-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-code",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-code-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-code-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-code-uz",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-code-uz-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-code-uz-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-discouraged-code",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-code-discouraged-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-code-discouraged-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-code-supp1",
-        "description" : "LOINC supplement test - code in the supplement, but english",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-code-supp1-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-code-supp1-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-code-supp2",
-        "description" : "LOINC supplement test - code in the supplement, but german from the supplement",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-code-supp2-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-code-supp2-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-part",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-part-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-part-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-list",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-list-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-list-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-answer",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-answer-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-answer-response-parameters.json"
-      },
-      {
-        "name" : "loinc-validate-invalid",
-        "description" : "to be provided",
-        "operation" : "cs-validate-code",
-        "request" : "tx.fhir.org/loinc-validate-invalid-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-invalid-response-parameters.json"
-      },{
-        "name" : "loinc-expand-enum",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-enum-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-enum-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-all",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "tx.fhir.org/loinc-expand-all-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-all-response-outcome.json"
-      },{
         "name" : "hgvs-expand-all",
         "description" : "Attempt to expand the whole HGVS code system: it has a grammar and cannot be iterated, so a not-supported OperationOutcome is expected",
         "operation" : "expand",
         "http-code" : "4xx",
         "request" : "tx.fhir.org/hgvs-expand-all-request-parameters.json",
         "response" : "tx.fhir.org/hgvs-expand-all-response-outcome.json"
-      },{
-        "name" : "loinc-expand-all-limited",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-all-limited-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-all-limited-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-enum-bad",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-enum-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-enum-bad-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-status",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-status-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-status-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-parent",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-parent-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-parent-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-class-regex",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-class-regex-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-class-regex-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-prop-component",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-prop-component-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-prop-component-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-prop-method",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-prop-method-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-prop-method-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-prop-component-str",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-prop-component-str-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-prop-component-str-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-prop-order-obs",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-prop-order-obs-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-prop-order-obs-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-concept-is-a",
-        "description" : "is-a on the LOINC hierarchy includes the concept itself. The hierarchy is read from ComponentHierarchyBySystem path by path: a code is a descendant of the parts on its own PATH_TO_ROOT, and the children a part has under one parent are not inherited by its other parents (LP263671-2 Bacilliform bacteria is under both LP14082-9 Bacteria and LP30609-9, and only its children on the Bacteria path are in this expansion)",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-concept-is-a-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-concept-is-a-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-copyright",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-copyright-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-copyright-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-scale-type",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-scale-type-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-scale-type-response-valueSet.json"
-      },{
-        "name" : "loinc-validate-enum-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-enum-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-enum-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-enum-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-enum-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-enum-bad-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-prop-component-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-prop-component-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-prop-component-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-prop-component-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-prop-component-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-prop-component-bad-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-status-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-status-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-status-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-status-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-status-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-status-bad-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-class-regex-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-class-regex-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-class-regex-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-class-regex-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-class-regex-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-class-regex-bad-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-scale-type-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-scale-type-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-scale-type-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-scale-type-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-scale-type-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-scale-type-bad-response-parameters.json"
-      },{
-        "name" : "loinc-expand-list-request-parameters",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-list-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-list-response-valueSet.json"
-      },{
-        "name" : "loinc-validate-list-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-list-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-list-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-list-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-list-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-list-bad-response-parameters.json"
-      },{
-        "name" : "loinc-expand-filter-list-request-parameters",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-filter-list-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-filter-list-response-valueSet.json"
-      },{
-        "name" : "loinc-validate-filter-list-type-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-list-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-list-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-list-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-list-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-list-bad-response-parameters.json"
-      },{
-        "name" : "loinc-expand-filter-dockind-request-parameters",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-prop-dockind-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-prop-dockind-response-valueSet.json"
-      },{
-        "name" : "loinc-validate-filter-dockind-type-good",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-prop-dockind-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-prop-dockind-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-dockind-bad",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-response-parameters.json"
-      },{
-        "name" : "loinc-expand-filter-no-method",
-        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-no-method-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-no-method-response-valueSet.json"
-      },{
-        "name" : "loinc-validate-filter-no-method-good",
-        "description" : "a LOINC term with no method is in the no-method value set",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-no-method-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-no-method-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-no-method-method-bad",
-        "description" : "a LOINC term with a method is not in the no-method value set",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-no-method-method-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-no-method-method-bad-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-no-method-part-bad",
-        "description" : "a LOINC part has no method, but is excluded by the CLASSTYPE exists filter",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-no-method-part-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-no-method-part-bad-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-classtype-good",
-        "description" : "test classtype filter (numerical)",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-classtype-good-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-classtype-good-response-parameters.json"
-      },{
-        "name" : "loinc-validate-filter-classtype-bad",
-        "description" : "test classtype filter (numerical)",
-        "operation" : "validate-code",
-        "request" : "tx.fhir.org/loinc-validate-filter-classtype-bad-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-validate-filter-classtype-bad-response-parameters.json"
-      },{
-        "name" : "loinc-expand-filter-answers-for1",
-        "description" : "Test answers-for filters with LL code",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-filter-answers-for1-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-filter-answers-for1-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-filter-answers-for2",
-        "description" : "Test answers-for filters with normal code",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-filter-answers-for2-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-filter-answers-for2-response-valueSet.json"
-      },{
-        "name" : "loinc-expand-filter-answer-list",
-        "description" : "Test answer-list filters with normal code",
-        "operation" : "expand",
-        "request" : "tx.fhir.org/loinc-expand-filter-answer-list-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-expand-filter-answer-list-response-valueSet.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-active",
         "description" : "Test the inactive filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-active-request-parameters.json",
         "response" : "tx.fhir.org/snomed-expand-active-response-valueSet.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-inactive",
         "description" : "Test the inactive filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-inactive-request-parameters.json",
         "response" : "tx.fhir.org/snomed-expand-inactive-response-valueSet.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-inactive2",
         "description" : "Test the inactive filter",
         "operation" : "expand",
         "http-code" : "4xx",
         "request" : "tx.fhir.org/snomed-expand-inactive2-request-parameters.json",
         "response" : "tx.fhir.org/snomed-expand-inactive2-response-valueSet.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-moduleid-1",
         "description" : "Test ModuleId filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-moduleid-1-request.json",
         "response" : "tx.fhir.org/snomed-expand-moduleid-1-response.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-moduleid-2",
         "description" : "Test ModuleId filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-moduleid-2-request.json",
         "response" : "tx.fhir.org/snomed-expand-moduleid-2-response.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-moduleid-3",
         "description" : "Test ModuleId filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-moduleid-3-request.json",
         "response" : "tx.fhir.org/snomed-expand-moduleid-3-response.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-moduleid-4",
         "description" : "Test ModuleId filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-moduleid-4-request.json",
         "response" : "tx.fhir.org/snomed-expand-moduleid-4-response.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-property-1",
         "description" : "Test Property filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-property-1-request.json",
         "response" : "tx.fhir.org/snomed-expand-property-1-response.json"
-      },{
+      },
+      {
         "name" : "snomed-expand-property-2",
         "description" : "Test Property filter",
         "operation" : "expand",
         "request" : "tx.fhir.org/snomed-expand-property-2-request.json",
         "response" : "tx.fhir.org/snomed-expand-property-2-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-active-bad",
         "description" : "Test inactive filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-active-bad-request.json",
         "response" : "tx.fhir.org/snomed-validate-active-bad-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-active-good",
         "description" : "Test inactive filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-active-good-request.json",
         "response" : "tx.fhir.org/snomed-validate-active-good-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-inactive-bad",
         "description" : "Test inactive filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-inactive-bad-request.json",
         "response" : "tx.fhir.org/snomed-validate-inactive-bad-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-inactive-good",
         "description" : "Test inactive filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-inactive-good-request.json",
         "response" : "tx.fhir.org/snomed-validate-inactive-good-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-moduleid-bad",
         "description" : "Test moduleid filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-moduleid-bad-request.json",
         "response" : "tx.fhir.org/snomed-validate-moduleid-bad-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-moduleid-good",
         "description" : "Test moduleid filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-moduleid-good-request.json",
         "response" : "tx.fhir.org/snomed-validate-moduleid-good-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-property-bad",
         "description" : "Test Property filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-property-bad-request.json",
         "response" : "tx.fhir.org/snomed-validate-property-bad-response.json"
-      },{
+      },
+      {
         "name" : "snomed-validate-property-good",
         "description" : "Test Property filter",
         "operation" : "validate-code",
         "request" : "tx.fhir.org/snomed-validate-property-good-request.json",
         "response" : "tx.fhir.org/snomed-validate-property-good-response.json"
-      },{
+      },
+      {
         "name" : "snomed-translate",
         "description" : "Implicit Snomed Concept Map",
         "operation" : "translate",
         "request" : "tx.fhir.org/snomed-translate-request.json",
         "response" : "tx.fhir.org/snomed-translate-response.json"
+      }
+    ]
+  },{
+    "name" : "loinc",
+    "mode" : "loinc",
+    "description" : "LOINC tests. These depend on the LOINC release (2.83) and the accessory files the server has loaded, and every request names version 2.83",
+    "setup" : [ "loinc/valueset-all.json", "loinc/valueset-enumerated-bad.json", "loinc/valueset-enumerated.json", "loinc/valueset-filter-prop-component.json", "loinc/valueset-filter-prop-method.json", "loinc/valueset-filter-prop-component-str.json",
+      "loinc/valueset-filter-prop-order-obs.json", "loinc/valueset-concept-is-a.json", "loinc/valueset-filter-copyright.json", "loinc/valueset-filter-status.json", "loinc/valueset-filter-class-regex.json",
+      "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json",
+      "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
+      "loinc/codesystem-loinc-supplement.json"],
+    "tests" : [
+      {
+        "name" : "loinc-lookup-code",
+        "description" : "to be provided",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-code-request-parameters.json",
+        "response" : "loinc/loinc-lookup-code-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-part",
+        "description" : "to be provided",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-part-request-parameters.json",
+        "response" : "loinc/loinc-lookup-part-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-list",
+        "description" : "to be provided",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-list-request-parameters.json",
+        "response" : "loinc/loinc-lookup-list-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-answer",
+        "description" : "to be provided",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-answer-request-parameters.json",
+        "response" : "loinc/loinc-lookup-answer-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-part-mappings",
+        "description" : "A LOINC part's mappings to other code systems (PartRelatedCodeMapping) are Coding properties named for the map - sct, ncbi (PubChem), chebi - with the equivalence as a subproperty. Asked for by name here; they are also returned by default (see loinc-lookup-code and loinc-lookup-answer)",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-part-mappings-request-parameters.json",
+        "response" : "loinc/loinc-lookup-part-mappings-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-answer-race",
+        "description" : "An answer's external code from the answer list (ExtCodeSystem https://www.cdc.gov/phin) is reported in the CDC race and ethnicity system, urn:oid:2.16.840.1.113883.6.238, as the property race",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-answer-race-request-parameters.json",
+        "response" : "loinc/loinc-lookup-answer-race-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-code",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-code-request-parameters.json",
+        "response" : "loinc/loinc-validate-code-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-code-uz",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-code-uz-request-parameters.json",
+        "response" : "loinc/loinc-validate-code-uz-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-discouraged-code",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-code-discouraged-request-parameters.json",
+        "response" : "loinc/loinc-validate-code-discouraged-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-code-supp1",
+        "description" : "LOINC supplement test - code in the supplement, but english",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-code-supp1-request-parameters.json",
+        "response" : "loinc/loinc-validate-code-supp1-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-code-supp2",
+        "description" : "LOINC supplement test - code in the supplement, but german from the supplement",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-code-supp2-request-parameters.json",
+        "response" : "loinc/loinc-validate-code-supp2-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-part",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-part-request-parameters.json",
+        "response" : "loinc/loinc-validate-part-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-list",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-list-request-parameters.json",
+        "response" : "loinc/loinc-validate-list-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-answer",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-answer-request-parameters.json",
+        "response" : "loinc/loinc-validate-answer-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-invalid",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "loinc/loinc-validate-invalid-request-parameters.json",
+        "response" : "loinc/loinc-validate-invalid-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-enum",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-enum-request-parameters.json",
+        "response" : "loinc/loinc-expand-enum-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-all",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "loinc/loinc-expand-all-request-parameters.json",
+        "response" : "loinc/loinc-expand-all-response-outcome.json"
+      },
+      {
+        "name" : "loinc-expand-all-limited",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-all-limited-request-parameters.json",
+        "response" : "loinc/loinc-expand-all-limited-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-enum-bad",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-enum-bad-request-parameters.json",
+        "response" : "loinc/loinc-expand-enum-bad-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-status",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-status-request-parameters.json",
+        "response" : "loinc/loinc-expand-status-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-parent",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-parent-request-parameters.json",
+        "response" : "loinc/loinc-expand-parent-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-class-regex",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-regex-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-regex-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-component",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-component-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-component-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-method",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-method-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-method-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-component-str",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-component-str-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-component-str-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-order-obs",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-order-obs-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-order-obs-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-concept-is-a",
+        "description" : "is-a on the LOINC hierarchy includes the concept itself. The hierarchy is read from ComponentHierarchyBySystem path by path: a code is a descendant of the parts on its own PATH_TO_ROOT, and the children a part has under one parent are not inherited by its other parents (LP263671-2 Bacilliform bacteria is under both LP14082-9 Bacteria and LP30609-9, and only its children on the Bacteria path are in this expansion)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-concept-is-a-request-parameters.json",
+        "response" : "loinc/loinc-expand-concept-is-a-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-copyright",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-copyright-request-parameters.json",
+        "response" : "loinc/loinc-expand-copyright-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-scale-type",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-scale-type-request-parameters.json",
+        "response" : "loinc/loinc-expand-scale-type-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-enum-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-enum-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-enum-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-enum-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-enum-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-enum-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-prop-component-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-prop-component-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-prop-component-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-prop-component-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-prop-component-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-prop-component-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-status-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-status-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-status-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-status-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-status-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-status-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-class-regex-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-class-regex-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-class-regex-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-class-regex-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-class-regex-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-class-regex-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-scale-type-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-scale-type-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-scale-type-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-scale-type-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-scale-type-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-scale-type-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-list-request-parameters",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-list-request-parameters.json",
+        "response" : "loinc/loinc-expand-list-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-list-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-list-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-list-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-list-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-list-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-list-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-filter-list-request-parameters",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-list-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-list-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-list-type-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-list-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-list-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-list-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-list-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-list-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-filter-dockind-request-parameters",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-dockind-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-dockind-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-dockind-type-good",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-prop-dockind-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-prop-dockind-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-dockind-bad",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-prop-dockind-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-prop-dockind-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-filter-no-method",
+        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-no-method-request-parameters.json",
+        "response" : "loinc/loinc-expand-no-method-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-no-method-good",
+        "description" : "a LOINC term with no method is in the no-method value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-no-method-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-no-method-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-no-method-method-bad",
+        "description" : "a LOINC term with a method is not in the no-method value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-no-method-method-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-no-method-method-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-no-method-part-bad",
+        "description" : "a LOINC part has no method, but is excluded by the CLASSTYPE exists filter",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-no-method-part-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-no-method-part-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-classtype-good",
+        "description" : "test classtype filter (numerical)",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-classtype-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-classtype-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-classtype-bad",
+        "description" : "test classtype filter (numerical)",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-classtype-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-classtype-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-filter-answers-for1",
+        "description" : "Test answers-for filters with LL code",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-answers-for1-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-answers-for1-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-filter-answers-for2",
+        "description" : "Test answers-for filters with normal code",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-answers-for2-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-answers-for2-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-filter-answer-list",
+        "description" : "Test answer-list filters with normal code",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-answer-list-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-answer-list-response-valueSet.json"
       },
       {
         "name" : "loinc-subsumes-equivalent",
         "description" : "A LOINC code is equivalent to itself",
         "operation" : "subsumes",
-        "request" : "tx.fhir.org/loinc-subsumes-equivalent-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-subsumes-equivalent-response-parameters.json"
+        "request" : "loinc/loinc-subsumes-equivalent-request-parameters.json",
+        "response" : "loinc/loinc-subsumes-equivalent-response-parameters.json"
       },
       {
         "name" : "loinc-subsumes-parent",
         "description" : "A LOINC part subsumes a code beneath it in the multiaxial hierarchy",
         "operation" : "subsumes",
-        "request" : "tx.fhir.org/loinc-subsumes-parent-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-subsumes-parent-response-parameters.json"
+        "request" : "loinc/loinc-subsumes-parent-request-parameters.json",
+        "response" : "loinc/loinc-subsumes-parent-response-parameters.json"
       },
       {
         "name" : "loinc-subsumes-child",
         "description" : "the mirror of loinc-subsumes-parent",
         "operation" : "subsumes",
-        "request" : "tx.fhir.org/loinc-subsumes-child-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-subsumes-child-response-parameters.json"
+        "request" : "loinc/loinc-subsumes-child-request-parameters.json",
+        "response" : "loinc/loinc-subsumes-child-response-parameters.json"
       },
       {
         "name" : "loinc-subsumes-unrelated",
         "description" : "Two unrelated LOINC codes",
         "operation" : "subsumes",
-        "request" : "tx.fhir.org/loinc-subsumes-unrelated-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-subsumes-unrelated-response-parameters.json"
+        "request" : "loinc/loinc-subsumes-unrelated-request-parameters.json",
+        "response" : "loinc/loinc-subsumes-unrelated-response-parameters.json"
       },
       {
         "name" : "loinc-subsumes-unknown-code",
         "description" : "codeA is not a LOINC code",
         "operation" : "subsumes",
         "http-code" : "4xx",
-        "request" : "tx.fhir.org/loinc-subsumes-unknown-code-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-subsumes-unknown-code-response-parameters.json"
+        "request" : "loinc/loinc-subsumes-unknown-code-request-parameters.json",
+        "response" : "loinc/loinc-subsumes-unknown-code-response-parameters.json"
       },
       {
         "name" : "loinc-translate-part-sct",
         "description" : "Translate a LOINC part to SNOMED CT by naming the target system: the implicit map http://loinc.org/cm/sct (from PartRelatedCodeMapping) is found",
         "operation" : "translate",
-        "request" : "tx.fhir.org/loinc-translate-part-sct-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-translate-part-sct-response-parameters.json"
+        "request" : "loinc/loinc-translate-part-sct-request-parameters.json",
+        "response" : "loinc/loinc-translate-part-sct-response-parameters.json"
       },
       {
         "name" : "loinc-translate-sct-part",
         "description" : "Translate a SNOMED CT concept to LOINC by naming the target system: the same map, used the other way. Three parts map to 409822003; the one LOINC says the SNOMED CT concept is narrower than comes back as source-is-narrower-than-target",
         "operation" : "translate",
-        "request" : "tx.fhir.org/loinc-translate-sct-part-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-translate-sct-part-response-parameters.json"
+        "request" : "loinc/loinc-translate-sct-part-request-parameters.json",
+        "response" : "loinc/loinc-translate-sct-part-response-parameters.json"
       },
       {
         "name" : "loinc-translate-part-sct-url",
         "description" : "Translate a LOINC part to SNOMED CT by naming the map, http://loinc.org/cm/sct. LOINC says the SNOMED CT concept is narrower than the part, so the source is broader than the target",
         "operation" : "translate",
-        "request" : "tx.fhir.org/loinc-translate-part-sct-url-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-translate-part-sct-url-response-parameters.json"
+        "request" : "loinc/loinc-translate-part-sct-url-request-parameters.json",
+        "response" : "loinc/loinc-translate-part-sct-url-response-parameters.json"
       },
       {
         "name" : "loinc-translate-code-mdc",
         "description" : "Translate a LOINC code to ISO/IEEE 11073 MDC with the map from the LOINC/IEEE medical device code mapping table, found by the target system. The MDC codes are narrower than the LOINC code, so the source is broader than the target",
         "operation" : "translate",
-        "request" : "tx.fhir.org/loinc-translate-code-mdc-request-parameters.json",
-        "response" : "tx.fhir.org/loinc-translate-code-mdc-response-parameters.json"
+        "request" : "loinc/loinc-translate-code-mdc-request-parameters.json",
+        "response" : "loinc/loinc-translate-code-mdc-response-parameters.json"
       }
     ]
   },{

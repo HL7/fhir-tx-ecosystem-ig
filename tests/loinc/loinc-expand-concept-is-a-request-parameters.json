@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-concept-is-a"
+  },{
+    "name" : "excludeNested",
+    "valueBoolean" : true
+  },{
+    "name" : "system-version",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}

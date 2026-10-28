@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://loinc.org/cm/sct"
+  },
+  {
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "http://loinc.org",
+      "version" : "2.83",
+      "code" : "LP14355-9"
+    }
+  }]
+}

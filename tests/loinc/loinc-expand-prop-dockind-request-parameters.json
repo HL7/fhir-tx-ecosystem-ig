@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-dockind-exists"
+  },{
+    "name" : "excludeNested",
+    "valueBoolean" : true
+  },
+  {
+    "name": "_limit",
+    "valueInteger": 10000
+  },
+  {
+    "name": "count",
+    "valueInteger": 50
+  },
+  {
+    "name": "offset",
+    "valueInteger": 0
+  },{
+    "name" : "system-version",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}

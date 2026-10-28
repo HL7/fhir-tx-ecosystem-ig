@@ -893,11 +893,12 @@ them.
 
 #### LOINC
 
-*(mode: `tx.fhir.org` at present; suite: `tx.fhir.org`)*
+*(mode: `loinc`; suite: `loinc`)*
 
-LOINC requirements are currently tested only against tx.fhir.org, because they depend on which LOINC
-release and accessory files the server has loaded. A server that wants to be tested for LOINC should
-contact the FHIR product director. The behaviour tested covers the LOINC properties (`COMPONENT`,
+The LOINC tests depend on which LOINC release and accessory files the server has loaded. They are
+written against LOINC 2.83, and every request names that version - `version` in `$lookup`,
+`$subsumes` and `$validate-code` on the code system, `systemVersion` in `$validate-code` on a value set,
+`system-version` in `$expand`, and the version of the source Coding in `$translate`. The behaviour tested covers the LOINC properties (`COMPONENT`,
 `METHOD_TYP`, `ORDER_OBS`, `SCALE_TYP`, `CLASS`), `STATUS`, the parent/child hierarchy, answer lists,
 parts, and the `answers-for` and `list` filters.
 

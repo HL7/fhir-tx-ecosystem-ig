@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-classtype"
+  },{
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "http://loinc.org",
+      "code" : "100019-9"
+    }
+  },{
+    "name" : "systemVersion",
+    "valueString" : "2.83"
+  }]
+}

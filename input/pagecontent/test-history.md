@@ -55,9 +55,10 @@ A new suite and mode `icf` that tests the ICF qualifier grammar - `.` then one q
 * `$expand` of an enumerated value set of qualified codes
 * and value sets that control qualifiers with filters: each qualifier `exists` `true`/`false` (a qualifier of 8 does not count as present) and `qualified` `=` `false` (no qualified codes at all)
 
-##### LOINC  (`tx.fhir.org` suite)
+##### LOINC (`loinc` suite)
 
-* Updated to 2.83, and the expected responses updated to match
+* The LOINC tests have moved out of the `tx.fhir.org` suite into their own `loinc` suite and mode, and their files from `tests/tx.fhir.org` to `tests/loinc`
+* Updated to 2.83, and the expected responses updated to match. Every request now names version 2.83: `version` in `$lookup`, `$subsumes` and `$validate-code` on the code system, `systemVersion` in `$validate-code` on a value set, `system-version` in `$expand` (echoed in `expansion.parameter`), and the version of the source Coding in `$translate` (echoed in `sourceConcept`)
 * `is-a` includes the concept itself, as FHIR defines it, so `loinc-expand-concept-is-a` now includes `LP14082-9` (431 codes, not 430). The LOINC hierarchy is read from `ComponentHierarchyBySystem` path by path: a code is a descendant of the parts on its own `PATH_TO_ROOT`, and the children a part has under one parent are not inherited by its other parents
 * a part's mappings to other code systems (`PartRelatedCodeMapping`) are Coding properties named for the map - `sct`, `ncbi`, `chebi` - with the equivalence as a subproperty, and are returned by default (`loinc-lookup-part-mappings`); an answer's external code from the CDC answer list is reported in the CDC race and ethnicity system as the property `race` (`loinc-lookup-answer-race`)
 * a filter for terms with no method - `METHOD_TYP` `exists` `false` - in `$expand` and `$validate-code` (`loinc-expand-filter-no-method`, `loinc-validate-filter-no-method-*`)

@@ -1229,48 +1229,48 @@
   "translate/translate-reverse-response-r4-a-parameters.json" : {
     "1" : "No ConceptMap is available to translate from 'http://hl7.org/fhir/test/CodeSystem/target' to 'http://hl7.org/fhir/test/CodeSystem/source'"
   },
-  "tx.fhir.org/loinc-validate-code-discouraged-response-parameters.json" : {
+  "loinc/loinc-validate-code-discouraged-response-parameters.json" : {
     "1" : "The concept '52495-9' has a status of DISCOURAGED and its use should be reviewed"
   },
-  "tx.fhir.org/loinc-validate-enum-bad-response-parameters.json" : {
+  "loinc/loinc-validate-enum-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'",
     "2" : "Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.83'",
     "3" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'; Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.83'"
   },
-  "tx.fhir.org/loinc-validate-filter-class-regex-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-class-regex-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-classtype-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-classtype-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#44214-5' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-classtype|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-list-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-list-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-list|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-prop-component-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-prop-component-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#10352-3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-prop-component|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-prop-dockind-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#10352-3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-dockind-exists|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-no-method-method-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-no-method-method-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#10352-3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-no-method-part-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-no-method-part-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#LP14635-4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-no-method|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-scale-type-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-scale-type-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-class-regex|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-status-bad-response-parameters.json" : {
+  "loinc/loinc-validate-filter-status-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-status|5.0.0'"
   },
-  "tx.fhir.org/loinc-validate-filter-status-good-response-parameters.json" : {
+  "loinc/loinc-validate-filter-status-good-response-parameters.json" : {
     "1" : "The concept '10879-5' has a status of DISCOURAGED and its use should be reviewed"
   },
-  "tx.fhir.org/loinc-validate-invalid-response-parameters.json" : {
+  "loinc/loinc-validate-invalid-response-parameters.json" : {
     "1" : "Unknown code 'XX111373-9' in the CodeSystem 'http://loinc.org' version '2.83'"
   },
-  "tx.fhir.org/loinc-validate-list-bad-response-parameters.json" : {
+  "loinc/loinc-validate-list-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://loinc.org/vs/LL361-7|2.83'"
   },
   "tx.fhir.org/snomed-validate-active-bad-response.json" : {

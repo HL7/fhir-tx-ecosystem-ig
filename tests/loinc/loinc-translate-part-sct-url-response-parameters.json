@@ -1,0 +1,55 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display", "version"],
+        "system" : "http://snomed.info/sct",
+        "code" : "15373003",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260101",
+        "display" : "Creatinine (substance)"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "narrower"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://loinc.org/cm/sct"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "source-is-broader-than-target"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://loinc.org/cm/sct"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "version" : "2.83",
+        "code" : "LP14355-9"
+      }
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "used-conceptmap",
+    "valueUri" : "http://loinc.org/cm/sct"
+  },
+  {
+    "name" : "used-system",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}
