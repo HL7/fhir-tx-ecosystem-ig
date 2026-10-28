@@ -3912,8 +3912,8 @@
         "name" : "notSelectable-unprop-all",
         "description" : "to be provided",
         "operation" : "expand",
-        "request" : "notSelectable/expand-reprop-all-request-parameters.json",
-        "response" : "notSelectable/expand-reprop-all-response-valueSet.json"
+        "request" : "notSelectable/expand-unprop-all-request-parameters.json",
+        "response" : "notSelectable/expand-unprop-all-response-valueSet.json"
       },
       {
         "name" : "notSelectable-prop-true",
