@@ -22,7 +22,7 @@
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="https://confluence.hl7.org/spaces/FHIR/pages/66930631/FHIR+Product+Director+Page"/>
+      <value value="http://www.hl7.org/Special/committees/fmg"/> <!-- https://confluence.hl7.org/spaces/FHIR/pages/66930631/FHIR+Product+Director+Page -->
     </telecom>
   </contact>
   <description value="This IG defines the extensions that the tools use internally. Some of these extensions are content that are being evaluated for elevation into the main spec, and others are tooling concerns"/>

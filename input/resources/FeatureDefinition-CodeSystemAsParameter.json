@@ -3,7 +3,7 @@
   "id" : "CodeSystemAsParameter",
     "extension" : [{
     "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-    "valueCode" :"director"
+    "valueCode" :"fhir-pd"
   }],
   "contextDefinition" : "This feature is defined at the root of the CapabilityStatement",
   "context" : [
