@@ -32,9 +32,9 @@
       "valueUri" : "http://hl7.org/fhir/ValueSet/administrative-gender|$version$"
     }],
     "contains" : [{
-      "system" : "http://hl7.org/fhir/administrative-gender",
-      "code" : "male",
-      "display" : "Male"
+      "system" : "$choice:http://hl7.org/fhir/administrative-gender|http://hl7.org/fhir/publication-status$",
+      "code" : "$choice:male|female|draft|active|retired$",
+      "display" : "$choice:Male|Female|Draft|Active|Retired$"
     }]
   }
 }
