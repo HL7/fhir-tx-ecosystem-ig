@@ -1,0 +1,29 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "coding",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+          "code" : "code1"
+        }
+      }]
+    }
+  },
+  {
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "coding",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+          "code" : "code4"
+        }
+      }]
+    }
+  }]
+}

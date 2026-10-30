@@ -659,6 +659,9 @@
     "3" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')",
     "4" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'; Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
   },
+  "batch/batch-validate-cs-response-bundle.json" : {
+    "1" : "Unknown code 'code4' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
   "batch/batch-validate-response-bundle.json" : {
     "1" : "The concept 'code2' has a status of retired and inactive and its use should be reviewed",
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"

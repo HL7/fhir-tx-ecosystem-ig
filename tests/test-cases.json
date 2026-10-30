@@ -7914,6 +7914,13 @@
         "operation" : "batch-validate",
         "request" : "batch/batch-validate-bad-request-bundle.json",
         "response" : "batch/batch-validate-bad-response-bundle.json"
+      },
+      {
+        "name" : "batch-validate-cs",
+        "description" : "Batch validate entries that have no url or valueSet: each is validated against its code system, as for CodeSystem/$validate-code",
+        "operation" : "batch-validate",
+        "request" : "batch/batch-validate-cs-request-bundle.json",
+        "response" : "batch/batch-validate-cs-response-bundle.json"
       }
     ]
   },{
