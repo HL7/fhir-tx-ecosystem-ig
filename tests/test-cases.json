@@ -5757,6 +5757,20 @@
         "response" : "sct/expand-isa-response.json"
       },
       {
+        "name" : "snomed-expand-include-exclude",
+        "description" : "a compose with two is-a includes and an is-a exclude: the excluded subtree is removed. Servers that combine the parts into one ECL expression must bracket them",
+        "operation" : "expand",
+        "request" : "sct/expand-include-exclude-request.json",
+        "response" : "sct/expand-include-exclude-response.json"
+      },
+      {
+        "name" : "snomed-expand-include-exclude-multi",
+        "description" : "a compose with two is-a includes and two is-a excludes, one of which removes a whole include",
+        "operation" : "expand",
+        "request" : "sct/expand-include-exclude-multi-request.json",
+        "response" : "sct/expand-include-exclude-multi-response.json"
+      },
+      {
         "name" : "snomed-expand-count-all",
         "description" : "Smoke test: total concept count for the loaded SNOMED edition subset must be 2206.",
         "operation" : "expand",

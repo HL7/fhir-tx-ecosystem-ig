@@ -1,0 +1,58 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/sct-expand-include-exclude",
+        "version": "5.0.0",
+        "name": "SCTExpandIncludeExclude",
+        "status": "active",
+        "experimental": false,
+        "date": "2026-10-28",
+        "publisher": "FHIR Project",
+        "description": "Two is-a includes (Cellulitis, Liver structure) less an is-a exclude of the Cellulitis subtree: the Liver-structure subtree alone",
+        "compose": {
+          "include": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "concept",
+                  "op": "is-a",
+                  "value": "128045006"
+                }
+              ]
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "concept",
+                  "op": "is-a",
+                  "value": "10200004"
+                }
+              ]
+            }
+          ],
+          "exclude": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/xsct/31000003106/version/20250909",
+              "filter": [
+                {
+                  "property": "concept",
+                  "op": "is-a",
+                  "value": "128045006"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
