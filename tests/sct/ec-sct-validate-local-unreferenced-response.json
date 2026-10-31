@@ -1,0 +1,53 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "367430006:{405813007=(85562004:272741003=24028007)}"
+  },
+  {
+    "name" : "display",
+    "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "$external:1:Repair of a tendon of the right hand|367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}$"
+        },
+        "location" : ["display"],
+        "expression" : ["display"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:1:Repair of a tendon of the right hand|367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909",
+    "$optional$" : "warning:version"
+  }]
+}

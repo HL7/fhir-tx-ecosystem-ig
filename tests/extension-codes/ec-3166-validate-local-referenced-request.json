@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "urn:iso:std:iso:3166"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "XB"
+  },
+  {
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-3166-local"
+  }]
+}

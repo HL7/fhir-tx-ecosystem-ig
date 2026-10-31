@@ -1,0 +1,50 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ec-base",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-reservedCodeSpace",
+    "extension" : [{
+      "url" : "reservedCodeSpace",
+      "valueString" : "X.+"
+    },
+    {
+      "url" : "description",
+      "valueMarkdown" : "Codes that start with X are reserved for users to define"
+    }]
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-reservedCodeSpace",
+    "extension" : [{
+      "url" : "reservedCodeSpace",
+      "valueString" : "Z.+"
+    },
+    {
+      "url" : "description",
+      "valueMarkdown" : "Codes that start with Z are reserved for local use"
+    },
+    {
+      "url" : "default-display",
+      "valueString" : "Local Code"
+    }]
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesBase",
+  "title" : "Extension Codes Base",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "publisher" : "FHIR Project",
+  "description" : "A code system with two codes of its own, and two code spaces reserved for users to define their own codes: codes that start with X (with the default display, User-assigned), and codes that start with Z (with the default display Local Code)",
+  "language" : "en",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "A1",
+    "display" : "Code A1"
+  },
+  {
+    "code" : "A2",
+    "display" : "Code A2"
+  }]
+}

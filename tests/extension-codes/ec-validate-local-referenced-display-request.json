@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "XL1"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Local Code One"
+  },
+  {
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-local"
+  }]
+}

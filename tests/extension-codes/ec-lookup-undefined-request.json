@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "X99"
+  }]
+}

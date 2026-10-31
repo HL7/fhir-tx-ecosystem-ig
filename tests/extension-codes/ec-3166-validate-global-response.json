@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "XA"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Atlantis"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "urn:iso:std:iso:3166"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2018",
+    "$optional$" : "warning:version"
+  }]
+}

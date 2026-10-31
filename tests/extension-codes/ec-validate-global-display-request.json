@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "XG1"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Global Code One"
+  }]
+}

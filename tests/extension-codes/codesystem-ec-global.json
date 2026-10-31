@@ -1,0 +1,36 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ec-global",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "extension-codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+    "valueBoolean" : true
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/ec-global",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesGlobal",
+  "title" : "Extension Codes - Global",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "publisher" : "FHIR Project",
+  "description" : "A global extension-codes supplement: it defines two codes in the reserved code space, and is used whether or not it is referenced. It also gives a display for A2, which is not in the reserved code space",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/ec-base|1.0.0",
+  "concept" : [{
+    "code" : "XG1",
+    "display" : "Global Code One"
+  },
+  {
+    "code" : "XG2",
+    "display" : "Global Code Two"
+  },
+  {
+    "code" : "A2",
+    "display" : "Code A2 (from the supplement)"
+  }]
+}

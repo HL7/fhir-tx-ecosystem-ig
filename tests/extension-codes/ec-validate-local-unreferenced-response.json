@@ -1,0 +1,55 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "XL1"
+  },
+  {
+    "name" : "display",
+    "valueString" : "User-assigned"
+  },
+  {
+    "$optional$" : true,
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Display_Name_Not_Fixed_use_Supplement"
+        }],
+        "severity" : "information",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "$external:1:Any Display At All|User-assigned$"
+        },
+        "location" : ["display"],
+        "expression" : ["display"]
+      }]
+    }
+  },
+  {
+    "$optional$" : true,
+    "name" : "message",
+    "valueString" : "$external:1:Any Display At All|User-assigned$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.0.0",
+    "$optional$" : "warning:version"
+  }]
+}

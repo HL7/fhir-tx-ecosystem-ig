@@ -1,0 +1,38 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ec-all",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesAll",
+  "title" : "Extension Codes - All",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base|1.0.0"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-global|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "A1",
+      "display" : "Code A1"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "A2",
+      "display" : "Code A2"
+    }]
+  }
+}

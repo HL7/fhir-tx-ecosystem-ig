@@ -1,0 +1,73 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "XL1"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-local|1.0.0"
+    },
+    {
+      "$optional$" : true,
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Local Code One"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Local Code One"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ExtensionCodesBase|Extension Codes Base$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+  },
+  {
+    "$optional$" : true,
+    "name" : "used-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-global|1.0.0"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-local|1.0.0"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.0.0"
+  }]
+}
