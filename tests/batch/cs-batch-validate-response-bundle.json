@@ -1,0 +1,173 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code1"
+          },
+          {
+            "name" : "display",
+            "valueString" : "Display 1"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code2"
+          },
+          {
+            "name" : "display",
+            "valueString" : "Display 2"
+          },
+          {
+            "name" : "inactive",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "INACTIVE_CONCEPT_FOUND"
+                    }],
+                  "severity" : "warning",
+                  "code" : "business-rule",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "code-comment"
+                      }],
+                    "text" : "$external:1:code2|retired$"
+                  },
+                  "location" : ["code"],
+                  "expression" : ["code"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "$external:1:code2|retired$"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "status",
+            "valueCode" : "retired"
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code1x"
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "Unknown_Code_in_Version"
+                    }],
+                  "severity" : "error",
+                  "code" : "code-invalid",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "invalid-code"
+                      }],
+                    "text" : "$external:2:code1x|http://hl7.org/fhir/test/CodeSystem/simple|0.1.0$"
+                  },
+                  "location" : ["code"],
+                  "expression" : ["code"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "$external:2:code1x|http://hl7.org/fhir/test/CodeSystem/simple|0.1.0$"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : false
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code2a"
+          },
+          {
+            "name" : "display",
+            "valueString" : "Display 2a"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
+          }]
+      }
+    }]
+}

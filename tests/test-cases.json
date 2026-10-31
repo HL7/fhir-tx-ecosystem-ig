@@ -985,7 +985,7 @@
   },{
     "name" : "global-lang-pack",
     "mode" : "general",
-    "description" : "Global language packs: a CodeSystem supplement marked with the codesystem-supplement-type extension, value global-lang-pack, is used for the code system it supplements whether or not it is referenced; any other supplement is only used when it is referenced",
+    "description" : "Global language packs: a language pack (codesystem-supplement-type = lang-pack) marked with codesystem-supplement-global = true is used for the code system it supplements whether or not it is referenced; any other supplement is only used when it is referenced",
     "setup" : ["global-lang-pack/codesystem-glp-base.json", "global-lang-pack/codesystem-glp-other.json", "global-lang-pack/codesystem-glp-base-de.json", "global-lang-pack/codesystem-glp-base-nl.json", "global-lang-pack/valueset-glp-base-all.json", "global-lang-pack/codesystem-glp-own.json", "global-lang-pack/codesystem-glp-own-de.json", "global-lang-pack/valueset-glp-own-all.json"],
     "tests" : [
       {
@@ -1004,7 +1004,7 @@
       },
       {
         "name" : "glp-validate-nl-unreferenced",
-        "description" : "A supplement that is not a global language pack is not used unless it is referenced, even though it was passed in tx-resource: its Dutch display is not valid",
+        "description" : "A language pack that is not global (lang-pack, without codesystem-supplement-global) is not used unless it is referenced, even though it was passed in tx-resource: its Dutch display is not valid",
         "operation" : "validate-code",
         "request" : "global-lang-pack/glp-validate-nl-unreferenced-request.json",
         "response" : "global-lang-pack/glp-validate-nl-unreferenced-response.json"
@@ -1018,7 +1018,7 @@
       },
       {
         "name" : "glp-cs-validate-nl-unreferenced",
-        "description" : "The same against the code system: a supplement that is not a global language pack is not used unless it is referenced, so its Dutch display is not valid",
+        "description" : "The same against the code system: a language pack that is not global is not used unless it is referenced, so its Dutch display is not valid",
         "operation" : "cs-validate-code",
         "request" : "global-lang-pack/glp-cs-validate-nl-unreferenced-request.json",
         "response" : "global-lang-pack/glp-cs-validate-nl-unreferenced-response.json"
@@ -1036,6 +1036,13 @@
         "operation" : "lookup",
         "request" : "global-lang-pack/glp-lookup-de-request.json",
         "response" : "global-lang-pack/glp-lookup-de-response.json"
+      },
+      {
+        "name" : "glp-lookup-nl-unreferenced",
+        "description" : "$lookup in Dutch: a language pack that is not global (lang-pack, without codesystem-supplement-global) is not used unless it is referenced, so there is no Dutch display or designation, and it is not a used-supplement. The German global language pack still contributes its designation",
+        "operation" : "lookup",
+        "request" : "global-lang-pack/glp-lookup-nl-unreferenced-request.json",
+        "response" : "global-lang-pack/glp-lookup-nl-unreferenced-response.json"
       },
       {
         "name" : "glp-lookup-other",
@@ -1057,6 +1064,13 @@
         "operation" : "expand",
         "request" : "global-lang-pack/glp-expand-en-request.json",
         "response" : "global-lang-pack/glp-expand-en-response.json"
+      },
+      {
+        "name" : "glp-expand-nl-unreferenced",
+        "description" : "$expand in Dutch: a language pack that is not global is not used unless it is referenced, so the displays are the code system's own, and it is not a used-supplement",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-expand-nl-unreferenced-request.json",
+        "response" : "global-lang-pack/glp-expand-nl-unreferenced-response.json"
       },
       {
         "name" : "glp-own-expand-de",
@@ -7913,7 +7927,7 @@
     "name" : "batch",
     "mode" : "general",
     "description" : "Test Batch Validation",
-    "setup" : ["simple/codesystem-simple.json"],
+    "setup" : ["simple/codesystem-simple.json", "simple/codesystem-noversion.json"],
     "tests" : [
       {
         "name" : "batch-validate",
@@ -7928,6 +7942,27 @@
         "operation" : "batch-validate",
         "request" : "batch/batch-validate-bad-request-bundle.json",
         "response" : "batch/batch-validate-bad-response-bundle.json"
+      },
+      {
+        "name" : "cs-batch-validate",
+        "description" : "Simple use of the batch validate operation against a code system (CodeSystem/$batch-validate-code): good, inactive and unknown codes, with the code system given once at the top level",
+        "operation" : "cs-batch-validate",
+        "request" : "batch/cs-batch-validate-request-bundle.json",
+        "response" : "batch/cs-batch-validate-response-bundle.json"
+      },
+      {
+        "name" : "cs-batch-validate-bad",
+        "description" : "Batch validate against a code system where an entry overrides a top-level parameter (lenient-display-validation), and one entry cannot be validated at all",
+        "operation" : "cs-batch-validate",
+        "request" : "batch/cs-batch-validate-bad-request-bundle.json",
+        "response" : "batch/cs-batch-validate-bad-response-bundle.json"
+      },
+      {
+        "name" : "cs-batch-validate-codings",
+        "description" : "Batch validate against code systems with no top-level url: each entry is a Coding that names its own system, including one the server does not know",
+        "operation" : "cs-batch-validate",
+        "request" : "batch/cs-batch-validate-codings-request-bundle.json",
+        "response" : "batch/cs-batch-validate-codings-response-bundle.json"
       }
     ]
   },{

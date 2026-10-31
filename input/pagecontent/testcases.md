@@ -238,7 +238,8 @@ A test may have:
 * `explanation`: a longer account of why the test exists, where `description` isn't enough. The
   runner ignores it
 * `operation`: one of `expand`, `validate-code`, `cs-validate-code`, `lookup`, `subsumes`, 
-  `translate`, `compare`, `closure`, `batch`, `batch-validate`, `metadata`, `term-caps`
+  `translate`, `compare`, `closure`, `batch`, `batch-validate`, `cs-batch-validate`, `metadata`, `term-caps`
+  (`batch-validate` is `ValueSet/$batch-validate-code`, `cs-batch-validate` is `CodeSystem/$batch-validate-code`)
 * `request`: the file containing the request parameters (not used by `metadata` / `term-caps`)
 * `response`: the file containing the expected response
 * `request:{mode}` / `response:{mode}`: an alternative request or response used when the 

@@ -1,0 +1,187 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code1"
+          },
+          {
+            "name" : "display",
+            "valueString" : "Display 1"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+          },
+          {
+            "name" : "version",
+            "valueString" : "0.1.0",
+            "$optional$" : "warning:version"
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code2"
+          },
+          {
+            "name" : "display",
+            "valueString" : "Display 2"
+          },
+          {
+            "name" : "inactive",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "INACTIVE_CONCEPT_FOUND"
+                    }],
+                  "severity" : "warning",
+                  "code" : "business-rule",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "code-comment"
+                      }],
+                    "text" : "$external:1:code2|retired$"
+                  },
+                  "location" : ["Coding"],
+                  "expression" : ["Coding"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "$external:1:code2|retired$"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : true
+          },
+          {
+            "name" : "status",
+            "valueCode" : "retired"
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/noversion"
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code4"
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "Unknown_Code_in"
+                    }],
+                  "severity" : "error",
+                  "code" : "code-invalid",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "invalid-code"
+                      }],
+                    "text" : "$external:2:code4|http://hl7.org/fhir/test/CodeSystem/noversion$"
+                  },
+                  "location" : ["Coding.code"],
+                  "expression" : ["Coding.code"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "$external:2:code4|http://hl7.org/fhir/test/CodeSystem/noversion$"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : false
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/noversion"
+          }]
+      }
+    },
+    {
+      "name" : "validation",
+      "resource" : {
+        "resourceType" : "Parameters",
+        "parameter" : [{
+            "name" : "code",
+            "valueCode" : "code1"
+          },
+          {
+            "name" : "issues",
+            "resource" : {
+              "resourceType" : "OperationOutcome",
+              "issue" : [{
+                  "$optional-properties$" : ["location"],
+                  "extension" : [{
+                      "$optional$" : "!tx.fhir.org",
+                      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                      "valueString" : "UNKNOWN_CODESYSTEM"
+                    }],
+                  "severity" : "error",
+                  "code" : "not-found",
+                  "details" : {
+                    "coding" : [{
+                        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                        "code" : "not-found"
+                      }],
+                    "text" : "$external:3:http://hl7.org/fhir/test/CodeSystem/unknown$"
+                  },
+                  "location" : ["Coding.system"],
+                  "expression" : ["Coding.system"]
+                }]
+            }
+          },
+          {
+            "name" : "message",
+            "valueString" : "$external:3:http://hl7.org/fhir/test/CodeSystem/unknown$"
+          },
+          {
+            "name" : "result",
+            "valueBoolean" : false
+          },
+          {
+            "name" : "system",
+            "valueUri" : "http://hl7.org/fhir/test/CodeSystem/unknown"
+          },
+          {
+            "name" : "x-caused-by-unknown-system",
+            "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/unknown"
+          }]
+      }
+    }]
+}
