@@ -1,0 +1,53 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "coding",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+          "code" : "code1"
+        }
+      }]
+    }
+  },{
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "coding",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+          "code" : "code2",
+          "display" : "Display 2"
+        }
+      }]
+    }
+  },{
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "coding",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/noversion",
+          "code" : "code4"
+        }
+      }]
+    }
+  },{
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "coding",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/unknown",
+          "code" : "code1"
+        }
+      }]
+    }
+  }]
+}

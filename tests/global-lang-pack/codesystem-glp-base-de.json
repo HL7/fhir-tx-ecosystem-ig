@@ -4,7 +4,11 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
-      "valueCode": "global-lang-pack"
+      "valueCode": "lang-pack"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+      "valueBoolean": true
     }
   ],
   "url": "http://hl7.org/fhir/test/CodeSystem/glp-base-de",

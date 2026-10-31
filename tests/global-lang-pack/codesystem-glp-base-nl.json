@@ -1,10 +1,16 @@
 {
   "resourceType": "CodeSystem",
   "id": "glp-base-nl",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+      "valueCode": "lang-pack"
+    }
+  ],
   "url": "http://hl7.org/fhir/test/CodeSystem/glp-base-nl",
   "version": "1.0.0",
   "name": "GlobalLangPackBaseNl",
-  "title": "Global Language Pack Base - Dutch (not a language pack)",
+  "title": "Global Language Pack Base - Dutch (a language pack, but not global)",
   "status": "active",
   "experimental": false,
   "date": "2026-10-25",

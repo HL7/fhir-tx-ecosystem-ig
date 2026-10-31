@@ -17,7 +17,7 @@
       "name" : "tx-resource",
       "resource" : {
         "resourceType" : "CodeSystem",
-        "extension" : [{ "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type", "valueCode" : "global-lang-pack"}],
+        "extension" : [{ "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type", "valueCode" : "lang-pack"}, { "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global", "valueBoolean" : true}],
         "url" : "http://hl7.org/fhir/test/CodeSystem/iso3166test",
         "supplements" : "urn:iso:std:iso:3166",
         "content" : "supplement",

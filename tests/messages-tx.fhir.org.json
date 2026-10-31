@@ -56,21 +56,21 @@
   "validation/simple-codeableconcept-bad-display-response-parameters.json" : {
     "1" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')",
     "2" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')"
-   },
+  },
   "validation/simple-codeableconcept-bad-displayW-response-parameters.json" : {
     "1" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')",
     "2" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')"
-   },
+  },
   "validation/simple-codeableconcept-bad-language-response-parameters.json" : {
     "1" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en')",
     "2" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en')"
-   },
+  },
   "validation/simple-codeableconcept-bad-system-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "2" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' could not be found, so the code cannot be validated",
     "3" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' could not be found, so the code cannot be validated; No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
-   },
+  },
   "validation/simple-codeableconcept-bad-version1-response-parameters.json" : {
     "1" : "The code system http://hl7.org/fhir/test/CodeSystem/simple version 1.0.0 could not be found. Valid versions: 0.1.0",
     "2" : "Unable to check whether the code is in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0' because the code system http://hl7.org/fhir/test/CodeSystem/simple|1.0.0 was not found",
@@ -118,7 +118,7 @@
     "2" : "Unknown code 'xxxx' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
     "3" : "Wrong Display Name 'xxxxx' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')",
     "4" : "Unknown code 'xxxx' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'; Wrong Display Name 'xxxxx' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')"
-  }, 
+  },
   "validation/simple-coding-bad-version1-response-parameters.json" : {
     "1" : "The code system http://hl7.org/fhir/test/CodeSystem/simple version 1.0.0 could not be found. Valid versions: 0.1.0",
     "2" : "The code system http://hl7.org/fhir/test/CodeSystem/simple version 1.0.0 could not be found. Valid versions: 0.1.0; Unable to check whether the code is in the value set http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0 because the code system http://hl7.org/fhir/test/CodeSystem/simple|1.0.0 was not found"
@@ -408,7 +408,7 @@
     "2" : "The classificationCode extension is only defined for ICD-11 MMS and ICF codings, not http://id.who.int/icd/entity"
   },
   "bugs/validate-sct-ver-response.json" : {
-    "1" : "A definition for CodeSystem 'http://snomed.info/sct' version '2017-09' could not be found, so the code cannot be validated. Valid versions: http://snomed.info/sct/11000146104/version/20240930, http://snomed.info/sct/731000124108/version/20230301, http://snomed.info/sct/731000124108/version/20240301, http://snomed.info/sct/731000124108/version/20250901, http://snomed.info/sct/827022005/version/20241216, http://snomed.info/sct/83821000000107/version/20230412, http://snomed.info/sct/900000000000207008/version/20240201, http://snomed.info/sct/900000000000207008/version/20250201 and http://snomed.info/xsct/31000003106/version/20250909"
+    "1" : "A definition for CodeSystem 'http://snomed.info/sct' version '2017-09' could not be found, so the code cannot be validated. Valid versions: http://snomed.info/sct/11000146104/version/20260930, http://snomed.info/sct/731000124108/version/20230301, http://snomed.info/sct/731000124108/version/20240301, http://snomed.info/sct/731000124108/version/20250901, http://snomed.info/sct/827022005/version/20241216, http://snomed.info/sct/83821000000107/version/20230412, http://snomed.info/sct/900000000000207008/version/20240201, http://snomed.info/sct/900000000000207008/version/20250201 and http://snomed.info/xsct/31000003106/version/20250909"
   },
   "bugs/validate-x12-bad-response.json" : {
     "1" : "A definition for CodeSystem 'https://codesystem.x12.org/005010/1338' could not be found, so the code cannot be validated"
@@ -662,6 +662,20 @@
   "batch/batch-validate-response-bundle.json" : {
     "1" : "The concept 'code2' has a status of retired and inactive and its use should be reviewed",
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+  },
+  "batch/cs-batch-validate-response-bundle.json" : {
+    "1" : "The concept 'code2' has a status of retired and inactive and its use should be reviewed",
+    "2" : "Unknown code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "batch/cs-batch-validate-bad-response-bundle.json" : {
+    "1" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')",
+    "2" : "Unable to find code to validate (looked for coding | codeableConcept | code in parameters)",
+    "3" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
+  },
+  "batch/cs-batch-validate-codings-response-bundle.json" : {
+    "1" : "The concept 'code2' has a status of retired and inactive and its use should be reviewed",
+    "2" : "Unknown code 'code4' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/noversion'",
+    "3" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/unknown' could not be found, so the code cannot be validated"
   },
   "bugs/validate-lang-case-response.json" : {
     "1" : "The code 'en-us' differs from the correct code 'en-US' by case. Although the code system 'urn:ietf:bcp:47' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
@@ -1609,6 +1623,9 @@
   },
   "global-lang-pack/glp-cs-validate-nl-unreferenced-response.json" : {
     "1" : "Wrong Display Name 'Code Een' for http://hl7.org/fhir/test/CodeSystem/glp-base#c1. There are no valid display names found for language(s) 'nl'. Default display is 'Code One'"
+  },
+  "global-lang-pack/glp-lookup-nl-unreferenced-response.json" : {
+    "1" : "There is no display in the language 'nl' for the code 'c1' in http://hl7.org/fhir/test/CodeSystem/glp-base|1.0.0, so the display is in the default language 'en'"
   },
   "global-lang-pack/glp-lookup-other-response.json" : {
     "1" : "There is no display in the language 'de' for the code 'c1' in http://hl7.org/fhir/test/CodeSystem/glp-other|1.0.0, so the display is in the default language 'en'"

@@ -1,69 +1,55 @@
 {
-  "resourceType": "Parameters",
-  "parameter": [
-    {
-      "name": "valueSet",
-      "resource": {
-        "resourceType": "ValueSet",
-        "url": "http://hl7.org/fhir/test/ValueSet/sct-expand-include-exclude-multi",
-        "version": "5.0.0",
-        "name": "SCTExpandIncludeExcludeMulti",
-        "status": "active",
-        "experimental": false,
-        "date": "2026-10-28",
-        "publisher": "FHIR Project",
-        "description": "Two is-a includes (Disease, Liver structure) less two is-a excludes (Cellulitis, Liver structure): Disease less Cellulitis",
-        "compose": {
-          "include": [
-            {
-              "system": "http://snomed.info/sct",
-              "version": "http://snomed.info/xsct/31000003106/version/20250909",
-              "filter": [
-                {
-                  "property": "concept",
-                  "op": "is-a",
-                  "value": "64572001"
-                }
-              ]
-            },
-            {
-              "system": "http://snomed.info/sct",
-              "version": "http://snomed.info/xsct/31000003106/version/20250909",
-              "filter": [
-                {
-                  "property": "concept",
-                  "op": "is-a",
-                  "value": "10200004"
-                }
-              ]
-            }
-          ],
-          "exclude": [
-            {
-              "system": "http://snomed.info/sct",
-              "version": "http://snomed.info/xsct/31000003106/version/20250909",
-              "filter": [
-                {
-                  "property": "concept",
-                  "op": "is-a",
-                  "value": "128045006"
-                }
-              ]
-            },
-            {
-              "system": "http://snomed.info/sct",
-              "version": "http://snomed.info/xsct/31000003106/version/20250909",
-              "filter": [
-                {
-                  "property": "concept",
-                  "op": "is-a",
-                  "value": "10200004"
-                }
-              ]
-            }
-          ]
-        }
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-expand-include-exclude-multi",
+      "version" : "5.0.0",
+      "name" : "SCTExpandIncludeExcludeMulti",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-10-28",
+      "publisher" : "FHIR Project",
+      "description" : "Two is-a includes (Disease, Liver structure) less two is-a excludes (Cellulitis, Liver structure): Disease less Cellulitis",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "64572001"
+          }]
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "10200004"
+          }]
+        }],
+        "exclude" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "128045006"
+          }]
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "10200004"
+          }]
+        }]
       }
     }
-  ]
+  }]
 }

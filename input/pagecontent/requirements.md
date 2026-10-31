@@ -159,9 +159,12 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
 
 * §Servers SHALL support global language packs, including as tx-resource parameters, except where CodeSystems do not allow this§ (ICD-11, for instance, allows explicit language packs, but not global language packs)
 
-* A global language pack is a supplement marked with the
+* A global language pack is a language pack - a supplement marked with the
     [codesystem-supplement-type](http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type) extension, with the
-    value `global-lang-pack` 
+    value `lang-pack` - that is also marked with the
+    [codesystem-supplement-global](http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global) extension, with
+    the value `true`. A language pack without it is not global. (`codesystem-supplement-global` can also mark an
+    `extension-codes` supplement as global)
   * §A server SHALL use a global language pack - passed in tx-resource, or loaded on the server - for the code system it
     supplements, whether or not the request or the value set refers to it§. It only applies to the code system (and
     versions) it supplements
@@ -580,6 +583,9 @@ The same rules apply, less the value set. `CodeSystem/$validate-code` is tested 
 * §The server SHOULD support batch validation: a `$validate-code` request carrying repeated `validation`
   parameters, each one a `Parameters` resource describing one code to validate§. This is what makes
   validating a large resource affordable
+* Batches are made with `$batch-validate-code`, on both `ValueSet` and `CodeSystem`, and each entry means
+  what it would mean to that type's `$validate-code`: on `CodeSystem`, `url` names the code system, and an
+  entry with no `url` is validated against the code system its `coding` / `codeableConcept` names
 * Parameters given at the top level of the request - `url`, `tx-resource`, `lenient-display-validation`
   and so on - apply to every validation in the batch
 * A parameter given inside an individual `validation` overrides the top-level one for that validation
