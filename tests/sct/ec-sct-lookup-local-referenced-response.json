@@ -1,0 +1,402 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "367430006:{405813007=(85562004:272741003=24028007)}"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-local|1.0.0"
+    },
+    {
+      "$optional$" : true,
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Repair of a tendon of the right hand"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "$optional$" : true,
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Repair of a tendon of the right hand"
+  },
+  {
+    "name" : "name",
+    "valueString" : "SNOMED CT Test Edition"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "260686004"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Method"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair - action"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "257903006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "405813007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site - Direct"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Structure of tendon within hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "118632007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "405813007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Procedure site - Direct"
+    },
+    {
+      "name" : "description",
+      "valueString" : "85562004|Hand structure|:272741003|Laterality|=24028007|Right|"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "85562004:272741003=24028007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of hand with graft"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "18701002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of ruptured tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "214433003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of hand by transfer or transplantation"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "243234005"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of hand by suture"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "26731003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Reconstruction of tendon pulley of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "27106001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Reattachment of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "45810006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of flexor tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "709291000"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of extensor tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "712638006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Plication of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "76340004"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Lengthening of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "90650008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Shortening of tendon of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "90907001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Myotenontoplasty of hand"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "91092007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2005-01-31"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "SNOMED CT core"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "900000000000207008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hand repair"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "119657005"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hand tendon operation"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "274059009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Repair of tendon of upper limb"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "281760001"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "$optional$" : true,
+    "name" : "used-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-global|1.0.0"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-local|1.0.0"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

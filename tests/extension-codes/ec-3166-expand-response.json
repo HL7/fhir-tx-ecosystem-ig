@@ -1,0 +1,31 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "urn:iso:std:iso:3166|2018"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-3166-global|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "XA",
+      "display" : "Atlantis"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "XB",
+      "display" : "User-assigned"
+    }]
+  }
+}

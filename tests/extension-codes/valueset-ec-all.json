@@ -1,0 +1,18 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ec-all",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ec-all",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesAll",
+  "title" : "Extension Codes - All",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "publisher" : "FHIR Project",
+  "description" : "All of the base code system",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+    }]
+  }
+}

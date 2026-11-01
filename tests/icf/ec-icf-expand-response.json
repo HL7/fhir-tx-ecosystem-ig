@@ -1,0 +1,41 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 4,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/icf|2001a"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-icf-global|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "b1100.2",
+      "display" : "Moderately impaired consciousness"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "d450.12",
+      "display" : "Walks with some difficulty, and more without help"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "e310+3",
+      "display" : "Immediate family: SUBSTANTIAL facilitator"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icf",
+      "code" : "s7300.183",
+      "display" : "Structure of upper arm: MILD impairment, both sides"
+    }]
+  }
+}

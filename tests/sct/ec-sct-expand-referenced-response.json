@@ -1,0 +1,45 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 4,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-global|1.0.0"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-local|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "128241005:{363698007=181268008}",
+      "display" : "Inflammation of the whole liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "367430006:{405813007=(85562004:272741003=24028007)}",
+      "display" : "Repair of a tendon of the right hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373873005:1142139005=#2,{1142135004=#500}",
+      "display" : "Product with two active ingredients, strength numerator 500"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373873005:{1142135004=#500}",
+      "display" : "Product with a strength numerator of 500"
+    }]
+  }
+}

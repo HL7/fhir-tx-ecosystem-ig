@@ -174,6 +174,30 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
     [valueset-supplement](http://hl7.org/fhir/StructureDefinition/valueset-supplement) extension) - passing it in
     tx-resource is not enough *(suite: `global-lang-pack`)*
 
+* A code system can reserve code spaces for users to define their own codes in, with the
+  [codesystem-reservedCodeSpace](http://hl7.org/fhir/StructureDefinition/codesystem-reservedCodeSpace) extension, whose `reservedCodeSpace`
+  is a regular expression that a code must match in full, and whose `default-display` is the display of a code in the
+  space that nothing defines (`User-assigned` if it doesn't give one). An `extension-codes` supplement
+  ([codesystem-supplement-type](http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type)) defines codes in
+  a reserved code space, with their displays
+  * §A code in a reserved code space is a valid code in the code system, whether or not anything in scope defines it.
+    When nothing does, its display is the code space's default display, which is a placeholder: another display is
+    not an error or a warning§
+  * §A global `extension-codes` supplement (marked with `codesystem-supplement-global` = `true`) is used for the code
+    system it supplements whether or not it is referenced, as if the code system defined its codes: its display is the
+    code's display, and a different display is an error (a warning with `lenient-display-validation`)§
+  * §An `extension-codes` supplement that is not global is only used when it is referenced. Its display is then the
+    code's display, but not the only correct one: a different display is a warning§
+  * §The codes an `extension-codes` supplement defines are only in an expansion when they are listed in the value set
+    (`compose.include.concept`), not when it includes all of the code system§
+  * An `extension-codes` supplement that gives a display to a code outside the reserved code space - one the code
+    system defines - acts as a language pack does for that code *(suites: `extension-codes`, and
+    `extension-codes-3166` for ISO 3166's user-assigned codes)*
+  * For a code system whose codes include a grammar - ICF's qualified codes, or SNOMED CT's post-coordinated
+    expressions - an `extension-codes` supplement can give human displays to codes the grammar makes. Its display is
+    then the code's display, as above, but the display the grammar generates stays a valid display *(the `ec-icf-*`
+    tests in the `icf` suite, and the `ec-sct-*` tests in the `snomed` suite)*
+
 
 * §Servers intended to be used as the primary server for the validator and IG publisher SHALL accept CodeSystems in the 
   [tx-resource parameter](https://jira.hl7.org/browse/FHIR-33944)§. (e.g. this rule does not apply servers registered with the ecosystem, but for when they are used as the master server directly)

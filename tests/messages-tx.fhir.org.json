@@ -1618,6 +1618,51 @@
   "icf/icf-vs-noqual-eights-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.888' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
   },
+  "extension-codes/ec-validate-global-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#XG1. Valid display is 'Global Code One' (en) (for the language(s) '--')"
+  },
+  "extension-codes/ec-validate-global-wrong-display-lenient-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#XG1. Valid display is 'Global Code One' (en) (for the language(s) '--')"
+  },
+  "extension-codes/ec-validate-local-referenced-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#XL1. Valid display is 'Local Code One' (en) (for the language(s) '--')"
+  },
+  "extension-codes/ec-validate-local-unreferenced-response.json" : {
+    "1" : "The display name 'Any Display At All' is not a known display name for http://hl7.org/fhir/test/CodeSystem/ec-base#XL1. Known display is 'User-assigned' (en) (for the language(s) '--'). Use a supplement to define displays for user assigned codes"
+  },
+  "extension-codes/ec-validate-outside-response.json" : {
+    "1" : "Unknown code 'Y1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/ec-base' version '1.0.0'"
+  },
+  "extension-codes/ec-3166-validate-global-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Mu' for urn:iso:std:iso:3166#XA. Valid display is 'Atlantis' (en) (for the language(s) '--')"
+  },
+  "extension-codes/ec-3166-validate-local-referenced-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Mu' for urn:iso:std:iso:3166#XB. Valid display is 'Lemuria' (en) (for the language(s) '--')"
+  },
+  "icf/ec-icf-validate-global-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/sid/icf#b1100.2. Valid display is one of 2 choices: 'Moderately impaired consciousness' (en) or 'State of consciousness: MODERATE impairment' (en) (for the language(s) '--')"
+  },
+  "icf/ec-icf-validate-global-wrong-display-lenient-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/sid/icf#b1100.2. Valid display is one of 2 choices: 'Moderately impaired consciousness' (en) or 'State of consciousness: MODERATE impairment' (en) (for the language(s) '--')"
+  },
+  "icf/ec-icf-validate-local-referenced-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/sid/icf#s7300.183. Valid display is one of 2 choices: 'Mild impairment of both upper arms' (en) or 'Structure of upper arm: MILD impairment, both sides' (en) (for the language(s) '--')"
+  },
+  "icf/ec-icf-validate-local-unreferenced-response.json" : {
+    "1" : "Wrong Display Name 'Mild impairment of both upper arms' for http://hl7.org/fhir/sid/icf#s7300.183. Valid display is 'Structure of upper arm: MILD impairment, both sides' (en) (for the language(s) '--')"
+  },
+  "sct/ec-sct-validate-global-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://snomed.info/sct#128241005:{363698007=181268008}. Valid display is one of 2 choices: 'Inflammation of the whole liver' (en) or '128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}' (en-US) (for the language(s) '--')"
+  },
+  "sct/ec-sct-validate-global-wrong-display-lenient-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://snomed.info/sct#128241005:{363698007=181268008}. Valid display is one of 2 choices: 'Inflammation of the whole liver' (en) or '128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}' (en-US) (for the language(s) '--')"
+  },
+  "sct/ec-sct-validate-local-referenced-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}. Valid display is one of 2 choices: 'Repair of a tendon of the right hand' (en) or '367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}' (en-US) (for the language(s) '--')"
+  },
+  "sct/ec-sct-validate-local-unreferenced-response.json" : {
+    "1" : "Wrong Display Name 'Repair of a tendon of the right hand' for http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}. Valid display is '367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}' (en-US) (for the language(s) '--')"
+  },
   "global-lang-pack/glp-validate-nl-unreferenced-response.json" : {
     "1" : "Wrong Display Name 'Code Een' for http://hl7.org/fhir/test/CodeSystem/glp-base#c1. There are no valid display names found for language(s) 'nl'. Default display is 'Code One'"
   },

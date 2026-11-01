@@ -1,0 +1,562 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "128241005:{363698007=181268008}"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-global|1.0.0"
+    },
+    {
+      "$optional$" : true,
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Inflammation of the whole liver"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "$optional$" : true,
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Inflammation of the whole liver"
+  },
+  {
+    "name" : "name",
+    "valueString" : "SNOMED CT Test Edition"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "116676008"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Associated morphology"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Inflammatory morphology"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "409774005"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363698007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Finding site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Liver structure"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "10200004"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363698007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Finding site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Entire liver"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "181268008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Portal triaditis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "17349007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Alpha-1-antitrypsin hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "190944000"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Recurrent hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "197286002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Toxic hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "197352008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Nonspecific reactive hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "235858002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hepatitis due to infection"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "235862008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Ischemic hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "235877000"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Perinatal hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "276551001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Idiopathic hepatitis in infancy"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "276553003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Parenteral nutrition-related hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "276554009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Cholangiohepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "370489002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Copper storage associated hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "370492003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Lymphocytic portal hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "370889009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Acute hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "37871000"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Autoimmune hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "408335007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Viral arthritis co-occurrent with hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "41271000119108"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Fulminant hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "427044009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Steatohepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "442191002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Radiation hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "53476006"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Neonatal hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "69800000"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hepatic granuloma"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "714253009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Inflammatory pseudotumor of liver"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "717329009"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Subacute noninfective hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "72445008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Chronic hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "76783007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Granulomatous hepatitis"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "86514004"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2002-01-31"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "SNOMED CT core"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "900000000000207008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Structural abnormality of liver"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "897152007"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-global|1.0.0"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

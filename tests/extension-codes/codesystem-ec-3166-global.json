@@ -1,0 +1,28 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ec-3166-global",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "extension-codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+    "valueBoolean" : true
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/ec-3166-global",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodes3166Global",
+  "title" : "Extension Codes - ISO 3166 - Global",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "publisher" : "FHIR Project",
+  "description" : "A global extension-codes supplement for ISO 3166: it gives a display to the user-assigned code XA",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "urn:iso:std:iso:3166",
+  "concept" : [{
+    "code" : "XA",
+    "display" : "Atlantis"
+  }]
+}

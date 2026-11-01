@@ -1,0 +1,41 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 4,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base|1.0.0"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-global|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "A1",
+      "display" : "Code A1"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "X99",
+      "display" : "User-assigned"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "XG1",
+      "display" : "Global Code One"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "XL1",
+      "display" : "User-assigned"
+    }]
+  }
+}

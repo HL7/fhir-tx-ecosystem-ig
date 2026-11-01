@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "urn:iso:std:iso:3166"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "XA"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Mu"
+  }]
+}

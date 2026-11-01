@@ -1,0 +1,85 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/sid/icf"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2001a"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "s7300.183"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Mild impairment of both upper arms"
+  },
+  {
+    "name" : "tx-resource",
+    "resource" : {
+      "resourceType" : "CodeSystem",
+      "id" : "ec-icf-global",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+        "valueCode" : "extension-codes"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+        "valueBoolean" : true
+      }],
+      "url" : "http://hl7.org/fhir/test/CodeSystem/ec-icf-global",
+      "version" : "1.0.0",
+      "name" : "ExtensionCodesIcfGlobal",
+      "title" : "Extension Codes - ICF - Global",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-01",
+      "publisher" : "FHIR Project",
+      "description" : "A global extension-codes supplement for ICF (2001a): it gives human displays to two qualified (post-coordinated) codes",
+      "language" : "en",
+      "content" : "supplement",
+      "supplements" : "http://hl7.org/fhir/sid/icf|2001a",
+      "concept" : [{
+        "code" : "b1100.2",
+        "display" : "Moderately impaired consciousness"
+      },
+      {
+        "code" : "d450.12",
+        "display" : "Walks with some difficulty, and more without help"
+      }]
+    }
+  },
+  {
+    "name" : "tx-resource",
+    "resource" : {
+      "resourceType" : "CodeSystem",
+      "id" : "ec-icf-local",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+        "valueCode" : "extension-codes"
+      }],
+      "url" : "http://hl7.org/fhir/test/CodeSystem/ec-icf-local",
+      "version" : "1.0.0",
+      "name" : "ExtensionCodesIcfLocal",
+      "title" : "Extension Codes - ICF - Not Global",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-01",
+      "publisher" : "FHIR Project",
+      "description" : "An extension-codes supplement for ICF (2001a) that is not global: it gives human displays to two qualified (post-coordinated) codes, when it is referenced",
+      "language" : "en",
+      "content" : "supplement",
+      "supplements" : "http://hl7.org/fhir/sid/icf|2001a",
+      "concept" : [{
+        "code" : "s7300.183",
+        "display" : "Mild impairment of both upper arms"
+      },
+      {
+        "code" : "e310+3",
+        "display" : "Very supportive immediate family"
+      }]
+    }
+  }]
+}

@@ -1,0 +1,28 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ec-local",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "extension-codes"
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/ec-local",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesLocal",
+  "title" : "Extension Codes - Not Global",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "publisher" : "FHIR Project",
+  "description" : "An extension-codes supplement that is not global: the two codes it defines in the reserved code space only have displays when it is referenced",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/ec-base|1.0.0",
+  "concept" : [{
+    "code" : "XL1",
+    "display" : "Local Code One"
+  },
+  {
+    "code" : "XL2",
+    "display" : "Local Code Two"
+  }]
+}

@@ -1,0 +1,24 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ec-3166-local",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "extension-codes"
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/ec-3166-local",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodes3166Local",
+  "title" : "Extension Codes - ISO 3166 - Not Global",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-31",
+  "publisher" : "FHIR Project",
+  "description" : "An extension-codes supplement for ISO 3166 that is not global: it gives a display to the user-assigned code XB, when it is referenced",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "urn:iso:std:iso:3166",
+  "concept" : [{
+    "code" : "XB",
+    "display" : "Lemuria"
+  }]
+}
