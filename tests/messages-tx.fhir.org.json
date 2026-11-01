@@ -408,7 +408,7 @@
     "2" : "The classificationCode extension is only defined for ICD-11 MMS and ICF codings, not http://id.who.int/icd/entity"
   },
   "bugs/validate-sct-ver-response.json" : {
-    "1" : "A definition for CodeSystem 'http://snomed.info/sct' version '2017-09' could not be found, so the code cannot be validated. Valid versions: http://snomed.info/sct/11000146104/version/20260930, http://snomed.info/sct/731000124108/version/20230301, http://snomed.info/sct/731000124108/version/20240301, http://snomed.info/sct/731000124108/version/20250901, http://snomed.info/sct/827022005/version/20241216, http://snomed.info/sct/83821000000107/version/20230412, http://snomed.info/sct/900000000000207008/version/20240201, http://snomed.info/sct/900000000000207008/version/20250201 and http://snomed.info/xsct/31000003106/version/20250909"
+    "1" : "A definition for CodeSystem 'http://snomed.info/sct' version '2017-09' could not be found, so the code cannot be validated. Valid versions: http://snomed.info/sct/11000146104/version/20260930, http://snomed.info/sct/11010000107/version/20261021, http://snomed.info/sct/731000124108/version/20230301, http://snomed.info/sct/731000124108/version/20240301, http://snomed.info/sct/731000124108/version/20250901, http://snomed.info/sct/83821000000107/version/20230412, http://snomed.info/sct/900000000000207008/version/20250201, http://snomed.info/sct/900000000000207008/version/20260701 and http://snomed.info/xsct/31000003106/version/20250909"
   },
   "bugs/validate-x12-bad-response.json" : {
     "1" : "A definition for CodeSystem 'https://codesystem.x12.org/005010/1338' could not be found, so the code cannot be validated"
@@ -698,7 +698,7 @@
     "2" : "The provided code 'http://snomed.info/sct#385049006 ('Capsule')' was not found in the value set 'http://hl7.org/fhir/ValueSet/medication-form-codes|5.0.0'"
   },
   "bugs/validate-sct-parse-response.json" : {
-    "1" : "Unknown code 'freetext' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)"
+    "1" : "Unknown code 'freetext' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20260701' (International Edition)"
   },
   "case/case-coding-insensitive-code1-2-response-parameters.json" : {
     "1" : "The code 'CODE1' differs from the correct code 'code1' by case. Although the code system 'http://hl7.org/fhir/test/CodeSystem/case-insensitive|0.1.0' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
@@ -1305,7 +1305,7 @@
     "1" : "The provided code 'http://snomed.info/sct#10674711000119105' was not found in the value set '(unidentified)'"
   },
   "tx.fhir.org/snomed-validation-1-response-parameters.json" : {
-    "1" : "Unknown code '276885007000' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)"
+    "1" : "Unknown code '276885007000' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20260701' (International Edition)"
   },
   "ucum/validate-ucum-all-bad-response.json" : {
     "1" : "The provided code 'http://unitsofmeasure.org#kgXX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ucum-all'",
@@ -1639,28 +1639,28 @@
   "extension-codes/ec-3166-validate-local-referenced-wrong-display-response.json" : {
     "1" : "Wrong Display Name 'Mu' for urn:iso:std:iso:3166#XB. Valid display is 'Lemuria' (en) (for the language(s) '--')"
   },
-  "icf/ec-icf-validate-global-wrong-display-response.json" : {
+  "icf/ec/ec-icf-validate-global-wrong-display-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/sid/icf#b1100.2. Valid display is one of 2 choices: 'Moderately impaired consciousness' (en) or 'State of consciousness: MODERATE impairment' (en) (for the language(s) '--')"
   },
-  "icf/ec-icf-validate-global-wrong-display-lenient-response.json" : {
+  "icf/ec/ec-icf-validate-global-wrong-display-lenient-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/sid/icf#b1100.2. Valid display is one of 2 choices: 'Moderately impaired consciousness' (en) or 'State of consciousness: MODERATE impairment' (en) (for the language(s) '--')"
   },
-  "icf/ec-icf-validate-local-referenced-wrong-display-response.json" : {
+  "icf/ec/ec-icf-validate-local-referenced-wrong-display-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/sid/icf#s7300.183. Valid display is one of 2 choices: 'Mild impairment of both upper arms' (en) or 'Structure of upper arm: MILD impairment, both sides' (en) (for the language(s) '--')"
   },
-  "icf/ec-icf-validate-local-unreferenced-response.json" : {
+  "icf/ec/ec-icf-validate-local-unreferenced-response.json" : {
     "1" : "Wrong Display Name 'Mild impairment of both upper arms' for http://hl7.org/fhir/sid/icf#s7300.183. Valid display is 'Structure of upper arm: MILD impairment, both sides' (en) (for the language(s) '--')"
   },
-  "sct/ec-sct-validate-global-wrong-display-response.json" : {
+  "sct/ec/ec-sct-validate-global-wrong-display-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://snomed.info/sct#128241005:{363698007=181268008}. Valid display is one of 2 choices: 'Inflammation of the whole liver' (en) or '128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}' (en-US) (for the language(s) '--')"
   },
-  "sct/ec-sct-validate-global-wrong-display-lenient-response.json" : {
+  "sct/ec/ec-sct-validate-global-wrong-display-lenient-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://snomed.info/sct#128241005:{363698007=181268008}. Valid display is one of 2 choices: 'Inflammation of the whole liver' (en) or '128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}' (en-US) (for the language(s) '--')"
   },
-  "sct/ec-sct-validate-local-referenced-wrong-display-response.json" : {
+  "sct/ec/ec-sct-validate-local-referenced-wrong-display-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}. Valid display is one of 2 choices: 'Repair of a tendon of the right hand' (en) or '367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}' (en-US) (for the language(s) '--')"
   },
-  "sct/ec-sct-validate-local-unreferenced-response.json" : {
+  "sct/ec/ec-sct-validate-local-unreferenced-response.json" : {
     "1" : "Wrong Display Name 'Repair of a tendon of the right hand' for http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}. Valid display is '367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=(85562004|Hand structure|:272741003|Laterality|=24028007|Right|)}' (en-US) (for the language(s) '--')"
   },
   "global-lang-pack/glp-validate-nl-unreferenced-response.json" : {

@@ -5921,7 +5921,7 @@
   },{
     "name" : "snomed",
     "mode" : "snomed",
-    "description" : "This snomed tests are based on the testing subset in the tx-ecosystem IG github repo (see /tx-source), and extension-codes supplements that give post-coordinated expressions human displays (the ec-sct-* tests: the requests carry a global and a non-global supplement as tx-resource parameters)",
+    "description" : "This snomed tests are based on the testing subset in the tx-ecosystem IG github repo (see /tx-source)",
     "setup" : [ "sct/valueset-inactive.json", "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
     "tests" : [
       {
@@ -6608,99 +6608,106 @@
         "operation" : "translate",
         "request" : "sct/translate-loinc-system-reverse-request.json",
         "response" : "sct/translate-loinc-system-reverse-response.json"
-      },
+      }
+    ]
+  },{
+    "name" : "sct-ec",
+    "mode" : "snomed",
+    "description" : "Extension-codes supplements for the SNOMED CT test edition: a supplement gives some post-coordinated expressions human displays. In the snomed mode, and a suite of its own, since its global supplement would change the snomed suite's other tests",
+    "setup" : ["sct/ec/codesystem-ec-sct-global.json", "sct/ec/codesystem-ec-sct-local.json"],
+    "tests" : [
       {
         "name" : "ec-sct-lookup-global",
         "description" : "SNOMED CT: $lookup of a post-coordinated expression that a global extension-codes supplement gives a display: it has the supplement's display",
         "operation" : "lookup",
-        "request" : "sct/ec-sct-lookup-global-request.json",
-        "response" : "sct/ec-sct-lookup-global-response.json"
+        "request" : "sct/ec/ec-sct-lookup-global-request.json",
+        "response" : "sct/ec/ec-sct-lookup-global-response.json"
       },
       {
         "name" : "ec-sct-lookup-local-referenced",
         "description" : "$lookup of a post-coordinated expression that an extension-codes supplement that is not global gives a display, when the supplement is referenced: it has the supplement's display",
         "operation" : "lookup",
-        "request" : "sct/ec-sct-lookup-local-referenced-request.json",
-        "response" : "sct/ec-sct-lookup-local-referenced-response.json"
+        "request" : "sct/ec/ec-sct-lookup-local-referenced-request.json",
+        "response" : "sct/ec/ec-sct-lookup-local-referenced-response.json"
       },
       {
         "name" : "ec-sct-lookup-local-unreferenced",
         "description" : "The same when the supplement is not referenced: the display is the one generated from the expression",
         "operation" : "lookup",
-        "request" : "sct/ec-sct-lookup-local-unreferenced-request.json",
-        "response" : "sct/ec-sct-lookup-local-unreferenced-response.json"
+        "request" : "sct/ec/ec-sct-lookup-local-unreferenced-request.json",
+        "response" : "sct/ec/ec-sct-lookup-local-unreferenced-response.json"
       },
       {
         "name" : "ec-sct-validate-global",
         "description" : "$validate-code of a post-coordinated expression that a global extension-codes supplement gives a display, with no display: the display is the supplement's",
         "operation" : "cs-validate-code",
-        "request" : "sct/ec-sct-validate-global-request.json",
-        "response" : "sct/ec-sct-validate-global-response.json"
+        "request" : "sct/ec/ec-sct-validate-global-request.json",
+        "response" : "sct/ec/ec-sct-validate-global-response.json"
       },
       {
         "name" : "ec-sct-validate-global-display",
         "description" : "The same code with the supplement's display: valid",
         "operation" : "cs-validate-code",
-        "request" : "sct/ec-sct-validate-global-display-request.json",
-        "response" : "sct/ec-sct-validate-global-display-response.json"
+        "request" : "sct/ec/ec-sct-validate-global-display-request.json",
+        "response" : "sct/ec/ec-sct-validate-global-display-response.json"
       },
       {
         "name" : "ec-sct-validate-global-generated-display",
         "description" : "The same code with the generated display: still valid, though the supplement's display is the one returned",
         "operation" : "cs-validate-code",
-        "request" : "sct/ec-sct-validate-global-generated-display-request.json",
-        "response" : "sct/ec-sct-validate-global-generated-display-response.json"
+        "request" : "sct/ec/ec-sct-validate-global-generated-display-request.json",
+        "response" : "sct/ec/ec-sct-validate-global-generated-display-response.json"
       },
       {
         "name" : "ec-sct-validate-global-wrong-display",
         "description" : "The same code with a different display: an error, as for a display the code system gives",
         "operation" : "cs-validate-code",
         "lenient-display" : false,
-        "request" : "sct/ec-sct-validate-global-wrong-display-request.json",
-        "response" : "sct/ec-sct-validate-global-wrong-display-response.json"
+        "request" : "sct/ec/ec-sct-validate-global-wrong-display-request.json",
+        "response" : "sct/ec/ec-sct-validate-global-wrong-display-response.json"
       },
       {
         "name" : "ec-sct-validate-global-wrong-display-lenient",
         "description" : "The same, with lenient-display-validation: a warning",
         "operation" : "cs-validate-code",
         "lenient-display" : true,
-        "request" : "sct/ec-sct-validate-global-wrong-display-request.json",
-        "response" : "sct/ec-sct-validate-global-wrong-display-lenient-response.json"
+        "request" : "sct/ec/ec-sct-validate-global-wrong-display-request.json",
+        "response" : "sct/ec/ec-sct-validate-global-wrong-display-lenient-response.json"
       },
       {
         "name" : "ec-sct-validate-local-referenced",
         "description" : "$validate-code of a post-coordinated expression that a referenced extension-codes supplement (not global) gives a display, with no display: the display is the supplement's",
         "operation" : "cs-validate-code",
-        "request" : "sct/ec-sct-validate-local-referenced-request.json",
-        "response" : "sct/ec-sct-validate-local-referenced-response.json"
+        "request" : "sct/ec/ec-sct-validate-local-referenced-request.json",
+        "response" : "sct/ec/ec-sct-validate-local-referenced-response.json"
       },
       {
         "name" : "ec-sct-validate-local-referenced-wrong-display",
         "description" : "The same code with a different display: valid, with a warning",
         "operation" : "cs-validate-code",
-        "request" : "sct/ec-sct-validate-local-referenced-wrong-display-request.json",
-        "response" : "sct/ec-sct-validate-local-referenced-wrong-display-response.json"
+        "request" : "sct/ec/ec-sct-validate-local-referenced-wrong-display-request.json",
+        "response" : "sct/ec/ec-sct-validate-local-referenced-wrong-display-response.json"
       },
       {
         "name" : "ec-sct-validate-local-unreferenced",
         "description" : "The same code with the supplement's display, when the supplement is not referenced: the supplement is not used, so its display is not a display of the code",
         "operation" : "cs-validate-code",
-        "request" : "sct/ec-sct-validate-local-unreferenced-request.json",
-        "response" : "sct/ec-sct-validate-local-unreferenced-response.json"
+        "request" : "sct/ec/ec-sct-validate-local-unreferenced-request.json",
+        "response" : "sct/ec/ec-sct-validate-local-unreferenced-response.json"
       },
       {
         "name" : "ec-sct-expand",
         "description" : "$expand of a value set that lists post-coordinated expressions without displays: those the global supplement gives displays get them, the others get their generated displays",
         "operation" : "expand",
-        "request" : "sct/ec-sct-expand-request.json",
-        "response" : "sct/ec-sct-expand-response.json"
+        "request" : "sct/ec/ec-sct-expand-request.json",
+        "response" : "sct/ec/ec-sct-expand-response.json"
       },
       {
         "name" : "ec-sct-expand-referenced",
         "description" : "The same, with the supplement that is not global referenced: all four get the supplements' displays",
         "operation" : "expand",
-        "request" : "sct/ec-sct-expand-referenced-request.json",
-        "response" : "sct/ec-sct-expand-referenced-response.json"
+        "request" : "sct/ec/ec-sct-expand-referenced-request.json",
+        "response" : "sct/ec/ec-sct-expand-referenced-response.json"
       }
     ]
   },{
@@ -11245,7 +11252,7 @@
   {
     "name" : "icf",
     "mode" : "icf",
-    "description" : "Tests for ICF (2001a) qualifiers: the .XYZ grammar (extent, nature, localization; 8 = not specified), the displays it generates, enumerated value sets with qualified codes, and value set filters that require or forbid qualifiers, and extension-codes supplements that give qualified codes human displays (the ec-icf-* tests: the requests carry a global and a non-global supplement as tx-resource parameters)",
+    "description" : "Tests for ICF (2001a) qualifiers: the .XYZ grammar (extent, nature, localization; 8 = not specified), the displays it generates, enumerated value sets with qualified codes, and value set filters that require or forbid qualifiers",
     "setup" : [ "icf/valueset-icf-enumerated.json", "icf/valueset-icf-body-functions.json", "icf/valueset-icf-extent-required.json", "icf/valueset-icf-structure-full.json", "icf/valueset-icf-no-localization.json", "icf/valueset-icf-capacity-required.json", "icf/valueset-icf-facilitators.json", "icf/valueset-icf-no-qualifiers.json" ],
     "tests" : [
       {
@@ -11737,99 +11744,106 @@
         "operation" : "expand",
         "request" : "icf/icf-expand-enumerated-request-parameters.json",
         "response" : "icf/icf-expand-enumerated-response-valueSet.json"
-      },
+      }
+    ]
+  },{
+    "name" : "icf-ec",
+    "mode" : "icf",
+    "description" : "Extension-codes supplements for ICF (2001a), whose qualified (post-coordinated) codes are a grammar: a supplement gives some of them human displays. In the icf mode, and a suite of its own, since its global supplement would change the icf suite's other tests",
+    "setup" : ["icf/ec/codesystem-ec-icf-global.json", "icf/ec/codesystem-ec-icf-local.json"],
+    "tests" : [
       {
         "name" : "ec-icf-lookup-global",
         "description" : "ICF: $lookup of a qualified (post-coordinated) code that a global extension-codes supplement gives a display: it has the supplement's display",
         "operation" : "lookup",
-        "request" : "icf/ec-icf-lookup-global-request.json",
-        "response" : "icf/ec-icf-lookup-global-response.json"
+        "request" : "icf/ec/ec-icf-lookup-global-request.json",
+        "response" : "icf/ec/ec-icf-lookup-global-response.json"
       },
       {
         "name" : "ec-icf-lookup-local-referenced",
         "description" : "$lookup of a qualified code that an extension-codes supplement that is not global gives a display, when the supplement is referenced: it has the supplement's display",
         "operation" : "lookup",
-        "request" : "icf/ec-icf-lookup-local-referenced-request.json",
-        "response" : "icf/ec-icf-lookup-local-referenced-response.json"
+        "request" : "icf/ec/ec-icf-lookup-local-referenced-request.json",
+        "response" : "icf/ec/ec-icf-lookup-local-referenced-response.json"
       },
       {
         "name" : "ec-icf-lookup-local-unreferenced",
         "description" : "The same when the supplement is not referenced: the display is the one generated from the category and qualifiers",
         "operation" : "lookup",
-        "request" : "icf/ec-icf-lookup-local-unreferenced-request.json",
-        "response" : "icf/ec-icf-lookup-local-unreferenced-response.json"
+        "request" : "icf/ec/ec-icf-lookup-local-unreferenced-request.json",
+        "response" : "icf/ec/ec-icf-lookup-local-unreferenced-response.json"
       },
       {
         "name" : "ec-icf-validate-global",
         "description" : "$validate-code of a qualified code that a global extension-codes supplement gives a display, with no display: the display is the supplement's",
         "operation" : "cs-validate-code",
-        "request" : "icf/ec-icf-validate-global-request.json",
-        "response" : "icf/ec-icf-validate-global-response.json"
+        "request" : "icf/ec/ec-icf-validate-global-request.json",
+        "response" : "icf/ec/ec-icf-validate-global-response.json"
       },
       {
         "name" : "ec-icf-validate-global-display",
         "description" : "The same code with the supplement's display: valid",
         "operation" : "cs-validate-code",
-        "request" : "icf/ec-icf-validate-global-display-request.json",
-        "response" : "icf/ec-icf-validate-global-display-response.json"
+        "request" : "icf/ec/ec-icf-validate-global-display-request.json",
+        "response" : "icf/ec/ec-icf-validate-global-display-response.json"
       },
       {
         "name" : "ec-icf-validate-global-generated-display",
         "description" : "The same code with the generated display: still valid, though the supplement's display is the one returned",
         "operation" : "cs-validate-code",
-        "request" : "icf/ec-icf-validate-global-generated-display-request.json",
-        "response" : "icf/ec-icf-validate-global-generated-display-response.json"
+        "request" : "icf/ec/ec-icf-validate-global-generated-display-request.json",
+        "response" : "icf/ec/ec-icf-validate-global-generated-display-response.json"
       },
       {
         "name" : "ec-icf-validate-global-wrong-display",
         "description" : "The same code with a different display: an error, as for a display the code system gives",
         "operation" : "cs-validate-code",
         "lenient-display" : false,
-        "request" : "icf/ec-icf-validate-global-wrong-display-request.json",
-        "response" : "icf/ec-icf-validate-global-wrong-display-response.json"
+        "request" : "icf/ec/ec-icf-validate-global-wrong-display-request.json",
+        "response" : "icf/ec/ec-icf-validate-global-wrong-display-response.json"
       },
       {
         "name" : "ec-icf-validate-global-wrong-display-lenient",
         "description" : "The same, with lenient-display-validation: a warning",
         "operation" : "cs-validate-code",
         "lenient-display" : true,
-        "request" : "icf/ec-icf-validate-global-wrong-display-request.json",
-        "response" : "icf/ec-icf-validate-global-wrong-display-lenient-response.json"
+        "request" : "icf/ec/ec-icf-validate-global-wrong-display-request.json",
+        "response" : "icf/ec/ec-icf-validate-global-wrong-display-lenient-response.json"
       },
       {
         "name" : "ec-icf-validate-local-referenced",
         "description" : "$validate-code of a qualified code that a referenced extension-codes supplement (not global) gives a display, with no display: the display is the supplement's",
         "operation" : "cs-validate-code",
-        "request" : "icf/ec-icf-validate-local-referenced-request.json",
-        "response" : "icf/ec-icf-validate-local-referenced-response.json"
+        "request" : "icf/ec/ec-icf-validate-local-referenced-request.json",
+        "response" : "icf/ec/ec-icf-validate-local-referenced-response.json"
       },
       {
         "name" : "ec-icf-validate-local-referenced-wrong-display",
         "description" : "The same code with a different display: valid, with a warning",
         "operation" : "cs-validate-code",
-        "request" : "icf/ec-icf-validate-local-referenced-wrong-display-request.json",
-        "response" : "icf/ec-icf-validate-local-referenced-wrong-display-response.json"
+        "request" : "icf/ec/ec-icf-validate-local-referenced-wrong-display-request.json",
+        "response" : "icf/ec/ec-icf-validate-local-referenced-wrong-display-response.json"
       },
       {
         "name" : "ec-icf-validate-local-unreferenced",
         "description" : "The same code with the supplement's display, when the supplement is not referenced: the supplement is not used, so its display is not a display of the code",
         "operation" : "cs-validate-code",
-        "request" : "icf/ec-icf-validate-local-unreferenced-request.json",
-        "response" : "icf/ec-icf-validate-local-unreferenced-response.json"
+        "request" : "icf/ec/ec-icf-validate-local-unreferenced-request.json",
+        "response" : "icf/ec/ec-icf-validate-local-unreferenced-response.json"
       },
       {
         "name" : "ec-icf-expand",
         "description" : "$expand of a value set that lists qualified codes without displays: those the global supplement gives displays get them, the others get their generated displays",
         "operation" : "expand",
-        "request" : "icf/ec-icf-expand-request.json",
-        "response" : "icf/ec-icf-expand-response.json"
+        "request" : "icf/ec/ec-icf-expand-request.json",
+        "response" : "icf/ec/ec-icf-expand-response.json"
       },
       {
         "name" : "ec-icf-expand-referenced",
         "description" : "The same, with the supplement that is not global referenced: all four get the supplements' displays",
         "operation" : "expand",
-        "request" : "icf/ec-icf-expand-referenced-request.json",
-        "response" : "icf/ec-icf-expand-referenced-response.json"
+        "request" : "icf/ec/ec-icf-expand-referenced-request.json",
+        "response" : "icf/ec/ec-icf-expand-referenced-response.json"
       }
     ]
   }],

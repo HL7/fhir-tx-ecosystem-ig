@@ -195,8 +195,8 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
     `extension-codes-3166` for ISO 3166's user-assigned codes)*
   * For a code system whose codes include a grammar - ICF's qualified codes, or SNOMED CT's post-coordinated
     expressions - an `extension-codes` supplement can give human displays to codes the grammar makes. Its display is
-    then the code's display, as above, but the display the grammar generates stays a valid display *(the `ec-icf-*`
-    tests in the `icf` suite, and the `ec-sct-*` tests in the `snomed` suite)*
+    then the code's display, as above, but the display the grammar generates stays a valid display *(suites:
+    `icf-ec`, `sct-ec`)*
 
 
 * §Servers intended to be used as the primary server for the validator and IG publisher SHALL accept CodeSystems in the 

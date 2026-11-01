@@ -9,10 +9,10 @@
     }],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 158,
+    "total" : 162,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
     }],
     "property" : [{
       "code" : "status",
@@ -71,7 +71,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "111807001",
-      "display" : "Gonococcal endophthalmia"
+      "display" : "Gonococcal endophthalmitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -130,6 +130,21 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "15679121000119106",
+      "display" : "Left gonococcal endophthalmitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15679161000119101",
+      "display" : "Bilateral gonococcal endophthalmitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15679201000119106",
+      "display" : "Right gonococcal endophthalmitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "15693321000119100",
       "display" : "Left gonococcal keratitis"
     },
@@ -172,6 +187,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "15998991000119108",
       "display" : "Infection of left eye caused by Neisseria gonorrhoeae"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16077331000119106",
+      "display" : "Lymphadenitis caused by Neisseria gonorrhoeae"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -891,7 +911,7 @@
     {
       "system" : "http://snomed.info/sct",
       "code" : "721281003",
-      "display" : "Neonatal conjunctivitis and dacrocystitis caused by Neisseria gonorrhoeae"
+      "display" : "Neonatal conjunctivitis and dacryocystitis caused by Neisseria gonorrhoeae"
     },
     {
       "system" : "http://snomed.info/sct",

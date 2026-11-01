@@ -6,7 +6,7 @@
       "name" : "concept",
       "valueCoding" : {
         "system" : "http://snomed.info/sct",
-        "version" : "http://snomed.info/sct/900000000000207008/version/20250201",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
         "code" : "441207001",
         "display" : "Position communication aid near subject"
       }
@@ -18,7 +18,7 @@
     },
     {
       "name" : "originMap",
-      "valueCanonical" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueCanonical" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20260701"
     },
     {
       "$only$" : "version:5",
@@ -28,7 +28,7 @@
     {
       "$only$" : "version:4",
       "name" : "source",
-      "valueCanonical" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueCanonical" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20260701"
     },
     {
       "name" : "sourceConcept",
@@ -44,10 +44,10 @@
   },
   {
     "name" : "used-conceptmap",
-    "valueUri" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20250201"
+    "valueUri" : "http://snomed.info/sct?fhir_cm=900000000000526001|http://snomed.info/sct/900000000000207008/version/20260701"
   },
   {
     "name" : "used-system",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
   }]
 }

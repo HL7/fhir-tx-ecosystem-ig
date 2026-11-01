@@ -1,0 +1,32 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ec-sct-global",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "extension-codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+    "valueBoolean" : true
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-global",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesSctGlobal",
+  "title" : "Extension Codes - SNOMED CT - Global",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-01",
+  "publisher" : "FHIR Project",
+  "description" : "A global extension-codes supplement for the SNOMED CT test edition: it gives human displays to two post-coordinated expressions",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909",
+  "concept" : [{
+    "code" : "128241005:{363698007=181268008}",
+    "display" : "Inflammation of the whole liver"
+  },
+  {
+    "code" : "373873005:{1142135004=#500}",
+    "display" : "Product with a strength numerator of 500"
+  }]
+}

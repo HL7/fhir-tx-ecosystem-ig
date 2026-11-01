@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "$external:1:276885007000|http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201$"
+          "text" : "$external:1:276885007000|http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701$"
         },
         "expression" : ["code"]
       }]
@@ -29,7 +29,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "$external:1:276885007000|http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201$"
+    "valueString" : "$external:1:276885007000|http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701$"
   },
   {
     "name" : "result",

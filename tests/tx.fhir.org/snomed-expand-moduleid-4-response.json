@@ -12,7 +12,7 @@
     "total" : 1,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",

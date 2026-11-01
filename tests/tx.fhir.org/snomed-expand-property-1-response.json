@@ -9,10 +9,10 @@
     }],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 96,
+    "total" : 113,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -23,6 +23,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "10674991000119104",
       "display" : "Intermittent allergic asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10675311000119105",
+      "display" : "Acute exacerbation of severe persistent allergic asthma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -41,6 +46,16 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "10675591000119109",
+      "display" : "Severe persistent allergic asthma controlled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10675671000119107",
+      "display" : "Severe persistent allergic asthma uncontrolled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "10675751000119107",
       "display" : "Severe uncontrolled persistent asthma"
     },
@@ -56,8 +71,33 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "10676031000119106",
+      "display" : "Mild persistent allergic asthma controlled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10676071000119109",
+      "display" : "Mild persistent asthma controlled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10676151000119101",
+      "display" : "Mild persistent allergic asthma uncontrolled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10676191000119106",
+      "display" : "Mild persistent asthma uncontrolled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "10676271000119104",
       "display" : "Acute exacerbation of moderate persistent allergic asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10676351000119103",
+      "display" : "Moderate persistent asthma controlled"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -71,8 +111,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "10692681000119108",
-      "display" : "Aspirin exacerbated respiratory disease"
+      "code" : "10676551000119105",
+      "display" : "Moderate persistent allergic asthma controlled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10676631000119100",
+      "display" : "Moderate persistent allergic asthma uncontrolled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10676711000119103",
+      "display" : "Moderate persistent asthma uncontrolled"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -103,6 +153,41 @@
       "system" : "http://snomed.info/sct",
       "code" : "1290026000",
       "display" : "Uncontrolled asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388269000",
+      "display" : "Severe asthma with fungal sensitization"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388270004",
+      "display" : "Neutrophilic asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388280000",
+      "display" : "Asthma with persistent airflow limitation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388281001",
+      "display" : "Paucigranulocytic asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388311009",
+      "display" : "Sensitizer induced occupational asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388456001",
+      "display" : "Irritant induced occupational asthma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1388496004",
+      "display" : "Difficult-to-treat asthma"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -251,11 +336,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "407674008",
-      "display" : "Aspirin-induced asthma"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "409663006",
       "display" : "Cough variant asthma"
     },
@@ -343,6 +423,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "63088003",
       "display" : "Allergic asthma without status asthmaticus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "641000119106",
+      "display" : "Intermittent asthma well controlled"
     },
     {
       "system" : "http://snomed.info/sct",

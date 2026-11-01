@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "status" : "active",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "concept" : [{
+            "code" : "128241005:{363698007=181268008}"
+          },
+          {
+            "code" : "373873005:{1142135004=#500}"
+          },
+          {
+            "code" : "367430006:{405813007=(85562004:272741003=24028007)}"
+          },
+          {
+            "code" : "373873005:1142139005=#2,{1142135004=#500}"
+          }]
+        }]
+      }
+    }
+  },
+  {
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-sct-local"
+  }]
+}

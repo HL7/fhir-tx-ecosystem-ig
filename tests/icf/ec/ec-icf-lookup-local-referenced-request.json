@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/icf"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2001a"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "s7300.183"
+  },
+  {
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/ec-icf-local"
+  }]
+}

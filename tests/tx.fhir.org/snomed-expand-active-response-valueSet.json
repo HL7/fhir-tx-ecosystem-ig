@@ -9,15 +9,20 @@
     }],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 6,
+    "total" : 8,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "10750161000119106",
       "display" : "Cholestasis of pregnancy complicating childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10759111000119102",
+      "display" : "Viral hepatitis in mother complicating childbirth"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -31,13 +36,18 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "235888006",
-      "display" : "Cholestasis of pregnancy"
+      "code" : "16623921000119105",
+      "display" : "Viral hepatitis C in mother during pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "716379000",
-      "display" : "Acute fatty liver of pregnancy"
+      "code" : "16859701000119109",
+      "display" : "Chronic hepatitis B during pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235888006",
+      "display" : "Cholestasis of pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",

@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "128241005:{363698007=181268008}"
+  },
+  {
+    "name" : "display",
+    "valueString" : "128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}"
+  }]
+}
