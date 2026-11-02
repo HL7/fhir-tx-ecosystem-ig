@@ -6704,6 +6704,30 @@
         "request" : "sct/validate-code-implied-refset-map-request.json",
         "response" : "sct/validate-code-implied-refset-map-response.json"
       },{
+        "name" : "snomed-expand-implicit-ecl",
+        "description" : "The implicit value set ?fhir_vs=ecl/ (the ECL URL-encoded, as the SNOMED CT on FHIR page has it): << 16763008 |Hemorrhage of liver| gives the same codes as an inline is-a compose",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-ecl-request.json",
+        "response" : "sct/expand-implicit-ecl-response.json"
+      },{
+        "name" : "snomed-expand-implicit-edition",
+        "description" : "The implicit value set named by edition, with no version and no system-version: the latest version of the test edition the server has, here its only one",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-edition-request.json",
+        "response" : "sct/expand-implicit-edition-response.json"
+      },{
+        "name" : "snomed-expand-implicit-version",
+        "description" : "The implicit value set named by edition and version: that version of the test edition",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-version-request.json",
+        "response" : "sct/expand-implicit-version-response.json"
+      },{
+        "name" : "snomed-expand-implicit-system-version",
+        "description" : "The generic implicit value set form (http://snomed.info/sct?fhir_vs=...) is drawn from the edition system-version asks for: 1000071000003108 is a test edition extension concept, which a server's default edition does not have",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-system-version-request.json",
+        "response" : "sct/expand-implicit-system-version-response.json"
+      },{
         "name" : "snomed-expand-isa-inactive-isa",
         "description" : "Inactive relationships are ignored: an is-a filter on Hepatorenal syndrome does not include 50325005, whose is-a row to it is inactive",
         "operation" : "expand",

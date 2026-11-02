@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://snomed.info/sct?fhir_vs=isa/1000071000003108"
+  },{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

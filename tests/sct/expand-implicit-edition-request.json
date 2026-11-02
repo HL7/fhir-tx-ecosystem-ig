@@ -1,0 +1,7 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://snomed.info/sct/31000003106?fhir_vs=isa/16763008"
+  }]
+}
