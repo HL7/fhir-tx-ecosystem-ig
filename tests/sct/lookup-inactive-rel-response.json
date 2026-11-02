@@ -1,0 +1,100 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "50325005"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Alcoholic fatty liver"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "363698007"
+    },
+    {
+      "name" : "code-display",
+      "valueString" : "Finding site"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Liver structure"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "10200004"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2002-01-31"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "SNOMED CT core"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "900000000000207008"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Steatotic liver disease"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "197321007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Alcoholic liver damage"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "41309000"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

@@ -246,11 +246,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "233683003",
-      "display" : "Hay fever with asthma"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "233687002",
       "display" : "Colophony asthma"
     },

@@ -1237,10 +1237,33 @@
       },
       {
         "name" : "ec-expand-all",
-        "description" : "$expand of all of the code system: the codes defined by extension-codes supplements are not included, only the code system's own",
+        "description" : "$expand of all of the code system: the codes defined by extension-codes supplements are not included, only the code system's own - and since the code system has reserved code spaces, whose codes $validate-code accepts but the expansion can't list, the expansion is marked unclosed (valueset-unclosed)",
         "operation" : "expand",
         "request" : "extension-codes/ec-expand-all-request.json",
         "response" : "extension-codes/ec-expand-all-response.json"
+      },
+      {
+        "name" : "ec-validate-global-referenced-wrong-display",
+        "description" : "A global supplement that is also referenced (useSupplement) is used once: a wrong display for a code the global supplement gives a second display lists each valid display once",
+        "operation" : "cs-validate-code",
+        "lenient-display" : false,
+        "request" : "extension-codes/ec-validate-global-referenced-wrong-display-request.json",
+        "response" : "extension-codes/ec-validate-global-referenced-wrong-display-response.json"
+      },
+      {
+        "name" : "ec-validate-global-referenced-wrong-display-lenient",
+        "description" : "The same, with lenient-display-validation: a warning",
+        "operation" : "cs-validate-code",
+        "lenient-display" : true,
+        "request" : "extension-codes/ec-validate-global-referenced-wrong-display-request.json",
+        "response" : "extension-codes/ec-validate-global-referenced-wrong-display-lenient-response.json"
+      },
+      {
+        "name" : "ec-lookup-global-referenced",
+        "description" : "$lookup of the same code, with the global supplement also referenced: the supplement's designation is there once, and it is a used-supplement once",
+        "operation" : "lookup",
+        "request" : "extension-codes/ec-lookup-global-referenced-request.json",
+        "response" : "extension-codes/ec-lookup-global-referenced-response.json"
       }
     ]
   },{
@@ -1296,7 +1319,7 @@
     "name" : "extensions",
     "mode" : "general",
     "description" : "Testing proper handling of extensions, which depends on the extension",
-    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json"],
+    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json", "extensions/codesystem-supplement-hierarchy.json", "extensions/codesystem-supplement-hierarchy-de.json", "extensions/codesystem-supplement-hierarchy-nl.json", "extensions/codesystem-supplement-hierarchy-nolang.json"],
     "extensions-handled-doco": [
       "http://hl7.org/fhir/StructureDefinition/valueset-supplement", "http://hl7.org/fhir/StructureDefinition/valueset-deprecated", "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
       "http://hl7.org/fhir/StructureDefinition/coding-sctdescid", "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder", "http://hl7.org/fhir/StructureDefinition/valueset-label",
@@ -1393,6 +1416,48 @@
         "operation" : "cs-validate-code",
         "request" : "extensions/validate-code-inactive-request-parameters.json",
         "response" : "extensions/validate-code-inactive-response-outcome.json"
+      },
+      {
+        "name" : "lookup-supplements-hierarchy-child",
+        "description" : "$lookup of a child concept with two supplements referenced: each supplement's designation is there once",
+        "operation" : "lookup",
+        "request" : "extensions/lookup-supplements-hierarchy-child-request-parameters.json",
+        "response" : "extensions/lookup-supplements-hierarchy-child-response-parameters.json"
+      },
+      {
+        "name" : "lookup-supplements-hierarchy-grandchild",
+        "description" : "The same for a grandchild concept",
+        "operation" : "lookup",
+        "request" : "extensions/lookup-supplements-hierarchy-grandchild-request-parameters.json",
+        "response" : "extensions/lookup-supplements-hierarchy-grandchild-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplements-grandchild-wrong-display",
+        "description" : "$validate-code of the grandchild with a wrong display, displayLanguage de and two supplements referenced: the valid German display is listed once",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplements-grandchild-wrong-display-request-parameters.json",
+        "response" : "extensions/validate-supplements-grandchild-wrong-display-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-nolang-display",
+        "description" : "A supplement with no language (CodeSystem.language): its display is a correct display in any language - here with displayLanguage de",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplement-nolang-display-request-parameters.json",
+        "response" : "extensions/validate-supplement-nolang-display-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-nolang-designation",
+        "description" : "The same for a designation with no language in a supplement with no language",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplement-nolang-designation-request-parameters.json",
+        "response" : "extensions/validate-supplement-nolang-designation-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-nolang-other-lang",
+        "description" : "A designation that does have a language (fr), in the same supplement, is only a display in that language: with displayLanguage de it is a wrong display",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplement-nolang-other-lang-request-parameters.json",
+        "response" : "extensions/validate-supplement-nolang-other-lang-response-parameters.json"
       }
     ]
   },{
@@ -6608,6 +6673,36 @@
         "operation" : "translate",
         "request" : "sct/translate-loinc-system-reverse-request.json",
         "response" : "sct/translate-loinc-system-reverse-response.json"
+      },{
+        "name" : "snomed-expand-property-inactive-rel",
+        "description" : "Inactive relationships are ignored: a property filter (363698007 = Kidney structure) does not match 50325005, whose only Kidney finding site row is inactive",
+        "operation" : "expand",
+        "request" : "sct/expand-property-inactive-rel-request.json",
+        "response" : "sct/expand-property-inactive-rel-response.json"
+      },{
+        "name" : "snomed-lookup-inactive-rel",
+        "description" : "Inactive relationships are ignored: $lookup of 50325005 lists neither the inactive finding site (Kidney structure) nor the inactive parent (Hepatorenal syndrome)",
+        "operation" : "lookup",
+        "request" : "sct/lookup-inactive-rel-request.json",
+        "response" : "sct/lookup-inactive-rel-response.json"
+      },{
+        "name" : "snomed-lookup-inactive-isa-child",
+        "description" : "Inactive relationships are ignored: $lookup of Hepatorenal syndrome does not list 50325005, whose is-a row to it is inactive, as a child",
+        "operation" : "lookup",
+        "request" : "sct/lookup-inactive-isa-child-request.json",
+        "response" : "sct/lookup-inactive-isa-child-response.json"
+      },{
+        "name" : "snomed-expand-isa-inactive-isa",
+        "description" : "Inactive relationships are ignored: an is-a filter on Hepatorenal syndrome does not include 50325005, whose is-a row to it is inactive",
+        "operation" : "expand",
+        "request" : "sct/expand-isa-inactive-isa-request.json",
+        "response" : "sct/expand-isa-inactive-isa-response.json"
+      },{
+        "name" : "subsumes-inactive-isa",
+        "description" : "Inactive relationships are ignored: Hepatorenal syndrome does not subsume 50325005, whose is-a row to it is inactive",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-inactive-isa-request.json",
+        "response" : "sct/subsumes-inactive-isa-response.json"
       }
     ]
   },{
@@ -8219,6 +8314,18 @@
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-dotted-request.json",
         "response" : "sct/ecl/expand-ecl-dotted-response.json"
+      },{
+        "name" : "snomed-expand-ecl-refinement-inactive-rel",
+        "description" : "Inactive relationships are ignored: a refinement (363698007 = Kidney structure) does not match 50325005, whose only Kidney finding site row is inactive",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-inactive-rel-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-inactive-rel-response.json"
+      },{
+        "name" : "snomed-expand-ecl-descendants-inactive-isa",
+        "description" : "Inactive relationships are ignored: << Hepatorenal syndrome does not include 50325005, whose is-a row to it is inactive",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-descendants-inactive-isa-request.json",
+        "response" : "sct/ecl/expand-ecl-descendants-inactive-isa-response.json"
       }
     ]
   },{

@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-property-inactive-rel",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-property-inactive-rel",
+      "version" : "5.0.0",
+      "title" : "SCT finding site Kidney (inactive relationships)",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "Concepts with a finding site of Kidney structure. 50325005 |Alcoholic fatty liver| has an inactive finding site row to Kidney structure in the test edition, so it is not included",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "363698007", "op" : "=", "value" : "64033007" }]
+        }]
+      }
+    }
+  }]
+}

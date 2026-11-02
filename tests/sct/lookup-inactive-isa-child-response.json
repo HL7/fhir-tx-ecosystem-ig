@@ -1,0 +1,111 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "51292008"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Hepatorenal syndrome"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hepatorenal syndrome with acute kidney injury"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1285574007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hepatorenal syndrome following delivery"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "22846003"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Hepatorenal syndrome due to a procedure"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "31005002"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Familial arthrogryposis-cholestatic hepatorenal syndrome"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "62216007"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "effectiveTime"
+    },
+    {
+      "name" : "value",
+      "valueDateTime" : "2002-01-31"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "module"
+    },
+    {
+      "name" : "description",
+      "valueString" : "SNOMED CT core"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "900000000000207008"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}
