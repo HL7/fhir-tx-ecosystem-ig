@@ -5598,10 +5598,18 @@
       },
       {
         "name" : "loinc-expand-all-limited",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 257267. See loinc-expand-all-limited-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-all-limited-request-parameters.json",
         "response" : "loinc/loinc-expand-all-limited-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-all-limited-total",
+        "description" : "The size of the expansion: count=0, and total must be 257267. Which codes a page of it holds is up to the server (see loinc-expand-all-limited)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-all-limited-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-all-limited-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-enum-bad",
@@ -5612,10 +5620,18 @@
       },
       {
         "name" : "loinc-expand-status",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 2224. See loinc-expand-status-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-status-request-parameters.json",
         "response" : "loinc/loinc-expand-status-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-status-total",
+        "description" : "The size of the expansion: count=0, and total must be 2224. Which codes a page of it holds is up to the server (see loinc-expand-status)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-status-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-status-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-parent",
@@ -5626,10 +5642,18 @@
       },
       {
         "name" : "loinc-expand-class-regex",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 6332. See loinc-expand-class-regex-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-regex-request-parameters.json",
         "response" : "loinc/loinc-expand-class-regex-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-class-regex-total",
+        "description" : "The size of the expansion: count=0, and total must be 6332. Which codes a page of it holds is up to the server (see loinc-expand-class-regex)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-regex-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-regex-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-prop-component",
@@ -5661,10 +5685,18 @@
       },
       {
         "name" : "loinc-expand-prop-order-obs",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 56304. See loinc-expand-prop-order-obs-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-order-obs-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-order-obs-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-order-obs-total",
+        "description" : "The size of the expansion: count=0, and total must be 56304. Which codes a page of it holds is up to the server (see loinc-expand-prop-order-obs)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-order-obs-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-order-obs-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-concept-is-a",
@@ -5682,24 +5714,48 @@
       },
       {
         "name" : "loinc-expand-copyright",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 7355. See loinc-expand-copyright-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-copyright-request-parameters.json",
         "response" : "loinc/loinc-expand-copyright-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-copyright-total",
+        "description" : "The size of the expansion: count=0, and total must be 7355. Which codes a page of it holds is up to the server (see loinc-expand-copyright)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-copyright-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-copyright-total-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-scale-type",
-        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test",
+        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 12569. See loinc-expand-scale-type-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-scale-type-request-parameters.json",
         "response" : "loinc/loinc-expand-scale-type-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-scale-type-total",
+        "description" : "The size of the expansion: count=0, and total must be 12569. Which codes a page of it holds is up to the server (see loinc-expand-scale-type)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-scale-type-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-scale-type-total-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-scale-type-part",
-        "description" : "SCALE_TYP filtered by the Part code for the scale (LP32888-7 Doc), the correct value for the LOINC axes. Same codes as loinc-expand-scale-type",
+        "description" : "SCALE_TYP filtered by the Part code for the scale (LP32888-7 Doc), the correct value for the LOINC axes. Same codes as loinc-expand-scale-type. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 12569. See loinc-expand-scale-type-part-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-scale-type-part-request-parameters.json",
         "response" : "loinc/loinc-expand-scale-type-part-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-scale-type-part-total",
+        "description" : "The size of the expansion: count=0, and total must be 12569. Which codes a page of it holds is up to the server (see loinc-expand-scale-type-part)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-scale-type-part-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-scale-type-part-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-enum-good",
@@ -5787,17 +5843,33 @@
       },
       {
         "name" : "loinc-expand-class-scale",
-        "description" : "CLASS = PULM (the class name, which is the correct value: CLASS is a string property) together with SCALE_TYP = LP7753-9 (the Part code for Qn, the correct value for an axis). This is how the MII lung function value set mii-vs-lufu-lnc-observable is written",
+        "description" : "CLASS = PULM (the class name, which is the correct value: CLASS is a string property) together with SCALE_TYP = LP7753-9 (the Part code for Qn, the correct value for an axis). This is how the MII lung function value set mii-vs-lufu-lnc-observable is written. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 825. See loinc-expand-class-scale-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-scale-request-parameters.json",
         "response" : "loinc/loinc-expand-class-scale-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-class-scale-total",
+        "description" : "The size of the expansion: count=0, and total must be 825. Which codes a page of it holds is up to the server (see loinc-expand-class-scale)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-scale-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-scale-total-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-class-part-scale",
-        "description" : "CLASS = LP7840-4 (the Part code for the class PULM) together with SCALE_TYP = LP7753-9. The class name is the correct value for CLASS, which is a string property (see loinc-expand-class-scale), but filtering CLASS by the Part code is so widespread in existing value sets (e.g. the MII lung function value set mii-vs-lufu-lnc-observable) that all servers are required to support it. Same codes as loinc-expand-class-scale",
+        "description" : "CLASS = LP7840-4 (the Part code for the class PULM) together with SCALE_TYP = LP7753-9. The class name is the correct value for CLASS, which is a string property (see loinc-expand-class-scale), but filtering CLASS by the Part code is so widespread in existing value sets (e.g. the MII lung function value set mii-vs-lufu-lnc-observable) that all servers are required to support it. Same codes as loinc-expand-class-scale. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 825. See loinc-expand-class-part-scale-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-part-scale-request-parameters.json",
         "response" : "loinc/loinc-expand-class-part-scale-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-class-part-scale-total",
+        "description" : "The size of the expansion: count=0, and total must be 825. Which codes a page of it holds is up to the server (see loinc-expand-class-part-scale)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-part-scale-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-part-scale-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-class-scale-good",
@@ -5871,10 +5943,18 @@
       },
       {
         "name" : "loinc-expand-filter-dockind-request-parameters",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 3730. See loinc-expand-prop-dockind-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-dockind-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-dockind-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-dockind-total",
+        "description" : "The size of the expansion: count=0, and total must be 3730. Which codes a page of it holds is up to the server (see loinc-expand-filter-dockind-request-parameters)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-dockind-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-dockind-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-dockind-type-good",
@@ -5892,10 +5972,18 @@
       },
       {
         "name" : "loinc-expand-filter-no-method",
-        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true",
+        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 50886. See loinc-expand-filter-no-method-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-no-method-request-parameters.json",
         "response" : "loinc/loinc-expand-no-method-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-filter-no-method-total",
+        "description" : "The size of the expansion: count=0, and total must be 50886. Which codes a page of it holds is up to the server (see loinc-expand-filter-no-method)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-no-method-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-no-method-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-no-method-good",

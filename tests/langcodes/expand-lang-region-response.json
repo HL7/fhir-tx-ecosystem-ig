@@ -14,7 +14,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "too-costly"
       }],
-      "text" : "The value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us' expansion has too many codes to produce (>3000)"
+      "text" : "$external:1$"
     }
   }]
 }

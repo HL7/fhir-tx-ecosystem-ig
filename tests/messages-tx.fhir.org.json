@@ -1721,5 +1721,20 @@
   },
   "extensions/validate-supplement-nolang-other-lang-response-parameters.json" : {
     "1" : "Wrong Display Name 'Enfant' for http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#child. Valid display is one of 2 choices: 'Kid' or 'Youngster' (for the language(s) 'de')"
+  },
+  "loinc/loinc-expand-all-response-outcome.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0' expansion has too many codes to produce (>1000)"
+  },
+  "sct/expand-too-big-response.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures' expansion has too many codes to produce (>1000)"
+  },
+  "tx.fhir.org/snomed-expand-inactive2-response-valueSet.json" : {
+    "1" : "The value set '??' expansion has too many codes to produce (>1000)"
+  },
+  "langcodes/expand-lang-region-response.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us' expansion has too many codes to produce (>3000)"
+  },
+  "bugs/expand-cpt-response.json" : {
+    "1" : "The value set 'undefined' expansion has too many codes to produce (>3000)"
   }
 }

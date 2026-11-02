@@ -30,10 +30,6 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
-    }],
-    "property" : [{
-      "code" : "status",
-      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }
