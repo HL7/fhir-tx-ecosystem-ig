@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-is-not-a",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-is-not-a",
+      "version" : "5.0.0",
+      "title" : "SCT Hemorrhage of liver, not traumatic",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "is-not-a (R5): 16763008 |Hemorrhage of liver| and its descendants, except 78171005 |Traumatic hemorrhage of liver| and its descendants",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "concept", "op" : "is-a", "value" : "16763008" },
+            { "property" : "concept", "op" : "is-not-a", "value" : "78171005" }]
+        }]
+      }
+    }
+  }]
+}

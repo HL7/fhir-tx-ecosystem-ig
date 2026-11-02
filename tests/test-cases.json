@@ -6727,6 +6727,18 @@
         "operation" : "validate-code",
         "request" : "sct/validate-code-code-in-request.json",
         "response" : "sct/validate-code-code-in-response.json"
+      },{
+        "name" : "snomed-expand-descendent-leaf",
+        "description" : "descendent-leaf (R5): only the descendants of Hemorrhage of liver that have no children; neither the concept itself nor the descendants with children",
+        "operation" : "expand",
+        "request" : "sct/expand-descendent-leaf-request.json",
+        "response" : "sct/expand-descendent-leaf-response.json"
+      },{
+        "name" : "snomed-expand-is-not-a",
+        "description" : "is-not-a (R5): is-a Hemorrhage of liver, less Traumatic hemorrhage of liver and its descendants",
+        "operation" : "expand",
+        "request" : "sct/expand-is-not-a-request.json",
+        "response" : "sct/expand-is-not-a-response.json"
       }
     ]
   },{
