@@ -32,7 +32,7 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 2284,
+    "total" : 2286,
     "parameter" : [{
       "name" : "count",
       "valueInteger" : 3000
@@ -109,6 +109,16 @@
       "system" : "http://snomed.info/sct",
       "code" : "1000721000003107",
       "display" : "Has test potency value"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1000891000003103",
+      "display" : "Test edition simple map reference set"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1000901000003102",
+      "display" : "Test edition extended map reference set"
     },
     {
       "system" : "http://snomed.info/sct",

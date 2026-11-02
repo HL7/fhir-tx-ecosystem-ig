@@ -6698,6 +6698,12 @@
         "request" : "sct/lookup-concrete-request.json",
         "response" : "sct/lookup-concrete-response.json"
       },{
+        "name" : "snomed-validate-implied-refset-map",
+        "description" : "The implicit value set ?fhir_vs=refset/ can name a map reference set: a concept mapped by the test edition's extended map is in it",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-implied-refset-map-request.json",
+        "response" : "sct/validate-code-implied-refset-map-response.json"
+      },{
         "name" : "snomed-expand-isa-inactive-isa",
         "description" : "Inactive relationships are ignored: an is-a filter on Hepatorenal syndrome does not include 50325005, whose is-a row to it is inactive",
         "operation" : "expand",
@@ -8477,6 +8483,24 @@
         "operation" : "validate-code",
         "request" : "sct/ecl/validate-code-ecl-concrete-code-out-request.json",
         "response" : "sct/ecl/validate-code-ecl-concrete-code-out-response.json"
+      },{
+        "name" : "snomed-expand-ecl-memberOf-simple-map",
+        "description" : "Map reference sets have members: a simple map (mapTarget) with two members",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-simple-map-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-simple-map-response.json"
+      },{
+        "name" : "snomed-expand-ecl-memberOf-extended-map",
+        "description" : "Map reference sets have members: an extended map with three active rows for two concepts (one concept is mapped in two map groups) and an inactive row for a third; each member concept appears once, and the inactive row does not count",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-extended-map-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-extended-map-response.json"
+      },{
+        "name" : "snomed-expand-ecl-member-filter-map-target",
+        "description" : "A member filter on a map reference set field: the extended map rows whose mapTarget is Y92.9",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-member-filter-map-target-request.json",
+        "response" : "sct/ecl/expand-ecl-member-filter-map-target-response.json"
       }
     ]
   },{
