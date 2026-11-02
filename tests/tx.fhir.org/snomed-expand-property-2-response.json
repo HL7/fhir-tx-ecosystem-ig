@@ -9,12 +9,13 @@
     }],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 162,
+    "total" : 123,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
     }],
     "property" : [{
+		  "$optional$" : true,
       "code" : "status",
       "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
@@ -52,11 +53,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "1087061000119106",
       "display" : "Gonococcal pneumonia"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "1092501000119104",
-      "display" : "Septic shock co-occurrent with acute organ dysfunction due to Gonococcus"
     },
     {
       "system" : "http://snomed.info/sct",
