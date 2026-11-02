@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-display-regex",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-display-regex",
+      "version" : "5.0.0",
+      "title" : "SCT display regex hematoma",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "display regex: concepts with an active English description whose whole term matches .*[Hh]ematoma.* (no language is given, so the edition default, English)",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "display", "op" : "regex", "value" : ".*[Hh]ematoma.*" }]
+        }]
+      }
+    }
+  }]
+}

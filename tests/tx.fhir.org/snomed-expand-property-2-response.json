@@ -9,12 +9,13 @@
     }],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 162,
+    "total" : 123,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
     }],
     "property" : [{
+		  "$optional$" : true,
       "code" : "status",
       "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
@@ -55,11 +56,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1092501000119104",
-      "display" : "Septic shock co-occurrent with acute organ dysfunction due to Gonococcus"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1092601000119103",
       "display" : "Sepsis caused by Gonococcus"
     },
@@ -87,21 +83,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "11906007",
       "display" : "Chronic gonococcal vulvovaginitis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "120834006",
-      "display" : "Neisseria gonorrhoeae antibody"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "120977006",
-      "display" : "Neisseria gonorrhoeae antigen"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "121172006",
-      "display" : "Neisseria gonorrhoeae rRNA"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -210,108 +191,8 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186908002",
-      "display" : "Acute gonorrhea of lower genitourinary tract",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186909005",
-      "display" : "Acute gonorrhea of lower genitourinary tract NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186910000",
-      "display" : "Acute gonorrhea of upper genitourinary tract",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186911001",
-      "display" : "Acute unspecified gonorrhea of upper genitourinary tract",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186914009",
-      "display" : "Acute gonorrhea upper genitourinary tract NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "186915005",
       "display" : "Chronic gonorrhea lower genitourinary tract"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186916006",
-      "display" : "Chronic gonorrhea of lower genitourinary tract NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186917002",
-      "display" : "Chronic gonorrhea of upper genitourinary tract",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186918007",
-      "display" : "Chronic unspecified gonorrhea of upper genitourinary tract",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186921009",
-      "display" : "Chronic gonorrhea of upper genitourinary tract NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186925000",
-      "display" : "Gonococcal eye infection NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
     },
     {
       "system" : "http://snomed.info/sct",
@@ -320,68 +201,8 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186932009",
-      "display" : "Gonococcal rectal infection",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186933004",
-      "display" : "Gonococcal proctitis NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186934005",
-      "display" : "Gonococcal infection of other specified sites",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "186938008",
-      "display" : "Other gonococcal heart disease",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "186939000",
       "display" : "Gonococcal peritonitis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "187360006",
-      "display" : "[X]Other gonococcal infections",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "187361005",
-      "display" : "[X]Gonococcal infection, unspecified",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
     },
     {
       "system" : "http://snomed.info/sct",
@@ -407,66 +228,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "199161008",
       "display" : "Maternal gonorrhea during pregnancy, childbirth and the puerperium"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "199162001",
-      "display" : "Maternal gonorrhea, unspecified whether during pregnancy or the puerperium",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "199163006",
-      "display" : "Maternal gonorrhea during pregnancy - baby delivered",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "199164000",
-      "display" : "Maternal gonorrhea in the puerperium - baby delivered during current episode of care",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "199165004",
-      "display" : "Maternal gonorrhea during pregnancy - baby not yet delivered",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "199166003",
-      "display" : "Maternal gonorrhea in the puerperium - baby delivered during previous episode of care",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "199167007",
-      "display" : "Gonorrhea during pregnancy, childbirth or the puerperium NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
     },
     {
       "system" : "http://snomed.info/sct",
@@ -500,16 +261,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "236688003",
-      "display" : "Gonococcal periurethral gland abscess",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "236766009",
       "display" : "Gonococcal epididymitis"
     },
@@ -525,18 +276,8 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "237041005",
-      "display" : "Fitz-Hugh-Curtis syndrome"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "237042003",
       "display" : "Gonococcal perihepatitis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "237043008",
-      "display" : "Chlamydial perihepatitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -587,16 +328,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "240571007",
       "display" : "Neonatal gonococcal infection"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "240572000",
-      "display" : "Gonorrhea with local complication",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
     },
     {
       "system" : "http://snomed.info/sct",
@@ -665,56 +396,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "266138002",
-      "display" : "Gonococcal synovitis or tenosynovitis",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "266139005",
-      "display" : "Gonococcal joint infection NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "266140007",
-      "display" : "Other gonococcal infection of other specified site",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "266141006",
-      "display" : "Gonococcal infection of other site NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "266142004",
-      "display" : "Gonococcal infections NOS",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "272006008",
       "display" : "Gonococcal arthritis dermatitis syndrome"
     },
@@ -762,16 +443,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "342381000119109",
       "display" : "Gonococcal iritis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "35255008",
-      "display" : "Gonorrhea in mother complicating pregnancy, childbirth AND/OR puerperium",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
     },
     {
       "system" : "http://snomed.info/sct",
@@ -880,16 +551,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "64389005",
-      "display" : "Chronic gonorrhea of lower genitourinary tract",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "65049003",
       "display" : "Acute gonococcal seminal vesiculitis"
     },
@@ -915,11 +576,6 @@
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "72225002",
-      "display" : "Urethral stricture due to gonococcal infection"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "733131001",
       "display" : "Infection of musculoskeletal system caused by Neisseria gonorrhoeae"
     },
@@ -937,16 +593,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "762257007",
       "display" : "Disseminated infection caused by Neisseria gonorrhoeae"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "inactive" : true,
-      "code" : "76749000",
-      "display" : "Gonorrhea of anus",
-      "property" : [{
-        "code" : "status",
-        "valueCode" : "inactive"
-      }]
     },
     {
       "system" : "http://snomed.info/sct",

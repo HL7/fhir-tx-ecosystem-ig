@@ -1143,6 +1143,9 @@
   "sct/ecl/validate-code-ecl-wildcard-minus-code-out-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct#10200004 ('Liver structure')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus|5.0.0'"
   },
+  "sct/ecl/validate-code-ecl-concrete-code-out-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#1204474000 ('Barium sulfate 600 mg/mL oral suspension')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-validate|5.0.0'"
+  },
   "sct/ecl/validate-code-ecl-wildcard-minus-expr-out-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct#39607008 |Lung| : 272741003 |Laterality| = 24028007 |Right|' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus|5.0.0'"
   },
