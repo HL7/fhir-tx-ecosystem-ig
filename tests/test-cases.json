@@ -5498,6 +5498,20 @@
         "response" : "loinc/loinc-lookup-part-parent-response-parameters.json"
       },
       {
+        "name" : "loinc-lookup-part-languages",
+        "description" : "The LinguisticVariant files translate each term's axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS). Those translations are designations of the Parts, with use PartName - for ko-KR and most of fr-CA they are all LOINC has. With loinc-lookup-code-languages, this checks that every LOINC 2.83 language variant is loaded and available through $lookup: LP7565-7 Saliva has a PartName in 19 of them",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-part-languages-request-parameters.json",
+        "response" : "loinc/loinc-lookup-part-languages-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-code-languages",
+        "description" : "The two language variants loinc-lookup-part-languages does not cover: 66878-0 Skin Ab [Titer] in Serum has LinguisticVariantDisplayName designations in ar-JO and de-AT",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-code-languages-request-parameters.json",
+        "response" : "loinc/loinc-lookup-code-languages-response-parameters.json"
+      },
+      {
         "name" : "loinc-lookup-answer-race",
         "description" : "An answer's external code from the answer list (ExtCodeSystem https://www.cdc.gov/phin) is reported in the CDC race and ethnicity system, urn:oid:2.16.840.1.113883.6.238, as the property race",
         "operation" : "lookup",

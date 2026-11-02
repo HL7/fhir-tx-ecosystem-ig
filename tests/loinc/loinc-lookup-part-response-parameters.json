@@ -9,6 +9,44 @@
     "name" : "designation",
     "part" : [{
       "name" : "language",
+      "valueCode" : "cs-CZ"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "el-GR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
       "valueCode" : "en-US"
     },
     {
@@ -41,6 +79,196 @@
     {
       "name" : "value",
       "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es-ES"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Paneles HL7 de citogenética"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "et-EE"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr-FR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "HL7 cytogénétique panel"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "it-IT"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CITOGENETICA"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "nl-NL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "pl-PL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "panele cytogenetyczne w HL7"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "pt-BR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "ru-RU"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "PANEL.HL7.CYTOGEN"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "uk-UA"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "HL7 цитогенетичні панелі"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "zh-CN"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "组套.HL7.细胞遗传学"
     }]
   },
   {

@@ -1,0 +1,240 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "66878-0"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "ar-JO"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LinguisticVariantDisplayName",
+        "display" : "LinguisticVariantDisplayName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "عيار أضداد الجلد في المصل"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "cs-CZ"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LONG_COMMON_NAME",
+        "display" : "LONG_COMMON_NAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Kůže Ab [Arbitrární koncentrace (titr)], systém: Sérum"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "de-AT"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LinguisticVariantDisplayName",
+        "display" : "LinguisticVariantDisplayName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Haut-Antikörper Titer"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "$optional$" : true,
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Skin Ab [Titer] in Serum"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LONG_COMMON_NAME",
+        "display" : "LONG_COMMON_NAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Skin Ab [Titer] in Serum"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "SHORTNAME",
+        "display" : "SHORTNAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Skin Ab Titr Ser"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "ConsumerName",
+        "display" : "ConsumerName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Skin antibody, Blood"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es-MX"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LONG_COMMON_NAME",
+        "display" : "LONG_COMMON_NAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Piel Ab: Suero : Punto temporal: Título: Cuantitativo:"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr-FR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LONG_COMMON_NAME",
+        "display" : "LONG_COMMON_NAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Peau anticorps [Titre] Sérum ; Semi-Quantitatif"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "nl-NL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LONG_COMMON_NAME",
+        "display" : "LONG_COMMON_NAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Huid As [titer] in serum"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "uz"
+    },
+    {
+      "name" : "source",
+      "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Qon zardobida teriga qarshi antitanachalar titri"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Skin Ab [Titer] in Serum"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:LOINC|Logical Observation Identifier Names and Codes (LOINC)$"
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.83"
+  }]
+}
