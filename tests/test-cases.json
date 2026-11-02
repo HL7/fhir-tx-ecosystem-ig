@@ -789,6 +789,13 @@
         "response" : "language/expand-echo-en-designation-response-valueSet.json"
       },
       {
+        "name" : "language-echo-en-designation-bare",
+        "description" : "The designation parameter is a token: a bare code (no system) matches a designation's language, or its use code from any system. designation=es is the same as urn:ietf:bcp:47|es. A language matches exactly here: de-CH, not de",
+        "operation" : "expand",
+        "request" : "language/expand-echo-en-designation-bare-request-parameters.json",
+        "response" : "language/expand-echo-en-designation-bare-response-valueSet.json"
+      },
+      {
         "name" : "language-echo-en-designations",
         "description" : "to be provided",
         "operation" : "expand",

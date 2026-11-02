@@ -510,6 +510,9 @@ about it both more durable and harder to see.
   the value 0, but both are tested
 * §The server SHALL support `activeOnly`, `includeDesignations`, `includeDefinition`, `property` and
   `designation`§
+* §A `designation` value is a token: `system|code`, or a bare code, which SHALL match a designation whose
+  language is that code or whose use has that code (in any system)§. `designation=nl-NL` is the same as
+  `designation=urn:ietf:bcp:47|nl-NL`. A language matches exactly: `de-CH` does not select `de` designations
 * §The server SHALL support `displayLanguage`, and the `Accept-Language` header, and
   `ValueSet.language`§, as specified in [Languages](languages.html)
 * §The server SHALL support `filter` (text search)§. The ecosystem makes no requirements about the
