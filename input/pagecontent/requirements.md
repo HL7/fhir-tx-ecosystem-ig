@@ -190,6 +190,9 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
     code's display, but not the only correct one: a different display is a warning§
   * §The codes an `extension-codes` supplement defines are only in an expansion when they are listed in the value set
     (`compose.include.concept`), not when it includes all of the code system§
+  * §An expansion of a value set that includes all of a code system with reserved code spaces - whether or not any
+    supplements are in play - SHALL be marked as unclosed (`valueset-unclosed`), since codes in the reserved code
+    spaces are members of the value set (`$validate-code` accepts them) that the expansion can't list§
   * An `extension-codes` supplement that gives a display to a code outside the reserved code space - one the code
     system defines - acts as a language pack does for that code *(suites: `extension-codes`, and
     `extension-codes-3166` for ISO 3166's user-assigned codes)*

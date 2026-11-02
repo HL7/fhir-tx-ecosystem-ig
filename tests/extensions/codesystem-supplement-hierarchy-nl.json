@@ -1,0 +1,37 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-hierarchy-nl",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy-nl",
+  "version" : "1.0.0",
+  "name" : "SupplementHierarchyNL",
+  "title" : "Supplement Hierarchy - Dutch",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "publisher" : "FHIR Project",
+  "description" : "A supplement to the supplement-hierarchy code system with Dutch designations for every concept (not global: only used when referenced)",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy|1.0.0",
+  "concept" : [{
+    "code" : "parent",
+    "designation" : [{
+      "language" : "nl",
+      "value" : "Bovenliggend begrip"
+    }]
+  },
+  {
+    "code" : "child",
+    "designation" : [{
+      "language" : "nl",
+      "value" : "Onderliggend begrip"
+    }]
+  },
+  {
+    "code" : "grandchild",
+    "designation" : [{
+      "language" : "nl",
+      "value" : "Onder-onderliggend begrip"
+    }]
+  }]
+}

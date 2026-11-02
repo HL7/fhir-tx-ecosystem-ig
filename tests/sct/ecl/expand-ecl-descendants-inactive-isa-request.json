@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-ecl-descendants-inactive-isa",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-descendants-inactive-isa",
+      "version" : "5.0.0",
+      "title" : "SCT ECL Hepatorenal syndrome (inactive is-a)",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "Hepatorenal syndrome and its descendants. 50325005 |Alcoholic fatty liver| has an inactive is-a row to Hepatorenal syndrome, so it is not included",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "constraint", "op" : "=", "value" : "<< 51292008" }]
+        }]
+      }
+    }
+  }]
+}

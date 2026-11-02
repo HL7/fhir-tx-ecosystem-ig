@@ -1,0 +1,37 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-hierarchy-de",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy-de",
+  "version" : "1.0.0",
+  "name" : "SupplementHierarchyDE",
+  "title" : "Supplement Hierarchy - German",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "publisher" : "FHIR Project",
+  "description" : "A supplement to the supplement-hierarchy code system with German designations for every concept (not global: only used when referenced)",
+  "language" : "en",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy|1.0.0",
+  "concept" : [{
+    "code" : "parent",
+    "designation" : [{
+      "language" : "de",
+      "value" : "Elternbegriff"
+    }]
+  },
+  {
+    "code" : "child",
+    "designation" : [{
+      "language" : "de",
+      "value" : "Unterbegriff"
+    }]
+  },
+  {
+    "code" : "grandchild",
+    "designation" : [{
+      "language" : "de",
+      "value" : "Unter-Unterbegriff"
+    }]
+  }]
+}

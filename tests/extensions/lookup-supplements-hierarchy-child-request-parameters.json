@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "child"
+  },
+  {
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy-de"
+  },
+  {
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy-nl"
+  }]
+}

@@ -11,6 +11,15 @@
   "date" : "2026-10-31",
   "expansion" : {
     "$optional-properties$" : ["id", "offset", "total"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    },
+    {
+      "$optional$" : true,
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed-reason",
+      "valueString" : "$string$"
+    }],
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",

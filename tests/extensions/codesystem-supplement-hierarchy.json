@@ -1,0 +1,29 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-hierarchy",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy",
+  "version" : "1.0.0",
+  "name" : "SupplementHierarchy",
+  "title" : "Supplement Hierarchy",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "publisher" : "FHIR Project",
+  "description" : "A code system with a hierarchy, for testing more than one supplement at a time: each supplement's content is merged into each concept once, at every level",
+  "language" : "en",
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "concept" : [{
+    "code" : "parent",
+    "display" : "Parent",
+    "concept" : [{
+      "code" : "child",
+      "display" : "Child",
+      "concept" : [{
+        "code" : "grandchild",
+        "display" : "Grandchild"
+      }]
+    }]
+  }]
+}

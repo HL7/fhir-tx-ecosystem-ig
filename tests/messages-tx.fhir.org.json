@@ -1706,5 +1706,17 @@
   },
   "fragment/fragment-expand-response.json" : {
     "1" : "This extension is based on a fragment of the code system http://hl7.org/fhir/test/CodeSystem/fragment"
+  },
+  "extension-codes/ec-validate-global-referenced-wrong-display-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#A2. Valid display is one of 2 choices: 'Code A2' (en) or 'Code A2 (from the supplement)' (en) (for the language(s) '--')"
+  },
+  "extension-codes/ec-validate-global-referenced-wrong-display-lenient-response.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#A2. Valid display is one of 2 choices: 'Code A2' (en) or 'Code A2 (from the supplement)' (en) (for the language(s) '--')"
+  },
+  "extensions/validate-supplements-grandchild-wrong-display-response-parameters.json" : {
+    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#grandchild. Valid display is 'Unter-Unterbegriff' (de) (for the language(s) 'de')"
+  },
+  "extensions/validate-supplement-nolang-other-lang-response-parameters.json" : {
+    "1" : "Wrong Display Name 'Enfant' for http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#child. Valid display is one of 2 choices: 'Kid' or 'Youngster' (for the language(s) 'de')"
   }
 }

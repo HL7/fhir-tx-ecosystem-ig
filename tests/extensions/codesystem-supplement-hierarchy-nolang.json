@@ -1,0 +1,26 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-hierarchy-nolang",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy-nolang",
+  "version" : "1.0.0",
+  "name" : "SupplementHierarchyNoLang",
+  "title" : "Supplement Hierarchy - No Language",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "publisher" : "FHIR Project",
+  "description" : "A supplement to the supplement-hierarchy code system that does not say what language it is in (no CodeSystem.language): its display, and its designation with no language, are correct displays in any language. Its designation with a language (fr) is only a display in that language",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy|1.0.0",
+  "concept" : [{
+    "code" : "child",
+    "display" : "Kid",
+    "designation" : [{
+      "value" : "Youngster"
+    },
+    {
+      "language" : "fr",
+      "value" : "Enfant"
+    }]
+  }]
+}
