@@ -7638,6 +7638,13 @@
         "response" : "sct/ecl/expand-ecl-description-filter-term-response.json"
       },
       {
+        "name" : "snomed-expand-ecl-description-filter-term-no-d",
+        "description" : "Description filter without the D: {{ term = \"lobe liv\" }} - ECL 2.2 makes the D optional, so this is the same filter as snomed-expand-ecl-description-filter-term, with the same 27 results",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-term-no-d-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-term-no-d-response.json"
+      },
+      {
         "name" : "snomed-expand-ecl-description-filter-term-set",
         "description" : "Description filter with a term set - any of the terms may match (26 results).",
         "operation" : "expand",

@@ -867,8 +867,15 @@ the `tx-source` directory of this IG's repository, under the edition
 the tests assert specific concepts, displays and counts that only that subontology has§.
 
 * §The server SHALL support the [implicit value sets](ecosystem.html#snomed-ct-implicit-valuesets): `?fhir_vs` (all of SNOMED), `?fhir_vs=isa/{sctid}`, `?fhir_vs=refset/{sctid}` and `?fhir_vs=ecl/{expression}`§. §Where the implicit value set names a refset or a concept that does not exist, the server SHALL return an error naming the value set that was asked for§
-* §The server SHALL support the `concept` filter with `is-a`, `descendent-of`, `is-not-a` and
-  `child-of`, and the SNOMED-specific `expressions` filter§
+* §The server SHALL support the `concept` filter with `in`, `is-a`, `descendent-of`, `descendent-leaf`,
+  `is-not-a` and `child-of`, and the SNOMED-specific `expressions` filter§:
+  * `descendent-leaf` is the descendants of the concept that have no children of their own; the
+    concept itself is never included *(test: `snomed-expand-descendent-leaf`)*
+  * `in` takes a comma-separated list of concepts, and means any of them *(tests:
+    `snomed-expand-concept-in`, `snomed-validate-concept-in`)*. A listed concept that is a reference
+    set stands for its members *(not yet tested)*
+  * §The server SHALL accept `code` as the same filter property as `concept`§: value sets in
+    production use the two interchangeably *(tests: `snomed-expand-code-in`, `snomed-validate-code-in`)*
 * §The server SHALL support the `display` filter with the `regex` operator§ - published value sets
   (VSAC among them) select SNOMED CT concepts this way. Since a concept has many descriptions, possibly
   in many languages, the filter is defined as follows *(tests: `snomed-expand-display-regex`,
