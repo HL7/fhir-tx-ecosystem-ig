@@ -1002,6 +1002,15 @@ which lists the filter value for every property as `[string value]`):
 * §Servers SHALL also accept the Part code for the class as the value of a `CLASS` filter (e.g. `CLASS` = 
   `LP7840-4`)§, for the same reason
 
+Hierarchy and implicit value sets:
+
+* §Servers SHALL support the `ancestor` filter (`=` and `in`, the value a Part code) on the multi-axial hierarchy§:
+  `ancestor` = X is every code X subsumes, transitively - terms and parts, but not X itself (it is the same set as
+  `concept` `descendent-of` X). `in` is the union over the listed parts
+* §Servers SHALL support LOINC's implicit value sets for the multi-axial hierarchy, `http://loinc.org/vs/[partcode]`§,
+  which the [UTG LOINC page](https://terminology.hl7.org/LOINC.html) defines as a single include with the filter
+  `ancestor` = `[partcode]`
+
 #### UCUM
 
 *(mode: `tx.fhir.org` at present; suite: `UCUM`)*

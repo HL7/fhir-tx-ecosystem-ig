@@ -1,0 +1,66 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose", "name", "title", "version", "status", "experimental"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://loinc.org/vs/LP100039-9",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 7,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "contains" : [
+    {
+      "system" : "http://loinc.org",
+      "code" : "103643-3",
+      "display" : "Iloperidone [Mass/volume] in Urine by Confirmatory method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59289-9",
+      "display" : "Iloperidone [Mass/volume] in Blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59290-7",
+      "display" : "Iloperidone [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97648-0",
+      "display" : "Iloperidone [Presence] in Urine by Confirmatory method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP391304-5",
+      "display" : "Iloperidone | Blood | Drug toxicology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP391305-2",
+      "display" : "Iloperidone | Serum or Plasma | Drug toxicology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP427033-8",
+      "display" : "Iloperidone | Urine | Drug toxicology"
+    }]
+  }
+}

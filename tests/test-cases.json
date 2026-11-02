@@ -5484,6 +5484,13 @@
         "response" : "loinc/loinc-lookup-part-mappings-response-parameters.json"
       },
       {
+        "name" : "loinc-lookup-part-parent",
+        "description" : "A part's parents in the multi-axial hierarchy, each once. LP14635-4 Glucose is listed under LP31399-6 on two paths in ComponentHierarchyBySystem, but it has that parent once",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-part-parent-request-parameters.json",
+        "response" : "loinc/loinc-lookup-part-parent-response-parameters.json"
+      },
+      {
         "name" : "loinc-lookup-answer-race",
         "description" : "An answer's external code from the answer list (ExtCodeSystem https://www.cdc.gov/phin) is reported in the CDC race and ethnicity system, urn:oid:2.16.840.1.113883.6.238, as the property race",
         "operation" : "lookup",
@@ -5644,6 +5651,13 @@
         "operation" : "expand",
         "request" : "loinc/loinc-expand-concept-is-a-request-parameters.json",
         "response" : "loinc/loinc-expand-concept-is-a-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-implicit-part",
+        "description" : "LOINC's implicit value set for a Multi-Axial Hierarchy part, http://loinc.org/vs/[partcode], which LOINC defines as ancestor = [partcode]: all the codes the part subsumes (terms and parts), not the part itself. LP100039-9 Iloperidone",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-implicit-part-request-parameters.json",
+        "response" : "loinc/loinc-expand-implicit-part-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-copyright",
