@@ -869,6 +869,26 @@ the tests assert specific concepts, displays and counts that only that subontolo
 * §The server SHALL support the [implicit value sets](ecosystem.html#snomed-ct-implicit-valuesets): `?fhir_vs` (all of SNOMED), `?fhir_vs=isa/{sctid}`, `?fhir_vs=refset/{sctid}` and `?fhir_vs=ecl/{expression}`§. §Where the implicit value set names a refset or a concept that does not exist, the server SHALL return an error naming the value set that was asked for§
 * §The server SHALL support the `concept` filter with `is-a`, `descendent-of`, `is-not-a` and
   `child-of`, and the SNOMED-specific `expressions` filter§
+* §The server SHALL support the `display` filter with the `regex` operator§ - published value sets
+  (VSAC among them) select SNOMED CT concepts this way. Since a concept has many descriptions, possibly
+  in many languages, the filter is defined as follows *(tests: `snomed-expand-display-regex`,
+  `snomed-validate-display-regex`, `snomed-expand-display-regex-nl`)*:
+  * §A concept matches when at least one of its active descriptions in the chosen language matches
+    the pattern§. Every active fully specified name and synonym counts, preferred or acceptable, not
+    just the preferred term; text definitions do not count (they are not displays), and neither do
+    inactive descriptions
+  * §The pattern SHALL match the whole term§, not just part of it - `.*hematoma.*` finds terms that
+    contain "hematoma", `hematoma` only a term that is exactly that - §and the match is case-sensitive§
+  * §Only one language is searched§, chosen as follows: §the first language the request names - the
+    `displayLanguage` parameter, or if there is none, the HTTP `Accept-Language` header - that the
+    edition has descriptions in; if the request names none of the edition's languages, or no language
+    at all, the edition's default language§ (English for the International Edition and for the test
+    edition). §Descriptions in other languages SHALL NOT be searched§, even where they would match.
+    So the same value set, expanded with `displayLanguage=nl` against an edition that has Dutch
+    descriptions, matches Dutch terms and not English ones
+  * The restriction to one language is deliberate: matching a regex means testing every description
+    of the edition, and on a multi-language edition testing all of them costs several times as much,
+    for a result that mixes languages the requester did not ask for
 * §The server SHALL support post-coordinated expressions, and SHALL observe whether the value set allows
   them§:
   * §where the value set says `expressions = false`, a well-formed expression SHALL be rejected as not

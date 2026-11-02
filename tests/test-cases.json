@@ -6739,6 +6739,24 @@
         "operation" : "expand",
         "request" : "sct/expand-is-not-a-request.json",
         "response" : "sct/expand-is-not-a-response.json"
+      },{
+        "name" : "snomed-expand-display-regex",
+        "description" : "display regex: matches every active description in one language (here the edition default, English), the whole term, case-sensitively",
+        "operation" : "expand",
+        "request" : "sct/expand-display-regex-request.json",
+        "response" : "sct/expand-display-regex-response.json"
+      },{
+        "name" : "snomed-validate-display-regex",
+        "description" : "display regex: a concept with a matching English description is in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-display-regex-request.json",
+        "response" : "sct/validate-code-display-regex-response.json"
+      },{
+        "name" : "snomed-expand-display-regex-nl",
+        "description" : "display regex in another language: with displayLanguage nl, the Dutch descriptions are matched (the test edition's TEST1000003 Dutch descriptions and language reference set), and the displays are the Dutch preferred terms",
+        "operation" : "expand",
+        "request" : "sct/expand-display-regex-nl-request.json",
+        "response" : "sct/expand-display-regex-nl-response.json"
       }
     ]
   },{
@@ -8362,6 +8380,18 @@
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-descendants-inactive-isa-request.json",
         "response" : "sct/ecl/expand-ecl-descendants-inactive-isa-response.json"
+      },{
+        "name" : "snomed-expand-ecl-description-filter-wild-all-language",
+        "description" : "Description filter over the whole edition with a language: * {{ D term = wild:\"*hematoma*\", language = en }} - the same concepts as the display regex test snomed-expand-display-regex",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-wild-all-language-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-wild-all-language-response.json"
+      },{
+        "name" : "snomed-expand-ecl-description-filter-wild-nl",
+        "description" : "Description filter in another language: * {{ D term = wild:\"*hematoom*\", language = nl }} - the same concepts as snomed-expand-display-regex-nl, with the default (English) displays",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-wild-nl-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-wild-nl-response.json"
       }
     ]
   },{
