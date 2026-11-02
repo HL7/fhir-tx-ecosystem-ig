@@ -119,7 +119,7 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "module"
+      "valueCode" : "moduleId"
     },
     {
       "name" : "description",

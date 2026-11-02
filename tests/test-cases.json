@@ -6698,6 +6698,18 @@
         "request" : "sct/lookup-concrete-request.json",
         "response" : "sct/lookup-concrete-response.json"
       },{
+        "name" : "snomed-lookup-all-properties",
+        "description" : "$lookup with property=* returns every property the SNOMED CT on FHIR page defines - including moduleId, sufficientlyDefined and semanticTag - except the normal forms, which have to be asked for by name",
+        "operation" : "lookup",
+        "request" : "sct/lookup-all-properties-request.json",
+        "response" : "sct/lookup-all-properties-response.json"
+      },{
+        "name" : "snomed-lookup-normal-form",
+        "description" : "$lookup returns the normal form when it is asked for by name (here normalFormTerse, without terms)",
+        "operation" : "lookup",
+        "request" : "sct/lookup-normal-form-request.json",
+        "response" : "sct/lookup-normal-form-response.json"
+      },{
         "name" : "snomed-validate-implied-refset-map",
         "description" : "The implicit value set ?fhir_vs=refset/ can name a map reference set: a concept mapped by the test edition's extended map is in it",
         "operation" : "validate-code",

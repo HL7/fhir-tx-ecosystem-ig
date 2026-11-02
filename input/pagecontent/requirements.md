@@ -867,6 +867,21 @@ the `tx-source` directory of this IG's repository, under the edition
 the tests assert specific concepts, displays and counts that only that subontology has§.
 
 * §The server SHALL support the [implicit value sets](ecosystem.html#snomed-ct-implicit-valuesets): `?fhir_vs` (all of SNOMED), `?fhir_vs=isa/{sctid}`, `?fhir_vs=refset/{sctid}` and `?fhir_vs=ecl/{expression}`§. §Where the implicit value set names a refset or a concept that does not exist, the server SHALL return an error naming the value set that was asked for§
+  * The ECL in `?fhir_vs=ecl/` is URL-encoded in the value set URL, as the SNOMED CT on FHIR page
+    writes it *(test: `snomed-expand-implicit-ecl`)*
+  * §The implicit value set URL may name an edition, and a version, as well as the generic
+    `http://snomed.info/sct?fhir_vs...` form, and the server SHALL draw the value set from the
+    edition and version so named§:
+    * `http://snomed.info/sct/{edition}?fhir_vs...` - §the latest version of that edition the server
+      has§ *(test: `snomed-expand-implicit-edition`)*
+    * `http://snomed.info/sct/{edition}/version/{date}?fhir_vs...` - §that version§ *(test:
+      `snomed-expand-implicit-version`)*
+    * `http://snomed.info/sct?fhir_vs...` - §the edition and version the request asks for with
+      `force-system-version`, `system-version` or `check-system-version`, where it asks; otherwise the
+      server's default edition§ *(tests: `snomed-expand-implicit-system-version`,
+      `snomed-validate-implied-refset-map`)*. This includes the check that the concept or reference
+      set the URL names exists: a concept that is only in the edition the request asks for is found.
+      An edition or version named in the URL itself is not overridden by these parameters
 * §The server SHALL support the `concept` filter with `in`, `is-a`, `descendent-of`, `descendent-leaf`,
   `is-not-a` and `child-of`, and the SNOMED-specific `expressions` filter§:
   * `descendent-leaf` is the descendants of the concept that have no children of their own; the
@@ -928,6 +943,15 @@ the tests assert specific concepts, displays and counts that only that subontolo
 * §`$subsumes` SHALL reject an expression that is not valid under the MRCM rather than answering it§
 * §The server SHALL return the display in the requested language, following the edition's language
   reference sets - see [Languages](languages.html)§
+* §`$lookup` SHALL return the properties the SNOMED CT on FHIR page defines§, under the names it gives
+  them (the module is `moduleId`):
+  * §`property=*` SHALL return all of them - `parent`, `child`, the defining relationships,
+    `effectiveTime`, `inactive`, `moduleId`, `sufficientlyDefined` and `semanticTag` - except the
+    normal forms§ *(test: `snomed-lookup-all-properties`)*
+  * §`normalForm` and `normalFormTerse` are computed, and SHALL be returned only when they are asked
+    for by name§: not by default, and not for `property=*` *(test: `snomed-lookup-normal-form`)*
+  * Transitive ancestors and descendants are not lookup properties; `parent` and `child` are the
+    direct ones
 
 ##### Post-coordination: agreed scope
 
