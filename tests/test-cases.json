@@ -6703,6 +6703,30 @@
         "operation" : "subsumes",
         "request" : "sct/subsumes-inactive-isa-request.json",
         "response" : "sct/subsumes-inactive-isa-response.json"
+      },{
+        "name" : "snomed-expand-concept-in",
+        "description" : "concept in with three plain codes: in means any of the listed codes, so all three are in the expansion",
+        "operation" : "expand",
+        "request" : "sct/expand-concept-in-request.json",
+        "response" : "sct/expand-concept-in-response.json"
+      },{
+        "name" : "snomed-validate-concept-in",
+        "description" : "concept in with three plain codes: one of the listed codes is in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-concept-in-request.json",
+        "response" : "sct/validate-code-concept-in-response.json"
+      },{
+        "name" : "snomed-expand-code-in",
+        "description" : "code in with three plain codes: code is the same filter property as concept (value sets in production use it), so all three are in the expansion",
+        "operation" : "expand",
+        "request" : "sct/expand-code-in-request.json",
+        "response" : "sct/expand-code-in-response.json"
+      },{
+        "name" : "snomed-validate-code-in",
+        "description" : "code in with three plain codes: code is the same filter property as concept, so one of the listed codes is in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-code-in-request.json",
+        "response" : "sct/validate-code-code-in-response.json"
       }
     ]
   },{
