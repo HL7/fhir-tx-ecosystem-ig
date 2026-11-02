@@ -11,8 +11,10 @@
   "date" : "2026-10-22",
   "publisher" : "FHIR Project",
   "expansion" : {
+    "$optional-properties$" : ["total"],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
+    "total" : 50886,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",

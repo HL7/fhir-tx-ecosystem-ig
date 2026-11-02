@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-ecl-description-filter-wild-nl",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-description-filter-wild-nl",
+      "version" : "5.0.0",
+      "title" : "SCT ECL any concept with a Dutch hematoom term",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "The ECL equivalent of the Dutch display regex test, with no displayLanguage: the language filter picks the Dutch descriptions to search, and the displays are the default English ones",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "constraint", "op" : "=", "value" : "* {{ D term = wild:\"*hematoom*\", language = nl }}" }]
+        }]
+      }
+    }
+  }]
+}

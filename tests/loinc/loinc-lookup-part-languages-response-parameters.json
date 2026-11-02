@@ -1,0 +1,434 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "LP7565-7"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "cs-CZ"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Sliny"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "de-DE"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Speichel"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "el-GR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Σίελος"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "$optional$" : true,
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en-US"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "DisplayName",
+        "display" : "DisplayName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es-AR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es-ES"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es-MX"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "et-EE"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Sal"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr-BE"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Salivaire"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr-CA"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Salivaire"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr-FR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Salive"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "it-IT"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "ko-KR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "침"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "nl-NL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "speeksel"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "pl-PL"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "ślina"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "pt-BR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Saliva"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "ru-RU"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Слюна"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "tr-TR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Tükürük"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "uk-UA"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Слина"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "zh-CN"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "PartName",
+        "display" : "PartName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "唾液"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Saliva"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:LOINC|Logical Observation Identifier Names and Codes (LOINC)$"
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
+  },
+  {
+    "name" : "used-supplement",
+    "valueCanonical" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.83"
+  }]
+}

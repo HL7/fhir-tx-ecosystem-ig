@@ -13,7 +13,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "too-costly"
       }],
-      "text" : "The value set 'undefined' expansion has too many codes to produce (>3000)"
+      "text" : "$external:1$"
     }
   }]
 }

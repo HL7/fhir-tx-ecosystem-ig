@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-ecl-memberOf-extended-map",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-memberOf-extended-map",
+      "version" : "5.0.0",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "Map reference sets have members: an extended map with three active rows for two concepts (one concept is mapped in two map groups) and an inactive row for a third; each member concept appears once, and the inactive row does not count",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "constraint", "op" : "=", "value" : "^ 1000901000003102 |Test edition extended map reference set|" }]
+        }]
+      }
+    }
+  }]
+}

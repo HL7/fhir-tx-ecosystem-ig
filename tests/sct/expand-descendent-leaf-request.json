@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-descendent-leaf",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-descendent-leaf",
+      "version" : "5.0.0",
+      "title" : "SCT leaf descendants of Hemorrhage of liver",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "descendent-leaf (R5): the descendants of 16763008 |Hemorrhage of liver| that have no children of their own",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "concept", "op" : "descendent-leaf", "value" : "16763008" }]
+        }]
+      }
+    }
+  }]
+}

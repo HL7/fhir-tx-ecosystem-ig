@@ -1,0 +1,77 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-property-inactive-rel",
+  "version" : "5.0.0",
+  "title" : "SCT finding site Kidney (inactive relationships)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 9,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1285574007",
+      "display" : "Hepatorenal syndrome with acute kidney injury"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22846003",
+      "display" : "Hepatorenal syndrome following delivery"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31005002",
+      "display" : "Hepatorenal syndrome due to a procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51292008",
+      "display" : "Hepatorenal syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61598006",
+      "display" : "Glycogenosis with glucoaminophosphaturia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62216007",
+      "display" : "Familial arthrogryposis-cholestatic hepatorenal syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "763891005",
+      "display" : "Renal hepatic pancreatic dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "771149000",
+      "display" : "Hepatic fibrosis, renal cyst, intellectual disability syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773737004",
+      "display" : "NPHP3-related Meckel-like syndrome"
+    }]
+  }
+}

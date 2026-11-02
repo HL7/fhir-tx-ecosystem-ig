@@ -1143,6 +1143,9 @@
   "sct/ecl/validate-code-ecl-wildcard-minus-code-out-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct#10200004 ('Liver structure')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus|5.0.0'"
   },
+  "sct/ecl/validate-code-ecl-concrete-code-out-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#1204474000 ('Barium sulfate 600 mg/mL oral suspension')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-validate|5.0.0'"
+  },
   "sct/ecl/validate-code-ecl-wildcard-minus-expr-out-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct#39607008 |Lung| : 272741003 |Laterality| = 24028007 |Right|' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-ecl-wildcard-minus|5.0.0'"
   },
@@ -1718,5 +1721,20 @@
   },
   "extensions/validate-supplement-nolang-other-lang-response-parameters.json" : {
     "1" : "Wrong Display Name 'Enfant' for http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#child. Valid display is one of 2 choices: 'Kid' or 'Youngster' (for the language(s) 'de')"
+  },
+  "loinc/loinc-expand-all-response-outcome.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0' expansion has too many codes to produce (>1000)"
+  },
+  "sct/expand-too-big-response.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures' expansion has too many codes to produce (>1000)"
+  },
+  "tx.fhir.org/snomed-expand-inactive2-response-valueSet.json" : {
+    "1" : "The value set '??' expansion has too many codes to produce (>1000)"
+  },
+  "langcodes/expand-lang-region-response.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us' expansion has too many codes to produce (>3000)"
+  },
+  "bugs/expand-cpt-response.json" : {
+    "1" : "The value set 'undefined' expansion has too many codes to produce (>3000)"
   }
 }

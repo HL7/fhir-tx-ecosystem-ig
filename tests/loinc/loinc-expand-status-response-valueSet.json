@@ -11,6 +11,7 @@
   "date" : "2023-04-01",
   "publisher" : "FHIR Project",
   "expansion" : {
+    "$optional-properties$" : ["total"],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "total" : 2224,

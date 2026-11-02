@@ -1,0 +1,47 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-code-in",
+  "version" : "5.0.0",
+  "title" : "SCT code in",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver structure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50325005",
+      "display" : "Alcoholic fatty liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51292008",
+      "display" : "Hepatorenal syndrome"
+    }]
+  }
+}

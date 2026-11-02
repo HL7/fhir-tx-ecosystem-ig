@@ -1,0 +1,25 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/en-multi"
+    },
+    {
+      "name": "includeDesignations",
+      "valueBoolean": true
+    },
+    {
+      "name": "designation",
+      "valueString": "es"
+    },
+    {
+      "name": "designation",
+      "valueString": "de-CH"
+    },
+    {
+      "name": "excludeNested",
+      "valueBoolean": true
+    }
+  ]
+}

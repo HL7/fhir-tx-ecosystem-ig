@@ -1,0 +1,31 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },{
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  },{
+    "name" : "code",
+    "valueCode" : "329238006"
+  },{
+    "name" : "property",
+    "valueCode" : "1000701000003104"
+  },{
+    "name" : "property",
+    "valueCode" : "1000711000003102"
+  },{
+    "name" : "property",
+    "valueCode" : "1000721000003107"
+  },{
+    "name" : "property",
+    "valueCode" : "1142135004"
+  },{
+    "name" : "property",
+    "valueCode" : "1142136003"
+  },{
+    "name" : "property",
+    "valueCode" : "1142139005"
+  }]
+}

@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "1204474000"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Barium sulfate 600 mg/mL oral suspension"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "$external:1:http://snomed.info/sct#1204474000|http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-validate|5.0.0$"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:1:http://snomed.info/sct#1204474000|http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-validate|5.0.0$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

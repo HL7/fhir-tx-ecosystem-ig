@@ -510,6 +510,9 @@ about it both more durable and harder to see.
   the value 0, but both are tested
 * §The server SHALL support `activeOnly`, `includeDesignations`, `includeDefinition`, `property` and
   `designation`§
+* §A `designation` value is a token: `system|code`, or a bare code, which SHALL match a designation whose
+  language is that code or whose use has that code (in any system)§. `designation=nl-NL` is the same as
+  `designation=urn:ietf:bcp:47|nl-NL`. A language matches exactly: `de-CH` does not select `de` designations
 * §The server SHALL support `displayLanguage`, and the `Accept-Language` header, and
   `ValueSet.language`§, as specified in [Languages](languages.html)
 * §The server SHALL support `filter` (text search)§. The ecosystem makes no requirements about the
@@ -867,8 +870,50 @@ the `tx-source` directory of this IG's repository, under the edition
 the tests assert specific concepts, displays and counts that only that subontology has§.
 
 * §The server SHALL support the [implicit value sets](ecosystem.html#snomed-ct-implicit-valuesets): `?fhir_vs` (all of SNOMED), `?fhir_vs=isa/{sctid}`, `?fhir_vs=refset/{sctid}` and `?fhir_vs=ecl/{expression}`§. §Where the implicit value set names a refset or a concept that does not exist, the server SHALL return an error naming the value set that was asked for§
-* §The server SHALL support the `concept` filter with `is-a`, `descendent-of`, `is-not-a` and
-  `child-of`, and the SNOMED-specific `expressions` filter§
+  * The ECL in `?fhir_vs=ecl/` is URL-encoded in the value set URL, as the SNOMED CT on FHIR page
+    writes it *(test: `snomed-expand-implicit-ecl`)*
+  * §The implicit value set URL may name an edition, and a version, as well as the generic
+    `http://snomed.info/sct?fhir_vs...` form, and the server SHALL draw the value set from the
+    edition and version so named§:
+    * `http://snomed.info/sct/{edition}?fhir_vs...` - §the latest version of that edition the server
+      has§ *(test: `snomed-expand-implicit-edition`)*
+    * `http://snomed.info/sct/{edition}/version/{date}?fhir_vs...` - §that version§ *(test:
+      `snomed-expand-implicit-version`)*
+    * `http://snomed.info/sct?fhir_vs...` - §the edition and version the request asks for with
+      `force-system-version`, `system-version` or `check-system-version`, where it asks; otherwise the
+      server's default edition§ *(tests: `snomed-expand-implicit-system-version`,
+      `snomed-validate-implied-refset-map`)*. This includes the check that the concept or reference
+      set the URL names exists: a concept that is only in the edition the request asks for is found.
+      An edition or version named in the URL itself is not overridden by these parameters
+* §The server SHALL support the `concept` filter with `in`, `is-a`, `descendent-of`, `descendent-leaf`,
+  `is-not-a` and `child-of`, and the SNOMED-specific `expressions` filter§:
+  * `descendent-leaf` is the descendants of the concept that have no children of their own; the
+    concept itself is never included *(test: `snomed-expand-descendent-leaf`)*
+  * `in` takes a comma-separated list of concepts, and means any of them *(tests:
+    `snomed-expand-concept-in`, `snomed-validate-concept-in`)*. A listed concept that is a reference
+    set stands for its members *(not yet tested)*
+  * §The server SHALL accept `code` as the same filter property as `concept`§: value sets in
+    production use the two interchangeably *(tests: `snomed-expand-code-in`, `snomed-validate-code-in`)*
+* §The server SHALL support the `display` filter with the `regex` operator§ - published value sets
+  (VSAC among them) select SNOMED CT concepts this way. Since a concept has many descriptions, possibly
+  in many languages, the filter is defined as follows *(tests: `snomed-expand-display-regex`,
+  `snomed-validate-display-regex`, `snomed-expand-display-regex-nl`)*:
+  * §A concept matches when at least one of its active descriptions in the chosen language matches
+    the pattern§. Every active fully specified name and synonym counts, preferred or acceptable, not
+    just the preferred term; text definitions do not count (they are not displays), and neither do
+    inactive descriptions
+  * §The pattern SHALL match the whole term§, not just part of it - `.*hematoma.*` finds terms that
+    contain "hematoma", `hematoma` only a term that is exactly that - §and the match is case-sensitive§
+  * §Only one language is searched§, chosen as follows: §the first language the request names - the
+    `displayLanguage` parameter, or if there is none, the HTTP `Accept-Language` header - that the
+    edition has descriptions in; if the request names none of the edition's languages, or no language
+    at all, the edition's default language§ (English for the International Edition and for the test
+    edition). §Descriptions in other languages SHALL NOT be searched§, even where they would match.
+    So the same value set, expanded with `displayLanguage=nl` against an edition that has Dutch
+    descriptions, matches Dutch terms and not English ones
+  * The restriction to one language is deliberate: matching a regex means testing every description
+    of the edition, and on a multi-language edition testing all of them costs several times as much,
+    for a result that mixes languages the requester did not ask for
 * §The server SHALL support post-coordinated expressions, and SHALL observe whether the value set allows
   them§:
   * §where the value set says `expressions = false`, a well-formed expression SHALL be rejected as not
@@ -901,6 +946,15 @@ the tests assert specific concepts, displays and counts that only that subontolo
 * §`$subsumes` SHALL reject an expression that is not valid under the MRCM rather than answering it§
 * §The server SHALL return the display in the requested language, following the edition's language
   reference sets - see [Languages](languages.html)§
+* §`$lookup` SHALL return the properties the SNOMED CT on FHIR page defines§, under the names it gives
+  them (the module is `moduleId`):
+  * §`property=*` SHALL return all of them - `parent`, `child`, the defining relationships,
+    `effectiveTime`, `inactive`, `moduleId`, `sufficientlyDefined` and `semanticTag` - except the
+    normal forms§ *(test: `snomed-lookup-all-properties`)*
+  * §`normalForm` and `normalFormTerse` are computed, and SHALL be returned only when they are asked
+    for by name§: not by default, and not for `property=*` *(test: `snomed-lookup-normal-form`)*
+  * Transitive ancestors and descendants are not lookup properties; `parent` and `child` are the
+    direct ones
 
 ##### Post-coordination: agreed scope
 
@@ -950,6 +1004,15 @@ which lists the filter value for every property as `[string value]`):
   (an informal extension)
 * §Servers SHALL also accept the Part code for the class as the value of a `CLASS` filter (e.g. `CLASS` = 
   `LP7840-4`)§, for the same reason
+
+Hierarchy and implicit value sets:
+
+* §Servers SHALL support the `ancestor` filter (`=` and `in`, the value a Part code) on the multi-axial hierarchy§:
+  `ancestor` = X is every code X subsumes, transitively - terms and parts, but not X itself (it is the same set as
+  `concept` `descendent-of` X). `in` is the union over the listed parts
+* §Servers SHALL support LOINC's implicit value sets for the multi-axial hierarchy, `http://loinc.org/vs/[partcode]`§,
+  which the [UTG LOINC page](https://terminology.hl7.org/LOINC.html) defines as a single include with the filter
+  `ancestor` = `[partcode]`
 
 #### UCUM
 

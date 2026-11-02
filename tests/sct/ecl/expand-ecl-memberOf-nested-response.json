@@ -22,7 +22,7 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 130,
+    "total" : 134,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
@@ -194,6 +194,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "16763008",
+      "display" : "Hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "21483005",
       "display" : "Structure of central nervous system"
     },
@@ -251,6 +256,21 @@
       "system" : "http://snomed.info/sct",
       "code" : "260686004",
       "display" : "Method"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262796008",
+      "display" : "Liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262797004",
+      "display" : "Subcapsular liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262798009",
+      "display" : "Intrahepatic hematoma"
     },
     {
       "system" : "http://snomed.info/sct",

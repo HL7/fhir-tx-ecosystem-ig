@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-ecl-concrete-boolean-false",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-boolean-false",
+      "version" : "5.0.0",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "Boolean concrete values: products that are not fish-derived",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "constraint", "op" : "=", "value" : "< 763158003 |Medicinal product| : 1000711000003102 |Is test product fish-derived| = false" }]
+        }]
+      }
+    }
+  }]
+}

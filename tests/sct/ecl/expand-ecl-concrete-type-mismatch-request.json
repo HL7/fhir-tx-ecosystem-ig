@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-ecl-concrete-type-mismatch",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-concrete-type-mismatch",
+      "version" : "5.0.0",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "A string value never matches a numeric concrete value, even one that reads the same: nothing has presentation strength numerator \\\"4000\\\"",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "constraint", "op" : "=", "value" : "< 763158003 |Medicinal product| : 1142135004 |Has presentation strength numerator value| = \"4000\"" }]
+        }]
+      }
+    }
+  }]
+}

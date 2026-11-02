@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://loinc.org/vs/LP100039-9"
+  },{
+    "name" : "excludeNested",
+    "valueBoolean" : true
+  },{
+    "name" : "system-version",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}

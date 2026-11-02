@@ -10,8 +10,10 @@
   "experimental" : false,
   "date" : "2023-04-01",
   "expansion" : {
+    "$optional-properties$" : ["total"],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
+    "total" : 257267,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",

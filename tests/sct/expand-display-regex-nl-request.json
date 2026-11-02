@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sct-display-regex-nl",
+      "url" : "http://hl7.org/fhir/test/ValueSet/sct-display-regex-nl",
+      "version" : "5.0.0",
+      "title" : "SCT display regex hematoom (Dutch)",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-02",
+      "publisher" : "FHIR Project",
+      "description" : "display regex in Dutch: the request asks for displayLanguage nl, so the pattern .*hematoom.* is matched against the active Dutch descriptions",
+      "compose" : {
+        "include" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+          "filter" : [{ "property" : "display", "op" : "regex", "value" : ".*hematoom.*" }]
+        }]
+      }
+    }
+  },{
+    "name" : "displayLanguage",
+    "valueCode" : "nl"
+  }]
+}

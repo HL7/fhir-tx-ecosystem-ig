@@ -1,0 +1,34 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "367430006"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Repair of tendon of hand"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "normalFormTerse"
+    },
+    {
+      "name" : "value",
+      "valueString" : "387713003:{260686004=257903006,405813007=(118632007:{272741003=182353008})}"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}

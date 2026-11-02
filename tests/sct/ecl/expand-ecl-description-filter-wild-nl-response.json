@@ -1,0 +1,52 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-ecl-description-filter-wild-nl",
+  "version" : "5.0.0",
+  "title" : "SCT ECL any concept with a Dutch hematoom term",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 4,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262796008",
+      "display" : "Liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262797004",
+      "display" : "Subcapsular liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262798009",
+      "display" : "Intrahepatic hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35566002",
+      "display" : "Hematoma"
+    }]
+  }
+}

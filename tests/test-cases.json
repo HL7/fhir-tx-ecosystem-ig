@@ -789,6 +789,13 @@
         "response" : "language/expand-echo-en-designation-response-valueSet.json"
       },
       {
+        "name" : "language-echo-en-designation-bare",
+        "description" : "The designation parameter is a token: a bare code (no system) matches a designation's language, or its use code from any system. designation=es is the same as urn:ietf:bcp:47|es. A language matches exactly here: de-CH, not de",
+        "operation" : "expand",
+        "request" : "language/expand-echo-en-designation-bare-request-parameters.json",
+        "response" : "language/expand-echo-en-designation-bare-response-valueSet.json"
+      },
+      {
         "name" : "language-echo-en-designations",
         "description" : "to be provided",
         "operation" : "expand",
@@ -1237,10 +1244,33 @@
       },
       {
         "name" : "ec-expand-all",
-        "description" : "$expand of all of the code system: the codes defined by extension-codes supplements are not included, only the code system's own",
+        "description" : "$expand of all of the code system: the codes defined by extension-codes supplements are not included, only the code system's own - and since the code system has reserved code spaces, whose codes $validate-code accepts but the expansion can't list, the expansion is marked unclosed (valueset-unclosed)",
         "operation" : "expand",
         "request" : "extension-codes/ec-expand-all-request.json",
         "response" : "extension-codes/ec-expand-all-response.json"
+      },
+      {
+        "name" : "ec-validate-global-referenced-wrong-display",
+        "description" : "A global supplement that is also referenced (useSupplement) is used once: a wrong display for a code the global supplement gives a second display lists each valid display once",
+        "operation" : "cs-validate-code",
+        "lenient-display" : false,
+        "request" : "extension-codes/ec-validate-global-referenced-wrong-display-request.json",
+        "response" : "extension-codes/ec-validate-global-referenced-wrong-display-response.json"
+      },
+      {
+        "name" : "ec-validate-global-referenced-wrong-display-lenient",
+        "description" : "The same, with lenient-display-validation: a warning",
+        "operation" : "cs-validate-code",
+        "lenient-display" : true,
+        "request" : "extension-codes/ec-validate-global-referenced-wrong-display-request.json",
+        "response" : "extension-codes/ec-validate-global-referenced-wrong-display-lenient-response.json"
+      },
+      {
+        "name" : "ec-lookup-global-referenced",
+        "description" : "$lookup of the same code, with the global supplement also referenced: the supplement's designation is there once, and it is a used-supplement once",
+        "operation" : "lookup",
+        "request" : "extension-codes/ec-lookup-global-referenced-request.json",
+        "response" : "extension-codes/ec-lookup-global-referenced-response.json"
       }
     ]
   },{
@@ -1296,7 +1326,7 @@
     "name" : "extensions",
     "mode" : "general",
     "description" : "Testing proper handling of extensions, which depends on the extension",
-    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json"],
+    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json", "extensions/codesystem-supplement-hierarchy.json", "extensions/codesystem-supplement-hierarchy-de.json", "extensions/codesystem-supplement-hierarchy-nl.json", "extensions/codesystem-supplement-hierarchy-nolang.json"],
     "extensions-handled-doco": [
       "http://hl7.org/fhir/StructureDefinition/valueset-supplement", "http://hl7.org/fhir/StructureDefinition/valueset-deprecated", "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
       "http://hl7.org/fhir/StructureDefinition/coding-sctdescid", "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder", "http://hl7.org/fhir/StructureDefinition/valueset-label",
@@ -1393,6 +1423,48 @@
         "operation" : "cs-validate-code",
         "request" : "extensions/validate-code-inactive-request-parameters.json",
         "response" : "extensions/validate-code-inactive-response-outcome.json"
+      },
+      {
+        "name" : "lookup-supplements-hierarchy-child",
+        "description" : "$lookup of a child concept with two supplements referenced: each supplement's designation is there once",
+        "operation" : "lookup",
+        "request" : "extensions/lookup-supplements-hierarchy-child-request-parameters.json",
+        "response" : "extensions/lookup-supplements-hierarchy-child-response-parameters.json"
+      },
+      {
+        "name" : "lookup-supplements-hierarchy-grandchild",
+        "description" : "The same for a grandchild concept",
+        "operation" : "lookup",
+        "request" : "extensions/lookup-supplements-hierarchy-grandchild-request-parameters.json",
+        "response" : "extensions/lookup-supplements-hierarchy-grandchild-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplements-grandchild-wrong-display",
+        "description" : "$validate-code of the grandchild with a wrong display, displayLanguage de and two supplements referenced: the valid German display is listed once",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplements-grandchild-wrong-display-request-parameters.json",
+        "response" : "extensions/validate-supplements-grandchild-wrong-display-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-nolang-display",
+        "description" : "A supplement with no language (CodeSystem.language): its display is a correct display in any language - here with displayLanguage de",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplement-nolang-display-request-parameters.json",
+        "response" : "extensions/validate-supplement-nolang-display-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-nolang-designation",
+        "description" : "The same for a designation with no language in a supplement with no language",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplement-nolang-designation-request-parameters.json",
+        "response" : "extensions/validate-supplement-nolang-designation-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-nolang-other-lang",
+        "description" : "A designation that does have a language (fr), in the same supplement, is only a display in that language: with displayLanguage de it is a wrong display",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-supplement-nolang-other-lang-request-parameters.json",
+        "response" : "extensions/validate-supplement-nolang-other-lang-response-parameters.json"
       }
     ]
   },{
@@ -5419,6 +5491,27 @@
         "response" : "loinc/loinc-lookup-part-mappings-response-parameters.json"
       },
       {
+        "name" : "loinc-lookup-part-parent",
+        "description" : "A part's parents in the multi-axial hierarchy, each once. LP14635-4 Glucose is listed under LP31399-6 on two paths in ComponentHierarchyBySystem, but it has that parent once",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-part-parent-request-parameters.json",
+        "response" : "loinc/loinc-lookup-part-parent-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-part-languages",
+        "description" : "The LinguisticVariant files translate each term's axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS). Those translations are designations of the Parts, with use PartName - for ko-KR and most of fr-CA they are all LOINC has. With loinc-lookup-code-languages, this checks that every LOINC 2.83 language variant is loaded and available through $lookup: LP7565-7 Saliva has a PartName in 19 of them",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-part-languages-request-parameters.json",
+        "response" : "loinc/loinc-lookup-part-languages-response-parameters.json"
+      },
+      {
+        "name" : "loinc-lookup-code-languages",
+        "description" : "The two language variants loinc-lookup-part-languages does not cover: 66878-0 Skin Ab [Titer] in Serum has LinguisticVariantDisplayName designations in ar-JO and de-AT",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-code-languages-request-parameters.json",
+        "response" : "loinc/loinc-lookup-code-languages-response-parameters.json"
+      },
+      {
         "name" : "loinc-lookup-answer-race",
         "description" : "An answer's external code from the answer list (ExtCodeSystem https://www.cdc.gov/phin) is reported in the CDC race and ethnicity system, urn:oid:2.16.840.1.113883.6.238, as the property race",
         "operation" : "lookup",
@@ -5505,10 +5598,18 @@
       },
       {
         "name" : "loinc-expand-all-limited",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 257267. See loinc-expand-all-limited-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-all-limited-request-parameters.json",
         "response" : "loinc/loinc-expand-all-limited-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-all-limited-total",
+        "description" : "The size of the expansion: count=0, and total must be 257267. Which codes a page of it holds is up to the server (see loinc-expand-all-limited)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-all-limited-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-all-limited-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-enum-bad",
@@ -5519,10 +5620,18 @@
       },
       {
         "name" : "loinc-expand-status",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 2224. See loinc-expand-status-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-status-request-parameters.json",
         "response" : "loinc/loinc-expand-status-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-status-total",
+        "description" : "The size of the expansion: count=0, and total must be 2224. Which codes a page of it holds is up to the server (see loinc-expand-status)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-status-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-status-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-parent",
@@ -5533,10 +5642,18 @@
       },
       {
         "name" : "loinc-expand-class-regex",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 6332. See loinc-expand-class-regex-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-regex-request-parameters.json",
         "response" : "loinc/loinc-expand-class-regex-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-class-regex-total",
+        "description" : "The size of the expansion: count=0, and total must be 6332. Which codes a page of it holds is up to the server (see loinc-expand-class-regex)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-regex-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-regex-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-prop-component",
@@ -5568,10 +5685,18 @@
       },
       {
         "name" : "loinc-expand-prop-order-obs",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 56304. See loinc-expand-prop-order-obs-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-order-obs-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-order-obs-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-order-obs-total",
+        "description" : "The size of the expansion: count=0, and total must be 56304. Which codes a page of it holds is up to the server (see loinc-expand-prop-order-obs)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-order-obs-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-order-obs-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-concept-is-a",
@@ -5581,25 +5706,56 @@
         "response" : "loinc/loinc-expand-concept-is-a-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-implicit-part",
+        "description" : "LOINC's implicit value set for a Multi-Axial Hierarchy part, http://loinc.org/vs/[partcode], which LOINC defines as ancestor = [partcode]: all the codes the part subsumes (terms and parts), not the part itself. LP100039-9 Iloperidone",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-implicit-part-request-parameters.json",
+        "response" : "loinc/loinc-expand-implicit-part-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-copyright",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 7355. See loinc-expand-copyright-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-copyright-request-parameters.json",
         "response" : "loinc/loinc-expand-copyright-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-copyright-total",
+        "description" : "The size of the expansion: count=0, and total must be 7355. Which codes a page of it holds is up to the server (see loinc-expand-copyright)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-copyright-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-copyright-total-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-scale-type",
-        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test",
+        "description" : "SCALE_TYP filtered by the scale name (DOC), the legacy form. The Part code is the correct filter value for the six LOINC axes (COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP), but filtering by the name is so widespread in existing value sets that all servers are required to support it. The Part code form is tested by the -part twin of this test. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 12569. See loinc-expand-scale-type-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-scale-type-request-parameters.json",
         "response" : "loinc/loinc-expand-scale-type-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-scale-type-total",
+        "description" : "The size of the expansion: count=0, and total must be 12569. Which codes a page of it holds is up to the server (see loinc-expand-scale-type)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-scale-type-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-scale-type-total-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-scale-type-part",
-        "description" : "SCALE_TYP filtered by the Part code for the scale (LP32888-7 Doc), the correct value for the LOINC axes. Same codes as loinc-expand-scale-type",
+        "description" : "SCALE_TYP filtered by the Part code for the scale (LP32888-7 Doc), the correct value for the LOINC axes. Same codes as loinc-expand-scale-type. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 12569. See loinc-expand-scale-type-part-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-scale-type-part-request-parameters.json",
         "response" : "loinc/loinc-expand-scale-type-part-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-scale-type-part-total",
+        "description" : "The size of the expansion: count=0, and total must be 12569. Which codes a page of it holds is up to the server (see loinc-expand-scale-type-part)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-scale-type-part-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-scale-type-part-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-enum-good",
@@ -5687,17 +5843,33 @@
       },
       {
         "name" : "loinc-expand-class-scale",
-        "description" : "CLASS = PULM (the class name, which is the correct value: CLASS is a string property) together with SCALE_TYP = LP7753-9 (the Part code for Qn, the correct value for an axis). This is how the MII lung function value set mii-vs-lufu-lnc-observable is written",
+        "description" : "CLASS = PULM (the class name, which is the correct value: CLASS is a string property) together with SCALE_TYP = LP7753-9 (the Part code for Qn, the correct value for an axis). This is how the MII lung function value set mii-vs-lufu-lnc-observable is written. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 825. See loinc-expand-class-scale-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-scale-request-parameters.json",
         "response" : "loinc/loinc-expand-class-scale-response-valueSet.json"
       },
       {
+        "name" : "loinc-expand-class-scale-total",
+        "description" : "The size of the expansion: count=0, and total must be 825. Which codes a page of it holds is up to the server (see loinc-expand-class-scale)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-scale-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-scale-total-response-valueSet.json"
+      },
+      {
         "name" : "loinc-expand-class-part-scale",
-        "description" : "CLASS = LP7840-4 (the Part code for the class PULM) together with SCALE_TYP = LP7753-9. The class name is the correct value for CLASS, which is a string property (see loinc-expand-class-scale), but filtering CLASS by the Part code is so widespread in existing value sets (e.g. the MII lung function value set mii-vs-lufu-lnc-observable) that all servers are required to support it. Same codes as loinc-expand-class-scale",
+        "description" : "CLASS = LP7840-4 (the Part code for the class PULM) together with SCALE_TYP = LP7753-9. The class name is the correct value for CLASS, which is a string property (see loinc-expand-class-scale), but filtering CLASS by the Part code is so widespread in existing value sets (e.g. the MII lung function value set mii-vs-lufu-lnc-observable) that all servers are required to support it. Same codes as loinc-expand-class-scale. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 825. See loinc-expand-class-part-scale-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-part-scale-request-parameters.json",
         "response" : "loinc/loinc-expand-class-part-scale-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-class-part-scale-total",
+        "description" : "The size of the expansion: count=0, and total must be 825. Which codes a page of it holds is up to the server (see loinc-expand-class-part-scale)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-class-part-scale-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-class-part-scale-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-class-scale-good",
@@ -5771,10 +5943,18 @@
       },
       {
         "name" : "loinc-expand-filter-dockind-request-parameters",
-        "description" : "to be provided",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 3730. See loinc-expand-prop-dockind-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-dockind-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-dockind-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-dockind-total",
+        "description" : "The size of the expansion: count=0, and total must be 3730. Which codes a page of it holds is up to the server (see loinc-expand-filter-dockind-request-parameters)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-dockind-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-dockind-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-dockind-type-good",
@@ -5792,10 +5972,18 @@
       },
       {
         "name" : "loinc-expand-filter-no-method",
-        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true",
+        "description" : "LOINC terms with no method: METHOD_TYP exists false, restricted to LOINC terms by CLASSTYPE exists true. tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 50886. See loinc-expand-filter-no-method-total for the test all servers run",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-no-method-request-parameters.json",
         "response" : "loinc/loinc-expand-no-method-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-filter-no-method-total",
+        "description" : "The size of the expansion: count=0, and total must be 50886. Which codes a page of it holds is up to the server (see loinc-expand-filter-no-method)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-no-method-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-no-method-total-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-no-method-good",
@@ -6608,6 +6796,138 @@
         "operation" : "translate",
         "request" : "sct/translate-loinc-system-reverse-request.json",
         "response" : "sct/translate-loinc-system-reverse-response.json"
+      },{
+        "name" : "snomed-expand-property-inactive-rel",
+        "description" : "Inactive relationships are ignored: a property filter (363698007 = Kidney structure) does not match 50325005, whose only Kidney finding site row is inactive",
+        "operation" : "expand",
+        "request" : "sct/expand-property-inactive-rel-request.json",
+        "response" : "sct/expand-property-inactive-rel-response.json"
+      },{
+        "name" : "snomed-lookup-inactive-rel",
+        "description" : "Inactive relationships are ignored: $lookup of 50325005 lists neither the inactive finding site (Kidney structure) nor the inactive parent (Hepatorenal syndrome)",
+        "operation" : "lookup",
+        "request" : "sct/lookup-inactive-rel-request.json",
+        "response" : "sct/lookup-inactive-rel-response.json"
+      },{
+        "name" : "snomed-lookup-inactive-isa-child",
+        "description" : "Inactive relationships are ignored: $lookup of Hepatorenal syndrome does not list 50325005, whose is-a row to it is inactive, as a child",
+        "operation" : "lookup",
+        "request" : "sct/lookup-inactive-isa-child-request.json",
+        "response" : "sct/lookup-inactive-isa-child-response.json"
+      },{
+        "name" : "snomed-lookup-concrete",
+        "description" : "$lookup returns concrete values as properties, typed by value: a string, a boolean, decimals (the strength attributes are dec() in the MRCM, so #4000 is a decimal there), and an integer (int() in the MRCM)",
+        "operation" : "lookup",
+        "request" : "sct/lookup-concrete-request.json",
+        "response" : "sct/lookup-concrete-response.json"
+      },{
+        "name" : "snomed-lookup-all-properties",
+        "description" : "$lookup with property=* returns every property the SNOMED CT on FHIR page defines - including moduleId, sufficientlyDefined and semanticTag - except the normal forms, which have to be asked for by name",
+        "operation" : "lookup",
+        "request" : "sct/lookup-all-properties-request.json",
+        "response" : "sct/lookup-all-properties-response.json"
+      },{
+        "name" : "snomed-lookup-normal-form",
+        "description" : "$lookup returns the normal form when it is asked for by name (here normalFormTerse, without terms)",
+        "operation" : "lookup",
+        "request" : "sct/lookup-normal-form-request.json",
+        "response" : "sct/lookup-normal-form-response.json"
+      },{
+        "name" : "snomed-validate-implied-refset-map",
+        "description" : "The implicit value set ?fhir_vs=refset/ can name a map reference set: a concept mapped by the test edition's extended map is in it",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-implied-refset-map-request.json",
+        "response" : "sct/validate-code-implied-refset-map-response.json"
+      },{
+        "name" : "snomed-expand-implicit-ecl",
+        "description" : "The implicit value set ?fhir_vs=ecl/ (the ECL URL-encoded, as the SNOMED CT on FHIR page has it): << 16763008 |Hemorrhage of liver| gives the same codes as an inline is-a compose",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-ecl-request.json",
+        "response" : "sct/expand-implicit-ecl-response.json"
+      },{
+        "name" : "snomed-expand-implicit-edition",
+        "description" : "The implicit value set named by edition, with no version and no system-version: the latest version of the test edition the server has, here its only one",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-edition-request.json",
+        "response" : "sct/expand-implicit-edition-response.json"
+      },{
+        "name" : "snomed-expand-implicit-version",
+        "description" : "The implicit value set named by edition and version: that version of the test edition",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-version-request.json",
+        "response" : "sct/expand-implicit-version-response.json"
+      },{
+        "name" : "snomed-expand-implicit-system-version",
+        "description" : "The generic implicit value set form (http://snomed.info/sct?fhir_vs=...) is drawn from the edition system-version asks for: 1000071000003108 is a test edition extension concept, which a server's default edition does not have",
+        "operation" : "expand",
+        "request" : "sct/expand-implicit-system-version-request.json",
+        "response" : "sct/expand-implicit-system-version-response.json"
+      },{
+        "name" : "snomed-expand-isa-inactive-isa",
+        "description" : "Inactive relationships are ignored: an is-a filter on Hepatorenal syndrome does not include 50325005, whose is-a row to it is inactive",
+        "operation" : "expand",
+        "request" : "sct/expand-isa-inactive-isa-request.json",
+        "response" : "sct/expand-isa-inactive-isa-response.json"
+      },{
+        "name" : "subsumes-inactive-isa",
+        "description" : "Inactive relationships are ignored: Hepatorenal syndrome does not subsume 50325005, whose is-a row to it is inactive",
+        "operation" : "subsumes",
+        "request" : "sct/subsumes-inactive-isa-request.json",
+        "response" : "sct/subsumes-inactive-isa-response.json"
+      },{
+        "name" : "snomed-expand-concept-in",
+        "description" : "concept in with three plain codes: in means any of the listed codes, so all three are in the expansion",
+        "operation" : "expand",
+        "request" : "sct/expand-concept-in-request.json",
+        "response" : "sct/expand-concept-in-response.json"
+      },{
+        "name" : "snomed-validate-concept-in",
+        "description" : "concept in with three plain codes: one of the listed codes is in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-concept-in-request.json",
+        "response" : "sct/validate-code-concept-in-response.json"
+      },{
+        "name" : "snomed-expand-code-in",
+        "description" : "code in with three plain codes: code is the same filter property as concept (value sets in production use it), so all three are in the expansion",
+        "operation" : "expand",
+        "request" : "sct/expand-code-in-request.json",
+        "response" : "sct/expand-code-in-response.json"
+      },{
+        "name" : "snomed-validate-code-in",
+        "description" : "code in with three plain codes: code is the same filter property as concept, so one of the listed codes is in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-code-in-request.json",
+        "response" : "sct/validate-code-code-in-response.json"
+      },{
+        "name" : "snomed-expand-descendent-leaf",
+        "description" : "descendent-leaf (R5): only the descendants of Hemorrhage of liver that have no children; neither the concept itself nor the descendants with children",
+        "operation" : "expand",
+        "request" : "sct/expand-descendent-leaf-request.json",
+        "response" : "sct/expand-descendent-leaf-response.json"
+      },{
+        "name" : "snomed-expand-is-not-a",
+        "description" : "is-not-a (R5): is-a Hemorrhage of liver, less Traumatic hemorrhage of liver and its descendants",
+        "operation" : "expand",
+        "request" : "sct/expand-is-not-a-request.json",
+        "response" : "sct/expand-is-not-a-response.json"
+      },{
+        "name" : "snomed-expand-display-regex",
+        "description" : "display regex: matches every active description in one language (here the edition default, English), the whole term, case-sensitively",
+        "operation" : "expand",
+        "request" : "sct/expand-display-regex-request.json",
+        "response" : "sct/expand-display-regex-response.json"
+      },{
+        "name" : "snomed-validate-display-regex",
+        "description" : "display regex: a concept with a matching English description is in the value set",
+        "operation" : "validate-code",
+        "request" : "sct/validate-code-display-regex-request.json",
+        "response" : "sct/validate-code-display-regex-response.json"
+      },{
+        "name" : "snomed-expand-display-regex-nl",
+        "description" : "display regex in another language: with displayLanguage nl, the Dutch descriptions are matched (the test edition's TEST1000003 Dutch descriptions and language reference set), and the displays are the Dutch preferred terms",
+        "operation" : "expand",
+        "request" : "sct/expand-display-regex-nl-request.json",
+        "response" : "sct/expand-display-regex-nl-response.json"
       }
     ]
   },{
@@ -7489,6 +7809,13 @@
         "response" : "sct/ecl/expand-ecl-description-filter-term-response.json"
       },
       {
+        "name" : "snomed-expand-ecl-description-filter-term-no-d",
+        "description" : "Description filter without the D: {{ term = \"lobe liv\" }} - ECL 2.2 makes the D optional, so this is the same filter as snomed-expand-ecl-description-filter-term, with the same 27 results",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-term-no-d-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-term-no-d-response.json"
+      },
+      {
         "name" : "snomed-expand-ecl-description-filter-term-set",
         "description" : "Description filter with a term set - any of the terms may match (26 results).",
         "operation" : "expand",
@@ -8219,6 +8546,120 @@
         "operation" : "expand",
         "request" : "sct/ecl/expand-ecl-dotted-request.json",
         "response" : "sct/ecl/expand-ecl-dotted-response.json"
+      },{
+        "name" : "snomed-expand-ecl-refinement-inactive-rel",
+        "description" : "Inactive relationships are ignored: a refinement (363698007 = Kidney structure) does not match 50325005, whose only Kidney finding site row is inactive",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-inactive-rel-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-inactive-rel-response.json"
+      },{
+        "name" : "snomed-expand-ecl-descendants-inactive-isa",
+        "description" : "Inactive relationships are ignored: << Hepatorenal syndrome does not include 50325005, whose is-a row to it is inactive",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-descendants-inactive-isa-request.json",
+        "response" : "sct/ecl/expand-ecl-descendants-inactive-isa-response.json"
+      },{
+        "name" : "snomed-expand-ecl-description-filter-wild-all-language",
+        "description" : "Description filter over the whole edition with a language: * {{ D term = wild:\"*hematoma*\", language = en }} - the same concepts as the display regex test snomed-expand-display-regex",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-wild-all-language-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-wild-all-language-response.json"
+      },{
+        "name" : "snomed-expand-ecl-description-filter-wild-nl",
+        "description" : "Description filter in another language: * {{ D term = wild:\"*hematoom*\", language = nl }} - the same concepts as snomed-expand-display-regex-nl, with the default (English) displays",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-description-filter-wild-nl-request.json",
+        "response" : "sct/ecl/expand-ecl-description-filter-wild-nl-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-decimal-literal",
+        "description" : "A decimal literal against an integer-valued attribute: concentration strength numerator > #599.5 (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-decimal-literal-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-decimal-literal-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-decimal",
+        "description" : "Decimal concrete values (test edition extension): test potency >= #0.75 matches both #0.75 and #2.5 (2 results)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-decimal-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-decimal-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-decimal-equals",
+        "description" : "Decimal concrete values compare by value: #2.50 equals #2.5 (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-decimal-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-decimal-equals-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-grouped",
+        "description" : "Two concrete values in the same relationship group: presentation strength 4000 per 1 (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-grouped-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-grouped-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-type-mismatch",
+        "description" : "A string value never matches a numeric concrete value, even one that reads the same: nothing has presentation strength numerator \"4000\" (0 results)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-type-mismatch-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-type-mismatch-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-string",
+        "description" : "String concrete values (test edition extension): the nickname is exactly \"Barium milkshake\" (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-string-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-string-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-string-not-equals",
+        "description" : "String concrete values: != matches the concepts that have the attribute with another value (a concept without the attribute does not match) (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-string-not-equals-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-string-not-equals-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-string-wild",
+        "description" : "String concrete values with a wild search term: a nickname ending in capsule (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-string-wild-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-string-wild-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-boolean-true",
+        "description" : "Boolean concrete values (test edition extension): fish-derived products (2 results)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-boolean-true-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-boolean-true-response.json"
+      },{
+        "name" : "snomed-expand-ecl-concrete-boolean-false",
+        "description" : "Boolean concrete values: products that are not fish-derived (1 result)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-concrete-boolean-false-request.json",
+        "response" : "sct/ecl/expand-ecl-concrete-boolean-false-response.json"
+      },{
+        "name" : "snomed-validate-ecl-concrete-code-in",
+        "description" : "validate-code against a concrete value refinement: presentation strength numerator = #4000: a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-concrete-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-concrete-code-in-response.json"
+      },{
+        "name" : "snomed-validate-ecl-concrete-code-out",
+        "description" : "validate-code against a concrete value refinement: presentation strength numerator = #4000: a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-concrete-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-concrete-code-out-response.json"
+      },{
+        "name" : "snomed-expand-ecl-memberOf-simple-map",
+        "description" : "Map reference sets have members: a simple map (mapTarget) with two members",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-simple-map-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-simple-map-response.json"
+      },{
+        "name" : "snomed-expand-ecl-memberOf-extended-map",
+        "description" : "Map reference sets have members: an extended map with three active rows for two concepts (one concept is mapped in two map groups) and an inactive row for a third; each member concept appears once, and the inactive row does not count",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-extended-map-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-extended-map-response.json"
+      },{
+        "name" : "snomed-expand-ecl-member-filter-map-target",
+        "description" : "A member filter on a map reference set field: the extended map rows whose mapTarget is Y92.9",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-member-filter-map-target-request.json",
+        "response" : "sct/ecl/expand-ecl-member-filter-map-target-response.json"
       }
     ]
   },{

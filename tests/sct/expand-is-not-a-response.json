@@ -1,0 +1,77 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-is-not-a",
+  "version" : "5.0.0",
+  "title" : "SCT Hemorrhage of liver, not traumatic",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-02",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 9,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111371005",
+      "display" : "Subcapsular hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16763008",
+      "display" : "Hemorrhage of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197342009",
+      "display" : "Hepatitis in yellow fever"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "197364000",
+      "display" : "Central hemorrhagic necrosis of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262796008",
+      "display" : "Liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262797004",
+      "display" : "Subcapsular liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "262798009",
+      "display" : "Intrahepatic hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405559000",
+      "display" : "Spontaneous subcapsular liver hematoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "735677007",
+      "display" : "Neonatal hemorrhage of liver"
+    }]
+  }
+}

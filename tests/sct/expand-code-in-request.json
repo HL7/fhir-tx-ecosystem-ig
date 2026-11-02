@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+        "resourceType" : "ValueSet",
+        "id" : "sct-code-in",
+        "url" : "http://hl7.org/fhir/test/ValueSet/sct-code-in",
+        "version" : "5.0.0",
+        "title" : "SCT code in",
+        "status" : "active",
+        "experimental" : false,
+        "date" : "2026-11-02",
+        "publisher" : "FHIR Project",
+        "description" : "Three plain concepts listed with code in (code is taken as the same property as concept): in means any of the listed codes",
+        "compose" : {
+          "include" : [{
+            "system" : "http://snomed.info/sct",
+            "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+            "filter" : [{ "property" : "code", "op" : "in", "value" : "10200004,50325005,51292008" }]
+          }]
+        }
+      }
+  }]
+}
