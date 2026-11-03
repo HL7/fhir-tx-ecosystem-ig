@@ -1,0 +1,44 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose", "extension"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/extensions-supplement-version",
+  "version" : "5.0.0",
+  "name" : "ExtensionsValueSetSupplementVersion",
+  "title" : "Extensions ValueSet - supplement version",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "displayLanguage",
+      "valueCode" : "nl"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/extensions"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement-versions|0.9.0-request"
+    }],
+    "property" : [{
+      "code" : "order",
+      "uri" : "http://hl7.org/fhir/concept-properties#order"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+      "code" : "code1",
+      "display" : "versie twee",
+      "property" : [{
+        "code" : "order",
+        "valueDecimal" : 6
+      }]
+    }]
+  }
+}

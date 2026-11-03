@@ -1,0 +1,73 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "valueSet",
+      "resource" : {
+        "resourceType" : "ValueSet",
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/valueset-supplement",
+            "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement-versions"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/test/ValueSet/extensions-supplement-version",
+        "version" : "5.0.0",
+        "name" : "ExtensionsValueSetSupplementVersion",
+        "title" : "Extensions ValueSet - supplement version",
+        "status" : "active",
+        "experimental" : false,
+        "date" : "2026-11-03",
+        "publisher" : "FHIR Project",
+        "compose" : {
+          "include" : [
+            {
+              "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+              "concept" : [
+                {
+                  "code" : "code1"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name" : "tx-resource",
+      "resource" : {
+        "resourceType" : "CodeSystem",
+        "id" : "supplement-versions-request",
+        "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-versions",
+        "version" : "0.9.0-request",
+        "name" : "SupplementVersionsTestCodeSystem",
+        "title" : "Supplement Versions Test Code System (an older version, passed with the request)",
+        "status" : "active",
+        "experimental" : false,
+        "date" : "2026-11-03",
+        "publisher" : "FHIR Project",
+        "content" : "supplement",
+        "supplements" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+        "concept" : [
+          {
+            "code" : "code1",
+            "designation" : [
+              {
+                "language" : "nl",
+                "value" : "versie twee"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name" : "useSupplement",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement-versions|0.9.0-request"
+    },
+    {
+      "name" : "displayLanguage",
+      "valueCode" : "nl"
+    }
+  ]
+}

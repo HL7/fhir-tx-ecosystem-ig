@@ -1102,7 +1102,7 @@
       },
       {
         "name" : "glp-expand-pinned-other-version",
-        "description" : "A supplement only applies to the version of the code system it names: a global language pack for glp-base|0.9.0 is not used on glp-base 1.0.0 (the only version the server has, chosen because the request names none), so the French displays are the code system's own, and it is not a used-supplement",
+        "description" : "A supplement only applies to the version of the code system it names: a global language pack for glp-base|0.9.0 is not used on glp-base 1.0.0 (the only version the server has, chosen because the request names none), so the French displays are the code system's own, and it is not a used-supplement (reporting the German pack as used is optional, as in glp-expand-en)",
         "operation" : "expand",
         "request" : "global-lang-pack/glp-expand-pinned-other-version-request.json",
         "response" : "global-lang-pack/glp-expand-pinned-other-version-response.json"
@@ -1114,20 +1114,6 @@
         "http-code" : "4xx",
         "request" : "global-lang-pack/glp-expand-pinned-other-version-required-request.json",
         "response" : "global-lang-pack/glp-expand-pinned-other-version-required-response.json"
-      },
-      {
-        "name" : "glp-expand-search-de",
-        "description" : "A text filter searches the designations of supplements in use as well, in the language searched: with displayLanguage=de, the global language pack's German display matches",
-        "operation" : "expand",
-        "request" : "global-lang-pack/glp-expand-search-de-request.json",
-        "response" : "global-lang-pack/glp-expand-search-de-response.json"
-      },
-      {
-        "name" : "glp-expand-search-no-language",
-        "description" : "With no language asked for, the code system's own language (English) is searched, so the language pack's German display does not match",
-        "operation" : "expand",
-        "request" : "global-lang-pack/glp-expand-search-no-language-request.json",
-        "response" : "global-lang-pack/glp-expand-search-no-language-response.json"
       }
     ]
   },{
@@ -1355,7 +1341,7 @@
     "name" : "extensions",
     "mode" : "general",
     "description" : "Testing proper handling of extensions, which depends on the extension",
-    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json", "extensions/codesystem-supplement-hierarchy.json", "extensions/codesystem-supplement-hierarchy-de.json", "extensions/codesystem-supplement-hierarchy-nl.json", "extensions/codesystem-supplement-hierarchy-nolang.json", "extensions/valueset-extensions-supplement-prop.json", "extensions/valueset-extensions-supplement-prop-base.json"],
+    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json", "extensions/codesystem-supplement-hierarchy.json", "extensions/codesystem-supplement-hierarchy-de.json", "extensions/codesystem-supplement-hierarchy-nl.json", "extensions/codesystem-supplement-hierarchy-nolang.json", "extensions/valueset-extensions-supplement-prop.json", "extensions/valueset-extensions-supplement-prop-base.json", "extensions/codesystem-supplement-versions.json"],
     "extensions-handled-doco": [
       "http://hl7.org/fhir/StructureDefinition/valueset-supplement", "http://hl7.org/fhir/StructureDefinition/valueset-deprecated", "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
       "http://hl7.org/fhir/StructureDefinition/coding-sctdescid", "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder", "http://hl7.org/fhir/StructureDefinition/valueset-label",
@@ -1511,7 +1497,7 @@
       },
       {
         "name" : "validate-supplement-prop-base-code5",
-        "description" : "$validate-code against the same value set: code5 passes both filters",
+        "description" : "$validate-code against the same value set: code5 passes both filters (and is deprecated, which is reported as it is for a value set that lists it)",
         "operation" : "validate-code",
         "request" : "extensions/validate-supplement-prop-base-code5-request-parameters.json",
         "response" : "extensions/validate-supplement-prop-base-code5-response-parameters.json"
@@ -1522,6 +1508,13 @@
         "operation" : "validate-code",
         "request" : "extensions/validate-supplement-prop-base-code4-request-parameters.json",
         "response" : "extensions/validate-supplement-prop-base-code4-response-parameters.json"
+      },
+      {
+        "name" : "expand-supplement-version",
+        "description" : "Two versions of the same supplement are in scope - the server has 1.0.0, which the value set names without a version, and the request passes 0.9.0-request in tx-resource and asks for it by version with useSupplement url|version: only the version asked for is used (not the later one), and used-supplement reports that exact version (0.9.0-request, whose Dutch display is the one in the expansion). The supplement has its own url, used by no other test, so that the request's version can't affect another test",
+        "operation" : "expand",
+        "request" : "extensions/expand-supplement-version-request-parameters.json",
+        "response" : "extensions/expand-supplement-version-response-valueSet.json"
       }
     ]
   },{
@@ -5213,7 +5206,7 @@
     "name" : "search",
     "mode" : "general",
     "description" : "Tests for proper functioning of text search. Note what we're not interested in the implementation of the text search itself, so we only test very obvious results. We're just interested in testing support for the parameter",
-    "setup" : [ "search/codesystem-search.json", "search/valueset-search-all.json", "search/valueset-search-enum.json", "search/valueset-search-filter.json"],
+    "setup" : [ "search/codesystem-search.json", "search/valueset-search-all.json", "search/valueset-search-enum.json", "search/valueset-search-filter.json", "search/codesystem-search-fr.json"],
     "tests" : [
       {
         "name" : "search-all-yes",
@@ -5286,6 +5279,20 @@
         "operation" : "expand",
         "request" : "search/search-expand-filter-de-yes-request.json",
         "response" : "search/search-expand-filter-de-yes-response.json"
+      },
+      {
+        "name" : "search-all-supplement-fr-yes",
+        "description" : "A text filter searches the designations of supplements in use as well, in the language searched: with displayLanguage=fr, the French designation that the referenced language pack gives matches",
+        "operation" : "expand",
+        "request" : "search/search-expand-all-supplement-fr-yes-request.json",
+        "response" : "search/search-expand-all-supplement-fr-yes-response.json"
+      },
+      {
+        "name" : "search-all-supplement-fr-no-language",
+        "description" : "With no language asked for, the code system's own language (English) is searched, so the language pack's French designation does not match",
+        "operation" : "expand",
+        "request" : "search/search-expand-all-supplement-fr-no-language-request.json",
+        "response" : "search/search-expand-all-supplement-fr-no-language-response.json"
       }
     ]
   },{

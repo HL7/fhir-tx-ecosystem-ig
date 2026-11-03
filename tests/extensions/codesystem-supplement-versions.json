@@ -1,0 +1,25 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-versions",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-versions",
+  "version" : "1.0.0",
+  "name" : "SupplementVersionsTestCodeSystem",
+  "title" : "Supplement Versions Test Code System (the version the server has)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+  "concept" : [
+    {
+      "code" : "code1",
+      "designation" : [
+        {
+          "language" : "nl",
+          "value" : "versie een"
+        }
+      ]
+    }
+  ]
+}

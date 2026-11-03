@@ -1740,5 +1740,8 @@
   "extensions/validate-supplement-prop-base-code4-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'",
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'"
+  },
+  "extensions/validate-supplement-prop-base-code5-response-parameters.json" : {
+    "1" : "The concept 'code5' is deprecated and its use should be reviewed"
   }
 }

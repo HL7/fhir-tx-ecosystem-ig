@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/search-all"
+    },
+    {
+      "name" : "filter",
+      "valueString" : "sommaire"
+    },
+    {
+      "name" : "useSupplement",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/search-fr"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "resourceType" : "CodeSystem",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "lang-pack"
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/search-fr",
+  "version" : "1.0.0",
+  "name" : "SearchTestSystemFrench",
+  "title" : "Search Test System - French (a language pack, used when referenced)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/search",
+  "concept" : [{
+    "code" : "summary",
+    "designation" : [{
+      "language" : "fr",
+      "value" : "Sommaire"
+    }]
+  }]
+}

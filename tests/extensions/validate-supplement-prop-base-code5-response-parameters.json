@@ -9,8 +9,41 @@
     "valueString" : "Display 5"
   },
   {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "DEPRECATED_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "$external:1:code5|deprecated$"
+        },
+        "location" : ["Coding"],
+        "expression" : ["Coding"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:1:code5|deprecated$"
+  },
+  {
     "name" : "result",
     "valueBoolean" : true
+  },
+  {
+    "name" : "status",
+    "valueCode" : "deprecated"
   },
   {
     "name" : "system",
