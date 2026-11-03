@@ -1,0 +1,58 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "codeInactive"
+  },
+  {
+    "$optional$" : true,
+    "name" : "display",
+    "valueString" : "Display inactive"
+  },
+  {
+    "name" : "inactive",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "INACTIVE_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "$external:1:codeInactive|inactive$"
+        },
+        "location" : ["Coding"],
+        "expression" : ["Coding"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:1:codeInactive|inactive$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/inactive"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0",
+    "$optional$" : "warning:version"
+  }]
+}

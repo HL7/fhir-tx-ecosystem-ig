@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "inactive-filter",
+  "url" : "http://hl7.org/fhir/test/ValueSet/inactive-filter",
+  "version" : "5.0.0",
+  "name" : "InactiveFilter",
+  "title" : "Inactive Test - filter, inactive codes allowed",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "inactive" : true,
+    "include" : [
+      {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/inactive",
+        "filter" : [
+          {
+            "property" : "concept",
+            "op" : "in",
+            "value" : "codeActive,codeInactive"
+          }
+        ]
+      }
+    ]
+  }
+}

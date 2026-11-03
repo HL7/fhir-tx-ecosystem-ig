@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "inactive-enumerated",
+  "url" : "http://hl7.org/fhir/test/ValueSet/inactive-enumerated",
+  "version" : "5.0.0",
+  "name" : "InactiveEnumerated",
+  "title" : "Inactive Test - enumerated, inactive codes allowed",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "inactive" : true,
+    "include" : [
+      {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/inactive",
+        "concept" : [
+          {
+            "code" : "codeActive"
+          },
+          {
+            "code" : "codeInactive"
+          }
+        ]
+      }
+    ]
+  }
+}

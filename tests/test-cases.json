@@ -4576,7 +4576,7 @@
     "name" : "inactive",
     "mode" : "general",
     "description" : "Testing Inactive codes",
-    "setup" : ["inactive/codesystem-inactive.json","inactive/valueset-all.json","inactive/valueset-all-inactive.json","inactive/valueset-all-active.json"],
+    "setup" : ["inactive/codesystem-inactive.json","inactive/valueset-all.json","inactive/valueset-all-inactive.json","inactive/valueset-all-active.json", "inactive/valueset-enumerated.json", "inactive/valueset-filter.json"],
     "tests" : [
       {
         "name" : "inactive-expand",
@@ -4675,6 +4675,27 @@
         "operation" : "validate-code",
         "request" : "inactive/validate-inactive-5-request-parameters.json",
         "response" : "inactive/validate-inactive-5-response-parameters.json"
+      },
+      {
+        "name" : "inactive-enum-validate",
+        "description" : "An inactive code that a value set lists (compose.inactive = true): it is in the value set, with a warning that it is inactive",
+        "operation" : "validate-code",
+        "request" : "inactive/validate-inactive-enum-request-parameters.json",
+        "response" : "inactive/validate-inactive-enum-response-parameters.json"
+      },
+      {
+        "name" : "inactive-enum-activeonly-validate",
+        "description" : "The same with activeOnly = true: the code is validated against the value set as expanded with activeOnly, which has no inactive codes, so it is not in the value set - however the value set includes it (as for a value set that includes all the code system: validation-simple-coding-bad-code-inactive)",
+        "operation" : "validate-code",
+        "request" : "inactive/validate-inactive-enum-activeonly-request-parameters.json",
+        "response" : "inactive/validate-inactive-enum-activeonly-response-parameters.json"
+      },
+      {
+        "name" : "inactive-filter-activeonly-validate",
+        "description" : "The same for a value set that selects the code with a filter: with activeOnly = true, the inactive code is not in the value set",
+        "operation" : "validate-code",
+        "request" : "inactive/validate-inactive-filter-activeonly-request-parameters.json",
+        "response" : "inactive/validate-inactive-filter-activeonly-response-parameters.json"
       }
     ]
   },{

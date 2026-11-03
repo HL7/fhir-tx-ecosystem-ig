@@ -1743,5 +1743,20 @@
   },
   "extensions/validate-supplement-prop-base-code5-response-parameters.json" : {
     "1" : "The concept 'code5' is deprecated and its use should be reviewed"
+  },
+  "inactive/validate-inactive-enum-response-parameters.json" : {
+    "1" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
+  },
+  "inactive/validate-inactive-enum-activeonly-response-parameters.json" : {
+    "1" : "The concept 'codeInactive' is valid but is not active",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-enumerated|5.0.0'",
+    "3" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed",
+    "4" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed; The concept 'codeInactive' is valid but is not active; The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-enumerated|5.0.0'"
+  },
+  "inactive/validate-inactive-filter-activeonly-response-parameters.json" : {
+    "1" : "The concept 'codeInactive' is valid but is not active",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-filter|5.0.0'",
+    "3" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed",
+    "4" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed; The concept 'codeInactive' is valid but is not active; The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-filter|5.0.0'"
   }
 }
