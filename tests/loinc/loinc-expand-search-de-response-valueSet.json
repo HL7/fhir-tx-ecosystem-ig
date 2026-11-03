@@ -1,0 +1,50 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-lab",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetEnumeratedLab",
+  "title" : "LOINC ValueSet Enumerated Lab",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "displayLanguage",
+      "valueCode" : "de-DE"
+    },
+    {
+      "name" : "filter",
+      "valueString" : "volumen"
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "2160-0",
+      "display" : "Creatinin [Masse/Volumen] in Serum oder Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2345-7",
+      "display" : "Glucose [Masse/Volumen] in Serum oder Plasma"
+    }]
+  }
+}

@@ -19,11 +19,19 @@
   {
     "code" : "summary",
     "display" : "Summary",
-    "definition" : "A summary report that returns the number of members in each population criteria for the measure."
+    "definition" : "A summary report that returns the number of members in each population criteria for the measure.",
+    "designation" : [{
+      "language" : "de",
+      "value" : "Zusammenfassung"
+    }]
   },
   {
     "code" : "data-exchange",
     "display" : "Data Exchange",
+    "designation" : [{
+      "language" : "de",
+      "value" : "Datenaustausch"
+    }],
     "concept" : [{
       "code" : "data-exchange1",
       "display" : "Data Exchange1"

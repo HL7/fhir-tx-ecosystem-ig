@@ -1,0 +1,54 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-prop-component",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterPropertyComponent",
+  "title" : "LOINC ValueSet Filter by PropertyComponent",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "displayLanguage",
+      "valueCode" : "de-DE"
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "filter",
+      "valueString" : "liquor"
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "14744-7",
+      "display" : "Glucose [Mol/Volumen] in Liquor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2342-4",
+      "display" : "Glucose [Masse/Volumen] in Liquor"
+    }]
+  }
+}

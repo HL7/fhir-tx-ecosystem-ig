@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base"
+  },{
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+      "code" : "code4"
+    }
+  }]
+}

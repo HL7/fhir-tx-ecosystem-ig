@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-prop-component"
+    },
+    {
+      "name" : "filter",
+      "valueString" : "liquor"
+    },
+    {
+      "name" : "displayLanguage",
+      "valueCode" : "de-DE"
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    }
+  ]
+}

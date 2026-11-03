@@ -1114,6 +1114,20 @@
         "http-code" : "4xx",
         "request" : "global-lang-pack/glp-expand-pinned-other-version-required-request.json",
         "response" : "global-lang-pack/glp-expand-pinned-other-version-required-response.json"
+      },
+      {
+        "name" : "glp-expand-search-de",
+        "description" : "A text filter searches the designations of supplements in use as well, in the language searched: with displayLanguage=de, the global language pack's German display matches",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-expand-search-de-request.json",
+        "response" : "global-lang-pack/glp-expand-search-de-response.json"
+      },
+      {
+        "name" : "glp-expand-search-no-language",
+        "description" : "With no language asked for, the code system's own language (English) is searched, so the language pack's German display does not match",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-expand-search-no-language-request.json",
+        "response" : "global-lang-pack/glp-expand-search-no-language-response.json"
       }
     ]
   },{
@@ -1341,7 +1355,7 @@
     "name" : "extensions",
     "mode" : "general",
     "description" : "Testing proper handling of extensions, which depends on the extension",
-    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json", "extensions/codesystem-supplement-hierarchy.json", "extensions/codesystem-supplement-hierarchy-de.json", "extensions/codesystem-supplement-hierarchy-nl.json", "extensions/codesystem-supplement-hierarchy-nolang.json"],
+    "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json", "extensions/codesystem-supplement-hierarchy.json", "extensions/codesystem-supplement-hierarchy-de.json", "extensions/codesystem-supplement-hierarchy-nl.json", "extensions/codesystem-supplement-hierarchy-nolang.json", "extensions/valueset-extensions-supplement-prop.json", "extensions/valueset-extensions-supplement-prop-base.json"],
     "extensions-handled-doco": [
       "http://hl7.org/fhir/StructureDefinition/valueset-supplement", "http://hl7.org/fhir/StructureDefinition/valueset-deprecated", "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
       "http://hl7.org/fhir/StructureDefinition/coding-sctdescid", "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder", "http://hl7.org/fhir/StructureDefinition/valueset-label",
@@ -1480,6 +1494,34 @@
         "operation" : "cs-validate-code",
         "request" : "extensions/validate-supplement-nolang-other-lang-request-parameters.json",
         "response" : "extensions/validate-supplement-nolang-other-lang-response-parameters.json"
+      },
+      {
+        "name" : "expand-supplement-prop",
+        "description" : "A filter on a property that the supplement defines (prop1), not the code system: while the supplement is in use, the filter selects the codes the supplement gives that value (code5)",
+        "operation" : "expand",
+        "request" : "extensions/expand-supplement-prop-request-parameters.json",
+        "response" : "extensions/expand-supplement-prop-response-valueSet.json"
+      },
+      {
+        "name" : "expand-supplement-prop-base",
+        "description" : "The same filter with a filter on the code system (concept in code4,code5): a code has to pass both, so code4 is not in the expansion",
+        "operation" : "expand",
+        "request" : "extensions/expand-supplement-prop-base-request-parameters.json",
+        "response" : "extensions/expand-supplement-prop-base-response-valueSet.json"
+      },
+      {
+        "name" : "validate-supplement-prop-base-code5",
+        "description" : "$validate-code against the same value set: code5 passes both filters",
+        "operation" : "validate-code",
+        "request" : "extensions/validate-supplement-prop-base-code5-request-parameters.json",
+        "response" : "extensions/validate-supplement-prop-base-code5-response-parameters.json"
+      },
+      {
+        "name" : "validate-supplement-prop-base-code4",
+        "description" : "$validate-code against the same value set: code4 passes the code system filter, but the supplement doesn't give it prop1 = value1, so it is not in the value set",
+        "operation" : "validate-code",
+        "request" : "extensions/validate-supplement-prop-base-code4-request-parameters.json",
+        "response" : "extensions/validate-supplement-prop-base-code4-response-parameters.json"
       }
     ]
   },{
@@ -5216,6 +5258,34 @@
         "operation" : "expand",
         "request" : "search/search-expand-enum-no-request.json",
         "response" : "search/search-expand-enum-no-response.json"
+      },
+      {
+        "name" : "search-all-de-yes",
+        "description" : "A text filter matches displays and designations in one language: the first language the request asks for that the code system has, else the code system's own. With displayLanguage=de, a German designation matches",
+        "operation" : "expand",
+        "request" : "search/search-expand-all-de-yes-request.json",
+        "response" : "search/search-expand-all-de-yes-response.json"
+      },
+      {
+        "name" : "search-all-de-no-language",
+        "description" : "A text filter matches displays and designations in one language: the first language the request asks for that the code system has, else the code system's own. With no language asked for, the code system's own (English) is searched, so the German designation does not match",
+        "operation" : "expand",
+        "request" : "search/search-expand-all-de-no-language-request.json",
+        "response" : "search/search-expand-all-de-no-language-response.json"
+      },
+      {
+        "name" : "search-enum-de-yes",
+        "description" : "The same for a value set that lists the code: with displayLanguage=de, its German designation matches",
+        "operation" : "expand",
+        "request" : "search/search-expand-enum-de-yes-request.json",
+        "response" : "search/search-expand-enum-de-yes-response.json"
+      },
+      {
+        "name" : "search-filter-de-yes",
+        "description" : "The same for a value set with a filter: with displayLanguage=de, the German designation matches (the children have none)",
+        "operation" : "expand",
+        "request" : "search/search-expand-filter-de-yes-request.json",
+        "response" : "search/search-expand-filter-de-yes-response.json"
       }
     ]
   },{
@@ -5616,6 +5686,27 @@
         "operation" : "expand",
         "request" : "loinc/loinc-expand-compose-property-request-parameters.json",
         "response" : "loinc/loinc-expand-compose-property-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-search-de",
+        "description" : "A text filter matches names in one language: with displayLanguage=de-DE, the German names (Glucose [Masse/Volumen] in Serum oder Plasma) are searched",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-search-de-request-parameters.json",
+        "response" : "loinc/loinc-expand-search-de-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-search-no-language",
+        "description" : "With no language asked for, English is searched, so a word only in the German names matches nothing",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-search-no-language-request-parameters.json",
+        "response" : "loinc/loinc-expand-search-no-language-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-search-filter-de",
+        "description" : "A text filter in German with a property filter (COMPONENT = Glucose): the codes with Liquor in their German name",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-search-filter-de-request-parameters.json",
+        "response" : "loinc/loinc-expand-search-filter-de-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-all",

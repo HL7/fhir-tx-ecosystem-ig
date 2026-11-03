@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "extensions-supplement-prop",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/valueset-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
+  }],
+  "url" : "http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop",
+  "version" : "5.0.0",
+  "name" : "ExtensionsValueSetSupplementProp",
+  "title" : "Extensions ValueSet - filter on a property the supplement defines",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+      "filter" : [{
+        "property" : "prop1",
+        "op" : "=",
+        "value" : "value1"
+      }]
+    }]
+  }
+}

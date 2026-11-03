@@ -1,0 +1,30 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "extensions-supplement-prop-base",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/valueset-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
+  }],
+  "url" : "http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base",
+  "version" : "5.0.0",
+  "name" : "ExtensionsValueSetSupplementPropBase",
+  "title" : "Extensions ValueSet - filter on a property the supplement defines, with a code system filter",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "in",
+        "value" : "code4,code5"
+      },{
+        "property" : "prop1",
+        "op" : "=",
+        "value" : "value1"
+      }]
+    }]
+  }
+}

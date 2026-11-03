@@ -1736,5 +1736,9 @@
   },
   "bugs/expand-cpt-response.json" : {
     "1" : "The value set 'undefined' expansion has too many codes to produce (>3000)"
+  },
+  "extensions/validate-supplement-prop-base-code4-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'"
   }
 }

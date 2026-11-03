@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueUri" : "http://hl7.org/fhir/test/ValueSet/search-enum"
+    },
+    {
+      "name" : "filter",
+      "valueString" : "datenaustausch"
+    },
+    {
+      "name" : "displayLanguage",
+      "valueCode" : "de"
+    }
+  ]
+}

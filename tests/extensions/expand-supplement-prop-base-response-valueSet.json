@@ -1,0 +1,61 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose", "extension"],
+  "resourceType" : "ValueSet",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/valueset-supplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
+  }],
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base",
+  "version" : "5.0.0",
+  "name" : "ExtensionsValueSetSupplementPropBase",
+  "title" : "Extensions ValueSet - filter on a property the supplement defines, with a code system filter",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/extensions"
+    },
+    {
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
+    }],
+    "property" : [{
+      "code" : "label",
+      "uri" : "http://hl7.org/fhir/concept-properties#label"
+    },
+    {
+      "code" : "order",
+      "uri" : "http://hl7.org/fhir/concept-properties#order"
+    },
+    {
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
+      "code" : "code5",
+      "display" : "Display 5",
+      "property" : [{
+        "code" : "label",
+        "valueString" : "e."
+      },
+      {
+        "code" : "order",
+        "valueDecimal" : 2
+      },
+      {
+        "code" : "status",
+        "valueCode" : "deprecated"
+      }]
+    }]
+  }
+}

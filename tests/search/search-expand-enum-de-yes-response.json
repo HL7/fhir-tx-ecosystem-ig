@@ -1,0 +1,33 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/search-enum",
+  "version" : "6.0.0",
+  "name" : "SearchEnumTest",
+  "status" : "draft",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "displayLanguage",
+      "valueCode" : "de"
+    },
+    {
+      "name" : "filter",
+      "valueString" : "datenaustausch"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/search"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search",
+      "code" : "data-exchange",
+      "display" : "Datenaustausch"
+    }]
+  }
+}
