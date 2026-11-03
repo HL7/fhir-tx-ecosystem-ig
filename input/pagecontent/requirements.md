@@ -533,6 +533,12 @@ supports, and SHALL observe the distinctions between them *(suites: `simple-case
   code system, including the code above it and other branches, is included
 * `child-of` includes the direct children only, and not the code named in the filter
 * `=`, `in`, `not-in`, `exists` and `regex` on concept properties
+* §A `regex` filter SHALL match the whole value§ - the code, the property value or the display it is
+  applied to - not just part of it, for every code system: the pattern is treated as
+  `^(?:pattern)$`. So `code2|code3` selects the codes `code2` and `code3`, and not `code2a` (anchoring
+  the pattern as `^code2|code3$` gets this wrong); `.*glucose.*` finds values that contain "glucose",
+  `glucose` only a value that is exactly that *(tests: `simple-expand-regex`,
+  `simple-expand-regex-alt`, `snomed-expand-display-regex`)*
 * §Hierarchy SHALL be followed however the code system states it - by nesting, or by a `parent` /
   `subsumedBy` property. A code system may state more than one parent for a concept, which nesting
   cannot express, and the filters SHALL honour all of them§
@@ -902,8 +908,9 @@ the tests assert specific concepts, displays and counts that only that subontolo
     the pattern§. Every active fully specified name and synonym counts, preferred or acceptable, not
     just the preferred term; text definitions do not count (they are not displays), and neither do
     inactive descriptions
-  * §The pattern SHALL match the whole term§, not just part of it - `.*hematoma.*` finds terms that
-    contain "hematoma", `hematoma` only a term that is exactly that - §and the match is case-sensitive§
+  * The pattern matches the whole term, as for every `regex` filter (see [Filters](#filters)) -
+    `.*hematoma.*` finds terms that contain "hematoma", `hematoma` only a term that is exactly that -
+    §and the match is case-sensitive§
   * §Only one language is searched§, chosen as follows: §the first language the request names - the
     `displayLanguage` parameter, or if there is none, the HTTP `Accept-Language` header - that the
     edition has descriptions in; if the request names none of the edition's languages, or no language

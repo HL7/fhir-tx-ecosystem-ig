@@ -44,7 +44,7 @@
     "name" : "simple-cases",
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-alt.json",
     "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json"],
     "tests" :[
       {
@@ -134,6 +134,12 @@
         "operation" : "expand",
         "request" : "simple/simple-expand-regex-request-parameters.json",
         "response" : "simple/simple-expand-regex-response-valueSet.json"
+      },{
+        "name" : "simple-expand-regex-alt",
+        "description" : "A regex filter matches the whole code: code2|code3 selects code2 and code3, and not the codes that start with code2 (it is ^(?:code2|code3)$, not ^code2|code3$)",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-regex-alt-request-parameters.json",
+        "response" : "simple/simple-expand-regex-alt-response-valueSet.json"
       },{
         "name" : "simple-expand-regex2",
         "description" : "Expansion containing a filter on the code system using regex on the codes using a regex known to cause a problem on at least one server",
@@ -5790,7 +5796,7 @@
       },
       {
         "name" : "loinc-expand-class-regex",
-        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 6332. See loinc-expand-class-regex-total for the test all servers run",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 3754. See loinc-expand-class-regex-total for the test all servers run",
         "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-regex-request-parameters.json",
@@ -5798,7 +5804,7 @@
       },
       {
         "name" : "loinc-expand-class-regex-total",
-        "description" : "The size of the expansion: count=0, and total must be 6332. Which codes a page of it holds is up to the server (see loinc-expand-class-regex)",
+        "description" : "The size of the expansion: count=0, and total must be 3754. Which codes a page of it holds is up to the server (see loinc-expand-class-regex). The regex matches the whole class name, as every regex filter does: CYTO matches the class CYTO, not PANEL.HL7.CYTOGEN, and LABORDERS not LABORDERS.ONTOLOGY",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-class-regex-total-request-parameters.json",
         "response" : "loinc/loinc-expand-class-regex-total-response-valueSet.json"

@@ -6,7 +6,7 @@
     "$optional-properties$" : ["id", "offset"],
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 6332,
+    "total" : 3754,
     "parameter" : [{
       "name" : "count",
       "valueInteger" : 0

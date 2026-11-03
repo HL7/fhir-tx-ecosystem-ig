@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-filter-regex-alt",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-regex-alt",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterRegexAlt",
+  "title" : "Simple ValueSet Filter by Regex with alternation",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "filter" : [{
+        "property" : "code",
+        "op" : "regex",
+        "value" : "code2|code3"
+      }]
+    }]
+  }
+}
