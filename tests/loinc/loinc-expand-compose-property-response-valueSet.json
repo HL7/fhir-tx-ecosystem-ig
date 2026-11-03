@@ -1,0 +1,67 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-lab-compose-property",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetEnumeratedLabComposeProperty",
+  "title" : "LOINC ValueSet Enumerated Lab, with compose.property",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "system-version",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.83"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+    }],
+    "property" : [{
+      "$optional-properties$" : ["uri"],
+      "code" : "COMPONENT"
+    },
+    {
+      "$optional-properties$" : ["uri"],
+      "code" : "SCALE_TYP"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "2160-0",
+      "display" : "Creatinine [Mass/volume] in Serum or Plasma",
+      "property" : [{
+        "code" : "COMPONENT",
+        "valueCode" : "LP14355-9"
+      },
+      {
+        "code" : "SCALE_TYP",
+        "valueCode" : "LP7753-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2345-7",
+      "display" : "Glucose [Mass/volume] in Serum or Plasma",
+      "property" : [{
+        "code" : "COMPONENT",
+        "valueCode" : "LP14635-4"
+      },
+      {
+        "code" : "SCALE_TYP",
+        "valueCode" : "LP7753-9"
+      }]
+    }]
+  }
+}

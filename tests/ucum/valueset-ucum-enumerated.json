@@ -1,0 +1,17 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ucum-enumerated",
+  "status" : "active",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mg/dL"
+      },{
+        "code" : "mmol/L"
+      },{
+        "code" : "[lb_av]"
+      }]
+    }]
+  }
+}

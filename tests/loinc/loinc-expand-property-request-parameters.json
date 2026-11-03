@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-lab"
+  },{
+    "name" : "property",
+    "valueString" : "COMPONENT"
+  },{
+    "name" : "property",
+    "valueString" : "SCALE_TYP"
+  },{
+    "name" : "system-version",
+    "valueUri" : "http://loinc.org|2.83"
+  }]
+}

@@ -1,0 +1,94 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "copyright", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-expand-property",
+  "version" : "5.0.0",
+  "title" : "SCT expand property",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "property" : [{
+      "$optional-properties$" : ["uri"],
+      "code" : "363698007"
+    },
+    {
+      "$optional-properties$" : ["uri"],
+      "code" : "moduleId"
+    },
+    {
+      "$optional-properties$" : ["uri"],
+      "code" : "sufficientlyDefined"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver structure",
+      "property" : [{
+        "code" : "moduleId",
+        "valueCode" : "900000000000207008"
+      },
+      {
+        "code" : "sufficientlyDefined",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50325005",
+      "display" : "Alcoholic fatty liver",
+      "property" : [{
+        "code" : "363698007",
+        "valueCode" : "10200004"
+      },
+      {
+        "code" : "moduleId",
+        "valueCode" : "900000000000207008"
+      },
+      {
+        "code" : "sufficientlyDefined",
+        "valueBoolean" : true
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51292008",
+      "display" : "Hepatorenal syndrome",
+      "property" : [{
+        "code" : "363698007",
+        "valueCode" : "10200004"
+      },
+      {
+        "code" : "363698007",
+        "valueCode" : "64033007"
+      },
+      {
+        "code" : "moduleId",
+        "valueCode" : "900000000000207008"
+      },
+      {
+        "code" : "sufficientlyDefined",
+        "valueBoolean" : true
+      }]
+    }]
+  }
+}

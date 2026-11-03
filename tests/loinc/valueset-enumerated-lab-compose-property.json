@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-enumerated-lab-compose-property",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-lab-compose-property",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetEnumeratedLabComposeProperty",
+  "title" : "LOINC ValueSet Enumerated Lab, with compose.property",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "property" : ["COMPONENT", "SCALE_TYP"],
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "2345-7"
+      },{
+        "code" : "2160-0"
+      }]
+    }]
+  }
+}

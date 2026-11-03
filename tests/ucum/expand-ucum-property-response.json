@@ -1,0 +1,49 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ucum-enumerated",
+  "status" : "active",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://unitsofmeasure.org|2.2"
+    }],
+    "property" : [{
+      "$optional-properties$" : ["uri"],
+      "code" : "canonical"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_av]",
+      "display" : "[lb_av]",
+      "property" : [{
+        "code" : "canonical",
+        "valueString" : "g"
+      }]
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/dL",
+      "display" : "mg/dL",
+      "property" : [{
+        "code" : "canonical",
+        "valueString" : "g.m-3"
+      }]
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mmol/L",
+      "display" : "mmol/L",
+      "property" : [{
+        "code" : "canonical",
+        "valueString" : "m-3"
+      }]
+    }]
+  }
+}

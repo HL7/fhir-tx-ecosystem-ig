@@ -1,0 +1,34 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "valueSet",
+    "resource" : {
+        "resourceType" : "ValueSet",
+        "id" : "sct-expand-property",
+        "url" : "http://hl7.org/fhir/test/ValueSet/sct-expand-property",
+        "version" : "5.0.0",
+        "title" : "SCT expand property",
+        "status" : "active",
+        "experimental" : false,
+        "date" : "2026-11-03",
+        "publisher" : "FHIR Project",
+        "description" : "Three plain concepts, for asking for properties in the expansion",
+        "compose" : {
+          "include" : [{
+            "system" : "http://snomed.info/sct",
+            "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+            "filter" : [{ "property" : "concept", "op" : "in", "value" : "10200004,50325005,51292008" }]
+          }]
+        }
+      }
+  },{
+    "name" : "property",
+    "valueString" : "moduleId"
+  },{
+    "name" : "property",
+    "valueString" : "sufficientlyDefined"
+  },{
+    "name" : "property",
+    "valueString" : "363698007"
+  }]
+}

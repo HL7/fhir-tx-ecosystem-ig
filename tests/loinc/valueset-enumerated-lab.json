@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-enumerated-lab",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-lab",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetEnumeratedLab",
+  "title" : "LOINC ValueSet Enumerated Lab",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-03",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "2345-7"
+      },{
+        "code" : "2160-0"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/omop-filter-domain",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 3,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://fhir-terminology.ohdsi.org|20240716"
+    }],
+    "property" : [{
+      "$optional-properties$" : ["uri"],
+      "code" : "concept-class-id"
+    },
+    {
+      "$optional-properties$" : ["uri"],
+      "code" : "domain-id"
+    }],
+    "contains" : [{
+      "system" : "https://fhir-terminology.ohdsi.org",
+      "code" : "1367571",
+      "display" : "heparin",
+      "property" : [{
+        "code" : "concept-class-id",
+        "valueCode" : "Ingredient"
+      },
+      {
+        "code" : "domain-id",
+        "valueCode" : "Drug"
+      }]
+    },
+    {
+      "system" : "https://fhir-terminology.ohdsi.org",
+      "code" : "1383815",
+      "display" : "isosorbide",
+      "property" : [{
+        "code" : "concept-class-id",
+        "valueCode" : "Ingredient"
+      },
+      {
+        "code" : "domain-id",
+        "valueCode" : "Drug"
+      }]
+    },
+    {
+      "system" : "https://fhir-terminology.ohdsi.org",
+      "code" : "36274733",
+      "display" : "Furosemide Injection [Lasix]",
+      "property" : [{
+        "code" : "concept-class-id",
+        "valueCode" : "Branded Drug Form"
+      },
+      {
+        "code" : "domain-id",
+        "valueCode" : "Drug"
+      }]
+    }]
+  }
+}

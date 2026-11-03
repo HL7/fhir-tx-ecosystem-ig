@@ -5453,7 +5453,7 @@
       "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json",
       "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
       "loinc/codesystem-loinc-supplement.json",
-      "loinc/valueset-filter-scale-type-part.json", "loinc/valueset-filter-class-scale.json", "loinc/valueset-filter-class-part-scale.json", "loinc/valueset-filter-method.json"],
+      "loinc/valueset-filter-scale-type-part.json", "loinc/valueset-filter-class-scale.json", "loinc/valueset-filter-class-part-scale.json", "loinc/valueset-filter-method.json", "loinc/valueset-enumerated-lab.json", "loinc/valueset-enumerated-lab-compose-property.json"],
     "tests" : [
       {
         "name" : "loinc-lookup-code",
@@ -5587,6 +5587,20 @@
         "operation" : "expand",
         "request" : "loinc/loinc-expand-enum-request-parameters.json",
         "response" : "loinc/loinc-expand-enum-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-property",
+        "description" : "Properties asked for with the property parameter are returned on each code in the expansion (and declared in expansion.property) - the same values $lookup returns",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-property-request-parameters.json",
+        "response" : "loinc/loinc-expand-property-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-compose-property",
+        "description" : "The same, with the properties asked for by the value set (ValueSet.compose.property)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-compose-property-request-parameters.json",
+        "response" : "loinc/loinc-expand-compose-property-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-all",
@@ -6880,6 +6894,12 @@
         "operation" : "expand",
         "request" : "sct/expand-concept-in-request.json",
         "response" : "sct/expand-concept-in-response.json"
+      },{
+        "name" : "snomed-expand-property",
+        "description" : "Properties asked for with the property parameter are returned on each code in the expansion (and declared in expansion.property): the module, sufficientlyDefined and a defining relationship (finding site), which repeats on 51292008 and is absent on 10200004",
+        "operation" : "expand",
+        "request" : "sct/expand-property-request.json",
+        "response" : "sct/expand-property-response.json"
       },{
         "name" : "snomed-validate-concept-in",
         "description" : "concept in with three plain codes: one of the listed codes is in the value set",
@@ -8880,6 +8900,13 @@
         "response" : "omop/omop-expand-explicit-response-valueSet.json"
       },
       {
+        "name" : "omop-expand-property",
+        "description" : "Properties asked for with the property parameter are returned on each code in the expansion (and declared in expansion.property)",
+        "operation" : "expand",
+        "request" : "omop/omop-expand-property-request-parameters.json",
+        "response" : "omop/omop-expand-property-response-valueSet.json"
+      },
+      {
         "name" : "translate-loinc-implicit",
         "description" : "translating sucessfully from OMOP to LOINC, leaving it to the server to choose a concept map if it can find one. Note that not all servers are willing to let the client trust it like this, so this test is optional",
         "operation" : "translate",
@@ -8898,7 +8925,7 @@
     "name" : "UCUM",
     "mode" : "tx.fhir.org",
     "description" : "UCUM Test Cases",
-    "setup" : ["ucum/valueset-ucum-all.json", "ucum/valueset-ucum-canonical.json"],
+    "setup" : ["ucum/valueset-ucum-all.json", "ucum/valueset-ucum-canonical.json", "ucum/valueset-ucum-enumerated.json"],
     "tests" : [
       {
         "name" : "lookup",
@@ -8936,6 +8963,13 @@
         "operation" : "expand",
         "request" : "ucum/expand-ucum-canonical-request.json",
         "response" : "ucum/expand-ucum-canonical-response.json"
+      },
+      {
+        "name" : "expand-ucum-property",
+        "description" : "The canonical property, asked for with the property parameter, is returned on each code in the expansion (and declared in expansion.property)",
+        "operation" : "expand",
+        "request" : "ucum/expand-ucum-property-request.json",
+        "response" : "ucum/expand-ucum-property-response.json"
       },
       {
         "name" : "validate-ucum-canonical-good",
