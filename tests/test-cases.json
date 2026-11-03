@@ -993,7 +993,7 @@
     "name" : "global-lang-pack",
     "mode" : "general",
     "description" : "Global language packs: a language pack (codesystem-supplement-type = lang-pack) marked with codesystem-supplement-global = true is used for the code system it supplements whether or not it is referenced; any other supplement is only used when it is referenced",
-    "setup" : ["global-lang-pack/codesystem-glp-base.json", "global-lang-pack/codesystem-glp-other.json", "global-lang-pack/codesystem-glp-base-de.json", "global-lang-pack/codesystem-glp-base-nl.json", "global-lang-pack/valueset-glp-base-all.json", "global-lang-pack/codesystem-glp-own.json", "global-lang-pack/codesystem-glp-own-de.json", "global-lang-pack/valueset-glp-own-all.json"],
+    "setup" : ["global-lang-pack/codesystem-glp-base.json", "global-lang-pack/codesystem-glp-other.json", "global-lang-pack/codesystem-glp-base-de.json", "global-lang-pack/codesystem-glp-base-nl.json", "global-lang-pack/valueset-glp-base-all.json", "global-lang-pack/codesystem-glp-own.json", "global-lang-pack/codesystem-glp-own-de.json", "global-lang-pack/valueset-glp-own-all.json", "global-lang-pack/codesystem-glp-base-fr-090.json"],
     "tests" : [
       {
         "name" : "glp-cs-validate-de",
@@ -1099,6 +1099,21 @@
         "operation" : "validate-code",
         "request" : "global-lang-pack/glp-own-validate-pack-display-de-request.json",
         "response" : "global-lang-pack/glp-own-validate-pack-display-de-response.json"
+      },
+      {
+        "name" : "glp-expand-pinned-other-version",
+        "description" : "A supplement only applies to the version of the code system it names: a global language pack for glp-base|0.9.0 is not used on glp-base 1.0.0 (the only version the server has, chosen because the request names none), so the French displays are the code system's own, and it is not a used-supplement",
+        "operation" : "expand",
+        "request" : "global-lang-pack/glp-expand-pinned-other-version-request.json",
+        "response" : "global-lang-pack/glp-expand-pinned-other-version-response.json"
+      },
+      {
+        "name" : "glp-expand-pinned-other-version-required",
+        "description" : "The same supplement, required with useSupplement: it does not apply to the version of the code system used, so the expansion fails",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "global-lang-pack/glp-expand-pinned-other-version-required-request.json",
+        "response" : "global-lang-pack/glp-expand-pinned-other-version-required-response.json"
       }
     ]
   },{

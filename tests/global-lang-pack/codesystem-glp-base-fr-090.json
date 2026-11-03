@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "glp-base-fr-090",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+      "valueCode": "lang-pack"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://hl7.org/fhir/test/CodeSystem/glp-base-fr-090",
+  "version": "1.0.0",
+  "name": "GlobalLangPackBaseFr090",
+  "title": "Global Language Pack Base - French, for version 0.9.0 of the code system (which the server does not have)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-03",
+  "content": "supplement",
+  "supplements": "http://hl7.org/fhir/test/CodeSystem/glp-base|0.9.0",
+  "concept": [
+    {
+      "code": "c1",
+      "designation": [
+        {
+          "language": "fr",
+          "value": "Code Un"
+        }
+      ]
+    },
+    {
+      "code": "c2",
+      "designation": [
+        {
+          "language": "fr",
+          "value": "Code Deux"
+        }
+      ]
+    }
+  ]
+}
