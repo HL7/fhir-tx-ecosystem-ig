@@ -4138,7 +4138,7 @@
     "mode" : "general",
     "description" : "Testing Various Error Conditions",
     "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json",
-       "errors/cs1.json", "errors/cs2.json", "errors/valueset-combination.json", "simple/valueset-all.json", "errors/valueset-infer-unknown-system.json", "errors/valueset-infer-unknown-system-import.json"],
+       "errors/cs1.json", "errors/cs2.json", "errors/valueset-combination.json", "simple/valueset-all.json", "errors/valueset-infer-unknown-system.json", "errors/valueset-infer-unknown-system-import.json", "errors/valueset-filter-modifier.json"],
     "tests" : [
       {
         "name" : "unknown-system1",
@@ -4173,6 +4173,13 @@
         "http-code" : "4xx",
         "request" : "errors/errors-broken-filter-expand-request.json",
         "response" : "errors/errors-broken-filter-expand-response.json"
+      },{
+        "name" : "filter-modifier-expand",
+        "description" : "A filter with a modifier extension the server doesn't know can't be used: the value set can't be expanded, and that's an error in the request (4xx), not the server",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "errors/errors-filter-modifier-expand-request.json",
+        "response" : "errors/errors-filter-modifier-expand-response.json"
       },{
         "name" : "combination-ok",
         "description" : "A value set that contains two identical codes - validates ok",

@@ -757,6 +757,9 @@
   "errors/errors-infer-unknown-system-import-response.json" : {
     "1" : "The System URI could not be determined for the code 'code1' in the ValueSet 'http://hl7.org/fhir/test/ValueSet/infer-unknown-system-import|5.0.0': a definition for the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' it includes could not be found"
   },
+  "errors/errors-filter-modifier-expand-response.json" : {
+    "1" : "The value set http://hl7.org/fhir/test/ValueSet/filter-modifier|5.0.0 can't be processed: ValueSet.compose.include[0].filter[0] has a modifier extension that isn't understood (http://hl7.org/fhir/test/StructureDefinition/unknown-filter-modifier)"
+  },
   "errors/errors-broken-filter-validate-response.json" : {
     "1" : "The system http://hl7.org/fhir/test/CodeSystem/simple filter with property = concept, op = is-a has no value"
   },
