@@ -751,6 +751,12 @@
   "errors/errors-broken-filter-expand-response.json" : {
     "1" : "The system http://hl7.org/fhir/test/CodeSystem/simple filter with property = concept, op = is-a has no value"
   },
+  "errors/errors-infer-unknown-system-response.json" : {
+    "1" : "The System URI could not be determined for the code 'code1' in the ValueSet 'http://hl7.org/fhir/test/ValueSet/infer-unknown-system|5.0.0': a definition for the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' it includes could not be found"
+  },
+  "errors/errors-infer-unknown-system-import-response.json" : {
+    "1" : "The System URI could not be determined for the code 'code1' in the ValueSet 'http://hl7.org/fhir/test/ValueSet/infer-unknown-system-import|5.0.0': a definition for the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' it includes could not be found"
+  },
   "errors/errors-broken-filter-validate-response.json" : {
     "1" : "The system http://hl7.org/fhir/test/CodeSystem/simple filter with property = concept, op = is-a has no value"
   },

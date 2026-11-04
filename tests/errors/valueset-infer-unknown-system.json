@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "infer-unknown-system",
+  "url" : "http://hl7.org/fhir/test/ValueSet/infer-unknown-system",
+  "version" : "5.0.0",
+  "name" : "InferUnknownSystem",
+  "title" : "Infer with an Unknown System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-04",
+  "publisher" : "FHIR Project",
+  "description" : "Includes all of a known code system, and all of an unknown one",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    },{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simpleX"
+    }]
+  }
+}

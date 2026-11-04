@@ -4126,7 +4126,7 @@
     "mode" : "general",
     "description" : "Testing Various Error Conditions",
     "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json",
-       "errors/cs1.json", "errors/cs2.json", "errors/valueset-combination.json"],
+       "errors/cs1.json", "errors/cs2.json", "errors/valueset-combination.json", "simple/valueset-all.json", "errors/valueset-infer-unknown-system.json", "errors/valueset-infer-unknown-system-import.json"],
     "tests" : [
       {
         "name" : "unknown-system1",
@@ -4173,6 +4173,20 @@
         "operation" : "validate-code",
         "request" : "errors/errors-combination-bad-request.json",
         "response" : "errors/errors-combination-bad-response.json"
+      },{
+        "name" : "infer-unknown-system",
+        "description" : "inferSystem with a value set that includes all of a code system the server does not know: the code might be in it, so the system cannot be inferred - an error naming the unknown system",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "errors/errors-infer-unknown-system-request.json",
+        "response" : "errors/errors-infer-unknown-system-response.json"
+      },{
+        "name" : "infer-unknown-system-import",
+        "description" : "inferSystem with a value set that imports a value set, and includes all of a code system the server does not know: an error naming the unknown system",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "errors/errors-infer-unknown-system-import-request.json",
+        "response" : "errors/errors-infer-unknown-system-import-response.json"
       }
     ]
   },{

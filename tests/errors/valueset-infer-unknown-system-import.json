@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "infer-unknown-system-import",
+  "url" : "http://hl7.org/fhir/test/ValueSet/infer-unknown-system-import",
+  "version" : "5.0.0",
+  "name" : "InferUnknownSystemImport",
+  "title" : "Infer with an Unknown System (import)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-04",
+  "publisher" : "FHIR Project",
+  "description" : "Imports a value set of a known code system, and includes all of an unknown one",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/test/ValueSet/simple-all"]
+    },{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simpleX"
+    }]
+  }
+}
