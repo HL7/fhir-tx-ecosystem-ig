@@ -554,6 +554,10 @@ supports, and SHALL observe the distinctions between them *(suites: `simple-case
 * §The server SHALL declare the properties it returned in `ValueSet.expansion.property`§, giving each
   one's `code` and, where it has one, its canonical `uri`
 * §The server SHALL return the values in `ValueSet.expansion.contains.property`§
+* §`ValueSet.expansion.property` declares the properties of the codes the expansion returns. An
+  expansion that returns no codes - `count=0`, asking only for the total - needs no declarations, but MAY
+  have them§ (a server may declare the properties of the whole value set, e.g. `status` because it has
+  inactive codes); the test cases accept either
 * §**In R4**, `ValueSet.compose.property`, `ValueSet.expansion.property` and `ValueSet.expansion.contains.property` do not exist as elements. An R4 server SHALL read and write them as the cross-version extensions  `http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.compose.property`, `http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property` and `http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property`§. This
   is a requirement, not an option: an R4 server that ignores the request or drops the response is
   not conformant. [R4 and the Test Cases](r4.html#properties-in-expansions) has worked examples of
@@ -962,6 +966,15 @@ the tests assert specific concepts, displays and counts that only that subontolo
     for by name§: not by default, and not for `property=*` *(test: `snomed-lookup-normal-form`)*
   * Transitive ancestors and descendants are not lookup properties; `parent` and `child` are the
     direct ones
+  * §A concept's concrete values (strengths, counts, and string and boolean values) SHALL be returned as
+    properties named by the attribute's concept id, with a value of the attribute's type: `valueString`
+    for a string and `valueBoolean` for a boolean. A number SHALL be typed by the attribute's range in the
+    MRCM: `valueDecimal` where the range is `dec(...)`, and `valueInteger` where it is `int(...)`. RF2
+    writes both kinds the same way, so the value doesn't decide the type: `#4000` for a presentation
+    strength numerator (a `dec()` attribute) is the decimal 4000, and `#1` for count of base of active
+    ingredient (an `int()` attribute) is the integer 1. Only where the MRCM gives the attribute no range
+    is a number with a decimal point a decimal, and one without an integer§
+    *(test: `snomed-lookup-concrete`)*
 
 ##### Post-coordination: agreed scope
 

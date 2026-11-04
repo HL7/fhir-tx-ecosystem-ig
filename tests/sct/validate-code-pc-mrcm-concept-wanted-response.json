@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow #500 as the value of the attribute 272741003 |Laterality| (the value must satisfy \"<< 182353008 |Side (qualifier value)|\")"
+          "text" : "$external:2:272741003|500|182353008$"
         },
         "expression" : ["code"]
       }]

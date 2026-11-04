@@ -225,6 +225,10 @@ each of which contains a list of tests. A suite may have:
   separated list (see below)
 * `version`: the suite only runs against servers of that FHIR version (see below)
 * `disabled`: if true, the suite is not run at all
+* `runner`: the oldest version of the test runner (the validator) that can run the suite's tests.
+  An older runner doesn't know some of them - it reports `cs-batch-validate`, for example, as
+  "Unknown Operation" - so use this version or a later one. This is for the people running the tests:
+  the runner doesn't check it
 * `sequential`: if true, the tests in the suite depend on each other, and must be run in the 
   order they are listed, one at a time, after all the other suites have finished. The `closure` 
   suite is like this: each test adds to the closure table the previous tests built. (In server 

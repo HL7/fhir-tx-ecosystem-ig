@@ -4951,7 +4951,7 @@
         "response" : "translate/translate-6b-response-parameters.json"
       },
       {
-        "name" : "translate-reverse-r5+",
+        "name" : "translate-reverse-r5plus",
         "description" : "Same translation, but in reverse",
         "operation" : "translate",
         "version": "!4.0",
@@ -4959,7 +4959,7 @@
         "response" : "translate/translate-reverse-response-r5-parameters.json"
       },
       {
-        "name" : "translate-reverse-r5+-a",
+        "name" : "translate-reverse-r5plus-a",
         "description" : "reverse is not allowed in R5",
         "operation" : "translate",
         "version": "!4.0",
@@ -8905,6 +8905,7 @@
     "name" : "batch",
     "mode" : "general",
     "description" : "Test Batch Validation",
+    "runner" : "7.0.4",
     "setup" : ["simple/codesystem-simple.json", "simple/codesystem-noversion.json"],
     "tests" : [
       {

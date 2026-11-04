@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 42752001 |Due to| on 367430006 |Repair of tendon of hand| (the attribute is only valid in the domain 404684003 |Clinical finding (finding)|, or in the domain 272379006 |Events|)"
+          "text" : "$external:2:42752001|367430006|404684003|272379006$"
         },
         "expression" : ["code"]
       }]

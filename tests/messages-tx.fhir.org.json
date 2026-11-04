@@ -1174,34 +1174,44 @@
     "1" : "The provided code 'http://snomed.info/sct#128241005:{363698007=181268008}' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-pc-list-no-pc|5.0.0'"
   },
   "sct/validate-code-pc-mrcm-cardinality-response.json" : {
-    "1" : "Unknown code '39607008:272741003=24028007,272741003=24028007' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '39607008:272741003=24028007,272741003=24028007' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model allows the attribute 272741003 |Laterality| at most 1 time(s) on one concept, but it is used 2 times"
   },
   "sct/validate-code-pc-mrcm-concept-wanted-response.json" : {
-    "1" : "Unknown code '39607008:272741003=#500' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '39607008:272741003=#500' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow #500 as the value of the attribute 272741003 |Laterality| (the value must satisfy \"<< 182353008 |Side (qualifier value)|\")"
   },
   "sct/validate-code-pc-mrcm-concrete-int-response.json" : {
-    "1" : "Unknown code '373873005:{1142139005=#2.5}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '373873005:{1142139005=#2.5}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow #2.5 as the value of the attribute 1142139005 |Count of base of active ingredient| (the value must satisfy \"int(>#0..)\")"
   },
   "sct/validate-code-pc-mrcm-concrete-range-response.json" : {
-    "1" : "Unknown code '373873005:{1142135004=#0}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '373873005:{1142135004=#0}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow #0 as the value of the attribute 1142135004 |Has presentation strength numerator value (attribute)| (the value must satisfy \"dec(>#0..)\")"
   },
   "sct/validate-code-pc-mrcm-concrete-wanted-response.json" : {
-    "1" : "Unknown code '373873005:{1142135004=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '373873005:{1142135004=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow 24028007 |Right| as the value of the attribute 1142135004 |Has presentation strength numerator value (attribute)| (the value must satisfy \"dec(>#0..)\")"
   },
   "sct/validate-code-pc-mrcm-domain-multi-response.json" : {
-    "1" : "Unknown code '367430006:{42752001=789750003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '367430006:{42752001=789750003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 42752001 |Due to| on 367430006 |Repair of tendon of hand| (the attribute is only valid in the domain 404684003 |Clinical finding (finding)|, or in the domain 272379006 |Events|)"
   },
   "sct/validate-code-pc-mrcm-domain-response.json" : {
-    "1" : "Unknown code '85562004:363698007=39607008' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '85562004:363698007=39607008' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 363698007 |Finding site| on 85562004 |Hand| (the attribute is only valid in the domain 404684003 |Clinical finding (finding)|)"
   },
   "sct/validate-code-pc-mrcm-grouped-response.json" : {
-    "1" : "Unknown code '39607008:{272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '39607008:{272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 272741003 |Laterality| to appear in a relationship group"
   },
   "sct/validate-code-pc-mrcm-lateralizable-response.json" : {
-    "1" : "Unknown code '10200004:272741003=24028007' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '10200004:272741003=24028007' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 272741003 |Laterality| on 10200004 |Liver| (the attribute is only valid for concepts in 723264001 |Lateralizable body structure reference set (foundation metadata concept)|)"
   },
   "sct/validate-code-pc-mrcm-range-response.json" : {
-    "1" : "Unknown code '39607008:272741003=85562004' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '39607008:272741003=85562004' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: The SNOMED CT concept model does not allow 85562004 |Hand| as the value of the attribute 272741003 |Laterality| (the value must satisfy \"<< 182353008 |Side (qualifier value)|\")"
   },
   "sct/validate-code-pc-unbracketed-response.json" : {
     "1" : "Unknown code '367430006:{405813007=85562004:272741003=24028007}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
@@ -1213,7 +1223,8 @@
     "1" : "No translation: the only International Edition ancestor of 1000311000003101 |Vaguely unwell about the liver| is the top-level hierarchy concept 404684003 |Clinical finding|"
   },
   "sct/validate-code-procedure-pc-bad2-response.json" : {
-    "1" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+    "1" : "Unknown code '367430006:{24028007=272741003}' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "2" : "Not a valid expression: Concept 24028007 |Right| is not valid in this context (must be a descendant of 410662002 |Concept model attribute (attribute)|)"
   },
   "tho/validate-child-of-grandchild-response.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#CDALVLONE' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-child-of|0.1.0'"
@@ -1744,13 +1755,13 @@
     "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures' expansion has too many codes to produce (>1000)"
   },
   "tx.fhir.org/snomed-expand-inactive2-response-valueSet.json" : {
-    "1" : "The value set '??' expansion has too many codes to produce (>1000)"
+    "1" : "The expansion of the value set in the request has too many codes to produce (>1000)"
   },
   "langcodes/expand-lang-region-response.json" : {
     "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us' expansion has too many codes to produce (>3000)"
   },
   "bugs/expand-cpt-response.json" : {
-    "1" : "The value set 'undefined' expansion has too many codes to produce (>3000)"
+    "1" : "The expansion of the value set in the request has too many codes to produce (>3000)"
   },
   "extensions/validate-supplement-prop-base-code4-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'",

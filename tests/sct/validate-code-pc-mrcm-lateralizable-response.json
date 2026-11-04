@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 272741003 |Laterality| on 10200004 |Liver| (the attribute is only valid for concepts in 723264001 |Lateralizable body structure reference set (foundation metadata concept)|)"
+          "text" : "$external:2:272741003|10200004|723264001$"
         },
         "expression" : ["code"]
       }]

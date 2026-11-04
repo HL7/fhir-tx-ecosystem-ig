@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow #2.5 as the value of the attribute 1142139005 |Count of base of active ingredient| (the value must satisfy \"int(>#0..)\")"
+          "text" : "$external:2:1142139005|2.5$"
         },
         "expression" : ["code"]
       }]

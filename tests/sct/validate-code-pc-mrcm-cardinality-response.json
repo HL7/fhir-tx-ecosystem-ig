@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model allows the attribute 272741003 |Laterality| at most 1 time(s) on one concept, but it is used 2 times"
+          "text" : "$external:2:272741003$"
         },
         "expression" : ["code"]
       }]

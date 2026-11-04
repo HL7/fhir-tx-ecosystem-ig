@@ -23,6 +23,11 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://www.ama-assn.org/go/cpt|2023"
+    }],
+    "property" : [{
+      "$optional$" : true,
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }

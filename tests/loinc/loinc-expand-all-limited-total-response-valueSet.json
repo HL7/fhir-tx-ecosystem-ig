@@ -32,6 +32,11 @@
       "$optional$" : true,
       "name" : "used-supplement",
       "valueUri" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
+    }],
+    "property" : [{
+      "$optional$" : true,
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }

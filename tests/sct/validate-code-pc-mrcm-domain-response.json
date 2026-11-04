@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 363698007 |Finding site| on 85562004 |Hand| (the attribute is only valid in the domain 404684003 |Clinical finding (finding)|)"
+          "text" : "$external:2:363698007|85562004|404684003$"
         },
         "expression" : ["code"]
       }]

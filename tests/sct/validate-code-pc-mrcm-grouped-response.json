@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow the attribute 272741003 |Laterality| to appear in a relationship group"
+          "text" : "$external:2:272741003$"
         },
         "expression" : ["code"]
       }]

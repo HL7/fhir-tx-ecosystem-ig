@@ -27,6 +27,11 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
+    }],
+    "property" : [{
+      "$optional$" : true,
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }

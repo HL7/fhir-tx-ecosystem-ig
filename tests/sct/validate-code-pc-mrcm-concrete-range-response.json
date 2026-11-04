@@ -33,7 +33,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Not a valid expression: The SNOMED CT concept model does not allow #0 as the value of the attribute 1142135004 |Has presentation strength numerator value (attribute)| (the value must satisfy \"dec(>#0..)\")"
+          "text" : "$external:2:1142135004$"
         },
         "expression" : ["code"]
       }]
