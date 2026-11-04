@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "code2aI is a child of code2a, which is listed: not-in excludes only the listed codes, not their descendants",
+      "name" : "code",
+      "valueCode" : "code2aI"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display 2aI"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    },
+    {
+      "name" : "version",
+      "valueString" : "0.1.0",
+      "$optional$" : "warning:version"
+    }
+  ]
+}

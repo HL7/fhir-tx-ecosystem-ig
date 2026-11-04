@@ -1,0 +1,62 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "code2a is listed in the not-in filter, so it is not in the value set",
+      "name" : "code",
+      "valueCode" : "code2a"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display 2a"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [
+          {
+            "extension" : [
+              {
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+              }
+            ],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [
+                {
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "not-in-vs"
+                }
+              ],
+              "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simple#code2a|http://hl7.org/fhir/test/ValueSet/simple-filter-code-not-in|5.0.0$"
+            },
+            "expression" : [
+              "code"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simple#code2a|http://hl7.org/fhir/test/ValueSet/simple-filter-code-not-in|5.0.0$"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    },
+    {
+      "name" : "version",
+      "valueString" : "0.1.0",
+      "$optional$" : "warning:version"
+    }
+  ]
+}

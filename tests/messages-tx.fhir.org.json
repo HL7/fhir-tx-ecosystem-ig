@@ -1359,6 +1359,12 @@
   "validation/simple-child-of-grandchild-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code2aI' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-child-of|5.0.0'"
   },
+  "validation/simple-concept-not-in-listed-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-concept-not-in|5.0.0'"
+  },
+  "validation/simple-code-not-in-listed-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code2a' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-code-not-in|5.0.0'"
+  },
   "validation/simple-code-bad-import-response-parameters.json" : {
     "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isaX' could not be found"
   },

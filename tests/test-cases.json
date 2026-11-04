@@ -44,7 +44,7 @@
     "name" : "simple-cases",
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-alt.json",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-concept-not-in.json", "simple/valueset-filter-code-not-in.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-alt.json",
     "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json"],
     "tests" :[
       {
@@ -89,6 +89,18 @@
         "operation" : "expand",
         "request" : "simple/simple-expand-child-of-request-parameters.json",
         "response" : "simple/simple-expand-child-of-response-valueSet.json"
+      },{
+        "name" : "simple-expand-concept-not-in",
+        "description" : "Expansion with a concept not-in filter: every code except the listed ones. A child of a listed code (code2aI, code2aII) is still in: not-in excludes only the codes it lists",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-concept-not-in-request-parameters.json",
+        "response" : "simple/simple-expand-concept-not-in-response-valueSet.json"
+      },{
+        "name" : "simple-expand-code-not-in",
+        "description" : "The same, with the filter on the code property",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-code-not-in-request-parameters.json",
+        "response" : "simple/simple-expand-code-not-in-response-valueSet.json"
       },{
         "name" : "simple-expand-isa-o2",
         "description" : "Expansion containing a filter on the code system using is-a relationship with paging (tx.fhir.org internal test)",
@@ -1527,7 +1539,7 @@
     "name" : "validation",
     "mode" : "general",
     "description" : "Testing various validation parameter combinations",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-none.json",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-concept-not-in.json", "simple/valueset-filter-code-not-in.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-none.json",
         "language/codesystem-de-multi.json", "language/codesystem-de-single.json", "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
         "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-en-multi.json", "language/valueset-en-single.json",
         "language/valueset-en-enlang-multi.json", "language/valueset-en-en-multi.json", "inactive/valueset-all.json", "inactive/codesystem-inactive.json",
@@ -1554,6 +1566,34 @@
         "operation" : "validate-code",
         "request" : "validation/simple-child-of-grandchild-request-parameters.json",
         "response" :  "validation/simple-child-of-grandchild-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-concept-not-in-listed",
+        "description" : "a code listed in a concept not-in filter is not in the value set",
+        "operation" : "validate-code",
+        "request" : "validation/simple-concept-not-in-listed-request-parameters.json",
+        "response" :  "validation/simple-concept-not-in-listed-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-concept-not-in-child-of-listed",
+        "description" : "a child of a code listed in a concept not-in filter is in the value set: not-in excludes only the codes it lists",
+        "operation" : "validate-code",
+        "request" : "validation/simple-concept-not-in-child-of-listed-request-parameters.json",
+        "response" :  "validation/simple-concept-not-in-child-of-listed-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-code-not-in-listed",
+        "description" : "a code listed in a code not-in filter is not in the value set",
+        "operation" : "validate-code",
+        "request" : "validation/simple-code-not-in-listed-request-parameters.json",
+        "response" :  "validation/simple-code-not-in-listed-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-code-not-in-other",
+        "description" : "a code not listed in a code not-in filter is in the value set",
+        "operation" : "validate-code",
+        "request" : "validation/simple-code-not-in-other-request-parameters.json",
+        "response" :  "validation/simple-code-not-in-other-response-parameters.json"
       },
       {
         "name" : "validation-simple-code-implied-good",

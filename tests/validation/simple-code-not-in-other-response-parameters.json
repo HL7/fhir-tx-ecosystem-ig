@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "fhir_comments" : "code3 isn't listed in the not-in filter, so it is in the value set",
+      "name" : "code",
+      "valueCode" : "code3"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display 3"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+    },
+    {
+      "name" : "version",
+      "valueString" : "0.1.0",
+      "$optional$" : "warning:version"
+    }
+  ]
+}
