@@ -3607,6 +3607,18 @@
         "profile": "version/parameters-fixed-version.json",
         "request" : "version/vs-expand-v2-request-parameters.json",
         "response" : "version/vs-expand-v2-force-response-valueSet.json"
+      },{
+        "name" : "vs-expand-stale-import",
+        "description" : "A value set imports one that carries an expansion made from version 1.0.0 of the code system; the server has 1.2.0, which is what an expansion of its compose uses with no version asked for. The stale expansion is not used: the imported value set is expanded from its compose",
+        "operation" : "expand",
+        "request" : "version/vs-expand-stale-import-request-parameters.json",
+        "response" : "version/vs-expand-stale-import-response-valueSet.json"
+      },{
+        "name" : "vs-expand-stale-import-force",
+        "description" : "As vs-expand-stale-import, with force-system-version naming 1.2.0: the imported value set's expansion from 1.0.0 doesn't match the forced version, so it's expanded from its compose",
+        "operation" : "expand",
+        "request" : "version/vs-expand-stale-import-force-request-parameters.json",
+        "response" : "version/vs-expand-stale-import-force-response-valueSet.json"
       },
 
       {

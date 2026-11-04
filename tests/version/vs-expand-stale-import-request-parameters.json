@@ -1,0 +1,70 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "valueSet",
+      "resource" : {
+        "resourceType" : "ValueSet",
+        "url" : "http://hl7.org/fhir/test/ValueSet/version-stale-outer",
+        "version" : "1.0.0",
+        "name" : "VersionStaleOuter",
+        "status" : "active",
+        "compose" : {
+          "include" : [
+            {
+              "valueSet" : [
+                "http://hl7.org/fhir/test/ValueSet/version-stale-expansion"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "tx-resource",
+      "resource" : {
+        "resourceType" : "ValueSet",
+        "id" : "version-stale-expansion",
+        "url" : "http://hl7.org/fhir/test/ValueSet/version-stale-expansion",
+        "version" : "1.0.0",
+        "name" : "VersionStaleExpansion",
+        "title" : "Version: value set with a stale expansion",
+        "status" : "active",
+        "experimental" : false,
+        "date" : "2026-11-04",
+        "publisher" : "FHIR Project",
+        "description" : "All of the version code system, with an expansion made from version 1.0.0 that lists only code1. The server has version 1.2.0 too, and uses it when no version is asked for, so this expansion is stale: the value set is to be expanded from its compose",
+        "compose" : {
+          "include" : [
+            {
+              "system" : "http://hl7.org/fhir/test/CodeSystem/version"
+            }
+          ]
+        },
+        "expansion" : {
+          "identifier" : "urn:uuid:5c1e7f0e-4d0b-4e8a-9a3c-2b6f0d1e9a01",
+          "timestamp" : "2026-01-01T00:00:00Z",
+          "total" : 1,
+          "parameter" : [
+            {
+              "name" : "used-codesystem",
+              "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version|1.0.0"
+            }
+          ],
+          "contains" : [
+            {
+              "system" : "http://hl7.org/fhir/test/CodeSystem/version",
+              "version" : "1.0.0",
+              "code" : "code1",
+              "display" : "Display 1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
