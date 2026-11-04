@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "18719-5"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Chemistry studies (set)"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:LOINC|Logical Observation Identifier Names and Codes (LOINC)$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "CLASSTYPE"
+    },
+    {
+      "name" : "description",
+      "valueString" : "Claims attachment"
+    },
+    {
+      "name" : "value",
+      "valueString" : "3"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },
+  {
+    "$optional$" : true,
+    "name" : "used-supplement",
+    "valueCanonical" : "https://terminology.dhp.uz/fhir/CodeSystem/loinc-supplement-uz|2.82"
+  },
+  {
+    "$optional$" : true,
+    "name" : "used-supplement",
+    "valueCanonical" : "http://fhir.de/CodeSystem/loinc-supplement-basis|0.9.13"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.83"
+  }]
+}

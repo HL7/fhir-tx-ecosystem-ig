@@ -5653,6 +5653,12 @@
         "operation" : "lookup",
         "request" : "loinc/loinc-lookup-code-request-parameters.json",
         "response" : "loinc/loinc-lookup-code-response-parameters.json"
+      },{
+        "name" : "loinc-lookup-classtype",
+        "description" : "CLASSTYPE 3 (Claims attachment): its value is the code, 3, with the description as a part, as for the other class types (see loinc-lookup-code)",
+        "operation" : "lookup",
+        "request" : "loinc/loinc-lookup-classtype-request-parameters.json",
+        "response" : "loinc/loinc-lookup-classtype-response-parameters.json"
       },
       {
         "name" : "loinc-lookup-part",
