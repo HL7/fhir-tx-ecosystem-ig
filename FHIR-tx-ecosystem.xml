@@ -235,6 +235,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="binary" name="Binary Support"/>
 <page deprecated="true" key="capstatements" name="Capability Statements"/>
+<page key="CHANGELOG" name="Change Log"/>
 <page deprecated="true" key="change-notes" name="Change Notes"/>
 <page deprecated="true" key="col" name="Colorectal Cancer Screening (COL)"/>
 <page key="ecosystem-server" name="Coordinating Server"/>

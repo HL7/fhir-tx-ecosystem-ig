@@ -36,12 +36,12 @@
     </a>
     <ul class="dropdown-menu">
       <li><a href="testcases.html">Documentation</a></li>
-      <li><a href="test-history.html">Version History</a></li>
       <li><a href="r4.html">Test Cases in R4</a></li>
       <li><a href="test-registry.html">Registry</a></li>
     </ul>
   </li>
   <li><a href="artifacts.html">Artifacts</a></li>
+  <li><a href="CHANGELOG.html">Version History</a></li>
 </ul>      
 
 

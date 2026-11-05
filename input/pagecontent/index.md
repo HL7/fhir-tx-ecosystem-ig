@@ -40,17 +40,17 @@ The LOINC and OMOP tests may become official; this is work-in-progress.
 
 #### Status
 
-The current release of the test cases is **1.10.0** (25 October 2026). The
-[Test Case History](test-history.html) lists what changed in each release. Test against a released
+The current release of the test cases is **1.11.0** (6 November 2026). The
+[Version History](CHANGELOG.html) lists what changed in each release. Test against a released
 version: the default, `current`, is the ci-build, and changes whenever the tests do.
 
 | Area | Status |
 | --- | --- |
 | The core operations - `$expand`, `$validate-code`, `$lookup`, `$translate`, `$subsumes` - with versions and languages | Stable. Releases add tests and correct expected responses, but the rules change rarely |
-| SNOMED CT post-coordination | Settling. The scope servers have to support was agreed by the SNOMED Computable Languages Group in October 2026 (see the [requirements](requirements.html)), and the tests are being written to it |
-| `$closure`, and [features](testcases.html#features) | New in 1.10.0 |
+| SNOMED CT post-coordination | Settling. The scope servers have to support was agreed by the SNOMED Computable Languages Group in October 2026 (see the [requirements](requirements.html)), and the tests have been written to it and are being evaluated |
+| `$closure`, and [features](testcases.html#features) | New in 1.10.0; still being evaluated |
 | ICD-11 and ICF | Draft. The [ICD-11](icd-11.html) and [ICF](icf.html) notes will move to terminology.hl7.org in time |
-| The `tx.fhir.org` mode | Tests specific to tx.fhir.org. No other server is expected to pass them |
+| The `tx.fhir.org` mode | Tests specific to tx.fhir.org. No other server is expected to pass them, though some do; some tests in this suite will be moved to other suites in time |
 
 The test cases will be migrated to TestPlan and matchetypes at some stage. They are written for R5,
 and also run against R4 servers (see [R4 and the Test Cases](r4.html)).
