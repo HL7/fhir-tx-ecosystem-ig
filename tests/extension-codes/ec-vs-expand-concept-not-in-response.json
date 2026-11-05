@@ -1,0 +1,33 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose", "description"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ec-concept-not-in",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesConceptNotIn",
+  "title" : "Extension Codes - concept not-in",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-04",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base|1.0.0"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-global|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "A2",
+      "display" : "Code A2"
+    }]
+  }
+}

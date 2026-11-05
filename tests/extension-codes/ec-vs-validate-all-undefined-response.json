@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "X99"
+  },
+  {
+    "name" : "display",
+    "valueString" : "User-assigned"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/ec-base"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.0.0",
+    "$optional$" : "warning:version"
+  }]
+}

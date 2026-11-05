@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/ec-code-not-in"
+  },
+  {
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "code" : "X99"
+    }
+  }]
+}

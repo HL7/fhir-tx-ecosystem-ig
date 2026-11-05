@@ -1784,5 +1784,23 @@
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-filter|5.0.0'",
     "3" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed",
     "4" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed; The concept 'codeInactive' is valid but is not active; The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-filter|5.0.0'"
+  },
+  "extension-codes/ec-vs-validate-listed-a2-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#A2' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-listed|1.0.0'"
+  },
+  "extension-codes/ec-vs-validate-concept-in-undefined-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#X99' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-concept-in|1.0.0'"
+  },
+  "extension-codes/ec-vs-validate-concept-not-in-undefined-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#X99' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-concept-not-in|1.0.0'"
+  },
+  "extension-codes/ec-vs-validate-code-not-in-undefined-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#X99' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-code-not-in|1.0.0'"
+  },
+  "extension-codes/ec-vs-validate-is-not-a-undefined-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#X99' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-is-not-a|1.0.0'"
+  },
+  "extension-codes/ec-vs-validate-regex-undefined-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#X99' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-regex|1.0.0'"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ec-concept-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ec-concept-in",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesConceptIn",
+  "title" : "Extension Codes - concept in",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-04",
+  "publisher" : "FHIR Project",
+  "description" : "Of the base code system: concept in A1,X99",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "in",
+        "value" : "A1,X99"
+      }]
+    }]
+  }
+}

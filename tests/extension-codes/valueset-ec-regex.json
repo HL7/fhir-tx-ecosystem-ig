@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ec-regex",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ec-regex",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesRegex",
+  "title" : "Extension Codes - regex",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-04",
+  "publisher" : "FHIR Project",
+  "description" : "Of the base code system: code regex X.*: matches only codes in the X code space",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "filter" : [{
+        "property" : "code",
+        "op" : "regex",
+        "value" : "X.*"
+      }]
+    }]
+  }
+}

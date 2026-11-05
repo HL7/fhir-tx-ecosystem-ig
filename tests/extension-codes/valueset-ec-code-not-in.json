@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ec-code-not-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ec-code-not-in",
+  "version" : "1.0.0",
+  "name" : "ExtensionCodesCodeNotIn",
+  "title" : "Extension Codes - code not-in",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-04",
+  "publisher" : "FHIR Project",
+  "description" : "Of the base code system: code not-in A1",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/ec-base",
+      "filter" : [{
+        "property" : "code",
+        "op" : "not-in",
+        "value" : "A1"
+      }]
+    }]
+  }
+}

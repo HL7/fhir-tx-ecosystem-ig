@@ -193,6 +193,10 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
   * §An expansion of a value set that includes all of a code system with reserved code spaces - whether or not any
     supplements are in play - SHALL be marked as unclosed (`valueset-unclosed`), since codes in the reserved code
     spaces are members of the value set (`$validate-code` accepts them) that the expansion can't list§
+  * §A code in a reserved code space that a value set lists (`compose.include.concept`) is a member of it: it is in the
+    expansion, and `$validate-code` accepts it. A filter never selects a code in a reserved code space - not even a
+    `concept in` or `code in` filter that lists it - since such codes have no hierarchy or properties: it is not in the
+    expansion, `$validate-code` rejects it, and the filter does not make the expansion unclosed§
   * An `extension-codes` supplement that gives a display to a code outside the reserved code space - one the code
     system defines - acts as a language pack does for that code *(suites: `extension-codes`, and
     `extension-codes-3166` for ISO 3166's user-assigned codes)*

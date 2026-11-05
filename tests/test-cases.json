@@ -1137,8 +1137,8 @@
   },{
     "name" : "extension-codes",
     "mode" : "general",
-    "description" : "Extension-codes supplements: a code system reserves a code space (codesystem-reservedCodeSpace) for users to define their own codes, and a CodeSystem supplement of type extension-codes defines codes in it, with displays. A global one (codesystem-supplement-global) is used whether or not it is referenced, as if the code system defined the codes; one that is not global is only used when it is referenced. A code in the reserved code space that nothing in scope defines is valid, with the code space's default display (default-display, or User-assigned)",
-    "setup" : ["extension-codes/codesystem-ec-base.json", "extension-codes/codesystem-ec-global.json", "extension-codes/codesystem-ec-local.json", "extension-codes/valueset-ec-all.json"],
+    "description" : "Extension-codes supplements: a code system reserves a code space (codesystem-reservedCodeSpace) for users to define their own codes, and a CodeSystem supplement of type extension-codes defines codes in it, with displays. A global one (codesystem-supplement-global) is used whether or not it is referenced, as if the code system defined the codes; one that is not global is only used when it is referenced. A code in the reserved code space that nothing in scope defines is valid, with the code space's default display (default-display, or User-assigned). In a value set, a reserved code is a member of an include of all of the code system (so its expansion is unclosed) and of an include that lists it; a filter never selects one",
+    "setup" : ["extension-codes/codesystem-ec-base.json", "extension-codes/codesystem-ec-global.json", "extension-codes/codesystem-ec-local.json", "extension-codes/valueset-ec-all.json", "extension-codes/valueset-ec-listed.json", "extension-codes/valueset-ec-concept-in.json", "extension-codes/valueset-ec-concept-not-in.json", "extension-codes/valueset-ec-code-not-in.json", "extension-codes/valueset-ec-is-not-a.json", "extension-codes/valueset-ec-regex.json"],
     "tests" : [
       {
         "name" : "ec-lookup-global",
@@ -1304,6 +1304,97 @@
         "operation" : "lookup",
         "request" : "extension-codes/ec-lookup-global-referenced-request.json",
         "response" : "extension-codes/ec-lookup-global-referenced-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-all-undefined",
+        "description" : "$validate-code of a reserved code (X99, which nothing defines) against all of the code system (ec-all): the reserved codes are members, which is why ec-expand-all is unclosed: valid",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-all-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-all-undefined-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-listed-undefined",
+        "description" : "$validate-code of the reserved code X99 against A1 and the reserved code X99, listed: valid",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-listed-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-listed-undefined-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-listed-a2",
+        "description" : "$validate-code of A2 (a code of the code system that isn't listed) against A1 and the reserved code X99, listed: not in the value set",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-listed-a2-request.json",
+        "response" : "extension-codes/ec-vs-validate-listed-a2-response.json"
+      },
+      {
+        "name" : "ec-vs-expand-concept-in",
+        "description" : "$expand of concept in A1,X99: A1",
+        "operation" : "expand",
+        "request" : "extension-codes/ec-vs-expand-concept-in-request.json",
+        "response" : "extension-codes/ec-vs-expand-concept-in-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-concept-in-undefined",
+        "description" : "$validate-code of the reserved code X99 against concept in A1,X99: not in the value set",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-concept-in-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-concept-in-undefined-response.json"
+      },
+      {
+        "name" : "ec-vs-expand-concept-not-in",
+        "description" : "$expand of concept not-in A1: A2",
+        "operation" : "expand",
+        "request" : "extension-codes/ec-vs-expand-concept-not-in-request.json",
+        "response" : "extension-codes/ec-vs-expand-concept-not-in-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-concept-not-in-undefined",
+        "description" : "$validate-code of the reserved code X99 against concept not-in A1: not in the value set",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-concept-not-in-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-concept-not-in-undefined-response.json"
+      },
+      {
+        "name" : "ec-vs-expand-code-not-in",
+        "description" : "$expand of code not-in A1: A2",
+        "operation" : "expand",
+        "request" : "extension-codes/ec-vs-expand-code-not-in-request.json",
+        "response" : "extension-codes/ec-vs-expand-code-not-in-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-code-not-in-undefined",
+        "description" : "$validate-code of the reserved code X99 against code not-in A1: not in the value set",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-code-not-in-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-code-not-in-undefined-response.json"
+      },
+      {
+        "name" : "ec-vs-expand-is-not-a",
+        "description" : "$expand of concept is-not-a A1: A2",
+        "operation" : "expand",
+        "request" : "extension-codes/ec-vs-expand-is-not-a-request.json",
+        "response" : "extension-codes/ec-vs-expand-is-not-a-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-is-not-a-undefined",
+        "description" : "$validate-code of the reserved code X99 against concept is-not-a A1: not in the value set",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-is-not-a-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-is-not-a-undefined-response.json"
+      },
+      {
+        "name" : "ec-vs-expand-regex",
+        "description" : "$expand of code regex X.*: matches only codes in the X code space: no codes",
+        "operation" : "expand",
+        "request" : "extension-codes/ec-vs-expand-regex-request.json",
+        "response" : "extension-codes/ec-vs-expand-regex-response.json"
+      },
+      {
+        "name" : "ec-vs-validate-regex-undefined",
+        "description" : "$validate-code of the reserved code X99 against code regex X.*: matches only codes in the X code space: not in the value set",
+        "operation" : "validate-code",
+        "request" : "extension-codes/ec-vs-validate-regex-undefined-request.json",
+        "response" : "extension-codes/ec-vs-validate-regex-undefined-response.json"
       }
     ]
   },{
