@@ -1,8 +1,8 @@
 {
   "package-id": "hl7.fhir.uv.tx-ecosystem",
-  "version": "1.10.0",
-  "desc": "Major changes: improved documentation and QA in the IG, and big rework of the test cases",
-  "path": "http://hl7.org/fhir/uv/tx-ecosystem/1.10.0",
+  "version": "1.11.0",
+  "desc": "Updated documentation, many new tests based on bug-hunting in the old tests, and the servers",
+  "path": "http://hl7.org/fhir/uv/tx-ecosystem/1.11.0",
   "status": "informative",
   "sequence": "Releases",
   "mode": "milestone"
