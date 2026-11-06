@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "message",
+    "valueString" : "$external:1:http://hl7.org/fhir/test/CodeSystem/target|0.1.0|http://hl7.org/fhir/test/ValueSet/target-some$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  }]
+}

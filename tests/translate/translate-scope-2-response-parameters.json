@@ -1,0 +1,12 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "message",
+    "valueString" : "$external:1:code2$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  }]
+}

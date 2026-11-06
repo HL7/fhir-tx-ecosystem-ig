@@ -4,6 +4,13 @@ All notable changes to this IG will be documented in this file. The format is ba
 
 Up to 1.10.0, this history covered the terminology tests, and was maintained on the Test Case History page in the IG; before 1.7.5, no reliable version history was maintained.
 
+## [Unreleased]
+
+### Corrections and New Tests
+
+* `translate-scope-1` to `translate-scope-5` (translate suite, R5 and later): `$translate` with `targetScope` and no `targetSystem`. The maps into the code systems the target value set draws on apply even when they don't name it as their targetScope; only target codes in the value set are returned (a map's unmapped included); and when no map applies, the message names the source's code system and version - the version given, or the one the server took the source to be. New setup resource `translate/valueset-target-some.json`
+* `snomed-translate-edition-*`: the target of an edition to edition translation may be given as the release of the International Edition the national edition was built on (`.../version/20250801`), or - by a server that doesn't hold that release on its own - as the edition (`http://snomed.info/sct/900000000000207008`), so that the code it gives out is one it can validate
+
 ## [1.11.0] - 2026-11-06
 
 ### Testing Infrastructure

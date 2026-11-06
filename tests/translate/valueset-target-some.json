@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "target-some",
+  "url" : "http://hl7.org/fhir/test/ValueSet/target-some",
+  "version" : "5.0.0",
+  "name" : "TargetSomeValueSet",
+  "title" : "Some of the Target codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-06",
+  "publisher" : "FHIR Project",
+  "description" : "Some of the codes in the target code system: a targetScope that no ConceptMap names as its own",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/target",
+      "concept" : [{
+        "code" : "code1"
+      },{
+        "code" : "code4"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "sourceCoding",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/source",
+      "code" : "code-5"
+    }
+  },{
+    "name" : "targetScope",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/target-some"
+  }]
+}

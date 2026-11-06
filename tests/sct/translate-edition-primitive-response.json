@@ -6,7 +6,7 @@
       "name" : "concept",
       "valueCoding" : {
         "system" : "http://snomed.info/sct",
-        "version" : "http://snomed.info/sct/900000000000207008/version/20250801",
+        "version" : "$choice:http://snomed.info/sct/900000000000207008/version/20250801|http://snomed.info/sct/900000000000207008$",
         "code" : "300338006",
         "display" : "Liver problem"
       }

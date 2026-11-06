@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "match",
+    "part" : [{
+      "name" : "concept",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://hl7.org/fhir/test/CodeSystem/target",
+        "code" : "code4",
+        "display" : "code Number 4"
+      }
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "equivalence",
+      "valueCode" : "relatedto"
+    },
+    {
+      "name" : "originMap",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
+    },
+    {
+      "$only$" : "version:5",
+      "name" : "relationship",
+      "valueCode" : "related-to"
+    },
+    {
+      "$only$" : "version:4",
+      "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/source",
+        "code" : "code-5"
+      }
+    }]
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  }]
+}

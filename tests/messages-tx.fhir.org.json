@@ -1263,6 +1263,15 @@
   "tho/validate-isnota-self-response.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#_ActClassRecordOrganizer' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isnota|0.1.0'"
   },
+  "translate/translate-scope-2-response-parameters.json" : {
+    "1" : "A translation was left out because it is not in the target scope 'http://hl7.org/fhir/test/ValueSet/target-some': http://hl7.org/fhir/test/CodeSystem/target#code2"
+  },
+  "translate/translate-scope-4-response-parameters.json" : {
+    "1" : "No ConceptMap is available to translate from 'http://hl7.org/fhir/test/CodeSystem/target|0.1.0' to 'http://hl7.org/fhir/test/ValueSet/target-some'"
+  },
+  "translate/translate-scope-5-response-parameters.json" : {
+    "1" : "No ConceptMap is available to translate from 'http://hl7.org/fhir/test/CodeSystem/target' (no version given, so 'http://hl7.org/fhir/test/CodeSystem/target|0.1.0') to 'http://hl7.org/fhir/test/ValueSet/target-some'"
+  },
   "translate/translate-reverse-response-r4-a-parameters.json" : {
     "1" : "No ConceptMap is available to translate from 'http://hl7.org/fhir/test/CodeSystem/target' to 'http://hl7.org/fhir/test/CodeSystem/source'"
   },

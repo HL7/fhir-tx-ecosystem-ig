@@ -4922,7 +4922,8 @@
     "name" : "translate",
     "description" : "Tests for ConceptMap.$translate",
     "setup" : [ "translate/codesystem-source.json", "translate/codesystem-target.json", "translate/ConceptMap-full.json",
-                "translate/ConceptMap-novs.json", "translate/valueset-source.json", "translate/valueset-target.json"],
+                "translate/ConceptMap-novs.json", "translate/valueset-source.json", "translate/valueset-target.json",
+                "translate/valueset-target-some.json"],
     "tests" : [
       {
         "name" : "translate-1",
@@ -4996,6 +4997,46 @@
         "operation" : "translate",
         "request" : "translate/translate-4-request-parameters.json",
         "response" : "translate/translate-4-response-parameters.json"
+      },
+      {
+        "name" : "translate-scope-1",
+        "description" : "targetScope with no targetSystem: the maps into the code systems the value set draws on apply, even when they don't name it as their targetScope. ValueSet/target-some (code1 and code4 of CodeSystem/target) is no map's targetScope; ConceptMap/full maps CodeSystem/source to CodeSystem/target, and code-1 maps to code1, which is in it",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-scope-1-request-parameters.json",
+        "response" : "translate/translate-scope-1-response-parameters.json"
+      },
+      {
+        "name" : "translate-scope-2",
+        "description" : "targetScope limits the operation to target codes that are members of the value set: code-2 maps to code2, which is not in ValueSet/target-some, so there is no translation (a message saying why is optional)",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-scope-2-request-parameters.json",
+        "response" : "translate/translate-scope-2-response-parameters.json"
+      },
+      {
+        "name" : "translate-scope-3",
+        "description" : "The same applies to a group's unmapped: code-5 has no element in ConceptMap/full, and its unmapped (fixed, code4) is in ValueSet/target-some",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-scope-3-request-parameters.json",
+        "response" : "translate/translate-scope-3-response-parameters.json"
+      },
+      {
+        "name" : "translate-scope-4",
+        "description" : "No map goes from CodeSystem/target to the code systems of ValueSet/target-some: the message names the source's code system and version (which version of the source it is decides which maps apply)",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-scope-4-request-parameters.json",
+        "response" : "translate/translate-scope-4-response-parameters.json"
+      },
+      {
+        "name" : "translate-scope-5",
+        "description" : "The same, with no version on the source: the message names the version the server took the source to be",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-scope-5-request-parameters.json",
+        "response" : "translate/translate-scope-5-response-parameters.json"
       }
     ]
   },{
