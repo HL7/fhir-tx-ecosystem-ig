@@ -2,7 +2,7 @@ The Coordination server keeps a current set of information about the servers in 
 ecosystem, and users of the ecosystem ask the Coordination server which terminology server should be
 used for a particular operation. 
 
-#### Scanning the Ecosystem
+### Scanning the Ecosystem
 
 The Coordination server scans the servers referenced from the master registration 
 file on a regular basis, and maintains a live list of the servers, their configuration, and what 
@@ -21,4 +21,9 @@ supported CodeSystems comes from the TerminologyCapabilities resource.
 
 If the server requires authentication for these operations, the Coordination server
 must be given access to these operations. 
+
+Note that some servers report additional code systems and value sets to the server when it is validated,
+so the server should be configured with access to the server.
+
+The server supports access by apikey or by OAuth token flow.
 

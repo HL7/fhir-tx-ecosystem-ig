@@ -1,4 +1,4 @@
-The [monitoring server](ecosystem-monitor.html) provides a public API that has three sub-functions: 
+The [monitoring server](ecosystem-server.html) provides a public API that has three sub-functions: 
 
 * Discovery: list known servers 
 * Resolution: recommend which server to use for a code system
