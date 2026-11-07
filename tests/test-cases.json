@@ -1634,7 +1634,8 @@
         "language/codesystem-de-multi.json", "language/codesystem-de-single.json", "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
         "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-en-multi.json", "language/valueset-en-single.json",
         "language/valueset-en-enlang-multi.json", "language/valueset-en-en-multi.json", "inactive/valueset-all.json", "inactive/codesystem-inactive.json",
-        "version/codesystem-version-1.json", "version/valueset-all-version-1.json"
+        "version/codesystem-version-1.json", "version/valueset-all-version-1.json",
+        "validation/codesystem-version-needed.json", "validation/valueset-version-needed.json", "validation/valueset-version-needed-pinned.json"
       ],
     "tests" : [
       {
@@ -2222,6 +2223,92 @@
         "operation" : "validate-code",
         "request" : "validation/missing-vs-cc-no-system-infer-request-parameters.json",
         "response" : "validation/missing-vs-cc-no-system-infer-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-cs-code",
+        "description" : "CodeSystem $validate-code, code with no version. The code system has versionNeeded = true, so a warning is expected",
+        "operation" : "cs-validate-code",
+        "request" : "validation/vn-cs-code-request-parameters.json",
+        "response" : "validation/vn-cs-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-cs-coding",
+        "description" : "CodeSystem $validate-code, Coding with no version. The code system has versionNeeded = true, so a warning is expected",
+        "operation" : "cs-validate-code",
+        "request" : "validation/vn-cs-coding-request-parameters.json",
+        "response" : "validation/vn-cs-coding-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-cs-cc",
+        "description" : "CodeSystem $validate-code, CodeableConcept whose coding has no version. The code system has versionNeeded = true, so a warning is expected, against the coding",
+        "operation" : "cs-validate-code",
+        "request" : "validation/vn-cs-cc-request-parameters.json",
+        "response" : "validation/vn-cs-cc-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-cs-coding-version-param",
+        "description" : "CodeSystem $validate-code, Coding with no version, version parameter 1.0.0. The version parameter is specific to this call, and doesn't travel with the coding, so the warning is still expected",
+        "operation" : "cs-validate-code",
+        "request" : "validation/vn-cs-coding-version-param-request-parameters.json",
+        "response" : "validation/vn-cs-coding-version-param-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-cs-coding-versioned",
+        "description" : "CodeSystem $validate-code, Coding with version 1.0.0. The code system has versionNeeded = true, and the version is present, so no warning",
+        "operation" : "cs-validate-code",
+        "request" : "validation/vn-cs-coding-versioned-request-parameters.json",
+        "response" : "validation/vn-cs-coding-versioned-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-code",
+        "description" : "ValueSet $validate-code, code + system with no version. The code system has versionNeeded = true, so a warning is expected",
+        "operation" : "validate-code",
+        "request" : "validation/vn-vs-code-request-parameters.json",
+        "response" : "validation/vn-vs-code-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-coding",
+        "description" : "ValueSet $validate-code, Coding with no version. The code system has versionNeeded = true, so a warning is expected",
+        "operation" : "validate-code",
+        "request" : "validation/vn-vs-coding-request-parameters.json",
+        "response" : "validation/vn-vs-coding-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-cc",
+        "description" : "ValueSet $validate-code, CodeableConcept whose coding has no version. The code system has versionNeeded = true, so a warning is expected, against the coding",
+        "operation" : "validate-code",
+        "request" : "validation/vn-vs-cc-request-parameters.json",
+        "response" : "validation/vn-vs-cc-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-coding-versioned",
+        "description" : "ValueSet $validate-code, Coding with version 1.0.0. The code system has versionNeeded = true, and the version is present, so no warning",
+        "operation" : "validate-code",
+        "request" : "validation/vn-vs-coding-versioned-request-parameters.json",
+        "response" : "validation/vn-vs-coding-versioned-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-coding-pinned",
+        "description" : "ValueSet $validate-code, Coding with no version, value set pins the code system version to 1.0.0. The value set's version is specific to the value set, and doesn't travel with the coding, so the warning is still expected",
+        "operation" : "validate-code",
+        "request" : "validation/vn-vs-coding-pinned-request-parameters.json",
+        "response" : "validation/vn-vs-coding-pinned-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-coding-force",
+        "description" : "ValueSet $validate-code, Coding with no version, force-system-version 1.0.0. The parameter is specific to this call, and doesn't travel with the coding, so the warning is still expected",
+        "operation" : "validate-code",
+        "profile" : "validation/parameters-version-needed-force.json",
+        "request" : "validation/vn-vs-coding-force-request-parameters.json",
+        "response" : "validation/vn-vs-coding-force-response-parameters.json"
+      },
+      {
+        "name" : "validation-vn-vs-coding-default",
+        "description" : "ValueSet $validate-code, Coding with no version, system-version 1.0.0. The parameter is specific to this call, and doesn't travel with the coding, so the warning is still expected",
+        "operation" : "validate-code",
+        "profile" : "validation/parameters-version-needed-default.json",
+        "request" : "validation/vn-vs-coding-default-request-parameters.json",
+        "response" : "validation/vn-vs-coding-default-response-parameters.json"
       }
     ]
   },{
@@ -12343,7 +12430,7 @@
       },
       {
         "name" : "icf-vs-enum-qualified",
-        "description" : "A qualified code listed in an enumerated value set",
+        "description" : "A qualified code listed in an enumerated value set. The code has no version: ICF says versionNeeded = true, so there's a warning, even though the value set pins the version",
         "operation" : "validate-code",
         "request" : "icf/icf-vs-enum-qualified-request-parameters.json",
         "response" : "icf/icf-vs-enum-qualified-response-parameters.json"
@@ -12371,7 +12458,7 @@
       },
       {
         "name" : "icf-vs-all-plain",
-        "description" : "A plain code in an is-a value set",
+        "description" : "A plain code in an is-a value set. The code has no version: ICF says versionNeeded = true, so there's a warning, even though the value set pins the version",
         "operation" : "validate-code",
         "request" : "icf/icf-vs-all-plain-request-parameters.json",
         "response" : "icf/icf-vs-all-plain-response-parameters.json"

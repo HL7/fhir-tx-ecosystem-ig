@@ -1,0 +1,67 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "code",
+      "valueCode" : "code1"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Display 1"
+    },
+    {
+      "name" : "issues",
+      "resource" : {
+        "resourceType" : "OperationOutcome",
+        "issue" : [
+          {
+            "$optional-properties$" : [
+              "location"
+            ],
+            "extension" : [
+              {
+                "$optional$" : "!tx.fhir.org",
+                "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString" : "CODESYSTEM_VERSION_NEEDED"
+              }
+            ],
+            "severity" : "warning",
+            "code" : "business-rule",
+            "details" : {
+              "coding" : [
+                {
+                  "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                  "code" : "invalid-data"
+                }
+              ],
+              "text" : "$external:1:version-needed|versionNeeded$"
+            },
+            "location" : [
+              "version"
+            ],
+            "expression" : [
+              "version"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name" : "message",
+      "valueString" : "$external:1:version-needed|versionNeeded$"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version-needed"
+    },
+    {
+      "name" : "version",
+      "valueString" : "1.0.0",
+      "$optional$" : "warning:version"
+    }
+  ]
+}

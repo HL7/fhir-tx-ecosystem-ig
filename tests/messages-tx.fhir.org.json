@@ -1600,61 +1600,61 @@
     "2" : "The ICF code 'b1100+2' is not valid: only an environmental factor (e) can be a facilitator, written with '+'"
   },
   "icf/icf-vs-enum-other-qualifier-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#b1100.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
   },
   "icf/icf-vs-enum-unlisted-eights-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.88' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.88' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-enumerated|0.1.0'"
   },
   "icf/icf-vs-all-other-component-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-body-functions|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-body-functions|0.1.0'"
   },
   "icf/icf-vs-extent-req-plain-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#b1100' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
   },
   "icf/icf-vs-extent-req-eight-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.8' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#b1100.8' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
   },
   "icf/icf-vs-extent-req-heading-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#b1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-extent-required|0.1.0'"
   },
   "icf/icf-vs-full-missing-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.12' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.12' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
   },
   "icf/icf-vs-full-eight-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.128' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.128' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
   },
   "icf/icf-vs-full-nature-eight-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.183' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.183' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
   },
   "icf/icf-vs-full-plain-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-structure-full|0.1.0'"
   },
   "icf/icf-vs-noloc-present-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.183' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-localization|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.183' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-localization|0.1.0'"
   },
   "icf/icf-vs-capacity-performance-only-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450.1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#d450.1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
   },
   "icf/icf-vs-capacity-eight-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450.18' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#d450.18' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
   },
   "icf/icf-vs-capacity-plain-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#d450' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#d450' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-capacity-required|0.1.0'"
   },
   "icf/icf-vs-facilitator-barrier-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#e310.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#e310.3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
   },
   "icf/icf-vs-facilitator-eight-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#e310+8' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#e310+8' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
   },
   "icf/icf-vs-facilitator-plain-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#e310' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#e310' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-facilitators|0.1.0'"
   },
   "icf/icf-vs-noqual-qualified-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#b1100.2' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#b1100.2' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
   },
   "icf/icf-vs-noqual-eights-response-parameters.json" : {
-    "1" : "The provided code 'http://hl7.org/fhir/sid/icf#s7300.888' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
+    "1" : "The provided code 'http://hl7.org/fhir/sid/icf|2001a#s7300.888' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/icf-no-qualifiers|0.1.0'"
   },
   "extension-codes/ec-validate-global-wrong-display-response.json" : {
     "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#XG1. Valid display is 'Global Code One' (en) (for the language(s) '--')"
@@ -1811,5 +1811,41 @@
   },
   "extension-codes/ec-vs-validate-regex-undefined-response.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/ec-base#X99' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ec-regex|1.0.0'"
+  },
+  "validation/vn-cs-code-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-cs-coding-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-cs-cc-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-cs-coding-version-param-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-vs-code-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-vs-coding-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-vs-cc-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-vs-coding-pinned-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-vs-coding-force-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "validation/vn-vs-coding-default-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/test/CodeSystem/version-needed' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "icf/icf-vs-all-plain-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/sid/icf' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "icf/icf-vs-enum-qualified-response-parameters.json" : {
+    "1" : "The code system 'http://hl7.org/fhir/sid/icf' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
   }
 }

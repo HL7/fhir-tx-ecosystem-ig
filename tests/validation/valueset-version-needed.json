@@ -1,0 +1,19 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "version-needed",
+  "url" : "http://hl7.org/fhir/test/ValueSet/version-needed",
+  "version" : "1.0.0",
+  "name" : "VersionNeededAll",
+  "title" : "Version Needed All",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-07",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [
+      {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/version-needed"
+      }
+    ]
+  }
+}

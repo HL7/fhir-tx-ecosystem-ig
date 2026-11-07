@@ -9,6 +9,35 @@
     "valueString" : "State of consciousness"
   },
   {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "CODESYSTEM_VERSION_NEEDED"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-data"
+          }],
+          "text" : "$external:1:icf|versionNeeded$"
+        },
+        "location" : ["version"],
+        "expression" : ["version"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:1:icf|versionNeeded$"
+  },
+  {
     "name" : "result",
     "valueBoolean" : true
   },

@@ -9,6 +9,10 @@
     "valueUri" : "http://hl7.org/fhir/sid/icf"
   },
   {
+    "name" : "systemVersion",
+    "valueString" : "2001a"
+  },
+  {
     "name" : "code",
     "valueCode" : "s7300.888"
   }]

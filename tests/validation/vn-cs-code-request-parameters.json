@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "url",
+      "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/version-needed"
+    },
+    {
+      "name" : "code",
+      "valueCode" : "code1"
+    }
+  ]
+}
