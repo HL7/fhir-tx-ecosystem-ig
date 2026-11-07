@@ -6,6 +6,10 @@ Up to 1.10.0, this history covered the terminology tests, and was maintained on 
 
 ## [Unreleased]
 
+### New Tests 
+
+* Add test to ensure that if CodeSytem is versionNeeded = true, a warning is returned from $validate-code if there is no explicit version 
+
 ### Corrections and New Tests
 
 * `translate-scope-1` to `translate-scope-5` (translate suite, R5 and later): `$translate` with `targetScope` and no `targetSystem`. The maps into the code systems the target value set draws on apply even when they don't name it as their targetScope; only target codes in the value set are returned (a map's unmapped included); and when no map applies, the message names the source's code system and version - the version given, or the one the server took the source to be. New setup resource `translate/valueset-target-some.json`
