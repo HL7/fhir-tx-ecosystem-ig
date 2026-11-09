@@ -6050,7 +6050,7 @@
       },
       {
         "name" : "loinc-expand-all-limited",
-        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 257267. See loinc-expand-all-limited-total for the test all servers run",
+        "description" : "tx.fhir.org's own page of this expansion, in its order: $expand does not define which codes a page holds. A total, if returned, must be 257266. See loinc-expand-all-limited-total for the test all servers run",
         "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-all-limited-request-parameters.json",
@@ -6058,7 +6058,7 @@
       },
       {
         "name" : "loinc-expand-all-limited-total",
-        "description" : "The size of the expansion: count=0, and total must be 257267. Which codes a page of it holds is up to the server (see loinc-expand-all-limited)",
+        "description" : "The size of the expansion: count=0, and total must be 257266. Which codes a page of it holds is up to the server (see loinc-expand-all-limited)",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-all-limited-total-request-parameters.json",
         "response" : "loinc/loinc-expand-all-limited-total-response-valueSet.json"
