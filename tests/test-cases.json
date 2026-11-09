@@ -10029,12 +10029,28 @@
         "response" : "bugs/expand-country-codes-response.json"
       },
       {
+        "header" : {
+          "name" : "X-TOO-COSTLY-THRESHOLD",
+          "value" : "3000"
+        },
         "name" : "cpt",
         "operation" : "expand",
         "full-set" : true,
         "http-code" : "4xx",
         "request" : "bugs/expand-cpt-request.json",
         "response" : "bugs/expand-cpt-response.json"
+      },
+      {
+        "header" : {
+          "name" : "X-TOO-COSTLY-THRESHOLD",
+          "value" : "3000"
+        },
+        "name" : "cpt-1000",
+        "description" : "Check that the 1000 code agreement made with AMA is enforced correctly",
+        "operation" : "expand",
+        "full-set" : true,
+        "request" : "bugs/expand-cpt-1000-request.json",
+        "response" : "bugs/expand-cpt-1000-response.json"
       },
       {
         "name" : "cpt-0",
@@ -12054,8 +12070,12 @@
         "response" : "langcodes/expand-lang-both-response.json"
       },
       {
+        "header" : {
+          "name" : "X-TOO-COSTLY-THRESHOLD",
+          "value" : "3000"
+        },
         "name" : "expand-lang-region",
-        "description" : "a fixed region is finite but far too large to expand, so it answers too-costly",
+        "description" : "a fixed region is finite but far too large to expand, so it answers too-costly. The header sets the limit, so that every server, whatever its own limit, exercises the same path",
         "operation" : "expand",
         "http-code" : "4xx",
         "request" : "langcodes/expand-lang-region-request.json",

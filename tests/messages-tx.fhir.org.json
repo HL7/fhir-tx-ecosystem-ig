@@ -1772,6 +1772,9 @@
   "bugs/expand-cpt-response.json" : {
     "1" : "The expansion of the value set in the request has too many codes to produce (>3000)"
   },
+  "bugs/expand-cpt-1000-response.json" : {
+    "1" : "Only 1000 codes from the code system 'http://www.ama-assn.org/go/cpt' can be listed in an expansion (by agreement with its publisher), so this expansion doesn't list all the codes asked for"
+  },
   "extensions/validate-supplement-prop-base-code4-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'",
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'"
