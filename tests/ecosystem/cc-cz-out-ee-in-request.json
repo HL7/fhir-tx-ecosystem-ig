@@ -1,0 +1,26 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split"
+    },
+    {
+      "name": "codeableConcept",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/11000279109",
+            "code": "290002008"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/11000181102",
+            "code": "49436004"
+          }
+        ]
+      }
+    }
+  ]
+}

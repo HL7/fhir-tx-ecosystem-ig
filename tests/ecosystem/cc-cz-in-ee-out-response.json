@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "46635009"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/11000279109",
+        "code" : "46635009"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/11000181102",
+        "code" : "314208002"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "Type 1 diabetes mellitus"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "this-code-not-in-vs"
+          }],
+          "text" : "$external:1:314208002|http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split$"
+        },
+        "expression" : ["CodeableConcept.coding[1].code"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "$url$"
+  }]
+}

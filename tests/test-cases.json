@@ -12139,6 +12139,70 @@
     ]
   },
   {
+    "name" : "ecosystem",
+    "mode" : "tx.fhir.org",
+    "description" : "Value sets whose code systems are spread across more than one server in the ecosystem, so that no single server holds them all: tx.fhir.org answers for them by asking the other servers",
+    "setup" : [ "ecosystem/valueset-sct-split.json" ],
+    "tests" : [
+      {
+        "name" : "ecosystem-cz-in",
+        "description" : "A Czech edition code in the value set (is-a 46635009)",
+        "operation" : "validate-code",
+        "request" : "ecosystem/cz-in-request.json",
+        "response" : "ecosystem/cz-in-response.json"
+      },
+      {
+        "name" : "ecosystem-cz-excluded-code",
+        "description" : "A Czech edition code that the value set excludes by code",
+        "operation" : "validate-code",
+        "request" : "ecosystem/cz-excluded-code-request.json",
+        "response" : "ecosystem/cz-excluded-code-response.json"
+      },
+      {
+        "name" : "ecosystem-cz-excluded-filter",
+        "description" : "A Czech edition code that the value set excludes by filter (is-a 70694009)",
+        "operation" : "validate-code",
+        "request" : "ecosystem/cz-excluded-filter-request.json",
+        "response" : "ecosystem/cz-excluded-filter-response.json"
+      },
+      {
+        "name" : "ecosystem-ee-in",
+        "description" : "An Estonian edition code in the value set (is-a 49436004)",
+        "operation" : "validate-code",
+        "request" : "ecosystem/ee-in-request.json",
+        "response" : "ecosystem/ee-in-response.json"
+      },
+      {
+        "name" : "ecosystem-ee-excluded-code",
+        "description" : "An Estonian edition code that the value set excludes by code",
+        "operation" : "validate-code",
+        "request" : "ecosystem/ee-excluded-code-request.json",
+        "response" : "ecosystem/ee-excluded-code-response.json"
+      },
+      {
+        "name" : "ecosystem-ee-excluded-filter",
+        "description" : "An Estonian edition code that the value set excludes by filter (is-a 282825002)",
+        "operation" : "validate-code",
+        "request" : "ecosystem/ee-excluded-filter-request.json",
+        "response" : "ecosystem/ee-excluded-filter-response.json"
+      },
+      {
+        "name" : "ecosystem-cc-cz-in-ee-out",
+        "description" : "A CodeableConcept with a Czech code in the value set and an Estonian code excluded from it: the Czech code meets the binding",
+        "operation" : "validate-code",
+        "request" : "ecosystem/cc-cz-in-ee-out-request.json",
+        "response" : "ecosystem/cc-cz-in-ee-out-response.json"
+      },
+      {
+        "name" : "ecosystem-cc-cz-out-ee-in",
+        "description" : "A CodeableConcept with a Czech code excluded from the value set and an Estonian code in it: the Estonian code meets the binding",
+        "operation" : "validate-code",
+        "request" : "ecosystem/cc-cz-out-ee-in-request.json",
+        "response" : "ecosystem/cc-cz-out-ee-in-response.json"
+      }
+    ]
+  },
+  {
     "name" : "closure",
     "feature" : "closure",
     "sequential" : true,

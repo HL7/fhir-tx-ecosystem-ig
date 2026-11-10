@@ -1,0 +1,21 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split"
+    },
+    {
+      "name": "system",
+      "valueUri": "http://snomed.info/sct"
+    },
+    {
+      "name": "systemVersion",
+      "valueString": "http://snomed.info/sct/11000279109"
+    },
+    {
+      "name": "code",
+      "valueCode": "1285518004"
+    }
+  ]
+}
