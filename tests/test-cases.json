@@ -10216,6 +10216,32 @@
         "operation" : "cs-validate-code",
         "request" : "bugs/validate-3166-d-request.json",
         "response" : "bugs/validate-3166-d-response.json"
+      },
+      {
+        "explanation" : "A value set with an exclude used to be exempt from the response limit (and from paging), so it came back whole whatever its size. The header sets the limit to 50; the value set has 100 codes after the exclusion",
+        "header" : {
+          "name" : "X-TOO-COSTLY-THRESHOLD",
+          "value" : "50"
+        },
+        "name" : "exclude-limit",
+        "description" : "A value set with an exclude is held to the response limit",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "bugs/expand-exclude-limit-request.json",
+        "response" : "bugs/expand-exclude-limit-response.json"
+      },
+      {
+        "explanation" : "Imported codes used to be added without counting against the response limit, so a value set that imports another came back whole whatever its size. The header sets the limit to 50; the imported value set (which also has an exclude) has 100 codes",
+        "header" : {
+          "name" : "X-TOO-COSTLY-THRESHOLD",
+          "value" : "50"
+        },
+        "name" : "import-limit",
+        "description" : "Codes from an imported value set count against the response limit",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "bugs/expand-import-limit-request.json",
+        "response" : "bugs/expand-import-limit-response.json"
       }
     ]
   },{

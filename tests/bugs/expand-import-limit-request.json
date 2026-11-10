@@ -1,0 +1,478 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "tx-resource",
+      "resource": {
+        "resourceType": "CodeSystem",
+        "url": "http://hl7.org/fhir/test/CodeSystem/bugs-limit",
+        "version": "5.0.0",
+        "name": "BugsLimit",
+        "status": "active",
+        "content": "complete",
+        "hierarchyMeaning": "is-a",
+        "concept": [
+          {
+            "code": "root",
+            "display": "Root",
+            "concept": [
+              {
+                "code": "c000",
+                "display": "Code 0"
+              },
+              {
+                "code": "c001",
+                "display": "Code 1"
+              },
+              {
+                "code": "c002",
+                "display": "Code 2"
+              },
+              {
+                "code": "c003",
+                "display": "Code 3"
+              },
+              {
+                "code": "c004",
+                "display": "Code 4"
+              },
+              {
+                "code": "c005",
+                "display": "Code 5"
+              },
+              {
+                "code": "c006",
+                "display": "Code 6"
+              },
+              {
+                "code": "c007",
+                "display": "Code 7"
+              },
+              {
+                "code": "c008",
+                "display": "Code 8"
+              },
+              {
+                "code": "c009",
+                "display": "Code 9"
+              },
+              {
+                "code": "c010",
+                "display": "Code 10"
+              },
+              {
+                "code": "c011",
+                "display": "Code 11"
+              },
+              {
+                "code": "c012",
+                "display": "Code 12"
+              },
+              {
+                "code": "c013",
+                "display": "Code 13"
+              },
+              {
+                "code": "c014",
+                "display": "Code 14"
+              },
+              {
+                "code": "c015",
+                "display": "Code 15"
+              },
+              {
+                "code": "c016",
+                "display": "Code 16"
+              },
+              {
+                "code": "c017",
+                "display": "Code 17"
+              },
+              {
+                "code": "c018",
+                "display": "Code 18"
+              },
+              {
+                "code": "c019",
+                "display": "Code 19"
+              },
+              {
+                "code": "c020",
+                "display": "Code 20"
+              },
+              {
+                "code": "c021",
+                "display": "Code 21"
+              },
+              {
+                "code": "c022",
+                "display": "Code 22"
+              },
+              {
+                "code": "c023",
+                "display": "Code 23"
+              },
+              {
+                "code": "c024",
+                "display": "Code 24"
+              },
+              {
+                "code": "c025",
+                "display": "Code 25"
+              },
+              {
+                "code": "c026",
+                "display": "Code 26"
+              },
+              {
+                "code": "c027",
+                "display": "Code 27"
+              },
+              {
+                "code": "c028",
+                "display": "Code 28"
+              },
+              {
+                "code": "c029",
+                "display": "Code 29"
+              },
+              {
+                "code": "c030",
+                "display": "Code 30"
+              },
+              {
+                "code": "c031",
+                "display": "Code 31"
+              },
+              {
+                "code": "c032",
+                "display": "Code 32"
+              },
+              {
+                "code": "c033",
+                "display": "Code 33"
+              },
+              {
+                "code": "c034",
+                "display": "Code 34"
+              },
+              {
+                "code": "c035",
+                "display": "Code 35"
+              },
+              {
+                "code": "c036",
+                "display": "Code 36"
+              },
+              {
+                "code": "c037",
+                "display": "Code 37"
+              },
+              {
+                "code": "c038",
+                "display": "Code 38"
+              },
+              {
+                "code": "c039",
+                "display": "Code 39"
+              },
+              {
+                "code": "c040",
+                "display": "Code 40"
+              },
+              {
+                "code": "c041",
+                "display": "Code 41"
+              },
+              {
+                "code": "c042",
+                "display": "Code 42"
+              },
+              {
+                "code": "c043",
+                "display": "Code 43"
+              },
+              {
+                "code": "c044",
+                "display": "Code 44"
+              },
+              {
+                "code": "c045",
+                "display": "Code 45"
+              },
+              {
+                "code": "c046",
+                "display": "Code 46"
+              },
+              {
+                "code": "c047",
+                "display": "Code 47"
+              },
+              {
+                "code": "c048",
+                "display": "Code 48"
+              },
+              {
+                "code": "c049",
+                "display": "Code 49"
+              },
+              {
+                "code": "c050",
+                "display": "Code 50"
+              },
+              {
+                "code": "c051",
+                "display": "Code 51"
+              },
+              {
+                "code": "c052",
+                "display": "Code 52"
+              },
+              {
+                "code": "c053",
+                "display": "Code 53"
+              },
+              {
+                "code": "c054",
+                "display": "Code 54"
+              },
+              {
+                "code": "c055",
+                "display": "Code 55"
+              },
+              {
+                "code": "c056",
+                "display": "Code 56"
+              },
+              {
+                "code": "c057",
+                "display": "Code 57"
+              },
+              {
+                "code": "c058",
+                "display": "Code 58"
+              },
+              {
+                "code": "c059",
+                "display": "Code 59"
+              },
+              {
+                "code": "c060",
+                "display": "Code 60"
+              },
+              {
+                "code": "c061",
+                "display": "Code 61"
+              },
+              {
+                "code": "c062",
+                "display": "Code 62"
+              },
+              {
+                "code": "c063",
+                "display": "Code 63"
+              },
+              {
+                "code": "c064",
+                "display": "Code 64"
+              },
+              {
+                "code": "c065",
+                "display": "Code 65"
+              },
+              {
+                "code": "c066",
+                "display": "Code 66"
+              },
+              {
+                "code": "c067",
+                "display": "Code 67"
+              },
+              {
+                "code": "c068",
+                "display": "Code 68"
+              },
+              {
+                "code": "c069",
+                "display": "Code 69"
+              },
+              {
+                "code": "c070",
+                "display": "Code 70"
+              },
+              {
+                "code": "c071",
+                "display": "Code 71"
+              },
+              {
+                "code": "c072",
+                "display": "Code 72"
+              },
+              {
+                "code": "c073",
+                "display": "Code 73"
+              },
+              {
+                "code": "c074",
+                "display": "Code 74"
+              },
+              {
+                "code": "c075",
+                "display": "Code 75"
+              },
+              {
+                "code": "c076",
+                "display": "Code 76"
+              },
+              {
+                "code": "c077",
+                "display": "Code 77"
+              },
+              {
+                "code": "c078",
+                "display": "Code 78"
+              },
+              {
+                "code": "c079",
+                "display": "Code 79"
+              },
+              {
+                "code": "c080",
+                "display": "Code 80"
+              },
+              {
+                "code": "c081",
+                "display": "Code 81"
+              },
+              {
+                "code": "c082",
+                "display": "Code 82"
+              },
+              {
+                "code": "c083",
+                "display": "Code 83"
+              },
+              {
+                "code": "c084",
+                "display": "Code 84"
+              },
+              {
+                "code": "c085",
+                "display": "Code 85"
+              },
+              {
+                "code": "c086",
+                "display": "Code 86"
+              },
+              {
+                "code": "c087",
+                "display": "Code 87"
+              },
+              {
+                "code": "c088",
+                "display": "Code 88"
+              },
+              {
+                "code": "c089",
+                "display": "Code 89"
+              },
+              {
+                "code": "c090",
+                "display": "Code 90"
+              },
+              {
+                "code": "c091",
+                "display": "Code 91"
+              },
+              {
+                "code": "c092",
+                "display": "Code 92"
+              },
+              {
+                "code": "c093",
+                "display": "Code 93"
+              },
+              {
+                "code": "c094",
+                "display": "Code 94"
+              },
+              {
+                "code": "c095",
+                "display": "Code 95"
+              },
+              {
+                "code": "c096",
+                "display": "Code 96"
+              },
+              {
+                "code": "c097",
+                "display": "Code 97"
+              },
+              {
+                "code": "c098",
+                "display": "Code 98"
+              },
+              {
+                "code": "c099",
+                "display": "Code 99"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "tx-resource",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/bugs-limit-imported",
+        "version": "5.0.0",
+        "name": "BugsLimit",
+        "status": "active",
+        "compose": {
+          "include": [
+            {
+              "system": "http://hl7.org/fhir/test/CodeSystem/bugs-limit",
+              "filter": [
+                {
+                  "property": "concept",
+                  "op": "is-a",
+                  "value": "root"
+                }
+              ]
+            }
+          ],
+          "exclude": [
+            {
+              "system": "http://hl7.org/fhir/test/CodeSystem/bugs-limit",
+              "concept": [
+                {
+                  "code": "c000"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "valueSet",
+      "resource": {
+        "resourceType": "ValueSet",
+        "url": "http://hl7.org/fhir/test/ValueSet/bugs-import-limit",
+        "version": "5.0.0",
+        "name": "BugsLimit",
+        "status": "active",
+        "compose": {
+          "include": [
+            {
+              "valueSet": [
+                "http://hl7.org/fhir/test/ValueSet/bugs-limit-imported|5.0.0"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
