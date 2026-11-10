@@ -1775,6 +1775,12 @@
   "bugs/expand-cpt-1000-response.json" : {
     "1" : "Only 1000 codes from the code system 'http://www.ama-assn.org/go/cpt' can be listed in an expansion (by agreement with its publisher), so this expansion doesn't list all the codes asked for"
   },
+  "bugs/expand-exclude-limit-response.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/bugs-exclude-limit' expansion has too many codes to produce (>50)"
+  },
+  "bugs/expand-import-limit-response.json" : {
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/bugs-import-limit|5.0.0' expansion has too many codes to produce (>50)"
+  },
   "extensions/validate-supplement-prop-base-code4-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'",
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/extensions#code4' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/extensions-supplement-prop-base|5.0.0'"
@@ -1850,5 +1856,29 @@
   },
   "icf/icf-vs-enum-qualified-response-parameters.json" : {
     "1" : "The code system 'http://hl7.org/fhir/sid/icf' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
+  },
+  "ecosystem/cc-cz-in-ee-out-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000181102#314208002' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  },
+  "ecosystem/cc-cz-out-ee-in-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000279109#290002008' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  },
+  "ecosystem/cz-excluded-code-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000279109#290002008' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  },
+  "ecosystem/cz-excluded-filter-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000279109#1285518004' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  },
+  "ecosystem/ee-excluded-code-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000181102#314208002' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  },
+  "ecosystem/ee-excluded-filter-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000181102#1010405004' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  },
+  "exclude/exclude-validate-cc-in-first-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/exclude#data-exchange' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/exclude|6.0.0'"
+  },
+  "exclude/exclude-validate-cc-in-last-response.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/exclude#data-exchange' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/exclude|6.0.0'"
   }
 }

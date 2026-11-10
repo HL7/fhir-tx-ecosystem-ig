@@ -1,0 +1,24 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/test/ValueSet/exclude"
+    },
+    {
+      "name": "codeableConcept",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/test/CodeSystem/exclude",
+            "code": "individual"
+          },
+          {
+            "system": "http://hl7.org/fhir/test/CodeSystem/exclude",
+            "code": "data-exchange"
+          }
+        ]
+      }
+    }
+  ]
+}

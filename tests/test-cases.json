@@ -5519,6 +5519,20 @@
         "request" : "exclude/exclude-gender2-request.json",
         "response" : "exclude/exclude-gender2-response.json",
         "response:tx.fhir.org" : "exclude/exclude-gender2-response-precise.json"
+      },
+      {
+        "name" : "exclude-validate-cc-in-first",
+        "description" : "Validate a CodeableConcept with a code that is in the value set, then one that the value set excludes: the result is true, and the display returned is that of the code in the value set",
+        "operation" : "validate-code",
+        "request" : "exclude/exclude-validate-cc-in-first-request.json",
+        "response" : "exclude/exclude-validate-cc-in-first-response.json"
+      },
+      {
+        "name" : "exclude-validate-cc-in-last",
+        "description" : "Validate a CodeableConcept with a code that the value set excludes, then one that is in the value set: the result is true, and the display returned is that of the code in the value set, not of the excluded one",
+        "operation" : "validate-code",
+        "request" : "exclude/exclude-validate-cc-in-last-request.json",
+        "response" : "exclude/exclude-validate-cc-in-last-response.json"
       }
     ]
   },{
