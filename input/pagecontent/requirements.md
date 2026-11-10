@@ -1011,7 +1011,14 @@ written against LOINC 2.83, and every request names that version - `version` in 
 `$subsumes` and `$validate-code` on the code system, `systemVersion` in `$validate-code` on a value set,
 `system-version` in `$expand`, and the version of the source Coding in `$translate`. The behaviour tested covers the LOINC properties (`COMPONENT`,
 `METHOD_TYP`, `ORDER_OBS`, `SCALE_TYP`, `CLASS`), `STATUS`, the parent/child hierarchy, answer lists,
-parts, and the `answers-for` and `list` filters.
+parts, and the `answers-for` and `answer-list` filters.
+
+Answer lists (as agreed with LOINC, [UP-645](https://jira.hl7.org/browse/UP-645)):
+
+* §Servers SHALL support the implicit value set for an answer list, `http://loinc.org/vs/[LL code]`, in `$expand` and `$validate-code`§
+* §Servers SHALL support the filter `answers-for` = code: all the answers (LA) in the answer list associated with the code, which is either the answer list itself (LL) or a LOINC term that has an associated answer list§
+* §Servers SHALL support the filter `answer-list` = code: all the answer lists (LL) that the answer (LA) is in§
+* The filter `LIST` = [LL code] is tx.fhir.org's own name for `answers-for` with an answer list code. tx.fhir.org only supports it for backwards compatibility, and the tests for it only run in `tx.fhir.org` mode. Other servers do not need to support it
 
 Property values and property filters (this clarifies the [UTG LOINC page](https://terminology.hl7.org/LOINC.html), 
 which lists the filter value for every property as `[string value]`):

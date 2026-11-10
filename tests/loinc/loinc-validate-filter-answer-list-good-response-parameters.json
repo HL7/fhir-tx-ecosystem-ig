@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+      "name" : "code",
+      "valueCode" : "LL6136-7"
+    },
+    {
+      "name" : "display",
+      "valueString" : "Met/Not met/Ongoing/Unable to assess"
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "system",
+      "valueUri" : "http://loinc.org"
+    },
+    {
+      "name" : "version",
+      "valueString" : "2.83",
+      "$optional$" : "warning:version"
+    }]
+}

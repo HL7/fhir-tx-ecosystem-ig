@@ -4,8 +4,8 @@
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-answer-list",
   "version" : "5.0.0",
-  "name" : "LOINCValueSetFilterList",
-  "title" : "LOINC ValueSet Filter by List",
+  "name" : "LOINCValueSetFilterAnswerList",
+  "title" : "LOINC ValueSet Filter by Answer List membership of an answer",
   "status" : "active",
   "experimental" : false,
   "date" : "2023-04-01",
@@ -29,13 +29,13 @@
     }],
     "contains" : [{
       "system" : "http://loinc.org",
-      "code" : "LA32-8",
-      "display" : "No"
+      "code" : "LL451-6",
+      "display" : "D26_Diagnosis status"
     },
     {
       "system" : "http://loinc.org",
-      "code" : "LA33-6",
-      "display" : "Yes"
+      "code" : "LL6136-7",
+      "display" : "Met/Not met/Ongoing/Unable to assess"
     }]
   }
 }

@@ -5876,7 +5876,7 @@
     "setup" : [ "loinc/valueset-all.json", "loinc/valueset-enumerated-bad.json", "loinc/valueset-enumerated.json", "loinc/valueset-filter-prop-component.json", "loinc/valueset-filter-prop-method.json", "loinc/valueset-filter-prop-component-str.json",
       "loinc/valueset-filter-prop-order-obs.json", "loinc/valueset-concept-is-a.json", "loinc/valueset-filter-copyright.json", "loinc/valueset-filter-status.json", "loinc/valueset-filter-class-regex.json",
       "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json",
-      "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
+      "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answers-for3.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
       "loinc/codesystem-loinc-supplement.json",
       "loinc/valueset-filter-scale-type-part.json", "loinc/valueset-filter-class-scale.json", "loinc/valueset-filter-class-part-scale.json", "loinc/valueset-filter-method.json", "loinc/valueset-enumerated-lab.json", "loinc/valueset-enumerated-lab-compose-property.json"],
     "tests" : [
@@ -6388,21 +6388,24 @@
       },
       {
         "name" : "loinc-expand-filter-list-request-parameters",
-        "description" : "to be provided",
+        "description" : "Expand LIST = LL361-7. The LIST filter is tx.fhir.org's own, and it only supports it for backwards compatibility: the defined filter for answer list membership is answers-for (see UP-645). Expanding answers-for with an answer list code is tested by loinc-expand-filter-answers-for1",
+        "mode" : "tx.fhir.org",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-filter-list-request-parameters.json",
         "response" : "loinc/loinc-expand-filter-list-response-valueSet.json"
       },
       {
         "name" : "loinc-validate-filter-list-type-good",
-        "description" : "to be provided",
+        "description" : "LA33-6 is in LIST = LL361-7. The LIST filter is tx.fhir.org's own, and it only supports it for backwards compatibility: the defined filter for answer list membership is answers-for (see UP-645, and the answers-for twin of this test, loinc-validate-filter-answers-for3-good).",
+        "mode" : "tx.fhir.org",
         "operation" : "validate-code",
         "request" : "loinc/loinc-validate-filter-list-good-request-parameters.json",
         "response" : "loinc/loinc-validate-filter-list-good-response-parameters.json"
       },
       {
         "name" : "loinc-validate-filter-list-bad",
-        "description" : "to be provided",
+        "description" : "100746-7 is not in LIST = LL361-7. The LIST filter is tx.fhir.org's own, and it only supports it for backwards compatibility: the defined filter for answer list membership is answers-for (see UP-645, and the answers-for twin of this test, loinc-validate-filter-answers-for3-bad).",
+        "mode" : "tx.fhir.org",
         "operation" : "validate-code",
         "request" : "loinc/loinc-validate-filter-list-bad-request-parameters.json",
         "response" : "loinc/loinc-validate-filter-list-bad-response-parameters.json"
@@ -6501,11 +6504,39 @@
         "response" : "loinc/loinc-expand-filter-answers-for2-response-valueSet.json"
       },
       {
+        "name" : "loinc-validate-filter-answers-for3-good",
+        "description" : "answers-for with an answer list code (LL361-7): an answer in the list (LA33-6) is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-answers-for3-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-answers-for3-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-answers-for3-bad",
+        "description" : "answers-for with an answer list code (LL361-7): a code that isn't an answer in the list (100746-7) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-answers-for3-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-answers-for3-bad-response-parameters.json"
+      },
+      {
         "name" : "loinc-expand-filter-answer-list",
-        "description" : "Test answer-list filters with normal code",
+        "description" : "answer-list = an answer code (LA9040-2 Ongoing): the answer lists the answer is in (LL451-6 and LL6136-7) - the inverse of answers-for",
         "operation" : "expand",
         "request" : "loinc/loinc-expand-filter-answer-list-request-parameters.json",
         "response" : "loinc/loinc-expand-filter-answer-list-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-answer-list-good",
+        "description" : "answer-list = LA9040-2: an answer list the answer is in (LL6136-7) is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-answer-list-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-answer-list-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-answer-list-bad",
+        "description" : "answer-list = LA9040-2: an answer list the answer is not in (LL361-7) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-answer-list-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-answer-list-bad-response-parameters.json"
       },
       {
         "name" : "loinc-subsumes-equivalent",
