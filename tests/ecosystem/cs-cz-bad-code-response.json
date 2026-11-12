@@ -1,0 +1,46 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "1234567"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "$choice:Unknown_Code_in_Version|Unknown_Code_in_Version_SCT$"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-code"
+          }],
+          "text" : "$fragments:Unknown code '1234567'|http://snomed.info/sct/11000279109$"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$fragments:Unknown code '1234567'|http://snomed.info/sct/11000279109$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },
+  {
+    "name" : "version",
+    "valueString" : "$url$"
+  }]
+}

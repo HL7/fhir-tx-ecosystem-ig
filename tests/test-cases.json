@@ -12279,6 +12279,35 @@
         "operation" : "validate-code",
         "request" : "ecosystem/cc-cz-out-ee-in-request.json",
         "response" : "ecosystem/cc-cz-out-ee-in-response.json"
+      },
+      {
+        "name" : "ecosystem-cs-cz-good",
+        "description" : "A Czech edition code, validated against the code system (CodeSystem $validate-code, no value set)",
+        "operation" : "cs-validate-code",
+        "request" : "ecosystem/cs-cz-good-request.json",
+        "response" : "ecosystem/cs-cz-good-response.json"
+      },
+      {
+        "name" : "ecosystem-cs-ee-good",
+        "description" : "An Estonian edition code, validated against the code system (CodeSystem $validate-code, no value set)",
+        "operation" : "cs-validate-code",
+        "request" : "ecosystem/cs-ee-good-request.json",
+        "response" : "ecosystem/cs-ee-good-response.json"
+      },
+      {
+        "name" : "ecosystem-cs-cz-bad-code",
+        "description" : "A code that isn't in the Czech edition, validated against the code system (no value set)",
+        "operation" : "cs-validate-code",
+        "request" : "ecosystem/cs-cz-bad-code-request.json",
+        "response" : "ecosystem/cs-cz-bad-code-response.json"
+      },
+      {
+        "name" : "ecosystem-cs-cz-bad-display",
+        "description" : "A Czech edition code with the wrong display, validated against the code system (no value set)",
+        "operation" : "cs-validate-code",
+        "lenient-display" : false,
+        "request" : "ecosystem/cs-cz-bad-display-request.json",
+        "response" : "ecosystem/cs-cz-bad-display-response.json"
       }
     ]
   },

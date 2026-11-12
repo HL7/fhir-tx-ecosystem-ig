@@ -1,0 +1,21 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://snomed.info/sct"
+    },
+    {
+      "name": "version",
+      "valueString": "http://snomed.info/sct/11000279109"
+    },
+    {
+      "name": "code",
+      "valueCode": "46635009"
+    },
+    {
+      "name": "display",
+      "valueString": "Type 2 diabetes mellitus"
+    }
+  ]
+}
