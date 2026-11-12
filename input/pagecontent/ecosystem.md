@@ -45,7 +45,8 @@ The master registration file has the following content:
     "code" : "code",  // code that identifies the registry. A persistent identifier. Alphanumerics only, no spaces. Mandatory
     "name" : "Name",  // human readable name. Can change, can contain any characters (including html type control chars). Mandatory
     "authority" : "Organization name", // name of publishing org. Optional
-    "url" : "https://somwhere/path" // actual location of registry. Mandatory
+    "url" : "https://somwhere/path", // actual location of registry. Mandatory
+    "disabled" : false // true if the registry is (temporarily) not part of the ecosystem - see Disabling below. Optional
   }]
 }
 ```
@@ -56,6 +57,7 @@ Notes:
 * Each of the entries in the list of registries points to a json document as documented in the next section
 * The code for the registry should be stable, since it may be used to identify the set of servers in the Coordination API (see below)
 * Coordination servers may display the `registration` and `ecosystem-documentation` links to users (e.g. as 'Register your own server' and 'Documentation')
+* The `disabled` property is a later, backwards compatible addition to the format (see Disabling below)
 
 #### The server registries
 
@@ -70,6 +72,7 @@ This file contains a list of terminology servers.
     "name" : "Name",  // human readable name. Can change; can contain any characters (including html type control chars). Mandatory
     "access_info" : "documentation", // human readable markdown explaining how to get access to the server. Optional
     "url" : "http://server/page", // human landing page for the server. Optional
+    "disabled" : false, // true if the server is (temporarily) not part of the ecosystem - see Disabling below. Optional
     "usage" : [ // if present, a list of string usage tags for the intended use of the server. Missing means any use is appropriate. See below for uses. Optional
     ],
     "languages" : { 
@@ -228,6 +231,29 @@ server for this content', an exclusion says 'never use this server for this cont
 ecosystem). Note that exclusions are about the server's fitness to serve the content, not about the 
 authority to serve it; a server that simply doesn't want to be the *preferred* destination for 
 something should instead write its authoritative masks so that they don't cover it.
+
+#### Disabling
+
+A registry or a server can be taken out of the ecosystem without deleting its registration, 
+by adding `"disabled" : true` to its entry - in the master registration file for a registry, 
+or in the server registry for a server. This is for when the registration needs to be kept 
+but the registry or server shouldn't be used for now - e.g. the server is down for an extended 
+period, is being migrated, or is failing the ecosystem's requirements - and it's expected 
+that it will be re-enabled later, by removing the property (or setting it to `false`).
+
+A disabled entry is treated as though it were not there:
+
+* The coordination server does not read a disabled registry, nor contact (scan) a disabled server
+* A disabled registry, and all the servers it lists, are not part of the ecosystem; a disabled 
+  server is not part of the ecosystem, and is not returned by the Discovery or Resolution APIs 
+  (see [Client API](ecosystem-api.html))
+
+Only the JSON value `true` disables an entry; a missing `disabled`, `false`, or any other value 
+means that the entry is enabled. Note that readers that predate the property will treat a 
+disabled entry as enabled.
+
+Coordination servers may still show disabled registries and servers to users (as disabled), 
+so that it's visible that they are registered but not in use.
 
 ### Further Details:
 

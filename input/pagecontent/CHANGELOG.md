@@ -6,6 +6,10 @@ Up to 1.10.0, this history covered the terminology tests, and was maintained on 
 
 ## [Unreleased]
 
+### Ecosystem and IG
+
+* Registrations: a registry (in the master registration file) or a server (in a server registry) can be marked `"disabled" : true`, which takes it out of the ecosystem without deleting its registration (see [Disabling](ecosystem.html#disabling))
+
 ### New Tests 
 
 * Add test to ensure that if CodeSytem is versionNeeded = true, a warning is returned from $validate-code if there is no explicit version 
