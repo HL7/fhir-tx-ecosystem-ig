@@ -252,9 +252,6 @@ Only the JSON value `true` disables an entry; a missing `disabled`, `false`, or 
 means that the entry is enabled. Note that readers that predate the property will treat a 
 disabled entry as enabled.
 
-Coordination servers may still show disabled registries and servers to users (as disabled), 
-so that it's visible that they are registered but not in use.
-
 ### Further Details:
 
 * [Coordination Server](ecosystem-server.md)
