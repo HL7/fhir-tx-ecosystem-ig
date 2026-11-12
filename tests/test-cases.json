@@ -5876,7 +5876,7 @@
     "setup" : [ "loinc/valueset-all.json", "loinc/valueset-enumerated-bad.json", "loinc/valueset-enumerated.json", "loinc/valueset-filter-prop-component.json", "loinc/valueset-filter-prop-method.json", "loinc/valueset-filter-prop-component-str.json",
       "loinc/valueset-filter-prop-order-obs.json", "loinc/valueset-concept-is-a.json", "loinc/valueset-filter-copyright.json", "loinc/valueset-filter-status.json", "loinc/valueset-filter-class-regex.json",
       "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json",
-      "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answers-for3.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
+      "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answers-for3.json", "loinc/valueset-filter-answers-for4.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
       "loinc/codesystem-loinc-supplement.json",
       "loinc/valueset-filter-scale-type-part.json", "loinc/valueset-filter-class-scale.json", "loinc/valueset-filter-class-part-scale.json", "loinc/valueset-filter-method.json", "loinc/valueset-enumerated-lab.json", "loinc/valueset-enumerated-lab-compose-property.json"],
     "tests" : [
@@ -6537,6 +6537,55 @@
         "operation" : "validate-code",
         "request" : "loinc/loinc-validate-filter-answer-list-bad-request-parameters.json",
         "response" : "loinc/loinc-validate-filter-answer-list-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-answers-for4-good",
+        "description" : "answers-for an answer list (LL1746-8): an answer in the list that many other lists share (LA14331-5, Both) is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-answers-for4-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-answers-for4-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-answers-for4-bad",
+        "description" : "answers-for an answer list (LL1746-8): an answer that isn't in the list (LA33-6) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-answers-for4-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-answers-for4-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-concept-is-a-good",
+        "description" : "concept is-a LP14082-9 (Bacteria): a code below the part (10352-3) is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-concept-is-a-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-concept-is-a-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-concept-is-a-self",
+        "description" : "concept is-a LP14082-9 (Bacteria): the part itself is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-concept-is-a-self-request-parameters.json",
+        "response" : "loinc/loinc-validate-concept-is-a-self-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-concept-is-a-bad",
+        "description" : "concept is-a LP14082-9 (Bacteria): a code that is not below the part (2345-7) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-concept-is-a-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-concept-is-a-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-copyright-good",
+        "description" : "copyright = 3rdParty: a code with third party copyright (100017-3) is in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-copyright-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-copyright-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-copyright-bad",
+        "description" : "copyright = 3rdParty: a code that is LOINC's own (8302-2) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-copyright-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-copyright-bad-response-parameters.json"
       },
       {
         "name" : "loinc-subsumes-equivalent",

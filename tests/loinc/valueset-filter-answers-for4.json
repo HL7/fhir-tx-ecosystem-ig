@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "loinc-filter-answers-for4",
+  "url": "http://hl7.org/fhir/test/ValueSet/loinc-filter-answers-for4",
+  "version": "5.0.0",
+  "name": "LOINCValueSetFilterAnswersFor4",
+  "title": "LOINC ValueSet Filter by answers-for an answer list (LL1746-8) whose answers aren't in key order",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-12",
+  "publisher": "FHIR Project",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "answers-for",
+            "op": "=",
+            "value": "LL1746-8"
+          }
+        ]
+      }
+    ]
+  }
+}

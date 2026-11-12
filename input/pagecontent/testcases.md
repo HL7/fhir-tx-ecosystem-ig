@@ -249,7 +249,14 @@ A test may have:
 * `request:{mode}` / `response:{mode}`: an alternative request or response used when the 
   runner is in that mode - e.g. `response:flat` for servers that return a flat expansion
 * `mode` / `modes`, `feature`, `version`, `disabled`: as for suites
-* `http-code`: the expected HTTP status code, where it isn't 200 (e.g. `422`, or `4xx`)
+* `http-code`: the expected HTTP status code, where it isn't 2xx: an exact code (e.g. `422`) or a
+  class of codes (`4xx`). It can give the server a choice, separated by `|`: `200|4xx` means the
+  server may either return the resource, or fail with an OperationOutcome
+* `response:{code}`: the expected response when the server returns that `http-code` choice - e.g.
+  `response:200` and `response:4xx` for `"http-code" : "200|4xx"`. The code the server returns
+  picks the first choice it matches, and its answer is compared with that choice's response
+  (or with `response`, if the choice doesn't have one of its own). `response:{code}:{mode}` works
+  the same way as `response:{mode}`
 * `lenient-display`: sets the `lenient-display-validation` parameter on a `validate-code` or 
   `cs-validate-code` request, so that the same request can be tested both ways
 * `profile`: a file containing a Parameters resource with the expansion parameters to use

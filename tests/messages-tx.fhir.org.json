@@ -1295,6 +1295,15 @@
   "loinc/loinc-validate-filter-answers-for3-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-answers-for3|5.0.0'"
   },
+  "loinc/loinc-validate-filter-answers-for4-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#LA33-6' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-answers-for4|5.0.0'"
+  },
+  "loinc/loinc-validate-concept-is-a-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#2345-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-concept-is-a|5.0.0'"
+  },
+  "loinc/loinc-validate-filter-copyright-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#8302-2' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-copyright|5.0.0'"
+  },
   "loinc/loinc-validate-filter-answer-list-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#LL361-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-answer-list|5.0.0'"
   },
