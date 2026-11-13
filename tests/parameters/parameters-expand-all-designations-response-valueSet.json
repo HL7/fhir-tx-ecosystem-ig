@@ -43,6 +43,7 @@
       "code" : "code1",
       "display" : "Display 1",
       "designation" : [{
+        "language" : "en",
         "use" : {
           "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
           "code" : "olde-english"
@@ -57,6 +58,7 @@
       "code" : "code2",
       "display" : "Display 2",
       "designation" : [{
+        "language" : "en",
         "use" : {
           "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
           "code" : "olde-english"
@@ -72,6 +74,7 @@
         "code" : "code2a",
         "display" : "Display 2a",
         "designation" : [{
+          "language" : "en",
           "use" : {
             "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
             "code" : "olde-english"
@@ -94,6 +97,7 @@
         "code" : "code2b",
         "display" : "Display 2b",
         "designation" : [{
+          "language" : "en",
           "use" : {
             "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
             "code" : "olde-english"
