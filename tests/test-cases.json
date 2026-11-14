@@ -5875,7 +5875,7 @@
     "description" : "LOINC tests. These depend on the LOINC release (2.83) and the accessory files the server has loaded, and every request names version 2.83",
     "setup" : [ "loinc/valueset-all.json", "loinc/valueset-enumerated-bad.json", "loinc/valueset-enumerated.json", "loinc/valueset-filter-prop-component.json", "loinc/valueset-filter-prop-method.json", "loinc/valueset-filter-prop-component-str.json",
       "loinc/valueset-filter-prop-order-obs.json", "loinc/valueset-concept-is-a.json", "loinc/valueset-filter-copyright.json", "loinc/valueset-filter-status.json", "loinc/valueset-filter-class-regex.json",
-      "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json",
+      "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json", "loinc/valueset-filter-classtype-in.json", "loinc/valueset-filter-classtype-in-names.json", "loinc/valueset-filter-prop-order-obs-in.json", "loinc/valueset-filter-prop-order-obs-in-case.json",
       "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answers-for3.json", "loinc/valueset-filter-answers-for4.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
       "loinc/codesystem-loinc-supplement.json",
       "loinc/valueset-filter-scale-type-part.json", "loinc/valueset-filter-class-scale.json", "loinc/valueset-filter-class-part-scale.json", "loinc/valueset-filter-method.json", "loinc/valueset-enumerated-lab.json", "loinc/valueset-enumerated-lab-compose-property.json"],
@@ -6163,6 +6163,34 @@
         "operation" : "expand",
         "request" : "loinc/loinc-expand-prop-order-obs-total-request-parameters.json",
         "response" : "loinc/loinc-expand-prop-order-obs-total-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-order-obs-in-good",
+        "description" : "ORDER_OBS in Order,Both - core's `[property] in [string,string...]` filter: a property value equal to one of the strings. 100017-3 is ORDER_OBS Order",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-order-obs-in-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-order-obs-in-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-order-obs-in-bad",
+        "description" : "ORDER_OBS in Order,Both (see loinc-validate-filter-order-obs-in-good): 100000-9 is ORDER_OBS Observation, so not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-order-obs-in-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-order-obs-in-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-prop-order-obs-in-total",
+        "description" : "ORDER_OBS in Order,Both: the size of the expansion (count=0) is the size of the union of ORDER_OBS = Order (5466 codes) and ORDER_OBS = Both (56304): 61770",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-order-obs-in-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-order-obs-in-total-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-expand-prop-order-obs-in-case-total",
+        "description" : "ORDER_OBS in order,BOTH: the same codes as loinc-expand-prop-order-obs-in-total. LOINC property values are not case sensitive for comparison (THO's LOINC page, Case Sensitivity)",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-prop-order-obs-in-case-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-prop-order-obs-in-case-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-concept-is-a",
@@ -6488,6 +6516,48 @@
         "operation" : "validate-code",
         "request" : "loinc/loinc-validate-filter-classtype-bad-request-parameters.json",
         "response" : "loinc/loinc-validate-filter-classtype-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-classtype-in-good-3",
+        "description" : "CLASSTYPE in 3,4 - core's `[property] in [string,string...]` filter: a property value equal to one of the strings. As for =, the numbers 1-4 stand for the CLASSTYPE names. 18719-5 is CLASSTYPE 3 (Claims attachment)",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-classtype-in-good-3-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-classtype-in-good-3-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-classtype-in-good-4",
+        "description" : "CLASSTYPE in 3,4 (see loinc-validate-filter-classtype-in-good-3): 100002-5 is CLASSTYPE 4 (Surveys)",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-classtype-in-good-4-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-classtype-in-good-4-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-filter-classtype-in-bad",
+        "description" : "CLASSTYPE in 3,4 (see loinc-validate-filter-classtype-in-good-3): 100019-9 is CLASSTYPE 1 (Laboratory class), so not in the value set",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-classtype-in-bad-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-classtype-in-bad-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-filter-classtype-in-total",
+        "description" : "CLASSTYPE in 3,4: the size of the expansion (count=0) is the size of the union of CLASSTYPE = 3 (1161 codes) and CLASSTYPE = 4 (12807): 13968",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-classtype-in-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-classtype-in-total-response-valueSet.json"
+      },
+      {
+        "name" : "loinc-validate-filter-classtype-in-names-good",
+        "description" : "CLASSTYPE in Claims attachment,Surveys - the same filter as loinc-validate-filter-classtype-in-good-3, with the CLASSTYPE names instead of their numbers",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-filter-classtype-in-names-good-request-parameters.json",
+        "response" : "loinc/loinc-validate-filter-classtype-in-names-good-response-parameters.json"
+      },
+      {
+        "name" : "loinc-expand-filter-classtype-in-names-total",
+        "description" : "CLASSTYPE in Claims attachment,Surveys: the same codes as CLASSTYPE in 3,4 (loinc-expand-filter-classtype-in-total), 13968",
+        "operation" : "expand",
+        "request" : "loinc/loinc-expand-filter-classtype-in-names-total-request-parameters.json",
+        "response" : "loinc/loinc-expand-filter-classtype-in-names-total-response-valueSet.json"
       },
       {
         "name" : "loinc-expand-filter-answers-for1",

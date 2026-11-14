@@ -28,7 +28,6 @@
     "code" : "code1",
     "display" : "Display 1",
     "definition" : "My first code",
-    "definition:de" : "Mein erster Code",
     "_definition" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/translation",
@@ -50,7 +49,6 @@
     "code" : "code2",
     "display" : "Display 2",
     "definition" : "My second code, with children",
-    "definition:de" : "Mein erster Code",
     "_definition" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/translation",
@@ -74,7 +72,6 @@
       "code" : "code2a",
       "display" : "Display 2a",
       "definition" : "My first second level code",
-      "definition:de" : "Mein erster Second-Level-Code",
       "_definition" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/translation",
@@ -98,7 +95,6 @@
         "code" : "code2aI",
         "display" : "Display 2aI",
         "definition" : "My first third level code",
-        "definition:de" : "Mein erster Third-Level-Code",
         "_definition" : {
           "extension" : [{
             "url" : "http://hl7.org/fhir/StructureDefinition/translation",
@@ -120,7 +116,6 @@
         "code" : "code2aII",
         "display" : "Display 2aII",
         "definition" : "My second third level code",
-        "definition:de" : "Mein zweiter Third-Level-Code",
         "_definition" : {
           "extension" : [{
             "url" : "http://hl7.org/fhir/StructureDefinition/translation",
@@ -143,7 +138,6 @@
       "code" : "code2b",
       "display" : "Display 2b",
       "definition" : "My second second level code",
-      "definition:de" : "Mein zweiter Second-Level-Code",
       "_definition" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/translation",
@@ -166,7 +160,6 @@
     "code" : "code3",
     "display" : "Display 3",
     "definition" : "My Third Level Code",
-    "definition:de" : "Mein Third-Level-Code",
     "_definition" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/translation",

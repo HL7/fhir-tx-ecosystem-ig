@@ -1289,6 +1289,12 @@
   "loinc/loinc-validate-filter-classtype-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#44214-5' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-classtype|5.0.0'"
   },
+  "loinc/loinc-validate-filter-classtype-in-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#100019-9' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-classtype-in|5.0.0'"
+  },
+  "loinc/loinc-validate-filter-order-obs-in-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://loinc.org#100000-9' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-prop-order-obs-in|5.0.0'"
+  },
   "loinc/loinc-validate-filter-list-bad-response-parameters.json" : {
     "1" : "The provided code 'http://loinc.org#100746-7' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-filter-list|5.0.0'"
   },

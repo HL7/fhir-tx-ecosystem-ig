@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-prop-order-obs-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-prop-order-obs-in",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterPropOrderObsIn",
+  "title" : "LOINC ValueSet Filter by ORDER_OBS in",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ORDER_OBS",
+        "op" : "in",
+        "value" : "Order,Both"
+      }]
+    }]
+  }
+}

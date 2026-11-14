@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-classtype-in-names",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-classtype-in-names",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterClassTypeInNames",
+  "title" : "LOINC ValueSet Filter by CLASSTYPE in (names)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "in",
+        "value" : "Claims attachment,Surveys"
+      }]
+    }]
+  }
+}

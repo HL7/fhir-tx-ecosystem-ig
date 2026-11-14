@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-classtype-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-classtype-in",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterClassTypeIn",
+  "title" : "LOINC ValueSet Filter by CLASSTYPE in (numbers)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "in",
+        "value" : "3,4"
+      }]
+    }]
+  }
+}

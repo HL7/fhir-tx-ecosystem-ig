@@ -13,6 +13,7 @@ Up to 1.10.0, this history covered the terminology tests, and was maintained on 
 ### New Tests 
 
 * Add test to ensure that if CodeSytem is versionNeeded = true, a warning is returned from $validate-code if there is no explicit version 
+* LOINC property `in` filters (loinc suite): core's `[property] in [string,string...]` is a property value equal to one of the strings, so `CLASSTYPE in 3,4` (the numbers, as for `=`), `CLASSTYPE in Claims attachment,Surveys` and `ORDER_OBS in Order,Both` are the union of `=` each value, and `ORDER_OBS in order,BOTH` the same (LOINC property values are not case sensitive). `$validate-code` of a code with each listed value and one with another (`loinc-validate-filter-classtype-in-*`, `loinc-validate-filter-order-obs-in-*`), and the sizes of the expansions (`loinc-expand-filter-classtype-in-total`, `-in-names-total`, `loinc-expand-prop-order-obs-in-total`, `-in-case-total`). New setup resources `loinc/valueset-filter-classtype-in.json`, `-classtype-in-names.json`, `-prop-order-obs-in.json` and `-prop-order-obs-in-case.json`
 
 ### Corrections and New Tests
 
