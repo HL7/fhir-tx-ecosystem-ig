@@ -1,0 +1,29 @@
+{
+  "resourceType" : "CodeSystem",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/search-lang",
+  "version" : "1.0.0",
+  "name" : "SearchLangTestSystem",
+  "title" : "Search Test System - with a global language pack",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "language" : "en",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "bp",
+    "display" : "Blood pressure",
+    "designation" : [{
+      "language" : "es",
+      "value" : "Tensión arterial"
+    }]
+  },
+  {
+    "code" : "hr",
+    "display" : "Heart rate"
+  },
+  {
+    "code" : "rr",
+    "display" : "Respiratory rate"
+  }]
+}

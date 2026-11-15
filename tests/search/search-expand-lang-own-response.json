@@ -1,0 +1,37 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/search-lang-all",
+  "version" : "1.0.0",
+  "name" : "SearchLangAllTest",
+  "status" : "draft",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset", "total"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "parameter" : [{
+      "name" : "displayLanguage",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "filter",
+      "valueString" : "tensión"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/search-lang|1.0.0"
+    },
+    {
+      "$optional$" : true,
+      "name" : "used-supplement",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/search-lang-es|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search-lang",
+      "code" : "bp",
+      "display" : "Tensión arterial"
+    }]
+  }
+}

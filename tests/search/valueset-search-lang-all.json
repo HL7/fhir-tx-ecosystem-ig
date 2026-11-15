@@ -1,0 +1,12 @@
+{
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/test/ValueSet/search-lang-all",
+  "version" : "1.0.0",
+  "name" : "SearchLangAllTest",
+  "status" : "draft",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/search-lang"
+    }]
+  }
+}

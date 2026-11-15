@@ -5573,7 +5573,7 @@
     "name" : "search",
     "mode" : "general",
     "description" : "Tests for proper functioning of text search. Note what we're not interested in the implementation of the text search itself, so we only test very obvious results. We're just interested in testing support for the parameter",
-    "setup" : [ "search/codesystem-search.json", "search/valueset-search-all.json", "search/valueset-search-enum.json", "search/valueset-search-filter.json", "search/codesystem-search-fr.json"],
+    "setup" : [ "search/codesystem-search.json", "search/valueset-search-all.json", "search/valueset-search-enum.json", "search/valueset-search-filter.json", "search/codesystem-search-fr.json", "search/codesystem-search-lang.json", "search/codesystem-search-lang-es.json", "search/valueset-search-lang-all.json"],
     "tests" : [
       {
         "name" : "search-all-yes",
@@ -5660,6 +5660,27 @@
         "operation" : "expand",
         "request" : "search/search-expand-all-supplement-fr-no-language-request.json",
         "response" : "search/search-expand-all-supplement-fr-no-language-response.json"
+      },
+      {
+        "name" : "search-lang-supplement-display",
+        "description" : "A text filter matches the displays a supplement in use gives, in the language searched: with displayLanguage=es, the Spanish displays of an unreferenced global language pack match, and the pack is reported as a used-supplement",
+        "operation" : "expand",
+        "request" : "search/search-expand-lang-supplement-display-request.json",
+        "response" : "search/search-expand-lang-supplement-display-response.json"
+      },
+      {
+        "name" : "search-lang-supplement-only",
+        "description" : "A supplement whose text is what matched is a used-supplement even when the displays shown are not its own: the code matches on the global language pack's Spanish designation, its display is the code system's own Spanish designation (which takes precedence), and the pack is reported as a used-supplement because it decided what the expansion contains",
+        "operation" : "expand",
+        "request" : "search/search-expand-lang-supplement-only-request.json",
+        "response" : "search/search-expand-lang-supplement-only-response.json"
+      },
+      {
+        "name" : "search-lang-own",
+        "description" : "The same code, matched on the code system's own Spanish designation: the global language pack contributes nothing to the match or the display, so reporting it as a used-supplement is optional",
+        "operation" : "expand",
+        "request" : "search/search-expand-lang-own-request.json",
+        "response" : "search/search-expand-lang-own-response.json"
       }
     ]
   },{

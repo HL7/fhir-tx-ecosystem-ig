@@ -1,0 +1,36 @@
+{
+  "resourceType" : "CodeSystem",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type",
+    "valueCode" : "lang-pack"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-global",
+    "valueBoolean" : true
+  }],
+  "url" : "http://hl7.org/fhir/test/CodeSystem/search-lang-es",
+  "version" : "1.0.0",
+  "name" : "SearchLangTestSystemSpanish",
+  "title" : "Search Test System - Spanish (a global language pack, used without being referenced)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "language" : "es",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/search-lang|1.0.0",
+  "concept" : [{
+    "code" : "bp",
+    "designation" : [{
+      "language" : "es",
+      "value" : "Presión arterial"
+    }]
+  },
+  {
+    "code" : "hr",
+    "display" : "Frecuencia cardiaca"
+  },
+  {
+    "code" : "rr",
+    "display" : "Frecuencia respiratoria"
+  }]
+}
