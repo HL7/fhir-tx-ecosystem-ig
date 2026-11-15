@@ -521,7 +521,7 @@ about it both more durable and harder to see.
   `ValueSet.language`§, as specified in [Languages](languages.html)
 * §The server SHALL support `filter` (text search)§. The ecosystem makes no requirements about the
   *quality* of the text search - only that the parameter is supported and that obvious matches are
-  found and obvious non-matches are not *(suite: `search`)*
+  found and obvious non-matches are not *(suite: `search`)* (the search tests require only that exact matches are found)
 * §The server SHALL support `abstract` in the sense described under [notSelectable](#inactive-deprecated-and-not-selectable-codes)§
 * §The server SHOULD support `default-valueset-version`, which supplies a version for imported value sets that are referenced without one§. §Where a `default-valueset-version` is supplied and names a value set version that does not exist, the server SHALL return an error rather than silently falling back§
   *(suite: `default-valueset-version`)*
