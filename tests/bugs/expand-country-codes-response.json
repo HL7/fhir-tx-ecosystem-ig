@@ -8,7 +8,7 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 789,
+    "total" : 815,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
@@ -16,6 +16,10 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "urn:iso:std:iso:3166|2018"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -1334,6 +1338,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "AN",
+      "display" : "Netherlands Antilles",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "AND",
       "display" : "Andorra"
     },
@@ -1614,6 +1628,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "BU",
+      "display" : "Burma",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "BV",
       "display" : "Bouvet Island"
     },
@@ -1784,6 +1808,26 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "CS",
+      "display" : "Serbia and Montenegro (earlier, Czechoslovakia)",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "CT",
+      "display" : "Canton and Enderbury Islands",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "CU",
       "display" : "Cuba"
     },
@@ -1844,6 +1888,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "DD",
+      "display" : "German Democratic Republic",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "DE",
       "display" : "Germany"
     },
@@ -1891,6 +1945,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "DOM",
       "display" : "Dominican Republic"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "DY",
+      "display" : "Dahomey",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -1974,6 +2038,11 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "code" : "EU",
+      "display" : "European Union"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "FI",
       "display" : "Finland"
     },
@@ -2014,6 +2083,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "FQ",
+      "display" : "French Southern and Antarctic Territories",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
       "display" : "France"
     },
@@ -2031,6 +2110,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "FSM",
       "display" : "Micronesia, Federated States of"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "FX",
+      "display" : "France, Metropolitan",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -2279,6 +2368,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "HV",
+      "display" : "Upper Volta",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "ID",
       "display" : "Indonesia"
     },
@@ -2416,6 +2515,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "JPN",
       "display" : "Japan"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "JT",
+      "display" : "Johnston Island",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -2704,6 +2813,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "MI",
+      "display" : "Midway Islands",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "MK",
       "display" : "Macedonia, the former Yugoslav Republic of"
     },
@@ -2909,6 +3028,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "NH",
+      "display" : "New Hebrides",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "NI",
       "display" : "Nicaragua"
     },
@@ -2954,6 +3083,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "NQ",
+      "display" : "Dronning Maud Land",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "NR",
       "display" : "Nauru"
     },
@@ -2961,6 +3100,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "NRU",
       "display" : "Nauru"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "NT",
+      "display" : "Neutral Zone",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -3001,6 +3150,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "PAN",
       "display" : "Panama"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "PC",
+      "display" : "Pacific Islands (Trust Territory)",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -3114,6 +3273,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "PU",
+      "display" : "United States Miscellaneous Pacific Islands",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "PW",
       "display" : "Palau"
     },
@@ -3126,6 +3295,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "PYF",
       "display" : "French Polynesia"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "PZ",
+      "display" : "Panama Canal Zone",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -3216,6 +3395,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "REU",
       "display" : "Réunion"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "RH",
+      "display" : "Southern Rhodesia",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -3419,6 +3608,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "SU",
+      "display" : "USSR",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "SUR",
       "display" : "Suriname"
     },
@@ -3579,6 +3778,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "TP",
+      "display" : "East Timor",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "TR",
       "display" : "Turkey"
     },
@@ -3714,6 +3923,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "VD",
+      "display" : "Viet-Nam, Democratic Republic of",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "VE",
       "display" : "Venezuela, Bolivarian Republic of"
     },
@@ -3766,6 +3985,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "WF",
       "display" : "Wallis and Futuna"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "WK",
+      "display" : "Wake Island",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -3914,6 +4143,16 @@
     },
     {
       "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "YD",
+      "display" : "Yemen, Democratic",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
       "code" : "YE",
       "display" : "Yemen"
     },
@@ -3926,6 +4165,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "YT",
       "display" : "Mayotte"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "YU",
+      "display" : "Yugoslavia",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
@@ -3946,6 +4195,16 @@
       "system" : "urn:iso:std:iso:3166",
       "code" : "ZMB",
       "display" : "Zambia"
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "inactive" : true,
+      "code" : "ZR",
+      "display" : "Zaire",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
     },
     {
       "system" : "urn:iso:std:iso:3166",
