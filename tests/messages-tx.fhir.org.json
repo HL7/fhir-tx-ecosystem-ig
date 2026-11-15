@@ -140,7 +140,7 @@
     "1" : "Found a circularity pointing to http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0 processing ValueSet with pathway [http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0, http://hl7.org/fhir/test/ValueSet/big-circle-2|5.0.0]"
   },
   "big/expand-no-limit-outcome.json" : {
-    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/big|5.0.0' expansion has too many codes to produce (>1000)",
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/big|5.0.0' expansion has 2000 codes, which is too many to display (1000)",
     "2" : "The value set 'http://hl7.org/fhir/test/ValueSet/big|5.0.0' expansion has too many codes to produce (>1000)"
   },
   "validation/simple-code-bad-valueSet-response-outcome.json" : {
@@ -719,10 +719,10 @@
     "1" : "Wrong Display Name 'XCode1' for http://hl7.org/fhir/test/CodeSystem/lang-ende-N#code1. There are no valid display names found for language(s) 'de'. Default display is 'Code1'"
   },
   "display/validation-wrong-de-ende-response-parameters.json" : {
-    "1" : "Wrong Display Name 'XCode1' for http://hl7.org/fhir/test/CodeSystem/lang-ende#code1. Valid display is 'Anzeige1' (de) (for the language(s) 'de')"
+    "1" : "Der Displayname für http://hl7.org/fhir/test/CodeSystem/lang-ende#code1 sollte einer von ''Anzeige1' (de)' anstelle von 'XCode1' sein."
   },
   "display/validation-wrong-de-none-response-parameters.json" : {
-    "1" : "Wrong Display Name 'XCode1' for http://hl7.org/fhir/test/CodeSystem/lang-none#code1. Valid display is 'Code1' (for the language(s) 'de')"
+    "1" : "Der Displayname für http://hl7.org/fhir/test/CodeSystem/lang-none#code1 sollte einer von ''Code1'' anstelle von 'XCode1' sein."
   },
   "display/validation-wrong-en-en-response-parameters.json" : {
     "1" : "Wrong Display Name 'XCode1' for http://hl7.org/fhir/test/CodeSystem/lang-en#code1. Valid display is 'Code1' (en) (for the language(s) 'en')"
@@ -1773,13 +1773,13 @@
     "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/ec-base#A2. Valid display is one of 2 choices: 'Code A2' (en) or 'Code A2 (from the supplement)' (en) (for the language(s) '--')"
   },
   "extensions/validate-supplements-grandchild-wrong-display-response-parameters.json" : {
-    "1" : "Wrong Display Name 'Wrong Display' for http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#grandchild. Valid display is 'Unter-Unterbegriff' (de) (for the language(s) 'de')"
+    "1" : "Der Displayname für http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#grandchild sollte einer von ''Unter-Unterbegriff' (de)' anstelle von 'Wrong Display' sein."
   },
   "extensions/validate-supplement-nolang-other-lang-response-parameters.json" : {
-    "1" : "Wrong Display Name 'Enfant' for http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#child. Valid display is one of 2 choices: 'Kid' or 'Youngster' (for the language(s) 'de')"
+    "1" : "Der Displayname für http://hl7.org/fhir/test/CodeSystem/supplement-hierarchy#child sollte einer von ''Kid' or 'Youngster'' anstelle von 'Enfant' sein."
   },
   "loinc/loinc-expand-all-response-outcome.json" : {
-    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0' expansion has too many codes to produce (>1000)"
+    "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0' expansion has 257266 codes, which is too many to display (1000)"
   },
   "sct/expand-too-big-response.json" : {
     "1" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-procedures' expansion has too many codes to produce (>1000)"
