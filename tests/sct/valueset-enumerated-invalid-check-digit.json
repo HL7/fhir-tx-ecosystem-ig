@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sct-enumerated-invalid-check-digit",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid-check-digit",
+  "version" : "5.0.0",
+  "name" : "SCTEnumeratedInvalidCheckDigitValueSet",
+  "title" : "SCT Enumerated Invalid Check Digit ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "publisher" : "FHIR Project",
+  "description" : "A valid code from the testing subset, and a code whose check digit is wrong",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+      "concept" : [{
+        "code" : "71650008"
+      },
+      {
+        "code" : "999999007"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "compose"],
+  "resourceType" : "ValueSet",
+  "contained" : [{
+    "resourceType" : "OperationOutcome",
+    "id" : "oo1",
+    "issue" : [{
+      "extension" : [{
+        "$optional$" : "!tx.fhir.org",
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+        "valueString" : "VALUESET_EXPANSION_FILTER_UNKNOWN_CODE"
+      }],
+      "severity" : "warning",
+      "code" : "code-invalid",
+      "details" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+          "code" : "invalid-code"
+        }],
+        "text" : "$external:1:http://id.who.int/icd/release/11/mms/194483911$"
+      }
+    },
+    {
+      "extension" : [{
+        "$optional$" : "!tx.fhir.org",
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+        "valueString" : "VALUESET_EXPANSION_FILTER_UNKNOWN_CODE"
+      }],
+      "severity" : "warning",
+      "code" : "code-invalid",
+      "details" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+          "code" : "invalid-code"
+        }],
+        "text" : "$external:2:http://id.who.int/icd/release/11/mms/802386629$"
+      }
+    },
+    {
+      "extension" : [{
+        "$optional$" : "!tx.fhir.org",
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+        "valueString" : "VALUESET_EXPANSION_FILTER_UNKNOWN_CODE"
+      }],
+      "severity" : "warning",
+      "code" : "code-invalid",
+      "details" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+          "code" : "invalid-code"
+        }],
+        "text" : "$external:3:http://id.who.int/icd/release/11/mms/21927667$"
+      }
+    }]
+  }],
+  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-pcs-uri",
+  "version" : "2026-01",
+  "name" : "icd11.pcs.uri",
+  "title" : "Postcoordination scale infectiousAgent for 1A00, with filter values as entity URIs (the current WHO form)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-01-17",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/expansion-issue",
+      "valueReference" : {
+        "reference" : "#oo1"
+      }
+    }],
+    "total" : 0,
+    "parameter" : [{
+      "$optional$" : true,
+      "name" : "used-codesystem",
+      "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
+    }]
+  }
+}

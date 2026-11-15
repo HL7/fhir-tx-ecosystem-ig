@@ -1901,5 +1901,114 @@
   },
   "exclude/exclude-validate-cc-in-last-response.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/exclude#data-exchange' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/exclude|6.0.0'"
+  },
+  "simple/simple-expand-enum-bad-response-valueSet.json" : {
+    "1" : "The value set includes the code 'codeX', which is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so it is not in the expansion"
+  },
+  "simple/simple-expand-enum-bad-response-outcome.json" : {
+    "1" : "The value set includes the code 'codeX', which is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded"
+  },
+  "simple/simple-expand-enum-invalid-response-valueSet.json" : {
+    "1" : "The value set includes the code 'xxxx', which is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so it is not in the expansion"
+  },
+  "simple/simple-expand-enum-invalid-response-outcome.json" : {
+    "1" : "The value set includes the code 'xxxx', which is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded"
+  },
+  "sct/expand-enum-invalid-response-valueSet.json" : {
+    "1" : "The value set includes the code '999999006', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so it is not in the expansion"
+  },
+  "sct/expand-enum-invalid-response-outcome.json" : {
+    "1" : "The value set includes the code '999999006', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded"
+  },
+  "sct/expand-enum-invalid-check-digit-response-valueSet.json" : {
+    "1" : "The value set includes the code '999999007', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so it is not in the expansion"
+  },
+  "sct/expand-enum-invalid-check-digit-response-outcome.json" : {
+    "1" : "The value set includes the code '999999007', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded"
+  },
+  "loinc/loinc-expand-enum-invalid-response-valueSet.json" : {
+    "1" : "The value set includes the code '99999-5', which is not in the code system 'http://loinc.org|2.83', so it is not in the expansion"
+  },
+  "loinc/loinc-expand-enum-invalid-response-outcome.json" : {
+    "1" : "The value set includes the code '99999-5', which is not in the code system 'http://loinc.org|2.83', so the value set can't be expanded"
+  },
+  "loinc/loinc-expand-enum-invalid-check-digit-response-valueSet.json" : {
+    "1" : "The value set includes the code '99999-6', which is not in the code system 'http://loinc.org|2.83', so it is not in the expansion"
+  },
+  "loinc/loinc-expand-enum-invalid-check-digit-response-outcome.json" : {
+    "1" : "The value set includes the code '99999-6', which is not in the code system 'http://loinc.org|2.83', so the value set can't be expanded"
+  },
+  "loinc/loinc-expand-enum-bad-response-valueSet.json" : {
+    "1" : "The value set includes the code 'LA4489-6X', which is not in the code system 'http://loinc.org|2.83', so it is not in the expansion",
+    "2" : "The value set includes the code 'LP111373-9X', which is not in the code system 'http://loinc.org|2.83', so it is not in the expansion"
+  },
+  "loinc/loinc-expand-enum-bad-response-outcome.json" : {
+    "1" : "The value set includes the code 'LA4489-6X', which is not in the code system 'http://loinc.org|2.83', so the value set can't be expanded"
+  },
+  "simple/simple-expand-isa-invalid-response-valueSet.json" : {
+    "1" : "The value set include filter 'concept is-a xxxx' refers to a code that is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the filter matches no codes"
+  },
+  "simple/simple-expand-isa-invalid-response-outcome.json" : {
+    "1" : "The value set include filter 'concept is-a xxxx' refers to a code that is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded"
+  },
+  "sct/expand-isa-invalid-response-valueSet.json" : {
+    "1" : "The value set include filter 'concept is-a 999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the filter matches no codes"
+  },
+  "sct/expand-isa-invalid-response-outcome.json" : {
+    "1" : "The value set include filter 'concept is-a 999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded"
+  },
+  "sct/expand-isa-invalid-check-digit-response-valueSet.json" : {
+    "1" : "The value set include filter 'concept is-a 999999007' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the filter matches no codes"
+  },
+  "sct/expand-isa-invalid-check-digit-response-outcome.json" : {
+    "1" : "The value set include filter 'concept is-a 999999007' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded"
+  },
+  "loinc/loinc-expand-isa-invalid-response-valueSet.json" : {
+    "1" : "The value set include filter 'concept is-a 99999-5' refers to a code that is not in the code system 'http://loinc.org|2.83', so the filter matches no codes"
+  },
+  "loinc/loinc-expand-isa-invalid-response-outcome.json" : {
+    "1" : "The value set include filter 'concept is-a 99999-5' refers to a code that is not in the code system 'http://loinc.org|2.83', so the value set can't be expanded"
+  },
+  "loinc/loinc-expand-isa-invalid-check-digit-response-valueSet.json" : {
+    "1" : "The value set include filter 'concept is-a 99999-6' refers to a code that is not in the code system 'http://loinc.org|2.83', so the filter matches no codes"
+  },
+  "loinc/loinc-expand-isa-invalid-check-digit-response-outcome.json" : {
+    "1" : "The value set include filter 'concept is-a 99999-6' refers to a code that is not in the code system 'http://loinc.org|2.83', so the value set can't be expanded"
+  },
+  "simple/simple-validate-enum-invalid-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#yyyy' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-invalid|5.0.0'",
+    "2" : "Unknown code 'yyyy' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-invalid|5.0.0' is not valid: The value set includes the code 'xxxx', which is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded",
+    "4" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#yyyy' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-invalid|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-invalid|5.0.0' is not valid: The value set includes the code 'xxxx', which is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded; Unknown code 'yyyy' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "simple/simple-validate-isa-invalid-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#yyyy' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isa-invalid|5.0.0'",
+    "2" : "Unknown code 'yyyy' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isa-invalid|5.0.0' is not valid: The value set include filter 'concept is-a xxxx' refers to a code that is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded",
+    "4" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#yyyy' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isa-invalid|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isa-invalid|5.0.0' is not valid: The value set include filter 'concept is-a xxxx' refers to a code that is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded; Unknown code 'yyyy' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "sct/validate-enum-invalid-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid|5.0.0'",
+    "2" : "Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid|5.0.0' is not valid: The value set includes the code '999999006', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded",
+    "4" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid|5.0.0' is not valid: The value set includes the code '999999006', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded; Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+  },
+  "sct/validate-enum-invalid-check-digit-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid-check-digit|5.0.0'",
+    "2" : "Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid-check-digit|5.0.0' is not valid: The value set includes the code '999999007', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded",
+    "4" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid-check-digit|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid-check-digit|5.0.0' is not valid: The value set includes the code '999999007', which is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded; Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+  },
+  "sct/validate-isa-invalid-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid|5.0.0'",
+    "2" : "Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid|5.0.0' is not valid: The value set include filter 'concept is-a 999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded",
+    "4" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid|5.0.0' is not valid: The value set include filter 'concept is-a 999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded; Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+  },
+  "sct/validate-isa-invalid-check-digit-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0'",
+    "2" : "Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0' is not valid: The value set include filter 'concept is-a 999999007' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded",
+    "4" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0' is not valid: The value set include filter 'concept is-a 999999007' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded; Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
   }
 }

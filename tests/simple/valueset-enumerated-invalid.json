@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-enumerated-invalid",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-enumerated-invalid",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetEnumeratedInvalid",
+  "title" : "Simple ValueSet Enumerated Invalid",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "concept" : [{
+        "code" : "code1"
+      },{
+        "code" : "xxxx"
+      }]
+    }]
+  }
+}

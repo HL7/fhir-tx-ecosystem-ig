@@ -4,7 +4,7 @@
     "extension" : [{
       "$optional$" : "!tx.fhir.org",
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString" : "FILTER_VALUE_UNKNOWN_CODE"
+      "valueString" : "VALUESET_EXPANSION_FILTER_UNKNOWN_CODE_ERROR"
     }],
     "severity" : "error",
     "code" : "code-invalid",

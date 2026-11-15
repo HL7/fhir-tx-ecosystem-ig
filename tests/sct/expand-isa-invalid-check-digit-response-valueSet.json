@@ -1,0 +1,59 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "contained" : [{
+    "resourceType" : "OperationOutcome",
+    "id" : "oo1",
+    "issue" : [{
+      "extension" : [{
+        "$optional$" : "!tx.fhir.org",
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+        "valueString" : "VALUESET_EXPANSION_FILTER_UNKNOWN_CODE"
+      }],
+      "severity" : "warning",
+      "code" : "code-invalid",
+      "details" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+          "code" : "invalid-code"
+        }],
+        "text" : "$external:1:999999007$"
+      }
+    }]
+  }],
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit",
+  "version" : "5.0.0",
+  "name" : "SCTFilterIsaInvalidCheckDigitValueSet",
+  "title" : "SCT Filter Is-a Invalid Check Digit ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/expansion-issue",
+      "valueReference" : {
+        "reference" : "#oo1"
+      }
+    }],
+    "total" : 1,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    },
+    {
+      "$optional$" : true,
+      "name" : "version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "71650008",
+      "display" : "Opisthorchis viverrini"
+    }]
+  }
+}

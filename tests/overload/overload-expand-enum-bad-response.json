@@ -2,6 +2,26 @@
   "$optional-properties$" : ["id", "date", "publisher", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
+  "contained" : [{
+    "resourceType" : "OperationOutcome",
+    "id" : "oo1",
+    "issue" : [{
+      "extension" : [{
+        "$optional$" : "!tx.fhir.org",
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+        "valueString" : "VALUESET_EXPANSION_INCLUDE_UNKNOWN_CODE"
+      }],
+      "severity" : "warning",
+      "code" : "code-invalid",
+      "details" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+          "code" : "invalid-code"
+        }],
+        "text" : "$external:1:code3$"
+      }
+    }]
+  }],
   "url" : "http://hl7.org/fhir/test/ValueSet/overload-enum-bad",
   "version" : "5.0.0",
   "name" : "OverloadValueSetEnumBad",
@@ -14,6 +34,12 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/expansion-issue",
+      "valueReference" : {
+        "reference" : "#oo1"
+      }
+    }],
     "total" : 1,
     "parameter" : [{
       "name" : "used-codesystem",

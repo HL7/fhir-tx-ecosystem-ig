@@ -44,7 +44,8 @@
     "name" : "simple-cases",
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-concept-not-in.json", "simple/valueset-filter-code-not-in.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-alt.json",
+    "runner" : "7.0.6",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-enumerated-invalid.json", "simple/valueset-filter-isa-invalid.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-concept-not-in.json", "simple/valueset-filter-code-not-in.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-alt.json",
     "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json"],
     "tests" :[
       {
@@ -73,10 +74,40 @@
         "response" : "simple/simple-expand-enum-response-valueSet.json"
       },{
         "name" : "simple-expand-enum-bad",
-        "description" : "Expansion containing an enumerated set of codes in the code system, including invalid codes",
+        "description" : "Expansion containing an enumerated set of codes in the code system, including an invalid code. The server may refuse to expand the value set (4xx), or expand it without the invalid code, saying so in an expansion-issue (200)",
         "operation" : "expand",
+        "http-code" : "200|4xx",
         "request" : "simple/simple-expand-enum-bad-request-parameters.json",
-        "response" : "simple/simple-expand-enum-bad-response-valueSet.json"
+        "response:200" : "simple/simple-expand-enum-bad-response-valueSet.json",
+        "response:4xx" : "simple/simple-expand-enum-bad-response-outcome.json"
+      },{
+        "name" : "simple-expand-enum-invalid",
+        "description" : "Expansion of a value set that enumerates a valid code and an invalid one ('xxxx'). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the include referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "simple/simple-expand-enum-invalid-request-parameters.json",
+        "response:200" : "simple/simple-expand-enum-invalid-response-valueSet.json",
+        "response:4xx" : "simple/simple-expand-enum-invalid-response-outcome.json"
+      },{
+        "name" : "simple-expand-isa-invalid",
+        "description" : "Expansion of a value set that includes a valid code, and everything that is-a xxxx (a code that is not in the code system). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the filter referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "simple/simple-expand-isa-invalid-request-parameters.json",
+        "response:200" : "simple/simple-expand-isa-invalid-response-valueSet.json",
+        "response:4xx" : "simple/simple-expand-isa-invalid-response-outcome.json"
+      },{
+        "name" : "simple-validate-enum-invalid",
+        "description" : "$validate-code of an unknown code (yyyy) against a value set that is invalid: it lists a code that is not in the code system (xxxx). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-enum-invalid-request-parameters.json",
+        "response" : "simple/simple-validate-enum-invalid-response-parameters.json"
+      },{
+        "name" : "simple-validate-isa-invalid",
+        "description" : "$validate-code of an unknown code (yyyy) against a value set that is invalid: it has an is-a filter on a code that is not in the code system (xxxx). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-isa-invalid-request-parameters.json",
+        "response" : "simple/simple-validate-isa-invalid-response-parameters.json"
       },{
         "name" : "simple-expand-isa",
         "description" : "Expansion containing a filter on the code system using is-a relationship",
@@ -3964,6 +3995,7 @@
     "name" : "overload",
     "mode" : "general",
     "description" : "A set of tests that test out handling of value sets that cross versions of the same code system",
+    "runner" : "7.0.6",
     "setup" : ["overload/codesystem-overload-1.json", "overload/codesystem-overload-2.json",
         "overload/valueset-overload-all.json", "overload/valueset-overload-all-versioned.json", "overload/valueset-overload-all-merged.json",
         "overload/valueset-overload-exclude.json", "overload/valueset-overload-exclude-versioned.json", "overload/valueset-overload-exclude-merged.json",
@@ -4001,10 +4033,12 @@
       },
       {
         "name" : "expand-enum-bad",
-        "description" : "Expanding two versions of the same code system, codes selected from both versions - but you can't do this",
+        "description" : "Expanding two versions of the same code system, codes selected from both versions - but you can't do this: code3 is not in version 2.0.0, which is the one used. The server may refuse to expand the value set (4xx), or expand it without the invalid code, saying the include referred to an invalid code in an expansion-issue (200)",
         "operation" : "expand",
+        "http-code" : "200|4xx",
         "request" : "overload/overload-expand-enum-bad-request.json",
-        "response" :  "overload/overload-expand-enum-bad-response.json"
+        "response:200" : "overload/overload-expand-enum-bad-response.json",
+        "response:4xx" : "overload/overload-expand-enum-bad-response-outcome.json"
       },
       {
         "name" : "expand-exclude",
@@ -5873,7 +5907,8 @@
     "name" : "loinc",
     "mode" : "loinc",
     "description" : "LOINC tests. These depend on the LOINC release (2.83) and the accessory files the server has loaded, and every request names version 2.83",
-    "setup" : [ "loinc/valueset-all.json", "loinc/valueset-enumerated-bad.json", "loinc/valueset-enumerated.json", "loinc/valueset-filter-prop-component.json", "loinc/valueset-filter-prop-method.json", "loinc/valueset-filter-prop-component-str.json",
+    "runner" : "7.0.6",
+    "setup" : [ "loinc/valueset-all.json", "loinc/valueset-enumerated-bad.json", "loinc/valueset-enumerated-invalid.json", "loinc/valueset-enumerated-invalid-check-digit.json", "loinc/valueset-filter-isa-invalid.json", "loinc/valueset-filter-isa-invalid-check-digit.json", "loinc/valueset-enumerated.json", "loinc/valueset-filter-prop-component.json", "loinc/valueset-filter-prop-method.json", "loinc/valueset-filter-prop-component-str.json",
       "loinc/valueset-filter-prop-order-obs.json", "loinc/valueset-concept-is-a.json", "loinc/valueset-filter-copyright.json", "loinc/valueset-filter-status.json", "loinc/valueset-filter-class-regex.json",
       "loinc/valueset-filter-scale-type.json", "loinc/valueset-filter-list.json", "loinc/valueset-filter-prop-dockind-exists.json", "loinc/valueset-filter-no-method.json", "loinc/valueset-filter-classtype.json", "loinc/valueset-filter-classtype-in.json", "loinc/valueset-filter-classtype-in-names.json", "loinc/valueset-filter-prop-order-obs-in.json", "loinc/valueset-filter-prop-order-obs-in-case.json",
       "loinc/valueset-filter-answers-for1.json", "loinc/valueset-filter-answers-for2.json", "loinc/valueset-filter-answers-for3.json", "loinc/valueset-filter-answers-for4.json", "loinc/valueset-filter-answer-list.json", "loinc/valueset-filter-parent.json",
@@ -6079,10 +6114,76 @@
       },
       {
         "name" : "loinc-expand-enum-bad",
-        "description" : "to be provided",
+        "description" : "Expansion of a value set that enumerates valid codes and two invalid ones (LA4489-6X, LP111373-9X). The server may refuse to expand the value set (4xx), or expand it with just the valid codes, saying the include referred to invalid codes in an expansion-issue (200)",
         "operation" : "expand",
+        "http-code" : "200|4xx",
         "request" : "loinc/loinc-expand-enum-bad-request-parameters.json",
-        "response" : "loinc/loinc-expand-enum-bad-response-valueSet.json"
+        "response:200" : "loinc/loinc-expand-enum-bad-response-valueSet.json",
+        "response:4xx" : "loinc/loinc-expand-enum-bad-response-outcome.json"
+      },
+      {
+        "name" : "loinc-expand-enum-invalid",
+        "description" : "Expansion of a value set that enumerates a valid code and a code that is not in LOINC, though its check digit is right (99999-5). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the include referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "loinc/loinc-expand-enum-invalid-request-parameters.json",
+        "response:200" : "loinc/loinc-expand-enum-invalid-response-valueSet.json",
+        "response:4xx" : "loinc/loinc-expand-enum-invalid-response-outcome.json"
+      },
+      {
+        "name" : "loinc-expand-enum-invalid-check-digit",
+        "description" : "Expansion of a value set that enumerates a valid code and a code whose check digit is wrong (99999-6). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the include referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "loinc/loinc-expand-enum-invalid-check-digit-request-parameters.json",
+        "response:200" : "loinc/loinc-expand-enum-invalid-check-digit-response-valueSet.json",
+        "response:4xx" : "loinc/loinc-expand-enum-invalid-check-digit-response-outcome.json"
+      },
+      {
+        "name" : "loinc-expand-isa-invalid",
+        "description" : "Expansion of a value set that includes a valid code, and everything that is-a 99999-5 (a code that is not in LOINC, though its check digit is right). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the filter referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "loinc/loinc-expand-isa-invalid-request-parameters.json",
+        "response:200" : "loinc/loinc-expand-isa-invalid-response-valueSet.json",
+        "response:4xx" : "loinc/loinc-expand-isa-invalid-response-outcome.json"
+      },
+      {
+        "name" : "loinc-expand-isa-invalid-check-digit",
+        "description" : "Expansion of a value set that includes a valid code, and everything that is-a 99999-6 (a code whose check digit is wrong). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the filter referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "loinc/loinc-expand-isa-invalid-check-digit-request-parameters.json",
+        "response:200" : "loinc/loinc-expand-isa-invalid-check-digit-response-valueSet.json",
+        "response:4xx" : "loinc/loinc-expand-isa-invalid-check-digit-response-outcome.json"
+      },
+      {
+        "name" : "loinc-validate-enum-invalid",
+        "description" : "$validate-code of an unknown code (99973-0) against a value set that is invalid: it lists a code that is not in the code system (99999-5). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-enum-invalid-request-parameters.json",
+        "response" : "loinc/loinc-validate-enum-invalid-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-enum-invalid-check-digit",
+        "description" : "$validate-code of an unknown code (99973-0) against a value set that is invalid: it lists a code that is not in the code system (99999-6). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-enum-invalid-check-digit-request-parameters.json",
+        "response" : "loinc/loinc-validate-enum-invalid-check-digit-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-isa-invalid",
+        "description" : "$validate-code of an unknown code (99973-0) against a value set that is invalid: it has an is-a filter on a code that is not in the code system (99999-5). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-isa-invalid-request-parameters.json",
+        "response" : "loinc/loinc-validate-isa-invalid-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-isa-invalid-check-digit",
+        "description" : "$validate-code of an unknown code (99973-0) against a value set that is invalid: it has an is-a filter on a code that is not in the code system (99999-6). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "loinc/loinc-validate-isa-invalid-check-digit-request-parameters.json",
+        "response" : "loinc/loinc-validate-isa-invalid-check-digit-response-parameters.json"
       },
       {
         "name" : "loinc-expand-status",
@@ -6726,7 +6827,8 @@
     "name" : "snomed",
     "mode" : "snomed",
     "description" : "This snomed tests are based on the testing subset in the tx-ecosystem IG github repo (see /tx-source)",
-    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
+    "runner" : "7.0.6",
+    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-enumerated-invalid.json", "sct/valueset-enumerated-invalid-check-digit.json", "sct/valueset-filter-isa-invalid.json", "sct/valueset-filter-isa-invalid-check-digit.json", "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
     "tests" : [
       {
         "name" : "snomed-inactive-display-lenient",
@@ -6764,6 +6866,70 @@
         "operation" : "expand",
         "request" : "sct/expand-inactive-request.json",
         "response" : "sct/expand-inactive-response.json"
+      },
+      {
+        "name" : "snomed-expand-enum-invalid",
+        "description" : "Expansion of a value set that enumerates a valid code and a code that is not in the edition, though its check digit is right (999999006). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the include referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "sct/expand-enum-invalid-request.json",
+        "response:200" : "sct/expand-enum-invalid-response-valueSet.json",
+        "response:4xx" : "sct/expand-enum-invalid-response-outcome.json"
+      },
+      {
+        "name" : "snomed-expand-enum-invalid-check-digit",
+        "description" : "Expansion of a value set that enumerates a valid code and a code whose check digit is wrong (999999007). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the include referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "sct/expand-enum-invalid-check-digit-request.json",
+        "response:200" : "sct/expand-enum-invalid-check-digit-response-valueSet.json",
+        "response:4xx" : "sct/expand-enum-invalid-check-digit-response-outcome.json"
+      },
+      {
+        "name" : "snomed-expand-isa-invalid",
+        "description" : "Expansion of a value set that includes a valid code, and everything that is-a 999999006 (a code that is not in the edition, though its check digit is right). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the filter referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "sct/expand-isa-invalid-request.json",
+        "response:200" : "sct/expand-isa-invalid-response-valueSet.json",
+        "response:4xx" : "sct/expand-isa-invalid-response-outcome.json"
+      },
+      {
+        "name" : "snomed-expand-isa-invalid-check-digit",
+        "description" : "Expansion of a value set that includes a valid code, and everything that is-a 999999007 (a code whose check digit is wrong). The server may refuse to expand the value set (4xx), or expand it with just the valid code, saying the filter referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "sct/expand-isa-invalid-check-digit-request.json",
+        "response:200" : "sct/expand-isa-invalid-check-digit-response-valueSet.json",
+        "response:4xx" : "sct/expand-isa-invalid-check-digit-response-outcome.json"
+      },
+      {
+        "name" : "snomed-validate-enum-invalid",
+        "description" : "$validate-code of an unknown code (999998003) against a value set that is invalid: it lists a code that is not in the code system (999999006). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "sct/validate-enum-invalid-request.json",
+        "response" : "sct/validate-enum-invalid-response.json"
+      },
+      {
+        "name" : "snomed-validate-enum-invalid-check-digit",
+        "description" : "$validate-code of an unknown code (999998003) against a value set that is invalid: it lists a code that is not in the code system (999999007). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "sct/validate-enum-invalid-check-digit-request.json",
+        "response" : "sct/validate-enum-invalid-check-digit-response.json"
+      },
+      {
+        "name" : "snomed-validate-isa-invalid",
+        "description" : "$validate-code of an unknown code (999998003) against a value set that is invalid: it has an is-a filter on a code that is not in the code system (999999006). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "sct/validate-isa-invalid-request.json",
+        "response" : "sct/validate-isa-invalid-response.json"
+      },
+      {
+        "name" : "snomed-validate-isa-invalid-check-digit",
+        "description" : "$validate-code of an unknown code (999998003) against a value set that is invalid: it has an is-a filter on a code that is not in the code system (999999007). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "sct/validate-isa-invalid-check-digit-request.json",
+        "response" : "sct/validate-isa-invalid-check-digit-response.json"
       },
       {
         "name" : "snomed-expand-isa",
@@ -10743,6 +10909,7 @@
     "mode" : "icd-11",
     "todo" : "capabilities and termcaps issues. Check parameters. check definitions, Code system in language, add a test for axis being plain wrong. research sub-properties on /Users/grahame/igs/tx-ecosystem-ig/tests/icd-11/lookup-pc-simple-response.json",
     "description" : "ICD-11 Test Cases. See tests/icd-11/doco.txt for what these assert and why several of them are expected to fail against the current ICD-API.",
+    "runner" : "7.0.6",
     "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/vs3.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-enumerated-id.json", 
       "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-isa-id.json", "icd-11/valueset-bad-code.json", "icd-11/valueset-icd11-all.json", "icd-11/valueset-mms-all.json", "icd-11/valueset-icf-all.json", "icd-11/valueset-foundation-all.json", 
       "icd-11/valueset-mms-extension.json", "icd-11/valueset-mms-medicaments.json", "icd-11/cm-ciel-icd11.json", "icd-11/cm-ciel-icd11-reverse.json", "icd-11/cm-ciel-icd11-bad.json"],
@@ -11320,10 +11487,12 @@
       },
       {
         "name" : "expand-adhoc-enum-uri",
-        "description" : "Expand a client-supplied value set enumerating full entity URIs: not codes in the MMS",
+        "description" : "Expand a client-supplied value set enumerating full entity URIs: not codes in the MMS. The server may refuse to expand the value set (4xx), or expand it without the invalid code, saying the include referred to an invalid code in an expansion-issue (200)",
         "operation" : "expand",
+        "http-code" : "200|4xx",
         "request" : "icd-11/expand-adhoc-enum-uri-request.json",
-        "response" : "icd-11/expand-adhoc-enum-uri-response.json"
+        "response:200" : "icd-11/expand-adhoc-enum-uri-response.json",
+        "response:4xx" : "icd-11/expand-adhoc-enum-uri-response-outcome.json"
       },
       {
         "name" : "expand-adhoc-enum-id",
@@ -11341,11 +11510,12 @@
       },
       {
         "name" : "expand-adhoc-isa-uri",
-        "description" : "Expand the same is-a filter with the filter value as a full entity URI: not a code in the MMS",
+        "description" : "Expand the same is-a filter with the filter value as a full entity URI: not a code in the MMS. The server may refuse to expand the value set (4xx), or expand it without the filter's codes, saying the filter referred to an invalid code in an expansion-issue (200)",
         "operation" : "expand",
-        "http-code" : "4xx",
+        "http-code" : "200|4xx",
         "request" : "icd-11/expand-adhoc-isa-uri-request.json",
-        "response" : "icd-11/expand-adhoc-isa-uri-response.json"
+        "response:200" : "icd-11/expand-adhoc-isa-uri-response-valueSet.json",
+        "response:4xx" : "icd-11/expand-adhoc-isa-uri-response.json"
       },
       {
         "name" : "expand-adhoc-isa-id",
@@ -11356,18 +11526,21 @@
       },
       {
         "name" : "expand-adhoc-bad-code",
-        "description" : "A client-supplied value set naming a code that does not exist expands to the codes that do - the same as simple-expand-enum-bad and overload-expand-enum-bad",
+        "description" : "A client-supplied value set naming a code that does not exist (XXXX9) - the same as simple-expand-enum-bad and overload expand-enum-bad. The server may refuse to expand the value set (4xx), or expand it without the invalid code, saying the include referred to an invalid code in an expansion-issue (200)",
         "operation" : "expand",
+        "http-code" : "200|4xx",
         "request" : "icd-11/expand-adhoc-bad-code-request.json",
-        "response" : "icd-11/expand-adhoc-bad-code-response.json"
+        "response:200" : "icd-11/expand-adhoc-bad-code-response.json",
+        "response:4xx" : "icd-11/expand-adhoc-bad-code-response-outcome.json"
       },
       {
         "name" : "expand-pcs-uri-form",
-        "description" : "The WHO postcoordination scale as a client-supplied value set, filter values as full entity URIs: not codes in the MMS",
+        "description" : "The WHO postcoordination scale as a client-supplied value set, filter values as full entity URIs: not codes in the MMS. The server may refuse to expand the value set (4xx), or expand it without the filter's codes, saying the filter referred to an invalid code in an expansion-issue (200)",
         "operation" : "expand",
-        "http-code" : "4xx",
+        "http-code" : "200|4xx",
         "request" : "icd-11/expand-pcs-uri-form-request.json",
-        "response" : "icd-11/expand-pcs-uri-form-response.json"
+        "response:200" : "icd-11/expand-pcs-uri-form-response-valueSet.json",
+        "response:4xx" : "icd-11/expand-pcs-uri-form-response.json"
       },
       {
         "name" : "expand-pcs-id-form",

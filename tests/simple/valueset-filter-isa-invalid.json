@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-filter-isa-invalid",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-isa-invalid",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterIsaInvalid",
+  "title" : "Simple ValueSet Filter Is-a Invalid",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-01",
+  "publisher" : "FHIR Project",
+  "description" : "A valid code, and everything that is-a xxxx: a code that is not in the code system",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "concept" : [{
+        "code" : "code1"
+      }]
+    },{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "xxxx"
+      }]
+    }]
+  }
+}

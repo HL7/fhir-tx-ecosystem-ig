@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-filter-isa-invalid",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-filter-isa-invalid",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetFilterIsaInvalid",
+  "title" : "LOINC ValueSet Filter Is-a Invalid",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "publisher" : "FHIR Project",
+  "description" : "A valid code, and everything that is-a 99999-5: a code that is not in LOINC, though its check digit is right",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "2339-0"
+      }]
+    },{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "99999-5"
+      }]
+    }]
+  }
+}

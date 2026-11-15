@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sct-enumerated-invalid",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid",
+  "version" : "5.0.0",
+  "name" : "SCTEnumeratedInvalidValueSet",
+  "title" : "SCT Enumerated Invalid ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "publisher" : "FHIR Project",
+  "description" : "A valid code from the testing subset, and a code that is not in it, though its check digit is correct",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+      "concept" : [{
+        "code" : "71650008"
+      },
+      {
+        "code" : "999999006"
+      }]
+    }]
+  }
+}

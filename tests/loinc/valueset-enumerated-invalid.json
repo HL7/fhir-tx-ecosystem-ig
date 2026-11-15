@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-enumerated-invalid",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-invalid",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetEnumeratedInvalid",
+  "title" : "LOINC ValueSet Enumerated Invalid",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "publisher" : "FHIR Project",
+  "description" : "A valid LOINC code, and a code that is not in LOINC, though its check digit is right",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "2339-0"
+      },{
+        "code" : "99999-5"
+      }]
+    }]
+  }
+}

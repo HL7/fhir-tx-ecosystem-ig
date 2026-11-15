@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "loinc-enumerated-invalid-check-digit",
+  "url" : "http://hl7.org/fhir/test/ValueSet/loinc-enumerated-invalid-check-digit",
+  "version" : "5.0.0",
+  "name" : "LOINCValueSetEnumeratedInvalidCheckDigit",
+  "title" : "LOINC ValueSet Enumerated Invalid Check Digit",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "publisher" : "FHIR Project",
+  "description" : "A valid LOINC code, and a code whose check digit is wrong",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "2339-0"
+      },{
+        "code" : "99999-6"
+      }]
+    }]
+  }
+}

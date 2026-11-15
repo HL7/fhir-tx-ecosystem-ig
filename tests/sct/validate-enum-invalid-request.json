@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/sct-enumerated-invalid"
+  },{
+    "name" : "code",
+    "valueCode" : "999998003"
+  },{
+    "name" : "system",
+    "valueUri" : "http://snomed.info/sct"
+  },{
+    "name" : "systemVersion",
+    "valueString" : "http://snomed.info/xsct/31000003106/version/20250909"
+  }]
+}
