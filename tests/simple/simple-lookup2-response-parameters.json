@@ -14,26 +14,6 @@
     "valueString" : "My second code, with children"
   },
   {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "$optional-properties$" : ["display"],
-        "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
-        "code" : "olde-english",
-        "display" : "olde-english"
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "mine own second code"
-    }]
-  },
-  {
     "$optional$" : true,
     "name" : "designation",
     "part" : [{
@@ -53,6 +33,26 @@
     {
       "name" : "value",
       "valueString" : "Display 2"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
+        "code" : "olde-english",
+        "display" : "olde-english"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "mine own second code"
     }]
   },
   {

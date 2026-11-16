@@ -14,27 +14,6 @@
     "valueString" : "My first second level code"
   },
   {
-    "name" : "designation",
-    "part" : [{
-      "name" : "language",
-      "valueCode" : "en"
-    },
-    {
-      "name" : "use",
-      "valueCoding" : {
-        "$optional-properties$" : ["display"],
-        "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
-        "code" : "olde-english",
-        "display" : "olde-english"
-
-      }
-    },
-    {
-      "name" : "value",
-      "valueString" : "mine own first code yond's issue of the second code"
-    }]
-  },
-  {
     "$optional$" : true,
     "name" : "designation",
     "part" : [{
@@ -54,6 +33,27 @@
     {
       "name" : "value",
       "valueString" : "Display 2a"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "$optional-properties$" : ["display"],
+        "system" : "http://hl7.org/fhir/test/CodeSystem/designations",
+        "code" : "olde-english",
+        "display" : "olde-english"
+
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "mine own first code yond's issue of the second code"
     }]
   },
   {
