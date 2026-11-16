@@ -16,6 +16,10 @@
   {
     "name" : "designation",
     "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
       "name" : "use",
       "valueCoding" : {
         "$optional-properties$" : ["display"],
