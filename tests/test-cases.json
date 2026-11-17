@@ -1163,6 +1163,22 @@
         "http-code" : "4xx",
         "request" : "global-lang-pack/glp-expand-pinned-other-version-required-request.json",
         "response" : "global-lang-pack/glp-expand-pinned-other-version-required-response.json"
+      },
+      {
+        "name" : "glp-cs-validate-pinned-other-version-required",
+        "description" : "CodeSystem $validate-code with no version asked for: a supplement pinned to another version of the code system than the one used does not apply, so requiring it with useSupplement fails",
+        "operation" : "cs-validate-code",
+        "http-code" : "4xx",
+        "request" : "global-lang-pack/glp-cs-validate-pinned-other-version-required-request.json",
+        "response" : "global-lang-pack/glp-cs-validate-pinned-other-version-required-response.json"
+      },
+      {
+        "name" : "glp-cs-validate-server-supplement",
+        "description" : "A supplement the server holds (glp-base-da, in the package fhir.tx.support.tests), pinned to the version of the code system used, applies when it is referenced with useSupplement and no version is asked for: its Danish display is valid. tx.fhir.org mode for now, because servers aren't yet required to load fhir.tx.support.tests",
+        "mode" : "tx.fhir.org",
+        "operation" : "cs-validate-code",
+        "request" : "global-lang-pack/glp-cs-validate-server-supplement-request.json",
+        "response" : "global-lang-pack/glp-cs-validate-server-supplement-response.json"
       }
     ]
   },{
