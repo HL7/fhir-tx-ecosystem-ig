@@ -13,6 +13,46 @@
     "valueString" : "Other specified bacterial meningitis / Sepsis without septic shock / Sepsis with septic shock"
   },
   {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_PC_REQUIRED_AXIS_EMPTY"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "$external:1:1683090852|hasCausingCondition$"
+        },
+        "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_PC_REQUIRED_AXIS_EMPTY"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "$external:2:622600769|hasCausingCondition$"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
     "name" : "result",
     "valueBoolean" : true
   },

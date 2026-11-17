@@ -11438,6 +11438,20 @@
         "response" : "icd-11/cs-validate-nf-axis-not-multiple-response.json"
       },
       {
+        "name" : "cs-validate-pc-required-axis-empty",
+        "description" : "CA40.00/1D01.0Y written as entity ids - the cluster member 1D01.0Y (Other specified bacterial meningitis) has a required axis (hasCausingCondition) with no value: requiredPostcoordination means strongly encouraged, so the code is valid, with a warning",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-pc-required-axis-empty-request.json",
+        "response" : "icd-11/cs-validate-pc-required-axis-empty-response.json"
+      },
+      {
+        "name" : "cs-validate-required-axis-empty",
+        "description" : "684930313/other (1D01.0Y, Other specified bacterial meningitis) on its own: the code declares a required axis (hasCausingCondition), so on its own it is not complete - valid, with a warning",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-required-axis-empty-request.json",
+        "response" : "icd-11/cs-validate-required-axis-empty-response.json"
+      },
+      {
         "name" : "cs-validate-nf-short-codes",
         "description" : "Normal form: NA00.2&XJ9NV&XK8G/PG50&XE266&XE3HC - out of order and in short codes: normalized-code is the id form in normal order",
         "operation" : "cs-validate-code",

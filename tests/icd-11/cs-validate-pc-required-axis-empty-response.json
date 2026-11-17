@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "CA40.00/1D01.0Y"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "1258650683/684930313/other"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Pneumonia due to Chlamydophila pneumoniae / Other specified bacterial meningitis"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_PC_REQUIRED_AXIS_EMPTY"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "$external:1:684930313/other|hasCausingCondition$"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}
