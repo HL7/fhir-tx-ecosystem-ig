@@ -1,13 +1,10 @@
 This is a subset of SNOMED CT, created using the SNOMED-Subontology-Extractor tool.
 
-The SNOMED CT is provided in UTF-8 encoded tab-delimited flat files which can be imported into any database or other software application.  SNOMED CT is not software.
+-- License Statement --
+This package contains a scoped subset of SNOMED Clinical Terms® (SNOMED CT®) distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT is © and ® SNOMED International. All rights reserved.
 
-The SNOMED CT files are designed as relational tables with each line in the file representing a row in the table. The first row of each table contains column headings. All other rows contain data.
+SNOMED International grants users a non-exclusive, royalty-free, worldwide permission to use this package solely for the purposes of testing, validation, and demonstration of interoperability, including testing events. Users may copy and distribute the package for these purposes, provided it is distributed in full, without modification, and with this license statement and all copyright and trademark notices intact.
 
-The SNOMED CT International Edition release is delivered to IHTSDO Member National Centers and authorized Affiliate Licensees via Internet download.
+The package may not be modified or altered. The package or any derivative works may not be used in production systems, for the delivery of patient care, or for any commercial purpose other than testing and validation. Any use beyond these terms requires a SNOMED CT Affiliate License, available through a SNOMED International Member's National Release Centre or directly from SNOMED International at www.snomed.org.
 
-© International Health Terminology Standards Development Organisation 2002-2025.  All rights reserved.  SNOMED CT® was originally created by the College of American Pathologists.  "SNOMED" and "SNOMED CT" are registered trademarks of International Health Terminology Standards Development Organisation, trading as SNOMED International.
-
-SNOMED CT has been created by combining SNOMED RT and a computer based nomenclature and classification known as Clinical Terms Version 3, formerly known as Read Codes Version 3, which was created on behalf of the UK Department of Health and is Crown copyright.
-
-This document forms part of SNOMED CT® distributed by SNOMED International, which is subject to the SNOMED CT® Affiliate License, details of which may be found at  https://www.snomed.org/snomed-ct/get-snomed.
+The package is provided "as is", without warranty of any kind, and SNOMED International accepts no liability arising from its use. The right to maintain and update this content remains vested exclusively in SNOMED International.
