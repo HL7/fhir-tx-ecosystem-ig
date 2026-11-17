@@ -32,6 +32,40 @@
           "text" : "The code '684930313/other/1683090852/622600769' is valid, but it is not the normal form for the code system 'http://id.who.int/icd/release/11/mms|2026-01'; the normal form is '684930313/other/622600769/1683090852'"
         },
         "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_PC_REQUIRED_AXIS_EMPTY"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "$external:1:1683090852|hasCausingCondition$"
+        },
+        "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_PC_REQUIRED_AXIS_EMPTY"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "$external:2:622600769|hasCausingCondition$"
+        },
+        "expression" : ["code"]
       }]
     }
   },

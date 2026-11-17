@@ -520,7 +520,21 @@ Still to write
 * the remaining postcoordination filters from the original sketch: no
   postcoordinatable terms, only base codes, all mandatory axes valued, classKind
 * requiredPostcoordination (which in practice means "strongly encouraged" - a
-  code stays valid without it)
+  code stays valid without it). Decided 2026-11-17: an empty required axis is a
+  warning, not an error - cs-validate-pc-required-axis-empty covers it for a
+  cluster member, cs-validate-required-axis-empty for a plain code on its own
+  (a code with a required axis is not complete without it); still to write:
+  the root of an expression.
+  The warning is ICD11_PC_REQUIRED_AXIS_EMPTY, one per stem with an empty
+  required axis, naming the stem as written with its own & qualifiers (so two
+  members on the same stem are told apart); a member deleted as a duplicate
+  is warned about once. It changed seven existing expectations: MG51.00 in
+  cs-validate-pc-pneumonia-cluster, -nf-member-order and -nf-duplicate-member;
+  1G40 and 1G41 in -nf-binding-a/b; and both 9B71.00 members of
+  cs-validate-pc-retinopathy. The last is the arguable one: 5A11 is plainly
+  the cause of the retinopathy, but `/` members qualify the root, not each
+  other, so nothing fills 9B71.00's hasCausingCondition and the rules as
+  agreed give the warning. Kept deliberately, to be argued about.
 * allowMultipleValues: AllowAlways / NotAllowed / AllowedExceptFromSameBlock
 * the ~25,000 postcoordination scale value sets: something that samples them
   rather than enumerating them

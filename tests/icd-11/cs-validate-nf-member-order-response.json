@@ -32,6 +32,23 @@
           "text" : "The code '1258650683/983550510/1710270895' is valid, but it is not the normal form for the code system 'http://id.who.int/icd/release/11/mms|2026-01'; the normal form is '1258650683/1710270895/983550510'"
         },
         "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_PC_REQUIRED_AXIS_EMPTY"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "$external:1:1710270895|hasCausingCondition$"
+        },
+        "expression" : ["code"]
       }]
     }
   },

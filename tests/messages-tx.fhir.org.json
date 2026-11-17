@@ -2010,5 +2010,32 @@
     "2" : "Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
     "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0' is not valid: The value set include filter 'concept is-a 999999007' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded",
     "4" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-isa-invalid-check-digit|5.0.0' is not valid: The value set include filter 'concept is-a 999999007' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded; Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+  },
+  "icd-11/cs-validate-pc-pneumonia-cluster-response.json" : {
+    "1" : "'MG51.00' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-nf-member-order-response.json" : {
+    "1" : "'1710270895' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-nf-duplicate-member-response.json" : {
+    "1" : "'1710270895' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-nf-binding-a-response.json" : {
+    "1" : "'1683090852' has no value on its required hasCausingCondition axis",
+    "2" : "'622600769' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-nf-binding-b-response.json" : {
+    "1" : "'1683090852' has no value on its required hasCausingCondition axis",
+    "2" : "'622600769' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-pc-retinopathy-response.json" : {
+    "1" : "'417759842&1201187093&876572005' has no value on its required hasCausingCondition axis",
+    "2" : "'417759842&562478860&271422288' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-pc-required-axis-empty-response.json" : {
+    "1" : "'684930313/other' has no value on its required hasCausingCondition axis"
+  },
+  "icd-11/cs-validate-required-axis-empty-response.json" : {
+    "1" : "'684930313/other' has no value on its required hasCausingCondition axis"
   }
 }
