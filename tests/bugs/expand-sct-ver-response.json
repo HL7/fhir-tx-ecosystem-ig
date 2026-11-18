@@ -14,7 +14,7 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20260901"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
