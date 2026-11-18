@@ -6865,7 +6865,7 @@
     "mode" : "snomed",
     "description" : "This snomed tests are based on the testing subset in the tx-ecosystem IG github repo (see /tx-source)",
     "runner" : "7.0.6",
-    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-enumerated-invalid.json", "sct/valueset-enumerated-invalid-check-digit.json", "sct/valueset-filter-isa-invalid.json", "sct/valueset-filter-isa-invalid-check-digit.json", "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
+    "setup" : [ "sct/valueset-inactive.json", "sct/valueset-enumerated-invalid.json", "sct/valueset-enumerated-invalid-check-digit.json", "sct/valueset-filter-isa-invalid.json", "sct/valueset-filter-isa-invalid-check-digit.json", "sct/valueset-filter-in-invalid.json", "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
     "tests" : [
       {
         "name" : "snomed-inactive-display-lenient",
@@ -6941,6 +6941,15 @@
         "response:4xx" : "sct/expand-isa-invalid-check-digit-response-outcome.json"
       },
       {
+        "name" : "snomed-expand-in-invalid",
+        "description" : "Expansion of a value set that includes a valid code, and the concepts in a list (concept in 50325005,999999006) one of which is not in the edition (999999006, though its check digit is right). As for is-a (snomed-expand-isa-invalid): the server may refuse to expand the value set (4xx), or expand it with just the valid code - none of the filter's codes, not even 50325005 - saying the filter referred to an invalid code in an expansion-issue (200)",
+        "operation" : "expand",
+        "http-code" : "200|4xx",
+        "request" : "sct/expand-in-invalid-request.json",
+        "response:200" : "sct/expand-in-invalid-response-valueSet.json",
+        "response:4xx" : "sct/expand-in-invalid-response-outcome.json"
+      },
+      {
         "name" : "snomed-validate-enum-invalid",
         "description" : "$validate-code of an unknown code (999998003) against a value set that is invalid: it lists a code that is not in the code system (999999006). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
         "operation" : "validate-code",
@@ -6967,6 +6976,13 @@
         "operation" : "validate-code",
         "request" : "sct/validate-isa-invalid-check-digit-request.json",
         "response" : "sct/validate-isa-invalid-check-digit-response.json"
+      },
+      {
+        "name" : "snomed-validate-in-invalid",
+        "description" : "$validate-code of an unknown code (999998003) against a value set that is invalid: it has an in filter whose list has a code that is not in the code system (999999006). Not valid, and as well as the usual errors, an error saying that the value set is not valid, and why",
+        "operation" : "validate-code",
+        "request" : "sct/validate-in-invalid-request.json",
+        "response" : "sct/validate-in-invalid-response.json"
       },
       {
         "name" : "snomed-expand-isa",

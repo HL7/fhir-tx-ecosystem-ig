@@ -1951,6 +1951,18 @@
   "simple/simple-expand-isa-invalid-response-outcome.json" : {
     "1" : "The value set include filter 'concept is-a xxxx' refers to a code that is not in the code system 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0', so the value set can't be expanded"
   },
+  "sct/expand-in-invalid-response-valueSet.json" : {
+    "1" : "The value set include filter 'concept in 50325005,999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the filter matches no codes"
+  },
+  "sct/expand-in-invalid-response-outcome.json" : {
+    "1" : "The value set include filter 'concept in 50325005,999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded"
+  },
+  "sct/validate-in-invalid-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-in-invalid|5.0.0'",
+    "2" : "Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)",
+    "3" : "The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-in-invalid|5.0.0' is not valid: The value set include filter 'concept in 50325005,999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded",
+    "4" : "The provided code 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909#999998003' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-in-invalid|5.0.0'; The value set 'http://hl7.org/fhir/test/ValueSet/sct-filter-in-invalid|5.0.0' is not valid: The value set include filter 'concept in 50325005,999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the value set can't be expanded; Unknown code '999998003' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/xsct/31000003106/version/20250909' (Test Edition)"
+  },
   "sct/expand-isa-invalid-response-valueSet.json" : {
     "1" : "The value set include filter 'concept is-a 999999006' refers to a code that is not in the code system 'http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909', so the filter matches no codes"
   },

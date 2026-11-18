@@ -1,0 +1,30 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sct-filter-in-invalid",
+  "url" : "http://hl7.org/fhir/test/ValueSet/sct-filter-in-invalid",
+  "version" : "5.0.0",
+  "name" : "SCTFilterInInvalidValueSet",
+  "title" : "SCT Filter In Invalid ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-15",
+  "publisher" : "FHIR Project",
+  "description" : "A valid code, and the concepts in a list that has a valid code (50325005) and 999999006: a code that is not in the edition, though its check digit is right",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+      "concept" : [{
+        "code" : "71650008"
+      }]
+    },{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/xsct/31000003106/version/20250909",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "in",
+        "value" : "50325005,999999006"
+      }]
+    }]
+  }
+}
