@@ -2,26 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "46635009"
-  },
-  {
-    "name" : "codeableConcept",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://snomed.info/sct",
-        "version" : "http://snomed.info/sct/11000279109",
-        "code" : "46635009"
-      },
-      {
-        "system" : "http://snomed.info/sct",
-        "version" : "http://snomed.info/sct/11000181102",
-        "code" : "314208002"
-      }]
-    }
+    "valueCode" : "290002008"
   },
   {
     "name" : "display",
-    "valueString" : "Type 1 diabetes mellitus"
+    "valueString" : "Brittle type 1 diabetes mellitus"
   },
   {
     "name" : "issues",
@@ -33,22 +18,26 @@
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
           "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
         }],
-        "severity" : "information",
+        "severity" : "error",
         "code" : "code-invalid",
         "details" : {
           "coding" : [{
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "this-code-not-in-vs"
+            "code" : "not-in-vs"
           }],
-          "text" : "$external:1:314208002|http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split$"
+          "text" : "$external:1:290002008|http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split$"
         },
-        "expression" : ["CodeableConcept.coding[1].code"]
+        "expression" : ["code"]
       }]
     }
   },
   {
+    "name" : "message",
+    "valueString" : "$external:1:290002008|http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split$"
+  },
+  {
     "name" : "result",
-    "valueBoolean" : true
+    "valueBoolean" : false
   },
   {
     "name" : "system",
@@ -56,6 +45,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "$url$"
+    "valueString" : "http://snomed.info/sct/2011000195101"
   }]
 }

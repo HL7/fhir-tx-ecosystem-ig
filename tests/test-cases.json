@@ -12535,25 +12535,25 @@
     "setup" : [ "ecosystem/valueset-sct-split.json" ],
     "tests" : [
       {
-        "name" : "ecosystem-cz-in",
-        "description" : "A Czech edition code in the value set (is-a 46635009)",
+        "name" : "ecosystem-ch-in",
+        "description" : "A Swiss edition code in the value set (is-a 46635009)",
         "operation" : "validate-code",
-        "request" : "ecosystem/cz-in-request.json",
-        "response" : "ecosystem/cz-in-response.json"
+        "request" : "ecosystem/ch-in-request.json",
+        "response" : "ecosystem/ch-in-response.json"
       },
       {
-        "name" : "ecosystem-cz-excluded-code",
-        "description" : "A Czech edition code that the value set excludes by code",
+        "name" : "ecosystem-ch-excluded-code",
+        "description" : "A Swiss edition code that the value set excludes by code",
         "operation" : "validate-code",
-        "request" : "ecosystem/cz-excluded-code-request.json",
-        "response" : "ecosystem/cz-excluded-code-response.json"
+        "request" : "ecosystem/ch-excluded-code-request.json",
+        "response" : "ecosystem/ch-excluded-code-response.json"
       },
       {
-        "name" : "ecosystem-cz-excluded-filter",
-        "description" : "A Czech edition code that the value set excludes by filter (is-a 70694009)",
+        "name" : "ecosystem-ch-excluded-filter",
+        "description" : "A Swiss edition code that the value set excludes by filter (is-a 70694009)",
         "operation" : "validate-code",
-        "request" : "ecosystem/cz-excluded-filter-request.json",
-        "response" : "ecosystem/cz-excluded-filter-response.json"
+        "request" : "ecosystem/ch-excluded-filter-request.json",
+        "response" : "ecosystem/ch-excluded-filter-response.json"
       },
       {
         "name" : "ecosystem-ee-in",
@@ -12577,25 +12577,25 @@
         "response" : "ecosystem/ee-excluded-filter-response.json"
       },
       {
-        "name" : "ecosystem-cc-cz-in-ee-out",
-        "description" : "A CodeableConcept with a Czech code in the value set and an Estonian code excluded from it: the Czech code meets the binding",
+        "name" : "ecosystem-cc-ch-in-ee-out",
+        "description" : "A CodeableConcept with a Swiss code in the value set and an Estonian code excluded from it: the Swiss code meets the binding",
         "operation" : "validate-code",
-        "request" : "ecosystem/cc-cz-in-ee-out-request.json",
-        "response" : "ecosystem/cc-cz-in-ee-out-response.json"
+        "request" : "ecosystem/cc-ch-in-ee-out-request.json",
+        "response" : "ecosystem/cc-ch-in-ee-out-response.json"
       },
       {
-        "name" : "ecosystem-cc-cz-out-ee-in",
-        "description" : "A CodeableConcept with a Czech code excluded from the value set and an Estonian code in it: the Estonian code meets the binding",
+        "name" : "ecosystem-cc-ch-out-ee-in",
+        "description" : "A CodeableConcept with a Swiss code excluded from the value set and an Estonian code in it: the Estonian code meets the binding",
         "operation" : "validate-code",
-        "request" : "ecosystem/cc-cz-out-ee-in-request.json",
-        "response" : "ecosystem/cc-cz-out-ee-in-response.json"
+        "request" : "ecosystem/cc-ch-out-ee-in-request.json",
+        "response" : "ecosystem/cc-ch-out-ee-in-response.json"
       },
       {
-        "name" : "ecosystem-cs-cz-good",
-        "description" : "A Czech edition code, validated against the code system (CodeSystem $validate-code, no value set)",
+        "name" : "ecosystem-cs-ch-good",
+        "description" : "A Swiss edition code, validated against the code system (CodeSystem $validate-code, no value set)",
         "operation" : "cs-validate-code",
-        "request" : "ecosystem/cs-cz-good-request.json",
-        "response" : "ecosystem/cs-cz-good-response.json"
+        "request" : "ecosystem/cs-ch-good-request.json",
+        "response" : "ecosystem/cs-ch-good-response.json"
       },
       {
         "name" : "ecosystem-cs-ee-good",
@@ -12605,19 +12605,19 @@
         "response" : "ecosystem/cs-ee-good-response.json"
       },
       {
-        "name" : "ecosystem-cs-cz-bad-code",
-        "description" : "A code that isn't in the Czech edition, validated against the code system (no value set)",
+        "name" : "ecosystem-cs-ch-bad-code",
+        "description" : "A code that isn't in the Swiss edition, validated against the code system (no value set)",
         "operation" : "cs-validate-code",
-        "request" : "ecosystem/cs-cz-bad-code-request.json",
-        "response" : "ecosystem/cs-cz-bad-code-response.json"
+        "request" : "ecosystem/cs-ch-bad-code-request.json",
+        "response" : "ecosystem/cs-ch-bad-code-response.json"
       },
       {
-        "name" : "ecosystem-cs-cz-bad-display",
-        "description" : "A Czech edition code with the wrong display, validated against the code system (no value set)",
+        "name" : "ecosystem-cs-ch-bad-display",
+        "description" : "A Swiss edition code with the wrong display, validated against the code system (no value set)",
         "operation" : "cs-validate-code",
         "lenient-display" : false,
-        "request" : "ecosystem/cs-cz-bad-display-request.json",
-        "response" : "ecosystem/cs-cz-bad-display-response.json"
+        "request" : "ecosystem/cs-ch-bad-display-request.json",
+        "response" : "ecosystem/cs-ch-bad-display-response.json"
       }
     ]
   },

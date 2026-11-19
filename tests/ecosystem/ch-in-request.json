@@ -11,11 +11,11 @@
     },
     {
       "name": "systemVersion",
-      "valueString": "http://snomed.info/sct/11000279109"
+      "valueString": "http://snomed.info/sct/2011000195101"
     },
     {
       "name": "code",
-      "valueCode": "1285518004"
+      "valueCode": "46635009"
     }
   ]
 }

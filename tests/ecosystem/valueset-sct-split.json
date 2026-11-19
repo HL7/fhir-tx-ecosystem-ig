@@ -4,17 +4,17 @@
   "url": "http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split",
   "version": "5.0.0",
   "name": "EcosystemSctSplit",
-  "title": "SNOMED CT Czech + Estonian",
+  "title": "SNOMED CT Swiss + Estonian",
   "status": "active",
   "experimental": false,
   "date": "2026-11-10",
   "publisher": "FHIR Project",
-  "description": "SNOMED CT filter includes from the Czech and Estonian editions, each with an explicit code exclude and a filter exclude. The Czech edition is only on tx.hl7.cz, and the Estonian edition only on term.tehik.ee, so no single server holds both: a server can only answer for this value set by asking other servers in the ecosystem",
+  "description": "SNOMED CT filter includes from the Swiss and Estonian editions, each with an explicit code exclude and a filter exclude. The Swiss edition is only on tx.fhir.ch, and the Estonian edition only on term.tehik.ee, so no single server holds both: a server can only answer for this value set by asking other servers in the ecosystem",
   "compose": {
     "include": [
       {
         "system": "http://snomed.info/sct",
-        "version": "http://snomed.info/sct/11000279109",
+        "version": "http://snomed.info/sct/2011000195101",
         "filter": [
           {
             "property": "concept",
@@ -38,7 +38,7 @@
     "exclude": [
       {
         "system": "http://snomed.info/sct",
-        "version": "http://snomed.info/sct/11000279109",
+        "version": "http://snomed.info/sct/2011000195101",
         "concept": [
           {
             "code": "290002008"
@@ -47,7 +47,7 @@
       },
       {
         "system": "http://snomed.info/sct",
-        "version": "http://snomed.info/sct/11000279109",
+        "version": "http://snomed.info/sct/2011000195101",
         "filter": [
           {
             "property": "concept",

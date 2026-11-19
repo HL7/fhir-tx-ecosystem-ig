@@ -1878,17 +1878,17 @@
   "icf/icf-vs-enum-qualified-response-parameters.json" : {
     "1" : "The code system 'http://hl7.org/fhir/sid/icf' says that a version must be specified when it is referenced (versionNeeded = true), but this coding has no version"
   },
-  "ecosystem/cc-cz-in-ee-out-response.json" : {
+  "ecosystem/cc-ch-in-ee-out-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000181102#314208002' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
   },
-  "ecosystem/cc-cz-out-ee-in-response.json" : {
-    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000279109#290002008' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  "ecosystem/cc-ch-out-ee-in-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/2011000195101#290002008' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
   },
-  "ecosystem/cz-excluded-code-response.json" : {
-    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000279109#290002008' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  "ecosystem/ch-excluded-code-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/2011000195101#290002008' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
   },
-  "ecosystem/cz-excluded-filter-response.json" : {
-    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000279109#1285518004' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
+  "ecosystem/ch-excluded-filter-response.json" : {
+    "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/2011000195101#1285518004' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
   },
   "ecosystem/ee-excluded-code-response.json" : {
     "1" : "The provided code 'http://snomed.info/sct|http://snomed.info/sct/11000181102#314208002' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ecosystem-sct-split|5.0.0'"
