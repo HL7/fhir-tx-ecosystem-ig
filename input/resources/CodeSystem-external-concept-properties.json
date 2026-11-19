@@ -51,6 +51,11 @@
       "type": "string"
     },
     {
+      "code": "binding",
+      "description": "The canonical URL of the value set that the property's values must come from, where they are narrower than 'any code in the code system' (or are Codings in another code system). The FHIR validator's CodeSystemValidator reads a concept property with this code as the binding of the property",
+      "type": "string"
+    },
+    {
       "code": "subpropertyOf",
       "description": "For a subproperty, the property (a concept in this code system) that it is a subproperty of",
       "type": "code"
@@ -2438,6 +2443,10 @@
               "valueCode": "Coding"
             },
             {
+              "code": "binding",
+              "valueString": "http://loinc.org/vs"
+            },
+            {
               "code": "comment",
               "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/loinc"
             }
@@ -2490,6 +2499,10 @@
             {
               "code": "dataType",
               "valueCode": "Coding"
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs"
             },
             {
               "code": "comment",
@@ -2885,6 +2898,10 @@
               "valueString": "="
             },
             {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C900000000000443000"
+            },
+            {
               "code": "comment",
               "valueString": "FHIRsmith still accepts \"module\" as a name for this property in $lookup"
             }
@@ -3020,6 +3037,10 @@
               "valueCode": "Coding"
             },
             {
+              "code": "binding",
+              "valueString": "http://loinc.org/vs"
+            },
+            {
               "code": "comment",
               "valueString": "See also the mapped:30051010000102 filter"
             }
@@ -3057,6 +3078,10 @@
             {
               "code": "comment",
               "valueString": "A pattern, not a property code: the entries that follow are the attributes the tx ecosystem tests use. Returned with a code-display part giving the attribute name. 116680003 |Is a| is not reported this way: it is parent/child. As a filter, [attribute] = [concept] selects the concepts with that attribute value"
+            },
+            {
+              "code": "comment",
+              "valueString": "The binding of each attribute is its range in the MRCM attribute range reference set (723562003), as an ECL implicit value set"
             }
           ]
         },
@@ -3088,6 +3113,14 @@
             {
               "code": "operator",
               "valueString": "="
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C%3C49755003"
+            },
+            {
+              "code": "comment",
+              "valueString": "Binding: the attribute's MRCM range for precoordinated content (International Edition, 2026-07-01)"
             }
           ]
         },
@@ -3119,6 +3152,14 @@
             {
               "code": "operator",
               "valueString": "="
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C%3C442083009"
+            },
+            {
+              "code": "comment",
+              "valueString": "Binding: the attribute's MRCM range for precoordinated content (International Edition, 2026-07-01)"
             }
           ]
         },
@@ -3150,6 +3191,14 @@
             {
               "code": "operator",
               "valueString": "="
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C%3C105590001%20OR%20%3C%3C260787004%20OR%20%3C%3C373873005%20OR%20%3C%3C410607006%20OR%20%3C%3C78621006"
+            },
+            {
+              "code": "comment",
+              "valueString": "Binding: the attribute's MRCM range for precoordinated content (International Edition, 2026-07-01)"
             }
           ]
         },
@@ -3181,6 +3230,14 @@
             {
               "code": "operator",
               "valueString": "="
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C%3C129264002"
+            },
+            {
+              "code": "comment",
+              "valueString": "Binding: the attribute's MRCM range for precoordinated content (International Edition, 2026-07-01)"
             }
           ]
         },
@@ -3212,6 +3269,14 @@
             {
               "code": "operator",
               "valueString": "="
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C%3C442083009"
+            },
+            {
+              "code": "comment",
+              "valueString": "Binding: the attribute's MRCM range for precoordinated content (International Edition, 2026-07-01)"
             }
           ]
         },
@@ -3243,6 +3308,14 @@
             {
               "code": "operator",
               "valueString": "="
+            },
+            {
+              "code": "binding",
+              "valueString": "http://snomed.info/sct?fhir_vs=ecl/%3C%3C182353008"
+            },
+            {
+              "code": "comment",
+              "valueString": "Binding: the attribute's MRCM range for precoordinated content (International Edition, 2026-07-01)"
             }
           ]
         },
@@ -3535,6 +3608,10 @@
               "valueCode": "string"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/ndc-packages"
+            },
+            {
               "code": "comment",
               "valueString": "Not the standard (deprecated) synonym property: this is an alternate form of an NDC package code (see http://hl7.org/fhir/concept-properties#alternateCode)"
             }
@@ -3560,6 +3637,10 @@
             {
               "code": "dataType",
               "valueCode": "string"
+            },
+            {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/ndc-products"
             }
           ]
         },
@@ -4525,6 +4606,10 @@
               "valueCode": "Coding"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-foundation"
+            },
+            {
               "code": "comment",
               "valueString": "Asked for as source.details, it also carries the Foundation entity's definition and parents as subproperties, and its designations"
             }
@@ -4965,6 +5050,10 @@
               "valueString": "exists"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-extent"
+            },
+            {
               "code": "comment",
               "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
             }
@@ -4998,6 +5087,10 @@
             {
               "code": "operator",
               "valueString": "exists"
+            },
+            {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-nature"
             },
             {
               "code": "comment",
@@ -5035,6 +5128,10 @@
               "valueString": "exists"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-localization"
+            },
+            {
               "code": "comment",
               "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
             }
@@ -5068,6 +5165,10 @@
             {
               "code": "operator",
               "valueString": "exists"
+            },
+            {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-problem"
             },
             {
               "code": "comment",
@@ -5105,6 +5206,10 @@
               "valueString": "exists"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-problem"
+            },
+            {
               "code": "comment",
               "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
             }
@@ -5138,6 +5243,10 @@
             {
               "code": "operator",
               "valueString": "exists"
+            },
+            {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-problem"
             },
             {
               "code": "comment",
@@ -5175,6 +5284,10 @@
               "valueString": "exists"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-problem"
+            },
+            {
               "code": "comment",
               "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
             }
@@ -5210,6 +5323,10 @@
               "valueString": "exists"
             },
             {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-barrier"
+            },
+            {
               "code": "comment",
               "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
             }
@@ -5243,6 +5360,10 @@
             {
               "code": "operator",
               "valueString": "exists"
+            },
+            {
+              "code": "binding",
+              "valueString": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-facilitator"
             },
             {
               "code": "comment",
