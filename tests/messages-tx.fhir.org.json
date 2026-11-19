@@ -416,6 +416,10 @@
   "errors/errors-unknown-system1-response.json" : {
     "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' could not be found, so the code cannot be validated"
   },
+  "errors/errors-unknown-system-version-response.json" : {
+    "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' could not be found, so the code cannot be validated",
+    "2" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' could not be found, so the code cannot be validated; A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' version '1.0' could not be found, so the code cannot be validated. No versions of this code system are known"
+  },
   "errors/errors-unknown-system2-response.json" : {
     "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' could not be found, so the code cannot be validated",
     "2" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' could not be found, so the code cannot be validated; The provided code 'http://hl7.org/fhir/test/CodeSystem/simpleXX#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/unknown-system|5.0.0'",

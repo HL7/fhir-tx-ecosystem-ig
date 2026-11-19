@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ndc-packages",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir-pd"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/ndc-packages",
+  "name": "NdcPackages",
+  "title": "NDC Package Codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "HL7 International / FHIR Product Director",
+  "description": "All NDC package codes, in both the 10-digit and 11-digit forms, current and historical. The binding of the NDC synonym property",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/ndc",
+        "filter": [
+          {
+            "property": "kind",
+            "op": "=",
+            "value": "package"
+          }
+        ]
+      }
+    ]
+  }
+}

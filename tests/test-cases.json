@@ -4381,6 +4381,12 @@
         "request" : "errors/errors-unknown-system2-request.json",
         "response" : "errors/errors-unknown-system2-response.json"
       },{
+        "name" : "unknown-system-version",
+        "description" : "Value set includes an unknown system with no version; the coding has a version. The system is unknown, and there is no version mismatch to report, since the include has no version to differ from",
+        "operation" : "validate-code",
+        "request" : "errors/errors-unknown-system-version-request.json",
+        "response" : "errors/errors-unknown-system-version-response.json"
+      },{
         "name" : "broken-filter-validate",
         "description" : "Make sure that filters without value cause an error",
         "operation" : "validate-code",

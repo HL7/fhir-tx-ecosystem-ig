@@ -136,6 +136,42 @@ Notes:
   are acceptable
 
 
+#### Unknown Hosts
+
+Clients that find no server for a code system typically remember that, and don't ask again for a while. 
+But code systems that the ecosystem doesn't know about tend to come in groups - many code systems (and 
+versions of them) from the same publisher - and a client would otherwise have to ask about each of them. 
+So when a code system resolution finds nothing, the registry can also say that it knows of no code 
+system at all on the host of the URL:
+
+```json5
+{
+  "formatVersion" : version,
+  "registry-url" : url,
+  "unknown-host" : "dnvimatis.com" // no server in the ecosystem hosts any code system on this host
+}
+```
+
+Rules:
+
+* `unknown-host` only applies to code system resolution (`url`), not value set resolution (`valueSet`)
+* It is only returned when the `url` is an `http:` or `https:` URL, and the resolution has no 
+  `authoritative` or `candidates` entries
+* It is only returned when no server that the request would consider (the same `fhirVersion` and `usage`, 
+  taking excluded content into account) hosts a code system - in any version - whose URL has the same host, 
+  under either `http:` or `https:`. Whether the request was `authoritativeOnly` makes no difference: a host 
+  for which a server is only a candidate is not unknown
+* The value is the host of the `url`, in lower case, with the port if the URL has one. It is the 
+  host exactly: `dnvimatis.com` says nothing about `www.dnvimatis.com`, or `dnvimatis.com.au`
+* Returning `unknown-host` is optional for a registry; ignoring it is optional for a client
+
+A client that receives `unknown-host` may treat any other `http:` or `https:` code system URL on that host 
+(in the same FHIR version, and with the same `usage`) as resolving to nothing, without asking, for as long 
+as it would remember that the URL itself resolved to nothing - and no longer, since servers and their 
+content are added to the ecosystem over time. A client that already has a remembered answer for a 
+particular URL uses that answer rather than the host. 
+
+
 ### Server Choice
 
 Resolution answers for one code system (or value set) at a time, but a single terminology request 

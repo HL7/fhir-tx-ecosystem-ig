@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "icd11-foundation",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir-pd"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-foundation",
+  "name": "Icd11Foundation",
+  "title": "ICD-11 Foundation Entities",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "HL7 International / FHIR Product Director",
+  "description": "All the entities in the ICD-11 Foundation. The binding of the ICD-11 source property",
+  "compose": {
+    "include": [
+      {
+        "system": "http://id.who.int/icd/entity"
+      }
+    ]
+  }
+}

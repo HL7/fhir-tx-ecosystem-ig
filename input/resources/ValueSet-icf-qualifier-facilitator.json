@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "icf-qualifier-facilitator",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir-pd"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icf-qualifier-facilitator",
+  "name": "IcfQualifierFacilitator",
+  "title": "ICF Qualifier Scale: Facilitator",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "HL7 International / FHIR Product Director",
+  "description": "The ICF qualifier scale for extent of facilitator (q6): the values of the facilitator qualifier on environmental factor (e) codes. Used as the binding of the ICF qualifier properties in http://hl7.org/fhir/uv/tx-ecosystem/CodeSystem/external-concept-properties",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icf",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "q6"
+          }
+        ]
+      }
+    ]
+  }
+}
