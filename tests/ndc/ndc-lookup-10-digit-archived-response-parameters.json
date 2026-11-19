@@ -1,0 +1,308 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "46672-228-10"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "butalbital, acetaminophen and caffeine, 100 CAPSULE in 1 BOTTLE, PLASTIC (46672-228-10) (package)"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "butalbital, acetaminophen and caffeine, 100 CAPSULE in 1 BOTTLE, PLASTIC (46672-228-10) (package)"
+  },
+  {
+    "name" : "name",
+    "valueString" : "NDC Codes"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active"
+    },
+    {
+      "name" : "value",
+      "valueString" : "false"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active_ingredient"
+    },
+    {
+      "name" : "value",
+      "valueString" : "ACETAMINOPHEN 325 mg/1"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active_ingredient"
+    },
+    {
+      "name" : "value",
+      "valueString" : "BUTALBITAL 50 mg/1"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active_ingredient"
+    },
+    {
+      "name" : "value",
+      "valueString" : "CAFFEINE 40 mg/1"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "application_number"
+    },
+    {
+      "name" : "value",
+      "valueString" : "ANDA089007"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "category"
+    },
+    {
+      "name" : "value",
+      "valueString" : "ANDA"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code-type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "10-digit"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "company"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mikart, Inc."
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "description"
+    },
+    {
+      "name" : "value",
+      "valueString" : "butalbital, acetaminophen and caffeine, 100 CAPSULE in 1 BOTTLE, PLASTIC (46672-228-10) (package)"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "dose-form"
+    },
+    {
+      "name" : "value",
+      "valueString" : "CAPSULE"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "generic"
+    },
+    {
+      "name" : "value",
+      "valueString" : "butalbital, acetaminophen and caffeine"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Barbiturate [EPC]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Barbiturates [Chemical/Ingredient]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Central Nervous System Stimulant [EPC]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Central Nervous System Stimulation [PE]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Methylxanthine [EPC]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Xanthines [Chemical/Ingredient]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "product"
+    },
+    {
+      "name" : "value",
+      "valueString" : "46672-228"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "route"
+    },
+    {
+      "name" : "value",
+      "valueString" : "ORAL"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "spl_id"
+    },
+    {
+      "name" : "value",
+      "valueString" : "46dd17ce-40ca-4a96-bde7-d078e7adc490"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "synonym"
+    },
+    {
+      "name" : "value",
+      "valueString" : "46672022810"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "trade-name"
+    },
+    {
+      "name" : "value",
+      "valueString" : "butalbital, acetaminophen and caffeine"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "HUMAN PRESCRIPTION DRUG"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

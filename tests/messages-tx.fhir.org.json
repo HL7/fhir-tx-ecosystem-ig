@@ -2049,5 +2049,78 @@
   },
   "icd-11/cs-validate-required-axis-empty-response.json" : {
     "1" : "'684930313/other' has no value on its required hasCausingCondition axis"
+  },
+  "ndc/ndc-validate-10-digit-retired-response-parameters.json" : {
+    "1" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-11-digit-retired-response-parameters.json" : {
+    "1" : "The concept '49281012165' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-10-digit-archived-response-parameters.json" : {
+    "1" : "The concept '46672-228-10' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-11-digit-archived-response-parameters.json" : {
+    "1" : "The concept '46672022810' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-dup-10-digit-loser-response-parameters.json" : {
+    "1" : "The concept '49799-0001-1' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-dup-11-digit-recent-response-parameters.json" : {
+    "1" : "The concept '51634001400' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-10-digit-unknown-response-parameters.json" : {
+    "1" : "Unknown code '0006-9999-99' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '20261117'"
+  },
+  "ndc/ndc-validate-11-digit-unknown-response-parameters.json" : {
+    "1" : "Unknown code '00006999999' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '20261117'"
+  },
+  "ndc/ndc-validate-bad-format-response-parameters.json" : {
+    "1" : "Unknown code '0006-5084-1' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '20261117'"
+  },
+  "ndc/ndc-validate-filter-inactive-true-in-response-parameters.json" : {
+    "1" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-filter-inactive-true-in-11-response-parameters.json" : {
+    "1" : "The concept '49281012165' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-filter-inactive-true-out-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#0006-5084-01' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-inactive-true|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-inactive-false-out-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#49281-121-65' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-inactive-false|5.0.0'",
+    "2" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed",
+    "3" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed; The provided code 'http://hl7.org/fhir/sid/ndc#49281-121-65' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-inactive-false|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-kind-product-out-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#0006-5084-01' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-kind-product|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-kind-product-out-11-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#00006508401' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-kind-product|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-kind-package-out-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#0006-5084' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-kind-package|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-category-in-response-parameters.json" : {
+    "1" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-filter-category-in-11-response-parameters.json" : {
+    "1" : "The concept '49281012165' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-filter-category-out-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#0006-5084-01' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-category|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-category-in-list-bla-response-parameters.json" : {
+    "1" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed"
+  },
+  "ndc/ndc-validate-filter-category-in-list-out-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#10147-0921-3' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-category-in|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-combined-out-inactive-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#49281-121-65' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-combined|5.0.0'",
+    "2" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed",
+    "3" : "The concept '49281-121-65' has a status of inactive and its use should be reviewed; The provided code 'http://hl7.org/fhir/sid/ndc#49281-121-65' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-combined|5.0.0'"
+  },
+  "ndc/ndc-validate-filter-combined-out-product-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#0002-0213' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-combined|5.0.0'"
   }
 }

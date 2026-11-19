@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ndc-filter-inactive-false",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-inactive-false",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterInactiveFalse",
+  "title" : "NDC ValueSet Filter inactive = false",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "filter" : [{
+        "property" : "inactive",
+        "op" : "=",
+        "value" : "false"
+      }]
+    }]
+  }
+}

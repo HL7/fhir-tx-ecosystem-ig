@@ -1,0 +1,308 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "49799-001-01"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Oxygen, 170 L in 1 CYLINDER (49799-001-01) (package)"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Oxygen, 170 L in 1 CYLINDER (49799-001-01) (package)"
+  },
+  {
+    "name" : "name",
+    "valueString" : "NDC Codes"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active"
+    },
+    {
+      "name" : "value",
+      "valueString" : "true"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active_ingredient"
+    },
+    {
+      "name" : "value",
+      "valueString" : "OXYGEN 99 L/100L"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "category"
+    },
+    {
+      "name" : "value",
+      "valueString" : "UNAPPROVED MEDICAL GAS"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code-type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "10-digit"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "company"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Medical Equipment and Supplies of America, LLC"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "description"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Oxygen, 170 L in 1 CYLINDER (49799-001-01) (package)"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "dose-form"
+    },
+    {
+      "name" : "value",
+      "valueString" : "GAS"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "generic"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Oxygen"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "is_original_packager"
+    },
+    {
+      "name" : "value",
+      "valueString" : "true"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "listing_expiration_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20261231"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "manufacturer_name"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Medical Equipment and Supplies of America, LLC"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "marketing_start_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20091001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "ndc_exclude_flag"
+    },
+    {
+      "name" : "value",
+      "valueString" : "N"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "product"
+    },
+    {
+      "name" : "value",
+      "valueString" : "49799-001"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "route"
+    },
+    {
+      "name" : "value",
+      "valueString" : "RESPIRATORY (INHALATION)"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "rxcui"
+    },
+    {
+      "name" : "value",
+      "valueString" : "312172"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "sample"
+    },
+    {
+      "name" : "value",
+      "valueString" : "N"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "spl_id"
+    },
+    {
+      "name" : "value",
+      "valueString" : "4160eaba-8940-c3a1-e063-6294a90adec8"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "spl_set_id"
+    },
+    {
+      "name" : "value",
+      "valueString" : "ed9969f2-101f-4ff6-ab86-992253993ff1"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "synonym"
+    },
+    {
+      "name" : "value",
+      "valueString" : "49799000101"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "trade-name"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Oxygen"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "HUMAN PRESCRIPTION DRUG"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "unii"
+    },
+    {
+      "name" : "value",
+      "valueString" : "S88TT14065"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

@@ -13303,6 +13303,398 @@
         "response" : "icf/ec/ec-icf-expand-referenced-response.json"
       }
     ]
+  },{
+    "name" : "ndc",
+    "mode" : "tx.fhir.org",
+    "description" : "NDC tests. These depend on the NDC database tx.fhir.org has loaded (version 20261117, built from the FDA downloads back to 2009, including codes no longer listed), and every request names that version",
+    "setup" : [ "ndc/valueset-ndc-filter-inactive-true.json", "ndc/valueset-ndc-filter-inactive-false.json", "ndc/valueset-ndc-filter-kind-product.json", "ndc/valueset-ndc-filter-kind-package.json", "ndc/valueset-ndc-filter-category.json", "ndc/valueset-ndc-filter-category-in.json", "ndc/valueset-ndc-filter-combined.json" ],
+    "tests" : [
+      {
+        "name" : "ndc-lookup-10-digit-442",
+        "description" : "10 digit package code (4-4-2): an active package, with the properties from the FDA files and openFDA",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-10-digit-442-request-parameters.json",
+        "response" : "ndc/ndc-lookup-10-digit-442-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-11-digit-442",
+        "description" : "The same package by its 11 digit code",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-11-digit-442-request-parameters.json",
+        "response" : "ndc/ndc-lookup-11-digit-442-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-10-digit-541",
+        "description" : "10 digit package code (5-4-1): an active package",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-10-digit-541-request-parameters.json",
+        "response" : "ndc/ndc-lookup-10-digit-541-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-11-digit-541",
+        "description" : "The same package by its 11 digit code",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-11-digit-541-request-parameters.json",
+        "response" : "ndc/ndc-lookup-11-digit-541-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-10-digit-retired",
+        "description" : "10 digit package code (5-3-2) of a package that is no longer listed (Fluzone 2021-22, delisted 2023): still a valid code, inactive, with its properties from the excluded files",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-10-digit-retired-request-parameters.json",
+        "response" : "ndc/ndc-lookup-10-digit-retired-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-11-digit-retired",
+        "description" : "The same retired package by its 11 digit code",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-11-digit-retired-request-parameters.json",
+        "response" : "ndc/ndc-lookup-11-digit-retired-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-10-digit-archived",
+        "description" : "A package only found in an old copy of the FDA downloads (last listed in November 2016, and in no current FDA file, including the excluded files), by its 10 digit code (5-3-2)",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-10-digit-archived-request-parameters.json",
+        "response" : "ndc/ndc-lookup-10-digit-archived-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-11-digit-archived",
+        "description" : "The same archived package by its 11 digit code",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-11-digit-archived-request-parameters.json",
+        "response" : "ndc/ndc-lookup-11-digit-archived-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-dup-11-digit-active",
+        "description" : "An 11 digit code that two packages share: the labeler re-issued 49799-0001-1 (no longer listed) as 49799-001-01 (listed), and both are 49799000101. The 11 digit code is the active package",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-dup-11-digit-active-request-parameters.json",
+        "response" : "ndc/ndc-lookup-dup-11-digit-active-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-dup-10-digit-winner",
+        "description" : "The package the shared 11 digit code resolves to: it has the 11 digit code as its synonym",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-dup-10-digit-winner-request-parameters.json",
+        "response" : "ndc/ndc-lookup-dup-10-digit-winner-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-dup-10-digit-loser",
+        "description" : "The other package that shares the 11 digit code: still a valid (inactive) code, but it does not report the 11 digit code as a synonym, since that code means the other package",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-dup-10-digit-loser-request-parameters.json",
+        "response" : "ndc/ndc-lookup-dup-10-digit-loser-response-parameters.json"
+      },
+      {
+        "name" : "ndc-lookup-dup-11-digit-recent",
+        "description" : "An 11 digit code that two packages share, neither listed any more (51634-0014-0, last seen 2021, and 51634-014-00, last seen 2019): the 11 digit code is the one seen most recently",
+        "operation" : "lookup",
+        "request" : "ndc/ndc-lookup-dup-11-digit-recent-request-parameters.json",
+        "response" : "ndc/ndc-lookup-dup-11-digit-recent-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-10-digit-442",
+        "description" : "A listed package by its 10 digit code (4-4-2): valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-10-digit-442-request-parameters.json",
+        "response" : "ndc/ndc-validate-10-digit-442-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-11-digit-442",
+        "description" : "The same package by its 11 digit code: valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-11-digit-442-request-parameters.json",
+        "response" : "ndc/ndc-validate-11-digit-442-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-10-digit-541",
+        "description" : "A listed package by its 10 digit code (5-4-1): valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-10-digit-541-request-parameters.json",
+        "response" : "ndc/ndc-validate-10-digit-541-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-11-digit-541",
+        "description" : "The same package by its 11 digit code: valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-11-digit-541-request-parameters.json",
+        "response" : "ndc/ndc-validate-11-digit-541-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-10-digit-retired",
+        "description" : "A package that is no longer marketed (it is in the FDA excluded file) by its 10 digit code: valid, but inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-10-digit-retired-request-parameters.json",
+        "response" : "ndc/ndc-validate-10-digit-retired-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-11-digit-retired",
+        "description" : "The same retired package by its 11 digit code: valid, but inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-11-digit-retired-request-parameters.json",
+        "response" : "ndc/ndc-validate-11-digit-retired-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-10-digit-archived",
+        "description" : "A package only found in an old copy of the FDA downloads (last listed in November 2016) by its 10 digit code (5-3-2): valid, but inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-10-digit-archived-request-parameters.json",
+        "response" : "ndc/ndc-validate-10-digit-archived-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-11-digit-archived",
+        "description" : "The same archived package by its 11 digit code: valid, but inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-11-digit-archived-request-parameters.json",
+        "response" : "ndc/ndc-validate-11-digit-archived-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-dup-11-digit-active",
+        "description" : "An 11 digit code that two packages share (49799-0001-1, no longer listed, and 49799-001-01, listed): it is the active package, so valid and not inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-dup-11-digit-active-request-parameters.json",
+        "response" : "ndc/ndc-validate-dup-11-digit-active-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-dup-10-digit-winner",
+        "description" : "The package the shared 11 digit code resolves to: valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-dup-10-digit-winner-request-parameters.json",
+        "response" : "ndc/ndc-validate-dup-10-digit-winner-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-dup-10-digit-loser",
+        "description" : "The other package that shares the 11 digit code: still valid, but inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-dup-10-digit-loser-request-parameters.json",
+        "response" : "ndc/ndc-validate-dup-10-digit-loser-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-dup-11-digit-recent",
+        "description" : "An 11 digit code that two packages share, neither listed any more: it is the one seen most recently (51634-0014-0), so valid, but inactive",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-dup-11-digit-recent-request-parameters.json",
+        "response" : "ndc/ndc-validate-dup-11-digit-recent-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-10-digit-unknown",
+        "description" : "A 10 digit code in the right form (4-4-2) that is not an NDC code, and never was: not valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-10-digit-unknown-request-parameters.json",
+        "response" : "ndc/ndc-validate-10-digit-unknown-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-11-digit-unknown",
+        "description" : "The same unknown code by its 11 digit code: not valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-11-digit-unknown-request-parameters.json",
+        "response" : "ndc/ndc-validate-11-digit-unknown-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-bad-format",
+        "description" : "A code in no NDC form (4-4-1, a digit short of 0006-5084-01): not valid",
+        "operation" : "cs-validate-code",
+        "request" : "ndc/ndc-validate-bad-format-request-parameters.json",
+        "response" : "ndc/ndc-validate-bad-format-response-parameters.json"
+      },
+      {
+        "name" : "ndc-expand-filter-inactive-true",
+        "description" : "The first 50 codes of the NDC codes with inactive = true. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-inactive-true-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-inactive-true-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-expand-filter-inactive-false",
+        "description" : "The first 50 codes of the NDC codes with inactive = false. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-inactive-false-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-inactive-false-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-expand-filter-kind-product",
+        "description" : "The first 50 codes of the NDC codes with kind = product. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-kind-product-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-kind-product-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-expand-filter-kind-package",
+        "description" : "The first 50 codes of the NDC codes with kind = package. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-kind-package-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-kind-package-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-expand-filter-category",
+        "description" : "The first 50 codes of the NDC codes with category = BLA. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-category-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-category-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-expand-filter-category-in",
+        "description" : "The first 50 codes of the NDC codes with category in BLA,NDA. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-category-in-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-category-in-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-expand-filter-combined",
+        "description" : "The first 50 codes of the NDC codes with kind = package and category = BLA and inactive = false. tx.fhir.org's own page, in its order (products, then packages, in the order they were imported); the total depends on the NDC version",
+        "operation" : "expand",
+        "request" : "ndc/ndc-expand-filter-combined-request-parameters.json",
+        "response" : "ndc/ndc-expand-filter-combined-response-valueSet.json"
+      },
+      {
+        "name" : "ndc-validate-filter-inactive-true-in",
+        "description" : "inactive = true: 49281-121-65 (Fluzone, no longer listed, BLA) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-inactive-true-in-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-inactive-true-in-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-inactive-true-in-11",
+        "description" : "inactive = true: 49281012165 (Fluzone, no longer listed, BLA, by its 11 digit code) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-inactive-true-in-11-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-inactive-true-in-11-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-inactive-true-out",
+        "description" : "inactive = true: 0006-5084-01 (LIPFENDRA, listed, NDA) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-inactive-true-out-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-inactive-true-out-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-inactive-false-in",
+        "description" : "inactive = false: 0006-5084-01 (LIPFENDRA, listed, NDA) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-inactive-false-in-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-inactive-false-in-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-inactive-false-in-11",
+        "description" : "inactive = false: 00006508401 (LIPFENDRA, listed, NDA, by its 11 digit code) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-inactive-false-in-11-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-inactive-false-in-11-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-inactive-false-out",
+        "description" : "inactive = false: 49281-121-65 (Fluzone, no longer listed, BLA) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-inactive-false-out-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-inactive-false-out-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-kind-product-in",
+        "description" : "kind = product: 0006-5084 (the LIPFENDRA product) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-kind-product-in-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-kind-product-in-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-kind-product-out",
+        "description" : "kind = product: 0006-5084-01 (LIPFENDRA, listed, NDA), a package, is not in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-kind-product-out-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-kind-product-out-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-kind-product-out-11",
+        "description" : "kind = product: 00006508401 (LIPFENDRA, listed, NDA, by its 11 digit code), a package, is not in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-kind-product-out-11-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-kind-product-out-11-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-kind-package-in",
+        "description" : "kind = package: 0006-5084-01 (LIPFENDRA, listed, NDA) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-kind-package-in-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-kind-package-in-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-kind-package-in-11",
+        "description" : "kind = package: 00006508401 (LIPFENDRA, listed, NDA, by its 11 digit code) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-kind-package-in-11-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-kind-package-in-11-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-kind-package-out",
+        "description" : "kind = package: 0006-5084 (the LIPFENDRA product) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-kind-package-out-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-kind-package-out-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-category-in",
+        "description" : "category = BLA: 49281-121-65 (Fluzone, no longer listed, BLA) is in the value set (a package has its product's category)",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-category-in-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-category-in-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-category-in-11",
+        "description" : "category = BLA: 49281012165 (Fluzone, no longer listed, BLA, by its 11 digit code) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-category-in-11-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-category-in-11-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-category-out",
+        "description" : "category = BLA: 0006-5084-01 (LIPFENDRA, listed, NDA) is not in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-category-out-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-category-out-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-category-in-list-bla",
+        "description" : "category in BLA,NDA: 49281-121-65 (Fluzone, no longer listed, BLA) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-category-in-list-bla-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-category-in-list-bla-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-category-in-list-nda",
+        "description" : "category in BLA,NDA: 0006-5084-01 (LIPFENDRA, listed, NDA) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-category-in-list-nda-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-category-in-list-nda-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-category-in-list-out",
+        "description" : "category in BLA,NDA: 10147-0921-3 (Haloperidol, NDA AUTHORIZED GENERIC) is not in the value set - the category has to match exactly",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-category-in-list-out-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-category-in-list-out-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-combined-in",
+        "description" : "kind = package, category = BLA, inactive = false: 0002-0213-01 (Humulin R, listed, BLA) is in the value set",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-combined-in-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-combined-in-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-combined-out-inactive",
+        "description" : "kind = package, category = BLA, inactive = false: 49281-121-65 (Fluzone, no longer listed, BLA) is not in the value set, as it is not listed",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-combined-out-inactive-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-combined-out-inactive-response-parameters.json"
+      },
+      {
+        "name" : "ndc-validate-filter-combined-out-product",
+        "description" : "kind = package, category = BLA, inactive = false: 0002-0213 (the Humulin R product) is not in the value set, as it is not a package",
+        "operation" : "validate-code",
+        "request" : "ndc/ndc-validate-filter-combined-out-product-request-parameters.json",
+        "response" : "ndc/ndc-validate-filter-combined-out-product-response-parameters.json"
+      }
+    ]
   }],
   "todo" : "incomplete code systems, inactive/abstract, filter = notSelectable",
   "not-done" : [

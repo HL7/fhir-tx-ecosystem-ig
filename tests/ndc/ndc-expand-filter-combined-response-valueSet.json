@@ -1,0 +1,286 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-combined",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterCombined",
+  "title" : "NDC ValueSet Filter active BLA packages",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["total"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 6929,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0213-01",
+      "display" : "Humulin R, 1 VIAL, MULTI-DOSE in 1 CARTON (0002-0213-01) / 3 mL in 1 VIAL, MULTI-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1433-80",
+      "display" : "Trulicity, 4 SYRINGE in 1 CARTON (0002-1433-80) / .5 mL in 1 SYRINGE (0002-1433-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1434-80",
+      "display" : "Trulicity, 4 SYRINGE in 1 CARTON (0002-1434-80) / .5 mL in 1 SYRINGE (0002-1434-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1442-11",
+      "display" : "Omvoh, 1 SYRINGE in 1 CARTON (0002-1442-11) / 2 mL in 1 SYRINGE (0002-1442-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1445-09",
+      "display" : "TALTZ, 3 SYRINGE in 1 CARTON (0002-1445-09) / 1 mL in 1 SYRINGE (0002-1445-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1445-11",
+      "display" : "TALTZ, 1 SYRINGE in 1 CARTON (0002-1445-11) / 1 mL in 1 SYRINGE (0002-1445-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1445-27",
+      "display" : "TALTZ, 2 SYRINGE in 1 CARTON (0002-1445-27) / 1 mL in 1 SYRINGE (0002-1445-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1445-61",
+      "display" : "TALTZ, 1 SYRINGE in 1 CARTON (0002-1445-61) / 1 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2236-80",
+      "display" : "Trulicity, 4 SYRINGE in 1 CARTON (0002-2236-80) / .5 mL in 1 SYRINGE (0002-2236-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3116-11",
+      "display" : "Omvoh, 1 SYRINGE in 1 CARTON (0002-3116-11) / 2 mL in 1 SYRINGE (0002-3116-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3116-61",
+      "display" : "Omvoh, 1 SYRINGE in 1 CARTON (0002-3116-61) / 2 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3182-80",
+      "display" : "Trulicity, 4 SYRINGE in 1 CARTON (0002-3182-80) / .5 mL in 1 SYRINGE (0002-3182-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5137-11",
+      "display" : "ONSWIK KwikPen, 1 SYRINGE in 1 CARTON (0002-5137-11) / 3 mL in 1 SYRINGE (0002-5137-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5240-11",
+      "display" : "ONSWIK KwikPen, 1 SYRINGE in 1 CARTON (0002-5240-11) / 3 mL in 1 SYRINGE (0002-5240-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7510-01",
+      "display" : "Humalog, 1 VIAL in 1 CARTON (0002-7510-01) / 10 mL in 1 VIAL (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7511-01",
+      "display" : "Humalog Mix75/25, 1 VIAL, MULTI-DOSE in 1 CARTON (0002-7511-01) / 10 mL in 1 VIAL, MULTI-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7516-59",
+      "display" : "Humalog, 5 CARTRIDGE in 1 CARTON (0002-7516-59) / 3 mL in 1 CARTRIDGE (0002-7516-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7575-01",
+      "display" : "Omvoh, 1 VIAL, SINGLE-DOSE in 1 CARTON (0002-7575-01) / 15 mL in 1 VIAL, SINGLE-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7669-01",
+      "display" : "CYRAMZA, 1 VIAL, SINGLE-DOSE in 1 CARTON (0002-7669-01) / 10 mL in 1 VIAL, SINGLE-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7678-01",
+      "display" : "CYRAMZA, 1 VIAL, SINGLE-DOSE in 1 CARTON (0002-7678-01) / 50 mL in 1 VIAL, SINGLE-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7712-27",
+      "display" : "Humalog KwikPen, 2 SYRINGE in 1 CARTON (0002-7712-27) / 3 mL in 1 SYRINGE (0002-7712-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7714-59",
+      "display" : "Humalog Junior KwikPen, 5 SYRINGE in 1 CARTON (0002-7714-59) / 3 mL in 1 SYRINGE (0002-7714-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7715-59",
+      "display" : "BASAGLAR KwikPen, 5 SYRINGE in 1 CARTON (0002-7715-59) / 3 mL in 1 SYRINGE (0002-7715-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7717-11",
+      "display" : "Omvoh, 1 KIT in 1 CARTON (0002-7717-11) * 1 mL in 1 SYRINGE * 2 mL in 1 SYRINGE * 1 mL in 1 SYRINGE (0002-8011-01) * 2 mL in 1 SYRINGE (0002-3116-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7717-61",
+      "display" : "Omvoh, 1 KIT in 1 CARTON (0002-7717-61) * 1 mL in 1 SYRINGE * 2 mL in 1 SYRINGE * 1 mL in 1 SYRINGE (0002-8011-01) * 2 mL in 1 SYRINGE (0002-3116-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7722-11",
+      "display" : "Omvoh, 1 KIT in 1 CARTON (0002-7722-11) * 1 mL in 1 SYRINGE (0002-8870-01) * 2 mL in 1 SYRINGE (0002-1442-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7724-11",
+      "display" : "TALTZ, 1 SYRINGE in 1 CARTON (0002-7724-11) / 1 mL in 1 SYRINGE (0002-7724-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7724-99",
+      "display" : "TALTZ, 1 SYRINGE in 1 CARTON (0002-7724-99) / 1 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7726-05",
+      "display" : "LYUMJEV, 5 CARTRIDGE in 1 CARTON (0002-7726-05) / 3 mL in 1 CARTRIDGE (0002-7726-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7728-01",
+      "display" : "LYUMJEV, 1 VIAL, MULTI-DOSE in 1 CARTON (0002-7728-01) / 10 mL in 1 VIAL, MULTI-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7737-01",
+      "display" : "Insulin Lispro, 1 VIAL in 1 CARTON (0002-7737-01) / 10 mL in 1 VIAL (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7752-05",
+      "display" : "Insulin Lispro Junior KwikPen, 5 SYRINGE in 1 CARTON (0002-7752-05) / 3 mL in 1 SYRINGE (0002-7752-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7772-11",
+      "display" : "EBGLYSS, 1 SYRINGE in 1 CARTON (0002-7772-11) / 2 mL in 1 SYRINGE (0002-7772-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7772-62",
+      "display" : "EBGLYSS, 2 SYRINGE in 1 CARTON (0002-7772-62) / 2 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7797-11",
+      "display" : "EBGLYSS, 1 SYRINGE in 1 CARTON (0002-7797-11) / 2 mL in 1 SYRINGE (0002-7797-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7797-61",
+      "display" : "EBGLYSS, 1 SYRINGE in 1 CARTON (0002-7797-61) / 2 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8011-27",
+      "display" : "Omvoh, 2 SYRINGE in 1 CARTON (0002-8011-27) / 1 mL in 1 SYRINGE (0002-8011-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8147-01",
+      "display" : "HUMATROPE, 1 TRAY in 1 CARTON (0002-8147-01) / 1 KIT in 1 TRAY * 2.88 mL in 1 CARTRIDGE (0002-7554-01) * 2.88 mL in 1 SYRINGE (0002-7618-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8148-01",
+      "display" : "HUMATROPE, 1 TRAY in 1 CARTON (0002-8148-01) / 1 KIT in 1 TRAY * 2.88 mL in 1 CARTRIDGE (0002-7555-01) * 2.88 mL in 1 SYRINGE (0002-7619-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8149-01",
+      "display" : "HUMATROPE, 1 TRAY in 1 CARTON (0002-8149-01) / 1 KIT in 1 TRAY * 2.88 mL in 1 CARTRIDGE (0002-7556-01) * 2.88 mL in 1 SYRINGE (0002-7619-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8207-05",
+      "display" : "LYUMJEV KwikPen, 5 SYRINGE in 1 CARTON (0002-8207-05) / 3 mL in 1 SYRINGE (0002-8207-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8213-05",
+      "display" : "Humalog Tempo Pen, 5 SYRINGE in 1 CARTON (0002-8213-05) / 3 mL in 1 SYRINGE (0002-8213-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8215-01",
+      "display" : "Humulin R, 1 VIAL, MULTI-DOSE in 1 CARTON (0002-8215-01) / 10 mL in 1 VIAL, MULTI-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8222-59",
+      "display" : "Insulin Lispro KwikPen, 5 SYRINGE in 1 CARTON (0002-8222-59) / 3 mL in 1 SYRINGE (0002-8222-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8228-27",
+      "display" : "LYUMJEV KwikPen, 2 SYRINGE in 1 CARTON (0002-8228-27) / 3 mL in 1 SYRINGE (0002-8228-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8233-05",
+      "display" : "Insulin Lispro Protamine and Insulin Lispro Injectable Suspension Mix75/25 KwikPen, 5 SYRINGE in 1 CARTON (0002-8233-05) / 3 mL in 1 SYRINGE (0002-8233-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8235-05",
+      "display" : "LYUMJEV Tempo Pen, 5 SYRINGE in 1 CARTON (0002-8235-05) / 3 mL in 1 SYRINGE (0002-8235-01) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8235-99",
+      "display" : "LYUMJEV Tempo Pen, 1 SYRINGE in 1 CARTON (0002-8235-99) / 3 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8315-01",
+      "display" : "Humulin N, 1 VIAL, MULTI-DOSE in 1 CARTON (0002-8315-01) / 10 mL in 1 VIAL, MULTI-DOSE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8351-05",
+      "display" : "LYUMJEV Junior KwikPen, 5 SYRINGE in 1 CARTON (0002-8351-05) / 3 mL in 1 SYRINGE (0002-8351-01) (package)"
+    }]
+  }
+}

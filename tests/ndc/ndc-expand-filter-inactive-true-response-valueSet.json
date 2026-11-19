@@ -1,0 +1,539 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-inactive-true",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterInactiveTrue",
+  "title" : "NDC ValueSet Filter inactive = true",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["total"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0604",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Seromycin (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1210",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "TAUVID (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1407",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Quinidine Gluconate (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1485",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Capastat sulfate (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1975",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "AXIRON (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1977",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "AXIRON (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3004",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Prozac Weekly (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3230",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Symbyax (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3231",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Symbyax (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3232",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Symbyax (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3233",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Symbyax (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3234",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Symbyax (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3235",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Cymbalta (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3237",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Cymbalta (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3240",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Cymbalta (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3270",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Cymbalta (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4112",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Zyprexa (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4115",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Zyprexa (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4116",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Zyprexa (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4117",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Zyprexa (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4165",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Evista (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4415",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Zyprexa (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4420",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Zyprexa (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4453",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "ZYPREXA Zydis (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4454",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "ZYPREXA Zydis (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4455",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "ZYPREXA Zydis (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4456",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "ZYPREXA Zydis (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4465",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Cialis (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4736",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Reyvow (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4759",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Effient (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4760",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Effient (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4770",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Livalo (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4771",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Livalo (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-4772",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Livalo (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5121",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Effient (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5123",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Effient (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5800",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5801",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5802",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-6145",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Baqsimi (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7140",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "REOPRO (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7190",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "LARTRUVO (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7335",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "HUMATROPE (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7501",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Gemzar (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7502",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Gemzar (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7512",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Humalog Mix50/50 (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7533",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Humalog (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7559",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Xigris (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7561",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Xigris (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7589",
+      "inactive" : true,
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }],
+      "display" : "Bebtelovimab (product)"
+    }]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ndc-filter-category",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-category",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterCategory",
+  "title" : "NDC ValueSet Filter category = BLA",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "filter" : [{
+        "property" : "category",
+        "op" : "=",
+        "value" : "BLA"
+      }]
+    }]
+  }
+}

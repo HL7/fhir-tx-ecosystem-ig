@@ -1,0 +1,341 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "10147-0921-3"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Haloperidol Decanoate, 3 AMPULE in 1 BOX (10147-0921-3) / 1 mL in 1 AMPULE (package)"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Haloperidol Decanoate, 3 AMPULE in 1 BOX (10147-0921-3) / 1 mL in 1 AMPULE (package)"
+  },
+  {
+    "name" : "name",
+    "valueString" : "NDC Codes"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active"
+    },
+    {
+      "name" : "value",
+      "valueString" : "true"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active_ingredient"
+    },
+    {
+      "name" : "value",
+      "valueString" : "HALOPERIDOL DECANOATE 50 mg/mL"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "application_number"
+    },
+    {
+      "name" : "value",
+      "valueString" : "NDA018701"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "category"
+    },
+    {
+      "name" : "value",
+      "valueString" : "NDA AUTHORIZED GENERIC"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code-type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "10-digit"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "company"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Patriot Pharmaceuticals LLC"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "description"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Haloperidol Decanoate, 3 AMPULE in 1 BOX (10147-0921-3) / 1 mL in 1 AMPULE (package)"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "dose-form"
+    },
+    {
+      "name" : "value",
+      "valueString" : "INJECTION"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "generic"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Haloperidol Decanoate"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "is_original_packager"
+    },
+    {
+      "name" : "value",
+      "valueString" : "true"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "listing_expiration_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20261231"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "manufacturer_name"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Patriot Pharmaceuticals LLC"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "marketing_start_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20110617"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "ndc_exclude_flag"
+    },
+    {
+      "name" : "value",
+      "valueString" : "N"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "pharm_class"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Typical Antipsychotic [EPC]"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "product"
+    },
+    {
+      "name" : "value",
+      "valueString" : "10147-0921"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "route"
+    },
+    {
+      "name" : "value",
+      "valueString" : "INTRAMUSCULAR"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "rxcui"
+    },
+    {
+      "name" : "value",
+      "valueString" : "1719803"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "rxcui"
+    },
+    {
+      "name" : "value",
+      "valueString" : "1719862"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "sample"
+    },
+    {
+      "name" : "value",
+      "valueString" : "N"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "spl_id"
+    },
+    {
+      "name" : "value",
+      "valueString" : "2e815b50-b5db-72e4-e063-6294a90afd55"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "spl_set_id"
+    },
+    {
+      "name" : "value",
+      "valueString" : "9f0f42a8-5f7c-4be7-93ef-3ec225502cc6"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "synonym"
+    },
+    {
+      "name" : "value",
+      "valueString" : "10147092103"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "trade-name"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Haloperidol Decanoate"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "HUMAN PRESCRIPTION DRUG"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "unii"
+    },
+    {
+      "name" : "value",
+      "valueString" : "AC20PJ4101"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

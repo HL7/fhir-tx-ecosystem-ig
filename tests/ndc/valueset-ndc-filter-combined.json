@@ -1,0 +1,32 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ndc-filter-combined",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-combined",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterCombined",
+  "title" : "NDC ValueSet Filter active BLA packages",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "filter" : [{
+        "property" : "kind",
+        "op" : "=",
+        "value" : "package"
+      },
+      {
+        "property" : "category",
+        "op" : "=",
+        "value" : "BLA"
+      },
+      {
+        "property" : "inactive",
+        "op" : "=",
+        "value" : "false"
+      }]
+    }]
+  }
+}

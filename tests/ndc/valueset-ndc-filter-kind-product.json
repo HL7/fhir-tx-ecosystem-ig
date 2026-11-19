@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ndc-filter-kind-product",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-kind-product",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterKindProduct",
+  "title" : "NDC ValueSet Filter kind = product",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "filter" : [{
+        "property" : "kind",
+        "op" : "=",
+        "value" : "product"
+      }]
+    }]
+  }
+}

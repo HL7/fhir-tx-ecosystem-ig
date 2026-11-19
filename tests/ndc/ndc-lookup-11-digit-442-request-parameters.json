@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "00006508401"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

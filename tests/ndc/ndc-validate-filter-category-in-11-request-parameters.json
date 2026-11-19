@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-category"
+  },
+  {
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281012165"
+    }
+  },
+  {
+    "name" : "systemVersion",
+    "valueString" : "20261117"
+  }]
+}

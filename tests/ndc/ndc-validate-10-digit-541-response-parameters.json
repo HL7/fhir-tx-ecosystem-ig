@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "10147-0921-3"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Haloperidol Decanoate, 3 AMPULE in 1 BOX (10147-0921-3) / 1 mL in 1 AMPULE (package)"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-category"
+  },
+  {
+    "name" : "count",
+    "valueInteger" : 50
+  },
+  {
+    "name" : "offset",
+    "valueInteger" : 0
+  },
+  {
+    "name" : "system-version",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+  }]
+}

@@ -1,0 +1,285 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-category-in",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterCategoryIn",
+  "title" : "NDC ValueSet Filter category in BLA,NDA",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["total"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0152",
+      "display" : "Zepbound (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0213",
+      "display" : "Humulin R (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0243",
+      "display" : "Zepbound (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1152",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1200",
+      "display" : "Amyvid (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1214",
+      "display" : "Zepbound (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1220",
+      "display" : "TAUVID (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1243",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1340",
+      "display" : "Zepbound (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1423",
+      "display" : "Zepbound (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1433",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1434",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1442",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1445",
+      "display" : "TALTZ (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1457",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1460",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1471",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1484",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1495",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1506",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1717",
+      "display" : "Inluriyo (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2002",
+      "display" : "Zepbound (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2214",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2236",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2340",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2423",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2457",
+      "display" : "ZEPBOUND (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2460",
+      "display" : "ZEPBOUND (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2471",
+      "display" : "ZEPBOUND (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2484",
+      "display" : "ZEPBOUND (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2495",
+      "display" : "ZEPBOUND (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2506",
+      "display" : "ZEPBOUND (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2980",
+      "display" : "RETEVMO (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3002",
+      "display" : "Mounjaro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3116",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3182",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3227",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3228",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3229",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3238",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3239",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3250",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3251",
+      "display" : "Strattera (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3411",
+      "display" : "Mounjaro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3422",
+      "display" : "Mounjaro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3433",
+      "display" : "Mounjaro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3444",
+      "display" : "Mounjaro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3455",
+      "display" : "Mounjaro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3466",
+      "display" : "Mounjaro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3511",
+      "display" : "Zepbound KwikPen (product)"
+    }]
+  }
+}

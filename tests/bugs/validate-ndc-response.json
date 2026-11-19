@@ -9,37 +9,6 @@
     "valueString" : "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
   },
   {
-    "name" : "inactive",
-    "valueBoolean" : true
-  },
-  {
-    "name" : "issues",
-    "resource" : {
-      "resourceType" : "OperationOutcome",
-      "issue" : [{
-        "extension" : [{
-                "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "INACTIVE_CONCEPT_FOUND"
-        }],
-        "severity" : "warning",
-        "code" : "business-rule",
-        "details" : {
-          "coding" : [{
-            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "code-comment"
-          }],
-          "text" : "$external:1:0777-3105-02|inactive$"
-        },
-        "expression" : ["code"]
-      }]
-    }
-  },
-  {
-    "name" : "message",
-    "valueString" : "$external:1:0777-3105-02|inactive$"
-  },
-  {
     "name" : "result",
     "valueBoolean" : true
   },
@@ -49,7 +18,7 @@
   },
   {
     "name" : "version",
-      "valueString" : "2021-11-01",
+      "valueString" : "20261117",
       "$optional$" : "warning:version"
   }]
 }

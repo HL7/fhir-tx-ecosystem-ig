@@ -1,0 +1,220 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "49281012165"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) / .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) / .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)"
+  },
+  {
+    "name" : "name",
+    "valueString" : "NDC Codes"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "active"
+    },
+    {
+      "name" : "value",
+      "valueString" : "false"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "application_number"
+    },
+    {
+      "name" : "value",
+      "valueString" : "BLA103914"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "category"
+    },
+    {
+      "name" : "value",
+      "valueString" : "BLA"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code-type"
+    },
+    {
+      "name" : "value",
+      "valueString" : "11-digit"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "company"
+    },
+    {
+      "name" : "value",
+      "valueString" : "Sanofi Pasteur Inc."
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "description"
+    },
+    {
+      "name" : "value",
+      "valueString" : "FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) / .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "listing_expiration_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20231206"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "marketing_end_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20231206"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "marketing_start_date"
+    },
+    {
+      "name" : "value",
+      "valueString" : "20210702"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "ndc_exclude_flag"
+    },
+    {
+      "name" : "value",
+      "valueString" : "D"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "product"
+    },
+    {
+      "name" : "value",
+      "valueString" : "49281-121"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "sample"
+    },
+    {
+      "name" : "value",
+      "valueString" : "N"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "spl_id"
+    },
+    {
+      "name" : "value",
+      "valueString" : "503b5116-d789-4eeb-9596-d4caac531ea8"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "synonym"
+    },
+    {
+      "name" : "value",
+      "valueString" : "49281-121-65"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "trade-name"
+    },
+    {
+      "name" : "value",
+      "valueString" : "FLUZONE High-Dose Quadrivalent Northern Hemisphere"
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

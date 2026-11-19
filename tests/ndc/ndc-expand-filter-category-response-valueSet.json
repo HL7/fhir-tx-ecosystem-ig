@@ -1,0 +1,285 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-category",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterCategory",
+  "title" : "NDC ValueSet Filter category = BLA",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["total"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0213",
+      "display" : "Humulin R (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1433",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1434",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1442",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1445",
+      "display" : "TALTZ (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2236",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3116",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3182",
+      "display" : "Trulicity (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5137",
+      "display" : "ONSWIK KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-5240",
+      "display" : "ONSWIK KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7510",
+      "display" : "Humalog (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7511",
+      "display" : "Humalog Mix75/25 (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7516",
+      "display" : "Humalog (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7575",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7669",
+      "display" : "CYRAMZA (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7678",
+      "display" : "CYRAMZA (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7712",
+      "display" : "Humalog KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7714",
+      "display" : "Humalog Junior KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7715",
+      "display" : "BASAGLAR KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7717",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7722",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7724",
+      "display" : "TALTZ (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7726",
+      "display" : "LYUMJEV (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7728",
+      "display" : "LYUMJEV (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7737",
+      "display" : "Insulin Lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7752",
+      "display" : "Insulin Lispro Junior KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7772",
+      "display" : "EBGLYSS (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-7797",
+      "display" : "EBGLYSS (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8011",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8147",
+      "display" : "HUMATROPE (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8148",
+      "display" : "HUMATROPE (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8149",
+      "display" : "HUMATROPE (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8207",
+      "display" : "LYUMJEV KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8213",
+      "display" : "Humalog Tempo Pen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8215",
+      "display" : "Humulin R (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8222",
+      "display" : "Insulin Lispro KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8228",
+      "display" : "LYUMJEV KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8233",
+      "display" : "Insulin Lispro Protamine and Insulin Lispro Injectable Suspension Mix75/25 KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8235",
+      "display" : "LYUMJEV Tempo Pen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8315",
+      "display" : "Humulin N (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8351",
+      "display" : "LYUMJEV Junior KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8715",
+      "display" : "Humulin 70/30 (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8797",
+      "display" : "Humalog Mix75/25 KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8798",
+      "display" : "Humalog Mix50/50 KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8799",
+      "display" : "Humalog KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8803",
+      "display" : "Humulin 70/30 KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8805",
+      "display" : "Humulin N (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8824",
+      "display" : "Humulin R U-500 KwikPen (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8870",
+      "display" : "Omvoh (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-8900",
+      "display" : "TALTZ (product)"
+    }]
+  }
+}

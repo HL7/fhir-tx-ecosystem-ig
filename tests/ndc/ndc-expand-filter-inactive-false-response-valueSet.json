@@ -1,0 +1,285 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-inactive-false",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterInactiveFalse",
+  "title" : "NDC ValueSet Filter inactive = false",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["total"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0013",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0095",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0096",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0113",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0119",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0121",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0124",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0137",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0485",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0535",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0770",
+      "display" : "tirzepatide (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0800",
+      "display" : "diluent (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0872",
+      "display" : "Insulin lispro-aabc (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1076",
+      "display" : "Insulin glargine (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1099",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1401",
+      "display" : "Dulaglutide (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1402",
+      "display" : "Dulaglutide (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1436",
+      "display" : "galcanezumab-gnlm (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1437",
+      "display" : "Insulin glargine (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1455",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2045",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2129",
+      "display" : "ramucirumab (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2377",
+      "display" : "galcanezumab-gnlm (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2415",
+      "display" : "Insulin lispro-aabc (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2477",
+      "display" : "ramucirumab (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2479",
+      "display" : "Insulin lispro-aabc (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2499",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2509",
+      "display" : "Insulin lispro-aabc (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2510",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2572",
+      "display" : "Insulin lispro-aabc (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2576",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2578",
+      "display" : "Insulin lispro-aabc (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3115",
+      "display" : "galcanezumab-gnlm (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-6007",
+      "display" : "Insulin lispro (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-9307",
+      "display" : "Insulin human (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-9524",
+      "display" : "Insulin glargine (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0001",
+      "display" : "suvorexant (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0002",
+      "display" : "suvorexant (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0003",
+      "display" : "suvorexant (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0004",
+      "display" : "suvorexant (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0138",
+      "display" : "IMIPENEM ANHYDROUS, cilastatin, and RELEBACTAM ANHYDROUS (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0026",
+      "display" : "Methylprednisolone Acetate (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0027",
+      "display" : "Testosterone Cypionate (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0035",
+      "display" : "Novobiocin (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0038",
+      "display" : "Methylprednisolone (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0042",
+      "display" : "Alprostadil (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0043",
+      "display" : "Anidulafungin (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0052",
+      "display" : "progesterone (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0058",
+      "display" : "Dinoprostone (product)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0009-0062",
+      "display" : "Methylprednisolone Hemisuccinate (product)"
+    }]
+  }
+}

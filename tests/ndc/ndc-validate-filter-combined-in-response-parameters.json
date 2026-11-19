@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "0002-0213-01"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Humulin R, 1 VIAL, MULTI-DOSE in 1 CARTON (0002-0213-01) / 3 mL in 1 VIAL, MULTI-DOSE (package)"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/sid/ndc"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20261117"
+  }]
+}

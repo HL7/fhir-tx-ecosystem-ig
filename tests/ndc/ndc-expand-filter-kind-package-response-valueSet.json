@@ -1,0 +1,285 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/ndc-filter-kind-package",
+  "version" : "5.0.0",
+  "name" : "NDCValueSetFilterKindPackage",
+  "title" : "NDC ValueSet Filter kind = package",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "publisher" : "FHIR Project",
+  "expansion" : {
+    "$optional-properties$" : ["total"],
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 50
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "system-version",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/ndc|20261117"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0013-03",
+      "display" : "Insulin human, 3 mL in 1 VIAL, MULTI-DOSE (0002-0013-03) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0013-10",
+      "display" : "Insulin human, 10 mL in 1 VIAL, MULTI-DOSE (0002-0013-10) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0095-00",
+      "display" : "Insulin human, 3 mL in 1 SYRINGE (0002-0095-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0096-00",
+      "display" : "Insulin human, 20 mL in 1 VIAL, MULTI-DOSE (0002-0096-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0113-03",
+      "display" : "Insulin human, 3 mL in 1 VIAL, MULTI-DOSE (0002-0113-03) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0113-10",
+      "display" : "Insulin human, 10 mL in 1 VIAL, MULTI-DOSE (0002-0113-10) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0119-00",
+      "display" : "Insulin human, 3 mL in 1 SYRINGE (0002-0119-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0121-00",
+      "display" : "Insulin lispro, 3 mL in 1 SYRINGE (0002-0121-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0124-00",
+      "display" : "Insulin lispro, 10 mL in 1 VIAL, MULTI-DOSE (0002-0124-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0124-03",
+      "display" : "Insulin lispro, 3 mL in 1 VIAL, MULTI-DOSE (0002-0124-03) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0137-00",
+      "display" : "Insulin lispro, 3 mL in 1 SYRINGE (0002-0137-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0485-04",
+      "display" : "Insulin human, 4 BOTTLE in 1 CONTAINER (0002-0485-04) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0485-18",
+      "display" : "Insulin human, 1 BOTTLE in 1 CONTAINER (0002-0485-18) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0535-04",
+      "display" : "Insulin lispro, 4 BOTTLE in 1 CONTAINER (0002-0535-04) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0535-18",
+      "display" : "Insulin lispro, 1 BOTTLE in 1 CONTAINER (0002-0535-18) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0770-04",
+      "display" : "tirzepatide, 7 kg in 1 DRUM (0002-0770-04) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0800-00",
+      "display" : "diluent, 10 mL in 1 VIAL, MULTI-DOSE (0002-0800-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0872-00",
+      "display" : "Insulin lispro-aabc, 3 mL in 1 CARTRIDGE (0002-0872-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-0872-30",
+      "display" : "Insulin lispro-aabc, 30 TRAY in 1 BOX (0002-0872-30) / 330 CARTRIDGE in 1 TRAY / 3 mL in 1 CARTRIDGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1076-00",
+      "display" : "Insulin glargine, 3 mL in 1 SYRINGE (0002-1076-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1099-00",
+      "display" : "Insulin lispro, 3 mL in 1 SYRINGE (0002-1099-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1401-71",
+      "display" : "Dulaglutide, 9 TRAY in 1 BOX (0002-1401-71) / 160 SYRINGE in 1 TRAY / .5 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1402-71",
+      "display" : "Dulaglutide, 9 TRAY in 1 BOX (0002-1402-71) / 160 SYRINGE in 1 TRAY / .5 mL in 1 SYRINGE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1436-00",
+      "display" : "galcanezumab-gnlm, 1 mL in 1 SYRINGE (0002-1436-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1437-00",
+      "display" : "Insulin glargine, 3 mL in 1 SYRINGE (0002-1437-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-1455-00",
+      "display" : "Insulin lispro, 3 mL in 1 SYRINGE (0002-1455-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2045-00",
+      "display" : "Insulin human, 3 mL in 1 SYRINGE (0002-2045-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2129-00",
+      "display" : "ramucirumab, 10 mL in 1 VIAL, SINGLE-DOSE (0002-2129-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2377-00",
+      "display" : "galcanezumab-gnlm, 1 mL in 1 SYRINGE (0002-2377-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2415-00",
+      "display" : "Insulin lispro-aabc, 10 mL in 1 VIAL, MULTI-DOSE (0002-2415-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2477-00",
+      "display" : "ramucirumab, 50 mL in 1 VIAL, SINGLE-DOSE (0002-2477-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2479-00",
+      "display" : "Insulin lispro-aabc, 3 mL in 1 SYRINGE (0002-2479-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2499-00",
+      "display" : "Insulin lispro, 3 mL in 1 SYRINGE (0002-2499-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2509-00",
+      "display" : "Insulin lispro-aabc, 3 mL in 1 SYRINGE (0002-2509-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2510-03",
+      "display" : "Insulin human, 3 mL in 1 VIAL, MULTI-DOSE (0002-2510-03) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2510-10",
+      "display" : "Insulin human, 10 mL in 1 VIAL, MULTI-DOSE (0002-2510-10) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2572-00",
+      "display" : "Insulin lispro-aabc, 3 mL in 1 SYRINGE (0002-2572-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2576-00",
+      "display" : "Insulin lispro, 10 mL in 1 VIAL (0002-2576-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2576-99",
+      "display" : "Insulin lispro, 3 mL in 1 VIAL (0002-2576-99) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-2578-00",
+      "display" : "Insulin lispro-aabc, 3 mL in 1 SYRINGE (0002-2578-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-3115-00",
+      "display" : "galcanezumab-gnlm, 1 mL in 1 SYRINGE (0002-3115-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-6007-00",
+      "display" : "Insulin lispro, 3 mL in 1 SYRINGE (0002-6007-00) (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-9307-01",
+      "display" : "Insulin human, 1 BOTTLE in 1 CONTAINER (0002-9307-01) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-9307-04",
+      "display" : "Insulin human, 4 BOTTLE in 1 CONTAINER (0002-9307-04) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-9524-01",
+      "display" : "Insulin glargine, 1 BOTTLE in 1 CONTAINER (0002-9524-01) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0002-9524-04",
+      "display" : "Insulin glargine, 4 BOTTLE in 1 CONTAINER (0002-9524-04) / 2000 g in 1 BOTTLE (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0001-01",
+      "display" : "suvorexant, 1 BAG in 1 DRUM (0006-0001-01) / 480000 TABLET, FILM COATED in 1 BAG (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0002-01",
+      "display" : "suvorexant, 1 BAG in 1 DRUM (0006-0002-01) / 240000 TABLET, FILM COATED in 1 BAG (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0003-01",
+      "display" : "suvorexant, 1 BAG in 1 DRUM (0006-0003-01) / 160000 TABLET, FILM COATED in 1 BAG (package)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "0006-0004-01",
+      "display" : "suvorexant, 1 BAG in 1 DRUM (0006-0004-01) / 120000 TABLET, FILM COATED in 1 BAG (package)"
+    }]
+  }
+}
