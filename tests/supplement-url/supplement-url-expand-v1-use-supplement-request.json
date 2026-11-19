@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/supplement-url-v1"
+  },{
+    "name" : "useSupplement",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0"
+  },{
+    "name" : "displayLanguage",
+    "valueCode" : "da"
+  }]
+}

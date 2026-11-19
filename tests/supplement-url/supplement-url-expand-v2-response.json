@@ -1,0 +1,35 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNKNOWN_CODESYSTEM_VERSION_EXP"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0|1.0.0$"
+    }
+  },
+  {
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "CODESYSTEM_CS_SUPP_SAME_URL"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "version-error"
+      }],
+      "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0$"
+    }
+  }]
+}

@@ -1,0 +1,20 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-url-supplement",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-url",
+  "version" : "2.0.0",
+  "name" : "SupplementUrlSupplement",
+  "title" : "Supplement Url - a supplement with the url of the code system it supplements (invalid: a supplement needs a url of its own)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "content" : "supplement",
+  "supplements" : "http://hl7.org/fhir/test/CodeSystem/supplement-url",
+  "concept" : [{
+    "code" : "a",
+    "designation" : [{
+      "language" : "da",
+      "value" : "A (da)"
+    }]
+  }]
+}

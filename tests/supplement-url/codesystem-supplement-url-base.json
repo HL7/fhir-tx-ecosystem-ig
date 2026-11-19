@@ -1,0 +1,21 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "supplement-url-base",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/supplement-url",
+  "version" : "1.0.0",
+  "name" : "SupplementUrlBase",
+  "title" : "Supplement Url - the code system",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "a",
+    "display" : "A"
+  },
+  {
+    "code" : "b",
+    "display" : "B"
+  }]
+}
