@@ -1,0 +1,5328 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "external-concept-properties",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir-pd"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/tx-ecosystem/CodeSystem/external-concept-properties",
+  "name": "ExternalConceptProperties",
+  "title": "Concept Properties for External Code Systems",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "HL7 International / FHIR Product Director",
+  "description": "The properties (and filter properties) that terminology servers in the tx ecosystem use with code systems that are not defined as CodeSystem resources: LOINC, SNOMED CT, NDC, ICD-11, ICF and UCUM. Each concept describes one property: which code system(s) it is used with (system), the code used for it in $lookup, $expand and ValueSet filters (propertyCode), the uri to use for it in a CodeSystem.property definition (uri), whether it is a concept property, a filter property or both (usage), the data type of its values (dataType), and the filter operators it supports (operator). This is the counterpart, for these code systems, of http://hl7.org/fhir/concept-properties: the standard properties that code system defines (status, inactive, notSelectable, parent, child, definition, etc.) are used with these code systems too, and are not repeated here. The concepts are grouped by code system; codes are the property code prefixed by the group code, since the same property code is used by more than one code system.",
+  "caseSensitive": true,
+  "hierarchyMeaning": "grouped-by",
+  "content": "complete",
+  "property": [
+    {
+      "code": "system",
+      "description": "The canonical URL of a code system that the property is used with. Repeats when the property is used with more than one",
+      "type": "string"
+    },
+    {
+      "code": "propertyCode",
+      "description": "The code of the property, as used in $lookup and $expand output, in the property parameter, and in ValueSet.compose.include.filter.property",
+      "type": "string"
+    },
+    {
+      "code": "uri",
+      "description": "The uri to use for the property in a CodeSystem.property definition (e.g. in a supplement), where one is defined",
+      "type": "string"
+    },
+    {
+      "code": "usage",
+      "description": "property (the property is reported on concepts), filter (the code is a filter property only) or both",
+      "type": "string"
+    },
+    {
+      "code": "dataType",
+      "uri": "http://hl7.org/fhir/concept-properties#dataType",
+      "description": "The data type of the property's values (for usage = property or both)",
+      "type": "code"
+    },
+    {
+      "code": "operator",
+      "description": "A filter operator the property supports (http://hl7.org/fhir/filter-operator). Repeats",
+      "type": "string"
+    },
+    {
+      "code": "subpropertyOf",
+      "description": "For a subproperty, the property (a concept in this code system) that it is a subproperty of",
+      "type": "code"
+    },
+    {
+      "code": "comment",
+      "uri": "http://hl7.org/fhir/concept-properties#comment",
+      "description": "Notes on how the property is used",
+      "type": "string"
+    },
+    {
+      "code": "notSelectable",
+      "uri": "http://hl7.org/fhir/concept-properties#notSelectable",
+      "description": "The concept is a grouper for the properties of a code system, not a property",
+      "type": "boolean"
+    }
+  ],
+  "concept": [
+    {
+      "code": "loinc",
+      "display": "LOINC Properties",
+      "definition": "Properties and filters used with LOINC (http://loinc.org): LOINC table properties, the Part (axis) relationships of the multi-axial model, answer list relationships, and mappings to other code systems",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        },
+        {
+          "code": "system",
+          "valueString": "http://loinc.org"
+        }
+      ],
+      "concept": [
+        {
+          "code": "loinc-STATUS",
+          "display": "Status",
+          "definition": "The status of the LOINC term as LOINC publishes it: ACTIVE, TRIAL, DISCOURAGED or DEPRECATED",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "STATUS"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/STATUS"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "comment",
+              "valueString": "Not the same as the standard status property (http://hl7.org/fhir/concept-properties#status), which is also returned. The filter takes the LOINC status value"
+            }
+          ]
+        },
+        {
+          "code": "loinc-CLASSTYPE",
+          "display": "Class Type",
+          "definition": "The broad type of the term's class: 1 = Laboratory class, 2 = Clinical class, 3 = Claims attachments, 4 = Surveys",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "CLASSTYPE"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/CLASSTYPE"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Returned as the number (1-4), with a \"description\" part giving the name. Filters accept either the number or the name"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ORDER_OBS",
+          "display": "Order / Observation",
+          "definition": "Whether the term is meant to be used in an order, as an observation (result), or both: Order, Observation, Both or Subset",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ORDER_OBS"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/ORDER_OBS"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-EXAMPLE_UNITS",
+          "display": "Example Units",
+          "definition": "Example units of measure for the observation, as LOINC publishes them (not necessarily UCUM)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "EXAMPLE_UNITS"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/EXAMPLE_UNITS"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-EXAMPLE_UCUM_UNITS",
+          "display": "Example UCUM Units",
+          "definition": "Example units of measure for the observation, as UCUM expressions",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "EXAMPLE_UCUM_UNITS"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/EXAMPLE_UCUM_UNITS"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-UNITSREQUIRED",
+          "display": "Units Required",
+          "definition": "Y if units are required when the observation is reported, N otherwise",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "UNITSREQUIRED"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/UNITSREQUIRED"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-PanelType",
+          "display": "Panel Type",
+          "definition": "For a panel term, the kind of panel: Panel, Convenience group or Organizer",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "PanelType"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/PanelType"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-AskAtOrderEntry",
+          "display": "Ask at Order Entry",
+          "definition": "For an orderable term, the LOINC codes of the questions that should be asked when the order is placed (ask at order entry observations)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "AskAtOrderEntry"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/AskAtOrderEntry"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-Copyright",
+          "display": "External Copyright Notice",
+          "definition": "The copyright notice of the third party that owns the content of the term, for terms whose content is not owned by Regenstrief",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "Copyright"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/EXTERNAL_COPYRIGHT_NOTICE"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "LOINC publishes this column as EXTERNAL_COPYRIGHT_NOTICE; FHIRsmith names the property Copyright. See also the copyright filter"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ValidHL7AttachmentRequest",
+          "display": "Valid HL7 Attachment Request",
+          "definition": "Y if the term is valid as an HL7 attachment request (claims attachments), otherwise empty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ValidHL7AttachmentRequest"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/ValidHL7AttachmentRequest"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-RELATEDNAMES2",
+          "display": "Related Names",
+          "definition": "Related names: a list of synonyms, abbreviations and keywords for the term, in a given language. Searchable keywords, not names suitable for display",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "RELATEDNAMES2"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/RELATEDNAMES2"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "May repeat, once per language; carries a language part"
+            }
+          ]
+        },
+        {
+          "code": "loinc-CLASS",
+          "display": "Class",
+          "definition": "The class (category) of the term, e.g. CHEM, PULM, HEDIS",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "CLASS"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/CLASS"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Returned as the class name (a string), with the Part code of the class in a \"partCode\" part. Filters match the class name or Part code"
+            }
+          ]
+        },
+        {
+          "code": "loinc-COMPONENT",
+          "display": "Component",
+          "definition": "The first axis: the substance or entity being measured or observed (the analyte), as a LOINC Part code (LP...)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "COMPONENT"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/COMPONENT"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-PROPERTY",
+          "display": "Property",
+          "definition": "The second axis: the kind of property observed or measured (e.g. mass concentration, presence), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "PROPERTY"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/PROPERTY"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-TIME_ASPCT",
+          "display": "Time Aspect",
+          "definition": "The third axis: the interval of time over which the observation is made (e.g. Pt for a point in time, 24H), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "TIME_ASPCT"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/TIME_ASPCT"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-SYSTEM",
+          "display": "System",
+          "definition": "The fourth axis: the specimen, or thing upon which the observation is made (e.g. Ser/Plas, Urine, Patient), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "SYSTEM"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/SYSTEM"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-SCALE_TYP",
+          "display": "Scale Type",
+          "definition": "The fifth axis: the scale of the result - quantitative, ordinal, nominal, narrative or document (Qn, Ord, Nom, Nar, Doc...), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "SCALE_TYP"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/SCALE_TYP"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-METHOD_TYP",
+          "display": "Method Type",
+          "definition": "The sixth (optional) axis: the method used to make the observation, where it matters, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "METHOD_TYP"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/METHOD_TYP"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-adjustment",
+          "display": "Adjustment",
+          "definition": "The adjustment part of the component (LOINC detailed model): how the reported value of the analyte has been adjusted or corrected, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "adjustment"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/adjustment"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-challenge",
+          "display": "Challenge",
+          "definition": "The challenge part of the component (LOINC detailed model): the challenge or provocation administered before the measurement (e.g. a dose of glucose) and the timing relative to it, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "challenge"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/challenge"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-count",
+          "display": "Count",
+          "definition": "The count part of the component (LOINC detailed model), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "count"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/count"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-analyte-divisor",
+          "display": "Divisor",
+          "definition": "The divisor of the component (LOINC detailed model): the analyte in the denominator, for a component that is a ratio, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "analyte-divisor"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/analyte-divisor"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-analyte-gene",
+          "display": "Gene",
+          "definition": "The gene part of the component (LOINC detailed model): the gene the analyte is, or is associated with, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "analyte-gene"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/analyte-gene"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-analyte-suffix",
+          "display": "Suffix",
+          "definition": "The suffix part of the component (LOINC detailed model), which qualifies the analyte (e.g. Ab, Ag, DNA), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "analyte-suffix"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/analyte-suffix"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-super-system",
+          "display": "Super System",
+          "definition": "The super system part of the system axis (LOINC detailed model): whose specimen or which subject the observation is about, when it is not the patient (e.g. fetus, donor, blood product unit), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "super-system"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/super-system"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-time-modifier",
+          "display": "Time Modifier",
+          "definition": "The time modifier part of the time aspect (LOINC detailed model), qualifying the interval (e.g. mean, minimum, maximum), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "time-modifier"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/time-modifier"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-document-kind",
+          "display": "Document Kind",
+          "definition": "LOINC Document Ontology: the general structure of the document (e.g. Note, Report, Summary), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "document-kind"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/document-kind"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-document-role",
+          "display": "Document Role",
+          "definition": "LOINC Document Ontology: the role of the author of the document (e.g. Physician, Nursing), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "document-role"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/document-role"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-document-setting",
+          "display": "Document Setting",
+          "definition": "LOINC Document Ontology: the setting in which the service was provided (e.g. Hospital, Outpatient), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "document-setting"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/document-setting"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-document-subject-matter-domain",
+          "display": "Document Subject Matter Domain",
+          "definition": "LOINC Document Ontology: the subject matter domain of the document (e.g. Cardiology, Pathology), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "document-subject-matter-domain"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/document-subject-matter-domain"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-document-type-of-service",
+          "display": "Document Type of Service",
+          "definition": "LOINC Document Ontology: the kind of service or activity the document describes (e.g. Consultation, History and physical), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "document-type-of-service"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/document-type-of-service"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-anatomic-location-imaging-focus",
+          "display": "Rad Anatomic Location Imaging Focus",
+          "definition": "LOINC/RSNA Radiology Playbook: the specific anatomic structure that is the focus of the imaging study, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-anatomic-location-imaging-focus"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-anatomic-location-imaging-focus"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-anatomic-location-laterality",
+          "display": "Rad Anatomic Location Laterality",
+          "definition": "LOINC/RSNA Radiology Playbook: the laterality (left, right, bilateral) of the anatomy imaged, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-anatomic-location-laterality"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-anatomic-location-laterality"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-anatomic-location-laterality-presence",
+          "display": "Rad Anatomic Location Laterality Presence",
+          "definition": "LOINC/RSNA Radiology Playbook: whether laterality must be specified for the study, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-anatomic-location-laterality-presence"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-anatomic-location-laterality-presence"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-anatomic-location-region-imaged",
+          "display": "Rad Anatomic Location Region Imaged",
+          "definition": "LOINC/RSNA Radiology Playbook: the body region imaged (e.g. Chest, Abdomen), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-anatomic-location-region-imaged"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-anatomic-location-region-imaged"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-guidance-for-action",
+          "display": "Rad Guidance For Action",
+          "definition": "LOINC/RSNA Radiology Playbook: the procedure (e.g. biopsy, drainage) that the imaging is guiding, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-guidance-for-action"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-guidance-for-action"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-guidance-for-approach",
+          "display": "Rad Guidance For Approach",
+          "definition": "LOINC/RSNA Radiology Playbook: the approach (e.g. percutaneous) of the procedure the imaging is guiding, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-guidance-for-approach"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-guidance-for-approach"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-guidance-for-object",
+          "display": "Rad Guidance For Object",
+          "definition": "LOINC/RSNA Radiology Playbook: the object (e.g. a catheter or device) placed or manipulated in the guided procedure, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-guidance-for-object"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-guidance-for-object"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-guidance-for-presence",
+          "display": "Rad Guidance For Presence",
+          "definition": "LOINC/RSNA Radiology Playbook: whether the study is performed as guidance for a procedure, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-guidance-for-presence"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-guidance-for-presence"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-maneuver-maneuver-type",
+          "display": "Rad Maneuver Type",
+          "definition": "LOINC/RSNA Radiology Playbook: a maneuver performed during the study (e.g. Valsalva, weight bearing), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-maneuver-maneuver-type"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-maneuver-maneuver-type"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-modality-modality-type",
+          "display": "Rad Modality Type",
+          "definition": "LOINC/RSNA Radiology Playbook: the imaging modality (e.g. CT, MR, US, XR), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-modality-modality-type"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-modality-type"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "LOINC's part link file gives the property as http://loinc.org/property/rad-modality-type; FHIRsmith names it rad-modality-modality-type"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-modality-modality-subtype",
+          "display": "Rad Modality Subtype",
+          "definition": "LOINC/RSNA Radiology Playbook: a subtype of the modality (e.g. angiography, densitometry), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-modality-modality-subtype"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-modality-subtype"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "LOINC's part link file gives the property as http://loinc.org/property/rad-modality-subtype; FHIRsmith names it rad-modality-modality-subtype"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-pharmaceutical-route",
+          "display": "Rad Pharmaceutical Route",
+          "definition": "LOINC/RSNA Radiology Playbook: the route by which a pharmaceutical (e.g. contrast) is given, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-pharmaceutical-route"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-pharmaceutical-route"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-pharmaceutical-substance-given",
+          "display": "Rad Pharmaceutical Substance Given",
+          "definition": "LOINC/RSNA Radiology Playbook: whether or which pharmaceutical (e.g. contrast agent) is given, e.g. W contrast IV, as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-pharmaceutical-substance-given"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-pharmaceutical-substance-given"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-reason-for-exam",
+          "display": "Rad Reason For Exam",
+          "definition": "LOINC/RSNA Radiology Playbook: the reason for the exam, where it is part of the meaning of the term (e.g. screening), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-reason-for-exam"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-reason-for-exam"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-subject",
+          "display": "Rad Subject",
+          "definition": "LOINC/RSNA Radiology Playbook: the subject of the imaging, where it is not the patient (e.g. a specimen), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-subject"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-subject"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-timing",
+          "display": "Rad Timing",
+          "definition": "LOINC/RSNA Radiology Playbook: the timing of the images relative to an event (e.g. before and after contrast), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-timing"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-timing"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-view-aggregation",
+          "display": "Rad View Aggregation",
+          "definition": "LOINC/RSNA Radiology Playbook: how many views, or what kind of set of views, the study includes (e.g. 2 views, Single view), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-view-aggregation"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-view-aggregation"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rad-view-view-type",
+          "display": "Rad View Type",
+          "definition": "LOINC/RSNA Radiology Playbook: the view or projection (e.g. AP, lateral, oblique), as a LOINC Part code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rad-view-view-type"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/rad-view-view-type"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-AnswerList",
+          "display": "Answer List",
+          "definition": "For a LOINC term (question), the answer list (LL code) that holds its permitted answers. For an answer (LA code), the answer list(s) it is in",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "AnswerList"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/answer-list"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "LOINC's own CodeSystem calls this property answer-list; FHIRsmith names it AnswerList (answer-list is the name of a filter)"
+            }
+          ]
+        },
+        {
+          "code": "loinc-Answer",
+          "display": "Answer",
+          "definition": "For an answer list (LL code), an answer (LA code) in the list",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "Answer"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        },
+        {
+          "code": "loinc-answers-for",
+          "display": "Answers For",
+          "definition": "For an answer list (LL code), the LOINC term (question) that it is the answer list for",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "answers-for"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://loinc.org/property/answers-for"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            },
+            {
+              "code": "comment",
+              "valueString": "As a filter, answers-for = X selects the answers (LA codes) in answer list X, or, if X is a LOINC term, the answers in the answer list(s) for that term; in is the union"
+            }
+          ]
+        },
+        {
+          "code": "loinc-answer-list",
+          "display": "Answer List (filter)",
+          "definition": "Selects the answer lists (LL codes) that contain the given answer (LA code): the inverse of answers-for",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "answer-list"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "loinc-LIST",
+          "display": "LIST (filter)",
+          "definition": "Selects the answers in the given answer list (LL code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "LIST"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "comment",
+              "valueString": "Deprecated: an old tx.fhir.org name for answers-for = [answer list], supported for backwards compatibility only"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ancestor",
+          "display": "Ancestor (filter)",
+          "definition": "Selects the codes that the given LOINC Part subsumes in the LOINC multi-axial hierarchy (ancestors include parents transitively; a Part is not its own ancestor). LOINC's implicit value sets (http://loinc.org/vs/[partcode]) are defined with this filter. in is the union over a list of Parts",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ancestor"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            }
+          ]
+        },
+        {
+          "code": "loinc-copyright",
+          "display": "Copyright (filter)",
+          "definition": "Selects terms by who owns their content: LOINC (content owned by Regenstrief) or 3rdParty (terms with an external copyright notice)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "copyright"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "loinc-loinc",
+          "display": "Mapping to LOINC",
+          "definition": "A code in LOINC (http://loinc.org) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "loinc"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/loinc"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ncbi",
+          "display": "Mapping to PubChem",
+          "definition": "A code in PubChem (http://pubchem.ncbi.nlm.nih.gov) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ncbi"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/ncbi"
+            }
+          ]
+        },
+        {
+          "code": "loinc-sct",
+          "display": "Mapping to SNOMED CT",
+          "definition": "A code in SNOMED CT (http://snomed.info/sct) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "sct"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/sct"
+            }
+          ]
+        },
+        {
+          "code": "loinc-hcpcs",
+          "display": "Mapping to HCPCS",
+          "definition": "A code in HCPCS (http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "hcpcs"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/hcpcs"
+            }
+          ]
+        },
+        {
+          "code": "loinc-gene-names",
+          "display": "Mapping to HGNC gene names",
+          "definition": "A code in HGNC gene names (http://www.genenames.org) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "gene-names"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/gene-names"
+            }
+          ]
+        },
+        {
+          "code": "loinc-rxnorm",
+          "display": "Mapping to RxNorm",
+          "definition": "A code in RxNorm (http://www.nlm.nih.gov/research/umls/rxnorm) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rxnorm"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/rxnorm"
+            }
+          ]
+        },
+        {
+          "code": "loinc-chebi",
+          "display": "Mapping to ChEBI",
+          "definition": "A code in ChEBI (https://www.ebi.ac.uk/chebi) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "chebi"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/chebi"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ncbi-clinvar",
+          "display": "Mapping to ClinVar",
+          "definition": "A code in ClinVar (https://www.ncbi.nlm.nih.gov/clinvar) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ncbi-clinvar"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/ncbi-clinvar"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ncbi-gene",
+          "display": "Mapping to NCBI Gene",
+          "definition": "A code in NCBI Gene (https://www.ncbi.nlm.nih.gov/gene) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ncbi-gene"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/ncbi-gene"
+            }
+          ]
+        },
+        {
+          "code": "loinc-ncbi-taxo",
+          "display": "Mapping to NCBI Taxonomy",
+          "definition": "A code in NCBI Taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ncbi-taxo"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/ncbi-taxo"
+            }
+          ]
+        },
+        {
+          "code": "loinc-mdc",
+          "display": "Mapping to ISO/IEEE 11073 (MDC)",
+          "definition": "A code in ISO/IEEE 11073 (MDC) (urn:iso:std:iso:11073:10101) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "mdc"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/mdc"
+            }
+          ]
+        },
+        {
+          "code": "loinc-race",
+          "display": "Mapping to CDC Race & Ethnicity",
+          "definition": "A code in CDC Race & Ethnicity (urn:oid:2.16.840.1.113883.6.238) that this LOINC code (usually a Part) maps to, from the mappings LOINC publishes. Has an equivalence subproperty",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "race"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Repeats, one per mapped code. The same mappings are available through $translate with the implicit map http://loinc.org/cm/race"
+            }
+          ]
+        },
+        {
+          "code": "loinc-equivalence",
+          "display": "Mapping Equivalence",
+          "definition": "Subproperty of a mapping property: the equivalence of the mapping as LOINC states it, from the LOINC code to the external code (equivalent, equal, wider, narrower...)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://loinc.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "equivalence"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-loinc"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-ncbi"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-sct"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-hcpcs"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-gene-names"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-rxnorm"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-chebi"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-ncbi-clinvar"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-ncbi-gene"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-ncbi-taxo"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-mdc"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "loinc-race"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "sct",
+      "display": "SNOMED CT Properties",
+      "definition": "Properties and filters used with SNOMED CT (http://snomed.info/sct) beyond the standard FHIR concept properties. In addition, every concept model attribute is a property in its own right (see sct-attribute)",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        },
+        {
+          "code": "system",
+          "valueString": "http://snomed.info/sct"
+        }
+      ],
+      "concept": [
+        {
+          "code": "sct-effectiveTime",
+          "display": "Effective Time",
+          "definition": "The effectiveTime of the concept row in the RF2 concepts file (snapshot): the date the concept's current state was released",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "effectiveTime"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/field/Concept.effectiveTime"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "dateTime"
+            }
+          ]
+        },
+        {
+          "code": "sct-moduleId",
+          "display": "Module",
+          "definition": "The SNOMED CT concept id of the module that the concept belongs to",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "moduleId"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/field/Concept.moduleId"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "comment",
+              "valueString": "FHIRsmith still accepts \"module\" as a name for this property in $lookup"
+            }
+          ]
+        },
+        {
+          "code": "sct-sufficientlyDefined",
+          "display": "Sufficiently Defined",
+          "definition": "True if the description logic definition of the concept includes sufficient conditions (the concept is fully defined); false if it is primitive",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "sufficientlyDefined"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "boolean"
+            },
+            {
+              "code": "comment",
+              "valueString": "Returned for property=* or when asked for by name; not by default"
+            }
+          ]
+        },
+        {
+          "code": "sct-semanticTag",
+          "display": "Semantic Tag",
+          "definition": "The semantic tag of the concept: the text inside the last set of brackets of its active fully specified name (e.g. disorder, procedure)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "semanticTag"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Returned for property=* or when asked for by name; not by default"
+            }
+          ]
+        },
+        {
+          "code": "sct-normalForm",
+          "display": "Normal Form",
+          "definition": "The necessary normal form expression of the concept or expression, with terms",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "normalForm"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Computed; returned only when asked for by name. Normal form expressions are not suitable for subsumption testing"
+            }
+          ]
+        },
+        {
+          "code": "sct-normalFormTerse",
+          "display": "Normal Form (Terse)",
+          "definition": "The necessary normal form expression of the concept or expression, concept ids only",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "normalFormTerse"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Computed; returned only when asked for by name"
+            }
+          ]
+        },
+        {
+          "code": "sct-loinc",
+          "display": "LOINC Code",
+          "definition": "The LOINC code that the concept is equivalent to, from the LOINC Extension (alternate identifier scheme 30051010000102 |LOINC code identifier|)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "loinc"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "See also the mapped:30051010000102 filter"
+            }
+          ]
+        },
+        {
+          "code": "sct-{attribute}",
+          "display": "Concept Model Attribute",
+          "definition": "Any SNOMED CT concept model attribute (a concept subsumed by 410662002 |Concept model attribute|) is a property, with the attribute's concept id as its code and http://snomed.info/id/[sctid] as its uri. The value is the target of the concept's defining relationship of that type (a code), or, for a concrete domain attribute, its concrete value (integer, decimal, string or boolean)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "{attribute}"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/{attribute}"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "comment",
+              "valueString": "A pattern, not a property code: the entries that follow are the attributes the tx ecosystem tests use. Returned with a code-display part giving the attribute name. 116680003 |Is a| is not reported this way: it is parent/child. As a filter, [attribute] = [concept] selects the concepts with that attribute value"
+            }
+          ]
+        },
+        {
+          "code": "sct-116676008",
+          "display": "Associated morphology",
+          "definition": "The concept model attribute 116676008 |Associated morphology|: the target concept of the concept's defining relationship(s) of this type",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "116676008"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/116676008"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-363698007",
+          "display": "Finding site",
+          "definition": "The concept model attribute 363698007 |Finding site|: the target concept of the concept's defining relationship(s) of this type",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "363698007"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/363698007"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-246075003",
+          "display": "Causative agent",
+          "definition": "The concept model attribute 246075003 |Causative agent|: the target concept of the concept's defining relationship(s) of this type",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "246075003"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/246075003"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-260686004",
+          "display": "Method",
+          "definition": "The concept model attribute 260686004 |Method|: the target concept of the concept's defining relationship(s) of this type",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "260686004"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/260686004"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-405813007",
+          "display": "Procedure site - Direct",
+          "definition": "The concept model attribute 405813007 |Procedure site - Direct|: the target concept of the concept's defining relationship(s) of this type",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "405813007"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/405813007"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-272741003",
+          "display": "Laterality",
+          "definition": "The concept model attribute 272741003 |Laterality|: the target concept of the concept's defining relationship(s) of this type",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "272741003"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/272741003"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-1142135004",
+          "display": "Has presentation strength numerator value",
+          "definition": "The concrete domain attribute 1142135004 |Has presentation strength numerator value|: the concept's concrete value for this attribute",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "1142135004"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/1142135004"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "decimal"
+            }
+          ]
+        },
+        {
+          "code": "sct-1142136003",
+          "display": "Has presentation strength denominator value",
+          "definition": "The concrete domain attribute 1142136003 |Has presentation strength denominator value|: the concept's concrete value for this attribute",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "1142136003"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/1142136003"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "decimal"
+            }
+          ]
+        },
+        {
+          "code": "sct-1142139005",
+          "display": "Count of base of active ingredient",
+          "definition": "The concrete domain attribute 1142139005 |Count of base of active ingredient|: the concept's concrete value for this attribute",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "1142139005"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://snomed.info/id/1142139005"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "integer"
+            }
+          ]
+        },
+        {
+          "code": "sct-constraint",
+          "display": "Constraint (filter)",
+          "definition": "Selects the concepts that match the given ECL (Expression Constraint Language) expression",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "constraint"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-expressions",
+          "display": "Expressions (filter)",
+          "definition": "Whether post-coordinated expressions are part of the value set: true or false",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "expressions"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "sct-display",
+          "display": "Display (filter)",
+          "definition": "Selects concepts with an active description (fully specified name or synonym) whose whole term matches the regular expression, in the language of the request or the edition's default language",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "display"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "regex"
+            },
+            {
+              "code": "comment",
+              "valueString": "Used by published (VSAC) value sets"
+            }
+          ]
+        },
+        {
+          "code": "sct-mapped:{scheme}",
+          "display": "Mapped (filter)",
+          "definition": "Selects concepts that have (true) or don't have (false) an alternate identifier in the identifier scheme whose concept id follows the colon, e.g. mapped:30051010000102 for LOINC codes",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://snomed.info/sct"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "mapped:{scheme}"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ndc",
+      "display": "NDC Properties",
+      "definition": "Properties and filters used with the US National Drug Code (http://hl7.org/fhir/sid/ndc). Most of these are named as openFDA names them, and come from the FDA NDC directory files and the openFDA downloads",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        },
+        {
+          "code": "system",
+          "valueString": "http://hl7.org/fhir/sid/ndc"
+        }
+      ],
+      "concept": [
+        {
+          "code": "ndc-code-type",
+          "display": "Code Type",
+          "definition": "The form of the code: product (a labeler-product code), 10-digit (a hyphenated package code, as the FDA publishes it) or 11-digit (the unhyphenated 5-4-2 form of a package code, as used in billing)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "code-type"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "ndc-kind",
+          "display": "Kind (filter)",
+          "definition": "Selects products or packages: product | package",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "kind"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        },
+        {
+          "code": "ndc-description",
+          "display": "Description",
+          "definition": "The FDA description of the code: for a product, its name; for a package, the package description (e.g. \"30 TABLET in 1 BOTTLE\")",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "description"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-synonym",
+          "display": "Synonym",
+          "definition": "The same package code in the other form: the 11-digit form of a 10-digit code, or the 10-digit (hyphenated) form of an 11-digit code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "synonym"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Not the standard (deprecated) synonym property: this is an alternate form of an NDC package code (see http://hl7.org/fhir/concept-properties#alternateCode)"
+            }
+          ]
+        },
+        {
+          "code": "ndc-product",
+          "display": "Product",
+          "definition": "For a package, the NDC product code of the product it contains",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "product"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-type",
+          "display": "Product Type",
+          "definition": "The FDA product type (e.g. HUMAN PRESCRIPTION DRUG, HUMAN OTC DRUG, VACCINE)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "type"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-active",
+          "display": "Active",
+          "definition": "Whether the code is still listed in the FDA NDC directory: true or false",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "active"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "A string, not a boolean. The standard inactive property carries the same information, and is the one to filter on (inactive = true|false)"
+            }
+          ]
+        },
+        {
+          "code": "ndc-trade-name",
+          "display": "Trade Name",
+          "definition": "The proprietary (brand) name of the product",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "trade-name"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-generic",
+          "display": "Generic Name",
+          "definition": "The nonproprietary (generic) name(s) of the product",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "generic"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-dose-form",
+          "display": "Dose Form",
+          "definition": "The dosage form of the product (e.g. TABLET, FILM COATED)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "dose-form"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-route",
+          "display": "Route",
+          "definition": "The route(s) of administration of the product (e.g. ORAL)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "route"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-company",
+          "display": "Company",
+          "definition": "The name of the labeler: the company that lists the product",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "company"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "ndc-category",
+          "display": "Marketing Category",
+          "definition": "The FDA marketing category of the product (e.g. NDA, ANDA, BLA, OTC MONOGRAPH FINAL). A package has its product's category",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "category"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "operator",
+              "valueString": "in"
+            }
+          ]
+        },
+        {
+          "code": "ndc-spl_id",
+          "display": "SPL Id",
+          "definition": "The id of the Structured Product Labeling (SPL) document version the product listing comes from",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "spl_id"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-spl_set_id",
+          "display": "SPL Set Id",
+          "definition": "The set id of the Structured Product Labeling (SPL) document: stable across versions of the label (openFDA)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "spl_set_id"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-application_number",
+          "display": "Application Number",
+          "definition": "The FDA application number under which the product is marketed (e.g. NDA020702, ANDA076339), or the OTC monograph citation",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "application_number"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-active_ingredient",
+          "display": "Active Ingredient",
+          "definition": "An active ingredient of the product, with its strength and unit (e.g. ATORVASTATIN CALCIUM TRIHYDRATE 10 mg/1). Repeats, one per ingredient",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "active_ingredient"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-pharm_class",
+          "display": "Pharmacologic Class",
+          "definition": "A pharmacologic class of the product, with its kind in brackets: [EPC] established pharmacologic class, [MoA] mechanism of action, [PE] physiologic effect, [CS] chemical structure. Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "pharm_class"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-pharm_class_epc",
+          "display": "Pharmacologic Class (EPC)",
+          "definition": "An established pharmacologic class of the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "pharm_class_epc"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-pharm_class_moa",
+          "display": "Pharmacologic Class (MoA)",
+          "definition": "A mechanism of action class of the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "pharm_class_moa"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-pharm_class_pe",
+          "display": "Pharmacologic Class (PE)",
+          "definition": "A physiologic effect class of the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "pharm_class_pe"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-pharm_class_cs",
+          "display": "Pharmacologic Class (CS)",
+          "definition": "A chemical structure class of the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "pharm_class_cs"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-dea_schedule",
+          "display": "DEA Schedule",
+          "definition": "The DEA controlled substance schedule of the product (CI, CII, CIII, CIV, CV), if it has one",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "dea_schedule"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-listing_expiration_date",
+          "display": "Listing Expiration Date",
+          "definition": "The date the product listing is certified through: the listing expires if not certified again by then",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "listing_expiration_date"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-ndc_exclude_flag",
+          "display": "NDC Exclude Flag",
+          "definition": "The FDA's reason for excluding the product or package from the current NDC directory (E = expired listing, I = inactivated, U = unfinished, D = delisted...), if it is excluded",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "ndc_exclude_flag"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-marketing_start_date",
+          "display": "Marketing Start Date",
+          "definition": "For a package, the date it was first marketed",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "marketing_start_date"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-marketing_end_date",
+          "display": "Marketing End Date",
+          "definition": "For a package, the date it stops (or stopped) being marketed",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "marketing_end_date"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-sample",
+          "display": "Sample",
+          "definition": "For a package, Y if it is a sample package, N if not",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "sample"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-rxcui",
+          "display": "RxNorm Concept",
+          "definition": "An RxNorm concept id (RXCUI) for the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "rxcui"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-unii",
+          "display": "UNII",
+          "definition": "The FDA Unique Ingredient Identifier of an active ingredient of the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "unii"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-nui",
+          "display": "NUI",
+          "definition": "A NDF-RT/MED-RT unique identifier for a pharmacologic class of the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "nui"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-upc",
+          "display": "UPC",
+          "definition": "A Universal Product Code for the product (openFDA). Repeats",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "upc"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-manufacturer_name",
+          "display": "Manufacturer Name",
+          "definition": "The name of the manufacturer, as openFDA gives it",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "manufacturer_name"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        },
+        {
+          "code": "ndc-is_original_packager",
+          "display": "Is Original Packager",
+          "definition": "Whether the labeler is the original packager of the product, rather than a repackager or relabeler (openFDA): true or false",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/ndc"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "is_original_packager"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Named as openFDA names it"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "icd11",
+      "display": "ICD-11 Properties",
+      "definition": "Properties and filters used with ICD-11 - the MMS and ICF linearizations (http://id.who.int/icd/release/11/mms, .../icf) and the Foundation (http://id.who.int/icd/entity). Some apply only to the linearizations",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        },
+        {
+          "code": "system",
+          "valueString": "http://id.who.int/icd/release/11/mms"
+        },
+        {
+          "code": "system",
+          "valueString": "http://id.who.int/icd/release/11/icf"
+        },
+        {
+          "code": "system",
+          "valueString": "http://id.who.int/icd/entity"
+        }
+      ],
+      "concept": [
+        {
+          "code": "icd11-code",
+          "display": "Entity Id",
+          "definition": "The code as an entity: in the linearizations, the WHO entity id (the entity URI is the system url + '/' + the id); in the Foundation, the stable, unversioned WHO entity URI",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/entity"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "code"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/entityId"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            }
+          ]
+        },
+        {
+          "code": "icd11-classificationCode",
+          "display": "Classification Code",
+          "definition": "The short classification code (e.g. 1A00), where the entity has one. For a postcoordinated expression, the expression in short code form",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/entity"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "classificationCode"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/code"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            }
+          ]
+        },
+        {
+          "code": "icd11-classKind",
+          "display": "Class Kind",
+          "definition": "The kind of entity: chapter | block | window | category",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/entity"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "classKind"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/classKind"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            }
+          ]
+        },
+        {
+          "code": "icd11-browserUrl",
+          "display": "Browser URL",
+          "definition": "The address of the entity's page in the WHO ICD-11 browser",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/entity"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "browserUrl"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/browserUrl"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Returned only when asked for by name"
+            }
+          ]
+        },
+        {
+          "code": "icd11-source",
+          "display": "Source Entity",
+          "definition": "The Foundation entity this linearization entry came from, as a Coding in the Foundation (http://id.who.int/icd/entity)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "source"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/source"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Asked for as source.details, it also carries the Foundation entity's definition and parents as subproperties, and its designations"
+            }
+          ]
+        },
+        {
+          "code": "icd11-blockId",
+          "display": "Block Id",
+          "definition": "For a block, its block id",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "blockId"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/blockId"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "icd11-codeRange",
+          "display": "Code Range",
+          "definition": "For a chapter or block, the range of classification codes it covers",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "codeRange"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/codeRange"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "icd11-stem",
+          "display": "Stem",
+          "definition": "For a postcoordinated expression, its root (stem) code",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "stem"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/stem"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "comment",
+              "valueString": "Only ever returned for a postcoordinated expression"
+            }
+          ]
+        },
+        {
+          "code": "icd11-postcoordination",
+          "display": "Postcoordination",
+          "definition": "A postcoordination axis of the code, with subproperties axis, required, allowMultipleValues and valueSet, and, for an expression, the value(s) on the axis. Repeats, once per axis",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "postcoordination"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/postcoordination"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "comment",
+              "valueString": "Has no value of its own: the subproperties carry the content. Without post-coordination-metadata=true only the axes that carry a value are described"
+            }
+          ]
+        },
+        {
+          "code": "icd11-axis",
+          "display": "Axis",
+          "definition": "Subproperty of postcoordination: the axis, as a code in the ICD-11 schema vocabulary (http://id.who.int/icd/schema)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "axis"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/axis"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "icd11-postcoordination"
+            }
+          ]
+        },
+        {
+          "code": "icd11-required",
+          "display": "Required",
+          "definition": "Subproperty of postcoordination: whether the axis must be given a value",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "required"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/requiredPostcoordination"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "boolean"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "icd11-postcoordination"
+            }
+          ]
+        },
+        {
+          "code": "icd11-allowMultipleValues",
+          "display": "Allow Multiple Values",
+          "definition": "Subproperty of postcoordination: whether the axis may have more than one value - AllowAlways | NotAllowed | AllowedExceptFromSameBlock",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "allowMultipleValues"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/allowMultipleValues"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "icd11-postcoordination"
+            }
+          ]
+        },
+        {
+          "code": "icd11-valueSet",
+          "display": "Value Set",
+          "definition": "Subproperty of postcoordination: the canonical URL of the ValueSet of the codes permitted on the axis",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "valueSet"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/valueSet"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "icd11-postcoordination"
+            }
+          ]
+        },
+        {
+          "code": "icd11-value",
+          "display": "Value",
+          "definition": "Subproperty of postcoordination: a code on the axis. Repeats. A value that is itself a cluster member carries its own postcoordination entries",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/mms"
+            },
+            {
+              "code": "system",
+              "valueString": "http://id.who.int/icd/release/11/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "value"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://id.who.int/icd/schema/value"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "Coding"
+            },
+            {
+              "code": "subpropertyOf",
+              "valueCode": "icd11-postcoordination"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "icf",
+      "display": "ICF Properties",
+      "definition": "Properties and filters used with the classic ICF code system (http://hl7.org/fhir/sid/icf), including the qualifier properties that describe the parts of a qualified ICF code",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        },
+        {
+          "code": "system",
+          "valueString": "http://hl7.org/fhir/sid/icf"
+        }
+      ],
+      "concept": [
+        {
+          "code": "icf-kind",
+          "display": "Kind",
+          "definition": "Whether the concept is a primary ICF category (primary), or a qualifier value - and if so, which qualifier scale (extent, nature, localization, problem, barrier, facilitator)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "kind"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#kind"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            }
+          ]
+        },
+        {
+          "code": "icf-inclusion",
+          "display": "Inclusion",
+          "definition": "Inclusion criteria for the category: what the category includes",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "inclusion"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#inclusion"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "icf-exclusion",
+          "display": "Exclusion",
+          "definition": "Exclusion criteria for the category: what the category excludes, and where it is classified instead",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "exclusion"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#exclusion"
+            },
+            {
+              "code": "usage",
+              "valueString": "property"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            }
+          ]
+        },
+        {
+          "code": "icf-extent",
+          "display": "Extent",
+          "definition": "Extent of impairment: the first qualifier on a body function (b) or body structure (s) code (a q1 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "extent"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#extent"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-nature",
+          "display": "Nature",
+          "definition": "Nature of the change in the respective body structure: the second qualifier on a body structure (s) code (a q2 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "nature"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#nature"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-localization",
+          "display": "Localization",
+          "definition": "Localization: the third qualifier on a body structure (s) code (a q3 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "localization"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#localization"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-performance",
+          "display": "Performance",
+          "definition": "Performance: the first qualifier on an activities and participation (d) code - what the person does in their current environment (a q4 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "performance"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#performance"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-capacity",
+          "display": "Capacity",
+          "definition": "Capacity (without assistance): the second qualifier on an activities and participation (d) code (a q4 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "capacity"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#capacity"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-capacity-with-assistance",
+          "display": "Capacity With Assistance",
+          "definition": "Capacity with assistance: the optional third qualifier on an activities and participation (d) code (a q4 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "capacity-with-assistance"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#capacity-with-assistance"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-performance-without-assistance",
+          "display": "Performance Without Assistance",
+          "definition": "Performance without assistance: the optional fourth qualifier on an activities and participation (d) code (a q4 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "performance-without-assistance"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#performance-without-assistance"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-barrier",
+          "display": "Barrier",
+          "definition": "Barrier: the qualifier on an environmental factor (e) code written with '.' (a q5 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "barrier"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#barrier"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-facilitator",
+          "display": "Facilitator",
+          "definition": "Facilitator: the qualifier on an environmental factor (e) code written with '+' (a q6 code)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "facilitator"
+            },
+            {
+              "code": "uri",
+              "valueString": "http://hl7.org/fhir/sid/icf#facilitator"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "code"
+            },
+            {
+              "code": "operator",
+              "valueString": "exists"
+            },
+            {
+              "code": "comment",
+              "valueString": "Reported for a qualified code. As a filter, exists true requires the qualifier and exists false forbids it; 8 (not specified) counts as absent"
+            }
+          ]
+        },
+        {
+          "code": "icf-qualified",
+          "display": "Qualified (filter)",
+          "definition": "Selects qualified codes only (true), or excludes all qualified codes (false)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://hl7.org/fhir/sid/icf"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "qualified"
+            },
+            {
+              "code": "usage",
+              "valueString": "filter"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ucum",
+      "display": "UCUM Properties",
+      "definition": "Properties and filters used with UCUM (http://unitsofmeasure.org)",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        },
+        {
+          "code": "system",
+          "valueString": "http://unitsofmeasure.org"
+        }
+      ],
+      "concept": [
+        {
+          "code": "ucum-canonical",
+          "display": "Canonical Units",
+          "definition": "The canonical form of the unit: the unit reduced to UCUM base units (e.g. g for mg, or g/m3 for mg/dL)",
+          "property": [
+            {
+              "code": "system",
+              "valueString": "http://unitsofmeasure.org"
+            },
+            {
+              "code": "propertyCode",
+              "valueString": "canonical"
+            },
+            {
+              "code": "usage",
+              "valueString": "both"
+            },
+            {
+              "code": "dataType",
+              "valueCode": "string"
+            },
+            {
+              "code": "operator",
+              "valueString": "="
+            },
+            {
+              "code": "comment",
+              "valueString": "Returned only when asked for (by name, or property=*). As a filter, canonical = X selects units whose canonical form is X"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "count": 158
+}
