@@ -1,0 +1,54 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "description", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "contained" : [{
+    "resourceType" : "OperationOutcome",
+    "id" : "oo1",
+    "issue" : [{
+      "extension" : [{
+        "$optional$" : "!tx.fhir.org",
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+        "valueString" : "CODESYSTEM_CS_SUPP_SAME_URL"
+      }],
+      "severity" : "warning",
+      "code" : "invalid",
+      "details" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+          "code" : "version-error"
+        }],
+        "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0$"
+      }
+    }]
+  }],
+  "url" : "http://hl7.org/fhir/test/ValueSet/supplement-url-v1",
+  "version" : "5.0.0",
+  "name" : "SupplementUrlV1",
+  "title" : "Supplement Url - code a of version 1.0.0 (the code system's)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/expansion-issue",
+      "valueReference" : {
+        "reference" : "#oo1"
+      }
+    }],
+    "total" : 1,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement-url|1.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/supplement-url",
+      "code" : "a",
+      "display" : "A"
+    }]
+  }
+}

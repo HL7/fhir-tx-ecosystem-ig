@@ -2126,5 +2126,21 @@
   },
   "ndc/ndc-validate-filter-combined-out-product-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/sid/ndc#0002-0213' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ndc-filter-combined|5.0.0'"
+  },
+  "supplement-url/supplement-url-expand-v2-response.json" : {
+    "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/supplement-url' version '2.0.0' could not be found, so the value set cannot be expanded. Valid versions: 1.0.0",
+    "2" : "The supplement 'http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0' has the url of the code system it supplements, so it claims to be a version of that code system. A supplement needs a canonical url of its own"
+  },
+  "supplement-url/supplement-url-validate-v2-response.json" : {
+    "1" : "CodeSystem http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0 is a supplement, so can't be used as a value in Coding.system",
+    "2" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/supplement-url' version '2.0.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0",
+    "3" : "The supplement 'http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0' has the url of the code system it supplements, so it claims to be a version of that code system. A supplement needs a canonical url of its own",
+    "4" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/supplement-url' version '2.0.0' could not be found, so the code cannot be validated. Valid versions: 1.0.0; CodeSystem http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0 is a supplement, so can't be used as a value in Coding.system"
+  },
+  "supplement-url/supplement-url-expand-v1-response.json" : {
+    "1" : "The supplement 'http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0' has the url of the code system it supplements, so it claims to be a version of that code system. A supplement needs a canonical url of its own"
+  },
+  "supplement-url/supplement-url-expand-v1-use-supplement-response.json" : {
+    "1" : "The supplement 'http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0' has the url of the code system it supplements, so it claims to be a version of that code system. A supplement needs a canonical url of its own"
   }
 }

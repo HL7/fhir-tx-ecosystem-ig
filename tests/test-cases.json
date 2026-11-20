@@ -5798,6 +5798,47 @@
       }
     ]
   },{
+    "name" : "supplement-url",
+    "mode" : "general",
+    "description" : "A supplement with the same url as the code system it supplements, and a version of its own. This is not valid - a supplement needs a canonical url of its own, and with the code system's url, url|version claims to be a version of the code system - but it is found in published packages, so servers process the request as usual, and warn about the supplement whenever they look up the code system it has the url of. The supplement's version is not a version of the code system: a value set that asks for it can't be expanded or validated against, and the valid versions named are only those of the code system",
+    "setup" : [
+      "supplement-url/codesystem-supplement-url-base.json",
+      "supplement-url/codesystem-supplement-url-supplement.json",
+      "supplement-url/valueset-supplement-url-v1.json",
+      "supplement-url/valueset-supplement-url-v2.json"
+    ],
+    "tests" : [
+      {
+        "name" : "supplement-url-expand-v2",
+        "description" : "The value set asks for version 2.0.0 of the code system, which is the supplement's version: there is no such version of the code system, so it can't be expanded. The message names only 1.0.0 as a valid version, and the supplement is warned about",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "supplement-url/supplement-url-expand-v2-request.json",
+        "response" : "supplement-url/supplement-url-expand-v2-response.json"
+      },
+      {
+        "name" : "supplement-url-validate-v2",
+        "description" : "The same value set, and a coding with version 2.0.0: the code can't be validated, the message names only 1.0.0 as a valid version, and the supplement is warned about",
+        "operation" : "validate-code",
+        "request" : "supplement-url/supplement-url-validate-v2-request.json",
+        "response" : "supplement-url/supplement-url-validate-v2-response.json"
+      },
+      {
+        "name" : "supplement-url-expand-v1",
+        "description" : "A value set that asks for version 1.0.0, the code system's own version, expands as usual, with the warning about the supplement",
+        "operation" : "expand",
+        "request" : "supplement-url/supplement-url-expand-v1-request.json",
+        "response" : "supplement-url/supplement-url-expand-v1-response.json"
+      },
+      {
+        "name" : "supplement-url-expand-v1-use-supplement",
+        "description" : "The supplement is still used when it is asked for (useSupplement, with its url|version): its Danish display is in the expansion, and it is warned about",
+        "operation" : "expand",
+        "request" : "supplement-url/supplement-url-expand-v1-use-supplement-request.json",
+        "response" : "supplement-url/supplement-url-expand-v1-use-supplement-response.json"
+      }
+    ]
+  },{
     "name" : "tx.fhir.org",
     "mode" : "tx.fhir.org",
     "description" : "These are tx.fhir.org specific tests. There's no expectation that other servers will pass these tests, and they are not executed by default. (other servers can, but they depend on other set up not controlled by the tests",

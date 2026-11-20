@@ -1,0 +1,20 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "supplement-url-v1",
+  "url" : "http://hl7.org/fhir/test/ValueSet/supplement-url-v1",
+  "version" : "5.0.0",
+  "name" : "SupplementUrlV1",
+  "title" : "Supplement Url - code a of version 1.0.0 (the code system's)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-19",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/supplement-url",
+      "version" : "1.0.0",
+      "concept" : [{
+        "code" : "a"
+      }]
+    }]
+  }
+}
