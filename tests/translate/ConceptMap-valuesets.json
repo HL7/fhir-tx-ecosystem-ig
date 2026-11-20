@@ -1,0 +1,62 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "valuesets",
+  "url": "http://hl7.org/fhir/test/ConceptMap/valuesets",
+  "version": "0.1.0",
+  "name": "ValueSetsConceptMap",
+  "title": "A ConceptMap that uses value sets in place of codes",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "FHIR Project",
+  "description": "s1 maps to every code in vs-t12 (target.valueSet); every code in vs-s34 maps to t3 (element.valueSet); s5 maps to t5; s6 is not related to t6; anything else maps to every code in vs-t46 (unmapped.valueSet)",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/test/CodeSystem/vs-source",
+      "target": "http://hl7.org/fhir/test/CodeSystem/vs-target",
+      "element": [
+        {
+          "code": "s1",
+          "target": [
+            {
+              "valueSet": "http://hl7.org/fhir/test/ValueSet/vs-t12",
+              "relationship": "equivalent"
+            }
+          ]
+        },
+        {
+          "valueSet": "http://hl7.org/fhir/test/ValueSet/vs-s34",
+          "target": [
+            {
+              "code": "t3",
+              "relationship": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "s5",
+          "target": [
+            {
+              "code": "t5",
+              "relationship": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "s6",
+          "target": [
+            {
+              "code": "t6",
+              "relationship": "not-related-to"
+            }
+          ]
+        }
+      ],
+      "unmapped": {
+        "mode": "fixed",
+        "valueSet": "http://hl7.org/fhir/test/ValueSet/vs-t46",
+        "relationship": "related-to"
+      }
+    }
+  ]
+}

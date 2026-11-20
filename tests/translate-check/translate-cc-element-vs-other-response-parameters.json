@@ -1,0 +1,58 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "s4"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/vs-source",
+        "code" : "s4"
+      },
+      {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/vs-target",
+        "code" : "t1"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "Source s4"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "TRANSLATION_WARNING_OTHER"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "This CodeableConcept has the codes http://hl7.org/fhir/test/CodeSystem/vs-source#s4 and http://hl7.org/fhir/test/CodeSystem/vs-target#t1, but the ConceptMap http://hl7.org/fhir/test/ConceptMap/valuesets|0.1.0 maps http://hl7.org/fhir/test/CodeSystem/vs-source#s4 to t3. Check that these codes belong together"
+        },
+        "expression" : ["CodeableConcept"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/vs-source"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0"
+  }]
+}

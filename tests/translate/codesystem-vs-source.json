@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "language": "en",
+  "id": "vs-source",
+  "url": "http://hl7.org/fhir/test/CodeSystem/vs-source",
+  "version": "0.1.0",
+  "name": "VSSourceCodeSystem",
+  "title": "Source Code System for ConceptMaps that use value sets",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "FHIR Project",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "s1",
+      "display": "Source s1"
+    },
+    {
+      "code": "s2",
+      "display": "Source s2"
+    },
+    {
+      "code": "s3",
+      "display": "Source s3"
+    },
+    {
+      "code": "s4",
+      "display": "Source s4"
+    },
+    {
+      "code": "s5",
+      "display": "Source s5"
+    },
+    {
+      "code": "s6",
+      "display": "Source s6"
+    }
+  ]
+}

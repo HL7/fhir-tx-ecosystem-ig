@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-t12",
+  "url": "http://hl7.org/fhir/test/ValueSet/vs-t12",
+  "version": "0.1.0",
+  "name": "VSTarget12",
+  "title": "Targets t1 and t2 (a target.valueSet)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "FHIR Project",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/vs-target",
+        "concept": [
+          {
+            "code": "t1"
+          },
+          {
+            "code": "t2"
+          }
+        ]
+      }
+    ]
+  }
+}

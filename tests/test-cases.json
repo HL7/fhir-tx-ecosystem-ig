@@ -5066,7 +5066,9 @@
     "description" : "Tests for ConceptMap.$translate",
     "setup" : [ "translate/codesystem-source.json", "translate/codesystem-target.json", "translate/ConceptMap-full.json",
                 "translate/ConceptMap-novs.json", "translate/valueset-source.json", "translate/valueset-target.json",
-                "translate/valueset-target-some.json"],
+                "translate/valueset-target-some.json",
+                "translate/codesystem-vs-source.json", "translate/codesystem-vs-target.json", "translate/valueset-vs-t12.json",
+                "translate/valueset-vs-s34.json", "translate/valueset-vs-t46.json", "translate/ConceptMap-valuesets.json"],
     "tests" : [
       {
         "name" : "translate-1",
@@ -5180,6 +5182,48 @@
         "version" : "!4.0",
         "request" : "translate/translate-scope-5-request-parameters.json",
         "response" : "translate/translate-scope-5-response-parameters.json"
+      },
+      {
+        "name" : "translate-vs-target",
+        "description" : "A target that names a value set (ConceptMap.group.element.target.valueSet) maps to every code in it: ConceptMap/valuesets maps s1 to vs-t12, which is t1 and t2",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-vs-target-request-parameters.json",
+        "response" : "translate/translate-vs-target-response-parameters.json"
+      },
+      {
+        "name" : "translate-vs-unmapped",
+        "description" : "A group's unmapped with mode fixed and a value set (ConceptMap.group.unmapped.valueSet) maps every unmapped code to every code in it: s2 has no element in ConceptMap/valuesets, and vs-t46 is t4 and t6",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-vs-unmapped-request-parameters.json",
+        "response" : "translate/translate-vs-unmapped-response-parameters.json"
+      },
+      {
+        "name" : "translate-vs-element",
+        "description" : "An element that names a value set (ConceptMap.group.element.valueSet) applies to every code in it: s3 is in vs-s34, so it maps to t3. Matching a code against an element's value set is optional (a server may not check the code against every such value set), so this is tx.fhir.org only",
+        "operation" : "translate",
+        "mode" : "tx.fhir.org",
+        "version" : "!4.0",
+        "request" : "translate/translate-vs-element-request-parameters.json",
+        "response" : "translate/translate-vs-element-response-parameters.json"
+      },
+      {
+        "name" : "translate-vs-reverse-element",
+        "description" : "In reverse, an element that names a value set maps from every code in it: t3 is the target of the element for vs-s34, which is s3 and s4",
+        "operation" : "translate",
+        "version" : "!4.0",
+        "request" : "translate/translate-vs-reverse-element-request-parameters.json",
+        "response" : "translate/translate-vs-reverse-element-response-parameters.json"
+      },
+      {
+        "name" : "translate-vs-reverse-target",
+        "description" : "In reverse, a target that names a value set applies to every code in it: t2 is in vs-t12, the target of s1. Matching a code against a target's value set is optional in reverse (as matching against an element's value set is forwards), so this is tx.fhir.org only",
+        "operation" : "translate",
+        "mode" : "tx.fhir.org",
+        "version" : "!4.0",
+        "request" : "translate/translate-vs-reverse-target-request-parameters.json",
+        "response" : "translate/translate-vs-reverse-target-response-parameters.json"
       }
     ]
   },{
@@ -5265,6 +5309,114 @@
         "version": "4.0",
         "request" : "translate/translate-reverse-request-r4-b-parameters.json",
         "response" : "translate/translate-reverse-response-r4-b-parameters.json"
+      }
+    ]
+  },{
+    "mode" : "tx.fhir.org",
+    "name" : "translate-check",
+    "description" : "$validate-code on a CodeableConcept: what the ConceptMaps the server has say about its codings together. For each coding, the maps from its code system to the code system of another coding are consulted: a map that says the code is not-related-to the other coding, or has no map, is a warning; a map that relates it only to other codes is a hint. This is not a requirement on terminology servers - tx.fhir.org reports it in the issues, as hints and warnings. The tests that use LOINC's mappings to SNOMED CT also need the loinc mode",
+    "setup" : [ "translate/codesystem-source.json", "translate/codesystem-target.json", "translate/ConceptMap-full.json",
+                "translate/ConceptMap-othermap.json", "translate/ConceptMap-othermap2.json",
+                "translate/ConceptMap-novs.json", "translate/valueset-source.json", "translate/valueset-target.json",
+                "translate/codesystem-vs-source.json", "translate/codesystem-vs-target.json", "translate/valueset-vs-t12.json",
+                "translate/valueset-vs-s34.json", "translate/valueset-vs-t46.json", "translate/ConceptMap-valuesets.json",
+                "translate-check/valueset-translate-all.json", "loinc/valueset-all.json"],
+    "tests" : [
+      {
+        "name" : "translate-cc-confirmed",
+        "description" : "code-1 + code1: ConceptMap/full maps code-1 to code1, so it has nothing to say (ConceptMaps othermap and othermap2 map every code they have no element for to code7, through their unmapped, so they suggest code7 - a hint naming them)",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-confirmed-request-parameters.json",
+        "response" : "translate-check/translate-cc-confirmed-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-other",
+        "description" : "code-1 + code2: ConceptMap/full maps code-1 to code1, not code2 - a hint (ConceptMaps othermap and othermap2 map every code they have no element for to code7, through their unmapped, so they suggest code7 - a hint naming them)",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-other-request-parameters.json",
+        "response" : "translate-check/translate-cc-other-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-nomap",
+        "description" : "code-4 + code1: ConceptMap/full says code-4 has no map - a warning (ConceptMaps othermap and othermap2 map every code they have no element for to code7, through their unmapped, so they suggest code7 - a hint naming them)",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-nomap-request-parameters.json",
+        "response" : "translate-check/translate-cc-nomap-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-denied",
+        "description" : "s6 + t6: ConceptMap/valuesets says s6 is not related to t6 - a warning",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-denied-request-parameters.json",
+        "response" : "translate-check/translate-cc-denied-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-target-vs",
+        "description" : "s1 + t2: ConceptMap/valuesets maps s1 to the value set vs-t12, which has t2 - nothing to say",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-target-vs-request-parameters.json",
+        "response" : "translate-check/translate-cc-target-vs-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-target-vs-other",
+        "description" : "s1 + t5: ConceptMap/valuesets maps s1 to the value set vs-t12 (t1, t2), not t5 - a hint",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-target-vs-other-request-parameters.json",
+        "response" : "translate-check/translate-cc-target-vs-other-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-element-vs",
+        "description" : "s4 + t3: ConceptMap/valuesets maps the value set vs-s34, which has s4, to t3 - nothing to say",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-element-vs-request-parameters.json",
+        "response" : "translate-check/translate-cc-element-vs-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-element-vs-other",
+        "description" : "s4 + t1: ConceptMap/valuesets maps the value set vs-s34, which has s4, to t3, not t1 - a hint",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-element-vs-other-request-parameters.json",
+        "response" : "translate-check/translate-cc-element-vs-other-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-unmapped-vs",
+        "description" : "s2 + t6: s2 is unmapped in ConceptMap/valuesets, and its unmapped maps to the value set vs-t46, which has t6 - nothing to say",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-unmapped-vs-request-parameters.json",
+        "response" : "translate-check/translate-cc-unmapped-vs-response-parameters.json"
+      },
+      {
+        "name" : "translate-cc-unmapped-vs-other",
+        "description" : "s2 + t1: s2 is unmapped in ConceptMap/valuesets, and its unmapped maps to the value set vs-t46 (t4, t6), not t1 - a hint",
+        "operation" : "validate-code",
+        "version" : "!4.0",
+        "request" : "translate-check/translate-cc-unmapped-vs-other-request-parameters.json",
+        "response" : "translate-check/translate-cc-unmapped-vs-other-response-parameters.json"
+      },
+      {
+        "name" : "loinc-cc-sct-confirmed",
+        "description" : "LA32-8 (No) + 373067005 (No): LOINC maps each to the other, so there is nothing to say",
+        "operation" : "validate-code",
+        "mode" : "loinc",
+        "request" : "translate-check/loinc-cc-sct-confirmed-request-parameters.json",
+        "response" : "translate-check/loinc-cc-sct-confirmed-response-parameters.json"
+      },
+      {
+        "name" : "loinc-cc-sct-other",
+        "description" : "LA32-8 (No) + 260413007 (None) + 373067005 (No): LA32-8 and 373067005 map to each other, so 260413007 says nothing about LA32-8; but LOINC maps 260413007 to LA137-2 (None), which is not there - a hint",
+        "operation" : "validate-code",
+        "mode" : "loinc",
+        "request" : "translate-check/loinc-cc-sct-other-request-parameters.json",
+        "response" : "translate-check/loinc-cc-sct-other-response-parameters.json"
       }
     ]
   },{
@@ -6905,6 +7057,20 @@
         "operation" : "translate",
         "request" : "loinc/loinc-translate-code-mdc-request-parameters.json",
         "response" : "loinc/loinc-translate-code-mdc-response-parameters.json"
+      },
+      {
+        "name" : "loinc-translate-answer-sct",
+        "description" : "Translate a LOINC answer code to SNOMED CT by naming the target system: the implicit map http://loinc.org/cm/sct has LA32-8 (No) as equivalent to 373067005 (No)",
+        "operation" : "translate",
+        "request" : "loinc/loinc-translate-answer-sct-request-parameters.json",
+        "response" : "loinc/loinc-translate-answer-sct-response-parameters.json"
+      },
+      {
+        "name" : "loinc-translate-sct-answer",
+        "description" : "Translate a SNOMED CT concept to LOINC by naming the target system: the same map, used the other way - 260413007 (None) is equivalent to the answer code LA137-2 (None)",
+        "operation" : "translate",
+        "request" : "loinc/loinc-translate-sct-answer-request-parameters.json",
+        "response" : "loinc/loinc-translate-sct-answer-response-parameters.json"
       }
     ]
   },{

@@ -1,0 +1,58 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "code-1"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/test/CodeSystem/source",
+        "code" : "code-1"
+      },
+      {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/target",
+        "code" : "code1"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 1"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "TRANSLATION_WARNING_OTHER"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "This CodeableConcept has the codes http://hl7.org/fhir/test/CodeSystem/source#code-1 and http://hl7.org/fhir/test/CodeSystem/target#code1, but the ConceptMaps http://hl7.org/fhir/test/ConceptMap/othermap2|0.1.0, http://hl7.org/fhir/test/ConceptMap/othermap|0.1.0 map http://hl7.org/fhir/test/CodeSystem/source#code-1 to code7. Check that these codes belong together"
+        },
+        "expression" : ["CodeableConcept"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/source"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0"
+  }]
+}

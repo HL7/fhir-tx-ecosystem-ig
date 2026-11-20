@@ -1,0 +1,96 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "LA32-8"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA32-8"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "260413007"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "373067005"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "No"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "TRANSLATION_WARNING_OTHER"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "This CodeableConcept has the codes http://snomed.info/sct#260413007 and http://loinc.org#LA32-8, but the ConceptMap http://loinc.org/cm/sct maps http://snomed.info/sct#260413007 to LA137-2. Check that these codes belong together"
+        },
+        "expression" : ["CodeableConcept"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "this-code-not-in-vs"
+          }],
+          "text" : "The provided code 'http://snomed.info/sct#260413007' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0'"
+        },
+        "expression" : ["CodeableConcept.coding[1].code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "this-code-not-in-vs"
+          }],
+          "text" : "The provided code 'http://snomed.info/sct#373067005' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-all|5.0.0'"
+        },
+        "expression" : ["CodeableConcept.coding[2].code"]
+      }]
+    }
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://loinc.org"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.83"
+  }]
+}

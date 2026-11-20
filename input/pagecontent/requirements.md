@@ -686,6 +686,11 @@ The same rules apply, less the value set. `CodeSystem/$validate-code` is tested 
 §A server that holds ConceptMaps SHALL support `ConceptMap/$translate`§. This section is new, and the
 tests are correspondingly more detailed than the text; where they disagree, the tests are right.
 
+The `translate-check` suite (`tx.fhir.org` mode) tests something that is not a requirement: tx.fhir.org
+using the ConceptMaps it holds to comment, in `$validate-code`, on the codings of a CodeableConcept -
+a hint where a map relates a code only to other codes than the ones it is with, a warning where a map
+says it has no mapping, or is not related to one of them.
+
 #### Naming the concept to translate
 
 * §The server SHALL accept the source concept as `sourceCode` + `sourceSystem`, as `sourceCoding`, or as
@@ -761,8 +766,39 @@ tests are correspondingly more detailed than the text; where they disagree, the 
   is outside the map's `sourceScope` is not covered at all, and is disposed of by the scope rule above
   rather than by `unmapped`
 * §The server SHALL support `ConceptMap.group.unmapped` in its modes§:
-  * `fixed`: any code not otherwise mapped translates to the stated code
+  * `fixed`: any code not otherwise mapped translates to the stated code - or, where the `unmapped`
+    names a value set rather than a code, to every code in it (see below)
   * `other-map`: the translation is delegated to the named ConceptMap, and `used-conceptmap` reports it
+
+#### Value sets in place of codes
+
+*(suite: `translate`; R5 and later - an R4 ConceptMap has no value sets)*
+
+A ConceptMap can name a value set where it would otherwise name a code, on either side of a mapping.
+These are not all equally easy to support, and the requirements differ accordingly.
+
+Where the value set is on the side being translated *to*, supporting it means expanding the value set
+and returning its codes - one expansion per value set, however many codes are translated:
+
+* §Where a target names a value set rather than a code (`ConceptMap.group.element.target.valueSet`),
+  the server SHALL treat every code in the value set as a target of the element: one `match` for each,
+  with the target's relationship§
+* §Where a group's `unmapped` has mode `fixed` and names a value set rather than a code
+  (`ConceptMap.group.unmapped.valueSet`), the server SHALL translate any code not otherwise mapped to
+  every code in the value set§
+* §**In reverse**, where an element names a value set rather than a code
+  (`ConceptMap.group.element.valueSet`), the server SHALL treat every code in it as a source concept of
+  the element§
+
+Where the value set is on the side being translated *from*, supporting it means deciding whether an
+element applies by checking the code being translated against the value set - for every such element
+in every candidate map, on every translation. That can be expensive, so it is optional:
+
+* §A server MAY match the code being translated against an element that names a value set
+  (`ConceptMap.group.element.valueSet`) - and, in reverse, against a target that names a value set - and
+  is not required to§. A server that does not match codes against these value sets does not use such
+  elements to translate; the code is then translated as if they were not there (by the group's
+  `unmapped`, if it has one). The tests that depend on this matching are `tx.fhir.org` mode
 
 #### Reverse translation
 

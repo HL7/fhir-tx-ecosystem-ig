@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "language": "en",
+  "id": "vs-target",
+  "url": "http://hl7.org/fhir/test/CodeSystem/vs-target",
+  "version": "0.1.0",
+  "name": "VSTargetCodeSystem",
+  "title": "Target Code System for ConceptMaps that use value sets",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "FHIR Project",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "t1",
+      "display": "Target t1"
+    },
+    {
+      "code": "t2",
+      "display": "Target t2"
+    },
+    {
+      "code": "t3",
+      "display": "Target t3"
+    },
+    {
+      "code": "t4",
+      "display": "Target t4"
+    },
+    {
+      "code": "t5",
+      "display": "Target t5"
+    },
+    {
+      "code": "t6",
+      "display": "Target t6"
+    }
+  ]
+}

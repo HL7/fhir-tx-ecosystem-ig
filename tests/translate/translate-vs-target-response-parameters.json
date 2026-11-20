@@ -1,0 +1,75 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "match",
+      "part" : [
+        {
+          "name" : "concept",
+          "valueCoding" : {
+            "$optional-properties$" : [
+              "display"
+            ],
+            "system" : "http://hl7.org/fhir/test/CodeSystem/vs-target",
+            "code" : "t1"
+          }
+        },
+        {
+          "name" : "originMap",
+          "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/valuesets|0.1.0"
+        },
+        {
+          "name" : "relationship",
+          "valueCode" : "equivalent"
+        },
+        {
+          "name" : "sourceConcept",
+          "valueCoding" : {
+            "$optional-properties$" : [
+              "display"
+            ],
+            "system" : "http://hl7.org/fhir/test/CodeSystem/vs-source",
+            "code" : "s1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "match",
+      "part" : [
+        {
+          "name" : "concept",
+          "valueCoding" : {
+            "$optional-properties$" : [
+              "display"
+            ],
+            "system" : "http://hl7.org/fhir/test/CodeSystem/vs-target",
+            "code" : "t2"
+          }
+        },
+        {
+          "name" : "originMap",
+          "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/valuesets|0.1.0"
+        },
+        {
+          "name" : "relationship",
+          "valueCode" : "equivalent"
+        },
+        {
+          "name" : "sourceConcept",
+          "valueCoding" : {
+            "$optional-properties$" : [
+              "display"
+            ],
+            "system" : "http://hl7.org/fhir/test/CodeSystem/vs-source",
+            "code" : "s1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    }
+  ]
+}

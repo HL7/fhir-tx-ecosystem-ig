@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-s34",
+  "url": "http://hl7.org/fhir/test/ValueSet/vs-s34",
+  "version": "0.1.0",
+  "name": "VSSource34",
+  "title": "Sources s3 and s4 (an element.valueSet)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "FHIR Project",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/vs-source",
+        "concept": [
+          {
+            "code": "s3"
+          },
+          {
+            "code": "s4"
+          }
+        ]
+      }
+    ]
+  }
+}

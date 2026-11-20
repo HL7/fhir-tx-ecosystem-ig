@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "sourceSystem",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/vs-source"
+    },
+    {
+      "name": "targetCode",
+      "valueCode": "t3"
+    },
+    {
+      "name": "targetSystem",
+      "valueUri": "http://hl7.org/fhir/test/CodeSystem/vs-target"
+    }
+  ]
+}

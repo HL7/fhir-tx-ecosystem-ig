@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "match",
+      "part" : [
+        {
+          "name" : "concept",
+          "valueCoding" : {
+            "$optional-properties$" : [
+              "display",
+              "version"
+            ],
+            "system" : "http://snomed.info/sct",
+            "version" : "http://snomed.info/sct/900000000000207008/version/20260101",
+            "code" : "373067005",
+            "display" : "No (qualifier value)"
+          }
+        },
+        {
+          "$only$" : "version:4",
+          "name" : "equivalence",
+          "valueCode" : "equivalent"
+        },
+        {
+          "name" : "originMap",
+          "valueCanonical" : "http://loinc.org/cm/sct"
+        },
+        {
+          "$only$" : "version:5",
+          "name" : "relationship",
+          "valueCode" : "equivalent"
+        },
+        {
+          "$only$" : "version:4",
+          "name" : "source",
+          "valueCanonical" : "http://loinc.org/cm/sct"
+        },
+        {
+          "name" : "sourceConcept",
+          "valueCoding" : {
+            "system" : "http://loinc.org",
+            "code" : "LA32-8"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "result",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "used-conceptmap",
+      "valueUri" : "http://loinc.org/cm/sct"
+    },
+    {
+      "name" : "used-system",
+      "valueUri" : "http://loinc.org|2.83"
+    }
+  ]
+}

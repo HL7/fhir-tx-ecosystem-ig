@@ -1,0 +1,28 @@
+{
+  "resourceType": "ValueSet",
+  "id": "translate-all",
+  "url": "http://hl7.org/fhir/test/ValueSet/translate-all",
+  "version": "0.1.0",
+  "name": "TranslateAll",
+  "title": "All the codes of the translate test code systems",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-20",
+  "publisher": "FHIR Project",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/source"
+      },
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/target"
+      },
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/vs-source"
+      },
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/vs-target"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [
+    {
+      "name" : "sourceCoding",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LA32-8"
+      }
+    },
+    {
+      "name" : "targetSystem",
+      "valueUri" : "http://snomed.info/sct"
+    }
+  ]
+}

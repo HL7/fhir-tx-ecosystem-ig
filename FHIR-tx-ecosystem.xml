@@ -55,6 +55,7 @@
 <artifact deprecated="true" id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
 <artifact id="Binary/FeatureDefinition-CodeSystemAsParameter" key="Binary-FeatureDefinition-CodeSystemAsParameter" name="CodeSystemAsParameter"/>
 <artifact deprecated="true" id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
+<artifact id="CodeSystem/external-concept-properties" key="CodeSystem-external-concept-properties" name="Concept Properties for External Code Systems"/>
 <artifact deprecated="true" id="CodeSystem/r4-equivalence" key="CodeSystem-r4-equivalence" name="ConceptMapEquivalence"/>
 <artifact deprecated="true" id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
 <artifact deprecated="true" id="CapabilityStatement/consumer-server" key="CapabilityStatement-consumer-server" name="Consumer Server CapabilityStatement"/>
@@ -134,6 +135,13 @@
 <artifact deprecated="true" id="Procedure/gaps-procedure02" key="Procedure-gaps-procedure02" name="Gaps Procedure02"/>
 <artifact deprecated="true" id="Organization/gaps-organization-reportingvendor" key="Organization-gaps-organization-reportingvendor" name="Gaps Reporting Vendor Organization"/>
 <artifact deprecated="true" id="Group/group01" key="Group-group01" name="Group01"/>
+<artifact id="ValueSet/icd11-foundation" key="ValueSet-icd11-foundation" name="ICD-11 Foundation Entities"/>
+<artifact id="ValueSet/icf-qualifier-barrier" key="ValueSet-icf-qualifier-barrier" name="ICF Qualifier Scale: Barrier"/>
+<artifact id="ValueSet/icf-qualifier-extent" key="ValueSet-icf-qualifier-extent" name="ICF Qualifier Scale: Extent"/>
+<artifact id="ValueSet/icf-qualifier-facilitator" key="ValueSet-icf-qualifier-facilitator" name="ICF Qualifier Scale: Facilitator"/>
+<artifact id="ValueSet/icf-qualifier-localization" key="ValueSet-icf-qualifier-localization" name="ICF Qualifier Scale: Localization"/>
+<artifact id="ValueSet/icf-qualifier-nature" key="ValueSet-icf-qualifier-nature" name="ICF Qualifier Scale: Nature"/>
+<artifact id="ValueSet/icf-qualifier-problem" key="ValueSet-icf-qualifier-problem" name="ICF Qualifier Scale: Problem"/>
 <artifact deprecated="true" id="StructureDefinition/implementationguide-dependency-comment" key="StructureDefinition-implementationguide-dependency-comment" name="IG Dependency Comment"/>
 <artifact deprecated="true" id="StructureDefinition/ig-internal-dependency" key="StructureDefinition-ig-internal-dependency" name="IG Internal Dependency"/>
 <artifact deprecated="true" id="StructureDefinition/ig-link-dependency" key="StructureDefinition-ig-link-dependency" name="IG Link Dependency"/>
@@ -175,6 +183,8 @@
 <artifact deprecated="true" id="Bundle/multiple-indv-mrp-obs-report" key="Bundle-multiple-indv-mrp-obs-report" name="Multiple Indv Mrp Obs Report"/>
 <artifact deprecated="true" id="Bundle/multiple-indv-mrp-task-report" key="Bundle-multiple-indv-mrp-task-report" name="Multiple Indv Mrp Task Report"/>
 <artifact deprecated="true" id="Bundle/multiple-summ-report" key="Bundle-multiple-summ-report" name="Multiple Summ Report"/>
+<artifact id="ValueSet/ndc-packages" key="ValueSet-ndc-packages" name="NDC Package Codes"/>
+<artifact id="ValueSet/ndc-products" key="ValueSet-ndc-products" name="NDC Product Codes"/>
 <artifact deprecated="true" id="StructureDefinition/xml-namespace" key="StructureDefinition-xml-namespace" name="Namespace"/>
 <artifact id="Requirements/fromNarrative" key="Requirements-fromNarrative" name="Narrative Conformance Statements"/>
 <artifact deprecated="true" id="StructureDefinition/no-binding" key="StructureDefinition-no-binding" name="No Binding Extension"/>
