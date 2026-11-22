@@ -286,6 +286,11 @@
       "valueCode" : "child"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis copy number change panel"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP111372-1"
     }]
@@ -295,6 +300,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "child"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis.metaphase panel"
     },
     {
       "name" : "value",
@@ -308,6 +318,11 @@
       "valueCode" : "child"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis.prenatal panel"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP111375-4"
     }]
@@ -317,6 +332,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "child"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome copy number change panel"
     },
     {
       "name" : "value",
@@ -330,6 +350,11 @@
       "valueCode" : "child"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis summary panel"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP111411-7"
     }]
@@ -339,6 +364,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "child"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis panel"
     },
     {
       "name" : "value",
@@ -352,6 +382,11 @@
       "valueCode" : "child"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis master panel"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP111464-6"
     }]
@@ -361,6 +396,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "child"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Chromosome analysis.interphase panel"
     },
     {
       "name" : "value",
@@ -383,6 +423,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "parent"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PANEL.MOLPATH"
     },
     {
       "name" : "value",

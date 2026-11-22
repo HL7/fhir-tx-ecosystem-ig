@@ -41,6 +41,11 @@
       "valueCode" : "Answer"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "O Pos"
+    },
+    {
       "name" : "value",
       "valueCode" : "LA21321-7"
     }]
@@ -50,6 +55,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "Answer"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "O Neg"
     },
     {
       "name" : "value",
@@ -63,6 +73,11 @@
       "valueCode" : "Answer"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AB Pos"
+    },
+    {
       "name" : "value",
       "valueCode" : "LA21323-3"
     }]
@@ -72,6 +87,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "Answer"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AB Neg"
     },
     {
       "name" : "value",
@@ -85,6 +105,11 @@
       "valueCode" : "Answer"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "A Pos"
+    },
+    {
       "name" : "value",
       "valueCode" : "LA21325-8"
     }]
@@ -94,6 +119,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "Answer"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "A Neg"
     },
     {
       "name" : "value",
@@ -107,6 +137,11 @@
       "valueCode" : "Answer"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "B Pos"
+    },
+    {
       "name" : "value",
       "valueCode" : "LA21327-4"
     }]
@@ -116,6 +151,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "Answer"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "B Neg"
     },
     {
       "name" : "value",
@@ -129,6 +169,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood from Donor"
+    },
+    {
       "name" : "value",
       "valueCode" : "14577-1"
     }]
@@ -138,6 +183,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood from Newborn"
     },
     {
       "name" : "value",
@@ -151,6 +201,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Cord blood"
+    },
+    {
       "name" : "value",
       "valueCode" : "34474-7"
     }]
@@ -160,6 +215,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Interpretation] in Blood from Newborn"
     },
     {
       "name" : "value",
@@ -173,6 +233,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood from Blood product unit--after transfusion reaction"
+    },
+    {
       "name" : "value",
       "valueCode" : "46268-9"
     }]
@@ -182,6 +247,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood from Newborn--after transfusion reaction"
     },
     {
       "name" : "value",
@@ -195,6 +265,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood from Fetus"
+    },
+    {
       "name" : "value",
       "valueCode" : "54417-1"
     }]
@@ -204,6 +279,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood by Confirmatory method"
     },
     {
       "name" : "value",
@@ -217,6 +297,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood from Blood product unit"
+    },
+    {
       "name" : "value",
       "valueCode" : "881-3"
     }]
@@ -226,6 +311,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood"
     },
     {
       "name" : "value",
@@ -239,6 +329,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Capillary blood"
+    },
+    {
       "name" : "value",
       "valueCode" : "884-7"
     }]
@@ -248,6 +343,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood--after transfusion reaction"
     },
     {
       "name" : "value",
@@ -261,6 +361,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Mother's ABO and Rh group Type"
+    },
+    {
       "name" : "value",
       "valueCode" : "90905-1"
     }]
@@ -270,6 +375,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Father's ABO and Rh group Type"
     },
     {
       "name" : "value",
@@ -283,6 +393,11 @@
       "valueCode" : "answers-for"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood--during infancy"
+    },
+    {
       "name" : "value",
       "valueCode" : "93906-6"
     }]
@@ -292,6 +407,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "answers-for"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ABO and Rh group [Type] in Blood--post hematopoietic stem cell transplant"
     },
     {
       "name" : "value",

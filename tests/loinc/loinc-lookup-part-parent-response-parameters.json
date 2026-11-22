@@ -20,6 +20,11 @@
       "valueCode" : "parent"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CHAL.ROUTINE"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP234174-3"
     }]
@@ -29,6 +34,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "parent"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Sugars/Sugar metabolism"
     },
     {
       "name" : "value",
@@ -42,6 +52,11 @@
       "valueCode" : "parent"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Analytes"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP40317-7"
     }]
@@ -51,6 +66,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "parent"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Sugar"
     },
     {
       "name" : "value",

@@ -56,6 +56,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1480_Protocol source"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL105-8"
     }]
@@ -65,6 +70,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Injury intent"
     },
     {
       "name" : "value",
@@ -78,6 +88,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ED dispo"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1053-9"
     }]
@@ -87,6 +102,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1550_Radiation treatment location"
     },
     {
       "name" : "value",
@@ -100,6 +120,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1560_Radiation intent"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL114-0"
     }]
@@ -109,6 +134,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1570_Radiation modality"
     },
     {
       "name" : "value",
@@ -122,6 +152,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1590_Radiation outcome"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL117-3"
     }]
@@ -131,6 +166,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1646_Surgery site"
     },
     {
       "name" : "value",
@@ -144,6 +184,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX11_10_glaucoma drops"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1248-5"
     }]
@@ -153,6 +198,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1770_Cancer status follow up"
     },
     {
       "name" : "value",
@@ -166,6 +216,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1790_Follow up source"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL133-0"
     }]
@@ -175,6 +230,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX12_83"
     },
     {
       "name" : "value",
@@ -188,6 +248,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_190_Hispanic origin"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL146-2"
     }]
@@ -197,6 +262,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX10_61"
     },
     {
       "name" : "value",
@@ -210,6 +280,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX18_16_hip fracture location"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1633-8"
     }]
@@ -219,6 +294,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX18_17_fracture treatment"
     },
     {
       "name" : "value",
@@ -232,6 +312,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX18_18_fracture circumstances"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1635-3"
     }]
@@ -241,6 +326,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX18_19_trauma location"
     },
     {
       "name" : "value",
@@ -254,6 +344,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX18_20_time of fracture"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1637-9"
     }]
@@ -263,6 +358,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX18_21_fracture circumstances"
     },
     {
       "name" : "value",
@@ -276,6 +376,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX19_23_CA histopathology type"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1677-5"
     }]
@@ -285,6 +390,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX19_24_CA histopathology grade"
     },
     {
       "name" : "value",
@@ -298,6 +408,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "FeedingType"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1735-1"
     }]
@@ -307,6 +422,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_2140_CoC coding system"
     },
     {
       "name" : "value",
@@ -320,6 +440,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "NEMSIS_36_pt loc in vehicle"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1823-5"
     }]
@@ -329,6 +454,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_220_Sex-gender"
     },
     {
       "name" : "value",
@@ -342,6 +472,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "FMQAI_01"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1872-2"
     }]
@@ -351,6 +486,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Death certificate_tobacco use"
     },
     {
       "name" : "value",
@@ -364,6 +504,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX17_14_death in hospitalization"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL1959-7"
     }]
@@ -373,6 +518,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_3300_Rural-urban 1993"
     },
     {
       "name" : "value",
@@ -386,6 +536,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_35_FIN coding system"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL206-4"
     }]
@@ -395,6 +550,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_360_Fam hx of cancer"
     },
     {
       "name" : "value",
@@ -408,6 +568,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_490_Diagnostic confirmation"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL218-9"
     }]
@@ -417,6 +582,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "RHEA - last born child vital status"
     },
     {
       "name" : "value",
@@ -430,6 +600,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_520_Screening result"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL222-1"
     }]
@@ -439,6 +614,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_590_ Inpatient admit date"
     },
     {
       "name" : "value",
@@ -452,6 +632,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_600_Inpatient discharge date"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL225-4"
     }]
@@ -461,6 +646,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_610_Hospital-cancer relationship"
     },
     {
       "name" : "value",
@@ -474,6 +664,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_670_Surgical protocol"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL227-0"
     }]
@@ -483,6 +678,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_910_Tumor stage group"
     },
     {
       "name" : "value",
@@ -496,6 +696,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_920_Pathology descriptor"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL235-3"
     }]
@@ -505,6 +710,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_980_Clincial staging descriptor"
     },
     {
       "name" : "value",
@@ -518,6 +728,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "0|1|2|3 or more|Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2454-8"
     }]
@@ -527,6 +742,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0140_Race-ethnicity"
     },
     {
       "name" : "value",
@@ -540,6 +760,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0150_Payment sources"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL248-6"
     }]
@@ -549,6 +774,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "MD-DO-CNM/CM-Other Midwife-Other"
     },
     {
       "name" : "value",
@@ -562,6 +792,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Type of place where birth occurred"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2513-1"
     }]
@@ -571,6 +806,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Cephalic-Breech-Other"
     },
     {
       "name" : "value",
@@ -584,6 +824,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Route/method of delivery"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2518-0"
     }]
@@ -593,6 +838,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0220_Prior condition"
     },
     {
       "name" : "value",
@@ -606,6 +856,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "First-Second-Third-Fourth-etc."
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2521-4"
     }]
@@ -615,6 +870,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Planned to deliver at home"
     },
     {
       "name" : "value",
@@ -628,6 +888,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0260_Prognosis for recovery"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL255-1"
     }]
@@ -637,6 +902,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0270_Rehab prognosis"
     },
     {
       "name" : "value",
@@ -650,6 +920,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0290_High risk factors"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL258-5"
     }]
@@ -659,6 +934,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0350_Assisting person"
     },
     {
       "name" : "value",
@@ -672,6 +952,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0360_Primary caregiver"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL262-7"
     }]
@@ -681,6 +966,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0370_PCG assistance freq"
     },
     {
       "name" : "value",
@@ -694,6 +984,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0380_Assistance type"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL264-3"
     }]
@@ -703,6 +998,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q2"
     },
     {
       "name" : "value",
@@ -716,6 +1016,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q7"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2660-0"
     }]
@@ -725,6 +1030,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q9"
     },
     {
       "name" : "value",
@@ -738,6 +1048,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q10"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2663-4"
     }]
@@ -747,6 +1062,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q11"
     },
     {
       "name" : "value",
@@ -760,6 +1080,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q12"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2665-9"
     }]
@@ -769,6 +1094,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q16"
     },
     {
       "name" : "value",
@@ -782,6 +1112,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Medication_Q28_Q29"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2682-4"
     }]
@@ -791,6 +1126,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0510_UTI treatment"
     },
     {
       "name" : "value",
@@ -804,6 +1144,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0540_Bowel incontinence freq"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL279-1"
     }]
@@ -813,6 +1158,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_1"
     },
     {
       "name" : "value",
@@ -826,6 +1176,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_2"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2815-0"
     }]
@@ -835,6 +1190,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_3"
     },
     {
       "name" : "value",
@@ -848,6 +1208,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Y/N/UNK"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2817-6"
     }]
@@ -857,6 +1222,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_6"
     },
     {
       "name" : "value",
@@ -870,6 +1240,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_7"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2819-2"
     }]
@@ -879,6 +1254,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_8"
     },
     {
       "name" : "value",
@@ -892,6 +1272,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_9"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2821-8"
     }]
@@ -901,6 +1286,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_PIF_10"
     },
     {
       "name" : "value",
@@ -914,6 +1304,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_M/F/UNK"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2827-5"
     }]
@@ -923,6 +1318,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_SIR_1"
     },
     {
       "name" : "value",
@@ -936,6 +1336,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_SIR_2"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2830-9"
     }]
@@ -945,6 +1350,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_SIR_5"
     },
     {
       "name" : "value",
@@ -958,6 +1368,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_SIR_12"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2837-4"
     }]
@@ -967,6 +1382,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Device_1"
     },
     {
       "name" : "value",
@@ -980,6 +1400,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Device_11"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2842-4"
     }]
@@ -989,6 +1414,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Device_12"
     },
     {
       "name" : "value",
@@ -1002,6 +1432,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AHRQ_Device_13"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL2844-0"
     }]
@@ -1011,6 +1446,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Race or Unknown"
     },
     {
       "name" : "value",
@@ -1024,6 +1464,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0640_Prior grooming"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL288-2"
     }]
@@ -1033,6 +1478,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0650_Prior dress upper body"
     },
     {
       "name" : "value",
@@ -1046,6 +1496,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0660_Prior dress lower body"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL292-4"
     }]
@@ -1055,6 +1510,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CDC.CS_25_Vital status"
     },
     {
       "name" : "value",
@@ -1068,6 +1528,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0670_Prior bathing"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL294-0"
     }]
@@ -1077,6 +1542,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0680_Prior toileting"
     },
     {
       "name" : "value",
@@ -1090,6 +1560,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0690_Prior transferring"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL298-1"
     }]
@@ -1099,6 +1574,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0700_Prior ambulation"
     },
     {
       "name" : "value",
@@ -1112,6 +1592,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PCORI_Information data source"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3012-3"
     }]
@@ -1121,6 +1606,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Discharge vital status"
     },
     {
       "name" : "value",
@@ -1134,6 +1624,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "MSCDM_Discharge status"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3018-0"
     }]
@@ -1143,6 +1638,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0710_Prior feeding"
     },
     {
       "name" : "value",
@@ -1156,6 +1656,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Patient Residence Type"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3031-3"
     }]
@@ -1165,6 +1670,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "ED Episode Care"
     },
     {
       "name" : "value",
@@ -1178,6 +1688,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0720_Prior light meals"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL304-7"
     }]
@@ -1187,6 +1702,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Yes/No/Unk"
     },
     {
       "name" : "value",
@@ -1200,6 +1720,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0730_Priot transportation"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL306-2"
     }]
@@ -1209,6 +1734,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "MSCDM_Admitting Source"
     },
     {
       "name" : "value",
@@ -1222,6 +1752,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0740_Prior laundry"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL308-8"
     }]
@@ -1231,6 +1766,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0750_Prior housekeeping"
     },
     {
       "name" : "value",
@@ -1244,6 +1784,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0760_Prior shopping"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL312-0"
     }]
@@ -1253,6 +1798,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Cause Fetal Death"
     },
     {
       "name" : "value",
@@ -1266,6 +1816,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0770_Prior telephone use"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL314-6"
     }]
@@ -1275,6 +1830,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0780_Prior oral med mgmnt"
     },
     {
       "name" : "value",
@@ -1288,6 +1848,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0790_Prior inhaled med mgmnt"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL318-7"
     }]
@@ -1297,6 +1862,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0800_Prior inject med mgmnt"
     },
     {
       "name" : "value",
@@ -1310,6 +1880,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0820_PCG equip mgmnt"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL322-9"
     }]
@@ -1319,6 +1894,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0830_OP emergent care"
     },
     {
       "name" : "value",
@@ -1332,6 +1912,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "NMMDS_Gender"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3275-6"
     }]
@@ -1341,6 +1926,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0890_Reason acute hospitalization"
     },
     {
       "name" : "value",
@@ -1354,6 +1944,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS_M0900_Nursing home admission"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL331-0"
     }]
@@ -1363,6 +1958,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Sexual orientation"
     },
     {
       "name" : "value",
@@ -1376,6 +1976,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Sex assigned at birth"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3324-2"
     }]
@@ -1385,6 +1990,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Heparin|Saline|None|Other|Unknown"
     },
     {
       "name" : "value",
@@ -1398,6 +2008,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Positive|Negative|Not tested|Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3639-3"
     }]
@@ -1407,6 +2022,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NHCS] Surgery 24H post-op follow-up outcomes"
     },
     {
       "name" : "value",
@@ -1420,6 +2040,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NHCS] Outpatient visit discharge disposition"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3676-5"
     }]
@@ -1429,6 +2054,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Amblyopia type"
     },
     {
       "name" : "value",
@@ -1442,6 +2072,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Coloboma location"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3723-5"
     }]
@@ -1451,6 +2086,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Color vision findings"
     },
     {
       "name" : "value",
@@ -1464,6 +2104,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Color vision test method"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3725-0"
     }]
@@ -1473,6 +2118,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Normal|Abnormal_specify|UNK"
     },
     {
       "name" : "value",
@@ -1486,6 +2136,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Findings supporting myopathy"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3727-6"
     }]
@@ -1495,6 +2150,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Type of congenital cranial dysinnervation (C"
     },
     {
       "name" : "value",
@@ -1508,6 +2168,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Gross eye defects"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3729-2"
     }]
@@ -1517,6 +2182,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Eye-related MRI findings"
     },
     {
       "name" : "value",
@@ -1530,6 +2200,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] International classification (ABC) of  intra"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3732-6"
     }]
@@ -1539,6 +2214,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] International classification for extraocular"
     },
     {
       "name" : "value",
@@ -1552,6 +2232,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Corneal dystrophy type"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3735-9"
     }]
@@ -1561,6 +2246,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Previous ophthalmologic treatment"
     },
     {
       "name" : "value",
@@ -1574,6 +2264,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Ophthalmologic disease related systemic find"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3739-1"
     }]
@@ -1583,6 +2278,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Whole mount exam findings"
     },
     {
       "name" : "value",
@@ -1596,6 +2296,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Ocular motility findings"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3756-5"
     }]
@@ -1605,6 +2310,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Ocular fundus angiography findings"
     },
     {
       "name" : "value",
@@ -1618,6 +2328,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Optical coherent tomography (OCT) findings"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3763-1"
     }]
@@ -1627,6 +2342,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Objective refraction method"
     },
     {
       "name" : "value",
@@ -1640,6 +2360,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Refraction method"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3788-8"
     }]
@@ -1649,6 +2374,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "DBS collection method"
     },
     {
       "name" : "value",
@@ -1662,6 +2392,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "True|False|Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3865-4"
     }]
@@ -1671,6 +2406,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Progression of problem"
     },
     {
       "name" : "value",
@@ -1684,6 +2424,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] VEP result"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3871-2"
     }]
@@ -1693,6 +2438,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "[NEI] Pigmentation"
     },
     {
       "name" : "value",
@@ -1706,6 +2456,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "NCHS_Tabulated Ethnicity Detail"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL3972-8"
     }]
@@ -1715,6 +2470,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CDC_Transmission setting"
     },
     {
       "name" : "value",
@@ -1728,6 +2488,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Allelic phase"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4025-4"
     }]
@@ -1737,6 +2502,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PCORI_response_method"
     },
     {
       "name" : "value",
@@ -1750,6 +2520,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "yes|no|no info|unk|other"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4122-9"
     }]
@@ -1759,6 +2534,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PCORI_Smoked_v_non-smoked_tobacco"
     },
     {
       "name" : "value",
@@ -1772,6 +2552,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Expedite|Routine|Stat|NI|UN|OT"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4124-5"
     }]
@@ -1781,6 +2566,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Laboratory|POC|NI|UN|OT"
     },
     {
       "name" : "value",
@@ -1794,6 +2584,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PCORI_Cause_of_death_rank"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4126-0"
     }]
@@ -1803,6 +2598,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Yes, specify | No | Unknown"
     },
     {
       "name" : "value",
@@ -1816,6 +2616,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Pregnant|Not pregnant|Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4129-4"
     }]
@@ -1825,6 +2630,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Confirmed|Probable|No|Unknown"
     },
     {
       "name" : "value",
@@ -1838,6 +2648,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CMS IRFPAI_GG0100 Prior Functioning"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4151-8"
     }]
@@ -1847,6 +2662,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "No | Yes | Unknown 8"
     },
     {
       "name" : "value",
@@ -1860,6 +2680,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Imputed parts of DOD"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4207-8"
     }]
@@ -1869,6 +2694,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Excellent|Fair|Poor|NI|UN|OT"
     },
     {
       "name" : "value",
@@ -1882,6 +2712,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Independent | Needed some help | Dependent | Uknwn"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4309-2"
     }]
@@ -1891,6 +2726,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Reason vaccine not received"
     },
     {
       "name" : "value",
@@ -1904,6 +2744,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Antibody test results"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4354-8"
     }]
@@ -1913,6 +2758,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Relationships"
     },
     {
       "name" : "value",
@@ -1926,6 +2776,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Susceptible|Immune|Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4359-7"
     }]
@@ -1935,6 +2790,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Confirmed|Prob|Infect only|Not CRS|Stillbirth|Unk"
     },
     {
       "name" : "value",
@@ -1948,6 +2808,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "RV genotype"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4363-9"
     }]
@@ -1957,6 +2822,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Private sector|Public sector|Unknown"
     },
     {
       "name" : "value",
@@ -1970,6 +2840,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CMS_LCDS Payer information"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4470-2"
     }]
@@ -1979,6 +2854,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Healthy|Mild disease|Mild systemic|Severe systemic"
     },
     {
       "name" : "value",
@@ -1992,6 +2872,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "<3 meters | >3 meters | Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4652-5"
     }]
@@ -2001,6 +2886,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Role of person in accident"
     },
     {
       "name" : "value",
@@ -2014,6 +2904,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Minimal|Moderate|Severe"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL4656-6"
     }]
@@ -2023,6 +2918,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Current every day user | Current some day user"
     },
     {
       "name" : "value",
@@ -2036,6 +2936,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "DEEDS4.08_1st Acuity Assessment"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL486-2"
     }]
@@ -2045,6 +2950,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CMS MDS Prior Functioning"
     },
     {
       "name" : "value",
@@ -2058,6 +2968,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "HL79010_Med reason-unsched trip"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL508-3"
     }]
@@ -2067,6 +2982,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "DEEDS4.21_1st HR"
     },
     {
       "name" : "value",
@@ -2080,6 +3000,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "DEEDS4.26_1st Temp"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL527-3"
     }]
@@ -2089,6 +3014,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "DEEDS4.29_Measured weight"
     },
     {
       "name" : "value",
@@ -2102,6 +3032,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Intentional | Unintentional | Unkwn"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5313-3"
     }]
@@ -2111,6 +3046,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Monochorionic | Dichorionic | Unknown | NA"
     },
     {
       "name" : "value",
@@ -2124,6 +3064,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Never | One | More than one | Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5318-2"
     }]
@@ -2133,6 +3078,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Highest Education Level"
     },
     {
       "name" : "value",
@@ -2146,6 +3096,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CMS IRFPAI v4.0_GG0100 Prior Functioning"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5420-6"
     }]
@@ -2155,6 +3110,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_1_D_Payor Information"
     },
     {
       "name" : "value",
@@ -2168,6 +3128,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_2_b01_Prior residence type"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL545-5"
     }]
@@ -2177,6 +3142,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_2_b05a_Prior Functioning"
     },
     {
       "name" : "value",
@@ -2190,6 +3160,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_2_B3_Community assistance"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL548-9"
     }]
@@ -2199,6 +3174,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Origin of Genetic Variance"
     },
     {
       "name" : "value",
@@ -2212,6 +3192,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_2_B3a_Living situation"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL549-7"
     }]
@@ -2221,6 +3206,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_2_B4_Structural barriers"
     },
     {
       "name" : "value",
@@ -2234,6 +3224,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_2_B6_Mobility devices"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL551-3"
     }]
@@ -2243,6 +3238,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Exposure source"
     },
     {
       "name" : "value",
@@ -2256,6 +3256,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Yes/No/Unk/Not Assessed"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5521-1"
     }]
@@ -2265,6 +3270,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Entrapment"
     },
     {
       "name" : "value",
@@ -2278,6 +3288,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Breathing pattern - cluster"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5546-8"
     }]
@@ -2287,6 +3302,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Bag-mask-ventilation"
     },
     {
       "name" : "value",
@@ -2300,6 +3320,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_3_g02a1_Number of pressure ulcers"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL555-4"
     }]
@@ -2309,6 +3334,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "COVID19 exposures"
     },
     {
       "name" : "value",
@@ -2322,6 +3352,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Animal exposure"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5598-9"
     }]
@@ -2331,6 +3366,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1030"
     },
     {
       "name" : "value",
@@ -2344,6 +3384,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Yes|No|Refused to answer|Asked Unk|Unk"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5605-2"
     }]
@@ -2353,6 +3398,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1040_Cancer stager"
     },
     {
       "name" : "value",
@@ -2366,6 +3416,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_5_c01a_Understanding Verbal Content"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL576-0"
     }]
@@ -2375,6 +3430,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_5_c01b_Expression of Ideas/Wants"
     },
     {
       "name" : "value",
@@ -2388,6 +3448,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_5_c01c_Vision"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL578-6"
     }]
@@ -2397,6 +3462,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CARE_5_c01d_Ability to Hear"
     },
     {
       "name" : "value",
@@ -2410,6 +3480,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1050_Descriptor stage"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL58-9"
     }]
@@ -2419,6 +3494,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Infection specification"
     },
     {
       "name" : "value",
@@ -2432,6 +3512,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Vaccine administration location"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5862-9"
     }]
@@ -2441,6 +3526,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "EuroSpine Morbidity state"
     },
     {
       "name" : "value",
@@ -2454,6 +3544,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Elapsed time"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5909-8"
     }]
@@ -2463,6 +3558,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Blood loss"
     },
     {
       "name" : "value",
@@ -2476,6 +3576,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Blood transfusion"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL5911-4"
     }]
@@ -2485,6 +3590,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "SARS-CoV-2 immunization status"
     },
     {
       "name" : "value",
@@ -2498,6 +3608,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Seizure frequency"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL6117-7"
     }]
@@ -2507,6 +3622,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_193"
     },
     {
       "name" : "value",
@@ -2520,6 +3640,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "USSG-FHT age"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL619-8"
     }]
@@ -2529,6 +3654,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Yes|No|Unknown"
     },
     {
       "name" : "value",
@@ -2542,6 +3672,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Schmid fall"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL6329-8"
     }]
@@ -2551,6 +3686,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Metabolic syndrome"
     },
     {
       "name" : "value",
@@ -2564,6 +3704,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1130_Peds staging coding system"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL66-2"
     }]
@@ -2573,6 +3718,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Taken medication for high blood cholesterol"
     },
     {
       "name" : "value",
@@ -2586,6 +3736,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Age start med"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL6862-8"
     }]
@@ -2595,6 +3750,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CMS HOPE Payer Info"
     },
     {
       "name" : "value",
@@ -2608,6 +3768,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Yes, No, Unknown"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL6950-1"
     }]
@@ -2617,6 +3782,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Red reflex"
     },
     {
       "name" : "value",
@@ -2630,6 +3800,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Residential situation"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7235-6"
     }]
@@ -2639,6 +3814,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing status"
     },
     {
       "name" : "value",
@@ -2652,6 +3832,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing status Qs 2,3,5,8,10,15,16"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7251-3"
     }]
@@ -2661,6 +3846,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 4,6,7,11"
     },
     {
       "name" : "value",
@@ -2674,6 +3864,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 19"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7255-4"
     }]
@@ -2683,6 +3878,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 18,20,21"
     },
     {
       "name" : "value",
@@ -2696,6 +3896,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 2,3"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7259-6"
     }]
@@ -2705,6 +3910,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing 4, 7"
     },
     {
       "name" : "value",
@@ -2718,6 +3928,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 5"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7263-8"
     }]
@@ -2727,6 +3942,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 6"
     },
     {
       "name" : "value",
@@ -2740,6 +3960,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 8"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7267-9"
     }]
@@ -2749,6 +3974,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 9"
     },
     {
       "name" : "value",
@@ -2762,6 +3992,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 10"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7271-1"
     }]
@@ -2771,6 +4006,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 11"
     },
     {
       "name" : "value",
@@ -2784,6 +4024,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing 12"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7275-2"
     }]
@@ -2793,6 +4038,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 13"
     },
     {
       "name" : "value",
@@ -2806,6 +4056,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 14"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7279-4"
     }]
@@ -2815,6 +4070,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Housing Q 15"
     },
     {
       "name" : "value",
@@ -2828,6 +4088,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Antithrombotic agents"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7311-5"
     }]
@@ -2837,6 +4102,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Smoking status"
     },
     {
       "name" : "value",
@@ -2850,6 +4120,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Alcohol use"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7317-2"
     }]
@@ -2859,6 +4134,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Family history of malignant tumor"
     },
     {
       "name" : "value",
@@ -2872,6 +4152,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Cancer"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7319-8"
     }]
@@ -2881,6 +4166,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Previous history cancer"
     },
     {
       "name" : "value",
@@ -2894,6 +4184,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "JED_Previous history of abdominal surgeries"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL7323-0"
     }]
@@ -2903,6 +4198,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Residential situation extended"
     },
     {
       "name" : "value",
@@ -2916,6 +4216,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX02_01_body weight"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL760-0"
     }]
@@ -2925,6 +4230,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "PhenX02_02_wt <9lbs at birth"
     },
     {
       "name" : "value",
@@ -2938,6 +4248,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS-C_M0150"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL772-5"
     }]
@@ -2947,6 +4262,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS-C_M0110"
     },
     {
       "name" : "value",
@@ -2960,6 +4280,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS-C_M1036"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL779-0"
     }]
@@ -2969,6 +4294,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS-C_M2110"
     },
     {
       "name" : "value",
@@ -2982,6 +4312,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "OASIS-C_M2300"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL824-4"
     }]
@@ -2991,6 +4326,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Education"
     },
     {
       "name" : "value",
@@ -3004,6 +4344,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "N/Yn/Ynn/U"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL866-5"
     }]
@@ -3013,6 +4358,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AnginaLoc"
     },
     {
       "name" : "value",
@@ -3026,6 +4376,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AnginaRad"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL870-7"
     }]
@@ -3035,6 +4390,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AnginaType"
     },
     {
       "name" : "value",
@@ -3048,6 +4408,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "AnginaRelief"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL872-3"
     }]
@@ -3057,6 +4422,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "N/Y/M/U"
     },
     {
       "name" : "value",
@@ -3070,6 +4440,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "DeathOnset"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL875-6"
     }]
@@ -3079,6 +4454,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "TimeCHDdeath"
     },
     {
       "name" : "value",
@@ -3092,6 +4472,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Hosp/MD"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL890-5"
     }]
@@ -3103,6 +4488,11 @@
       "valueCode" : "AnswerList"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "NAACCR_3600"
+    },
+    {
       "name" : "value",
       "valueCode" : "LL928-3"
     }]
@@ -3112,6 +4502,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "AnswerList"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "CR_1410_BRM treatment"
     },
     {
       "name" : "value",

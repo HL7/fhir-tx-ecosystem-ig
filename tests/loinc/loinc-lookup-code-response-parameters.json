@@ -391,6 +391,11 @@
       "valueCode" : "COMPONENT"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Glucose"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP14635-4"
     }]
@@ -498,6 +503,11 @@
       "valueCode" : "parent"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Glucose | Blood | Chemistry - non-challenge"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP385526-1"
     }]
@@ -507,6 +517,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "PROPERTY"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "MCnc"
     },
     {
       "name" : "value",
@@ -685,6 +700,11 @@
       "valueCode" : "SCALE_TYP"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Qn"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP7753-9"
     }]
@@ -707,6 +727,11 @@
       "valueCode" : "SYSTEM"
     },
     {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Bld"
+    },
+    {
       "name" : "value",
       "valueCode" : "LP7057-5"
     }]
@@ -716,6 +741,11 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "TIME_ASPCT"
+    },
+    {
+      "$optional$" : true,
+      "name" : "description",
+      "valueString" : "Pt"
     },
     {
       "name" : "value",
