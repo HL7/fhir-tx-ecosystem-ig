@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "known-properties-inactive-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/known-properties-inactive-in",
+  "version" : "5.0.0",
+  "name" : "KnownPropertiesInactiveIn",
+  "title" : "Known Properties: inactive in true,false",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "filter" : [{
+        "property" : "inactive",
+        "op" : "in",
+        "value" : "true,false"
+      }]
+    }]
+  }
+}

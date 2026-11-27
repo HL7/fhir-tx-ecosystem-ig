@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "known-properties-status-exists-false",
+  "url" : "http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false",
+  "version" : "5.0.0",
+  "name" : "KnownPropertiesStatusExistsFalse",
+  "title" : "Known Properties: status exists false",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "filter" : [{
+        "property" : "status",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}

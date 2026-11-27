@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "known-properties-deprecated-exists-true",
+  "url" : "http://hl7.org/fhir/test/ValueSet/known-properties-deprecated-exists-true",
+  "version" : "5.0.0",
+  "name" : "KnownPropertiesDeprecatedExistsTrue",
+  "title" : "Known Properties: deprecated exists true",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "filter" : [{
+        "property" : "deprecated",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}

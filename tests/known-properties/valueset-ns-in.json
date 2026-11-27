@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "known-properties-ns-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/known-properties-ns-in",
+  "version" : "5.0.0",
+  "name" : "KnownPropertiesNotselectableIn",
+  "title" : "Known Properties: notSelectable in false,true",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "filter" : [{
+        "property" : "notSelectable",
+        "op" : "in",
+        "value" : "false,true"
+      }]
+    }]
+  }
+}

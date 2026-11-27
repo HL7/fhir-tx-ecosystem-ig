@@ -1,0 +1,35 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "id" : "$id$",
+  "url" : "http://hl7.org/fhir/test/ValueSet/known-properties-inactive-exists-false",
+  "version" : "5.0.0",
+  "name" : "KnownPropertiesInactiveExistsFalse",
+  "title" : "Known Properties: inactive exists false",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "filter" : [{
+        "property" : "inactive",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  },
+  "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/known-properties|1.0.0"
+    }]
+  }
+}

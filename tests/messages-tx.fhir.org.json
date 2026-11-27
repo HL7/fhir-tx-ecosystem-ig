@@ -2154,5 +2154,36 @@
   "simple/simple-validate-prop-not-in-bad-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#mg' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-not-in|5.0.0'",
     "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#mg' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-not-in|5.0.0'"
+  },
+  "known-properties/validate-ns-exists-false-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#active' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-ns-exists-false|5.0.0'",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#active' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-ns-exists-false|5.0.0'"
+  },
+  "known-properties/validate-inactive-not-in-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#flagged-inactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-inactive-not-in|5.0.0'",
+    "2" : "The concept 'flagged-inactive' has a status of inactive and its use should be reviewed",
+    "3" : "The concept 'flagged-inactive' has a status of inactive and its use should be reviewed; The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#flagged-inactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-inactive-not-in|5.0.0'"
+  },
+  "known-properties/validate-status-exists-false-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#active' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false|5.0.0'",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#active' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false|5.0.0'"
+  },
+  "known-properties/validate-deprecated-not-in-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#flagged-deprecated' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-deprecated-not-in|5.0.0'",
+    "2" : "The concept 'flagged-deprecated' is deprecated and its use should be reviewed",
+    "3" : "The concept 'flagged-deprecated' is deprecated and its use should be reviewed; The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#flagged-deprecated' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-deprecated-not-in|5.0.0'"
+  },
+  "known-properties/validate-deprecated-status-good-response-parameters.json" : {
+    "1" : "The concept 'deprecated' is deprecated and its use should be reviewed",
+    "2" : "The concept 'deprecated' is deprecated and its use should be reviewed"
+  },
+  "known-properties/validate-deprecated-status-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#deprecated' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false|5.0.0'",
+    "2" : "The concept 'deprecated' is deprecated and its use should be reviewed",
+    "3" : "The concept 'deprecated' is deprecated and its use should be reviewed; The provided code 'http://hl7.org/fhir/test/CodeSystem/known-properties#deprecated' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false|5.0.0'"
+  },
+  "known-properties/validate-deprecated-flag-good-response-parameters.json" : {
+    "1" : "The concept 'flagged-deprecated' is deprecated and its use should be reviewed",
+    "2" : "The concept 'flagged-deprecated' is deprecated and its use should be reviewed"
   }
 }

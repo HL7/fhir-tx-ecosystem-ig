@@ -4941,6 +4941,238 @@
       }
     ]
   },{
+    "name" : "known-properties",
+    "mode" : "general",
+    "description" : "Filters on the properties with a built-in meaning - notSelectable, status, inactive and deprecated - with =, in, not-in and exists. A concept with no value for the property is selected by not-in and exists false, and by nothing else. notSelectable and status have a value only when something says what it is; inactive and deprecated always have one (true or false)",
+    "setup" : [
+       "known-properties/codesystem-known-properties.json", "known-properties/valueset-ns-eq.json", "known-properties/valueset-ns-in.json", "known-properties/valueset-ns-not-in.json", "known-properties/valueset-ns-exists-true.json", "known-properties/valueset-ns-exists-false.json", "known-properties/valueset-status-eq.json", "known-properties/valueset-status-in.json", "known-properties/valueset-status-not-in.json", "known-properties/valueset-status-exists-true.json", "known-properties/valueset-status-exists-false.json", "known-properties/valueset-inactive-eq.json", "known-properties/valueset-inactive-eq-uc.json", "known-properties/valueset-inactive-in.json", "known-properties/valueset-inactive-not-in.json", "known-properties/valueset-inactive-exists-true.json", "known-properties/valueset-inactive-exists-false.json", "known-properties/valueset-deprecated-eq.json", "known-properties/valueset-deprecated-in.json", "known-properties/valueset-deprecated-not-in.json", "known-properties/valueset-deprecated-exists-true.json", "known-properties/valueset-deprecated-exists-false.json"],
+    "tests" : [
+      {
+        "name" : "known-properties-expand-ns-eq",
+        "description" : "A filter 'notSelectable = true' on a property with a built-in meaning selects the concept whose notSelectable property (declared with the code abstract) is true",
+        "operation" : "expand",
+        "request" : "known-properties/expand-ns-eq-request-parameters.json",
+        "response" : "known-properties/expand-ns-eq-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-ns-in",
+        "description" : "A filter 'notSelectable in false,true' on a property with a built-in meaning selects the concepts that have a notSelectable value, true or false",
+        "operation" : "expand",
+        "request" : "known-properties/expand-ns-in-request-parameters.json",
+        "response" : "known-properties/expand-ns-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-ns-not-in",
+        "description" : "A filter 'notSelectable not-in true' on a property with a built-in meaning selects every concept whose notSelectable value is not true - including the concepts that have no notSelectable property at all",
+        "operation" : "expand",
+        "request" : "known-properties/expand-ns-not-in-request-parameters.json",
+        "response" : "known-properties/expand-ns-not-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-ns-exists-true",
+        "description" : "A filter 'notSelectable exists true' on a property with a built-in meaning selects the concepts that have a notSelectable property (true or false)",
+        "operation" : "expand",
+        "request" : "known-properties/expand-ns-exists-true-request-parameters.json",
+        "response" : "known-properties/expand-ns-exists-true-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-ns-exists-false",
+        "description" : "A filter 'notSelectable exists false' on a property with a built-in meaning selects the concepts that have no notSelectable property",
+        "operation" : "expand",
+        "request" : "known-properties/expand-ns-exists-false-request-parameters.json",
+        "response" : "known-properties/expand-ns-exists-false-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-status-eq",
+        "description" : "A filter 'status = retired' on a property with a built-in meaning selects the concept whose status is retired",
+        "operation" : "expand",
+        "request" : "known-properties/expand-status-eq-request-parameters.json",
+        "response" : "known-properties/expand-status-eq-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-status-in",
+        "description" : "A filter 'status in active,deprecated' on a property with a built-in meaning selects the concepts whose status is active or deprecated - including flagged-deprecated, whose status is deprecated because its deprecated property is true",
+        "operation" : "expand",
+        "request" : "known-properties/expand-status-in-request-parameters.json",
+        "response" : "known-properties/expand-status-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-status-not-in",
+        "description" : "A filter 'status not-in active' on a property with a built-in meaning selects every concept whose status is not active - including plain, which has no status at all",
+        "operation" : "expand",
+        "request" : "known-properties/expand-status-not-in-request-parameters.json",
+        "response" : "known-properties/expand-status-not-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-status-exists-true",
+        "description" : "A filter 'status exists true' on a property with a built-in meaning selects the concepts that have a status: from the status property, or from the inactive or deprecated property (flagged-inactive, flagged-deprecated). Only plain has none",
+        "operation" : "expand",
+        "request" : "known-properties/expand-status-exists-true-request-parameters.json",
+        "response" : "known-properties/expand-status-exists-true-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-status-exists-false",
+        "description" : "A filter 'status exists false' on a property with a built-in meaning selects the concept with no status: plain",
+        "operation" : "expand",
+        "request" : "known-properties/expand-status-exists-false-request-parameters.json",
+        "response" : "known-properties/expand-status-exists-false-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-inactive-eq",
+        "description" : "A filter 'inactive = true' on a property with a built-in meaning selects the inactive concepts: retired (status retired) and flagged-inactive (inactive property true)",
+        "operation" : "expand",
+        "request" : "known-properties/expand-inactive-eq-request-parameters.json",
+        "response" : "known-properties/expand-inactive-eq-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-inactive-eq-uc",
+        "description" : "A filter 'inactive = TRUE' on a property with a built-in meaning selects nothing: the value is case sensitive, and TRUE is not true",
+        "operation" : "expand",
+        "request" : "known-properties/expand-inactive-eq-uc-request-parameters.json",
+        "response" : "known-properties/expand-inactive-eq-uc-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-inactive-in",
+        "description" : "A filter 'inactive in true,false' on a property with a built-in meaning selects every concept: inactive is always either true or false",
+        "operation" : "expand",
+        "request" : "known-properties/expand-inactive-in-request-parameters.json",
+        "response" : "known-properties/expand-inactive-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-inactive-not-in",
+        "description" : "A filter 'inactive not-in true' on a property with a built-in meaning selects the concepts that are not inactive",
+        "operation" : "expand",
+        "request" : "known-properties/expand-inactive-not-in-request-parameters.json",
+        "response" : "known-properties/expand-inactive-not-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-inactive-exists-true",
+        "description" : "A filter 'inactive exists true' on a property with a built-in meaning selects every concept: every concept has a value for inactive (true or false)",
+        "operation" : "expand",
+        "request" : "known-properties/expand-inactive-exists-true-request-parameters.json",
+        "response" : "known-properties/expand-inactive-exists-true-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-inactive-exists-false",
+        "description" : "A filter 'inactive exists false' on a property with a built-in meaning selects nothing: every concept has a value for inactive",
+        "operation" : "expand",
+        "request" : "known-properties/expand-inactive-exists-false-request-parameters.json",
+        "response" : "known-properties/expand-inactive-exists-false-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-deprecated-eq",
+        "description" : "A filter 'deprecated = true' on a property with a built-in meaning selects the deprecated concepts: retired and deprecated (status), and flagged-deprecated (deprecated property true)",
+        "operation" : "expand",
+        "request" : "known-properties/expand-deprecated-eq-request-parameters.json",
+        "response" : "known-properties/expand-deprecated-eq-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-deprecated-in",
+        "description" : "A filter 'deprecated in true,false' on a property with a built-in meaning selects every concept: deprecated is always either true or false",
+        "operation" : "expand",
+        "request" : "known-properties/expand-deprecated-in-request-parameters.json",
+        "response" : "known-properties/expand-deprecated-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-deprecated-not-in",
+        "description" : "A filter 'deprecated not-in true' on a property with a built-in meaning selects the concepts that are not deprecated",
+        "operation" : "expand",
+        "request" : "known-properties/expand-deprecated-not-in-request-parameters.json",
+        "response" : "known-properties/expand-deprecated-not-in-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-deprecated-exists-true",
+        "description" : "A filter 'deprecated exists true' on a property with a built-in meaning selects every concept: every concept has a value for deprecated (true or false)",
+        "operation" : "expand",
+        "request" : "known-properties/expand-deprecated-exists-true-request-parameters.json",
+        "response" : "known-properties/expand-deprecated-exists-true-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-expand-deprecated-exists-false",
+        "description" : "A filter 'deprecated exists false' on a property with a built-in meaning selects nothing: every concept has a value for deprecated",
+        "operation" : "expand",
+        "request" : "known-properties/expand-deprecated-exists-false-request-parameters.json",
+        "response" : "known-properties/expand-deprecated-exists-false-response-valueSet.json"
+      },
+      {
+        "name" : "known-properties-validate-ns-exists-false-good",
+        "description" : "$validate-code against a value set with the filter 'notSelectable exists false': plain has no notSelectable property: in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-ns-exists-false-good-request-parameters.json",
+        "response" : "known-properties/validate-ns-exists-false-good-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-ns-exists-false-bad",
+        "description" : "$validate-code against a value set with the filter 'notSelectable exists false': active has a notSelectable property (false): not in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-ns-exists-false-bad-request-parameters.json",
+        "response" : "known-properties/validate-ns-exists-false-bad-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-status-exists-false-good",
+        "description" : "$validate-code against a value set with the filter 'status exists false': plain has no status: in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-status-exists-false-good-request-parameters.json",
+        "response" : "known-properties/validate-status-exists-false-good-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-status-exists-false-bad",
+        "description" : "$validate-code against a value set with the filter 'status exists false': active has a status: not in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-status-exists-false-bad-request-parameters.json",
+        "response" : "known-properties/validate-status-exists-false-bad-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-inactive-not-in-good",
+        "description" : "$validate-code against a value set with the filter 'inactive not-in true': active is not inactive: in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-inactive-not-in-good-request-parameters.json",
+        "response" : "known-properties/validate-inactive-not-in-good-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-inactive-not-in-bad",
+        "description" : "$validate-code against a value set with the filter 'inactive not-in true': flagged-inactive is inactive (its inactive property is true): not in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-inactive-not-in-bad-request-parameters.json",
+        "response" : "known-properties/validate-inactive-not-in-bad-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-deprecated-in-good",
+        "description" : "$validate-code against a value set with the filter 'deprecated in true,false': plain is not deprecated, and deprecated false is in the list: in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-deprecated-in-good-request-parameters.json",
+        "response" : "known-properties/validate-deprecated-in-good-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-deprecated-not-in-bad",
+        "description" : "$validate-code against a value set with the filter 'deprecated not-in true': flagged-deprecated is deprecated (its deprecated property is true): not in the value set. $validate-code must give the built-in properties the same meaning as $expand",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-deprecated-not-in-bad-request-parameters.json",
+        "response" : "known-properties/validate-deprecated-not-in-bad-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-deprecated-status-good",
+        "description" : "$validate-code of deprecated (status deprecated) against a value set it is in ('status exists true'): valid, with a warning that the concept is deprecated, and the status output parameter",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-deprecated-status-good-request-parameters.json",
+        "response" : "known-properties/validate-deprecated-status-good-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-deprecated-status-bad",
+        "description" : "$validate-code of deprecated (status deprecated) against a value set it is not in ('status exists false'): not valid, and still the warning that the concept is deprecated, and the status output parameter - the code is checked against its code system whether or not it is in the value set",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-deprecated-status-bad-request-parameters.json",
+        "response" : "known-properties/validate-deprecated-status-bad-response-parameters.json"
+      },
+      {
+        "name" : "known-properties-validate-deprecated-flag-good",
+        "description" : "$validate-code of flagged-deprecated (deprecated property true, no status property) against a value set it is in ('deprecated = true'): its status is deprecated, so valid, with the warning that the concept is deprecated, and the status output parameter",
+        "operation" : "validate-code",
+        "request" : "known-properties/validate-deprecated-flag-good-request-parameters.json",
+        "response" : "known-properties/validate-deprecated-flag-good-response-parameters.json"
+      }
+    ]
+  },{
     "name" : "inactive",
     "mode" : "general",
     "description" : "Testing Inactive codes",

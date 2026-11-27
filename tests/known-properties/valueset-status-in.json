@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "known-properties-status-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/known-properties-status-in",
+  "version" : "5.0.0",
+  "name" : "KnownPropertiesStatusIn",
+  "title" : "Known Properties: status in active,deprecated",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "filter" : [{
+        "property" : "status",
+        "op" : "in",
+        "value" : "active,deprecated"
+      }]
+    }]
+  }
+}

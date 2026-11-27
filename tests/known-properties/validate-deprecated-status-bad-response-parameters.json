@@ -1,0 +1,76 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "deprecated"
+  },
+  {
+    "$optional$" : true,
+    "name" : "display",
+    "valueString" : "Status deprecated"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "$optional-properties$" : ["location"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false|5.0.0$"
+        },
+        "location" : ["code"],
+        "expression" : ["code"]
+      },
+      {
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "DEPRECATED_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "$external:2:deprecated|deprecated$"
+        }
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:3:http://hl7.org/fhir/test/ValueSet/known-properties-status-exists-false|5.0.0$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "status",
+    "valueCode" : "deprecated"
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/known-properties"
+  },
+  {
+    "name" : "version",
+    "valueString" : "1.0.0",
+    "$optional$" : "warning:version"
+  }]
+}

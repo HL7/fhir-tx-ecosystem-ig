@@ -1,0 +1,85 @@
+{
+  "resourceType" : "CodeSystem",
+  "language" : "en",
+  "id" : "known-properties",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+  "version" : "1.0.0",
+  "name" : "KnownPropertiesTestCodeSystem",
+  "title" : "Known Properties Test Code System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "description" : "For testing filters on the built-in properties notSelectable, status, inactive and deprecated. notSelectable is declared with the code abstract, so a filter on notSelectable finds it by its uri. status comes from the status property, or from the inactive or deprecated property when there is no status. inactive is true for a concept whose inactive property is true or whose status is retired; deprecated is true for a concept whose deprecated property is true or whose status is deprecated or retired",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "property" : [{
+    "code" : "abstract",
+    "uri" : "http://hl7.org/fhir/concept-properties#notSelectable",
+    "type" : "boolean"
+  },{
+    "code" : "status",
+    "uri" : "http://hl7.org/fhir/concept-properties#status",
+    "type" : "code"
+  },{
+    "code" : "inactive",
+    "uri" : "http://hl7.org/fhir/concept-properties#inactive",
+    "type" : "boolean"
+  },{
+    "code" : "deprecated",
+    "uri" : "http://hl7.org/fhir/concept-properties#deprecated",
+    "type" : "boolean"
+  }],
+  "concept" : [{
+    "code" : "active",
+    "display" : "Active, selectable",
+    "property" : [{
+      "code" : "abstract",
+      "valueBoolean" : false
+    },{
+      "code" : "status",
+      "valueCode" : "active"
+    }]
+  },{
+    "code" : "abstract",
+    "display" : "Active, not selectable",
+    "property" : [{
+      "code" : "abstract",
+      "valueBoolean" : true
+    },{
+      "code" : "status",
+      "valueCode" : "active"
+    }]
+  },{
+    "code" : "retired",
+    "display" : "Status retired",
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "retired"
+    }]
+  },{
+    "code" : "deprecated",
+    "display" : "Status deprecated",
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    }]
+  },{
+    "code" : "flagged-inactive",
+    "display" : "Inactive property, no status",
+    "property" : [{
+      "code" : "inactive",
+      "valueBoolean" : true
+    }]
+  },{
+    "code" : "flagged-deprecated",
+    "display" : "Deprecated property, no status",
+    "property" : [{
+      "code" : "deprecated",
+      "valueBoolean" : true
+    }]
+  },{
+    "code" : "plain",
+    "display" : "No properties"
+  }]
+}
