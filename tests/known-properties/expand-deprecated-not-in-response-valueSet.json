@@ -25,7 +25,7 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 4,
+    "total" : 5,
     "offset" : 0,
     "parameter" : [{
       "name" : "used-codesystem",
@@ -60,6 +60,16 @@
       "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
       "code" : "plain",
       "display" : "No properties"
+    },
+    {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/known-properties",
+      "inactive" : true,
+      "code" : "retired",
+      "display" : "Status retired",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "retired"
+      }]
     }]
   }
 }
