@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-filter-prop-not-in",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-prop-not-in",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterPropNotIn",
+  "title" : "Simple ValueSet Filter: unit not-in mg",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/sparse-properties",
+      "filter" : [{
+        "property" : "unit",
+        "op" : "not-in",
+        "value" : "mg"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/simple-filter-prop-not-in"
+  },{
+    "name" : "code",
+    "valueCode" : "none"
+  },{
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/sparse-properties"
+  }]
+}

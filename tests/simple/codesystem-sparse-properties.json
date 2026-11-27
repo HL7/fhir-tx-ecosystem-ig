@@ -1,0 +1,50 @@
+{
+  "resourceType" : "CodeSystem",
+  "language" : "en",
+  "id" : "sparse-properties",
+  "url" : "http://hl7.org/fhir/test/CodeSystem/sparse-properties",
+  "version" : "1.0.0",
+  "name" : "SparsePropertiesTestCodeSystem",
+  "title" : "Sparse Properties Test Code System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "description" : "A code system where not every concept has every property: mg and g have a unit, other-only has only the other property, and none has no property element at all. For testing the exists and not-in filters on a property",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "property" : [{
+    "code" : "unit",
+    "uri" : "http://hl7.org/fhir/test/CodeSystem/properties#unit",
+    "type" : "code"
+  },{
+    "code" : "other",
+    "uri" : "http://hl7.org/fhir/test/CodeSystem/properties#other",
+    "type" : "string"
+  }],
+  "concept" : [{
+    "code" : "mg",
+    "display" : "Milligram",
+    "property" : [{
+      "code" : "unit",
+      "valueCode" : "mg"
+    }]
+  },{
+    "code" : "g",
+    "display" : "Gram",
+    "property" : [{
+      "code" : "unit",
+      "valueCode" : "g"
+    }]
+  },{
+    "code" : "other-only",
+    "display" : "Other property only",
+    "property" : [{
+      "code" : "other",
+      "valueString" : "x"
+    }]
+  },{
+    "code" : "none",
+    "display" : "No properties"
+  }]
+}

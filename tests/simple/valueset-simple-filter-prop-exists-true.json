@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "simple-filter-prop-exists-true",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-filter-prop-exists-true",
+  "version" : "5.0.0",
+  "name" : "SimpleValueSetFilterPropExistsTrue",
+  "title" : "Simple ValueSet Filter: unit exists true",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-27",
+  "publisher" : "FHIR Project",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/test/CodeSystem/sparse-properties",
+      "filter" : [{
+        "property" : "unit",
+        "op" : "exists",
+        "value" : "true"
+      }]
+    }]
+  }
+}

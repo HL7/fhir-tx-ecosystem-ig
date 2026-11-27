@@ -46,7 +46,8 @@
     "description" : "basic tests, setting up for the API tests to come",
     "runner" : "7.0.6",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-enumerated-invalid.json", "simple/valueset-filter-isa-invalid.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-concept-not-in.json", "simple/valueset-filter-code-not-in.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-alt.json",
-    "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json"],
+    "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json",
+    "simple/codesystem-sparse-properties.json", "simple/valueset-simple-filter-prop-exists-true.json", "simple/valueset-simple-filter-prop-exists-false.json", "simple/valueset-simple-filter-prop-not-in.json"],
     "tests" :[
       {
         "name" : "simple-expand-all",
@@ -201,6 +202,60 @@
         "operation" : "expand",
         "request" : "simple/simple-expand-regex-none-request-parameters.json",
         "response" : "simple/simple-expand-regex-none-response-valueSet.json"
+      },{
+        "name" : "simple-expand-prop-exists-true",
+        "description" : "A filter 'unit exists true' selects the concepts that have a value for the property (mg, g), and not those that have other properties (other-only) or no property element at all (none)",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-prop-exists-true-request-parameters.json",
+        "response" : "simple/simple-expand-prop-exists-true-response-valueSet.json"
+      },{
+        "name" : "simple-expand-prop-exists-false",
+        "description" : "A filter 'unit exists false' selects the concepts that have no value for the property: other-only, which has only another property, and none, which has no property element at all",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-prop-exists-false-request-parameters.json",
+        "response" : "simple/simple-expand-prop-exists-false-response-valueSet.json"
+      },{
+        "name" : "simple-expand-prop-not-in",
+        "description" : "A filter 'unit not-in mg' selects every concept whose unit is not mg - including the concepts that have no unit at all: other-only (another property only) and none (no property element)",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-prop-not-in-request-parameters.json",
+        "response" : "simple/simple-expand-prop-not-in-response-valueSet.json"
+      },{
+        "name" : "simple-validate-prop-exists-true-good",
+        "description" : "$validate-code of mg (which has a unit) against a value set with the filter 'unit exists true': valid. The server must support exists on a property in $validate-code as well as $expand",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-prop-exists-true-good-request-parameters.json",
+        "response" : "simple/simple-validate-prop-exists-true-good-response-parameters.json"
+      },{
+        "name" : "simple-validate-prop-exists-true-bad",
+        "description" : "$validate-code of none (no property element) against a value set with the filter 'unit exists true': not in the value set",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-prop-exists-true-bad-request-parameters.json",
+        "response" : "simple/simple-validate-prop-exists-true-bad-response-parameters.json"
+      },{
+        "name" : "simple-validate-prop-exists-false-good",
+        "description" : "$validate-code of none (no property element) against a value set with the filter 'unit exists false': valid",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-prop-exists-false-good-request-parameters.json",
+        "response" : "simple/simple-validate-prop-exists-false-good-response-parameters.json"
+      },{
+        "name" : "simple-validate-prop-exists-false-bad",
+        "description" : "$validate-code of mg (which has a unit) against a value set with the filter 'unit exists false': not in the value set",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-prop-exists-false-bad-request-parameters.json",
+        "response" : "simple/simple-validate-prop-exists-false-bad-response-parameters.json"
+      },{
+        "name" : "simple-validate-prop-not-in-good",
+        "description" : "$validate-code of none (no property element) against a value set with the filter 'unit not-in mg': valid - a concept with no value for the property is not in the list",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-prop-not-in-good-request-parameters.json",
+        "response" : "simple/simple-validate-prop-not-in-good-response-parameters.json"
+      },{
+        "name" : "simple-validate-prop-not-in-bad",
+        "description" : "$validate-code of mg against a value set with the filter 'unit not-in mg': not in the value set",
+        "operation" : "validate-code",
+        "request" : "simple/simple-validate-prop-not-in-bad-request-parameters.json",
+        "response" : "simple/simple-validate-prop-not-in-bad-response-parameters.json"
       },{
         "name" : "simple-lookup-1",
         "description" : "Check that $lookup works (there's not many tests for $lookup because it's not used much by the tools)",

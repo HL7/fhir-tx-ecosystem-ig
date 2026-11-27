@@ -2142,5 +2142,17 @@
   },
   "supplement-url/supplement-url-expand-v1-use-supplement-response.json" : {
     "1" : "The supplement 'http://hl7.org/fhir/test/CodeSystem/supplement-url|2.0.0' has the url of the code system it supplements, so it claims to be a version of that code system. A supplement needs a canonical url of its own"
+  },
+  "simple/simple-validate-prop-exists-true-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#none' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-exists-true|5.0.0'",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#none' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-exists-true|5.0.0'"
+  },
+  "simple/simple-validate-prop-exists-false-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#mg' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-exists-false|5.0.0'",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#mg' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-exists-false|5.0.0'"
+  },
+  "simple/simple-validate-prop-not-in-bad-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#mg' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-not-in|5.0.0'",
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/sparse-properties#mg' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-prop-not-in|5.0.0'"
   }
 }
